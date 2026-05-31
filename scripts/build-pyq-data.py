@@ -58,6 +58,13 @@ def empty_notes() -> dict:
     }
 
 
+def keyword_matches(keyword: str, text: str) -> bool:
+    """Match whole words for short keywords to avoid hits inside other words (e.g. 'all' in evaluate)."""
+    if len(keyword) < 5:
+        return bool(re.search(r"\b" + re.escape(keyword) + r"\b", text))
+    return keyword in text
+
+
 def classify_theme(text: str, paper: int, marks: int | str) -> dict:
     """Return primary theme + subthemes from syllabus-aligned keyword scoring."""
     cfg = THEME_CONFIG.get(str(paper), {})
@@ -75,7 +82,7 @@ def classify_theme(text: str, paper: int, marks: int | str) -> dict:
         for kw in t["keywords"].split():
             if len(kw) < 3:
                 continue
-            if kw in lower:
+            if keyword_matches(kw, lower):
                 score += 2 if len(kw) > 6 else 1
         if score:
             scores.append((score, t))
@@ -92,14 +99,15 @@ def classify_theme(text: str, paper: int, marks: int | str) -> dict:
         }
 
     fallback = {
-        1: "Indian Society",
-        2: "Governance & Administration",
-        3: "Economy & Development",
-        4: "Ethics & Human Interface",
+        1: ("Indian Society", "indian-society"),
+        2: ("Accountability & Citizen Charter", "accountability-transparency"),
+        3: ("Economy & Development", "economy-development"),
+        4: ("Ethics & Human Interface", "ethics-human-interface"),
     }
+    name, tid = fallback.get(paper, ("General", "misc"))
     return {
-        "theme": fallback.get(paper, "General"),
-        "themeId": "misc",
+        "theme": name,
+        "themeId": tid,
         "themeParent": "",
         "subthemes": [],
     }

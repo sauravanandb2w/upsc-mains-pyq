@@ -46,7 +46,7 @@
       "marks": 10,
       "text": "In dealing with socio-economic issues of development, what kind of collaboration between government, NGOs and private sector would be most productive?",
       "theme": "Indian Society",
-      "themeId": "misc",
+      "themeId": "indian-society",
       "themeParent": "",
       "subthemes": [],
       "notes": {
@@ -144,12 +144,10 @@
       "number": 15,
       "marks": 15,
       "text": "What are aurora australis and aurora borealis? How are these triggered?",
-      "theme": "Ancient & Medieval History",
-      "themeId": "ancient-medieval",
+      "theme": "Physical Geography",
+      "themeId": "physical-geo",
       "themeParent": "",
-      "subthemes": [
-        "Physical Geography"
-      ],
+      "subthemes": [],
       "notes": {
         "introduction": "",
         "staticNotes": "",
@@ -166,7 +164,7 @@
       "marks": 15,
       "text": "What is a twister? Why are the majority of twisters observed in areas around the Gulf of Mexico?",
       "theme": "Indian Society",
-      "themeId": "misc",
+      "themeId": "indian-society",
       "themeParent": "",
       "subthemes": [],
       "notes": {
@@ -203,8 +201,8 @@
       "number": 18,
       "marks": 15,
       "text": "Despite comprehensive policies for equity and social justice, underprivileged sections are not yet getting the full benefits of affirmative action envisaged by the Constitution. Comment.",
-      "theme": "Modern Indian History",
-      "themeId": "modern-history",
+      "theme": "Indian Society",
+      "themeId": "indian-society",
       "themeParent": "",
       "subthemes": [],
       "notes": {
@@ -322,7 +320,7 @@
       "marks": 10,
       "text": "Why do large cities tend to attract more migrants than smaller towns? Discuss in the light of conditions in developing countries.",
       "theme": "Indian Society",
-      "themeId": "misc",
+      "themeId": "indian-society",
       "themeParent": "",
       "subthemes": [],
       "notes": {
@@ -359,11 +357,11 @@
       "number": 7,
       "marks": 10,
       "text": "What is the concept of a 'demographic winter'? Is the world moving towards such a situation? Elaborate.",
-      "theme": "World History",
-      "themeId": "world-history",
+      "theme": "World Geography",
+      "themeId": "world-geo",
       "themeParent": "",
       "subthemes": [
-        "World Geography"
+        "World History"
       ],
       "notes": {
         "introduction": "",
@@ -384,7 +382,6 @@
       "themeId": "indian-society",
       "themeParent": "",
       "subthemes": [
-        "Modern Indian History",
         "World History"
       ],
       "notes": {
@@ -546,7 +543,7 @@
       "marks": 10,
       "text": "What are the environmental implications of the reclamation of water bodies into urban land use? Explain with examples.",
       "theme": "Indian Society",
-      "themeId": "misc",
+      "themeId": "indian-society",
       "themeParent": "",
       "subthemes": [],
       "notes": {
@@ -623,8 +620,8 @@
       "number": 19,
       "marks": 15,
       "text": "How do the melting of the Arctic ice and glaciers of the Antarctic differently affect the weather patterns and human activities on the Earth ? Explain.",
-      "theme": "Indian Art & Culture",
-      "themeId": "art-culture",
+      "theme": "Indian Society",
+      "themeId": "indian-society",
       "themeParent": "",
       "subthemes": [],
       "notes": {
@@ -643,7 +640,7 @@
       "marks": 10,
       "text": "Trace the rise and growth of socio-religious reform movements with special reference to Young Bengal and Brahmo Samaj.",
       "theme": "Indian Society",
-      "themeId": "misc",
+      "themeId": "indian-society",
       "themeParent": "",
       "subthemes": [],
       "notes": {
@@ -724,7 +721,7 @@
       "marks": 10,
       "text": "Evaluate the policies of Lord Curzon and their long term implications on the national movement.",
       "theme": "Indian Society",
-      "themeId": "misc",
+      "themeId": "indian-society",
       "themeParent": "",
       "subthemes": [],
       "notes": {
@@ -867,7 +864,7 @@
       "marks": 10,
       "text": "Examine the uniqueness of tribal knowledge system when compared with mainstream knowledge and cultural systems.",
       "theme": "Indian Society",
-      "themeId": "misc",
+      "themeId": "indian-society",
       "themeParent": "",
       "subthemes": [],
       "notes": {
@@ -987,7 +984,7 @@
       "marks": 10,
       "text": "Since the decade Of the 1920s, the national movement acquired various ideological strands and thereby expanded its social base. Discuss.",
       "theme": "Indian Society",
-      "themeId": "misc",
+      "themeId": "indian-society",
       "themeParent": "",
       "subthemes": [],
       "notes": {
@@ -1069,11 +1066,10 @@
       "number": 13,
       "marks": 15,
       "text": "Account for the huge flooding of million cities in India including the smart ones like Hyderabad and Pune. Suggest lasting remedial measures.",
-      "theme": "Indian Art & Culture",
-      "themeId": "art-culture",
+      "theme": "Modern Indian History",
+      "themeId": "modern-history",
       "themeParent": "",
       "subthemes": [
-        "Modern Indian History",
         "Indian Geography"
       ],
       "notes": {
@@ -1212,11 +1208,10 @@
       "number": 2,
       "marks": 10,
       "text": "Account for the huge flooding Of million cities in India including the smart ones like Hyderabad and Pune. Suggest lasting remedial measures.",
-      "theme": "Indian Art & Culture",
-      "themeId": "art-culture",
+      "theme": "Modern Indian History",
+      "themeId": "modern-history",
       "themeParent": "",
       "subthemes": [
-        "Modern Indian History",
         "Indian Geography"
       ],
       "notes": {
@@ -1235,7 +1230,7 @@
       "marks": 10,
       "text": "What are the challenges to Our cultural practices in the name Of secularism ?",
       "theme": "Indian Society",
-      "themeId": "misc",
+      "themeId": "indian-society",
       "themeParent": "",
       "subthemes": [],
       "notes": {
@@ -1374,7 +1369,7 @@
       "marks": 15,
       "text": "Are we losing our local identity for the global identity ? Discuss.",
       "theme": "Indian Society",
-      "themeId": "misc",
+      "themeId": "indian-society",
       "themeParent": "",
       "subthemes": [],
       "notes": {
@@ -1392,8 +1387,8 @@
       "number": 28,
       "marks": 10,
       "text": "Assess the impact of global warming on coral life system with examples.",
-      "theme": "World History",
-      "themeId": "world-history",
+      "theme": "Indian Society",
+      "themeId": "indian-society",
       "themeParent": "",
       "subthemes": [],
       "notes": {
@@ -1454,7 +1449,7 @@
       "marks": 10,
       "text": "Customs and traditions suppress reason leading to obscurantism. DO you agree?",
       "theme": "Indian Society",
-      "themeId": "misc",
+      "themeId": "indian-society",
       "themeParent": "",
       "subthemes": [],
       "notes": {
@@ -1492,7 +1487,7 @@
       "marks": 10,
       "text": "Discuss the geophysical characteristics of Circum-Pacific Zone.",
       "theme": "Indian Society",
-      "themeId": "misc",
+      "themeId": "indian-society",
       "themeParent": "",
       "subthemes": [],
       "notes": {
@@ -1511,7 +1506,7 @@
       "marks": 15,
       "text": "The process of desertification does not have climatic boundaries. Justify with examples.",
       "theme": "Indian Society",
-      "themeId": "misc",
+      "themeId": "indian-society",
       "themeParent": "",
       "subthemes": [],
       "notes": {
@@ -1785,7 +1780,7 @@
       "marks": 10,
       "text": "How can the mountain ecosystem be restored from the negative impact of development initiatives and tourism?",
       "theme": "Indian Society",
-      "themeId": "misc",
+      "themeId": "indian-society",
       "themeParent": "",
       "subthemes": [],
       "notes": {
@@ -1829,7 +1824,7 @@
       "themeParent": "",
       "subthemes": [
         "World Geography",
-        "Indian Art & Culture"
+        "Modern Indian History"
       ],
       "notes": {
         "introduction": "",
@@ -1887,7 +1882,7 @@
       "marks": 10,
       "text": "What are the consequences of spreading of Dead Zones on marine ecosystem?",
       "theme": "Indian Society",
-      "themeId": "misc",
+      "themeId": "indian-society",
       "themeParent": "",
       "subthemes": [],
       "notes": {
@@ -2237,7 +2232,7 @@
       "marks": 15,
       "text": "In spite of adverse environmental impact, coal mining is still inevitable for development.” Discuss.",
       "theme": "Indian Society",
-      "themeId": "misc",
+      "themeId": "indian-society",
       "themeParent": "",
       "subthemes": [],
       "notes": {
@@ -2256,7 +2251,7 @@
       "marks": 15,
       "text": "Mention the advantages of the cultivation of pulse because of which the year 2016 was declared as the International Year of Pulses by the United Nations.",
       "theme": "Indian Society",
-      "themeId": "misc",
+      "themeId": "indian-society",
       "themeParent": "",
       "subthemes": [],
       "notes": {
@@ -2316,7 +2311,6 @@
       "themeId": "indian-geo",
       "themeParent": "",
       "subthemes": [
-        "Ancient & Medieval History",
         "Modern Indian History"
       ],
       "notes": {
@@ -2353,8 +2347,8 @@
       "number": 16,
       "marks": 10,
       "text": "Petroleum refineries are not necessarily located nearer to crude oil producing areas, particularly in many of the developing countries. Explain its implications.",
-      "theme": "Indian Art & Culture",
-      "themeId": "art-culture",
+      "theme": "Indian Society",
+      "themeId": "indian-society",
       "themeParent": "",
       "subthemes": [],
       "notes": {
@@ -2608,12 +2602,10 @@
       "number": 28,
       "marks": 15,
       "text": "With a brief background of quality of urban life in India, introduce the objectives and of the 'Smart City Programme'.",
-      "theme": "Indian Art & Culture",
-      "themeId": "art-culture",
+      "theme": "Modern Indian History",
+      "themeId": "modern-history",
       "themeParent": "",
-      "subthemes": [
-        "Modern Indian History"
-      ],
+      "subthemes": [],
       "notes": {
         "introduction": "",
         "staticNotes": "",
@@ -2654,7 +2646,6 @@
       "themeId": "indian-society",
       "themeParent": "",
       "subthemes": [
-        "Indian Art & Culture",
         "Modern Indian History"
       ],
       "notes": {
@@ -2713,11 +2704,10 @@
       "number": 6,
       "marks": 10,
       "text": "The women's questions arose in modern India as a part of the 19 century reform movement. What were the major issues and debates concerning women in that period ? (250 words)",
-      "theme": "Indian Art & Culture",
-      "themeId": "art-culture",
+      "theme": "Modern Indian History",
+      "themeId": "modern-history",
       "themeParent": "",
       "subthemes": [
-        "Modern Indian History",
         "Indian Society"
       ],
       "notes": {
@@ -2755,7 +2745,7 @@
       "marks": 15,
       "text": "\"The growth of cities as I.T. hubs has opened up new avenues of employment, but has also created new problems.\" Substantiat.e this statement with examples. (250 words)",
       "theme": "Indian Society",
-      "themeId": "misc",
+      "themeId": "indian-society",
       "themeParent": "",
       "subthemes": [],
       "notes": {
@@ -2773,12 +2763,10 @@
       "number": 9,
       "marks": 15,
       "text": "How does the Juno Mission of NASA help to understand the origin and evolution of the Earth?",
-      "theme": "Indian Art & Culture",
-      "themeId": "art-culture",
+      "theme": "Indian Society",
+      "themeId": "indian-society",
       "themeParent": "",
-      "subthemes": [
-        "Ancient & Medieval History"
-      ],
+      "subthemes": [],
       "notes": {
         "introduction": "",
         "staticNotes": "",
@@ -2958,12 +2946,10 @@
       "number": 17,
       "marks": 15,
       "text": "Debate the issue Of whether and how contemporary movements for assertion of Dalit identity work towards annihilation Of caste.",
-      "theme": "World History",
-      "themeId": "world-history",
+      "theme": "Indian Society",
+      "themeId": "indian-society",
       "themeParent": "",
-      "subthemes": [
-        "Indian Society"
-      ],
+      "subthemes": [],
       "notes": {
         "introduction": "",
         "staticNotes": "",
@@ -2984,7 +2970,7 @@
       "themeParent": "",
       "subthemes": [
         "Indian Society",
-        "Ancient & Medieval History"
+        "World Geography"
       ],
       "notes": {
         "introduction": "",
@@ -3023,7 +3009,7 @@
       "marks": 10,
       "text": "Discuss the concept of air mass and explain its role in macro-climatic changes.",
       "theme": "Indian Society",
-      "themeId": "misc",
+      "themeId": "indian-society",
       "themeParent": "",
       "subthemes": [],
       "notes": {
@@ -3060,12 +3046,10 @@
       "number": 21,
       "marks": 15,
       "text": "Smart cities in India cannot sustain without smart villages. Discuss this statement in the backdrop of rural urban integration.",
-      "theme": "Indian Art & Culture",
-      "themeId": "art-culture",
+      "theme": "Modern Indian History",
+      "themeId": "modern-history",
       "themeParent": "",
-      "subthemes": [
-        "Modern Indian History"
-      ],
+      "subthemes": [],
       "notes": {
         "introduction": "",
         "staticNotes": "",
@@ -3142,7 +3126,7 @@
       "marks": 10,
       "text": "The third battle of Panipat was fought in 1761. Why were so many empire-shaking battles fought at Panipat?",
       "theme": "Indian Society",
-      "themeId": "misc",
+      "themeId": "indian-society",
       "themeParent": "",
       "subthemes": [],
       "notes": {
@@ -3163,9 +3147,7 @@
       "theme": "Ancient & Medieval History",
       "themeId": "ancient-medieval",
       "themeParent": "",
-      "subthemes": [
-        "World History"
-      ],
+      "subthemes": [],
       "notes": {
         "introduction": "",
         "staticNotes": "",
@@ -3238,12 +3220,10 @@
       "number": 3,
       "marks": 10,
       "text": "With a brief background of quality of urban life in India, introduce the objectives and strategy of the ‘Smart City Programme’.",
-      "theme": "Indian Art & Culture",
-      "themeId": "art-culture",
+      "theme": "Modern Indian History",
+      "themeId": "modern-history",
       "themeParent": "",
-      "subthemes": [
-        "Modern Indian History"
-      ],
+      "subthemes": [],
       "notes": {
         "introduction": "",
         "staticNotes": "",
@@ -3416,7 +3396,7 @@
       "marks": 12,
       "text": "Most of the unusual climatic happenings are explained as an outcome of the El-Nino effect. Do you agree?",
       "theme": "Indian Society",
-      "themeId": "misc",
+      "themeId": "indian-society",
       "themeParent": "",
       "subthemes": [],
       "notes": {
@@ -3681,7 +3661,7 @@
       "marks": 12,
       "text": "The life cycle Of a joint family depends on economic factors rather than social values. Discuss.",
       "theme": "Indian Society",
-      "themeId": "misc",
+      "themeId": "indian-society",
       "themeParent": "",
       "subthemes": [],
       "notes": {
@@ -3740,7 +3720,7 @@
       "marks": 12,
       "text": "Explain the formation of thousands of islands in Indonesian and Philippines archipelagos.",
       "theme": "Indian Society",
-      "themeId": "misc",
+      "themeId": "indian-society",
       "themeParent": "",
       "subthemes": [],
       "notes": {
@@ -3818,7 +3798,7 @@
       "marks": 12,
       "text": "What policy instruments were deployed to contain the Great Economic Depression? (200 words)",
       "theme": "Indian Society",
-      "themeId": "misc",
+      "themeId": "indian-society",
       "themeParent": "",
       "subthemes": [],
       "notes": {
@@ -3840,7 +3820,6 @@
       "themeId": "indian-society",
       "themeParent": "",
       "subthemes": [
-        "Ancient & Medieval History",
         "Modern Indian History"
       ],
       "notes": {
@@ -4016,7 +3995,7 @@
       "marks": 12,
       "text": "Critically discuss the objectives of Bhoodan and Gramdan Movements initiated by Acharya Vinoba Bhave and their success. (200 words)",
       "theme": "Indian Society",
-      "themeId": "misc",
+      "themeId": "indian-society",
       "themeParent": "",
       "subthemes": [],
       "notes": {
@@ -4054,7 +4033,7 @@
       "marks": 12,
       "text": "What do you understand by the phenomenon of temperature inversion in meteorology? How does it affect the weather and the habitants of the place?",
       "theme": "Indian Society",
-      "themeId": "misc",
+      "themeId": "indian-society",
       "themeParent": "",
       "subthemes": [],
       "notes": {
@@ -4114,7 +4093,7 @@
       "marks": 12,
       "text": "Write a critical note on the evolution and significance of the slogan, 'Jai Jawan Jai Kisan'. (200 words)",
       "theme": "Indian Society",
-      "themeId": "misc",
+      "themeId": "indian-society",
       "themeParent": "",
       "subthemes": [],
       "notes": {
@@ -4152,7 +4131,7 @@
       "marks": 12,
       "text": "Analyze the circumstances that led to the Tashkent Agreement in 1966. Discuss the highlights of the Agreement. (200 words)",
       "theme": "Indian Society",
-      "themeId": "misc",
+      "themeId": "indian-society",
       "themeParent": "",
       "subthemes": [],
       "notes": {
@@ -4210,12 +4189,10 @@
       "number": 8,
       "marks": 12,
       "text": "\"Africa was chopped into States artificially created by accidents of European competition.\" Analyze. (200 words)",
-      "theme": "Indian Art & Culture",
-      "themeId": "art-culture",
+      "theme": "World History",
+      "themeId": "world-history",
       "themeParent": "",
-      "subthemes": [
-        "World History"
-      ],
+      "subthemes": [],
       "notes": {
         "introduction": "",
         "staticNotes": "",

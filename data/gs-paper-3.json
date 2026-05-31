@@ -79,7 +79,7 @@
       "marks": 15,
       "text": "What is the need for expanding the regional air connectivity in India? In this context, discuss the government's UDAN Scheme and its achievements.",
       "theme": "Economy & Development",
-      "themeId": "misc",
+      "themeId": "economy-development",
       "themeParent": "",
       "subthemes": [],
       "notes": {
@@ -155,7 +155,7 @@
       "marks": 15,
       "text": "What are asteroids? How real is the threat of them causing extinction of life? What strategies have been developed to prevent such a catastrophe?",
       "theme": "Economy & Development",
-      "themeId": "misc",
+      "themeId": "economy-development",
       "themeParent": "",
       "subthemes": [],
       "notes": {
@@ -432,10 +432,7 @@
       "theme": "Disaster Management",
       "themeId": "disaster-management",
       "themeParent": "",
-      "subthemes": [
-        "Economy & Development",
-        "Agriculture & Food Security"
-      ],
+      "subthemes": [],
       "notes": {
         "introduction": "",
         "staticNotes": "",
@@ -471,7 +468,7 @@
       "marks": 10,
       "text": "How is S-400 air defence system technically superior to any Other system presently available in the world?",
       "theme": "Economy & Development",
-      "themeId": "misc",
+      "themeId": "economy-development",
       "themeParent": "",
       "subthemes": [],
       "notes": {
@@ -490,7 +487,7 @@
       "marks": 15,
       "text": "The Nobel Prize in Physics of 2014 was jointly awarded to Akasaki, Amano and Nakamura for the invention Of Blue LEDs in 1990s. How has this invention impacted the everyday life of human beings?",
       "theme": "Economy & Development",
-      "themeId": "misc",
+      "themeId": "economy-development",
       "themeParent": "",
       "subthemes": [],
       "notes": {
@@ -674,7 +671,7 @@
       "marks": 15,
       "text": "Do you agree that the Indian economy has recently experienced V-shaped recovery?",
       "theme": "Economy & Development",
-      "themeId": "misc",
+      "themeId": "economy-development",
       "themeParent": "",
       "subthemes": [],
       "notes": {
@@ -929,7 +926,7 @@
       "marks": 10,
       "text": "What are the main constraints in transport and marketing of agricultural produce in India?",
       "theme": "Economy & Development",
-      "themeId": "misc",
+      "themeId": "economy-development",
       "themeParent": "",
       "subthemes": [],
       "notes": {
@@ -990,7 +987,7 @@
       "marks": 15,
       "text": "What are the major factors responsible for making the rice-wheat system a success? In spite of this success, how has this system become a bane in India?",
       "theme": "Economy & Development",
-      "themeId": "misc",
+      "themeId": "economy-development",
       "themeParent": "",
       "subthemes": [],
       "notes": {
@@ -1049,7 +1046,7 @@
       "marks": 15,
       "text": "Explain the meaning of investment in an economy in terms of capital formation. Discuss the factors to be considered while designing a concession agreement between a public entity and a private entity.",
       "theme": "Economy & Development",
-      "themeId": "misc",
+      "themeId": "economy-development",
       "themeParent": "",
       "subthemes": [],
       "notes": {
@@ -1087,7 +1084,7 @@
       "marks": 15,
       "text": "What are the key features of the National Clean Air Programme (NCAP) initiated by the Government Of India?",
       "theme": "Economy & Development",
-      "themeId": "misc",
+      "themeId": "economy-development",
       "themeParent": "",
       "subthemes": [],
       "notes": {
@@ -1344,7 +1341,7 @@
       "marks": 10,
       "text": "How far is Integrated Farming System (IFS) helpful in sustaining agricultural production?",
       "theme": "Economy & Development",
-      "themeId": "misc",
+      "themeId": "economy-development",
       "themeParent": "",
       "subthemes": [],
       "notes": {
@@ -1732,11 +1729,11 @@
       "number": 17,
       "marks": 15,
       "text": "India's proximity to two of the world's biggest illicit opium-growing states has enhanced her internal security concerns. Explain the linkages between drug trafficking and other illicit activities such as gunrunning, money laundering and human trafficking. What counter-measures should be taken to prevent the same?",
-      "theme": "Internal Security",
-      "themeId": "internal-security",
+      "theme": "Agriculture & Food Security",
+      "themeId": "agriculture-food",
       "themeParent": "",
       "subthemes": [
-        "Agriculture & Food Security"
+        "Internal Security"
       ],
       "notes": {
         "introduction": "",
@@ -1792,7 +1789,7 @@
       "marks": 15,
       "text": "How are the principles followed by the NITI Aayog different from those followed by the erstwhile Planning Commission in India?",
       "theme": "Economy & Development",
-      "themeId": "misc",
+      "themeId": "economy-development",
       "themeParent": "",
       "subthemes": [],
       "notes": {
@@ -1933,8 +1930,7 @@
       "themeId": "science-technology",
       "themeParent": "",
       "subthemes": [
-        "Environment & Biodiversity",
-        "Internal Security"
+        "Environment & Biodiversity"
       ],
       "notes": {
         "introduction": "",
@@ -1952,7 +1948,7 @@
       "marks": 10,
       "text": "Sikkim is the first Organic State in India. What are the ecological and economical benefits of Organic State?",
       "theme": "Economy & Development",
-      "themeId": "misc",
+      "themeId": "economy-development",
       "themeParent": "",
       "subthemes": [],
       "notes": {
@@ -2030,7 +2026,7 @@
       "marks": 10,
       "text": "Stem cell therapy is gaining popularity in India to treat a wide variety Of medical conditions including Leukaemia, Thalassemia, damaged cornea and severe burns. Describe briefly what stem cell therapy is and what advantages it has over other treatments?",
       "theme": "Economy & Development",
-      "themeId": "misc",
+      "themeId": "economy-development",
       "themeParent": "",
       "subthemes": [],
       "notes": {
@@ -2090,7 +2086,7 @@
       "marks": 15,
       "text": "Mob violence is emerging as a serious law and order problem in India. By giving suitable examples, analyze the causes and consequences of such violence. 15",
       "theme": "Economy & Development",
-      "themeId": "misc",
+      "themeId": "economy-development",
       "themeParent": "",
       "subthemes": [],
       "notes": {
@@ -2148,11 +2144,11 @@
       "number": 18,
       "marks": 10,
       "text": "What are the reasons for poor acceptance of cost-effective small processing unit? How the food processing unit will be helpful to uplift the socio-economic status of poor farmers?",
-      "theme": "Economy & Development",
-      "themeId": "economy-development",
+      "theme": "Agriculture & Food Security",
+      "themeId": "agriculture-food",
       "themeParent": "",
       "subthemes": [
-        "Agriculture & Food Security"
+        "Economy & Development"
       ],
       "notes": {
         "introduction": "",
@@ -2383,9 +2379,7 @@
       "theme": "Science & Technology",
       "themeId": "science-technology",
       "themeParent": "",
-      "subthemes": [
-        "Economy & Development"
-      ],
+      "subthemes": [],
       "notes": {
         "introduction": "",
         "staticNotes": "",
@@ -2404,9 +2398,7 @@
       "theme": "Science & Technology",
       "themeId": "science-technology",
       "themeParent": "",
-      "subthemes": [
-        "Economy & Development"
-      ],
+      "subthemes": [],
       "notes": {
         "introduction": "",
         "staticNotes": "",
@@ -2581,7 +2573,7 @@
       "marks": 12,
       "text": "Pradhan Mantri Jan-Dhan Yojana (PMJDY) is necessary för bringing unbanked to the institutional finance fold. Do you agree with this for financial inclusion of the poorer section of the Indian society? Give arguments to justify your opinion.",
       "theme": "Economy & Development",
-      "themeId": "misc",
+      "themeId": "economy-development",
       "themeParent": "",
       "subthemes": [],
       "notes": {
@@ -2602,9 +2594,7 @@
       "theme": "Agriculture & Food Security",
       "themeId": "agriculture-food",
       "themeParent": "",
-      "subthemes": [
-        "Internal Security"
-      ],
+      "subthemes": [],
       "notes": {
         "introduction": "",
         "staticNotes": "",
@@ -2621,7 +2611,7 @@
       "marks": 12,
       "text": "How globalization has led to the reduction of employment in the formal sector of the Indian economy? Is increased informalization detrimental to the development of the country?",
       "theme": "Economy & Development",
-      "themeId": "misc",
+      "themeId": "economy-development",
       "themeParent": "",
       "subthemes": [],
       "notes": {
@@ -2775,7 +2765,7 @@
       "marks": 12,
       "text": "Discuss the Namami Gange and National Mission for Clean Ganga (NMCG) programmes and causes of mixed results from the previous schemes. What quantum leaps can help preserve the river Ganga better than incremental inputs?",
       "theme": "Economy & Development",
-      "themeId": "misc",
+      "themeId": "economy-development",
       "themeParent": "",
       "subthemes": [],
       "notes": {
@@ -2835,8 +2825,7 @@
       "themeId": "agriculture-food",
       "themeParent": "",
       "subthemes": [
-        "Internal Security",
-        "Economy & Development"
+        "Internal Security"
       ],
       "notes": {
         "introduction": "",
@@ -3038,8 +3027,8 @@
       "number": 3,
       "marks": 12,
       "text": "Craze for gold in Indians has led to a surge in import of gold in recent years and put pressure on balance of payments and external value of rupee. In view of this, examine the merits of the Gold Monetization Scheme.",
-      "theme": "Environment & Biodiversity",
-      "themeId": "environment-biodiversity",
+      "theme": "Economy & Development",
+      "themeId": "economy-development",
       "themeParent": "",
       "subthemes": [],
       "notes": {
@@ -3152,12 +3141,10 @@
       "number": 9,
       "marks": 12,
       "text": "To what factors can the recent dramatic fall in equipment costs and tariff on solar energy be attributed? What implications does the trend have for thermal power producers and the related industry?",
-      "theme": "Economy & Development",
-      "themeId": "economy-development",
+      "theme": "Environment & Biodiversity",
+      "themeId": "environment-biodiversity",
       "themeParent": "",
-      "subthemes": [
-        "Environment & Biodiversity"
-      ],
+      "subthemes": [],
       "notes": {
         "introduction": "",
         "staticNotes": "",
@@ -3254,7 +3241,7 @@
       "marks": 12,
       "text": "Can overuse and free availability of antibiotics without a Doctor's prescription, be contributors to the emergence of drug-resistant diseases in India? What are the available mechanisms for monitoring and control? Critically discuss the various issues involved.",
       "theme": "Economy & Development",
-      "themeId": "misc",
+      "themeId": "economy-development",
       "themeParent": "",
       "subthemes": [],
       "notes": {
@@ -3291,12 +3278,10 @@
       "number": 15,
       "marks": 12,
       "text": "International civil aviation laws provide all countries complete and exclusive sovereignty over the airspace above their territory, What do you understaru•l by 'airspace? What are the implications Of these laws on the space above this airspace? Discuss the challenges that this poses and Suggest ways to contain the threat.",
-      "theme": "Economy & Development",
-      "themeId": "economy-development",
+      "theme": "Science & Technology",
+      "themeId": "science-technology",
       "themeParent": "",
-      "subthemes": [
-        "Science & Technology"
-      ],
+      "subthemes": [],
       "notes": {
         "introduction": "",
         "staticNotes": "",
@@ -3397,7 +3382,7 @@
       "marks": 12,
       "text": "\"While we flaunt India's demographic dividend, we ignore the dropping rates Of employability.\" What axe we rnissing While doing so? Where will the jobs that India desperately needs come from? Explain.",
       "theme": "Economy & Development",
-      "themeId": "misc",
+      "themeId": "economy-development",
       "themeParent": "",
       "subthemes": [],
       "notes": {
@@ -3475,7 +3460,7 @@
       "marks": 12,
       "text": "Explain how Private Public Partnership arrangements, in long gestation infrastructure projccts, can transfer unsustainable liabilities to the future. What arrangements need to be put in place to ensure that successive generations' capacities are not compromised?",
       "theme": "Economy & Development",
-      "themeId": "misc",
+      "themeId": "economy-development",
       "themeParent": "",
       "subthemes": [],
       "notes": {
@@ -3515,7 +3500,7 @@
       "marks": 12,
       "text": "Foreign Direct Investment (FDI) in the defence sector is now set to be liberalized. What influence this is expected to have on Indian defence and economy in the short and Icing run?",
       "theme": "Economy & Development",
-      "themeId": "misc",
+      "themeId": "economy-development",
       "themeParent": "",
       "subthemes": [],
       "notes": {
@@ -3552,12 +3537,10 @@
       "number": 8,
       "marks": 12,
       "text": "International civil aviation laws provide all countries complete and exclusive sovereignty over the airspace above their territory. What do you understand by 'airspace? What are the implications of these laws on the space above this airspace? Discuss the challenges which this poses and suggest ways to contain the threat.",
-      "theme": "Economy & Development",
-      "themeId": "economy-development",
+      "theme": "Science & Technology",
+      "themeId": "science-technology",
       "themeParent": "",
-      "subthemes": [
-        "Science & Technology"
-      ],
+      "subthemes": [],
       "notes": {
         "introduction": "",
         "staticNotes": "",
@@ -3692,7 +3675,7 @@
       "marks": 10,
       "text": "What do you understand by Fixed Dose Drug Combinations (FDCs)? Discuss their merits and demerits. [200 words]",
       "theme": "Economy & Development",
-      "themeId": "misc",
+      "themeId": "economy-development",
       "themeParent": "",
       "subthemes": [],
       "notes": {
@@ -3711,7 +3694,7 @@
       "marks": 10,
       "text": "What do you understand about Umpire Decision Review System in Cricket? Discuss its various components. Explain how silicone on the edge of a bat may fool the system? [200 words]",
       "theme": "Economy & Development",
-      "themeId": "misc",
+      "themeId": "economy-development",
       "themeParent": "",
       "subthemes": [],
       "notes": {
@@ -3787,7 +3770,7 @@
       "marks": 5,
       "text": "What do you understand about the run-of-river hydroelectricity project? How is it different from any other hydroelectricity project? [100 words]",
       "theme": "Economy & Development",
-      "themeId": "misc",
+      "themeId": "economy-development",
       "themeParent": "",
       "subthemes": [],
       "notes": {
@@ -3849,8 +3832,7 @@
       "themeId": "internal-security",
       "themeParent": "",
       "subthemes": [
-        "Agriculture & Food Security",
-        "Economy & Development"
+        "Agriculture & Food Security"
       ],
       "notes": {
         "introduction": "",
@@ -4034,7 +4016,7 @@
       "marks": 10,
       "text": "Examine the impact of liberalization on companies owned by Indians. Are they competing with the MNCs satisfactorily ? Discuss.",
       "theme": "Economy & Development",
-      "themeId": "misc",
+      "themeId": "economy-development",
       "themeParent": "",
       "subthemes": [],
       "notes": {
@@ -4053,7 +4035,7 @@
       "marks": 5,
       "text": "Discuss the impact of FDI entry into Multi-trade retail sector on supply chain management in commodity trade pattern of the economy.",
       "theme": "Economy & Development",
-      "themeId": "misc",
+      "themeId": "economy-development",
       "themeParent": "",
       "subthemes": [],
       "notes": {
@@ -4072,7 +4054,7 @@
       "marks": 5,
       "text": "Though India allowed Foreign Direct Investment (FDI) in what is called multi-brand retail through the joint venture route in September 2012, the FDI, even after a year, has not picked up. Discuss the reasons.",
       "theme": "Economy & Development",
-      "themeId": "misc",
+      "themeId": "economy-development",
       "themeParent": "",
       "subthemes": [],
       "notes": {
@@ -4109,12 +4091,10 @@
       "number": 8,
       "marks": 10,
       "text": "Bringing out the circumstances in 2005 which forced amendment to the section 3(d) in Indian Patent Law, 1970, discuss how it has been utilized by the Supreme Court in its judgement in rejecting Novratis' patent application for 'Glivec'. Discuss briefly the pros and cons of the decision.",
-      "theme": "Economy & Development",
-      "themeId": "economy-development",
+      "theme": "Science & Technology",
+      "themeId": "science-technology",
       "themeParent": "",
-      "subthemes": [
-        "Science & Technology"
-      ],
+      "subthemes": [],
       "notes": {
         "introduction": "",
         "staticNotes": "",

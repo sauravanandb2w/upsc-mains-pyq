@@ -56,43 +56,43 @@
         "id": "fundamental-rights-dpsp",
         "name": "Fundamental Rights & DPSP",
         "parent": "Constitution & Polity",
-        "keywords": "fundamental rights dpsp directive principles fundamental duties article 21 liberty privacy life personal gender justice secular secularism equality dignity habeas corpus constitutionalization environment"
+        "keywords": "fundamental rights dpsp directive principles fundamental duties article 21 liberty privacy life personal gender justice secular secularism equality dignity habeas corpus constitutionalization environment free speech expression hate film"
       },
       {
         "id": "parliament-legislature",
         "name": "Parliament & Legislatures",
         "parent": "Constitution & Polity",
-        "keywords": "parliament lok sabha rajya sabha legislative assembly bill committee presiding speaker sovereignty legislation parliamentary law-making ordinary legislative"
+        "keywords": "parliament lok sabha rajya sabha legislative assembly bill committee presiding speaker sovereignty legislation parliamentary law-making ordinary legislative cabinet system marginalisation supremacy financial committee"
       },
       {
         "id": "union-state-executive",
         "name": "Union & State Executive",
         "parent": "Constitution & Polity",
-        "keywords": "president governor prime minister council minister executive pardon preemptive mercy ordinance vice-president chief minister attorney general"
+        "keywords": "president governor prime minister council minister executive pardon preemptive mercy ordinance vice-president chief minister attorney general france elected procedure"
       },
       {
         "id": "judiciary",
         "name": "Judiciary & Judicial Review",
         "parent": "Constitution & Polity",
-        "keywords": "judiciary supreme court high court collegium judicial independence accountability review pil public interest litigation contempt lok adalat arbitration administrative tribunal court system"
+        "keywords": "judiciary supreme court high court collegium judicial independence accountability review pil public interest litigation contempt lok adalat arbitration administrative tribunal court system nalsa legal aid free legal"
       },
       {
         "id": "federalism-centre-state",
         "name": "Federalism & Centre-State",
         "parent": "Constitution & Polity",
-        "keywords": "federalism centre-state center state sarkaria zonal finance commission gst 101st amendment inter-state inter state fiscal cooperative fiscal federalism planned development"
+        "keywords": "federalism centre-state center state sarkaria zonal finance commission gst 101st amendment inter-state inter state fiscal cooperative fiscal federalism planned development article 356 cooperation competition confrontation federation decentralisation power grassroots"
       },
       {
         "id": "elections-rpa",
         "name": "Elections & RPA",
         "parent": "Constitution & Polity",
-        "keywords": "election electoral representation people act rpa corrupt practice undue influence candidate returned void voter one nation simultaneous reform disqualification"
+        "keywords": "election electoral representation people act rpa corrupt practice undue influence candidate returned void voter one nation simultaneous reform disqualification dispute member parliament state legislature party system transition contradiction paradox"
       },
       {
         "id": "constitutional-bodies",
         "name": "Constitutional Bodies",
         "parent": "Constitution & Polity",
-        "keywords": "cag comptroller auditor auditor-general upsc election commission ncrwc ncw ncpcr nhrc constitutional body statutory finance commission lokpal cvc"
+        "keywords": "cag comptroller auditor auditor-general upsc election commission ncrwc ncw ncpcr nhrc constitutional body statutory finance commission lokpal cvc competition commission cci abuse dominant"
       },
       {
         "id": "constitutional-amendment",
@@ -104,28 +104,115 @@
         "id": "special-provisions-ut",
         "name": "UTs & Special Provisions",
         "parent": "Constitution & Polity",
-        "keywords": "jammu kashmir reorganization reorganisation ut union territory delhi special status scheduled area article 370 371 ladakh assembly"
+        "keywords": "jammu kashmir reorganization reorganisation ut union territory delhi special status scheduled area article 370 371 ladakh assembly legislative"
       },
       {
         "id": "comparative-constitution",
         "name": "Comparative Constitutions",
         "parent": "Constitution & Polity",
-        "keywords": "compare contrast british american usa constitution uk westminster parliamentary sovereignty secular principles united states"
+        "keywords": "compare contrast british american usa constitution uk westminster parliamentary sovereignty secular principles united states france learn approach"
       },
       {
-        "id": "governance",
-        "name": "Governance & Administration",
-        "keywords": "governance administration civil service bureaucracy cabinet parliamentary e-governance citizen charter transparency accountability local body panchayat municipal cooperative trust rationalization niti"
+        "id": "e-governance",
+        "name": "E-Governance & Digital India",
+        "parent": "Governance & Administration",
+        "keywords": "e-governance egovernance digital technology service delivery back-end backend integration user-centric user centric fourth industrial revolution information use value effectiveness transparency accountability inadequacies hamper"
       },
       {
-        "id": "social-justice",
-        "name": "Social Justice & Welfare",
-        "keywords": "poverty malnutrition health education welfare scheme affirmative action disadvantaged vulnerable disability rights hunger nutrition public healthcare charitable trust paradox ownership pressure group ncpcr child digital"
+        "id": "local-government",
+        "name": "Local Government & Decentralization",
+        "parent": "Governance & Administration",
+        "keywords": "local body panchayat municipal samiti grassroots decentralisation decentralization local self-government local level merger rural urban good governance sources grants decision-making problem-solving responsibilities located close source execution contemporary development models"
       },
       {
-        "id": "international-relations",
-        "name": "International Relations",
-        "keywords": "foreign policy bilateral multilateral diplomacy strategic geopolitical china pakistan neighbourhood saarc asean quad brics unsc terrorism counter terror maldives central africa digital partnership energy security middle east united nations reform globalization nationalism cold war"
+        "id": "civil-services",
+        "name": "Civil Services & Bureaucracy",
+        "parent": "Governance & Administration",
+        "keywords": "civil service bureaucracy cadre slow change neutrality effectiveness institutional quality driver economic performance reform strengthening democracy doctrine democratic governance integrity commitment civil servants"
+      },
+      {
+        "id": "accountability-transparency",
+        "name": "Accountability & Citizen Charter",
+        "parent": "Governance & Administration",
+        "keywords": "citizens charter citizen-centric citizen centric organizational transparency accountability limitations potential full potential people participation inter-dependent interdependent regulatory institutions independent autonomous corporate governance satyam"
+      },
+      {
+        "id": "public-service-delivery",
+        "name": "Public Service Delivery & NGOs",
+        "parent": "Governance & Administration",
+        "keywords": "public service delivery alternative model civil society non-governmental ngo fcra foreign funding contribution regulation financial institution insurance overlapping diversification rail tariff authority subsidy"
+      },
+      {
+        "id": "poverty-inequality",
+        "name": "Poverty, Hunger & Inequality",
+        "parent": "Social Justice & Welfare",
+        "keywords": "poverty hunger malnutrition vicious cycle inequality ownership paradox resources alleviation programmes showpieces political will estimates reduction incidence intensity vulnerable backward exclusion social expenditure shrinking divergence"
+      },
+      {
+        "id": "health-nutrition",
+        "name": "Public Health & Nutrition",
+        "parent": "Social Justice & Welfare",
+        "keywords": "health healthcare geriatric pediatric nutrition health for all local community-level community level intervention marketization public healthcare system amartya sen primary health care"
+      },
+      {
+        "id": "education-skills",
+        "name": "Education & Skill Development",
+        "parent": "Social Justice & Welfare",
+        "keywords": "education rte compulsory incentive-based incentive based vocational skill training earn learn higher education foreign eduction internationally competitive quality major improvements"
+      },
+      {
+        "id": "vulnerable-groups",
+        "name": "Women, Children & Disability",
+        "parent": "Social Justice & Welfare",
+        "keywords": "women gender feminist patriarchal empowerment equity social capital disability persons disabilities children child ncpcr digital era public examination unfair means university state vulnerable sections discriminatory approach welfare schemes"
+      },
+      {
+        "id": "welfare-schemes-livelihood",
+        "name": "Welfare Schemes & Livelihood",
+        "parent": "Social Justice & Welfare",
+        "keywords": "welfare scheme microfinance micro-finance shg self-help bank linkage sblp asset creation income security rural poor performance awareness active involvement inflation unemployment deft management serve poor underprivileged"
+      },
+      {
+        "id": "pressure-groups-civil-society",
+        "name": "Pressure Groups & Civil Society",
+        "parent": "Social Justice & Welfare",
+        "keywords": "pressure group informal face politics structure functioning business associations public policy making environmental pressure groups awareness advocating policies protection charitable trust inclusive development vital public issues civil society anti-state non-state actors"
+      },
+      {
+        "id": "neighbourhood-regional",
+        "name": "Neighbourhood & Regional",
+        "parent": "International Relations",
+        "keywords": "neighbourhood neighborhood saarc bimstec gujral doctrine mausam maldives string pearls central asian republics cars south china sea maritime territorial pakistan mutual distrust soft power sports cultural exchange project"
+      },
+      {
+        "id": "indo-pacific-bilateral",
+        "name": "Indo-Pacific & Strategic Partnerships",
+        "parent": "International Relations",
+        "keywords": "quad quadrilateral aukus indo-pacific indo us indo-us indo-russian defence defense deals stability strategic ally counter china west fostering alternative supply chain i2u2 israel uae depth diversity japan global partnership sco aims objectives"
+      },
+      {
+        "id": "multilateral-institutions",
+        "name": "Multilateral Institutions",
+        "parent": "International Relations",
+        "keywords": "united nations unsc reform wto doha round negotiations mandate binding who global health security covid pandemic nato us-europe strategic partnership globalization waning sovereign nationalism cold war"
+      },
+      {
+        "id": "energy-economic-diplomacy",
+        "name": "Energy & Economic Diplomacy",
+        "parent": "International Relations",
+        "keywords": "energy security kingpin foreign policy middle eastern look east economic strategic dimensions africa digital partnership co-development institutional trade bloc economic ties japan policy constraints liberalization privatization globalization governmental system responded"
+      },
+      {
+        "id": "terrorism-conflict",
+        "name": "Terrorism & Conflict",
+        "parent": "International Relations",
+        "keywords": "terrorism terror cross-border counter terror counter-terrorism isaf afghanistan withdrawal security implications global peace effectiveness security council increasing attacks interference internal affairs"
+      },
+      {
+        "id": "diaspora-soft-power",
+        "name": "Diaspora & Soft Power",
+        "parent": "International Relations",
+        "keywords": "diaspora scaled heights west america european countries south-east asian south east economic political benefits role economy society leader oppressed marginalised nations disappeared"
       }
     ]
   },

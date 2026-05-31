@@ -17,9 +17,23 @@
     "Amendment & Basic Structure",
     "UTs & Special Provisions",
     "Comparative Constitutions",
-    "Governance & Administration",
-    "Social Justice & Welfare",
-    "International Relations"
+    "E-Governance & Digital India",
+    "Local Government & Decentralization",
+    "Civil Services & Bureaucracy",
+    "Accountability & Citizen Charter",
+    "Public Service Delivery & NGOs",
+    "Poverty, Hunger & Inequality",
+    "Public Health & Nutrition",
+    "Education & Skill Development",
+    "Women, Children & Disability",
+    "Welfare Schemes & Livelihood",
+    "Pressure Groups & Civil Society",
+    "Neighbourhood & Regional",
+    "Indo-Pacific & Strategic Partnerships",
+    "Multilateral Institutions",
+    "Energy & Economic Diplomacy",
+    "Terrorism & Conflict",
+    "Diaspora & Soft Power"
   ],
   "questions": [
     {
@@ -47,9 +61,9 @@
       "number": 10,
       "marks": 10,
       "text": "With the waning of globalization, post-Cold War world is becoming a site of sovereign nationalism. Elucidate.",
-      "theme": "International Relations",
-      "themeId": "international-relations",
-      "themeParent": "",
+      "theme": "Multilateral Institutions",
+      "themeId": "multilateral-institutions",
+      "themeParent": "International Relations",
       "subthemes": [],
       "notes": {
         "introduction": "",
@@ -70,7 +84,8 @@
       "themeId": "judiciary",
       "themeParent": "Constitution & Polity",
       "subthemes": [
-        "Amendment & Basic Structure"
+        "Amendment & Basic Structure",
+        "Accountability & Citizen Charter"
       ],
       "notes": {
         "introduction": "",
@@ -146,13 +161,10 @@
       "number": 15,
       "marks": 15,
       "text": "What are environmental pressure groups? Discuss their role in raising awareness, influencing policies and advocating for environmental protection in India.",
-      "theme": "Social Justice & Welfare",
-      "themeId": "social-justice",
-      "themeParent": "",
-      "subthemes": [
-        "Fundamental Rights & DPSP",
-        "International Relations"
-      ],
+      "theme": "Pressure Groups & Civil Society",
+      "themeId": "pressure-groups-civil-society",
+      "themeParent": "Social Justice & Welfare",
+      "subthemes": [],
       "notes": {
         "introduction": "",
         "staticNotes": "",
@@ -168,9 +180,9 @@
       "number": 16,
       "marks": 15,
       "text": "Inequality in the ownership pattern of resources is one of the major causes of poverty. Discuss in the context of 'paradox of poverty'.",
-      "theme": "Social Justice & Welfare",
-      "themeId": "social-justice",
-      "themeParent": "",
+      "theme": "Poverty, Hunger & Inequality",
+      "themeId": "poverty-inequality",
+      "themeParent": "Social Justice & Welfare",
       "subthemes": [],
       "notes": {
         "introduction": "",
@@ -187,9 +199,9 @@
       "number": 17,
       "marks": 15,
       "text": "In contemporary development models, decision-making and problem-solving responsibilities are not located close to the source of information and execution defeating the objectives of development. Critically evaluate.",
-      "theme": "Federalism & Centre-State",
-      "themeId": "federalism-centre-state",
-      "themeParent": "Constitution & Polity",
+      "theme": "Local Government & Decentralization",
+      "themeId": "local-government",
+      "themeParent": "Governance & Administration",
       "subthemes": [],
       "notes": {
         "introduction": "",
@@ -210,8 +222,8 @@
       "themeId": "constitutional-bodies",
       "themeParent": "Constitution & Polity",
       "subthemes": [
-        "Social Justice & Welfare",
-        "Federalism & Centre-State"
+        "Women, Children & Disability",
+        "Pressure Groups & Civil Society"
       ],
       "notes": {
         "introduction": "",
@@ -228,9 +240,9 @@
       "number": 19,
       "marks": 15,
       "text": "Energy security constitutes the dominant kingpin of India's foreign policy, and is linked with India's overarching influence in Middle Eastern countries. How would you integrate energy security with India's foreign policy trajectories in the coming years?",
-      "theme": "International Relations",
-      "themeId": "international-relations",
-      "themeParent": "",
+      "theme": "Energy & Economic Diplomacy",
+      "themeId": "energy-economic-diplomacy",
+      "themeParent": "International Relations",
       "subthemes": [],
       "notes": {
         "introduction": "",
@@ -266,10 +278,13 @@
       "number": 20,
       "marks": 15,
       "text": "The reform process in the United Nations remains unresolved, because of the delicate imbalance of East and West and entanglement of the USA vs. Russo-Chinese alliance. Examine and critically evaluate the East-West policy confrontations in this regard.",
-      "theme": "International Relations",
-      "themeId": "international-relations",
-      "themeParent": "",
-      "subthemes": [],
+      "theme": "Multilateral Institutions",
+      "themeId": "multilateral-institutions",
+      "themeParent": "International Relations",
+      "subthemes": [
+        "Diaspora & Soft Power",
+        "Energy & Economic Diplomacy"
+      ],
       "notes": {
         "introduction": "",
         "staticNotes": "",
@@ -289,7 +304,8 @@
       "themeId": "union-state-executive",
       "themeParent": "Constitution & Polity",
       "subthemes": [
-        "Comparative Constitutions"
+        "Comparative Constitutions",
+        "Diaspora & Soft Power"
       ],
       "notes": {
         "introduction": "",
@@ -331,8 +347,8 @@
       "themeId": "union-state-executive",
       "themeParent": "Constitution & Polity",
       "subthemes": [
-        "Amendment & Basic Structure",
-        "Governance & Administration"
+        "Local Government & Decentralization",
+        "Accountability & Citizen Charter"
       ],
       "notes": {
         "introduction": "",
@@ -349,9 +365,9 @@
       "number": 6,
       "marks": 10,
       "text": "Women's social capital complements in advancing empowerment and gender equity. Explain.",
-      "theme": "Fundamental Rights & DPSP",
-      "themeId": "fundamental-rights-dpsp",
-      "themeParent": "Constitution & Polity",
+      "theme": "Women, Children & Disability",
+      "themeId": "vulnerable-groups",
+      "themeParent": "Social Justice & Welfare",
       "subthemes": [],
       "notes": {
         "introduction": "",
@@ -368,9 +384,9 @@
       "number": 7,
       "marks": 10,
       "text": "E-governance projects have a built-in bias towards technology and back-end integration than user-centric designs. Examine.",
-      "theme": "Governance & Administration",
-      "themeId": "governance",
-      "themeParent": "",
+      "theme": "E-Governance & Digital India",
+      "themeId": "e-governance",
+      "themeParent": "Governance & Administration",
       "subthemes": [],
       "notes": {
         "introduction": "",
@@ -387,13 +403,10 @@
       "number": 8,
       "marks": 10,
       "text": "Civil Society Organizations are often perceived as being anti-State actors than non-State actors. Do you agree? Justify.",
-      "theme": "Federalism & Centre-State",
-      "themeId": "federalism-centre-state",
-      "themeParent": "Constitution & Polity",
-      "subthemes": [
-        "Elections & RPA",
-        "Governance & Administration"
-      ],
+      "theme": "Pressure Groups & Civil Society",
+      "themeId": "pressure-groups-civil-society",
+      "themeParent": "Social Justice & Welfare",
+      "subthemes": [],
       "notes": {
         "introduction": "",
         "staticNotes": "",
@@ -409,13 +422,10 @@
       "number": 9,
       "marks": 10,
       "text": "India-Africa digital partnership is achieving mutual respect, co-development and long-term institutional partnerships. Elaborate.",
-      "theme": "International Relations",
-      "themeId": "international-relations",
-      "themeParent": "",
-      "subthemes": [
-        "Federalism & Centre-State",
-        "Social Justice & Welfare"
-      ],
+      "theme": "Energy & Economic Diplomacy",
+      "themeId": "energy-economic-diplomacy",
+      "themeParent": "International Relations",
+      "subthemes": [],
       "notes": {
         "introduction": "",
         "staticNotes": "",
@@ -434,7 +444,9 @@
       "theme": "Elections & RPA",
       "themeId": "elections-rpa",
       "themeParent": "Constitution & Polity",
-      "subthemes": [],
+      "subthemes": [
+        "Parliament & Legislatures"
+      ],
       "notes": {
         "introduction": "",
         "staticNotes": "",
@@ -450,11 +462,12 @@
       "number": 10,
       "marks": 10,
       "text": "Critically analyse India's evolving diplomatic, economic and strategic relations with the Central Asian Republics (CARs) highlighting their increasing significance in regional and global geopolitics.",
-      "theme": "International Relations",
-      "themeId": "international-relations",
-      "themeParent": "",
+      "theme": "Neighbourhood & Regional",
+      "themeId": "neighbourhood-regional",
+      "themeParent": "International Relations",
       "subthemes": [
-        "Judiciary & Judicial Review"
+        "Energy & Economic Diplomacy",
+        "Pressure Groups & Civil Society"
       ],
       "notes": {
         "introduction": "",
@@ -471,12 +484,11 @@
       "number": 11,
       "marks": 15,
       "text": "What are the aims and objects of recently passed and enforced, The Public Examination (prevention of Unfair Means) Act, 2024? Whether University/State Education Board examinations, too, are covered under the Act?",
-      "theme": "Social Justice & Welfare",
-      "themeId": "social-justice",
-      "themeParent": "",
+      "theme": "Women, Children & Disability",
+      "themeId": "vulnerable-groups",
+      "themeParent": "Social Justice & Welfare",
       "subthemes": [
-        "Federalism & Centre-State",
-        "Elections & RPA"
+        "Education & Skill Development"
       ],
       "notes": {
         "introduction": "",
@@ -573,9 +585,9 @@
       "number": 16,
       "marks": 15,
       "text": "The Citizens' charter has been a landmark initiative in ensuring citizen-centric administration. But it is yet to reach its full potential. Identify the factors hindering the realisation of its promise and suggest measures to overcome them.",
-      "theme": "Governance & Administration",
-      "themeId": "governance",
-      "themeParent": "",
+      "theme": "Accountability & Citizen Charter",
+      "themeId": "accountability-transparency",
+      "themeParent": "Governance & Administration",
       "subthemes": [],
       "notes": {
         "introduction": "",
@@ -592,13 +604,10 @@
       "number": 17,
       "marks": 15,
       "text": "In a crucial domain like the public healthcare system the Indian State should play a vital role to contain the adverse impact of marketization of the system. Suggest some measures through which the State can enhance the reach of public healthcare at the grassroots level.",
-      "theme": "Social Justice & Welfare",
-      "themeId": "social-justice",
-      "themeParent": "",
-      "subthemes": [
-        "Judiciary & Judicial Review",
-        "Federalism & Centre-State"
-      ],
+      "theme": "Public Health & Nutrition",
+      "themeId": "health-nutrition",
+      "themeParent": "Social Justice & Welfare",
+      "subthemes": [],
       "notes": {
         "introduction": "",
         "staticNotes": "",
@@ -614,9 +623,9 @@
       "number": 18,
       "marks": 15,
       "text": "e-governance is not just about the routine application of digital technology in service delivery process. It is as much about multifarious interactions for ensuring transparency and accountability. In this context, evaluate the role of the 'Interactive Service Model' of e-governance.",
-      "theme": "Governance & Administration",
-      "themeId": "governance",
-      "themeParent": "",
+      "theme": "E-Governance & Digital India",
+      "themeId": "e-governance",
+      "themeParent": "Governance & Administration",
       "subthemes": [],
       "notes": {
         "introduction": "",
@@ -633,9 +642,9 @@
       "number": 19,
       "marks": 15,
       "text": "Terrorism has become a significant threat to global peace and security. Evaluate the effectiveness of the United Nations Security Council's Counter Terrorism Committee (CTC) and its associated bodies in addressing and mitigating this threat at the international level.",
-      "theme": "International Relations",
-      "themeId": "international-relations",
-      "themeParent": "",
+      "theme": "Terrorism & Conflict",
+      "themeId": "terrorism-conflict",
+      "themeParent": "International Relations",
       "subthemes": [],
       "notes": {
         "introduction": "",
@@ -671,10 +680,13 @@
       "number": 20,
       "marks": 15,
       "text": "Discuss the geopolitical and geostrategic importance of Maldives for India, with a focus on global trade and energy flows. Further also discuss how this relationship affects India's maritime security and regional stability amidst international competition?",
-      "theme": "International Relations",
-      "themeId": "international-relations",
-      "themeParent": "",
-      "subthemes": [],
+      "theme": "Energy & Economic Diplomacy",
+      "themeId": "energy-economic-diplomacy",
+      "themeParent": "International Relations",
+      "subthemes": [
+        "Indo-Pacific & Strategic Partnerships",
+        "Multilateral Institutions"
+      ],
       "notes": {
         "introduction": "",
         "staticNotes": "",
@@ -693,10 +705,7 @@
       "theme": "Parliament & Legislatures",
       "themeId": "parliament-legislature",
       "themeParent": "Constitution & Polity",
-      "subthemes": [
-        "Governance & Administration",
-        "Comparative Constitutions"
-      ],
+      "subthemes": [],
       "notes": {
         "introduction": "",
         "staticNotes": "",
@@ -716,7 +725,8 @@
       "themeId": "constitutional-bodies",
       "themeParent": "Constitution & Polity",
       "subthemes": [
-        "Union & State Executive"
+        "Union & State Executive",
+        "Judiciary & Judicial Review"
       ],
       "notes": {
         "introduction": "",
@@ -733,9 +743,9 @@
       "number": 5,
       "marks": 10,
       "text": "Analyse the role of local bodies in providing good governance at local level and bring out the pros and cons of merging the rural local bodies with the urban local bodies.",
-      "theme": "Governance & Administration",
-      "themeId": "governance",
-      "themeParent": "",
+      "theme": "Local Government & Decentralization",
+      "themeId": "local-government",
+      "themeParent": "Governance & Administration",
       "subthemes": [],
       "notes": {
         "introduction": "",
@@ -752,12 +762,10 @@
       "number": 6,
       "marks": 10,
       "text": "Public charitable trusts have the potential to make India's development more inclusive as they relate to certain vital public issues. Comment.",
-      "theme": "Social Justice & Welfare",
-      "themeId": "social-justice",
-      "themeParent": "",
-      "subthemes": [
-        "Federalism & Centre-State"
-      ],
+      "theme": "Pressure Groups & Civil Society",
+      "themeId": "pressure-groups-civil-society",
+      "themeParent": "Social Justice & Welfare",
+      "subthemes": [],
       "notes": {
         "introduction": "",
         "staticNotes": "",
@@ -773,9 +781,9 @@
       "number": 7,
       "marks": 10,
       "text": "Poverty and malnutrition create a vicious cycle, adversely affecting human capital formation. What steps can be taken to break the cycle?",
-      "theme": "Social Justice & Welfare",
-      "themeId": "social-justice",
-      "themeParent": "",
+      "theme": "Poverty, Hunger & Inequality",
+      "themeId": "poverty-inequality",
+      "themeParent": "Social Justice & Welfare",
       "subthemes": [],
       "notes": {
         "introduction": "",
@@ -792,13 +800,10 @@
       "number": 8,
       "marks": 10,
       "text": "The Doctrine of Democratic Governance makes it necessary that the public perception of the integrity and commitment of civil servants becomes absolutely positive. Discuss.",
-      "theme": "Governance & Administration",
-      "themeId": "governance",
-      "themeParent": "",
-      "subthemes": [
-        "Judiciary & Judicial Review",
-        "Social Justice & Welfare"
-      ],
+      "theme": "Civil Services & Bureaucracy",
+      "themeId": "civil-services",
+      "themeParent": "Governance & Administration",
+      "subthemes": [],
       "notes": {
         "introduction": "",
         "staticNotes": "",
@@ -814,11 +819,11 @@
       "number": 9,
       "marks": 10,
       "text": "The West is fostering India as an alternative to reduce dependence on China's supply chain and as a strategic ally to counter China's political and economic dominance. Explain this statement with examples.",
-      "theme": "International Relations",
-      "themeId": "international-relations",
-      "themeParent": "",
+      "theme": "Indo-Pacific & Strategic Partnerships",
+      "themeId": "indo-pacific-bilateral",
+      "themeParent": "International Relations",
       "subthemes": [
-        "Federalism & Centre-State"
+        "Energy & Economic Diplomacy"
       ],
       "notes": {
         "introduction": "",
@@ -857,9 +862,9 @@
       "number": 10,
       "marks": 10,
       "text": "Indian diaspora has scaled new heights in the West. Describe its economic and political benefits for India.",
-      "theme": "Governance & Administration",
-      "themeId": "misc",
-      "themeParent": "",
+      "theme": "Diaspora & Soft Power",
+      "themeId": "diaspora-soft-power",
+      "themeParent": "International Relations",
       "subthemes": [],
       "notes": {
         "introduction": "",
@@ -919,12 +924,12 @@
       "number": 13,
       "marks": 10,
       "text": "Account for the legal and political factors responsible for the reduced frequency of using Article 356 by the Union Governments since mid-1990s.",
-      "theme": "UTs & Special Provisions",
-      "themeId": "special-provisions-ut",
+      "theme": "Federalism & Centre-State",
+      "themeId": "federalism-centre-state",
       "themeParent": "Constitution & Polity",
       "subthemes": [
-        "Fundamental Rights & DPSP",
-        "Amendment & Basic Structure"
+        "UTs & Special Provisions",
+        "Fundamental Rights & DPSP"
       ],
       "notes": {
         "introduction": "",
@@ -941,12 +946,12 @@
       "number": 14,
       "marks": 10,
       "text": "Discuss the contribution of civil society groups for women s effective and meaningful participation and representation in state legislatures in India.",
-      "theme": "Federalism & Centre-State",
-      "themeId": "federalism-centre-state",
+      "theme": "Elections & RPA",
+      "themeId": "elections-rpa",
       "themeParent": "Constitution & Polity",
       "subthemes": [
-        "Elections & RPA",
-        "Governance & Administration"
+        "Public Service Delivery & NGOs",
+        "Pressure Groups & Civil Society"
       ],
       "notes": {
         "introduction": "",
@@ -1003,12 +1008,10 @@
       "number": 17,
       "marks": 10,
       "text": "Development and welfare schemes for the vulnerable, by its nature, are discriminatory in approach. Do you agree? Give reasons for your answer.",
-      "theme": "Social Justice & Welfare",
-      "themeId": "social-justice",
-      "themeParent": "",
-      "subthemes": [
-        "Federalism & Centre-State"
-      ],
+      "theme": "Women, Children & Disability",
+      "themeId": "vulnerable-groups",
+      "themeParent": "Social Justice & Welfare",
+      "subthemes": [],
       "notes": {
         "introduction": "",
         "staticNotes": "",
@@ -1024,11 +1027,12 @@
       "number": 18,
       "marks": 10,
       "text": "Skill development programmes have succeeded in increasing human resources supply to various sectors. In the context of the statement analyze the linkages between education, skill, and employment.",
-      "theme": "Federalism & Centre-State",
-      "themeId": "federalism-centre-state",
-      "themeParent": "Constitution & Polity",
+      "theme": "Local Government & Decentralization",
+      "themeId": "local-government",
+      "themeParent": "Governance & Administration",
       "subthemes": [
-        "Social Justice & Welfare"
+        "Education & Skill Development",
+        "Federalism & Centre-State"
       ],
       "notes": {
         "introduction": "",
@@ -1045,11 +1049,12 @@
       "number": 19,
       "marks": 10,
       "text": "The expansion and strengthening of NATO and a stronger US-Europe strategic partnership works well for India What is your opinion about this statement? Give reasons and examples to support your answer.",
-      "theme": "International Relations",
-      "themeId": "international-relations",
-      "themeParent": "",
+      "theme": "Multilateral Institutions",
+      "themeId": "multilateral-institutions",
+      "themeParent": "International Relations",
       "subthemes": [
-        "Federalism & Centre-State"
+        "Indo-Pacific & Strategic Partnerships",
+        "Energy & Economic Diplomacy"
       ],
       "notes": {
         "introduction": "",
@@ -1066,11 +1071,12 @@
       "number": 2,
       "marks": 10,
       "text": "Who are entitled to receive free legal aid? Assess the role of National Legal Services Authority (NALSA) in rendering free legal aid in India.",
-      "theme": "Governance & Administration",
-      "themeId": "governance",
-      "themeParent": "",
+      "theme": "Judiciary & Judicial Review",
+      "themeId": "judiciary",
+      "themeParent": "Constitution & Polity",
       "subthemes": [
-        "Elections & RPA"
+        "Public Service Delivery & NGOs",
+        "E-Governance & Digital India"
       ],
       "notes": {
         "introduction": "",
@@ -1087,12 +1093,12 @@
       "number": 2023,
       "marks": 10,
       "text": "A total of 20 questions are asked in the paper. Out of which 10 questions are of 10 marks and the rest of the 10 are of 15 marks. Further details related to the UPSC CSE mains 2023 GS paper 2 question paper and exam analysis are provided below. Table of Contents Toggle GS Paper 2 UPSC 2023: Instructions General Studies Paper 2 Question Paper: UPSC Civil Services Main Exam (Written) 2023 UPSC Mains 2023: Question Topics in General Studies Paper 2 GS Paper 2 UPSC 2023 (Mains): Question Paper Analysis",
-      "theme": "Governance & Administration",
-      "themeId": "governance",
-      "themeParent": "",
+      "theme": "Civil Services & Bureaucracy",
+      "themeId": "civil-services",
+      "themeParent": "Governance & Administration",
       "subthemes": [
-        "Union & State Executive",
-        "Constitutional Bodies"
+        "Public Service Delivery & NGOs",
+        "Union & State Executive"
       ],
       "notes": {
         "introduction": "",
@@ -1109,12 +1115,12 @@
       "number": 3,
       "marks": 10,
       "text": "The states in India seem reluctant to empower urban local bodies both functionally as well as financially. Comment.",
-      "theme": "Federalism & Centre-State",
-      "themeId": "federalism-centre-state",
-      "themeParent": "Constitution & Polity",
+      "theme": "Local Government & Decentralization",
+      "themeId": "local-government",
+      "themeParent": "Governance & Administration",
       "subthemes": [
-        "Comparative Constitutions",
-        "Governance & Administration"
+        "Federalism & Centre-State",
+        "Parliament & Legislatures"
       ],
       "notes": {
         "introduction": "",
@@ -1173,10 +1179,13 @@
       "number": 6,
       "marks": 10,
       "text": "The crucial aspect of development process has been the inadequate attention paid to Human Resource Development in India. Suggest measures that can address this inadequacy.",
-      "theme": "Federalism & Centre-State",
-      "themeId": "federalism-centre-state",
-      "themeParent": "Constitution & Polity",
-      "subthemes": [],
+      "theme": "Local Government & Decentralization",
+      "themeId": "local-government",
+      "themeParent": "Governance & Administration",
+      "subthemes": [
+        "Federalism & Centre-State",
+        "Pressure Groups & Civil Society"
+      ],
       "notes": {
         "introduction": "",
         "staticNotes": "",
@@ -1195,9 +1204,7 @@
       "theme": "Constitutional Bodies",
       "themeId": "constitutional-bodies",
       "themeParent": "Constitution & Polity",
-      "subthemes": [
-        "Federalism & Centre-State"
-      ],
+      "subthemes": [],
       "notes": {
         "introduction": "",
         "staticNotes": "",
@@ -1213,10 +1220,12 @@
       "number": 8,
       "marks": 10,
       "text": "E-governance, as a critical tool of governance, has ushered in effectiveness, transparency and accountability in governments. What inadequacies hamper the enhancement of these features?",
-      "theme": "Governance & Administration",
-      "themeId": "governance",
-      "themeParent": "",
-      "subthemes": [],
+      "theme": "E-Governance & Digital India",
+      "themeId": "e-governance",
+      "themeParent": "Governance & Administration",
+      "subthemes": [
+        "Accountability & Citizen Charter"
+      ],
       "notes": {
         "introduction": "",
         "staticNotes": "",
@@ -1235,7 +1244,10 @@
       "theme": "Federalism & Centre-State",
       "themeId": "federalism-centre-state",
       "themeParent": "Constitution & Polity",
-      "subthemes": [],
+      "subthemes": [
+        "Pressure Groups & Civil Society",
+        "Elections & RPA"
+      ],
       "notes": {
         "introduction": "",
         "staticNotes": "",
@@ -1273,10 +1285,13 @@
       "number": 10,
       "marks": 10,
       "text": "Do you think that BIMSTEC is a parallel organisation like the SAARC? What are the similarities and dissimilarities between the two? How are Indian Foreign Policy objectives realised by forming this new organisation?",
-      "theme": "International Relations",
-      "themeId": "international-relations",
-      "themeParent": "",
-      "subthemes": [],
+      "theme": "Energy & Economic Diplomacy",
+      "themeId": "energy-economic-diplomacy",
+      "themeParent": "International Relations",
+      "subthemes": [
+        "Neighbourhood & Regional",
+        "Public Service Delivery & NGOs"
+      ],
       "notes": {
         "introduction": "",
         "staticNotes": "",
@@ -1315,7 +1330,8 @@
       "themeId": "parliament-legislature",
       "themeParent": "Constitution & Polity",
       "subthemes": [
-        "Union & State Executive"
+        "Union & State Executive",
+        "Judiciary & Judicial Review"
       ],
       "notes": {
         "introduction": "",
@@ -1336,8 +1352,8 @@
       "themeId": "federalism-centre-state",
       "themeParent": "Constitution & Polity",
       "subthemes": [
-        "International Relations",
-        "Elections & RPA"
+        "Elections & RPA",
+        "Poverty, Hunger & Inequality"
       ],
       "notes": {
         "introduction": "",
@@ -1392,9 +1408,9 @@
       "number": 16,
       "marks": 10,
       "text": "Besides the welfare schemes, India needs deft management of inflation and unemployment to serve the poor and the underprivileged sections of society. Discuss.",
-      "theme": "Social Justice & Welfare",
-      "themeId": "social-justice",
-      "themeParent": "",
+      "theme": "Welfare Schemes & Livelihood",
+      "themeId": "welfare-schemes-livelihood",
+      "themeParent": "Social Justice & Welfare",
       "subthemes": [],
       "notes": {
         "introduction": "",
@@ -1411,10 +1427,13 @@
       "number": 17,
       "marks": 10,
       "text": "Do you agree with the view that increasing dependence on donor agencies for development reduces the importance of community participation in the development process? Justify your answer.",
-      "theme": "Federalism & Centre-State",
-      "themeId": "federalism-centre-state",
-      "themeParent": "Constitution & Polity",
-      "subthemes": [],
+      "theme": "Public Health & Nutrition",
+      "themeId": "health-nutrition",
+      "themeParent": "Social Justice & Welfare",
+      "subthemes": [
+        "Federalism & Centre-State",
+        "Local Government & Decentralization"
+      ],
       "notes": {
         "introduction": "",
         "staticNotes": "",
@@ -1430,13 +1449,10 @@
       "number": 18,
       "marks": 10,
       "text": "The Right of Children to Free and Compulsory Education Act, 2009 remains inadequate in promoting an incentive-based system for children s education without generating awareness about the importance of schooling. Analyse.",
-      "theme": "Social Justice & Welfare",
-      "themeId": "social-justice",
-      "themeParent": "",
-      "subthemes": [
-        "Judiciary & Judicial Review",
-        "Elections & RPA"
-      ],
+      "theme": "Education & Skill Development",
+      "themeId": "education-skills",
+      "themeParent": "Social Justice & Welfare",
+      "subthemes": [],
       "notes": {
         "introduction": "",
         "staticNotes": "",
@@ -1452,11 +1468,11 @@
       "number": 19,
       "marks": 10,
       "text": "How will I2U2 (India, Israel, UAE and USA) grouping transform India s position in global politics?",
-      "theme": "Comparative Constitutions",
-      "themeId": "comparative-constitution",
-      "themeParent": "Constitution & Polity",
+      "theme": "Indo-Pacific & Strategic Partnerships",
+      "themeId": "indo-pacific-bilateral",
+      "themeParent": "International Relations",
       "subthemes": [
-        "Social Justice & Welfare"
+        "Pressure Groups & Civil Society"
       ],
       "notes": {
         "introduction": "",
@@ -1492,12 +1508,12 @@
       "number": 2,
       "marks": 10,
       "text": "of UPSC 2022 Civil Services Mains Examination (written). UPSC conducted the General Studies Paper 2 , as part of the Civil Services Main Exam 2022 on 17-09-2022. There were 20 questions. 10 questions were 10 marks each, while the remaining 10 questions were 15 marks each. Table of Contents Toggle GS Paper 2 UPSC 2022: Instructions General Studies Paper 2 Question Paper – UPSC Civil Services Main Exam (Written) 2022 Question Topics in General Studies Paper 2 (2022 Mains) GS Paper 2 UPSC 2022 (Mains): Question Paper",
-      "theme": "Governance & Administration",
-      "themeId": "governance",
-      "themeParent": "",
+      "theme": "Civil Services & Bureaucracy",
+      "themeId": "civil-services",
+      "themeParent": "Governance & Administration",
       "subthemes": [
-        "Union & State Executive",
-        "Elections & RPA"
+        "Public Service Delivery & NGOs",
+        "Union & State Executive"
       ],
       "notes": {
         "introduction": "",
@@ -1514,12 +1530,12 @@
       "number": 3,
       "marks": 10,
       "text": "To what extent in your opinion has the decentralisation of power in India changed the governance landscape at the grassroots?",
-      "theme": "Governance & Administration",
-      "themeId": "governance",
-      "themeParent": "",
+      "theme": "Local Government & Decentralization",
+      "themeId": "local-government",
+      "themeParent": "Governance & Administration",
       "subthemes": [
-        "International Relations",
-        "Amendment & Basic Structure"
+        "Federalism & Centre-State",
+        "Civil Services & Bureaucracy"
       ],
       "notes": {
         "introduction": "",
@@ -1540,7 +1556,8 @@
       "themeId": "parliament-legislature",
       "themeParent": "Constitution & Polity",
       "subthemes": [
-        "Union & State Executive"
+        "Union & State Executive",
+        "Diaspora & Soft Power"
       ],
       "notes": {
         "introduction": "",
@@ -1560,9 +1577,7 @@
       "theme": "Constitutional Bodies",
       "themeId": "constitutional-bodies",
       "themeParent": "Constitution & Polity",
-      "subthemes": [
-        "Amendment & Basic Structure"
-      ],
+      "subthemes": [],
       "notes": {
         "introduction": "",
         "staticNotes": "",
@@ -1597,12 +1612,11 @@
       "number": 7,
       "marks": 10,
       "text": "The rights of persons with disabilities Act, 2016 remains only a legal document without intense sensitisation of Government functionaries and citizens regarding disability. Comment.",
-      "theme": "Social Justice & Welfare",
-      "themeId": "social-justice",
-      "themeParent": "",
+      "theme": "Women, Children & Disability",
+      "themeId": "vulnerable-groups",
+      "themeParent": "Social Justice & Welfare",
       "subthemes": [
-        "Governance & Administration",
-        "Fundamental Rights & DPSP"
+        "Accountability & Citizen Charter"
       ],
       "notes": {
         "introduction": "",
@@ -1619,12 +1633,12 @@
       "number": 8,
       "marks": 10,
       "text": "Reforming the government delivery system through the Direct Benefit Transfer Scheme is a progressive step, but it has limitations too. Comment.",
-      "theme": "Amendment & Basic Structure",
-      "themeId": "constitutional-amendment",
+      "theme": "Elections & RPA",
+      "themeId": "elections-rpa",
       "themeParent": "Constitution & Polity",
       "subthemes": [
-        "Judiciary & Judicial Review",
-        "Elections & RPA"
+        "Amendment & Basic Structure",
+        "E-Governance & Digital India"
       ],
       "notes": {
         "introduction": "",
@@ -1644,7 +1658,10 @@
       "theme": "Federalism & Centre-State",
       "themeId": "federalism-centre-state",
       "themeParent": "Constitution & Polity",
-      "subthemes": [],
+      "subthemes": [
+        "Elections & RPA",
+        "Women, Children & Disability"
+      ],
       "notes": {
         "introduction": "",
         "staticNotes": "",
@@ -1684,7 +1701,7 @@
       "themeParent": "Constitution & Polity",
       "subthemes": [
         "Comparative Constitutions",
-        "International Relations"
+        "Neighbourhood & Regional"
       ],
       "notes": {
         "introduction": "",
@@ -1705,7 +1722,7 @@
       "themeId": "federalism-centre-state",
       "themeParent": "Constitution & Polity",
       "subthemes": [
-        "Elections & RPA",
+        "Neighbourhood & Regional",
         "UTs & Special Provisions"
       ],
       "notes": {
@@ -1727,8 +1744,7 @@
       "themeId": "constitutional-bodies",
       "themeParent": "Constitution & Polity",
       "subthemes": [
-        "Federalism & Centre-State",
-        "Amendment & Basic Structure"
+        "Federalism & Centre-State"
       ],
       "notes": {
         "introduction": "",
@@ -1772,7 +1788,7 @@
       "themeParent": "Constitution & Polity",
       "subthemes": [
         "Amendment & Basic Structure",
-        "Union & State Executive"
+        "UTs & Special Provisions"
       ],
       "notes": {
         "introduction": "",
@@ -1792,9 +1808,7 @@
       "theme": "Parliament & Legislatures",
       "themeId": "parliament-legislature",
       "themeParent": "Constitution & Polity",
-      "subthemes": [
-        "Governance & Administration"
-      ],
+      "subthemes": [],
       "notes": {
         "introduction": "",
         "staticNotes": "",
@@ -1810,12 +1824,12 @@
       "number": 16,
       "marks": 20,
       "text": "Has digital illiteracy, particularly in rural areas, coupled with lack of Information and Communication Technology (ICT) accessibility hindered socio-economic development? Examine with justification.",
-      "theme": "Federalism & Centre-State",
-      "themeId": "federalism-centre-state",
-      "themeParent": "Constitution & Polity",
+      "theme": "E-Governance & Digital India",
+      "themeId": "e-governance",
+      "themeParent": "Governance & Administration",
       "subthemes": [
-        "Social Justice & Welfare",
-        "International Relations"
+        "Energy & Economic Diplomacy",
+        "Local Government & Decentralization"
       ],
       "notes": {
         "introduction": "",
@@ -1832,13 +1846,10 @@
       "number": 17,
       "marks": 20,
       "text": "“Though women in post-Independent India have excelled in various fields, the social attitude towards women and feminist movement has been patriarchal.” Apart from women education and women empowerment schemes, what interventions can help change this milieu?",
-      "theme": "Social Justice & Welfare",
-      "themeId": "social-justice",
-      "themeParent": "",
-      "subthemes": [
-        "Federalism & Centre-State",
-        "Amendment & Basic Structure"
-      ],
+      "theme": "Women, Children & Disability",
+      "themeId": "vulnerable-groups",
+      "themeParent": "Social Justice & Welfare",
+      "subthemes": [],
       "notes": {
         "introduction": "",
         "staticNotes": "",
@@ -1854,9 +1865,9 @@
       "number": 18,
       "marks": 20,
       "text": "Can civil Society and Non-Governmental Organizations present an alternative model of public service delivery to benefit the common citizen? Discuss the challenges of this alternative model.",
-      "theme": "Governance & Administration",
-      "themeId": "governance",
-      "themeParent": "",
+      "theme": "Public Service Delivery & NGOs",
+      "themeId": "public-service-delivery",
+      "themeParent": "Governance & Administration",
       "subthemes": [],
       "notes": {
         "introduction": "",
@@ -1873,9 +1884,9 @@
       "number": 19,
       "marks": 20,
       "text": "Critically examine the aims and objectives of SCO. What importance does it hold for India?",
-      "theme": "Governance & Administration",
-      "themeId": "misc",
-      "themeParent": "",
+      "theme": "Indo-Pacific & Strategic Partnerships",
+      "themeId": "indo-pacific-bilateral",
+      "themeParent": "International Relations",
       "subthemes": [],
       "notes": {
         "introduction": "",
@@ -1896,7 +1907,8 @@
       "themeId": "judiciary",
       "themeParent": "Constitution & Polity",
       "subthemes": [
-        "Elections & RPA"
+        "Elections & RPA",
+        "Women, Children & Disability"
       ],
       "notes": {
         "introduction": "",
@@ -1913,12 +1925,10 @@
       "number": 20,
       "marks": 20,
       "text": "The newly tri-nation partnership AUKUS is aimed at countering China’s ambitions in the Indo-Pacific region. Is it going to supersede the existing partnerships in the region? Discuss the strength and impact of AUKUS in the present scenario.",
-      "theme": "International Relations",
-      "themeId": "international-relations",
-      "themeParent": "",
-      "subthemes": [
-        "Elections & RPA"
-      ],
+      "theme": "Indo-Pacific & Strategic Partnerships",
+      "themeId": "indo-pacific-bilateral",
+      "themeParent": "International Relations",
+      "subthemes": [],
       "notes": {
         "introduction": "",
         "staticNotes": "",
@@ -1977,9 +1987,9 @@
       "number": 5,
       "marks": 10,
       "text": "“Pressure groups play a vital role in influencing public policy making in India.” Explain how the business associations contribute to public policies.",
-      "theme": "Social Justice & Welfare",
-      "themeId": "social-justice",
-      "themeParent": "",
+      "theme": "Pressure Groups & Civil Society",
+      "themeId": "pressure-groups-civil-society",
+      "themeParent": "Social Justice & Welfare",
       "subthemes": [],
       "notes": {
         "introduction": "",
@@ -1996,12 +2006,12 @@
       "number": 6,
       "marks": 10,
       "text": "‘Besides being a moral imperative of a Welfare State, primary health structure is a necessary precondition for sustainable development.” Analyze.",
-      "theme": "Federalism & Centre-State",
-      "themeId": "federalism-centre-state",
-      "themeParent": "Constitution & Polity",
+      "theme": "Public Health & Nutrition",
+      "themeId": "health-nutrition",
+      "themeParent": "Social Justice & Welfare",
       "subthemes": [
-        "Social Justice & Welfare",
-        "Amendment & Basic Structure"
+        "Federalism & Centre-State",
+        "Pressure Groups & Civil Society"
       ],
       "notes": {
         "introduction": "",
@@ -2018,9 +2028,9 @@
       "number": 7,
       "marks": 10,
       "text": "“Earn while you learn’ scheme needs to be strengthened to make vocational education and skill training meaningful.” Comment.",
-      "theme": "Social Justice & Welfare",
-      "themeId": "social-justice",
-      "themeParent": "",
+      "theme": "Education & Skill Development",
+      "themeId": "education-skills",
+      "themeParent": "Social Justice & Welfare",
       "subthemes": [],
       "notes": {
         "introduction": "",
@@ -2037,12 +2047,10 @@
       "number": 8,
       "marks": 10,
       "text": "Can the vicious cycle of gender inequality, poverty and malnutrition be broken through microfinancing of women SHGs? Explain with examples.",
-      "theme": "Social Justice & Welfare",
-      "themeId": "social-justice",
-      "themeParent": "",
-      "subthemes": [
-        "Fundamental Rights & DPSP"
-      ],
+      "theme": "Poverty, Hunger & Inequality",
+      "themeId": "poverty-inequality",
+      "themeParent": "Social Justice & Welfare",
+      "subthemes": [],
       "notes": {
         "introduction": "",
         "staticNotes": "",
@@ -2058,12 +2066,12 @@
       "number": 9,
       "marks": 10,
       "text": "“If the last few decades were of Asia’s growth story, the next few are expected to be of Africa’s.” In the light of this statement, examine India’s influence in Africa in recent years.",
-      "theme": "Federalism & Centre-State",
-      "themeId": "federalism-centre-state",
+      "theme": "Elections & RPA",
+      "themeId": "elections-rpa",
       "themeParent": "Constitution & Polity",
       "subthemes": [
-        "Elections & RPA",
-        "International Relations"
+        "Federalism & Centre-State",
+        "Women, Children & Disability"
       ],
       "notes": {
         "introduction": "",
@@ -2099,9 +2107,9 @@
       "number": 10,
       "marks": 10,
       "text": "‘Indian diaspora has a decisive role to play in the politics and economy of America and European Countries’. Comment with examples.",
-      "theme": "Governance & Administration",
-      "themeId": "misc",
-      "themeParent": "",
+      "theme": "Diaspora & Soft Power",
+      "themeId": "diaspora-soft-power",
+      "themeParent": "International Relations",
       "subthemes": [],
       "notes": {
         "introduction": "",
@@ -2144,8 +2152,8 @@
       "themeId": "judiciary",
       "themeParent": "Constitution & Polity",
       "subthemes": [
-        "Parliament & Legislatures",
-        "Union & State Executive"
+        "Neighbourhood & Regional",
+        "Parliament & Legislatures"
       ],
       "notes": {
         "introduction": "",
@@ -2162,11 +2170,12 @@
       "number": 13,
       "marks": 20,
       "text": "The strength and sustenance of local institutions in India has shifted from their formative phase of ‘Functions, Functionaries and Funds’ to the contemporary stage of ‘Functionality’. Highlight the critical challenges faced by local institutions in terms of their functionality in recent times.",
-      "theme": "Judiciary & Judicial Review",
-      "themeId": "judiciary",
-      "themeParent": "Constitution & Polity",
+      "theme": "Local Government & Decentralization",
+      "themeId": "local-government",
+      "themeParent": "Governance & Administration",
       "subthemes": [
-        "Governance & Administration"
+        "Accountability & Citizen Charter",
+        "Public Service Delivery & NGOs"
       ],
       "notes": {
         "introduction": "",
@@ -2187,8 +2196,7 @@
       "themeId": "parliament-legislature",
       "themeParent": "Constitution & Polity",
       "subthemes": [
-        "Judiciary & Judicial Review",
-        "Elections & RPA"
+        "Pressure Groups & Civil Society"
       ],
       "notes": {
         "introduction": "",
@@ -2227,12 +2235,12 @@
       "number": 16,
       "marks": 20,
       "text": "“The incedence and intensity of poverty are more important in determining poverty based on income alone”. In this context analyse the latest United Nations Multidimensional Poverty Index Report.",
-      "theme": "International Relations",
-      "themeId": "international-relations",
-      "themeParent": "",
+      "theme": "Poverty, Hunger & Inequality",
+      "themeId": "poverty-inequality",
+      "themeParent": "Social Justice & Welfare",
       "subthemes": [
-        "Elections & RPA",
-        "Social Justice & Welfare"
+        "Multilateral Institutions",
+        "Diaspora & Soft Power"
       ],
       "notes": {
         "introduction": "",
@@ -2249,13 +2257,10 @@
       "number": 17,
       "marks": 20,
       "text": "“Micro-Finance as an anti-poverty vaccine, is aimed at asset creation and income security of the rural poor in India”. Evaluate the role of the Self Help Groups in achieving the twin objectives along with empowering women in rural India.",
-      "theme": "Social Justice & Welfare",
-      "themeId": "social-justice",
-      "themeParent": "",
-      "subthemes": [
-        "Federalism & Centre-State",
-        "Constitutional Bodies"
-      ],
+      "theme": "Welfare Schemes & Livelihood",
+      "themeId": "welfare-schemes-livelihood",
+      "themeParent": "Social Justice & Welfare",
+      "subthemes": [],
       "notes": {
         "introduction": "",
         "staticNotes": "",
@@ -2271,12 +2276,12 @@
       "number": 18,
       "marks": 20,
       "text": "National Education Policy 2020 is in conformity with the Sustainable Development-Goal-4 (2030). It intends to restructure and reorient education system in India. Critically examine the statement.",
-      "theme": "Federalism & Centre-State",
-      "themeId": "federalism-centre-state",
-      "themeParent": "Constitution & Polity",
+      "theme": "Pressure Groups & Civil Society",
+      "themeId": "pressure-groups-civil-society",
+      "themeParent": "Social Justice & Welfare",
       "subthemes": [
-        "Amendment & Basic Structure",
-        "Social Justice & Welfare"
+        "Federalism & Centre-State",
+        "Education & Skill Development"
       ],
       "notes": {
         "introduction": "",
@@ -2293,10 +2298,13 @@
       "number": 19,
       "marks": 20,
       "text": "‘Quadrilateral Security Dialogue (Quad)’ is transforming itself into a trade bloc from a military alliance, in present times — Discuss.",
-      "theme": "International Relations",
-      "themeId": "international-relations",
-      "themeParent": "",
-      "subthemes": [],
+      "theme": "Energy & Economic Diplomacy",
+      "themeId": "energy-economic-diplomacy",
+      "themeParent": "International Relations",
+      "subthemes": [
+        "Terrorism & Conflict",
+        "Indo-Pacific & Strategic Partnerships"
+      ],
       "notes": {
         "introduction": "",
         "staticNotes": "",
@@ -2312,11 +2320,11 @@
       "number": 2,
       "marks": 10,
       "text": "“Recent amendments to the Right to Information Act will have profound impact on the autonomy and independence of the Information Commission”. Discuss.",
-      "theme": "Federalism & Centre-State",
-      "themeId": "federalism-centre-state",
+      "theme": "Constitutional Bodies",
+      "themeId": "constitutional-bodies",
       "themeParent": "Constitution & Polity",
       "subthemes": [
-        "Constitutional Bodies",
+        "Federalism & Centre-State",
         "Amendment & Basic Structure"
       ],
       "notes": {
@@ -2334,9 +2342,9 @@
       "number": 20,
       "marks": 20,
       "text": "What is the significance of Indo-US defence deals over Indo-Russian defence deals ? Discuss with reference to stability in the Indo-Pacific region.",
-      "theme": "Governance & Administration",
-      "themeId": "misc",
-      "themeParent": "",
+      "theme": "Indo-Pacific & Strategic Partnerships",
+      "themeId": "indo-pacific-bilateral",
+      "themeParent": "International Relations",
       "subthemes": [],
       "notes": {
         "introduction": "",
@@ -2353,9 +2361,9 @@
       "number": 3,
       "marks": 10,
       "text": "How far do you think cooperation, competition atid confrontation have shaped the nature of federation in India? Cite same recent examples to validate your answer.",
-      "theme": "Governance & Administration",
-      "themeId": "misc",
-      "themeParent": "",
+      "theme": "Federalism & Centre-State",
+      "themeId": "federalism-centre-state",
+      "themeParent": "Constitution & Polity",
       "subthemes": [],
       "notes": {
         "introduction": "",
@@ -2372,12 +2380,12 @@
       "number": 4,
       "marks": 10,
       "text": "The judicial systems in India and UK seer to be converging as well as diverging in recent timds. Highlight the key points of convergence and divergence between the two nations in terms of their judicial practices.",
-      "theme": "Judiciary & Judicial Review",
-      "themeId": "judiciary",
+      "theme": "Elections & RPA",
+      "themeId": "elections-rpa",
       "themeParent": "Constitution & Polity",
       "subthemes": [
-        "Elections & RPA",
-        "International Relations"
+        "Judiciary & Judicial Review",
+        "Poverty, Hunger & Inequality"
       ],
       "notes": {
         "introduction": "",
@@ -2397,7 +2405,10 @@
       "theme": "Parliament & Legislatures",
       "themeId": "parliament-legislature",
       "themeParent": "Constitution & Polity",
-      "subthemes": [],
+      "subthemes": [
+        "Elections & RPA",
+        "Pressure Groups & Civil Society"
+      ],
       "notes": {
         "introduction": "",
         "staticNotes": "",
@@ -2413,12 +2424,10 @@
       "number": 6,
       "marks": 10,
       "text": "In order to enhance the prospects of social development, sound and adequate health care policies are needed particularly in the fields of geriatric and maternal healthcare. Discuss.",
-      "theme": "Social Justice & Welfare",
-      "themeId": "social-justice",
-      "themeParent": "",
-      "subthemes": [
-        "Federalism & Centre-State"
-      ],
+      "theme": "Public Health & Nutrition",
+      "themeId": "health-nutrition",
+      "themeParent": "Social Justice & Welfare",
+      "subthemes": [],
       "notes": {
         "introduction": "",
         "staticNotes": "",
@@ -2434,13 +2443,10 @@
       "number": 7,
       "marks": 10,
       "text": "“Institutional quality is a crucial driver of economic performance”. In this context suggest reforms in Civil Service for strengthening democracy.",
-      "theme": "Governance & Administration",
-      "themeId": "governance",
-      "themeParent": "",
-      "subthemes": [
-        "Elections & RPA",
-        "International Relations"
-      ],
+      "theme": "Civil Services & Bureaucracy",
+      "themeId": "civil-services",
+      "themeParent": "Governance & Administration",
+      "subthemes": [],
       "notes": {
         "introduction": "",
         "staticNotes": "",
@@ -2456,13 +2462,10 @@
       "number": 8,
       "marks": 10,
       "text": "“The emergence of Fourth Industrial Revolution (Digital Revolution) has initiated e-Governance as an integral part of government”. Discuss.",
-      "theme": "Governance & Administration",
-      "themeId": "governance",
-      "themeParent": "",
-      "subthemes": [
-        "Social Justice & Welfare",
-        "International Relations"
-      ],
+      "theme": "E-Governance & Digital India",
+      "themeId": "e-governance",
+      "themeParent": "Governance & Administration",
+      "subthemes": [],
       "notes": {
         "introduction": "",
         "staticNotes": "",
@@ -2478,11 +2481,11 @@
       "number": 9,
       "marks": 10,
       "text": "Critically examine the role of WHO in providing global health security during the Covid-19 pandemic.",
-      "theme": "International Relations",
-      "themeId": "international-relations",
-      "themeParent": "",
+      "theme": "Multilateral Institutions",
+      "themeId": "multilateral-institutions",
+      "themeParent": "International Relations",
       "subthemes": [
-        "Social Justice & Welfare"
+        "Terrorism & Conflict"
       ],
       "notes": {
         "introduction": "",
@@ -2503,7 +2506,8 @@
       "themeId": "constitutional-amendment",
       "themeParent": "Constitution & Polity",
       "subthemes": [
-        "Comparative Constitutions"
+        "Comparative Constitutions",
+        "Federalism & Centre-State"
       ],
       "notes": {
         "introduction": "",
@@ -2524,8 +2528,8 @@
       "themeId": "federalism-centre-state",
       "themeParent": "Constitution & Polity",
       "subthemes": [
-        "Fundamental Rights & DPSP",
-        "Constitutional Bodies"
+        "Pressure Groups & Civil Society",
+        "Neighbourhood & Regional"
       ],
       "notes": {
         "introduction": "",
@@ -2564,7 +2568,9 @@
       "theme": "Amendment & Basic Structure",
       "themeId": "constitutional-amendment",
       "themeParent": "Constitution & Polity",
-      "subthemes": [],
+      "subthemes": [
+        "Federalism & Centre-State"
+      ],
       "notes": {
         "introduction": "",
         "staticNotes": "",
@@ -2580,11 +2586,12 @@
       "number": 13,
       "marks": 20,
       "text": "The reservation of seats for women in the institutions of local self-government has had a limited on patriachal character of Indian Political Process. Comment.",
-      "theme": "Elections & RPA",
-      "themeId": "elections-rpa",
-      "themeParent": "Constitution & Polity",
+      "theme": "Local Government & Decentralization",
+      "themeId": "local-government",
+      "themeParent": "Governance & Administration",
       "subthemes": [
-        "Governance & Administration"
+        "Accountability & Citizen Charter",
+        "Public Service Delivery & NGOs"
       ],
       "notes": {
         "introduction": "",
@@ -2604,7 +2611,9 @@
       "theme": "Union & State Executive",
       "themeId": "union-state-executive",
       "themeParent": "Constitution & Polity",
-      "subthemes": [],
+      "subthemes": [
+        "Judiciary & Judicial Review"
+      ],
       "notes": {
         "introduction": "",
         "staticNotes": "",
@@ -2620,11 +2629,12 @@
       "number": 15,
       "marks": 20,
       "text": "Individual Parliamentarian’s role as the national law maker is on a decline, which in turn, has adversely impacted the quality of debates and their outcome. Discuss.",
-      "theme": "Parliament & Legislatures",
-      "themeId": "parliament-legislature",
+      "theme": "Elections & RPA",
+      "themeId": "elections-rpa",
       "themeParent": "Constitution & Polity",
       "subthemes": [
-        "Elections & RPA"
+        "Parliament & Legislatures",
+        "Civil Services & Bureaucracy"
       ],
       "notes": {
         "introduction": "",
@@ -2641,10 +2651,13 @@
       "number": 16,
       "marks": 20,
       "text": "“In the context of neo-liberal paradigm of development planning, multi-level planning is expected to make operations cost-effective and remove many implementation blockages.’ — Discuss.",
-      "theme": "Federalism & Centre-State",
-      "themeId": "federalism-centre-state",
-      "themeParent": "Constitution & Polity",
-      "subthemes": [],
+      "theme": "Local Government & Decentralization",
+      "themeId": "local-government",
+      "themeParent": "Governance & Administration",
+      "subthemes": [
+        "Federalism & Centre-State",
+        "Pressure Groups & Civil Society"
+      ],
       "notes": {
         "introduction": "",
         "staticNotes": "",
@@ -2663,10 +2676,7 @@
       "theme": "Federalism & Centre-State",
       "themeId": "federalism-centre-state",
       "themeParent": "Constitution & Polity",
-      "subthemes": [
-        "Governance & Administration",
-        "International Relations"
-      ],
+      "subthemes": [],
       "notes": {
         "introduction": "",
         "staticNotes": "",
@@ -2682,11 +2692,11 @@
       "number": 18,
       "marks": 20,
       "text": "Performance of welfare schemes that are implemented for vulnerable sections is not so effective due to absence of their awareness and active involvement at all stages of policy process. — Discuss.",
-      "theme": "Social Justice & Welfare",
-      "themeId": "social-justice",
-      "themeParent": "",
+      "theme": "Welfare Schemes & Livelihood",
+      "themeId": "welfare-schemes-livelihood",
+      "themeParent": "Social Justice & Welfare",
       "subthemes": [
-        "International Relations"
+        "Women, Children & Disability"
       ],
       "notes": {
         "introduction": "",
@@ -2703,12 +2713,10 @@
       "number": 19,
       "marks": 20,
       "text": "\"The long-sustained image of India as a leader of the oppressed and marginalised nations has disappeared on account of its new found role in the emerging global order.\" Elaborate.",
-      "theme": "International Relations",
-      "themeId": "international-relations",
-      "themeParent": "",
-      "subthemes": [
-        "Elections & RPA"
-      ],
+      "theme": "Diaspora & Soft Power",
+      "themeId": "diaspora-soft-power",
+      "themeParent": "International Relations",
+      "subthemes": [],
       "notes": {
         "introduction": "",
         "staticNotes": "",
@@ -2727,7 +2735,9 @@
       "theme": "Judiciary & Judicial Review",
       "themeId": "judiciary",
       "themeParent": "Constitution & Polity",
-      "subthemes": [],
+      "subthemes": [
+        "Neighbourhood & Regional"
+      ],
       "notes": {
         "introduction": "",
         "staticNotes": "",
@@ -2747,8 +2757,8 @@
       "themeId": "federalism-centre-state",
       "themeParent": "Constitution & Polity",
       "subthemes": [
-        "Comparative Constitutions",
-        "Elections & RPA"
+        "Elections & RPA",
+        "Comparative Constitutions"
       ],
       "notes": {
         "introduction": "",
@@ -2769,7 +2779,8 @@
       "themeId": "elections-rpa",
       "themeParent": "Constitution & Polity",
       "subthemes": [
-        "International Relations"
+        "Energy & Economic Diplomacy",
+        "Pressure Groups & Civil Society"
       ],
       "notes": {
         "introduction": "",
@@ -2790,7 +2801,8 @@
       "themeId": "parliament-legislature",
       "themeParent": "Constitution & Polity",
       "subthemes": [
-        "Judiciary & Judicial Review"
+        "Judiciary & Judicial Review",
+        "UTs & Special Provisions"
       ],
       "notes": {
         "introduction": "",
@@ -2807,12 +2819,11 @@
       "number": 5,
       "marks": 10,
       "text": "What can France learn from the Indian Constitution's approach to secularism?",
-      "theme": "Fundamental Rights & DPSP",
-      "themeId": "fundamental-rights-dpsp",
+      "theme": "Comparative Constitutions",
+      "themeId": "comparative-constitution",
       "themeParent": "Constitution & Polity",
       "subthemes": [
-        "Comparative Constitutions",
-        "Amendment & Basic Structure"
+        "Fundamental Rights & DPSP"
       ],
       "notes": {
         "introduction": "",
@@ -2829,11 +2840,12 @@
       "number": 6,
       "marks": 10,
       "text": "Despite consistent experience of high growth, India still goes with lowest indicators of human development. Examine the issues that make balanced and inclusive development elusive.",
-      "theme": "Federalism & Centre-State",
-      "themeId": "federalism-centre-state",
-      "themeParent": "Constitution & Polity",
+      "theme": "Pressure Groups & Civil Society",
+      "themeId": "pressure-groups-civil-society",
+      "themeParent": "Social Justice & Welfare",
       "subthemes": [
-        "Judiciary & Judicial Review"
+        "Federalism & Centre-State",
+        "Local Government & Decentralization"
       ],
       "notes": {
         "introduction": "",
@@ -2850,9 +2862,9 @@
       "number": 7,
       "marks": 10,
       "text": "There is a growing divergence in the relationship between poverty and hunger in India. The shrinking of social expenditure by the government is forcing the poor to spend more on non-food essential items squeezing their food budget. Elucidate.",
-      "theme": "Social Justice & Welfare",
-      "themeId": "social-justice",
-      "themeParent": "",
+      "theme": "Poverty, Hunger & Inequality",
+      "themeId": "poverty-inequality",
+      "themeParent": "Social Justice & Welfare",
       "subthemes": [],
       "notes": {
         "introduction": "",
@@ -2869,10 +2881,13 @@
       "number": 8,
       "marks": 10,
       "text": "Implementation of Information and Communication Technology (ICT) based projects/Programmes usually suffers in terms of certain vital factors. Identify these factors, and suggest measures for there effective implementation.",
-      "theme": "Elections & RPA",
-      "themeId": "elections-rpa",
-      "themeParent": "Constitution & Polity",
-      "subthemes": [],
+      "theme": "E-Governance & Digital India",
+      "themeId": "e-governance",
+      "themeParent": "Governance & Administration",
+      "subthemes": [
+        "Poverty, Hunger & Inequality",
+        "Pressure Groups & Civil Society"
+      ],
       "notes": {
         "introduction": "",
         "staticNotes": "",
@@ -2888,10 +2903,13 @@
       "number": 9,
       "marks": 10,
       "text": "“The time has come for India and Japan to build a strong contemporary relationship, one involving global and strategic partnership that will have a great significance for Asia and the world as a whole.’ Comment.",
-      "theme": "International Relations",
-      "themeId": "international-relations",
-      "themeParent": "",
-      "subthemes": [],
+      "theme": "Indo-Pacific & Strategic Partnerships",
+      "themeId": "indo-pacific-bilateral",
+      "themeParent": "International Relations",
+      "subthemes": [
+        "Multilateral Institutions",
+        "Energy & Economic Diplomacy"
+      ],
       "notes": {
         "introduction": "",
         "staticNotes": "",
@@ -2926,11 +2944,11 @@
       "number": 10,
       "marks": 10,
       "text": "A number of outside powers have entrenched themselves in Central Asia, which is a zone of interest to India. Discuss the implications, in this context, of India's joining the Ashgabat Agreement, 2018.",
-      "theme": "Judiciary & Judicial Review",
-      "themeId": "judiciary",
-      "themeParent": "Constitution & Polity",
+      "theme": "Neighbourhood & Regional",
+      "themeId": "neighbourhood-regional",
+      "themeParent": "International Relations",
       "subthemes": [
-        "International Relations",
+        "Judiciary & Judicial Review",
         "Federalism & Centre-State"
       ],
       "notes": {
@@ -2952,7 +2970,8 @@
       "themeId": "judiciary",
       "themeParent": "Constitution & Polity",
       "subthemes": [
-        "Union & State Executive"
+        "Union & State Executive",
+        "Poverty, Hunger & Inequality"
       ],
       "notes": {
         "introduction": "",
@@ -2991,12 +3010,12 @@
       "number": 13,
       "marks": 20,
       "text": "India and USA are two large democracies. Examine the basic tenets on which the two political systems are based.",
-      "theme": "Judiciary & Judicial Review",
-      "themeId": "judiciary",
-      "themeParent": "Constitution & Polity",
+      "theme": "Poverty, Hunger & Inequality",
+      "themeId": "poverty-inequality",
+      "themeParent": "Social Justice & Welfare",
       "subthemes": [
-        "Amendment & Basic Structure",
-        "Comparative Constitutions"
+        "Diaspora & Soft Power",
+        "Parliament & Legislatures"
       ],
       "notes": {
         "introduction": "",
@@ -3034,13 +3053,10 @@
       "number": 15,
       "marks": 20,
       "text": "Assess the importance of the Panchayat system in India as a part of local government. Apart from government grants, what sources the Panchayats can look out for financing developmental projects?",
-      "theme": "Governance & Administration",
-      "themeId": "governance",
-      "themeParent": "",
-      "subthemes": [
-        "Federalism & Centre-State",
-        "Judiciary & Judicial Review"
-      ],
+      "theme": "Local Government & Decentralization",
+      "themeId": "local-government",
+      "themeParent": "Governance & Administration",
+      "subthemes": [],
       "notes": {
         "introduction": "",
         "staticNotes": "",
@@ -3060,8 +3076,8 @@
       "themeId": "constitutional-bodies",
       "themeParent": "Constitution & Polity",
       "subthemes": [
-        "Social Justice & Welfare",
-        "Federalism & Centre-State"
+        "Public Service Delivery & NGOs",
+        "Women, Children & Disability"
       ],
       "notes": {
         "introduction": "",
@@ -3078,11 +3094,12 @@
       "number": 17,
       "marks": 20,
       "text": "How far do you agree with the view that the focus on lack of availability of food as the main cause of hunger takes the attention away from ineffective human development policies in India?",
-      "theme": "Federalism & Centre-State",
-      "themeId": "federalism-centre-state",
-      "themeParent": "Constitution & Polity",
+      "theme": "Pressure Groups & Civil Society",
+      "themeId": "pressure-groups-civil-society",
+      "themeParent": "Social Justice & Welfare",
       "subthemes": [
-        "Social Justice & Welfare"
+        "Federalism & Centre-State",
+        "Local Government & Decentralization"
       ],
       "notes": {
         "introduction": "",
@@ -3099,12 +3116,10 @@
       "number": 18,
       "marks": 20,
       "text": "The Citizens’ Charter is an ideal instrument of organizational transparency and accountability, but it has its own limitations. Identify the limitations and suggest measures for greater effectiveness of the Citizens’ Charter.",
-      "theme": "Governance & Administration",
-      "themeId": "governance",
-      "themeParent": "",
-      "subthemes": [
-        "Amendment & Basic Structure"
-      ],
+      "theme": "Accountability & Citizen Charter",
+      "themeId": "accountability-transparency",
+      "themeParent": "Governance & Administration",
+      "subthemes": [],
       "notes": {
         "introduction": "",
         "staticNotes": "",
@@ -3120,12 +3135,12 @@
       "number": 19,
       "marks": 20,
       "text": "What are the key areas of reform if the WTO has to survive in the present context of Trade War’, especially keeping in mind the interest of India?",
-      "theme": "UTs & Special Provisions",
-      "themeId": "special-provisions-ut",
-      "themeParent": "Constitution & Polity",
+      "theme": "Multilateral Institutions",
+      "themeId": "multilateral-institutions",
+      "themeParent": "International Relations",
       "subthemes": [
         "Judiciary & Judicial Review",
-        "International Relations"
+        "UTs & Special Provisions"
       ],
       "notes": {
         "introduction": "",
@@ -3167,8 +3182,8 @@
       "themeId": "judiciary",
       "themeParent": "Constitution & Polity",
       "subthemes": [
-        "Elections & RPA",
-        "Federalism & Centre-State"
+        "Federalism & Centre-State",
+        "Elections & RPA"
       ],
       "notes": {
         "introduction": "",
@@ -3185,10 +3200,13 @@
       "number": 3,
       "marks": 10,
       "text": "Under what circumstances cam the Financial Emergency be proclaimed by the President of India? What consequences follow when such a declaration remains in force?",
-      "theme": "Union & State Executive",
-      "themeId": "union-state-executive",
+      "theme": "Parliament & Legislatures",
+      "themeId": "parliament-legislature",
       "themeParent": "Constitution & Polity",
-      "subthemes": [],
+      "subthemes": [
+        "Union & State Executive",
+        "Public Service Delivery & NGOs"
+      ],
       "notes": {
         "introduction": "",
         "staticNotes": "",
@@ -3244,11 +3262,12 @@
       "number": 6,
       "marks": 10,
       "text": "\"Policy contradictions among various competing sectors and stakeholders have resulted in inadequate ‘protection and prevention of degradation’ to environment.” Comment with relevant illustrations.",
-      "theme": "Fundamental Rights & DPSP",
-      "themeId": "fundamental-rights-dpsp",
-      "themeParent": "Constitution & Polity",
+      "theme": "Pressure Groups & Civil Society",
+      "themeId": "pressure-groups-civil-society",
+      "themeParent": "Social Justice & Welfare",
       "subthemes": [
-        "International Relations"
+        "Fundamental Rights & DPSP",
+        "Elections & RPA"
       ],
       "notes": {
         "introduction": "",
@@ -3265,13 +3284,10 @@
       "number": 7,
       "marks": 10,
       "text": "Appropriate local community-level healthcare intervention is a prerequisite to achieve ‘Health for All’ in India, Explain.",
-      "theme": "Social Justice & Welfare",
-      "themeId": "social-justice",
-      "themeParent": "",
-      "subthemes": [
-        "Federalism & Centre-State",
-        "Governance & Administration"
-      ],
+      "theme": "Public Health & Nutrition",
+      "themeId": "health-nutrition",
+      "themeParent": "Social Justice & Welfare",
+      "subthemes": [],
       "notes": {
         "introduction": "",
         "staticNotes": "",
@@ -3287,9 +3303,9 @@
       "number": 8,
       "marks": 10,
       "text": "E-governance is not only about utilization of the power of new technology, but also much about critical importance of the ‘use value’ of information. Explain.",
-      "theme": "Governance & Administration",
-      "themeId": "governance",
-      "themeParent": "",
+      "theme": "E-Governance & Digital India",
+      "themeId": "e-governance",
+      "themeParent": "Governance & Administration",
       "subthemes": [],
       "notes": {
         "introduction": "",
@@ -3306,9 +3322,9 @@
       "number": 9,
       "marks": 10,
       "text": "\"India’s relations with Israel have, of late, acquired a depth and diversity, which cannot be rolled back.” Discuss.",
-      "theme": "Governance & Administration",
-      "themeId": "misc",
-      "themeParent": "",
+      "theme": "Indo-Pacific & Strategic Partnerships",
+      "themeId": "indo-pacific-bilateral",
+      "themeParent": "International Relations",
       "subthemes": [],
       "notes": {
         "introduction": "",
@@ -3325,13 +3341,10 @@
       "number": 1,
       "marks": 10,
       "text": "“The local self-government system in India has not proved to be effective instrument of governance.” Critically examine the statement and give your views to improve the situation.",
-      "theme": "Governance & Administration",
-      "themeId": "governance",
-      "themeParent": "",
-      "subthemes": [
-        "Federalism & Centre-State",
-        "Amendment & Basic Structure"
-      ],
+      "theme": "Local Government & Decentralization",
+      "themeId": "local-government",
+      "themeParent": "Governance & Administration",
+      "subthemes": [],
       "notes": {
         "introduction": "",
         "staticNotes": "",
@@ -3351,8 +3364,8 @@
       "themeId": "constitutional-bodies",
       "themeParent": "Constitution & Polity",
       "subthemes": [
-        "International Relations",
-        "Union & State Executive"
+        "Energy & Economic Diplomacy",
+        "Diaspora & Soft Power"
       ],
       "notes": {
         "introduction": "",
@@ -3416,8 +3429,8 @@
       "themeId": "parliament-legislature",
       "themeParent": "Constitution & Polity",
       "subthemes": [
-        "Amendment & Basic Structure",
-        "Comparative Constitutions"
+        "Elections & RPA",
+        "Amendment & Basic Structure"
       ],
       "notes": {
         "introduction": "",
@@ -3438,7 +3451,8 @@
       "themeId": "constitutional-bodies",
       "themeParent": "Constitution & Polity",
       "subthemes": [
-        "Elections & RPA"
+        "Elections & RPA",
+        "Civil Services & Bureaucracy"
       ],
       "notes": {
         "introduction": "",
@@ -3459,7 +3473,7 @@
       "themeId": "constitutional-bodies",
       "themeParent": "Constitution & Polity",
       "subthemes": [
-        "Federalism & Centre-State"
+        "Pressure Groups & Civil Society"
       ],
       "notes": {
         "introduction": "",
@@ -3479,7 +3493,10 @@
       "theme": "Federalism & Centre-State",
       "themeId": "federalism-centre-state",
       "themeParent": "Constitution & Polity",
-      "subthemes": [],
+      "subthemes": [
+        "Local Government & Decentralization",
+        "Pressure Groups & Civil Society"
+      ],
       "notes": {
         "introduction": "",
         "staticNotes": "",
@@ -3495,9 +3512,9 @@
       "number": 17,
       "marks": 20,
       "text": "“Poverty alleviation programmes in India remain mere showpieces until and unless they are backed up by political will.” Discuss with reference to the performance of the major poverty alleviation programmes in India.",
-      "theme": "Social Justice & Welfare",
-      "themeId": "social-justice",
-      "themeParent": "",
+      "theme": "Poverty, Hunger & Inequality",
+      "themeId": "poverty-inequality",
+      "themeParent": "Social Justice & Welfare",
       "subthemes": [],
       "notes": {
         "introduction": "",
@@ -3514,10 +3531,12 @@
       "number": 18,
       "marks": 20,
       "text": "Initially Civil Services in India were designed to achieve the goals of neutrality and effectiveness, which seems to be lacking in the present context. Do you agree with the view that drastic reforms are required in Civil Services? Comment.",
-      "theme": "Governance & Administration",
-      "themeId": "governance",
-      "themeParent": "",
-      "subthemes": [],
+      "theme": "Civil Services & Bureaucracy",
+      "themeId": "civil-services",
+      "themeParent": "Governance & Administration",
+      "subthemes": [
+        "E-Governance & Digital India"
+      ],
       "notes": {
         "introduction": "",
         "staticNotes": "",
@@ -3533,10 +3552,13 @@
       "number": 19,
       "marks": 20,
       "text": "The question of India’s Energy Security constitutes the most important part of India’s economic progress. Analyze India’s energy policy cooperation with West Asian countries.",
-      "theme": "International Relations",
-      "themeId": "international-relations",
-      "themeParent": "",
-      "subthemes": [],
+      "theme": "Energy & Economic Diplomacy",
+      "themeId": "energy-economic-diplomacy",
+      "themeParent": "International Relations",
+      "subthemes": [
+        "Diaspora & Soft Power",
+        "Terrorism & Conflict"
+      ],
       "notes": {
         "introduction": "",
         "staticNotes": "",
@@ -3555,7 +3577,9 @@
       "theme": "Judiciary & Judicial Review",
       "themeId": "judiciary",
       "themeParent": "Constitution & Polity",
-      "subthemes": [],
+      "subthemes": [
+        "Constitutional Bodies"
+      ],
       "notes": {
         "introduction": "",
         "staticNotes": "",
@@ -3571,9 +3595,9 @@
       "number": 20,
       "marks": 20,
       "text": "Indian diaspora has an important role to play in South-East Asian countries’ economy and society. Appraise the role of Indian diaspora in South-East Asia in this context.",
-      "theme": "International Relations",
-      "themeId": "international-relations",
-      "themeParent": "",
+      "theme": "Diaspora & Soft Power",
+      "themeId": "diaspora-soft-power",
+      "themeParent": "International Relations",
       "subthemes": [],
       "notes": {
         "introduction": "",
@@ -3612,12 +3636,10 @@
       "number": 4,
       "marks": 10,
       "text": "How do pressure groups influence Indian political process? Do you agree with this view that informal pressure groups have emerged as more powerful than formal pressure groups in recent years?",
-      "theme": "Social Justice & Welfare",
-      "themeId": "social-justice",
-      "themeParent": "",
-      "subthemes": [
-        "Elections & RPA"
-      ],
+      "theme": "Pressure Groups & Civil Society",
+      "themeId": "pressure-groups-civil-society",
+      "themeParent": "Social Justice & Welfare",
+      "subthemes": [],
       "notes": {
         "introduction": "",
         "staticNotes": "",
@@ -3633,12 +3655,12 @@
       "number": 5,
       "marks": 10,
       "text": "Discuss the role of Public Accounts Committee in establishing accountability of the government to the people.",
-      "theme": "Judiciary & Judicial Review",
-      "themeId": "judiciary",
+      "theme": "Parliament & Legislatures",
+      "themeId": "parliament-legislature",
       "themeParent": "Constitution & Polity",
       "subthemes": [
-        "Parliament & Legislatures",
-        "Governance & Administration"
+        "Judiciary & Judicial Review",
+        "Accountability & Citizen Charter"
       ],
       "notes": {
         "introduction": "",
@@ -3659,7 +3681,8 @@
       "themeId": "federalism-centre-state",
       "themeParent": "Constitution & Polity",
       "subthemes": [
-        "Social Justice & Welfare"
+        "Pressure Groups & Civil Society",
+        "Elections & RPA"
       ],
       "notes": {
         "introduction": "",
@@ -3676,13 +3699,10 @@
       "number": 7,
       "marks": 10,
       "text": "Does the Rights of Persons with Disabilities Act, 2016 ensure effective mechanism for empowerment and inclusion of the intended beneficiaries in the society? Discuss.",
-      "theme": "Fundamental Rights & DPSP",
-      "themeId": "fundamental-rights-dpsp",
-      "themeParent": "Constitution & Polity",
-      "subthemes": [
-        "Elections & RPA",
-        "Social Justice & Welfare"
-      ],
+      "theme": "Women, Children & Disability",
+      "themeId": "vulnerable-groups",
+      "themeParent": "Social Justice & Welfare",
+      "subthemes": [],
       "notes": {
         "introduction": "",
         "staticNotes": "",
@@ -3698,11 +3718,12 @@
       "number": 8,
       "marks": 10,
       "text": "Hunger and poverty are the biggest challenges for good governance in India still today. Evaluate how far successive governments have progressed in dealing with these humongous problems. Suggest measures for improvement.",
-      "theme": "Social Justice & Welfare",
-      "themeId": "social-justice",
-      "themeParent": "",
+      "theme": "Local Government & Decentralization",
+      "themeId": "local-government",
+      "themeParent": "Governance & Administration",
       "subthemes": [
-        "Governance & Administration"
+        "Poverty, Hunger & Inequality",
+        "Civil Services & Bureaucracy"
       ],
       "notes": {
         "introduction": "",
@@ -3719,12 +3740,12 @@
       "number": 9,
       "marks": 10,
       "text": "“China is using its economic relations and positive trade surplus as tools to develop potential military power status in Asia.” In the light of this statement, discuss its impact on India as her neighbour.",
-      "theme": "Federalism & Centre-State",
-      "themeId": "federalism-centre-state",
-      "themeParent": "Constitution & Polity",
+      "theme": "Energy & Economic Diplomacy",
+      "themeId": "energy-economic-diplomacy",
+      "themeParent": "International Relations",
       "subthemes": [
-        "Elections & RPA",
-        "UTs & Special Provisions"
+        "Accountability & Citizen Charter",
+        "Federalism & Centre-State"
       ],
       "notes": {
         "introduction": "",
@@ -3744,7 +3765,10 @@
       "theme": "Amendment & Basic Structure",
       "themeId": "constitutional-amendment",
       "themeParent": "Constitution & Polity",
-      "subthemes": [],
+      "subthemes": [
+        "Union & State Executive",
+        "Pressure Groups & Civil Society"
+      ],
       "notes": {
         "introduction": "",
         "staticNotes": "",
@@ -3760,12 +3784,12 @@
       "number": 10,
       "marks": 12,
       "text": "“In the Indian governance system, the role of non-state actors has been only marginal.” Critically examine this statement.",
-      "theme": "Federalism & Centre-State",
-      "themeId": "federalism-centre-state",
-      "themeParent": "Constitution & Polity",
+      "theme": "Pressure Groups & Civil Society",
+      "themeId": "pressure-groups-civil-society",
+      "themeParent": "Social Justice & Welfare",
       "subthemes": [
-        "Governance & Administration",
-        "Judiciary & Judicial Review"
+        "Federalism & Centre-State",
+        "Elections & RPA"
       ],
       "notes": {
         "introduction": "",
@@ -3782,12 +3806,12 @@
       "number": 11,
       "marks": 12,
       "text": "“Effectiveness of the government system at various levels and people’s participation in the governance system are inter-dependent.” Discuss their relationship in the context of India.",
-      "theme": "Governance & Administration",
-      "themeId": "governance",
-      "themeParent": "",
+      "theme": "Accountability & Citizen Charter",
+      "themeId": "accountability-transparency",
+      "themeParent": "Governance & Administration",
       "subthemes": [
-        "Judiciary & Judicial Review",
-        "Federalism & Centre-State"
+        "Civil Services & Bureaucracy",
+        "Local Government & Decentralization"
       ],
       "notes": {
         "introduction": "",
@@ -3804,12 +3828,12 @@
       "number": 12,
       "marks": 12,
       "text": "In the integrity index of Transparency International, India stands very low. Discuss briefly the legal, political, economic, social and cultural factors that have caused the decline of public morality in India.",
-      "theme": "Elections & RPA",
-      "themeId": "elections-rpa",
-      "themeParent": "Constitution & Polity",
+      "theme": "Civil Services & Bureaucracy",
+      "themeId": "civil-services",
+      "themeParent": "Governance & Administration",
       "subthemes": [
-        "Amendment & Basic Structure",
-        "Governance & Administration"
+        "Energy & Economic Diplomacy",
+        "Diaspora & Soft Power"
       ],
       "notes": {
         "introduction": "",
@@ -3826,13 +3850,10 @@
       "number": 13,
       "marks": 12,
       "text": "Has the Indian governmental system responded adequately to the demands of Liberalization, Privatization and Globalization started in 1991? What can the government do to be responsive to this important change?",
-      "theme": "International Relations",
-      "themeId": "international-relations",
-      "themeParent": "",
-      "subthemes": [
-        "Judiciary & Judicial Review",
-        "Amendment & Basic Structure"
-      ],
+      "theme": "Energy & Economic Diplomacy",
+      "themeId": "energy-economic-diplomacy",
+      "themeParent": "International Relations",
+      "subthemes": [],
       "notes": {
         "introduction": "",
         "staticNotes": "",
@@ -3848,11 +3869,12 @@
       "number": 14,
       "marks": 12,
       "text": "“Traditional bureaucratic structure and culture have hampered the process of socio-economic development in India.” Comment.",
-      "theme": "Federalism & Centre-State",
-      "themeId": "federalism-centre-state",
-      "themeParent": "Constitution & Polity",
+      "theme": "Pressure Groups & Civil Society",
+      "themeId": "pressure-groups-civil-society",
+      "themeParent": "Social Justice & Welfare",
       "subthemes": [
-        "Amendment & Basic Structure"
+        "Energy & Economic Diplomacy",
+        "Federalism & Centre-State"
       ],
       "notes": {
         "introduction": "",
@@ -3869,12 +3891,12 @@
       "number": 15,
       "marks": 12,
       "text": "Examine the main provisions of the National Child Policy and throw light on the status of its implementation.",
-      "theme": "Elections & RPA",
-      "themeId": "elections-rpa",
-      "themeParent": "Constitution & Polity",
+      "theme": "Energy & Economic Diplomacy",
+      "themeId": "energy-economic-diplomacy",
+      "themeParent": "International Relations",
       "subthemes": [
-        "UTs & Special Provisions",
-        "Social Justice & Welfare"
+        "Elections & RPA",
+        "UTs & Special Provisions"
       ],
       "notes": {
         "introduction": "",
@@ -3891,10 +3913,13 @@
       "number": 16,
       "marks": 12,
       "text": "‘Demographic Dividend in India will remain only theoretical unless our manpower becomes more educated, aware, skilled and creative.” What measures have been taken by the government to enhance the capacity of our population to be more productive and employable ?",
-      "theme": "International Relations",
-      "themeId": "international-relations",
-      "themeParent": "",
-      "subthemes": [],
+      "theme": "Federalism & Centre-State",
+      "themeId": "federalism-centre-state",
+      "themeParent": "Constitution & Polity",
+      "subthemes": [
+        "Poverty, Hunger & Inequality",
+        "Education & Skill Development"
+      ],
       "notes": {
         "introduction": "",
         "staticNotes": "",
@@ -3910,12 +3935,11 @@
       "number": 17,
       "marks": 12,
       "text": "“The broader aims and objectives of WTO are to manage and promote international trade in the era of globalization. But the Doha round of negotiations seem doomed due to differences between the developed and the developing countries.” Discuss in the Indian perspective.",
-      "theme": "International Relations",
-      "themeId": "international-relations",
-      "themeParent": "",
+      "theme": "Multilateral Institutions",
+      "themeId": "multilateral-institutions",
+      "themeParent": "International Relations",
       "subthemes": [
-        "Federalism & Centre-State",
-        "Elections & RPA"
+        "Indo-Pacific & Strategic Partnerships"
       ],
       "notes": {
         "introduction": "",
@@ -3932,9 +3956,9 @@
       "number": 18,
       "marks": 12,
       "text": "Evaluate the economic and strategic dimensions of India’s Look East Policy in the context of the post Cold War international scenario.",
-      "theme": "International Relations",
-      "themeId": "international-relations",
-      "themeParent": "",
+      "theme": "Energy & Economic Diplomacy",
+      "themeId": "energy-economic-diplomacy",
+      "themeParent": "International Relations",
       "subthemes": [],
       "notes": {
         "introduction": "",
@@ -3951,12 +3975,10 @@
       "number": 19,
       "marks": 12,
       "text": "“Increasing cross-border terrorist attacks in India and growing interference in the internal affairs of several member-states by Pakistan are not conducive for the future of SAARC (South Asian Association for Regional Cooperation).” Explain with suitable examples.",
-      "theme": "International Relations",
-      "themeId": "international-relations",
-      "themeParent": "",
-      "subthemes": [
-        "Federalism & Centre-State"
-      ],
+      "theme": "Terrorism & Conflict",
+      "themeId": "terrorism-conflict",
+      "themeParent": "International Relations",
+      "subthemes": [],
       "notes": {
         "introduction": "",
         "staticNotes": "",
@@ -3976,6 +3998,7 @@
       "themeId": "special-provisions-ut",
       "themeParent": "Constitution & Polity",
       "subthemes": [
+        "Federalism & Centre-State",
         "Amendment & Basic Structure"
       ],
       "notes": {
@@ -3997,7 +4020,7 @@
       "themeId": "constitutional-bodies",
       "themeParent": "Constitution & Polity",
       "subthemes": [
-        "Federalism & Centre-State"
+        "Indo-Pacific & Strategic Partnerships"
       ],
       "notes": {
         "introduction": "",
@@ -4014,12 +4037,10 @@
       "number": 3,
       "marks": 12,
       "text": "“The Indian party system is passing through a phase of transition which looks to be full of contradictions and paradoxes.” Discuss.",
-      "theme": "Social Justice & Welfare",
-      "themeId": "social-justice",
-      "themeParent": "",
-      "subthemes": [
-        "Judiciary & Judicial Review"
-      ],
+      "theme": "Elections & RPA",
+      "themeId": "elections-rpa",
+      "themeParent": "Constitution & Polity",
+      "subthemes": [],
       "notes": {
         "introduction": "",
         "staticNotes": "",
@@ -4035,12 +4056,12 @@
       "number": 4,
       "marks": 12,
       "text": "Exercise of CAG’s powers in relation to the accounts of the Union and the States is derived from Article 149 of the Indian Constitution. Discuss whether audit of the Government’s policy implementation could amount to overstepping its own (CAG) jurisdiction.",
-      "theme": "Amendment & Basic Structure",
-      "themeId": "constitutional-amendment",
+      "theme": "Federalism & Centre-State",
+      "themeId": "federalism-centre-state",
       "themeParent": "Constitution & Polity",
       "subthemes": [
-        "UTs & Special Provisions",
-        "Comparative Constitutions"
+        "Amendment & Basic Structure",
+        "UTs & Special Provisions"
       ],
       "notes": {
         "introduction": "",
@@ -4057,11 +4078,12 @@
       "number": 5,
       "marks": 12,
       "text": "Discuss each adjective attached to the word ‘Republic’ in the ‘Preamble’. Are they defendable in the present circumstances?",
-      "theme": "Judiciary & Judicial Review",
-      "themeId": "judiciary",
-      "themeParent": "Constitution & Polity",
+      "theme": "Pressure Groups & Civil Society",
+      "themeId": "pressure-groups-civil-society",
+      "themeParent": "Social Justice & Welfare",
       "subthemes": [
-        "Social Justice & Welfare"
+        "Judiciary & Judicial Review",
+        "Public Service Delivery & NGOs"
       ],
       "notes": {
         "introduction": "",
@@ -4127,7 +4149,7 @@
       "themeParent": "Constitution & Polity",
       "subthemes": [
         "Constitutional Bodies",
-        "Governance & Administration"
+        "Local Government & Decentralization"
       ],
       "notes": {
         "introduction": "",
@@ -4144,12 +4166,11 @@
       "number": 9,
       "marks": 12,
       "text": "Professor Amartya Sen has advocated important reforms in the realms of primary education and primary health care. What are your suggestions to improve their status and performance ?",
-      "theme": "Social Justice & Welfare",
-      "themeId": "social-justice",
-      "themeParent": "",
+      "theme": "Public Health & Nutrition",
+      "themeId": "health-nutrition",
+      "themeParent": "Social Justice & Welfare",
       "subthemes": [
-        "Elections & RPA",
-        "UTs & Special Provisions"
+        "Education & Skill Development"
       ],
       "notes": {
         "introduction": "",
@@ -4170,8 +4191,8 @@
       "themeId": "fundamental-rights-dpsp",
       "themeParent": "Constitution & Polity",
       "subthemes": [
-        "Governance & Administration",
-        "Federalism & Centre-State"
+        "Accountability & Citizen Charter",
+        "Pressure Groups & Civil Society"
       ],
       "notes": {
         "introduction": "",
@@ -4188,10 +4209,11 @@
       "number": 10,
       "marks": 12,
       "text": "How can the role of NGOs be strengthened in India for development works relating to protection of the environment? Discuss throwing light on the major constraints.",
-      "theme": "Fundamental Rights & DPSP",
-      "themeId": "fundamental-rights-dpsp",
-      "themeParent": "Constitution & Polity",
+      "theme": "Pressure Groups & Civil Society",
+      "themeId": "pressure-groups-civil-society",
+      "themeParent": "Social Justice & Welfare",
       "subthemes": [
+        "Fundamental Rights & DPSP",
         "Federalism & Centre-State"
       ],
       "notes": {
@@ -4209,13 +4231,10 @@
       "number": 11,
       "marks": 12,
       "text": "The quality of higher education in India requires major improvements to make it internationally competitive. Do you think that the entry of foreign educational institutions would help improve the quality of higher and technical education in the country? Discuss.",
-      "theme": "Social Justice & Welfare",
-      "themeId": "social-justice",
-      "themeParent": "",
-      "subthemes": [
-        "International Relations",
-        "Judiciary & Judicial Review"
-      ],
+      "theme": "Education & Skill Development",
+      "themeId": "education-skills",
+      "themeParent": "Social Justice & Welfare",
+      "subthemes": [],
       "notes": {
         "introduction": "",
         "staticNotes": "",
@@ -4231,12 +4250,12 @@
       "number": 12,
       "marks": 12,
       "text": "Public health system has limitations in providing universal health coverage. Do you think that the private sector could help in bridging the gap? What other viable alternatives would you suggest?",
-      "theme": "Judiciary & Judicial Review",
-      "themeId": "judiciary",
-      "themeParent": "Constitution & Polity",
+      "theme": "Public Health & Nutrition",
+      "themeId": "health-nutrition",
+      "themeParent": "Social Justice & Welfare",
       "subthemes": [
-        "Amendment & Basic Structure",
-        "Social Justice & Welfare"
+        "Public Service Delivery & NGOs",
+        "Judiciary & Judicial Review"
       ],
       "notes": {
         "introduction": "",
@@ -4253,10 +4272,12 @@
       "number": 13,
       "marks": 12,
       "text": "Though there have been several different estimates of poverty in India, all indicate reduction in poverty levels over time. Do you agree? Critically examine with reference to urban and rural poverty indicators.",
-      "theme": "Social Justice & Welfare",
-      "themeId": "social-justice",
-      "themeParent": "",
-      "subthemes": [],
+      "theme": "Poverty, Hunger & Inequality",
+      "themeId": "poverty-inequality",
+      "themeParent": "Social Justice & Welfare",
+      "subthemes": [
+        "Local Government & Decentralization"
+      ],
       "notes": {
         "introduction": "",
         "staticNotes": "",
@@ -4272,10 +4293,12 @@
       "number": 14,
       "marks": 12,
       "text": "In the light of the Satyam Scandal (2009), discuss the changes brought in corporate governance to ensure transparency, accountability.",
-      "theme": "Governance & Administration",
-      "themeId": "governance",
-      "themeParent": "",
-      "subthemes": [],
+      "theme": "Accountability & Citizen Charter",
+      "themeId": "accountability-transparency",
+      "themeParent": "Governance & Administration",
+      "subthemes": [
+        "E-Governance & Digital India"
+      ],
       "notes": {
         "introduction": "",
         "staticNotes": "",
@@ -4291,12 +4314,12 @@
       "number": 15,
       "marks": 12,
       "text": "“If amendment bill to the Whistleblowers Act, 2011 tabled in the Parliament is passed, there may be no one left to protect.” Critically evaluate.",
-      "theme": "Parliament & Legislatures",
-      "themeId": "parliament-legislature",
+      "theme": "Elections & RPA",
+      "themeId": "elections-rpa",
       "themeParent": "Constitution & Polity",
       "subthemes": [
-        "Amendment & Basic Structure",
-        "Federalism & Centre-State"
+        "Parliament & Legislatures",
+        "Amendment & Basic Structure"
       ],
       "notes": {
         "introduction": "",
@@ -4313,9 +4336,9 @@
       "number": 16,
       "marks": 12,
       "text": "“For achieving the desired objectives, it is necessary to ensure that the regulatory institutions remain independent and autonomous.” Discuss in the light of the experiences in recent past.",
-      "theme": "Governance & Administration",
-      "themeId": "misc",
-      "themeParent": "",
+      "theme": "Accountability & Citizen Charter",
+      "themeId": "accountability-transparency",
+      "themeParent": "Governance & Administration",
       "subthemes": [],
       "notes": {
         "introduction": "",
@@ -4336,8 +4359,8 @@
       "themeId": "judiciary",
       "themeParent": "Constitution & Polity",
       "subthemes": [
-        "Federalism & Centre-State",
-        "International Relations"
+        "Terrorism & Conflict",
+        "Federalism & Centre-State"
       ],
       "notes": {
         "introduction": "",
@@ -4354,12 +4377,10 @@
       "number": 18,
       "marks": 12,
       "text": "Discuss the impediments India is facing in its pursuit of a permanent seat in UN Security Council.",
-      "theme": "Union & State Executive",
-      "themeId": "union-state-executive",
-      "themeParent": "Constitution & Polity",
-      "subthemes": [
-        "International Relations"
-      ],
+      "theme": "Terrorism & Conflict",
+      "themeId": "terrorism-conflict",
+      "themeParent": "International Relations",
+      "subthemes": [],
       "notes": {
         "introduction": "",
         "staticNotes": "",
@@ -4375,10 +4396,12 @@
       "number": 19,
       "marks": 12,
       "text": "Project ‘Mausam’ is considered a unique foreign policy initiative of the Indian Government to improve relationship with its neighbours. Does the project have a strategic dimension? Discuss.",
-      "theme": "International Relations",
-      "themeId": "international-relations",
-      "themeParent": "",
-      "subthemes": [],
+      "theme": "Energy & Economic Diplomacy",
+      "themeId": "energy-economic-diplomacy",
+      "themeParent": "International Relations",
+      "subthemes": [
+        "Neighbourhood & Regional"
+      ],
       "notes": {
         "introduction": "",
         "staticNotes": "",
@@ -4413,13 +4436,10 @@
       "number": 20,
       "marks": 12,
       "text": "Terrorist activities and mutual distrust have clouded India-Pakistan relations. To what extent the use of soft power like sports and cultural exchanges could help generate goodwill between the two countries? Discuss with suitable examples.",
-      "theme": "International Relations",
-      "themeId": "international-relations",
-      "themeParent": "",
-      "subthemes": [
-        "Elections & RPA",
-        "Amendment & Basic Structure"
-      ],
+      "theme": "Neighbourhood & Regional",
+      "themeId": "neighbourhood-regional",
+      "themeParent": "International Relations",
+      "subthemes": [],
       "notes": {
         "introduction": "",
         "staticNotes": "",
@@ -4435,11 +4455,11 @@
       "number": 3,
       "marks": 12,
       "text": "In absence of a well-educated and organized local level government system, ‘Panchayats’ and ‘Samitis’ have remained mainly political institutions and not effective instruments of governance. Critically discuss.",
-      "theme": "Governance & Administration",
-      "themeId": "governance",
-      "themeParent": "",
+      "theme": "Local Government & Decentralization",
+      "themeId": "local-government",
+      "themeParent": "Governance & Administration",
       "subthemes": [
-        "Amendment & Basic Structure"
+        "Accountability & Citizen Charter"
       ],
       "notes": {
         "introduction": "",
@@ -4482,6 +4502,7 @@
       "themeId": "judiciary",
       "themeParent": "Constitution & Polity",
       "subthemes": [
+        "Neighbourhood & Regional",
         "Union & State Executive"
       ],
       "notes": {
@@ -4503,6 +4524,7 @@
       "themeId": "union-state-executive",
       "themeParent": "Constitution & Polity",
       "subthemes": [
+        "Elections & RPA",
         "Judiciary & Judicial Review"
       ],
       "notes": {
@@ -4520,12 +4542,12 @@
       "number": 7,
       "marks": 12,
       "text": "Does the right to clean environment entail legal regulations on burning crackers during Diwali? Discuss in the light of Article 21 of the Indian Constitution and Judgement(s) of the Apex Court in this regard.",
-      "theme": "Fundamental Rights & DPSP",
-      "themeId": "fundamental-rights-dpsp",
+      "theme": "Judiciary & Judicial Review",
+      "themeId": "judiciary",
       "themeParent": "Constitution & Polity",
       "subthemes": [
-        "Amendment & Basic Structure",
-        "Judiciary & Judicial Review"
+        "Fundamental Rights & DPSP",
+        "Amendment & Basic Structure"
       ],
       "notes": {
         "introduction": "",
@@ -4542,13 +4564,10 @@
       "number": 8,
       "marks": 12,
       "text": "Examine critically the recent changes in the rules governing foreign funding of NGOs under the Foreign Contribution (Regulation) Act (FCRA), 1976.",
-      "theme": "International Relations",
-      "themeId": "international-relations",
-      "themeParent": "",
-      "subthemes": [
-        "Elections & RPA",
-        "Amendment & Basic Structure"
-      ],
+      "theme": "Public Service Delivery & NGOs",
+      "themeId": "public-service-delivery",
+      "themeParent": "Governance & Administration",
+      "subthemes": [],
       "notes": {
         "introduction": "",
         "staticNotes": "",
@@ -4564,11 +4583,12 @@
       "number": 9,
       "marks": 12,
       "text": "The Self-Help Group (SHG) Bank Linkage Programme (SBLP), which is India’s own innovation, has proved to be one of the most effective poverty alleviation and women empowerment programmes. Elucidate.",
-      "theme": "Social Justice & Welfare",
-      "themeId": "social-justice",
-      "themeParent": "",
+      "theme": "Welfare Schemes & Livelihood",
+      "themeId": "welfare-schemes-livelihood",
+      "themeParent": "Social Justice & Welfare",
       "subthemes": [
-        "Elections & RPA"
+        "Poverty, Hunger & Inequality",
+        "Women, Children & Disability"
       ],
       "notes": {
         "introduction": "",
@@ -4589,8 +4609,8 @@
       "themeId": "judiciary",
       "themeParent": "Constitution & Polity",
       "subthemes": [
-        "Amendment & Basic Structure",
-        "Federalism & Centre-State"
+        "Civil Services & Bureaucracy",
+        "Amendment & Basic Structure"
       ],
       "notes": {
         "introduction": "",
@@ -4607,12 +4627,12 @@
       "number": 10,
       "marks": 12,
       "text": "The penetration of Self Help Groups-(SHGs) in rural areas. in promoting participation in development programmes is facing socio-cultural. hurdles. Examine.",
-      "theme": "Federalism & Centre-State",
-      "themeId": "federalism-centre-state",
-      "themeParent": "Constitution & Polity",
+      "theme": "Pressure Groups & Civil Society",
+      "themeId": "pressure-groups-civil-society",
+      "themeParent": "Social Justice & Welfare",
       "subthemes": [
-        "UTs & Special Provisions",
-        "Social Justice & Welfare"
+        "Local Government & Decentralization",
+        "Federalism & Centre-State"
       ],
       "notes": {
         "introduction": "",
@@ -4629,12 +4649,12 @@
       "number": 11,
       "marks": 12,
       "text": "Do government’ s schemes for up-lifting vulnerable and backward communities by protecting required social resources for them, lead to their exclusion in establishing businesses in ‘urban economies?”",
-      "theme": "Social Justice & Welfare",
-      "themeId": "social-justice",
-      "themeParent": "",
+      "theme": "Poverty, Hunger & Inequality",
+      "themeId": "poverty-inequality",
+      "themeParent": "Social Justice & Welfare",
       "subthemes": [
-        "Governance & Administration",
-        "International Relations"
+        "Women, Children & Disability",
+        "Local Government & Decentralization"
       ],
       "notes": {
         "introduction": "",
@@ -4695,11 +4715,11 @@
       "number": 14,
       "marks": 12,
       "text": "Has the Cadre based Civil Services Organization been the cause of slow change in India ? Critically examine.",
-      "theme": "Governance & Administration",
-      "themeId": "governance",
-      "themeParent": "",
+      "theme": "Civil Services & Bureaucracy",
+      "themeId": "civil-services",
+      "themeParent": "Governance & Administration",
       "subthemes": [
-        "Amendment & Basic Structure"
+        "Public Service Delivery & NGOs"
       ],
       "notes": {
         "introduction": "",
@@ -4716,12 +4736,12 @@
       "number": 15,
       "marks": 12,
       "text": "Two parallel run schemes of the Government, viz. the Adhaar Card and NPR, one as voluntary and the other as. compulsory, have led to debates at national levels and also litigations. On metits, discuss whether or not both schemes need run concurrently. Analyse the potential of the schemes to achieve developmental benefits and equitable growth.",
-      "theme": "Judiciary & Judicial Review",
-      "themeId": "judiciary",
-      "themeParent": "Constitution & Polity",
+      "theme": "Accountability & Citizen Charter",
+      "themeId": "accountability-transparency",
+      "themeParent": "Governance & Administration",
       "subthemes": [
-        "Federalism & Centre-State",
-        "Elections & RPA"
+        "Local Government & Decentralization",
+        "Judiciary & Judicial Review"
       ],
       "notes": {
         "introduction": "",
@@ -4738,10 +4758,12 @@
       "number": 16,
       "marks": 12,
       "text": "With respect to the South China sea, maritime territorial disputes and rising tension affirm the need for safeguarding maritime security to ensure freedom of navigation and over flight throughout the region. In this context, discuss the bilateral issues between India and China.",
-      "theme": "International Relations",
-      "themeId": "international-relations",
-      "themeParent": "",
-      "subthemes": [],
+      "theme": "Neighbourhood & Regional",
+      "themeId": "neighbourhood-regional",
+      "themeParent": "International Relations",
+      "subthemes": [
+        "Terrorism & Conflict"
+      ],
       "notes": {
         "introduction": "",
         "staticNotes": "",
@@ -4757,12 +4779,11 @@
       "number": 17,
       "marks": 12,
       "text": "The aim of Information Technology Agreements (ITAs) is. to lower all taxes and tariffs on information technology products by signatories to zero. What impact would such agreements have on India’s interests ?",
-      "theme": "Judiciary & Judicial Review",
-      "themeId": "judiciary",
-      "themeParent": "Constitution & Polity",
+      "theme": "E-Governance & Digital India",
+      "themeId": "e-governance",
+      "themeParent": "Governance & Administration",
       "subthemes": [
-        "Federalism & Centre-State",
-        "Elections & RPA"
+        "Judiciary & Judicial Review"
       ],
       "notes": {
         "introduction": "",
@@ -4779,12 +4800,12 @@
       "number": 18,
       "marks": 12,
       "text": "Some of the International funding agencies have special terms for economic participation stipulating a substantial component of theaid to be used for sourcing equipment from the leading countries. Discuss on merits of such terms and if, there exists a strong case not to accept such conditions in the Indian context.",
-      "theme": "Elections & RPA",
-      "themeId": "elections-rpa",
-      "themeParent": "Constitution & Polity",
+      "theme": "Energy & Economic Diplomacy",
+      "themeId": "energy-economic-diplomacy",
+      "themeParent": "International Relations",
       "subthemes": [
-        "UTs & Special Provisions",
-        "Federalism & Centre-State"
+        "Diaspora & Soft Power",
+        "UTs & Special Provisions"
       ],
       "notes": {
         "introduction": "",
@@ -4801,12 +4822,12 @@
       "number": 19,
       "marks": 12,
       "text": "India has recently signed to become founding member? ‘of New Development B Bank (NDB) and also the Asian Infrastructure Investment Bank (AIIB). How will the role of the two Banks be different ? Discuss the strategic significance of these two Banks for India.",
-      "theme": "Federalism & Centre-State",
-      "themeId": "federalism-centre-state",
-      "themeParent": "Constitution & Polity",
+      "theme": "Pressure Groups & Civil Society",
+      "themeId": "pressure-groups-civil-society",
+      "themeParent": "Social Justice & Welfare",
       "subthemes": [
-        "Amendment & Basic Structure",
-        "International Relations"
+        "Federalism & Centre-State",
+        "Amendment & Basic Structure"
       ],
       "notes": {
         "introduction": "",
@@ -4828,7 +4849,7 @@
       "themeParent": "Constitution & Polity",
       "subthemes": [
         "Amendment & Basic Structure",
-        "Comparative Constitutions"
+        "Constitutional Bodies"
       ],
       "notes": {
         "introduction": "",
@@ -4845,12 +4866,11 @@
       "number": 20,
       "marks": 12,
       "text": "WTO is an important international institution where decisions taken affect countries in a profound manner. What is. the mandate of WTO and how binding are their decisions ? Critically analyse India’s stand on the latest round of talks on Food security.",
-      "theme": "International Relations",
-      "themeId": "international-relations",
-      "themeParent": "",
+      "theme": "Multilateral Institutions",
+      "themeId": "multilateral-institutions",
+      "themeParent": "International Relations",
       "subthemes": [
-        "Federalism & Centre-State",
-        "Elections & RPA"
+        "Terrorism & Conflict"
       ],
       "notes": {
         "introduction": "",
@@ -4889,9 +4909,9 @@
       "number": 4,
       "marks": 12,
       "text": "What do you understand by the. concept “freedom of speech and expression” ? Does it cover hate speech also ? Why do the films in India stand on a slightly different plane from other forms of expression ? Discuss.",
-      "theme": "Governance & Administration",
-      "themeId": "misc",
-      "themeParent": "",
+      "theme": "Fundamental Rights & DPSP",
+      "themeId": "fundamental-rights-dpsp",
+      "themeParent": "Constitution & Polity",
       "subthemes": [],
       "notes": {
         "introduction": "",
@@ -4913,7 +4933,7 @@
       "themeParent": "Constitution & Polity",
       "subthemes": [
         "Union & State Executive",
-        "Judiciary & Judicial Review"
+        "Public Health & Nutrition"
       ],
       "notes": {
         "introduction": "",
@@ -4953,8 +4973,8 @@
       "themeId": "union-state-executive",
       "themeParent": "Constitution & Polity",
       "subthemes": [
-        "Judiciary & Judicial Review",
-        "Social Justice & Welfare"
+        "Public Health & Nutrition",
+        "Pressure Groups & Civil Society"
       ],
       "notes": {
         "introduction": "",
@@ -4971,13 +4991,10 @@
       "number": 8,
       "marks": 12,
       "text": "‘The setting up of a Rail Tariff Authority to regulate fares will subject the cash strapped Indian Railways to demand subsidy for obligation to operate non-profitable routes and services. Taking into account the experience in the power sector, discuss if. the proposed reform is expected to benefit the. consumers, the Indian Railways or, the private container operators.",
-      "theme": "Governance & Administration",
-      "themeId": "governance",
-      "themeParent": "",
-      "subthemes": [
-        "Elections & RPA",
-        "International Relations"
-      ],
+      "theme": "Public Service Delivery & NGOs",
+      "themeId": "public-service-delivery",
+      "themeParent": "Governance & Administration",
+      "subthemes": [],
       "notes": {
         "introduction": "",
         "staticNotes": "",
@@ -4998,7 +5015,7 @@
       "themeParent": "Constitution & Polity",
       "subthemes": [
         "Judiciary & Judicial Review",
-        "Federalism & Centre-State"
+        "Accountability & Citizen Charter"
       ],
       "notes": {
         "introduction": "",
@@ -5015,12 +5032,12 @@
       "number": 1,
       "marks": 10,
       "text": "The role of individual MPs (Members of Parliament) has diminished over the years and as a result healthy constructive debates on policy issues are not usually witnessed. How far can this be attributed to the anti-defection law which was legislated but with a different intention ?",
-      "theme": "Parliament & Legislatures",
-      "themeId": "parliament-legislature",
+      "theme": "Elections & RPA",
+      "themeId": "elections-rpa",
       "themeParent": "Constitution & Polity",
       "subthemes": [
-        "Social Justice & Welfare",
-        "International Relations"
+        "Public Health & Nutrition",
+        "Parliament & Legislatures"
       ],
       "notes": {
         "introduction": "",
@@ -5037,12 +5054,10 @@
       "number": 10,
       "marks": 10,
       "text": "Pressure group politics is sometimes seen as the informal face of politics. With regards to the above, assess the structure and functioning of pressure groups in India.",
-      "theme": "Social Justice & Welfare",
-      "themeId": "social-justice",
-      "themeParent": "",
-      "subthemes": [
-        "Amendment & Basic Structure"
-      ],
+      "theme": "Pressure Groups & Civil Society",
+      "themeId": "pressure-groups-civil-society",
+      "themeParent": "Social Justice & Welfare",
+      "subthemes": [],
       "notes": {
         "introduction": "",
         "staticNotes": "",
@@ -5080,12 +5095,11 @@
       "number": 12,
       "marks": 10,
       "text": "The Central Government frequently complains on the poor performance of the State Governments in eradicating suffering of the vulnerable sections of the society. Restructuring of Centrally sponsored schemes across the sectors for ameliorating the cause of vulnerable sections of population aims at providing flexibility to the States in better implementation. Critically evaluate.",
-      "theme": "Social Justice & Welfare",
-      "themeId": "social-justice",
-      "themeParent": "",
+      "theme": "Women, Children & Disability",
+      "themeId": "vulnerable-groups",
+      "themeParent": "Social Justice & Welfare",
       "subthemes": [
-        "Federalism & Centre-State",
-        "International Relations"
+        "Welfare Schemes & Livelihood"
       ],
       "notes": {
         "introduction": "",
@@ -5106,8 +5120,8 @@
       "themeId": "elections-rpa",
       "themeParent": "Constitution & Polity",
       "subthemes": [
-        "Social Justice & Welfare",
-        "Judiciary & Judicial Review"
+        "Women, Children & Disability",
+        "Welfare Schemes & Livelihood"
       ],
       "notes": {
         "introduction": "",
@@ -5124,11 +5138,11 @@
       "number": 14,
       "marks": 10,
       "text": "The basis of providing urban amenities in rural areas (PURA) is rooted in establishing connectivity. Comment.",
-      "theme": "UTs & Special Provisions",
-      "themeId": "special-provisions-ut",
-      "themeParent": "Constitution & Polity",
+      "theme": "Local Government & Decentralization",
+      "themeId": "local-government",
+      "themeParent": "Governance & Administration",
       "subthemes": [
-        "Governance & Administration"
+        "Welfare Schemes & Livelihood"
       ],
       "notes": {
         "introduction": "",
@@ -5145,12 +5159,12 @@
       "number": 15,
       "marks": 10,
       "text": "Identify the Millennium Development Goals (MDGs) that are related to health. Discuss the success of the actions taken by the Government for achieving the same.",
-      "theme": "Federalism & Centre-State",
-      "themeId": "federalism-centre-state",
-      "themeParent": "Constitution & Polity",
+      "theme": "Public Health & Nutrition",
+      "themeId": "health-nutrition",
+      "themeParent": "Social Justice & Welfare",
       "subthemes": [
-        "Social Justice & Welfare",
-        "Elections & RPA"
+        "Federalism & Centre-State",
+        "Local Government & Decentralization"
       ],
       "notes": {
         "introduction": "",
@@ -5167,10 +5181,13 @@
       "number": 16,
       "marks": 10,
       "text": "Though Citizens’ charters have been formulated by many public service delivery organizations, there is no corresponding improvement in the level of citizens’ satisfaction and quality of services being provided. Analyse.",
-      "theme": "Governance & Administration",
-      "themeId": "governance",
-      "themeParent": "",
-      "subthemes": [],
+      "theme": "Accountability & Citizen Charter",
+      "themeId": "accountability-transparency",
+      "themeParent": "Governance & Administration",
+      "subthemes": [
+        "Public Service Delivery & NGOs",
+        "E-Governance & Digital India"
+      ],
       "notes": {
         "introduction": "",
         "staticNotes": "",
@@ -5186,12 +5203,12 @@
       "number": 17,
       "marks": 10,
       "text": "‘A national Lokpal, however strong it may be, cannot resolve the problems of immorality in public affairs.’ Discuss.",
-      "theme": "Judiciary & Judicial Review",
-      "themeId": "judiciary",
+      "theme": "Amendment & Basic Structure",
+      "themeId": "constitutional-amendment",
       "themeParent": "Constitution & Polity",
       "subthemes": [
-        "Amendment & Basic Structure",
-        "Parliament & Legislatures"
+        "Pressure Groups & Civil Society",
+        "Terrorism & Conflict"
       ],
       "notes": {
         "introduction": "",
@@ -5208,13 +5225,10 @@
       "number": 18,
       "marks": 10,
       "text": "The proposed withdrawal of International Security Assistance Force (ISAF) from Afghanistan in 2014 is fraught with major security implications for the countries of the region. Examine in light of the fact that India is faced with a plethora of challenges and needs to safeguard its own strategic interests.",
-      "theme": "International Relations",
-      "themeId": "international-relations",
-      "themeParent": "",
-      "subthemes": [
-        "Judiciary & Judicial Review",
-        "Elections & RPA"
-      ],
+      "theme": "Terrorism & Conflict",
+      "themeId": "terrorism-conflict",
+      "themeParent": "International Relations",
+      "subthemes": [],
       "notes": {
         "introduction": "",
         "staticNotes": "",
@@ -5230,11 +5244,12 @@
       "number": 19,
       "marks": 10,
       "text": "What do you understand by ‘The String of Pearls’ ? How does it impact India ? Briefly outline the steps taken by India to counter this.",
-      "theme": "International Relations",
-      "themeId": "international-relations",
-      "themeParent": "",
+      "theme": "Neighbourhood & Regional",
+      "themeId": "neighbourhood-regional",
+      "themeParent": "International Relations",
       "subthemes": [
-        "Elections & RPA"
+        "Indo-Pacific & Strategic Partnerships",
+        "Terrorism & Conflict"
       ],
       "notes": {
         "introduction": "",
@@ -5256,7 +5271,7 @@
       "themeParent": "Constitution & Polity",
       "subthemes": [
         "Fundamental Rights & DPSP",
-        "UTs & Special Provisions"
+        "Federalism & Centre-State"
       ],
       "notes": {
         "introduction": "",
@@ -5273,9 +5288,9 @@
       "number": 20,
       "marks": 10,
       "text": "Economic ties between India and Japan while growing in the recent years are still far below their potential. Elucidate the policy constraints which are inhibiting this growth.",
-      "theme": "International Relations",
-      "themeId": "international-relations",
-      "themeParent": "",
+      "theme": "Energy & Economic Diplomacy",
+      "themeId": "energy-economic-diplomacy",
+      "themeParent": "International Relations",
       "subthemes": [],
       "notes": {
         "introduction": "",
@@ -5295,7 +5310,10 @@
       "theme": "Fundamental Rights & DPSP",
       "themeId": "fundamental-rights-dpsp",
       "themeParent": "Constitution & Polity",
-      "subthemes": [],
+      "subthemes": [
+        "Public Service Delivery & NGOs",
+        "Pressure Groups & Civil Society"
+      ],
       "notes": {
         "introduction": "",
         "staticNotes": "",
@@ -5315,7 +5333,8 @@
       "themeId": "federalism-centre-state",
       "themeParent": "Constitution & Polity",
       "subthemes": [
-        "International Relations"
+        "Local Government & Decentralization",
+        "Poverty, Hunger & Inequality"
       ],
       "notes": {
         "introduction": "",
@@ -5332,11 +5351,12 @@
       "number": 23,
       "marks": 10,
       "text": "In respect of India—Sri Lanka relations, discuss how domestic factors influence foreign policy.",
-      "theme": "Elections & RPA",
-      "themeId": "elections-rpa",
-      "themeParent": "Constitution & Polity",
+      "theme": "Energy & Economic Diplomacy",
+      "themeId": "energy-economic-diplomacy",
+      "themeParent": "International Relations",
       "subthemes": [
-        "International Relations"
+        "Elections & RPA",
+        "Public Service Delivery & NGOs"
       ],
       "notes": {
         "introduction": "",
@@ -5353,10 +5373,12 @@
       "number": 24,
       "marks": 10,
       "text": "What is meant by Gujral doctrine ? Does it have any relevance today ? Discuss.",
-      "theme": "Governance & Administration",
-      "themeId": "misc",
-      "themeParent": "",
-      "subthemes": [],
+      "theme": "Neighbourhood & Regional",
+      "themeId": "neighbourhood-regional",
+      "themeParent": "International Relations",
+      "subthemes": [
+        "Civil Services & Bureaucracy"
+      ],
       "notes": {
         "introduction": "",
         "staticNotes": "",
@@ -5372,12 +5394,12 @@
       "number": 25,
       "marks": 10,
       "text": "The World Bank and the IMF, collectively known as the Bretton Woods Institutions, are the two inter-governmental pillars supporting the structure of the world’s economic and financial order. Superficially, the World Bank and the IMF exhibit many common characteristics, yet their role, functions and mandate are distinctly different. Elucidate.",
-      "theme": "Amendment & Basic Structure",
-      "themeId": "constitutional-amendment",
-      "themeParent": "Constitution & Polity",
+      "theme": "Energy & Economic Diplomacy",
+      "themeId": "energy-economic-diplomacy",
+      "themeParent": "International Relations",
       "subthemes": [
-        "Judiciary & Judicial Review",
-        "Federalism & Centre-State"
+        "Public Service Delivery & NGOs",
+        "Diaspora & Soft Power"
       ],
       "notes": {
         "introduction": "",
@@ -5398,8 +5420,8 @@
       "themeId": "fundamental-rights-dpsp",
       "themeParent": "Constitution & Polity",
       "subthemes": [
-        "Amendment & Basic Structure",
-        "UTs & Special Provisions"
+        "Federalism & Centre-State",
+        "Amendment & Basic Structure"
       ],
       "notes": {
         "introduction": "",
@@ -5438,12 +5460,12 @@
       "number": 5,
       "marks": 10,
       "text": "Many State Governments further bifurcate geographical administrative areas like Districts and Talukas for better governance. In light of the above, can it also be justified that more number of smaller States would bring in effective governance at State level ? Discuss.",
-      "theme": "Judiciary & Judicial Review",
-      "themeId": "judiciary",
-      "themeParent": "Constitution & Polity",
+      "theme": "Local Government & Decentralization",
+      "themeId": "local-government",
+      "themeParent": "Governance & Administration",
       "subthemes": [
-        "Federalism & Centre-State",
-        "Governance & Administration"
+        "Judiciary & Judicial Review",
+        "Federalism & Centre-State"
       ],
       "notes": {
         "introduction": "",
@@ -5465,7 +5487,7 @@
       "themeParent": "Constitution & Polity",
       "subthemes": [
         "Amendment & Basic Structure",
-        "Constitutional Bodies"
+        "Elections & RPA"
       ],
       "notes": {
         "introduction": "",
@@ -5503,9 +5525,9 @@
       "number": 8,
       "marks": 10,
       "text": "The product diversification of financial institutions and insurance companies, resulting in overlapping of products and services strengthens the case for the merger of the two regulatory agencies, namely SEBI and IRDA. Justify.",
-      "theme": "Governance & Administration",
-      "themeId": "governance",
-      "themeParent": "",
+      "theme": "Public Service Delivery & NGOs",
+      "themeId": "public-service-delivery",
+      "themeParent": "Governance & Administration",
       "subthemes": [],
       "notes": {
         "introduction": "",
@@ -5526,8 +5548,8 @@
       "themeId": "federalism-centre-state",
       "themeParent": "Constitution & Polity",
       "subthemes": [
-        "Comparative Constitutions",
-        "Social Justice & Welfare"
+        "Accountability & Citizen Charter",
+        "Indo-Pacific & Strategic Partnerships"
       ],
       "notes": {
         "introduction": "",

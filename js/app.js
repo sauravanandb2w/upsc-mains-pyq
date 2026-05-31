@@ -273,7 +273,7 @@ function renderThemeGrid(paper) {
   els.themePaperMeta.innerHTML = `
     <h2>${escapeHtml(paper.title)} — Themes</h2>
     <p>${escapeHtml(paper.syllabus)}</p>
-    <p class="meta-range">Constitution & Polity split into sub-themes · Notes sync when signed in</p>
+    <p class="meta-range">Syllabus-aligned sub-themes · Notes sync when signed in</p>
   `;
 
   const groups = [];
