@@ -87,6 +87,7 @@ def classify_theme(text: str, paper: int, marks: int | str) -> dict:
         return {
             "theme": primary["name"],
             "themeId": primary["id"],
+            "themeParent": primary.get("parent", ""),
             "subthemes": sub,
         }
 
@@ -96,7 +97,12 @@ def classify_theme(text: str, paper: int, marks: int | str) -> dict:
         3: "Economy & Development",
         4: "Ethics & Human Interface",
     }
-    return {"theme": fallback.get(paper, "General"), "themeId": "misc", "subthemes": []}
+    return {
+        "theme": fallback.get(paper, "General"),
+        "themeId": "misc",
+        "themeParent": "",
+        "subthemes": [],
+    }
 
 
 def clearias_urls(paper: int, year: int) -> list[str]:
@@ -206,6 +212,7 @@ def normalize_entry(
         "text": text,
         "theme": theme_info["theme"],
         "themeId": theme_info["themeId"],
+        "themeParent": theme_info.get("themeParent", ""),
         "subthemes": theme_info["subthemes"],
         "notes": notes,
     }

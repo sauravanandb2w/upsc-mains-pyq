@@ -53,24 +53,79 @@
     "label": "GS Paper II",
     "themes": [
       {
-        "id": "constitution-polity",
-        "name": "Constitution & Polity",
-        "keywords": "constitution article fundamental rights dpsp parliament rajya sabha lok sabha federalism judiciary supreme court high court election electoral cag rti amendment basic structure privacy dna paternity secular lok adalat arbitration"
+        "id": "fundamental-rights-dpsp",
+        "name": "Fundamental Rights & DPSP",
+        "parent": "Constitution & Polity",
+        "keywords": "fundamental rights dpsp directive principles fundamental duties article 21 liberty privacy life personal gender justice secular secularism equality dignity habeas corpus constitutionalization environment"
+      },
+      {
+        "id": "parliament-legislature",
+        "name": "Parliament & Legislatures",
+        "parent": "Constitution & Polity",
+        "keywords": "parliament lok sabha rajya sabha legislative assembly bill committee presiding speaker sovereignty legislation parliamentary law-making ordinary legislative"
+      },
+      {
+        "id": "union-state-executive",
+        "name": "Union & State Executive",
+        "parent": "Constitution & Polity",
+        "keywords": "president governor prime minister council minister executive pardon preemptive mercy ordinance vice-president chief minister attorney general"
+      },
+      {
+        "id": "judiciary",
+        "name": "Judiciary & Judicial Review",
+        "parent": "Constitution & Polity",
+        "keywords": "judiciary supreme court high court collegium judicial independence accountability review pil public interest litigation contempt lok adalat arbitration administrative tribunal court system"
+      },
+      {
+        "id": "federalism-centre-state",
+        "name": "Federalism & Centre-State",
+        "parent": "Constitution & Polity",
+        "keywords": "federalism centre-state center state sarkaria zonal finance commission gst 101st amendment inter-state inter state fiscal cooperative fiscal federalism planned development"
+      },
+      {
+        "id": "elections-rpa",
+        "name": "Elections & RPA",
+        "parent": "Constitution & Polity",
+        "keywords": "election electoral representation people act rpa corrupt practice undue influence candidate returned void voter one nation simultaneous reform disqualification"
+      },
+      {
+        "id": "constitutional-bodies",
+        "name": "Constitutional Bodies",
+        "parent": "Constitution & Polity",
+        "keywords": "cag comptroller auditor auditor-general upsc election commission ncrwc ncw ncpcr nhrc constitutional body statutory finance commission lokpal cvc"
+      },
+      {
+        "id": "constitutional-amendment",
+        "name": "Amendment & Basic Structure",
+        "parent": "Constitution & Polity",
+        "keywords": "amendment amend basic structure kesavananda minerva article 368 constitutional morality living instrument dynamism procedural substantive limitation change constitution"
+      },
+      {
+        "id": "special-provisions-ut",
+        "name": "UTs & Special Provisions",
+        "parent": "Constitution & Polity",
+        "keywords": "jammu kashmir reorganization reorganisation ut union territory delhi special status scheduled area article 370 371 ladakh assembly"
+      },
+      {
+        "id": "comparative-constitution",
+        "name": "Comparative Constitutions",
+        "parent": "Constitution & Polity",
+        "keywords": "compare contrast british american usa constitution uk westminster parliamentary sovereignty secular principles united states"
       },
       {
         "id": "governance",
         "name": "Governance & Administration",
-        "keywords": "governance administration civil service bureaucracy cabinet parliamentary e-governance citizen charter transparency accountability local body panchayat municipal cooperative federal centre-state trust"
+        "keywords": "governance administration civil service bureaucracy cabinet parliamentary e-governance citizen charter transparency accountability local body panchayat municipal cooperative trust rationalization niti"
       },
       {
         "id": "social-justice",
         "name": "Social Justice & Welfare",
-        "keywords": "poverty malnutrition health education welfare scheme affirmative action disadvantaged vulnerable disability rights hunger nutrition public healthcare charitable trust"
+        "keywords": "poverty malnutrition health education welfare scheme affirmative action disadvantaged vulnerable disability rights hunger nutrition public healthcare charitable trust paradox ownership pressure group ncpcr child digital"
       },
       {
         "id": "international-relations",
         "name": "International Relations",
-        "keywords": "foreign policy bilateral multilateral diplomacy strategic geopolitical china pakistan neighbourhood saarc asean quad brics unsc terrorism counter terror maldives central asia car west developed weapon"
+        "keywords": "foreign policy bilateral multilateral diplomacy strategic geopolitical china pakistan neighbourhood saarc asean quad brics unsc terrorism counter terror maldives central africa digital partnership energy security middle east united nations reform globalization nationalism cold war"
       }
     ]
   },

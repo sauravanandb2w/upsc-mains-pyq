@@ -273,19 +273,40 @@ function renderThemeGrid(paper) {
   els.themePaperMeta.innerHTML = `
     <h2>${escapeHtml(paper.title)} — Themes</h2>
     <p>${escapeHtml(paper.syllabus)}</p>
-    <p class="meta-range">Brainstorm by syllabus theme · Notes sync when signed in</p>
+    <p class="meta-range">Constitution & Polity split into sub-themes · Notes sync when signed in</p>
   `;
 
-  els.themeGrid.innerHTML = themes
-    .map((t) => {
-      const count = countQuestionsForTheme(state.paper, t.id);
-      const hasNotes = themeHasNotes(t.id);
-      return `
-        <button type="button" class="theme-card" data-theme-id="${escapeAttr(t.id)}" role="listitem">
-          <span class="theme-card-name">${escapeHtml(t.name)}</span>
-          <span class="theme-card-meta">${count} PYQ${count === 1 ? "" : "s"}${hasNotes ? " · has notes" : ""}</span>
-        </button>
-      `;
+  const groups = [];
+  const seenParents = new Set();
+  for (const t of themes) {
+    if (t.parent) {
+      if (!seenParents.has(t.parent)) {
+        seenParents.add(t.parent);
+        groups.push({ label: t.parent, themes: themes.filter((x) => x.parent === t.parent) });
+      }
+    } else {
+      groups.push({ label: null, themes: [t] });
+    }
+  }
+
+  els.themeGrid.innerHTML = groups
+    .map((group) => {
+      const heading = group.label
+        ? `<h3 class="theme-group-title">${escapeHtml(group.label)}</h3>`
+        : "";
+      const cards = group.themes
+        .map((t) => {
+          const count = countQuestionsForTheme(state.paper, t.id);
+          const hasNotes = themeHasNotes(t.id);
+          return `
+            <button type="button" class="theme-card" data-theme-id="${escapeAttr(t.id)}" role="listitem">
+              <span class="theme-card-name">${escapeHtml(t.name)}</span>
+              <span class="theme-card-meta">${count} PYQ${count === 1 ? "" : "s"}${hasNotes ? " · has notes" : ""}</span>
+            </button>
+          `;
+        })
+        .join("");
+      return `${heading}<div class="theme-group-grid">${cards}</div>`;
     })
     .join("");
 
@@ -310,7 +331,7 @@ async function renderThemeDetail(themeId) {
 
   els.themeDetailMeta.innerHTML = `
     <h2>${escapeHtml(theme.name)}</h2>
-    <p>${escapeHtml(paper.title)} · ${related.length} related PYQ${related.length === 1 ? "" : "s"}</p>
+    <p>${theme.parent ? `${escapeHtml(theme.parent)} · ` : ""}${escapeHtml(paper.title)} · ${related.length} related PYQ${related.length === 1 ? "" : "s"}</p>
   `;
 
   els.themeNotesEditor.innerHTML = THEME_NOTE_FIELDS.map(
@@ -379,16 +400,36 @@ function populateYearFilter() {
 }
 
 function populateThemeFilter() {
-  const themes = getThemesForPaper(state.paper).map((t) => t.name);
+  const themes = getThemesForPaper(state.paper);
   const prev = state.theme;
   els.themeFilter.innerHTML = '<option value="all">All themes</option>';
-  themes.forEach((t) => {
+
+  const standalone = themes.filter((t) => !t.parent);
+  const parentNames = [...new Set(themes.filter((t) => t.parent).map((t) => t.parent))];
+
+  standalone.forEach((t) => {
     const opt = document.createElement("option");
-    opt.value = t;
-    opt.textContent = t;
+    opt.value = t.name;
+    opt.textContent = t.name;
     els.themeFilter.appendChild(opt);
   });
-  if (prev !== "all" && themes.includes(prev)) {
+
+  parentNames.forEach((parent) => {
+    const group = document.createElement("optgroup");
+    group.label = parent;
+    themes
+      .filter((t) => t.parent === parent)
+      .forEach((t) => {
+        const opt = document.createElement("option");
+        opt.value = t.name;
+        opt.textContent = t.name;
+        group.appendChild(opt);
+      });
+    els.themeFilter.appendChild(group);
+  });
+
+  const allNames = themes.map((t) => t.name);
+  if (prev !== "all" && allNames.includes(prev)) {
     els.themeFilter.value = prev;
   } else {
     state.theme = "all";

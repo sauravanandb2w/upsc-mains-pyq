@@ -25,6 +25,7 @@
       "text": "Case Study: Sneha — hospital procurement committee; brother's company bid and conflict of interest. Course of action, justification, and how medical ethics is compromised.",
       "theme": "Case Study",
       "themeId": "case-study",
+      "themeParent": "",
       "subthemes": [],
       "notes": {
         "introduction": "",
@@ -43,6 +44,7 @@
       "text": "Case Study: District Collector — severe water shortage; farmers vs industries drawing groundwater. Options, compatible stakeholder actions, administrative and ethical dilemmas.",
       "theme": "Case Study",
       "themeId": "case-study",
+      "themeParent": "",
       "subthemes": [],
       "notes": {
         "introduction": "",
@@ -61,6 +63,7 @@
       "text": "Case Study: Dr. Srinivasan — pressure to shortcut clinical trials for a new viral drug. What would you do; options and consequences; role of data ethics and drug ethics.",
       "theme": "Case Study",
       "themeId": "case-study",
+      "themeParent": "",
       "subthemes": [],
       "notes": {
         "introduction": "",
@@ -79,6 +82,7 @@
       "text": "The application of Artificial Intelligence as a dependable source of input for administrative rational decision-making is a debatable issue. Critically examine the statement from the ethical point of view.",
       "theme": "Public Service Values",
       "themeId": "public-service-values",
+      "themeParent": "",
       "subthemes": [
         "Aptitude & Emotional Intelligence"
       ],
@@ -99,6 +103,7 @@
       "text": "Ethics encompasses several key dimensions that are crucial in guiding individuals and organizations towards morally responsible behavior. Explain the key dimensions of ethics that influence human actions. Discuss how these dimensions shape ethical decision-making in professional contexts.",
       "theme": "Ethics & Human Interface",
       "themeId": "ethics-human-interface",
+      "themeParent": "",
       "subthemes": [
         "Attitude",
         "Integrity & Probity"
@@ -120,6 +125,7 @@
       "text": "It is not enough to talk about peace, one must believe in it; and it is not enough to believe in it, one must act upon it. In the present context, the major weapon industries of the developed nations are adversely influencing continuation of wars. What are the ethical considerations of powerful nations in today's international arena to stop ongoing conflicts?",
       "theme": "Corporate & Applied Ethics",
       "themeId": "corporate-governance",
+      "themeParent": "",
       "subthemes": [
         "Thinkers & Quotations"
       ],
@@ -140,6 +146,7 @@
       "text": "Global warming and climate change are the outcomes of human greed in the name of development. How do you put an end to this to protect life and bring equilibrium between society and the environment?",
       "theme": "Corporate & Applied Ethics",
       "themeId": "corporate-governance",
+      "themeParent": "",
       "subthemes": [
         "Case Study"
       ],
@@ -160,6 +167,7 @@
       "text": "Given below are three quotations of great thinkers. What do each of these quotations convey to you in the present context? (Swami Vivekananda; Sardar Patel; Immanuel Kant)",
       "theme": "Thinkers & Quotations",
       "themeId": "thinkers-quotes",
+      "themeParent": "",
       "subthemes": [],
       "notes": {
         "introduction": "",
@@ -178,6 +186,7 @@
       "text": "The concept of just and unjust is contextual. What was just a year back may turn out to be unjust in today's context. Changing context should be constantly under scrutiny to prevent miscarriage of justice. Examine with suitable examples.",
       "theme": "Ethics & Human Interface",
       "themeId": "ethics-human-interface",
+      "themeParent": "",
       "subthemes": [],
       "notes": {
         "introduction": "",
@@ -196,6 +205,7 @@
       "text": "Mindless addiction to form, ignoring the substance of the matter, results in rendering of injustice. A perceptive civil servant is one who ignores such literalness and carries out true intent. Examine with suitable illustrations.",
       "theme": "Ethics & Human Interface",
       "themeId": "ethics-human-interface",
+      "themeParent": "",
       "subthemes": [
         "Public Service Values"
       ],
@@ -216,6 +226,7 @@
       "text": "The Code of Conduct and Code of Ethics are sources of guidance in public administration. Suggest a suitable model for a code of ethics to maintain integrity, probity, and transparency in governance.",
       "theme": "Integrity & Probity",
       "themeId": "integrity-probity",
+      "themeParent": "",
       "subthemes": [],
       "notes": {
         "introduction": "",
@@ -234,6 +245,7 @@
       "text": "The soul of the new law, Bharatiya Nyaya Sanhita (BNS) is Equality and Impartiality based on Indian culture and ethos. Discuss in the light of major shift from punishment to justice in the present judicial system.",
       "theme": "Public Service Values",
       "themeId": "public-service-values",
+      "themeParent": "",
       "subthemes": [],
       "notes": {
         "introduction": "",
@@ -252,6 +264,7 @@
       "text": "Examine the gender-specific challenges faced by female public servants and suggest suitable measures to increase their efficiency and maintain high standards of probity.",
       "theme": "Public Service Values",
       "themeId": "public-service-values",
+      "themeParent": "",
       "subthemes": [
         "Integrity & Probity"
       ],
@@ -272,6 +285,7 @@
       "text": "How will Mission Karmayogi empower civil servants in enhancing productive efficiency and delivering services at the grassroots level?",
       "theme": "Public Service Values",
       "themeId": "public-service-values",
+      "themeParent": "",
       "subthemes": [],
       "notes": {
         "introduction": "",
@@ -290,6 +304,7 @@
       "text": "Case Study: ABC Inc. CEO faces pressure on AI-driven energy use and net-zero goals by 2030. Discuss ethical issues, immediate response, arguments to regulators, and measures to balance AI innovation with environmental footprint.",
       "theme": "Case Study",
       "themeId": "case-study",
+      "themeParent": "",
       "subthemes": [],
       "notes": {
         "introduction": "",
@@ -308,6 +323,7 @@
       "text": "Case Study: D.G. Raman — recruitment of unemployed youth by a terrorist group via social media. Options, measures to strengthen police setup, and action plan for intelligence gathering.",
       "theme": "Case Study",
       "themeId": "case-study",
+      "themeParent": "",
       "subthemes": [],
       "notes": {
         "introduction": "",
@@ -326,6 +342,7 @@
       "text": "Case Study: SP Rohit — naxalite apprehension surrounded by tribal women demanding release. Options, ethical dilemmas, appropriate course of action, and precautions with women protesters.",
       "theme": "Case Study",
       "themeId": "case-study",
+      "themeParent": "",
       "subthemes": [],
       "notes": {
         "introduction": "",
