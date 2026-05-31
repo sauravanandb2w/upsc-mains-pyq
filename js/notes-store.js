@@ -73,12 +73,25 @@ export const QUESTION_NOTE_FIELDS = [
   },
 ];
 
+/** Shown below diagrams on each question card (not in the main notes accordion). */
+export const BEST_ANSWER_FIELD = {
+  id: "bestAnswerOnline",
+  db: "best_answer_online",
+  label: "Best answer online",
+  placeholder:
+    "Paste a strong model answer from the web (Vision, Forum, Insights, ClearIAS, etc.)…",
+};
+
+function allQuestionNoteFields() {
+  return [...QUESTION_NOTE_FIELDS, BEST_ANSWER_FIELD];
+}
+
 function emptyThemeNotes() {
   return Object.fromEntries(THEME_NOTE_FIELDS.map((f) => [f.id, ""]));
 }
 
 function emptyQuestionNotes() {
-  return Object.fromEntries(QUESTION_NOTE_FIELDS.map((f) => [f.id, ""]));
+  return Object.fromEntries(allQuestionNoteFields().map((f) => [f.id, ""]));
 }
 
 function loadLocal(key) {
@@ -105,7 +118,7 @@ function rowToThemeNotes(row) {
 function rowToQuestionNotes(row) {
   const out = emptyQuestionNotes();
   if (!row) return out;
-  for (const f of QUESTION_NOTE_FIELDS) {
+  for (const f of allQuestionNoteFields()) {
     out[f.id] = row[f.db] || "";
   }
   return out;
@@ -121,7 +134,7 @@ function themeNotesToRow(themeId, paper, notes, userId) {
 
 function questionNotesToRow(questionId, notes, userId) {
   const row = { user_id: userId, question_id: questionId };
-  for (const f of QUESTION_NOTE_FIELDS) {
+  for (const f of allQuestionNoteFields()) {
     row[f.db] = notes[f.id] || "";
   }
   return row;
@@ -245,7 +258,7 @@ export function getQuestionNotes(questionId, fileNotes = {}) {
 
   const local = loadLocal(LOCAL_QUESTION_KEY)[questionId] || {};
   const merged = { ...emptyQuestionNotes(), ...fileNotes };
-  for (const f of QUESTION_NOTE_FIELDS) {
+  for (const f of allQuestionNoteFields()) {
     if (local[f.id]?.trim()) merged[f.id] = local[f.id];
   }
   return merged;

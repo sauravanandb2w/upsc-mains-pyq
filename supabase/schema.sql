@@ -27,6 +27,7 @@ create table if not exists public.question_notes (
   current_affairs text not null default '',
   topper_points text not null default '',
   value_material text not null default '',
+  best_answer_online text not null default '',
   updated_at timestamptz not null default now(),
   unique (user_id, question_id)
 );
@@ -36,6 +37,10 @@ create index if not exists theme_notes_user_paper_idx
 
 create index if not exists question_notes_user_idx
   on public.question_notes (user_id);
+
+-- Existing project? Run once if the column is missing:
+-- alter table public.question_notes
+--   add column if not exists best_answer_online text not null default '';
 
 -- Auto-update updated_at
 create or replace function public.set_updated_at()

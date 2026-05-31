@@ -16,6 +16,7 @@ import {
 import {
   THEME_NOTE_FIELDS,
   QUESTION_NOTE_FIELDS,
+  BEST_ANSWER_FIELD,
   initNotesStore,
   clearNotesStore,
   getSyncStatus,
@@ -528,6 +529,23 @@ function bindQuestionNoteEditors(card, q) {
   });
 }
 
+function renderBestAnswerSection(q) {
+  return `
+    <div class="best-answer-section">
+      <label class="note-field best-answer-field">
+        <span class="note-label">${BEST_ANSWER_FIELD.label}</span>
+        <span class="best-answer-hint">Synced like your other notes · paste model answers from the web</span>
+        <textarea
+          data-qid="${escapeAttr(q.id)}"
+          data-field="${escapeAttr(BEST_ANSWER_FIELD.id)}"
+          rows="8"
+          placeholder="${escapeAttr(BEST_ANSWER_FIELD.placeholder)}"
+        ></textarea>
+      </label>
+    </div>
+  `;
+}
+
 function renderQuestions(questions) {
   els.questionsList.innerHTML = "";
 
@@ -565,6 +583,7 @@ function renderQuestions(questions) {
         <summary>Diagrams &amp; images</summary>
         <div class="study-materials-body" data-study-path="study/questions/${escapeAttr(q.id)}"></div>
       </details>
+      ${renderBestAnswerSection(q)}
     `;
 
     const studyDetails = card.querySelector(".study-materials-details");

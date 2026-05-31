@@ -921,6 +921,31 @@ body {
   color: var(--text-muted);
 }
 
+.best-answer-section {
+  margin-top: 1rem;
+  padding-top: 0.75rem;
+  border-top: 1px dashed var(--border);
+}
+
+.best-answer-field .note-label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.best-answer-hint {
+  display: block;
+  margin: 0.2rem 0 0.5rem;
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+
+.best-answer-field textarea {
+  min-height: 10rem;
+  font-size: 0.88rem;
+  line-height: 1.55;
+}
+
 .study-content {
   display: flex;
   flex-direction: column;
