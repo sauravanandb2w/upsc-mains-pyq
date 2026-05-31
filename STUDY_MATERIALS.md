@@ -73,15 +73,19 @@ If `manifest.json` is missing, the app loads `README.md` only.
 
 ---
 
-## Embedding images in markdown
+## Embedding images
 
-Export from Excalidraw / draw.io / Canva → save in the same folder:
+Use **PNG or JPG** (preview works in Cursor and the app). Export from Excalidraw, draw.io, or Canva → save in the question/theme folder:
 
 ```markdown
-![Federalism diagram](./federalism-overview.svg)
+![Federalism diagram](./federalism.png)
 ```
 
-Paths are relative to the theme/question folder.
+Or list in `manifest.json` (recommended — image only, no markdown):
+
+```json
+{ "type": "image", "file": "federalism.png" }
+```
 
 ---
 
