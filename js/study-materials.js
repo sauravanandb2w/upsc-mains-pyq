@@ -159,6 +159,25 @@ function wrapSection(title, innerHtml) {
   return `<section class="study-section"><h3 class="study-section-title">${escapeHtml(title)}</h3>${innerHtml}</section>`;
 }
 
+function normalizeSections(manifest) {
+  if (!manifest) return [];
+
+  if (manifest.sections?.length) {
+    return manifest.sections;
+  }
+
+  if (manifest.images?.length) {
+    return manifest.images.map((item) => {
+      if (typeof item === "string") {
+        return { type: "image", file: item };
+      }
+      return { type: "image", file: item.file, caption: item.caption, alt: item.alt, title: item.title };
+    });
+  }
+
+  return [];
+}
+
 /**
  * @param {string} basePath e.g. study/themes/constitution-polity
  * @param {HTMLElement} container
@@ -168,13 +187,21 @@ export async function renderStudyMaterials(basePath, container) {
   container.innerHTML = '<p class="study-loading">Loading study materials…</p>';
 
   const manifest = await tryFetchJson(`${basePath}/manifest.json`);
-  const sections = manifest?.sections?.length > 0 ? manifest.sections : [];
+  const sections = normalizeSections(manifest);
 
   const parts = [];
+  const imageParts = [];
   let hasContent = false;
+
+  async function flushImages() {
+    if (!imageParts.length) return;
+    parts.push(`<div class="study-images-grid">${imageParts.join("")}</div>`);
+    imageParts.length = 0;
+  }
 
   for (const section of sections) {
     if (section.type === "markdown") {
+      await flushImages();
       const file = section.file || "README.md";
       const md = await tryFetchText(`${basePath}/${file}?t=${Date.now()}`, true);
       if (!md?.trim()) continue;
@@ -185,9 +212,11 @@ export async function renderStudyMaterials(basePath, container) {
       const html = await renderImageSection(section, basePath);
       if (!html) continue;
       hasContent = true;
-      parts.push(html);
+      imageParts.push(html);
     }
   }
+
+  await flushImages();
 
   if (!hasContent) {
     container.innerHTML = "";
@@ -213,7 +242,7 @@ export function bindLazyStudyMaterials(detailsEl, basePath) {
     const ok = await renderStudyMaterials(basePath, body);
     if (!ok) {
       body.innerHTML =
-        '<p class="study-empty">No diagram yet. Add an image + <code>manifest.json</code> in this question folder.</p>';
+        '<p class="study-empty">No images yet. Add PNG/JPG files and list them in <code>manifest.json</code>.</p>';
     }
   });
 }
@@ -221,7 +250,8 @@ export function bindLazyStudyMaterials(detailsEl, basePath) {
 /** Quick check if folder likely has content (manifest or README). */
 export async function hasStudyMaterials(basePath) {
   const manifest = await tryFetchJson(`${basePath}/manifest.json`);
-  if (manifest?.sections?.length) return true;
+  const sections = normalizeSections(manifest);
+  if (sections.length) return true;
   const readme = await tryFetchText(`${basePath}/README.md`);
   return Boolean(readme?.trim());
 }

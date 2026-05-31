@@ -51,41 +51,34 @@ Push to `main` → open app → **Themes** → GS II → **Governance & Administ
 
 ---
 
-## manifest.json (optional)
+## manifest.json — one or many images
 
-Use when you have **images outside README** or **multiple markdown files**.
+List every PNG/JPG in the folder. **Add as many as you need:**
 
 ```json
 {
-  "sections": [
-    { "type": "markdown", "file": "README.md", "title": "Overview" },
-    {
-      "type": "image",
-      "file": "my-diagram.png",
-      "caption": "Local bodies structure",
-      "alt": "Diagram of panchayat tiers"
-    }
+  "images": [
+    "rig-vedic-overview.png",
+    "society-comparison.png",
+    "economy-flowchart.png"
   ]
 }
 ```
 
-If `manifest.json` is missing, the app loads `README.md` only.
-
----
-
-## Embedding images
-
-Use **PNG or JPG** (preview works in Cursor and the app). Export from Excalidraw, draw.io, or Canva → save in the question/theme folder:
-
-```markdown
-![Federalism diagram](./federalism.png)
-```
-
-Or list in `manifest.json` (recommended — image only, no markdown):
+Optional caption per image:
 
 ```json
-{ "type": "image", "file": "federalism.png" }
+{
+  "images": [
+    "overview.png",
+    { "file": "timeline.png", "caption": "Chronology" }
+  ]
+}
 ```
+
+Works the same for **themes** (`study/themes/constitution-polity/`) and **questions** (`study/questions/gs1-2024-q1/`).
+
+After `git push`, all listed images appear under **Diagrams & images** in the app.
 
 ---
 

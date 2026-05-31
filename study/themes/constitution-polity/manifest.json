@@ -1,11 +1,5 @@
 {
-  "sections": [
-    { "type": "markdown", "file": "README.md" },
-    {
-      "type": "image",
-      "file": "federalism-overview.svg",
-      "title": "Centre–State relations (overview)",
-      "alt": "Diagram showing Union, State, and Concurrent lists"
-    }
+  "images": [
+    "federalism-overview.svg"
   ]
 }
