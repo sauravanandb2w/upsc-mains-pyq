@@ -745,16 +745,17 @@ function debounce(fn, ms) {
   };
 }
 
+async function fetchJson(url) {
+  const res = await fetch(url, { cache: "no-store" });
+  if (!res.ok) throw new Error(`Failed to load ${url}`);
+  return res.json();
+}
+
 async function loadData() {
   const ids = [1, 2, 3, 4];
   const [themeData, ...paperResults] = await Promise.all([
-    fetch("data/themes.json").then((r) => r.json()),
-    ...ids.map((n) =>
-      fetch(`data/gs-paper-${n}.json`).then((r) => {
-        if (!r.ok) throw new Error(`Failed to load GS Paper ${n}`);
-        return r.json();
-      })
-    ),
+    fetchJson("data/themes.json"),
+    ...ids.map((n) => fetchJson(`data/gs-paper-${n}.json`)),
   ]);
 
   themeConfig = themeData;
