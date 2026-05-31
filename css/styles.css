@@ -288,6 +288,19 @@ body {
   color: var(--text-muted);
 }
 
+.data-note {
+  margin: 0;
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  line-height: 1.45;
+}
+
+.meta-range {
+  margin: 0.35rem 0 0;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
 .stats-bar {
   margin-bottom: 1rem;
   font-size: 0.85rem;
@@ -343,6 +356,21 @@ body {
   color: var(--text-muted);
 }
 
+.badge.theme-badge {
+  background: color-mix(in srgb, var(--accent) 12%, var(--bg-elevated));
+  color: var(--accent);
+  max-width: 100%;
+  white-space: normal;
+  text-align: left;
+  line-height: 1.25;
+}
+
+.question-topics.subthemes li {
+  background: color-mix(in srgb, var(--accent) 8%, var(--bg));
+  color: var(--text-muted);
+  font-style: italic;
+}
+
 .question-num {
   font-size: 0.8rem;
   font-weight: 600;
@@ -371,6 +399,77 @@ body {
   border-radius: 4px;
   background: color-mix(in srgb, var(--text) 6%, var(--bg));
   color: var(--text-muted);
+}
+
+.study-details {
+  margin-top: 0.85rem;
+  border-top: 1px dashed var(--border);
+  padding-top: 0.65rem;
+}
+
+.study-details summary {
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--accent);
+  list-style: none;
+}
+
+.study-details summary::-webkit-details-marker {
+  display: none;
+}
+
+.study-details summary::before {
+  content: "▸ ";
+}
+
+.study-details[open] summary::before {
+  content: "▾ ";
+}
+
+.notes-editor {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+}
+
+.note-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.note-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--accent);
+}
+
+.note-field textarea {
+  width: 100%;
+  padding: 0.55rem 0.65rem;
+  font-family: inherit;
+  font-size: 0.88rem;
+  line-height: 1.45;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--bg);
+  color: var(--text);
+  resize: vertical;
+  min-height: 4rem;
+}
+
+.note-field textarea:focus {
+  outline: 2px solid color-mix(in srgb, var(--accent) 45%, transparent);
+  border-color: var(--accent);
+}
+
+.note-field textarea::placeholder {
+  color: var(--text-muted);
+  opacity: 0.75;
 }
 
 .empty-state {

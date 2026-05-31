@@ -1,0 +1,157 @@
+{
+  "1": {
+    "label": "GS Paper I",
+    "themes": [
+      {
+        "id": "art-culture",
+        "name": "Indian Art & Culture",
+        "keywords": "art architecture sculpture temple painting literature dance music heritage buddhist jain gandhara chola pallava vijayanagara mughal miniature indus pottery coin inscript"
+      },
+      {
+        "id": "ancient-medieval",
+        "name": "Ancient & Medieval History",
+        "keywords": "vedic rig later vedic maurya gupta kushan harappan indus magadha sultanate delhi sultan medieval feudal agrarian pallava chola vijayanagara bhakti sufi"
+      },
+      {
+        "id": "modern-history",
+        "name": "Modern Indian History",
+        "keywords": "freedom struggle colonial british 1857 gandhi nehru congress partition independence quit india civil disobedience non-cooperation moderates extremists subhash bose"
+      },
+      {
+        "id": "post-independence",
+        "name": "Post-Independence India",
+        "keywords": "post-independence nehruvian planning linguistic reorganization emergency coalition politics green revolution white revolution"
+      },
+      {
+        "id": "world-history",
+        "name": "World History",
+        "keywords": "world war cold war europe america industrial revolution colonization decolonization balance of power fascism communism ussr"
+      },
+      {
+        "id": "physical-geo",
+        "name": "Physical Geography",
+        "keywords": "monsoon cyclone earthquake tsunami volcano climate cloudburst aurora tornado fjord physiography landform plate tectonic precipitation"
+      },
+      {
+        "id": "indian-geo",
+        "name": "Indian Geography",
+        "keywords": "river ganga brahmaputra groundwater irrigation canal drought flood himalaya deccan coastal peninsula soil agriculture mineral resource"
+      },
+      {
+        "id": "world-geo",
+        "name": "World Geography",
+        "keywords": "continent ocean trade route geopolitical resource distribution demographic transition"
+      },
+      {
+        "id": "indian-society",
+        "name": "Indian Society",
+        "keywords": "caste tribe gender women marriage divorce urbanization migration globalization society secularization poverty inequality regional disparity diversity marginality"
+      }
+    ]
+  },
+  "2": {
+    "label": "GS Paper II",
+    "themes": [
+      {
+        "id": "constitution-polity",
+        "name": "Constitution & Polity",
+        "keywords": "constitution article fundamental rights dpsp parliament rajya sabha lok sabha federalism judiciary supreme court high court election electoral cag rti amendment basic structure privacy dna paternity secular lok adalat arbitration"
+      },
+      {
+        "id": "governance",
+        "name": "Governance & Administration",
+        "keywords": "governance administration civil service bureaucracy cabinet parliamentary e-governance citizen charter transparency accountability local body panchayat municipal cooperative federal centre-state trust"
+      },
+      {
+        "id": "social-justice",
+        "name": "Social Justice & Welfare",
+        "keywords": "poverty malnutrition health education welfare scheme affirmative action disadvantaged vulnerable disability rights hunger nutrition public healthcare charitable trust"
+      },
+      {
+        "id": "international-relations",
+        "name": "International Relations",
+        "keywords": "foreign policy bilateral multilateral diplomacy strategic geopolitical china pakistan neighbourhood saarc asean quad brics unsc terrorism counter terror maldives central asia car west developed weapon"
+      }
+    ]
+  },
+  "3": {
+    "label": "GS Paper III",
+    "themes": [
+      {
+        "id": "economy-development",
+        "name": "Economy & Development",
+        "keywords": "gdp growth inflation monetary fiscal budget tax gst subsidy ppp msme manufacturing industrial policy inclusive growth land reform food inflation buffer stock labour code pli monetisation"
+      },
+      {
+        "id": "agriculture-food",
+        "name": "Agriculture & Food Security",
+        "keywords": "agriculture crop irrigation millet farmer fci msp food security land holding green revolution white revolution horticulture"
+      },
+      {
+        "id": "science-technology",
+        "name": "Science & Technology",
+        "keywords": "technology innovation research patent ipr biotechnology space satellite nuclear ai artificial intelligence digital data protection cyber toll highway ict"
+      },
+      {
+        "id": "environment-biodiversity",
+        "name": "Environment & Biodiversity",
+        "keywords": "environment pollution climate change biodiversity eia ngo conservation wetland forest wildlife emission net zero renewable energy water freshwater"
+      },
+      {
+        "id": "disaster-management",
+        "name": "Disaster Management",
+        "keywords": "disaster resilience sendai framework flood drought landslide urban flood cyclone preparedness mitigation adaptation"
+      },
+      {
+        "id": "internal-security",
+        "name": "Internal Security",
+        "keywords": "security terror naxal left wing extremism narco cyber social media encryption border badp bim china pakistan insurgency intelligence"
+      }
+    ]
+  },
+  "4": {
+    "label": "GS Paper IV",
+    "themes": [
+      {
+        "id": "ethics-human-interface",
+        "name": "Ethics & Human Interface",
+        "keywords": "ethics moral value human interface dimension responsible behavior just unjust contextual literalness substance"
+      },
+      {
+        "id": "attitude",
+        "name": "Attitude",
+        "keywords": "attitude behaviour behavior influence workplace coercion undue influence"
+      },
+      {
+        "id": "aptitude-ei",
+        "name": "Aptitude & Emotional Intelligence",
+        "keywords": "emotional intelligence eq aptitude resilience stress"
+      },
+      {
+        "id": "integrity-probity",
+        "name": "Integrity & Probity",
+        "keywords": "integrity probity transparency code of conduct code of ethics corruption moral integrity professional efficiency conflict of interest"
+      },
+      {
+        "id": "thinkers-quotes",
+        "name": "Thinkers & Quotations",
+        "keywords": "quotation thinker vivekananda gandhi kant patel guru nanak philosopher peace believe act"
+      },
+      {
+        "id": "public-service-values",
+        "name": "Public Service Values",
+        "keywords": "public service civil servant governance karmayogi gender female officer mission administrative rational bns nyaya sanhita law equality impartiality"
+      },
+      {
+        "id": "corporate-governance",
+        "name": "Corporate & Applied Ethics",
+        "keywords": "corporate governance company ceo shareholder ai greenhouse emission net zero weapon industry developed nation war peace climate greed"
+      },
+      {
+        "id": "case-study",
+        "name": "Case Study",
+        "keywords": "you are district magistrate dm sp ias officer hospital procurement water farmer industry dilemma case landslide vinod sneha rohit raman srinivasan abc incorporated terrorist social media naxal tribal"
+      }
+    ]
+  }
+}

@@ -23,7 +23,7 @@
           <span class="brand-mark" aria-hidden="true">भारत</span>
           <div>
             <h1>UPSC Mains PYQ</h1>
-            <p class="tagline">General Studies · Paper I to IV · Year-wise</p>
+            <p class="tagline">GS Paper I–IV · PYQ 2013–2025 · Theme-wise · Your notes</p>
           </div>
         </div>
         <button
@@ -75,6 +75,12 @@
             </select>
           </div>
           <div class="filter-group">
+            <label for="themeFilter">Theme</label>
+            <select id="themeFilter">
+              <option value="all">All themes</option>
+            </select>
+          </div>
+          <div class="filter-group">
             <label for="marksFilter">Marks</label>
             <select id="marksFilter">
               <option value="all">All marks</option>
@@ -86,6 +92,7 @@
           </div>
           <button type="button" class="btn-ghost" id="clearFilters">Clear filters</button>
         </div>
+        <p class="data-note" id="dataNote"></p>
       </section>
 
       <div class="paper-meta" id="paperMeta"></div>
@@ -101,12 +108,9 @@
 
     <footer class="site-footer">
       <p>
-        Questions are from official UPSC Civil Services (Main) Examination papers.
-        Verify against the
-        <a href="https://upsc.gov.in" target="_blank" rel="noopener noreferrer"
-          >UPSC website</a
-        >
-        for authoritative text.
+        Official PYQ text — verify on
+        <a href="https://upsc.gov.in/examinations/previous-question-papers" target="_blank" rel="noopener noreferrer">upsc.gov.in</a>.
+        Notes you type are saved locally in this browser only.
       </p>
     </footer>
 

@@ -2,104 +2,4707 @@
   "paper": 3,
   "title": "General Studies Paper III",
   "syllabus": "Technology, Economic Development, Biodiversity, Environment, Security and Disaster Management.",
+  "yearRange": [
+    2013,
+    2025
+  ],
+  "themes": [
+    "Economy & Development",
+    "Agriculture & Food Security",
+    "Science & Technology",
+    "Environment & Biodiversity",
+    "Disaster Management",
+    "Internal Security"
+  ],
   "questions": [
     {
+      "id": "gs3-2024-q1",
       "year": 2024,
       "number": 1,
       "marks": 10,
-      "text": "Discuss the role of the MSME sector in employment generation and economic growth in India.",
-      "topics": ["Economy", "MSME"]
+      "text": "Examine the pattern and trend of public expenditure on social services in the post-reforms period in India. To what extent this has been in consonance with achieving the objective of inclusive growth?",
+      "theme": "Economy & Development",
+      "themeId": "economy-development",
+      "subthemes": [],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
     },
     {
+      "id": "gs3-2024-q10",
+      "year": 2024,
+      "number": 10,
+      "marks": 10,
+      "text": "Describe the context and salient features of the Digital Personal Data Protection Act, 2023.",
+      "theme": "Science & Technology",
+      "themeId": "science-technology",
+      "subthemes": [],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2024-q11",
+      "year": 2024,
+      "number": 11,
+      "marks": 15,
+      "text": "Discuss the merits and demerits of the four 'Labour Codes' in the context of labour market reforms in India. What has been the progress so far in this regard?",
+      "theme": "Economy & Development",
+      "themeId": "economy-development",
+      "subthemes": [],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2024-q12",
+      "year": 2024,
+      "number": 12,
+      "marks": 15,
+      "text": "What is the need for expanding the regional air connectivity in India? In this context, discuss the government's UDAN Scheme and its achievements.",
+      "theme": "Economy & Development",
+      "themeId": "misc",
+      "subthemes": [],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2024-q13",
+      "year": 2024,
+      "number": 13,
+      "marks": 15,
+      "text": "What are the major challenges faced by the Indian irrigation system in recent times? State the measures taken by the government for efficient irrigation management.",
+      "theme": "Agriculture & Food Security",
+      "themeId": "agriculture-food",
+      "subthemes": [],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2024-q14",
+      "year": 2024,
+      "number": 14,
+      "marks": 15,
+      "text": "Elucidate the importance of buffer stocks for stabilizing agricultural prices in India. What are the challenges associated with the storage of buffer stock? Discuss.",
+      "theme": "Economy & Development",
+      "themeId": "economy-development",
+      "subthemes": [],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2024-q15",
+      "year": 2024,
+      "number": 15,
+      "marks": 15,
+      "text": "The world is facing an acute shortage of clean and safe freshwater. What are the alternative technologies which can solve this crisis? Briefly discuss any three such technologies citing their key merits and demerits.",
+      "theme": "Environment & Biodiversity",
+      "themeId": "environment-biodiversity",
+      "subthemes": [],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2024-q16",
+      "year": 2024,
+      "number": 16,
+      "marks": 15,
+      "text": "What are asteroids? How real is the threat of them causing extinction of life? What strategies have been developed to prevent such a catastrophe?",
+      "theme": "Economy & Development",
+      "themeId": "misc",
+      "subthemes": [],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2024-q17",
+      "year": 2024,
+      "number": 17,
+      "marks": 15,
+      "text": "What is disaster resilience? How is it determined? Describe various elements of a resilience framework. Also mention the global targets of Sendai Framework for Disaster Risk Reduction (2015-2030).",
+      "theme": "Disaster Management",
+      "themeId": "disaster-management",
+      "subthemes": [],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2024-q18",
+      "year": 2024,
+      "number": 18,
+      "marks": 15,
+      "text": "Flooding in urban areas is an emerging climate-induced disaster. Discuss the causes of this disaster. Mention the features of two such major floods in the last two decades in India. Describe the policies and frameworks in India that aim at tackling such floods.",
+      "theme": "Disaster Management",
+      "themeId": "disaster-management",
+      "subthemes": [],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2024-q19",
+      "year": 2024,
+      "number": 19,
+      "marks": 15,
+      "text": "India has a long and troubled border with China and Pakistan fraught with contentious issues. Examine the conflicting issues and security challenges along the border. Also give out the development being undertaken in these areas under the Border Area Development Programme (BADP) and Border Infrastructure and Management (BIM) Scheme.",
+      "theme": "Internal Security",
+      "themeId": "internal-security",
+      "subthemes": [],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2024-q2",
+      "year": 2024,
+      "number": 2,
+      "marks": 10,
+      "text": "What are the causes of persistent high food inflation in India? Comment on the effectiveness of the monetary policy of the RBI to control this type of inflation.",
+      "theme": "Economy & Development",
+      "themeId": "economy-development",
+      "subthemes": [],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2024-q20",
+      "year": 2024,
+      "number": 20,
+      "marks": 15,
+      "text": "Social media and encrypting messaging services pose a serious security challenge. What measures have been adopted at various levels to address the security implications of social media? Also suggest any other remedies to address the problem.",
+      "theme": "Internal Security",
+      "themeId": "internal-security",
+      "subthemes": [
+        "Agriculture & Food Security"
+      ],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2024-q3",
+      "year": 2024,
+      "number": 3,
+      "marks": 10,
+      "text": "What were the factors responsible for the successful implementation of land reforms in some parts of the country? Elaborate.",
+      "theme": "Economy & Development",
+      "themeId": "economy-development",
+      "subthemes": [
+        "Agriculture & Food Security"
+      ],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2024-q4",
       "year": 2024,
       "number": 4,
       "marks": 10,
-      "text": "What are the applications of biotechnology in agriculture? Discuss with examples.",
-      "topics": ["Science & Technology", "Biotechnology"]
+      "text": "Explain the role of millets for ensuring health and nutritional security in India.",
+      "theme": "Agriculture & Food Security",
+      "themeId": "agriculture-food",
+      "subthemes": [
+        "Internal Security"
+      ],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
     },
     {
+      "id": "gs3-2024-q5",
+      "year": 2024,
+      "number": 5,
+      "marks": 10,
+      "text": "What is the present world scenario of intellectual property rights with respect to life materials? Although India is second in the world to file patents, still only a few have been commercialized. Explain the reasons behind this less commercialization.",
+      "theme": "Science & Technology",
+      "themeId": "science-technology",
+      "subthemes": [],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2024-q6",
+      "year": 2024,
+      "number": 6,
+      "marks": 10,
+      "text": "What is the technology being employed for electronic toll collection on highways? What are its advantages and limitations? What are the proposed changes that will make this process seamless? Would this transition carry any potential hazards?",
+      "theme": "Science & Technology",
+      "themeId": "science-technology",
+      "subthemes": [],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2024-q7",
       "year": 2024,
       "number": 7,
-      "marks": 15,
-      "text": "Examine the challenges of water management in India and suggest measures for sustainable use.",
-      "topics": ["Environment", "Water Resources"]
+      "marks": 10,
+      "text": "Industrial pollution of river water is a significant environmental issue in India. Discuss the various mitigation measures to deal with this problem and also the government's initiatives in this regard.",
+      "theme": "Environment & Biodiversity",
+      "themeId": "environment-biodiversity",
+      "subthemes": [
+        "Economy & Development",
+        "Disaster Management"
+      ],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
     },
     {
+      "id": "gs3-2024-q8",
       "year": 2024,
-      "number": 10,
-      "marks": 15,
-      "text": "Analyze the internal security challenges posed by left-wing extremism in India.",
-      "topics": ["Security", "LWE"]
+      "number": 8,
+      "marks": 10,
+      "text": "What role do Environmental NGOs and activists play in influencing Environmental Impact Assessment (EIA) outcomes for major projects in India? Cite four examples with all important details.",
+      "theme": "Environment & Biodiversity",
+      "themeId": "environment-biodiversity",
+      "subthemes": [],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
     },
     {
+      "id": "gs3-2024-q9",
+      "year": 2024,
+      "number": 9,
+      "marks": 10,
+      "text": "Explain how narco-terrorism has emerged as a serious threat across the country. Suggest suitable measures to counter narco-terrorism.",
+      "theme": "Internal Security",
+      "themeId": "internal-security",
+      "subthemes": [],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2023-q1",
+      "year": 2023,
+      "number": 1,
+      "marks": 10,
+      "text": "Faster economic growth requires increased share of the manufacturing sector in GDP, particularly of MSMEs. Comment on the present policies of the government in this regard.",
+      "theme": "Economy & Development",
+      "themeId": "economy-development",
+      "subthemes": [],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2023-q10",
+      "year": 2023,
+      "number": 10,
+      "marks": 10,
+      "text": "The use of unmanned aerial vehicles (UAVs) by our adversaries across the borders to ferry arms/ammunitions, drugs, etc, is a serious threat to the internal security. Comment on the measures being taken to tackle this threat.",
+      "theme": "Internal Security",
+      "themeId": "internal-security",
+      "subthemes": [
+        "Agriculture & Food Security"
+      ],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2023-q11",
+      "year": 2023,
+      "number": 11,
+      "marks": 10,
+      "text": "Most of the unemployment in India is structural in nature. Examine the methodology adopted to compute unemployment in the country and suggest improvements.",
+      "theme": "Economy & Development",
+      "themeId": "misc",
+      "subthemes": [],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2023-q12",
+      "year": 2023,
+      "number": 12,
+      "marks": 10,
+      "text": "Distinguish between care economy and monetised economy . How can care economy be brought into monetised economy through women empowerment?",
+      "theme": "Environment & Biodiversity",
+      "themeId": "environment-biodiversity",
+      "subthemes": [],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2023-q13",
+      "year": 2023,
+      "number": 13,
+      "marks": 10,
+      "text": "Explain the changes in cropping patterns in India in the context of changes in consumption patterns and marketing conditions.",
+      "theme": "Agriculture & Food Security",
+      "themeId": "agriculture-food",
+      "subthemes": [
+        "Environment & Biodiversity"
+      ],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2023-q14",
+      "year": 2023,
+      "number": 14,
+      "marks": 10,
+      "text": "What are the direct and indirect subsidies provided to farm sector in India. Discuss the issues raised by the World Trade Organization (WTO) in relation to agricultural subsidies.",
+      "theme": "Economy & Development",
+      "themeId": "misc",
+      "subthemes": [],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2023-q15",
+      "year": 2023,
+      "number": 15,
+      "marks": 10,
+      "text": "The adoption of electric vehicles is rapidly growing worldwide. How do electric vehicles contribute to reducing carbon emissions and what are the key benefits they offer compared to traditional combustion engine vehicles?",
+      "theme": "Environment & Biodiversity",
+      "themeId": "environment-biodiversity",
+      "subthemes": [
+        "Internal Security"
+      ],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2023-q16",
+      "year": 2023,
+      "number": 16,
+      "marks": 10,
+      "text": "What is the main task of India s third moon mission which could not be achieved in its earlier mission? List the countries that have achieved this task. Introduce the system in the spacecraft launched and explain the role of the Virtual Launch Control Centre at the Vikram Sarabhai Space Centre which contributed to the successful launch from Sriharikota.",
+      "theme": "Science & Technology",
+      "themeId": "science-technology",
+      "subthemes": [],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2023-q17",
+      "year": 2023,
+      "number": 17,
+      "marks": 10,
+      "text": "Comment on the National Wetland Conservation Programme initiated by the Government of India and name a few India s wetlands of international importance included in the Ramsar Sites.",
+      "theme": "Environment & Biodiversity",
+      "themeId": "environment-biodiversity",
+      "subthemes": [],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2023-q18",
+      "year": 2023,
+      "number": 18,
+      "marks": 10,
+      "text": "The Intergovernmental Panel on Climate Change (IPCC) has predicted a global sea level rise of about one metre by AD 2100. What would be its impact in India and the other countries in the Indian Ocean region?",
+      "theme": "Environment & Biodiversity",
+      "themeId": "environment-biodiversity",
+      "subthemes": [
+        "Science & Technology"
+      ],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2023-q19",
+      "year": 2023,
+      "number": 19,
+      "marks": 10,
+      "text": "What are the internal security challenges being faced by India? Give out the role of Central Intelligence and Investigative Agencies tasked to counter such threats.",
+      "theme": "Internal Security",
+      "themeId": "internal-security",
+      "subthemes": [
+        "Agriculture & Food Security",
+        "Science & Technology"
+      ],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2023-q2",
       "year": 2023,
       "number": 2,
       "marks": 10,
-      "text": "Discuss the significance of the Production Linked Incentive (PLI) scheme for manufacturing in India.",
-      "topics": ["Economy", "Industry Policy"]
+      "text": "What is the status of digitalization in the Indian economy? Examine the problems faced in this regard and suggest improvements.",
+      "theme": "Science & Technology",
+      "themeId": "science-technology",
+      "subthemes": [],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
     },
     {
+      "id": "gs3-2023-q2023",
+      "year": 2023,
+      "number": 2023,
+      "marks": "case",
+      "text": "There were a total of 20 questions in this paper. Out of these, 10 questions were of 10 makes and the rest of the 10 questions were of 20 marks. Get a detailed analysis of UPSC CSE mains 2023 GS paper 3 below along with the UPSC mains GS 3 question paper. Table of Contents Toggle GS Paper 3 UPSC 2023: Instructions General Studies Paper 3 Question Paper: UPSC Civil Services Main Exam (Written) 2023 UPSC Mains: Question Topics in General Studies Paper 3 GS Paper 3 UPSC 2023 (Mains): Question Paper Analysis",
+      "theme": "Economy & Development",
+      "themeId": "misc",
+      "subthemes": [],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2023-q2100",
+      "year": 2023,
+      "number": 2100,
+      "marks": 10,
+      "text": "What would be its impact in India and the other countries in the Indian Ocean region? Q 19: What are the internal security challenges being faced by India? Give out the role of Central Intelligence and Investigative Agencies tasked to counter such threats. Q 20: Give out the major sources of terror funding in India and the efforts being made to curtail these sources. In the light of this, also discuss the aim and objective of the No Money for Terror (NMFT) Conference recently held at New Delhi in November",
+      "theme": "Internal Security",
+      "themeId": "internal-security",
+      "subthemes": [
+        "Agriculture & Food Security",
+        "Science & Technology"
+      ],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2023-q3",
+      "year": 2023,
+      "number": 3,
+      "marks": 10,
+      "text": "How does e-Technology help farmers in production and marketing of agricultural produce? Explain it.",
+      "theme": "Science & Technology",
+      "themeId": "science-technology",
+      "subthemes": [
+        "Agriculture & Food Security"
+      ],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2023-q4",
+      "year": 2023,
+      "number": 4,
+      "marks": 10,
+      "text": "State the objectives and measures of land reforms in India. Discuss how land ceiling policy on landholding can be considered as an effective reform under economic criteria.",
+      "theme": "Economy & Development",
+      "themeId": "economy-development",
+      "subthemes": [
+        "Agriculture & Food Security"
+      ],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2023-q5",
       "year": 2023,
       "number": 5,
-      "marks": 15,
-      "text": "Examine the impact of climate change on Indian agriculture and adaptation strategies.",
-      "topics": ["Environment", "Climate Change", "Agriculture"]
+      "marks": 10,
+      "text": "Introduce the concept of Artificial Intelligence (AI). How does Al help clinical diagnosis? Do you perceive any threat to privacy of the individual in the use of Al in healthcare?",
+      "theme": "Science & Technology",
+      "themeId": "science-technology",
+      "subthemes": [
+        "Internal Security"
+      ],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
     },
     {
+      "id": "gs3-2023-q6",
+      "year": 2023,
+      "number": 6,
+      "marks": 10,
+      "text": "Discuss several ways in which microorganisms can help in meeting the current fuel shortage.",
+      "theme": "Economy & Development",
+      "themeId": "misc",
+      "subthemes": [],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2023-q7",
+      "year": 2023,
+      "number": 7,
+      "marks": 10,
+      "text": "Dam failures are always catastrophic, especially on the downstream side, resulting in a colossal loss of life and property. Analyse the various causes of dam failures. Give two examples of large dam failures.",
+      "theme": "Economy & Development",
+      "themeId": "misc",
+      "subthemes": [],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2023-q8",
       "year": 2023,
       "number": 8,
-      "marks": 15,
-      "text": "Discuss the role of space technology in disaster management in India.",
-      "topics": ["S&T", "Disaster Management"]
+      "marks": 10,
+      "text": "What is oil pollution? What are its impacts on the marine ecosystem? In what way is pollution particularly harmful for a country like India.",
+      "theme": "Environment & Biodiversity",
+      "themeId": "environment-biodiversity",
+      "subthemes": [],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
     },
     {
+      "id": "gs3-2023-q9",
+      "year": 2023,
+      "number": 9,
+      "marks": 10,
+      "text": "Winning of Hearts and Minds in terrorism affected areas is an essential step in restoring the trust of the population. Discuss the measures adopted by the Government in this respect as part of the conflict resolution in Jammu and Kashmir.",
+      "theme": "Science & Technology",
+      "themeId": "science-technology",
+      "subthemes": [
+        "Internal Security"
+      ],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2022-q1",
       "year": 2022,
       "number": 1,
       "marks": 10,
-      "text": "Discuss the objectives and challenges of the National Monetisation Pipeline.",
-      "topics": ["Economy", "Infrastructure"]
+      "text": "Why is Public Private Partnership (PPP) required in Infrastructural projects? Examine the role of PPP model in the redevelopment of Railway Stations in India.",
+      "theme": "Economy & Development",
+      "themeId": "economy-development",
+      "subthemes": [],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
     },
     {
+      "id": "gs3-2022-q10",
+      "year": 2022,
+      "number": 10,
+      "marks": 10,
+      "text": "What are the maritime security challenges in India? Discuss the organisational, technical and procedural initiatives taken to improve the maritime security.",
+      "theme": "Agriculture & Food Security",
+      "themeId": "agriculture-food",
+      "subthemes": [
+        "Internal Security"
+      ],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2022-q11",
+      "year": 2022,
+      "number": 11,
+      "marks": 10,
+      "text": "Economic growth in the recent past has been led by increase in labour productivity .Explain this statement. Suggest the growth pattern that will lead to creation of more jobs without compromising labour productivity.",
+      "theme": "Economy & Development",
+      "themeId": "economy-development",
+      "subthemes": [],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2022-q12",
+      "year": 2022,
+      "number": 12,
+      "marks": 10,
+      "text": "Do you think India will meet 50 percent of its energy needs from renewable energy by 2030? Justify your answer. How will the shift of subsidies from fossil fuels to renewables help achieve the above objective? Explain.",
+      "theme": "Environment & Biodiversity",
+      "themeId": "environment-biodiversity",
+      "subthemes": [],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2022-q13",
+      "year": 2022,
+      "number": 13,
+      "marks": 10,
+      "text": "What are the main bottlenecks in upstream and downstream process of marketing of agricultural products in India?",
+      "theme": "Economy & Development",
+      "themeId": "misc",
+      "subthemes": [],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2022-q14",
+      "year": 2022,
+      "number": 14,
+      "marks": 10,
+      "text": "What is Integrated Farming System? How is it helpful to small and marginal farmers in India?",
+      "theme": "Agriculture & Food Security",
+      "themeId": "agriculture-food",
+      "subthemes": [],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2022-q15",
+      "year": 2022,
+      "number": 15,
+      "marks": 10,
+      "text": "Launched on 25th December, 2021, James Webb Space Telescope has been much news since then. What are its unique features which make it superior to its predecessor Space Telescopes? What are the key goals of this mission? What potential benefits does it hold for the human race?",
+      "theme": "Science & Technology",
+      "themeId": "science-technology",
+      "subthemes": [],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2022-q16",
+      "year": 2022,
+      "number": 16,
+      "marks": 10,
+      "text": "What is the basic principle behind vaccine development? How do vaccines work? What approaches were adopted by the Indian vaccine manufacturers to produce COVID-19 vaccines?",
+      "theme": "Economy & Development",
+      "themeId": "misc",
+      "subthemes": [],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2022-q17",
+      "year": 2022,
+      "number": 17,
+      "marks": 10,
+      "text": "Discuss global warming and mention its effects on global climate. Explain the control measures to bring down the level of greenhouse gases which cause global warming, in the light of Kyoto Protocol, 1997.",
+      "theme": "Environment & Biodiversity",
+      "themeId": "environment-biodiversity",
+      "subthemes": [
+        "Agriculture & Food Security"
+      ],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2022-q18",
+      "year": 2022,
+      "number": 18,
+      "marks": 10,
+      "text": "Explain the causes and effects of coastal erosion in India. What are the available coastal management techniques for combating the hazard?",
+      "theme": "Economy & Development",
+      "themeId": "misc",
+      "subthemes": [],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2022-q19",
+      "year": 2022,
+      "number": 19,
+      "marks": 10,
+      "text": "What are the different elements of cyber security? Keeping in view the challenges in cyber security examine the extent to which India has successfully developed a comprehensive National Cyber Security Strategy.",
+      "theme": "Internal Security",
+      "themeId": "internal-security",
+      "subthemes": [
+        "Agriculture & Food Security",
+        "Science & Technology"
+      ],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2022-q2",
+      "year": 2022,
+      "number": 2,
+      "marks": 10,
+      "text": "Is inclusive growth possible under market economy? State the significance of financial inclusion in achieving economic growth in India.",
+      "theme": "Economy & Development",
+      "themeId": "economy-development",
+      "subthemes": [],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2022-q3",
+      "year": 2022,
+      "number": 3,
+      "marks": 10,
+      "text": "of UPSC 2022 Civil Services Mains Examination (written). UPSC conducted the General Studies Paper 3, as part of the Civil Services Mains exam 2022 on 18-09-2022 There were 20 questions. 10 questions were 10 marks each, while the remaining 10 questions were 15 marks each. Table of Contents Toggle GS Paper 3 UPSC 2022: Instructions General Studies Paper 3 Question Paper – UPSC Civil Services Main Exam (Written) 2022 Question Topics in General Studies Paper 3 (2022 Mains) GS Paper 3 UPSC 2022 (Mains): Question Paper",
+      "theme": "Economy & Development",
+      "themeId": "misc",
+      "subthemes": [],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2022-q4",
+      "year": 2022,
+      "number": 4,
+      "marks": 10,
+      "text": "Elaborate the scope and significance of the food processing industry in India. 10 mark Qn",
+      "theme": "Economy & Development",
+      "themeId": "economy-development",
+      "subthemes": [
+        "Agriculture & Food Security"
+      ],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2022-q5",
+      "year": 2022,
+      "number": 5,
+      "marks": 10,
+      "text": "The increase in life expectancy in the country has led to newer health challenges in the community. What are those challenges and what steps need to be taken to meet them?",
+      "theme": "Economy & Development",
+      "themeId": "misc",
+      "subthemes": [],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2022-q6",
       "year": 2022,
       "number": 6,
-      "marks": 15,
-      "text": "Analyze the threats to cybersecurity in India and the institutional framework to address them.",
-      "topics": ["Security", "Cybersecurity"]
+      "marks": 10,
+      "text": "Each year a large amount of plant material, cellulose is deposited on the surface of Planet Earth. What are the natural process this cellulose undergoes before yielding carbon dioxide, water and other end products?",
+      "theme": "Environment & Biodiversity",
+      "themeId": "environment-biodiversity",
+      "subthemes": [],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
     },
     {
+      "id": "gs3-2022-q7",
+      "year": 2022,
+      "number": 7,
+      "marks": 10,
+      "text": "Discuss in detail the photochemical smog emphasising its formation, effects and mitigation. Explain the 1999 Gothenburg Protocol.",
+      "theme": "Disaster Management",
+      "themeId": "disaster-management",
+      "subthemes": [],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2022-q8",
+      "year": 2022,
+      "number": 8,
+      "marks": 10,
+      "text": "Explain the mechanism and occurrence of cloudburst in the context of Indian subcontinent. Discuss two recent examples.",
+      "theme": "Economy & Development",
+      "themeId": "misc",
+      "subthemes": [],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2022-q9",
       "year": 2022,
       "number": 9,
-      "marks": 15,
-      "text": "Discuss the conservation strategies for biodiversity hotspots in India.",
-      "topics": ["Environment", "Biodiversity"]
+      "marks": 10,
+      "text": "Discuss the types of organised crime. Describe the linkages between terrorists and organised crime that exist at the national and transnational levels.",
+      "theme": "Internal Security",
+      "themeId": "internal-security",
+      "subthemes": [],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
     },
     {
+      "id": "gs3-2021-q1",
+      "year": 2021,
+      "number": 1,
+      "marks": 10,
+      "text": "Explain the difference between the computing methodology of India’s Gross Domestic Product (GDP) before the year 2015 and after the year 2015.",
+      "theme": "Economy & Development",
+      "themeId": "economy-development",
+      "subthemes": [],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2021-q10",
+      "year": 2021,
+      "number": 10,
+      "marks": 10,
+      "text": "Keeping in view India’s internal security, analyse the impact of cross-border cyber attacks . Also, discuss defensive measures against these sophisticated attacks.",
+      "theme": "Internal Security",
+      "themeId": "internal-security",
+      "subthemes": [
+        "Agriculture & Food Security"
+      ],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2021-q11",
+      "year": 2021,
+      "number": 11,
+      "marks": 15,
+      "text": "What are the research and developmental, achievements in applied biotechnology? How will these achievements help to uplift the poorer sections Of the society?",
+      "theme": "Science & Technology",
+      "themeId": "science-technology",
+      "subthemes": [],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2021-q12",
+      "year": 2021,
+      "number": 12,
+      "marks": 10,
+      "text": "“ Investment in infrastructure is essential for more rapid and inclusive economic growth.” Discuss in the light of India’s experience .",
+      "theme": "Economy & Development",
+      "themeId": "economy-development",
+      "subthemes": [],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2021-q13",
+      "year": 2021,
+      "number": 13,
+      "marks": 15,
+      "text": "The Nobel Prize in Physics of 2014 was jointly awarded to Akasaki, Amano and Nakamura for the invention Of Blue LEDs in 1990s. How has this invention impacted the everyday life of human beings?",
+      "theme": "Economy & Development",
+      "themeId": "misc",
+      "subthemes": [],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2021-q14",
+      "year": 2021,
+      "number": 14,
+      "marks": 10,
+      "text": "Keeping in view India's internal security, analyse the impact of cross-border cyber attacks. Also, discuss defensive measures against these sophisticated attacks.",
+      "theme": "Internal Security",
+      "themeId": "internal-security",
+      "subthemes": [
+        "Agriculture & Food Security"
+      ],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2021-q15",
+      "year": 2021,
+      "number": 15,
+      "marks": 15,
+      "text": "Analyse the multidimensional Challenges posed by external state and non—state actors, to the internal security Of India. Also, discuss measures required to be taken to combat these threats.",
+      "theme": "Agriculture & Food Security",
+      "themeId": "agriculture-food",
+      "subthemes": [
+        "Internal Security"
+      ],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2021-q16",
+      "year": 2021,
+      "number": 16,
+      "marks": 10,
+      "text": "The Nobel Prize in Physics of 2014 was jointly awarded to Akasaki, Amano and Nakamura for the invention of Blue LEDs in the 1990s. How has this invention impacted the everyday life of human beings?",
+      "theme": "Economy & Development",
+      "themeId": "misc",
+      "subthemes": [],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2021-q17",
+      "year": 2021,
+      "number": 17,
+      "marks": 10,
+      "text": "Describe the major outcomes of the 26 th session of the Conference of the Parties (COP) to the United Nations Framework Convention on Climate Change ( UNFCC C). What are the commitments made by India at this conference?",
+      "theme": "Environment & Biodiversity",
+      "themeId": "environment-biodiversity",
+      "subthemes": [
+        "Disaster Management"
+      ],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2021-q18",
+      "year": 2021,
+      "number": 18,
+      "marks": 10,
+      "text": "Describe the various causes and effects of landslides. Mention the important components of the National Landslide Risk Management Strategy.",
+      "theme": "Disaster Management",
+      "themeId": "disaster-management",
+      "subthemes": [
+        "Economy & Development",
+        "Agriculture & Food Security"
+      ],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2021-q19",
+      "year": 2021,
+      "number": 19,
+      "marks": 10,
+      "text": "Analyse the multidimensıonal challenges posed by external state and non-state actors, to the internal security of India . Also, discuss measures required to be taken to combat these threats.",
+      "theme": "Agriculture & Food Security",
+      "themeId": "agriculture-food",
+      "subthemes": [
+        "Internal Security"
+      ],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2021-q2",
+      "year": 2021,
+      "number": 2,
+      "marks": 10,
+      "text": "Distinguish between Capital Budget and Revenue Budget . Explain the components of both these Budgets.",
+      "theme": "Economy & Development",
+      "themeId": "economy-development",
+      "subthemes": [],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2021-q2021",
+      "year": 2021,
+      "number": 2021,
+      "marks": 10,
+      "text": "When was this idea first floated in the International Solar Alliance (ISA)? Qn",
+      "theme": "Economy & Development",
+      "themeId": "misc",
+      "subthemes": [],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2021-q3",
       "year": 2021,
       "number": 3,
       "marks": 10,
-      "text": "Explain the concept of inflation and its impact on the Indian economy.",
-      "topics": ["Economy", "Inflation"]
+      "text": "of UPSC 2021 Civil Services Mains Examination (written). UPSC conducted the General Studies Paper 3 , as part of the Civil Services Main Exam 2021 on 09-01-20221. There were 20 questions. 10 questions were of 10 marks each, while the remaining 10 questions were of 15 marks each. Table of Contents Toggle GS Paper 3 UPSC 2021: Instructions General Studies Paper 3 Question Paper – UPSC Civil Services Main Exam (Written) 2021 GS3 Question Paper",
+      "theme": "Economy & Development",
+      "themeId": "misc",
+      "subthemes": [],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
     },
     {
+      "id": "gs3-2021-q4",
       "year": 2021,
-      "number": 7,
-      "marks": 15,
-      "text": "Discuss the role of renewable energy in achieving India's climate commitments.",
-      "topics": ["Environment", "Renewable Energy"]
-    },
-    {
-      "year": 2020,
       "number": 4,
       "marks": 10,
-      "text": "What is the significance of the National Education Policy for skill development and innovation?",
-      "topics": ["Economy", "Education", "Innovation"]
+      "text": "How and to what extent would micro-irrigation help in solving India’s water crisis?",
+      "theme": "Agriculture & Food Security",
+      "themeId": "agriculture-food",
+      "subthemes": [
+        "Environment & Biodiversity"
+      ],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
     },
     {
+      "id": "gs3-2021-q5",
+      "year": 2021,
+      "number": 5,
+      "marks": 15,
+      "text": "“Investment in infrastructure is essential for more rapid and inclusive economic growth.” Discuss in the light of India’s experience.",
+      "theme": "Economy & Development",
+      "themeId": "economy-development",
+      "subthemes": [],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2021-q6",
+      "year": 2021,
+      "number": 6,
+      "marks": 10,
+      "text": "Describe the key points Of the revised Global Air Quality Guidelines (AQGs) recently released by the World Health Organisation (WHO). How are these different from its last update in 2005? What changes in India's National Clean Air Programme are required to achieve these revised standards?",
+      "theme": "Environment & Biodiversity",
+      "themeId": "environment-biodiversity",
+      "subthemes": [],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2021-q7",
+      "year": 2021,
+      "number": 7,
+      "marks": 10,
+      "text": "Describe the key points of the revised Global Air Quality Guidelines (AQGs) recently released by the World Health Organisation (WHO). How are these different from its last update in 2005? What changes in India’s National Clean Air Programme are required to achieve these revised standards?",
+      "theme": "Environment & Biodiversity",
+      "themeId": "environment-biodiversity",
+      "subthemes": [],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2021-q8",
+      "year": 2021,
+      "number": 8,
+      "marks": 15,
+      "text": "Describe the major outcomes of the 26th session of the Conference of the Parties (COP) to the United Nations Framework Convention on Climate Change (UNFCCC). What are the Commitments made by India in this conference?",
+      "theme": "Environment & Biodiversity",
+      "themeId": "environment-biodiversity",
+      "subthemes": [
+        "Disaster Management"
+      ],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2021-q9",
+      "year": 2021,
+      "number": 9,
+      "marks": 10,
+      "text": "Discuss about the vulnerability Of India to earthquake-related hazards. Give examples including the salient features of major disasters caused by earthquakes in different parts of India during the last three decades.",
+      "theme": "Disaster Management",
+      "themeId": "disaster-management",
+      "subthemes": [],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2020-q1",
+      "year": 2020,
+      "number": 1,
+      "marks": 10,
+      "text": "Explain intra-generational and inter-generational issues of equity from the perspective of inclusive growth and sustainable development.",
+      "theme": "Economy & Development",
+      "themeId": "economy-development",
+      "subthemes": [],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2020-q10",
+      "year": 2020,
+      "number": 10,
+      "marks": 15,
+      "text": "COVID-19 pandemic has caused unprecedented devastation worldwide. However, technological advancements are being availed readily to Win over the crisis. Give an account of how technology was sought to aid management of the pandemic.",
+      "theme": "Science & Technology",
+      "themeId": "science-technology",
+      "subthemes": [],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2020-q11",
+      "year": 2020,
+      "number": 11,
+      "marks": 10,
+      "text": "What do you understand by nanotechnology and how is it helping in health sector?",
+      "theme": "Science & Technology",
+      "themeId": "science-technology",
+      "subthemes": [],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2020-q12",
+      "year": 2020,
+      "number": 12,
+      "marks": 10,
+      "text": "Discuss different types of cyber crimes and measures required to be taken to fight the menace.",
+      "theme": "Science & Technology",
+      "themeId": "science-technology",
+      "subthemes": [
+        "Internal Security"
+      ],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2020-q13",
+      "year": 2020,
+      "number": 13,
+      "marks": 10,
+      "text": "For effective border area management, discuss the steps required to be taken to deny local support to militants and also suggest ways to manage favourable perception among locals.",
+      "theme": "Internal Security",
+      "themeId": "internal-security",
+      "subthemes": [],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2020-q14",
+      "year": 2020,
+      "number": 14,
+      "marks": 15,
+      "text": "What are the determinants Of left-wing extremism in the Eastern part Of India? What strategy should Government of India, civil administration and security forces adopt to counter the threat in the affected areas?",
+      "theme": "Internal Security",
+      "themeId": "internal-security",
+      "subthemes": [],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2020-q15",
+      "year": 2020,
+      "number": 15,
+      "marks": 15,
+      "text": "Analyze internal security threats and transborder crimes along Myanmar, Bangladesh and Pakistan borders including the Line of Control (LoC). Also, discuss the role played by various security forces in this regard.",
+      "theme": "Internal Security",
+      "themeId": "internal-security",
+      "subthemes": [
+        "Agriculture & Food Security"
+      ],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2020-q16",
+      "year": 2020,
+      "number": 16,
+      "marks": 10,
+      "text": "What are the main constraints in transport and marketing of agricultural produce in India?",
+      "theme": "Economy & Development",
+      "themeId": "misc",
+      "subthemes": [],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2020-q17",
+      "year": 2020,
+      "number": 17,
+      "marks": 10,
+      "text": "What are the challenges and opportunities of food processing sector in the country? How can income of the farmers be substantially increased by encouraging food processing?",
+      "theme": "Agriculture & Food Security",
+      "themeId": "agriculture-food",
+      "subthemes": [
+        "Economy & Development"
+      ],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2020-q18",
+      "year": 2020,
+      "number": 18,
+      "marks": 10,
+      "text": "How is science interwoven deeply with our lives? What are the striking changes in agriculture triggered off by the science-based technologies?",
+      "theme": "Agriculture & Food Security",
+      "themeId": "agriculture-food",
+      "subthemes": [
+        "Environment & Biodiversity"
+      ],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2020-q19",
+      "year": 2020,
+      "number": 19,
+      "marks": 15,
+      "text": "What are the major factors responsible for making the rice-wheat system a success? In spite of this success, how has this system become a bane in India?",
+      "theme": "Economy & Development",
+      "themeId": "misc",
+      "subthemes": [],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2020-q2",
+      "year": 2020,
+      "number": 2,
+      "marks": 10,
+      "text": "Define potential. GDP and explain its determinants. What are the factors that have been inhibiting India from realizing its potential GDP?",
+      "theme": "Economy & Development",
+      "themeId": "economy-development",
+      "subthemes": [],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2020-q20",
+      "year": 2020,
+      "number": 20,
+      "marks": 15,
+      "text": "Suggest measures to improve water storage and irrigation system to make its judicious use under depleting scenario.",
+      "theme": "Agriculture & Food Security",
+      "themeId": "agriculture-food",
+      "subthemes": [
+        "Environment & Biodiversity"
+      ],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2020-q3",
+      "year": 2020,
+      "number": 3,
+      "marks": 15,
+      "text": "Explain the meaning of investment in an economy in terms of capital formation. Discuss the factors to be considered while designing a concession agreement between a public entity and a private entity.",
+      "theme": "Economy & Development",
+      "themeId": "misc",
+      "subthemes": [],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2020-q4",
+      "year": 2020,
+      "number": 4,
+      "marks": 15,
+      "text": "Explain the rationale behind the Goods and Services Tax (Compensation to States) Act of 2017. How has COVID-19 impacted the GST compensation fund and created new federal tensions?",
+      "theme": "Economy & Development",
+      "themeId": "economy-development",
+      "subthemes": [],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2020-q5",
+      "year": 2020,
+      "number": 5,
+      "marks": 15,
+      "text": "What are the key features of the National Clean Air Programme (NCAP) initiated by the Government Of India?",
+      "theme": "Economy & Development",
+      "themeId": "misc",
+      "subthemes": [],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2020-q6",
+      "year": 2020,
+      "number": 6,
+      "marks": 15,
+      "text": "Discuss the recent measures initiated in disaster management by the Government of India departing from the earlier reactive approach.",
+      "theme": "Disaster Management",
+      "themeId": "disaster-management",
+      "subthemes": [],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2020-q7",
+      "year": 2020,
+      "number": 7,
+      "marks": 10,
+      "text": "How does the draft Environment Impact Assessment (EIA) Notification, 2020 differ from the existing EIA Notification, 2006?",
+      "theme": "Environment & Biodiversity",
+      "themeId": "environment-biodiversity",
+      "subthemes": [],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2020-q8",
       "year": 2020,
       "number": 8,
       "marks": 15,
-      "text": "Examine the border management challenges of India and measures to strengthen border security.",
-      "topics": ["Security", "Border Management"]
+      "text": "Describe the benefits of deriving electric energy from sunlight in contrast to conventional energy generation. What are the initiatives offered by our Government for this purpose?",
+      "theme": "Environment & Biodiversity",
+      "themeId": "environment-biodiversity",
+      "subthemes": [],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2020-q9",
+      "year": 2020,
+      "number": 9,
+      "marks": 10,
+      "text": "What are the salient features of the Jal Shakti Abhiyan launched by the Government Of India for water conservation and water security?",
+      "theme": "Environment & Biodiversity",
+      "themeId": "environment-biodiversity",
+      "subthemes": [
+        "Agriculture & Food Security",
+        "Internal Security"
+      ],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2019-q1",
+      "year": 2019,
+      "number": 1,
+      "marks": 10,
+      "text": "Enumerate the indirect taxes which have been subsumed in the Goods and Services Tax (GST) in India. Also, comment on the revenue implications of the GST introduced in India in July 2017.",
+      "theme": "Economy & Development",
+      "themeId": "economy-development",
+      "subthemes": [],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2019-q10",
+      "year": 2019,
+      "number": 10,
+      "marks": 10,
+      "text": "What is the CyberDome Project? Explain how it can be useful in controlling internet crimes in India.",
+      "theme": "Science & Technology",
+      "themeId": "science-technology",
+      "subthemes": [
+        "Environment & Biodiversity",
+        "Internal Security"
+      ],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2019-q11",
+      "year": 2019,
+      "number": 11,
+      "marks": 10,
+      "text": "HOW was India benefitted from the contributions Of Sir M. Visvesvaaraya and Dr. M. S. Swaminathan in the fields of water engineering and agricultural science respectively?",
+      "theme": "Environment & Biodiversity",
+      "themeId": "environment-biodiversity",
+      "subthemes": [],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2019-q12",
+      "year": 2019,
+      "number": 12,
+      "marks": 10,
+      "text": "Public expenditure management is a challenge to the government of India in the context of budget-making during the post-liberalization period. Clarify it.",
+      "theme": "Economy & Development",
+      "themeId": "economy-development",
+      "subthemes": [],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2019-q13",
+      "year": 2019,
+      "number": 13,
+      "marks": 10,
+      "text": "The banning of 'Jamaat-e-lslami' in Jammu and Kashmir brought into focus the role of over-ground workers (OGWs) in assisting terrorist organizations. Examine the role played by OGWs in assisting terrorist organizations in insurgency affected areas. Discuss measures to neutralize influence of OGWs.",
+      "theme": "Internal Security",
+      "themeId": "internal-security",
+      "subthemes": [],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2019-q14",
+      "year": 2019,
+      "number": 14,
+      "marks": 10,
+      "text": "Elaborate on the policy taken by the government of India to meet the challenges of the food processing sector .",
+      "theme": "Economy & Development",
+      "themeId": "economy-development",
+      "subthemes": [
+        "Agriculture & Food Security"
+      ],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2019-q15",
+      "year": 2019,
+      "number": 15,
+      "marks": 15,
+      "text": "Indian Government has recently strengthened the anti-terrorism laws by amending the Unlawful Activities (Prevention) Act (UAPA), 1967 and the NIA Act. Analyze the changes in the context of the prevailing security environment while discussing the scope and reasons for opposing the UAPA by human rights organizations,",
+      "theme": "Environment & Biodiversity",
+      "themeId": "environment-biodiversity",
+      "subthemes": [
+        "Internal Security",
+        "Agriculture & Food Security"
+      ],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2019-q16",
+      "year": 2019,
+      "number": 16,
+      "marks": 15,
+      "text": "Cross-border movement of insurgents is only one of the several security challenges facing the policing of the border in North-East India. Examine the various challenges currently emanating across the India-Myanmar border. Also, discuss the Steps to counter the challenges.",
+      "theme": "Internal Security",
+      "themeId": "internal-security",
+      "subthemes": [
+        "Agriculture & Food Security"
+      ],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2019-q17",
+      "year": 2019,
+      "number": 17,
+      "marks": 10,
+      "text": "Define the concept of the carrying capacity of an ecosystem as relevant to an environment. Explain how understanding this concept is vital while planning for the sustainable development of a region.",
+      "theme": "Environment & Biodiversity",
+      "themeId": "environment-biodiversity",
+      "subthemes": [],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2019-q18",
+      "year": 2019,
+      "number": 18,
+      "marks": 10,
+      "text": "Disaster preparedness is the first step in any disaster management process . Explain how hazard zonation mapping will help in disaster mitigation in the case of landslides.",
+      "theme": "Disaster Management",
+      "themeId": "disaster-management",
+      "subthemes": [],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2019-q19",
+      "year": 2019,
+      "number": 19,
+      "marks": 10,
+      "text": "The Indian government has recently strengthened the anti-terrorism laws by amending the Unlawful Activities (Prevention) Act (UAPA), 1967, and the NIA Act. Analyze the changes in the context of the prevailing security environment while discussing the scope and reasons for opposing the UAPA by human rights organizations.",
+      "theme": "Environment & Biodiversity",
+      "themeId": "environment-biodiversity",
+      "subthemes": [
+        "Internal Security",
+        "Agriculture & Food Security"
+      ],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2019-q2",
+      "year": 2019,
+      "number": 2,
+      "marks": 15,
+      "text": "It is argued that the strategy of inclusive growth is intended to meet the objectives of inclusiveness and sustainability together. Comment on this statement.",
+      "theme": "Economy & Development",
+      "themeId": "economy-development",
+      "subthemes": [],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2019-q20",
+      "year": 2019,
+      "number": 20,
+      "marks": 10,
+      "text": "Elaborate on the policy taken by the Government Of India to meet the challenges of the food processing sector.",
+      "theme": "Economy & Development",
+      "themeId": "economy-development",
+      "subthemes": [
+        "Agriculture & Food Security"
+      ],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2019-q3",
+      "year": 2019,
+      "number": 3,
+      "marks": 10,
+      "text": "Enumerate the indirect taxes which have been subsumed in the Goods and Services Tax (GST) in India. Also, comment on the revenue implications of the GST introduced in India since July 2017.",
+      "theme": "Economy & Development",
+      "themeId": "economy-development",
+      "subthemes": [],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2019-q4",
+      "year": 2019,
+      "number": 4,
+      "marks": 15,
+      "text": "The public expenditure management is a challenge to the government of India in the context of budget-making during the post-liberalization period. Clarify it.",
+      "theme": "Economy & Development",
+      "themeId": "economy-development",
+      "subthemes": [],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2019-q5",
+      "year": 2019,
+      "number": 5,
+      "marks": 10,
+      "text": "How did India benefit from the contributions of Sir M. Visvesvaraya and Dr. M. S. Swaminathan in the fields of water engineering and agricultural science respectively?",
+      "theme": "Environment & Biodiversity",
+      "themeId": "environment-biodiversity",
+      "subthemes": [],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2019-q6",
+      "year": 2019,
+      "number": 6,
+      "marks": 10,
+      "text": "Vulnerability is an essential element for defining disaster impacts and its threat to people. How and in what ways can vulnerability to disasters be characterized? Discuss different types Of vulnerability with reference to disasters.",
+      "theme": "Disaster Management",
+      "themeId": "disaster-management",
+      "subthemes": [],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2019-q7",
+      "year": 2019,
+      "number": 7,
+      "marks": 10,
+      "text": "Coastal sand mining, whether legal or illegal, poses one of the biggest threats to our environment. Analyze the impact of sand mining along the Indian coasts, citing specific examples.",
+      "theme": "Environment & Biodiversity",
+      "themeId": "environment-biodiversity",
+      "subthemes": [],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2019-q8",
+      "year": 2019,
+      "number": 8,
+      "marks": 10,
+      "text": "Vulnerability is an essential element for defining disaster impacts and its threat to people. How and in what ways can vulnerability to disasters be characterized? Discuss different types of vulnerability with reference to disasters.",
+      "theme": "Disaster Management",
+      "themeId": "disaster-management",
+      "subthemes": [],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2019-q9",
+      "year": 2019,
+      "number": 9,
+      "marks": 10,
+      "text": "The banning of ‘Jamaat–e–Islami in Jammu and Kashmir brought into focus the role of over-ground workers (OGWs) in assisting terrorist organizations. Examine the role played by OGWs in assisting terrorist organizations in insurgency-affected areas. Discuss measures to neutralize the influence of OGWs.",
+      "theme": "Internal Security",
+      "themeId": "internal-security",
+      "subthemes": [],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2018-q1",
+      "year": 2018,
+      "number": 1,
+      "marks": 10,
+      "text": "Comment on the important changes introduced in respect of the Long-term Capital Gains Tax (LCGT) and Dividend Distribution Tax (DDT) in the Union Budget for 2018-2019.",
+      "theme": "Economy & Development",
+      "themeId": "economy-development",
+      "subthemes": [
+        "Environment & Biodiversity"
+      ],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2018-q10",
+      "year": 2018,
+      "number": 10,
+      "marks": 10,
+      "text": "\"Access to affordable, reliable, sustainable and modern energy is the sine qua non to achieve Sustainable Development Goals (SDGs).\" Comment on the progress made in India in this regard.",
+      "theme": "Environment & Biodiversity",
+      "themeId": "environment-biodiversity",
+      "subthemes": [],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2018-q11",
+      "year": 2018,
+      "number": 11,
+      "marks": 10,
+      "text": "What are the impediments in disposing of the huge quantities of discarded solid wastes which are continuously being generated? How do we remove safely the toxic wastes that have been accumulating in our habitable environment?",
+      "theme": "Environment & Biodiversity",
+      "themeId": "environment-biodiversity",
+      "subthemes": [],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2018-q12",
+      "year": 2018,
+      "number": 12,
+      "marks": 10,
+      "text": "What is a wetland? Explain the Ramsar concept of •wise use' in the context of wetland conservation. Cite two examples of Ramsar Sites from India.",
+      "theme": "Environment & Biodiversity",
+      "themeId": "environment-biodiversity",
+      "subthemes": [],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2018-q13",
+      "year": 2018,
+      "number": 13,
+      "marks": 15,
+      "text": "Why is there so much activity in the field of biotechnology in our country? How has this activity benefitted the field of biopharma?",
+      "theme": "Science & Technology",
+      "themeId": "science-technology",
+      "subthemes": [],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2018-q14",
+      "year": 2018,
+      "number": 14,
+      "marks": 10,
+      "text": "Discuss the work of Bose-Einstein Statistics done by Prof. Satyendra Nath Bose and show how it revolutionized the field of Physics.",
+      "theme": "Agriculture & Food Security",
+      "themeId": "agriculture-food",
+      "subthemes": [],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2018-q15",
+      "year": 2018,
+      "number": 15,
+      "marks": 10,
+      "text": "Left-Wing Extremism (LWE) is showing a downward trend. but still affects many parts Of the country. Briefly explain the Government Of India's approach to counter the challenges posed by LWE.",
+      "theme": "Internal Security",
+      "themeId": "internal-security",
+      "subthemes": [],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2018-q16",
+      "year": 2018,
+      "number": 16,
+      "marks": 15,
+      "text": "Data security has assumed significant importance in the digitized world due to rising cyber crimes. The Justice B. N, Srikrishna Committee Report addresses issues related to data security. What, in your view, are the strengths and weaknesses of the Report relating to the protection of personal data in cyberspace?",
+      "theme": "Science & Technology",
+      "themeId": "science-technology",
+      "subthemes": [
+        "Internal Security",
+        "Agriculture & Food Security"
+      ],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2018-q17",
+      "year": 2018,
+      "number": 17,
+      "marks": 15,
+      "text": "India's proximity to two of the world's biggest illicit opium-growing states has enhanced her internal security concerns. Explain the linkages between drug trafficking and other illicit activities such as gunrunning, money laundering and human trafficking. What counter-measures should be taken to prevent the same?",
+      "theme": "Internal Security",
+      "themeId": "internal-security",
+      "subthemes": [
+        "Agriculture & Food Security"
+      ],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2018-q18",
+      "year": 2018,
+      "number": 18,
+      "marks": 10,
+      "text": "What do you mean by Minimum Support Price (MSP)? How will MSP rescue the farmers from the low-income trap?",
+      "theme": "Agriculture & Food Security",
+      "themeId": "agriculture-food",
+      "subthemes": [],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2018-q19",
+      "year": 2018,
+      "number": 19,
+      "marks": 15,
+      "text": "Assess the role of National Horticulture Mission (NHM) in boosting the production, productivity and income of horticulture farms, How far has it succeeded in increasing the income of farmers?",
+      "theme": "Agriculture & Food Security",
+      "themeId": "agriculture-food",
+      "subthemes": [],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2018-q2",
+      "year": 2018,
+      "number": 2,
+      "marks": 15,
+      "text": "How are the principles followed by the NITI Aayog different from those followed by the erstwhile Planning Commission in India?",
+      "theme": "Economy & Development",
+      "themeId": "misc",
+      "subthemes": [],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2018-q20",
+      "year": 2018,
+      "number": 20,
+      "marks": 15,
+      "text": "How has the emphasis on certain crops brought about Changes in cropping patterns in the recent past? Elaborate the emphasis on millets production and consumption,",
+      "theme": "Agriculture & Food Security",
+      "themeId": "agriculture-food",
+      "subthemes": [
+        "Environment & Biodiversity"
+      ],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2018-q3",
+      "year": 2018,
+      "number": 3,
+      "marks": 15,
+      "text": "How would the recent phenomena of protectionism and currency manipulations in world trade affect macroeconomic stability of India?",
+      "theme": "Science & Technology",
+      "themeId": "science-technology",
+      "subthemes": [],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2018-q4",
+      "year": 2018,
+      "number": 4,
+      "marks": 10,
+      "text": "Examine the role Of supermarkets in supply chain management of fruits, vegetables and food items. How do they eliminate the number of intermediaries?",
+      "theme": "Economy & Development",
+      "themeId": "economy-development",
+      "subthemes": [
+        "Agriculture & Food Security",
+        "Internal Security"
+      ],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2018-q5",
+      "year": 2018,
+      "number": 5,
+      "marks": 10,
+      "text": "The China-Pakistan Economic Corridor (CPEC) is viewed as a cardinal subset of China's larger 'One Belt One Road' initiative. Give a brief description Of CPEC and enumerate the reasons why India has distanced itself from the same.",
+      "theme": "Internal Security",
+      "themeId": "internal-security",
+      "subthemes": [],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2018-q6",
+      "year": 2018,
+      "number": 6,
+      "marks": 15,
+      "text": "Describe various measures taken in India for Disaster Risk Reduction (DRR) before and after signing Sendai Framework for DRR (2015—2030)'. How is this framework different from 'Hyogo Framework for Action, 2005'?",
+      "theme": "Disaster Management",
+      "themeId": "disaster-management",
+      "subthemes": [],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2018-q7",
+      "year": 2018,
+      "number": 7,
+      "marks": 15,
+      "text": "How does biodiversity vary in India? How is the Biological Diversity Act, 2002 helpful in the conservation Of flora and fauna?",
+      "theme": "Environment & Biodiversity",
+      "themeId": "environment-biodiversity",
+      "subthemes": [],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2018-q8",
+      "year": 2018,
+      "number": 8,
+      "marks": 15,
+      "text": "With growing energy needs should India keep on expanding its nuclear energy programme? Discuss the facts and fears associated with nuclear energy.",
+      "theme": "Science & Technology",
+      "themeId": "science-technology",
+      "subthemes": [
+        "Environment & Biodiversity",
+        "Internal Security"
+      ],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2018-q9",
+      "year": 2018,
+      "number": 9,
+      "marks": 10,
+      "text": "Sikkim is the first Organic State in India. What are the ecological and economical benefits of Organic State?",
+      "theme": "Economy & Development",
+      "themeId": "misc",
+      "subthemes": [],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2017-q1",
+      "year": 2017,
+      "number": 1,
+      "marks": 15,
+      "text": "One of the intended objectives of Union Budget 2017-18 is to 'transform, energize and clean India'. Analyse the measures proposed in the Budget 2017-18 to achieve the objective.",
+      "theme": "Economy & Development",
+      "themeId": "economy-development",
+      "subthemes": [],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2017-q10",
+      "year": 2017,
+      "number": 10,
+      "marks": 15,
+      "text": "Give an account of the growth and development of nuclear science and technology in India. What is the advantage of the fast breeder reactor programme in India?",
+      "theme": "Science & Technology",
+      "themeId": "science-technology",
+      "subthemes": [
+        "Economy & Development"
+      ],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2017-q11",
+      "year": 2017,
+      "number": 11,
+      "marks": 10,
+      "text": "India has achieved remarkable successes in unmanned space missions including the Chandrayaan and Mars Orbiter Mission, but has not ventured into manned space missions. What are the main obstacles to launching a manned space mission, both in terms of technology and logistics? Examine critically.",
+      "theme": "Science & Technology",
+      "themeId": "science-technology",
+      "subthemes": [],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2017-q12",
+      "year": 2017,
+      "number": 12,
+      "marks": 10,
+      "text": "Stem cell therapy is gaining popularity in India to treat a wide variety Of medical conditions including Leukaemia, Thalassemia, damaged cornea and severe burns. Describe briefly what stem cell therapy is and what advantages it has over other treatments?",
+      "theme": "Economy & Development",
+      "themeId": "misc",
+      "subthemes": [],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2017-q13",
+      "year": 2017,
+      "number": 13,
+      "marks": 10,
+      "text": "Discuss the potential threats of Cyber attacks and the security framework to prevent them.",
+      "theme": "Internal Security",
+      "themeId": "internal-security",
+      "subthemes": [
+        "Agriculture & Food Security",
+        "Disaster Management"
+      ],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2017-q14",
+      "year": 2017,
+      "number": 14,
+      "marks": 10,
+      "text": "The North-East region of India has been infested with insurgency for a very long time. Analyze the major reasons for the survival of armed insurgency in this region.",
+      "theme": "Internal Security",
+      "themeId": "internal-security",
+      "subthemes": [],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2017-q15",
+      "year": 2017,
+      "number": 15,
+      "marks": 15,
+      "text": "Mob violence is emerging as a serious law and order problem in India. By giving suitable examples, analyze the causes and consequences of such violence. 15",
+      "theme": "Economy & Development",
+      "themeId": "misc",
+      "subthemes": [],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2017-q16",
+      "year": 2017,
+      "number": 16,
+      "marks": 15,
+      "text": "The scourge Of terrorism is a grave challenge to national security. What solutions do you suggest to curb this growing menace? What are the major sources Of terrorist funding? 15",
+      "theme": "Internal Security",
+      "themeId": "internal-security",
+      "subthemes": [
+        "Agriculture & Food Security"
+      ],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2017-q17",
+      "year": 2017,
+      "number": 17,
+      "marks": 10,
+      "text": "Explain various types of revolutions, that took place in Agriculture after independence in India. How these revolutions have helped in poverty alleviation and food security in India?",
+      "theme": "Agriculture & Food Security",
+      "themeId": "agriculture-food",
+      "subthemes": [],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2017-q18",
+      "year": 2017,
+      "number": 18,
+      "marks": 10,
+      "text": "What are the reasons for poor acceptance of cost-effective small processing unit? How the food processing unit will be helpful to uplift the socio-economic status of poor farmers?",
+      "theme": "Economy & Development",
+      "themeId": "economy-development",
+      "subthemes": [
+        "Agriculture & Food Security"
+      ],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2017-q19",
+      "year": 2017,
+      "number": 19,
+      "marks": 15,
+      "text": "What are the major reasons for declining rice and wheat yield in the cropping system? How crop diversification is helpful to stabilise the yield of the crops in the system?",
+      "theme": "Agriculture & Food Security",
+      "themeId": "agriculture-food",
+      "subthemes": [],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2017-q2",
+      "year": 2017,
+      "number": 2,
+      "marks": 10,
+      "text": "Among several factors for India's potential growth, savings rate is the most effective one. Do you agree? What are the other factors available for growth potential?",
+      "theme": "Economy & Development",
+      "themeId": "economy-development",
+      "subthemes": [],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2017-q20",
+      "year": 2017,
+      "number": 20,
+      "marks": 15,
+      "text": "How do subsidies affect 'the cropping pattern, crop diversity and economy of farmers? What is the significance of crop insurance, minimum support price and food processing for small and marginal fanners?",
+      "theme": "Agriculture & Food Security",
+      "themeId": "agriculture-food",
+      "subthemes": [
+        "Economy & Development"
+      ],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2017-q3",
+      "year": 2017,
+      "number": 3,
+      "marks": 10,
+      "text": "Account for the failure of manufacturing sector in achieving the goal of labour-intensive exports rather than capital intensive exports. Suggest measures for more labour intensive rather than capital-intensive exports.",
+      "theme": "Economy & Development",
+      "themeId": "economy-development",
+      "subthemes": [],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2017-q4",
+      "year": 2017,
+      "number": 4,
+      "marks": 15,
+      "text": "What are the salient features of 'inclusive growth\"? Has India been experiencing such a growth process? Analyze and suggest measures for inclusive growth.",
+      "theme": "Economy & Development",
+      "themeId": "economy-development",
+      "subthemes": [],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2017-q5",
+      "year": 2017,
+      "number": 5,
+      "marks": 10,
+      "text": "Examine the development of Airports in India through joint ventures under Public-Private Partnership (PPP) model. What are the challenges faced by the authorities in this regard?",
+      "theme": "Economy & Development",
+      "themeId": "economy-development",
+      "subthemes": [],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2017-q6",
+      "year": 2017,
+      "number": 6,
+      "marks": 15,
+      "text": "\"Industrial growth rate has lagged behind in the overall growth of Gross-Domestic-Product(GDP) in the post reform period\" Give reasons. How far the recent changes in Industrial Policy are capable of increasing the industrial growth rate?",
+      "theme": "Economy & Development",
+      "themeId": "economy-development",
+      "subthemes": [],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2017-q7",
+      "year": 2017,
+      "number": 7,
+      "marks": 15,
+      "text": "Climate change is a global problem. How India will 'be affected by climate. change? How Himalayan and coastal states of India will be affected by climate change? 15",
+      "theme": "Environment & Biodiversity",
+      "themeId": "environment-biodiversity",
+      "subthemes": [],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2017-q8",
+      "year": 2017,
+      "number": 8,
+      "marks": 15,
+      "text": "On December 2004, the tsunami brought havoc on fourteen countries including India. Discuss the factors responsible for the occurrence of tsunamis and their effects on life and the economy. In the light of guidelines of NDMA (2010) describe the mechanisms for preparedness to reduce the risk during such events. 15",
+      "theme": "Disaster Management",
+      "themeId": "disaster-management",
+      "subthemes": [],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2017-q9",
+      "year": 2017,
+      "number": 9,
+      "marks": 10,
+      "text": "Not many years ago, river linking was a concept but it is becoming a reality in the country. Discuss the advantages of river linking and its possible impact on the environment.",
+      "theme": "Environment & Biodiversity",
+      "themeId": "environment-biodiversity",
+      "subthemes": [],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2016-q1",
+      "year": 2016,
+      "number": 1,
+      "marks": 12,
+      "text": "Women empowerment in India needs gender budgeting. What are the requirements and status of gender budgeting in the Indian context?",
+      "theme": "Economy & Development",
+      "themeId": "economy-development",
+      "subthemes": [],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2016-q10",
+      "year": 2016,
+      "number": 10,
+      "marks": 12,
+      "text": "Why is nanotechnology one of the key technologies of the 21st century? Describe the salient features of Indian Government's Mission on Nanoscience and Technology and the scope of its application in the development process of the country.",
+      "theme": "Science & Technology",
+      "themeId": "science-technology",
+      "subthemes": [
+        "Economy & Development"
+      ],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2016-q11",
+      "year": 2016,
+      "number": 11,
+      "marks": 12,
+      "text": "Discuss India's achievements in the field of Space Science and Technology. How the application of this technology has helped India in its socio-economic development?",
+      "theme": "Science & Technology",
+      "themeId": "science-technology",
+      "subthemes": [
+        "Economy & Development"
+      ],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2016-q12",
+      "year": 2016,
+      "number": 12,
+      "marks": 12,
+      "text": "Give an account of the current status and the targets to be achieved pertaining to renewable energy sources in the country. Discuss in brief the importance of National Programme on Light Emitting Diodes (LEDs).",
+      "theme": "Environment & Biodiversity",
+      "themeId": "environment-biodiversity",
+      "subthemes": [],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2016-q13",
+      "year": 2016,
+      "number": 13,
+      "marks": 12,
+      "text": "The terms 'Hot Pursuit' and Surgical Strikes' are often used in connection with armed action against terrorist attacks. Discuss the strategic impact of such actions.",
+      "theme": "Internal Security",
+      "themeId": "internal-security",
+      "subthemes": [],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2016-q14",
+      "year": 2016,
+      "number": 14,
+      "marks": 12,
+      "text": "\"Terrorism is emerging as a competitive indusüy over the last few decades.\" Analyze the above statement.",
+      "theme": "Internal Security",
+      "themeId": "internal-security",
+      "subthemes": [],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2016-q15",
+      "year": 2016,
+      "number": 15,
+      "marks": 12,
+      "text": "Border management is a complex task due to difficult terrain and hostile relations with some countries. Elucidate the challenges and strategies for effective border management.",
+      "theme": "Internal Security",
+      "themeId": "internal-security",
+      "subthemes": [],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2016-q16",
+      "year": 2016,
+      "number": 16,
+      "marks": 12,
+      "text": "Use of Internet and social media by non-state actors for subversive activities is a major security concern. How have these been misused in the recent past? Suggest effective guidelines to curb the above threat.",
+      "theme": "Internal Security",
+      "themeId": "internal-security",
+      "subthemes": [
+        "Agriculture & Food Security"
+      ],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2016-q17",
+      "year": 2016,
+      "number": 17,
+      "marks": 12,
+      "text": "What is Water-use efficiency? Describe the role of micro-irrigation in increasing the water-use efficiency.",
+      "theme": "Agriculture & Food Security",
+      "themeId": "agriculture-food",
+      "subthemes": [
+        "Environment & Biodiversity"
+      ],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2016-q18",
+      "year": 2016,
+      "number": 18,
+      "marks": 12,
+      "text": "What is allelopathy? Discuss its role In major Cropping systems of irrigated agriculture.",
+      "theme": "Agriculture & Food Security",
+      "themeId": "agriculture-food",
+      "subthemes": [],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2016-q19",
+      "year": 2016,
+      "number": 19,
+      "marks": 12,
+      "text": "Discuss the role of land reforms in agricultural development. Identify the factors that were responsible for the success of land reforms in India.",
+      "theme": "Economy & Development",
+      "themeId": "economy-development",
+      "subthemes": [
+        "Agriculture & Food Security"
+      ],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2016-q2",
+      "year": 2016,
+      "number": 2,
+      "marks": 12,
+      "text": "Pradhan Mantri Jan-Dhan Yojana (PMJDY) is necessary för bringing unbanked to the institutional finance fold. Do you agree with this for financial inclusion of the poorer section of the Indian society? Give arguments to justify your opinion.",
+      "theme": "Economy & Development",
+      "themeId": "misc",
+      "subthemes": [],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2016-q20",
+      "year": 2016,
+      "number": 20,
+      "marks": 12,
+      "text": "Given the vulnerability of Indian agriculture to vagaries of nature, discuss the need for crop insurance and bring out the salient features of the Pradhan Mantri Fasal Bima Yojana (PMFBY).",
+      "theme": "Agriculture & Food Security",
+      "themeId": "agriculture-food",
+      "subthemes": [
+        "Internal Security"
+      ],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2016-q3",
+      "year": 2016,
+      "number": 3,
+      "marks": 12,
+      "text": "How globalization has led to the reduction of employment in the formal sector of the Indian economy? Is increased informalization detrimental to the development of the country?",
+      "theme": "Economy & Development",
+      "themeId": "misc",
+      "subthemes": [],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2016-q4",
+      "year": 2016,
+      "number": 4,
+      "marks": 12,
+      "text": "What are Smart Cities? Examine their relevance for urban development in India. Will it increase rural-urban differences? Give arguments for 'Smart Villages' in the light of PURA and RURBAN Mission.",
+      "theme": "Disaster Management",
+      "themeId": "disaster-management",
+      "subthemes": [],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2016-q5",
+      "year": 2016,
+      "number": 5,
+      "marks": 12,
+      "text": "Justify the need for FDI for the development of the Indian economy. Why there is gap between MOUs signed and actual FDIs? Suggest remedial steps to be taken for increasing actual FDIs in India.",
+      "theme": "Internal Security",
+      "themeId": "internal-security",
+      "subthemes": [],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2016-q6",
+      "year": 2016,
+      "number": 6,
+      "marks": 12,
+      "text": "Comment on the challenges for inclusive growth which include careless and useless manpower in the Indian context. Suggest measures to be taken for facing these challenges.",
+      "theme": "Economy & Development",
+      "themeId": "economy-development",
+      "subthemes": [],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2016-q7",
+      "year": 2016,
+      "number": 7,
+      "marks": 12,
+      "text": "The frequency of urban floods due to high-intensity rainfall is increasing over the years. Discussing the reasons for urban floods, highlight the mechanisms for preparedness to reduce the risk during such events.",
+      "theme": "Disaster Management",
+      "themeId": "disaster-management",
+      "subthemes": [],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2016-q8",
+      "year": 2016,
+      "number": 8,
+      "marks": 12,
+      "text": "With reference to National Disaster Management Authority (NDMA) guidelines, discuss the measures to be adopted to mitigate the impact of the recent incidents of cloudbursts in many places of Uttarakhand.",
+      "theme": "Disaster Management",
+      "themeId": "disaster-management",
+      "subthemes": [],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2016-q9",
+      "year": 2016,
+      "number": 9,
+      "marks": 12,
+      "text": "Rehabilitation of human settlements is one of the important environmental impacts which always attracts controversy while planning major projects. Discuss the measures suggested for mitigation of this impact while proposing major developmental projects.",
+      "theme": "Environment & Biodiversity",
+      "themeId": "environment-biodiversity",
+      "subthemes": [
+        "Disaster Management"
+      ],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2015-q1",
+      "year": 2015,
+      "number": 1,
+      "marks": 12,
+      "text": "The nature of economic growth in India in recent times is often described as jobless growth. Do you agree with this view ? Give arguments in favour of your answer.",
+      "theme": "Economy & Development",
+      "themeId": "economy-development",
+      "subthemes": [],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2015-q10",
+      "year": 2015,
+      "number": 10,
+      "marks": 12,
+      "text": "Discuss the Namami Gange and National Mission for Clean Ganga (NMCG) programmes and causes of mixed results from the previous schemes. What quantum leaps can help preserve the river Ganga better than incremental inputs?",
+      "theme": "Economy & Development",
+      "themeId": "misc",
+      "subthemes": [],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2015-q11",
+      "year": 2015,
+      "number": 11,
+      "marks": 12,
+      "text": "What do you understand by 'Standard Positioning Systems' and 'Precision Positioning Systems' in the GPS era? Discuss the advantages India perceives from its ambitious IRNSS programme employing just seven satellites.",
+      "theme": "Science & Technology",
+      "themeId": "science-technology",
+      "subthemes": [],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2015-q12",
+      "year": 2015,
+      "number": 12,
+      "marks": 12,
+      "text": "What are the areas of prohibitive labour that can be sustainably managed by robots? Discuss the initiatives that can propel research in premier research institutes for substantive and gainful innovation.",
+      "theme": "Science & Technology",
+      "themeId": "science-technology",
+      "subthemes": [],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2015-q13",
+      "year": 2015,
+      "number": 13,
+      "marks": 12,
+      "text": "Discuss the advantages and security implications of cloud hosting of servers vis-a-vis in-house machine-based hosting for government businesses.",
+      "theme": "Agriculture & Food Security",
+      "themeId": "agriculture-food",
+      "subthemes": [
+        "Internal Security",
+        "Economy & Development"
+      ],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2015-q14",
+      "year": 2015,
+      "number": 14,
+      "marks": 12,
+      "text": "India's Traditional Knowledge Digital Library (TKDL), which has a database containing formatted information on more than 2 million medicinal formulations is proving a powerful weapon in the country's fight against erroneous patents. Discuss the pros and cons of making this database publicly available under open-source licensing.",
+      "theme": "Science & Technology",
+      "themeId": "science-technology",
+      "subthemes": [],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2015-q15",
+      "year": 2015,
+      "number": 15,
+      "marks": 12,
+      "text": "Human rights activists constantly highlight the view that the Armed Forces Powers) Act, 1958 (AFSPA) is a draconian act leading to cases of human rights abuses by the security forces. What sections of AFSPA are opposed by the activists? Critically evaluate the requirement with to the view held by the Apex Court.",
+      "theme": "Agriculture & Food Security",
+      "themeId": "agriculture-food",
+      "subthemes": [
+        "Internal Security"
+      ],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2015-q16",
+      "year": 2015,
+      "number": 16,
+      "marks": 12,
+      "text": "Religious indoctrination via digital media has resulted in Indian youth joining the ISIS. What is ISIS and its mission? How can ISIS be dangerous for the internal security of our country?",
+      "theme": "Internal Security",
+      "themeId": "internal-security",
+      "subthemes": [
+        "Agriculture & Food Security",
+        "Science & Technology"
+      ],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2015-q17",
+      "year": 2015,
+      "number": 17,
+      "marks": 12,
+      "text": "The persisting drives of the Government for the development of large industries in backward areas have resulted in isolating the tribal population and the farmers who face multiple displacements. With Malkangiri and Naxalbari foci, discuss the corrective strategies needed to win the Left Wing Extremism (LWE) doctrine affected citizens back into the mainstream of social and economic growth.",
+      "theme": "Internal Security",
+      "themeId": "internal-security",
+      "subthemes": [],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2015-q18",
+      "year": 2015,
+      "number": 18,
+      "marks": 12,
+      "text": "Considering the threats cyberspace poses for the country, India needs a \"Digital Armed Force\" to prevent crimes. Critically evaluate the National Cyber Security Policy, 2013 outlining the challenges perceived in its effective implementation.",
+      "theme": "Science & Technology",
+      "themeId": "science-technology",
+      "subthemes": [
+        "Internal Security",
+        "Agriculture & Food Security"
+      ],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2015-q19",
+      "year": 2015,
+      "number": 19,
+      "marks": 12,
+      "text": "In view of the declining average size of land holdings in India which has made agriculture non-viable for a majority of farmers, should contract farming and land leasing be promoted in agriculture? Critically evaluate the pros and cons.",
+      "theme": "Agriculture & Food Security",
+      "themeId": "agriculture-food",
+      "subthemes": [],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2015-q2",
+      "year": 2015,
+      "number": 2,
+      "marks": 12,
+      "text": "In what way could replacement of price subsidy with Direct Benefit Transfer (DBT) change the scenario of subsidies in India? Discuss.",
+      "theme": "Economy & Development",
+      "themeId": "economy-development",
+      "subthemes": [
+        "Environment & Biodiversity"
+      ],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2015-q20",
+      "year": 2015,
+      "number": 20,
+      "marks": 12,
+      "text": "How can the 'Digital India' programme help farmers to improve farm productivity and income? What steps has the Government taken in this regard?",
+      "theme": "Science & Technology",
+      "themeId": "science-technology",
+      "subthemes": [
+        "Agriculture & Food Security"
+      ],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2015-q21",
+      "year": 2015,
+      "number": 21,
+      "marks": 12,
+      "text": "What are the impediments in marketing and supply chain management in developing the food processing industry in India? Can e-commerce help in overcoming these bottlenecks?",
+      "theme": "Economy & Development",
+      "themeId": "economy-development",
+      "subthemes": [
+        "Agriculture & Food Security"
+      ],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2015-q3",
+      "year": 2015,
+      "number": 3,
+      "marks": 12,
+      "text": "Craze for gold in Indians has led to a surge in import of gold in recent years and put pressure on balance of payments and external value of rupee. In view of this, examine the merits of the Gold Monetization Scheme.",
+      "theme": "Environment & Biodiversity",
+      "themeId": "environment-biodiversity",
+      "subthemes": [],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2015-q4",
+      "year": 2015,
+      "number": 4,
+      "marks": 12,
+      "text": "\"Success of 'Make in India' programme depends on the success of 'Skill India' programme and radical labour reforms.\" Discuss with logical arguments.",
+      "theme": "Economy & Development",
+      "themeId": "economy-development",
+      "subthemes": [],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2015-q5",
+      "year": 2015,
+      "number": 5,
+      "marks": 12,
+      "text": "There is a clear acknowledgement that Special Economic Zones (SEZs) are a tool of industrial development, manufacturing and exports. Recognizing this potential the whole instrumentality of SEZs requires augmentation. Discuss the issues plaguing the success of SEZs with respect to taxation, governing laws and administration.",
+      "theme": "Economy & Development",
+      "themeId": "economy-development",
+      "subthemes": [],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2015-q6",
+      "year": 2015,
+      "number": 6,
+      "marks": 12,
+      "text": "The persisting drives of the Government for development of large industries in backward areas have resulted in isolating the tribal population and the farmers who facæ multiple displacements. With Malkangiri and Naxalban foci, discuss the corrective strategies needed to win the Left Wing Extremism (LWE) doctrine affected citizens back into the mainstream of social and economic growth.",
+      "theme": "Internal Security",
+      "themeId": "internal-security",
+      "subthemes": [],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2015-q7",
+      "year": 2015,
+      "number": 7,
+      "marks": 12,
+      "text": "Livestock rearing has a big potential for providing non-farm employment and income in rural areas. Discuss suggesting suitable measures to promote this sector in India.",
+      "theme": "Economy & Development",
+      "themeId": "economy-development",
+      "subthemes": [],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2015-q8",
+      "year": 2015,
+      "number": 8,
+      "marks": 12,
+      "text": "The frequency of earthquakes appears to have increased in the Indian subcontinent. However, India's preparedness for mitigating their impact has significant gaps. Discuss various aspects.",
+      "theme": "Disaster Management",
+      "themeId": "disaster-management",
+      "subthemes": [],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2015-q9",
+      "year": 2015,
+      "number": 9,
+      "marks": 12,
+      "text": "To what factors can the recent dramatic fall in equipment costs and tariff on solar energy be attributed? What implications does the trend have for thermal power producers and the related industry?",
+      "theme": "Economy & Development",
+      "themeId": "economy-development",
+      "subthemes": [
+        "Environment & Biodiversity"
+      ],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2014-q1",
+      "year": 2014,
+      "number": 1,
+      "marks": 12,
+      "text": "Normally countries shift from agriculture to industry and then later to services, but India shifted directly from agriculture to services. What arc the reasons for the huge growth of services vis-a-vis industry in the country? Can India become a developed country without a strong industrial base?",
+      "theme": "Economy & Development",
+      "themeId": "economy-development",
+      "subthemes": [
+        "Agriculture & Food Security"
+      ],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2014-q10",
+      "year": 2014,
+      "number": 10,
+      "marks": 12,
+      "text": "Environmental Impact Assessment studies are increasingly undertaken before a project is cleared by the Government. Discuss the environmental impacts Of coed-fired thermal plants located at coal pitheads.",
+      "theme": "Environment & Biodiversity",
+      "themeId": "environment-biodiversity",
+      "subthemes": [],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2014-q11",
+      "year": 2014,
+      "number": 11,
+      "marks": 12,
+      "text": "Should the pursuit of carbon credits and clean development mechanisms be set up under UNFCCC be maintained even though there has been a massive slide in the value of a carbon credit? Discuss With respect to India's energy needs for economic growth.",
+      "theme": "Economy & Development",
+      "themeId": "economy-development",
+      "subthemes": [
+        "Environment & Biodiversity"
+      ],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2014-q12",
+      "year": 2014,
+      "number": 12,
+      "marks": 12,
+      "text": "Scientific research in lndian universities is declining, because a career in science is not as attractive as business professions, engineering or administration, and the universities arc becoming consumer-oriented. Critically comment.",
+      "theme": "Science & Technology",
+      "themeId": "science-technology",
+      "subthemes": [],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2014-q13",
+      "year": 2014,
+      "number": 13,
+      "marks": 12,
+      "text": "Can overuse and free availability of antibiotics without a Doctor's prescription, be contributors to the emergence of drug-resistant diseases in India? What are the available mechanisms for monitoring and control? Critically discuss the various issues involved.",
+      "theme": "Economy & Development",
+      "themeId": "misc",
+      "subthemes": [],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2014-q14",
+      "year": 2014,
+      "number": 14,
+      "marks": 12,
+      "text": "\"The diverse nature of India as a multi-religious and multi-ethnic society is not immune to the impact of radicalism which is seen in her neighbourhood.\" Discuss along with strategies to be adapted to counter this environment.",
+      "theme": "Environment & Biodiversity",
+      "themeId": "environment-biodiversity",
+      "subthemes": [],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2014-q15",
+      "year": 2014,
+      "number": 15,
+      "marks": 12,
+      "text": "International civil aviation laws provide all countries complete and exclusive sovereignty over the airspace above their territory, What do you understaru•l by 'airspace? What are the implications Of these laws on the space above this airspace? Discuss the challenges that this poses and Suggest ways to contain the threat.",
+      "theme": "Economy & Development",
+      "themeId": "economy-development",
+      "subthemes": [
+        "Science & Technology"
+      ],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2014-q16",
+      "year": 2014,
+      "number": 16,
+      "marks": 12,
+      "text": "How does illegal transborder migration pose a threat to India's security? Discuss the strategies to curb this, bringing out the factors Which give impetus to such migration.",
+      "theme": "Internal Security",
+      "themeId": "internal-security",
+      "subthemes": [
+        "Agriculture & Food Security"
+      ],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2014-q17",
+      "year": 2014,
+      "number": 17,
+      "marks": 12,
+      "text": "In 2012, the longitudinal marking for high-risk areas for piracy was moved from 65 degrees east to 78 degrees east in the Arabian Sea by the International Maritime Organization. What impact does this have on India's maritime security concerns?",
+      "theme": "Agriculture & Food Security",
+      "themeId": "agriculture-food",
+      "subthemes": [
+        "Internal Security"
+      ],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2014-q18",
+      "year": 2014,
+      "number": 18,
+      "marks": 12,
+      "text": "China and Pakistan have entered into an agreement for the development of an economic corridor. What threat does this pose to India's security? Critically examine.",
+      "theme": "Internal Security",
+      "themeId": "internal-security",
+      "subthemes": [
+        "Agriculture & Food Security"
+      ],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2014-q19",
+      "year": 2014,
+      "number": 19,
+      "marks": 12,
+      "text": "There is also a point of view that Agricultural Produce Market Committees (APMCs) set up under the State Acts have not only impeded the development of agriculture but also have been the cause of food inflation in India. Critically examine.",
+      "theme": "Economy & Development",
+      "themeId": "economy-development",
+      "subthemes": [
+        "Agriculture & Food Security"
+      ],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2014-q2",
+      "year": 2014,
+      "number": 2,
+      "marks": 12,
+      "text": "\"While we flaunt India's demographic dividend, we ignore the dropping rates Of employability.\" What axe we rnissing While doing so? Where will the jobs that India desperately needs come from? Explain.",
+      "theme": "Economy & Development",
+      "themeId": "misc",
+      "subthemes": [],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2014-q20",
+      "year": 2014,
+      "number": 20,
+      "marks": 12,
+      "text": "\"In the villages itself, no form of credit organization will be suitable except the cooperative society\" - All India Rural Credit Survey. Discuss this statement in the background of agricultural finance in India. What constraints and challenges do financial institutions supplying agricultural finance face? How can technology be used to better reach and Serve ruler clients?",
+      "theme": "Science & Technology",
+      "themeId": "science-technology",
+      "subthemes": [],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2014-q21",
+      "year": 2014,
+      "number": 21,
+      "marks": 12,
+      "text": "The Right to Fair Compensation and Transparency in Land Acquisition, Rehabilitation and Resettlement Act, 2013 has come into effect from 1st January 2014. What are the key issues which would get addressed with the act in place? What implications would it have on industrialization and agriculture in India?",
+      "theme": "Economy & Development",
+      "themeId": "economy-development",
+      "subthemes": [
+        "Agriculture & Food Security"
+      ],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2014-q3",
+      "year": 2014,
+      "number": 3,
+      "marks": 12,
+      "text": "Capitalism has guided the world economy to unprecedented prosperity. However, it often encourages short-sightedness and contributes to vyidC disparities between the rich and the poor. In this light, would it be correct to believe and adopt capitalism for bringing inclusive growth in India? Discuss.",
+      "theme": "Economy & Development",
+      "themeId": "economy-development",
+      "subthemes": [],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2014-q4",
+      "year": 2014,
+      "number": 4,
+      "marks": 12,
+      "text": "Explain how Private Public Partnership arrangements, in long gestation infrastructure projccts, can transfer unsustainable liabilities to the future. What arrangements need to be put in place to ensure that successive generations' capacities are not compromised?",
+      "theme": "Economy & Development",
+      "themeId": "misc",
+      "subthemes": [],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2014-q5",
+      "year": 2014,
+      "number": 5,
+      "marks": 12,
+      "text": "National Urban Transport Policy emphasises on 'moving people' instead of 'moving vehicles'. Discuss critically the success of the various strategies of thc Government in this regard,",
+      "theme": "Economy & Development",
+      "themeId": "economy-development",
+      "subthemes": [
+        "Disaster Management"
+      ],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2014-q6",
+      "year": 2014,
+      "number": 6,
+      "marks": 12,
+      "text": "Foreign Direct Investment (FDI) in the defence sector is now set to be liberalized. What influence this is expected to have on Indian defence and economy in the short and Icing run?",
+      "theme": "Economy & Development",
+      "themeId": "misc",
+      "subthemes": [],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2014-q7",
+      "year": 2014,
+      "number": 7,
+      "marks": 12,
+      "text": "In a globalizcd world, Intellectual Property Rights assume significance and are a source Of litigation. Broadly distinguish between the terms—Copyrights, Patents and Trade Secrets.",
+      "theme": "Science & Technology",
+      "themeId": "science-technology",
+      "subthemes": [],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2014-q8",
+      "year": 2014,
+      "number": 8,
+      "marks": 12,
+      "text": "International civil aviation laws provide all countries complete and exclusive sovereignty over the airspace above their territory. What do you understand by 'airspace? What are the implications of these laws on the space above this airspace? Discuss the challenges which this poses and suggest ways to contain the threat.",
+      "theme": "Economy & Development",
+      "themeId": "economy-development",
+      "subthemes": [
+        "Science & Technology"
+      ],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2014-q9",
+      "year": 2014,
+      "number": 9,
+      "marks": 12,
+      "text": "Drought has been recognized as a disaster in view of its spatial expanse, temporal duration, slow onset and lasting effects on vulnerable sections. With a focus on September 2010 guidelines from the National Disaster Management Authority (NDMA), discuss the mechanisms for preparedness to deal with likely EI Nino and La Nina fallouts in India.",
+      "theme": "Disaster Management",
+      "themeId": "disaster-management",
+      "subthemes": [],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2013-q1",
+      "year": 2013,
+      "number": 1,
+      "marks": 10,
+      "text": "With a consideration towards the strategy of inclusive growth, the new Companies Bill, 2013 has indirectly made CSR a mandatory obligation. Discuss the challenges expected in its implementation in right earnest. Also discuss other provisions in the Bill and their implications.",
+      "theme": "Economy & Development",
+      "themeId": "economy-development",
+      "subthemes": [],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2013-q10",
+      "year": 2013,
+      "number": 10,
+      "marks": 10,
+      "text": "How important is vulnerability and risk assessment for pre-disaster management? As an administrator, what are key areas that you would focus On in a Disaster Management System. [200 words]",
+      "theme": "Disaster Management",
+      "themeId": "disaster-management",
+      "subthemes": [],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2013-q11",
+      "year": 2013,
+      "number": 11,
+      "marks": 10,
+      "text": "Write a note on India's green energy corridor to alleviate the problem Of conventional energy. [200 words]",
+      "theme": "Agriculture & Food Security",
+      "themeId": "agriculture-food",
+      "subthemes": [
+        "Environment & Biodiversity"
+      ],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2013-q12",
+      "year": 2013,
+      "number": 12,
+      "marks": 10,
+      "text": "What are the consequences of Illegal mining? Discuss the Ministry of Environment and Forests' concept of GO AND NO GO zones for the coal mining sector. [200 words]",
+      "theme": "Environment & Biodiversity",
+      "themeId": "environment-biodiversity",
+      "subthemes": [],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2013-q13",
+      "year": 2013,
+      "number": 13,
+      "marks": 10,
+      "text": "Enumerate the National Water Policy of India. Taking the river Ganges as an example, discuss the strategies which may be adopted for river water pollution control and management. What are the legal provisions for the management and handling of hazardous wastes in India? [200 words]",
+      "theme": "Environment & Biodiversity",
+      "themeId": "environment-biodiversity",
+      "subthemes": [
+        "Economy & Development"
+      ],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2013-q14",
+      "year": 2013,
+      "number": 14,
+      "marks": 10,
+      "text": "What do you understand by Fixed Dose Drug Combinations (FDCs)? Discuss their merits and demerits. [200 words]",
+      "theme": "Economy & Development",
+      "themeId": "misc",
+      "subthemes": [],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2013-q15",
+      "year": 2013,
+      "number": 15,
+      "marks": 10,
+      "text": "What do you understand about Umpire Decision Review System in Cricket? Discuss its various components. Explain how silicone on the edge of a bat may fool the system? [200 words]",
+      "theme": "Economy & Development",
+      "themeId": "misc",
+      "subthemes": [],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2013-q16",
+      "year": 2013,
+      "number": 16,
+      "marks": 5,
+      "text": "What is a digital signature? What does its authentication mean? Give various salient built-in features Of a digital signature. [100 words]",
+      "theme": "Science & Technology",
+      "themeId": "science-technology",
+      "subthemes": [],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2013-q17",
+      "year": 2013,
+      "number": 17,
+      "marks": 5,
+      "text": "How does the 3D printing technology work? List out the advantages and disadvantages of the technology. [100 words]",
+      "theme": "Science & Technology",
+      "themeId": "science-technology",
+      "subthemes": [],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2013-q18",
+      "year": 2013,
+      "number": 18,
+      "marks": 5,
+      "text": "What is an FRP composite material? How are they manufactured? Discuss their applications in the aviation and automobile industries. [100 words]",
+      "theme": "Economy & Development",
+      "themeId": "economy-development",
+      "subthemes": [],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2013-q19",
+      "year": 2013,
+      "number": 19,
+      "marks": 5,
+      "text": "What do you understand about the run-of-river hydroelectricity project? How is it different from any other hydroelectricity project? [100 words]",
+      "theme": "Economy & Development",
+      "themeId": "misc",
+      "subthemes": [],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2013-q2",
+      "year": 2013,
+      "number": 2,
+      "marks": 10,
+      "text": "What were the reasons for the introduction of Fiscal Responsibility and Budget Management (FRBM) Act, 2003 ? Discuss critically its salient features and their effectiveness.",
+      "theme": "Economy & Development",
+      "themeId": "economy-development",
+      "subthemes": [],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2013-q20",
+      "year": 2013,
+      "number": 20,
+      "marks": 10,
+      "text": "Money laundering m).ses a serious security threat to a country's economic sovereignty. What is its significance for India and what steps are required to be taken to control this menace? [200 words] 10",
+      "theme": "Agriculture & Food Security",
+      "themeId": "agriculture-food",
+      "subthemes": [
+        "Internal Security"
+      ],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2013-q21",
+      "year": 2013,
+      "number": 21,
+      "marks": 10,
+      "text": "What are social networking sites and what security implications do these sites present? [200 words] 10",
+      "theme": "Internal Security",
+      "themeId": "internal-security",
+      "subthemes": [
+        "Agriculture & Food Security",
+        "Economy & Development"
+      ],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2013-q22",
+      "year": 2013,
+      "number": 22,
+      "marks": 10,
+      "text": "Cyber warfare is considered by some defence analysts to be a larger threat than even A1 Qaeda or terrorism. What do you understand about Cyberwarfare? Outline the cyber threats which India is vulnerable and bring out the state of the country's preparedness to deal with the same. [200 words]",
+      "theme": "Disaster Management",
+      "themeId": "disaster-management",
+      "subthemes": [
+        "Internal Security",
+        "Science & Technology"
+      ],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2013-q23",
+      "year": 2013,
+      "number": 23,
+      "marks": 10,
+      "text": "Article 244 of the Indian Constitution relates to the administration of scheduled areas and tribal areas. Analyse the impact of non-implementation of the provisions of the Fifth schedule on the growth of Lefft Wing extremism. [200 words] 10",
+      "theme": "Internal Security",
+      "themeId": "internal-security",
+      "subthemes": [
+        "Economy & Development"
+      ],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2013-q24",
+      "year": 2013,
+      "number": 24,
+      "marks": 10,
+      "text": "How far are India's internal security challenges linked with border management , particularly in view of the long porous borders with most countries of South Asia and Myanmar? [200 words] 10",
+      "theme": "Internal Security",
+      "themeId": "internal-security",
+      "subthemes": [
+        "Agriculture & Food Security"
+      ],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2013-q25",
+      "year": 2013,
+      "number": 25,
+      "marks": 10,
+      "text": "Food Security Bill is expected to eliminate hunger and malnutrition in India. Critically discuss various apprehensions in its effective implementation along with the concerns it has generated in WTO. [200 words]",
+      "theme": "Agriculture & Food Security",
+      "themeId": "agriculture-food",
+      "subthemes": [
+        "Internal Security",
+        "Economy & Development"
+      ],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2013-q26",
+      "year": 2013,
+      "number": 26,
+      "marks": 10,
+      "text": "What are the different types Of agriculture subsidies given to farmers at the national and at state levels? Critically analyse the agricultural subsidy regime with reference to the distortions created by it. [200 words]",
+      "theme": "Agriculture & Food Security",
+      "themeId": "agriculture-food",
+      "subthemes": [
+        "Economy & Development"
+      ],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2013-q27",
+      "year": 2013,
+      "number": 27,
+      "marks": 10,
+      "text": "India needs to strengthen measures to promote the pink revolution in the food industry for ensuring better nutrition and health. Critically elucidate the statement. [200 words] 10",
+      "theme": "Agriculture & Food Security",
+      "themeId": "agriculture-food",
+      "subthemes": [],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2013-q28",
+      "year": 2013,
+      "number": 28,
+      "marks": 10,
+      "text": "Establish relationship between land reforms, agriculture productivity and elimination of poverty in the Indian economy. Discuss the difficulties in designing and implementation of agriculture- friendly land reforms- in India. [200 words]",
+      "theme": "Agriculture & Food Security",
+      "themeId": "agriculture-food",
+      "subthemes": [
+        "Economy & Development"
+      ],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2013-q3",
+      "year": 2013,
+      "number": 3,
+      "marks": 10,
+      "text": "What is the meaning of the term 'tax expenditure' ? Taking housing sector as an example, discuss how it influences the budgetary policies of the government.",
+      "theme": "Economy & Development",
+      "themeId": "economy-development",
+      "subthemes": [],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2013-q4",
+      "year": 2013,
+      "number": 4,
+      "marks": 10,
+      "text": "Examine the impact of liberalization on companies owned by Indians. Are they competing with the MNCs satisfactorily ? Discuss.",
+      "theme": "Economy & Development",
+      "themeId": "misc",
+      "subthemes": [],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2013-q5",
+      "year": 2013,
+      "number": 5,
+      "marks": 5,
+      "text": "Discuss the impact of FDI entry into Multi-trade retail sector on supply chain management in commodity trade pattern of the economy.",
+      "theme": "Economy & Development",
+      "themeId": "misc",
+      "subthemes": [],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2013-q6",
+      "year": 2013,
+      "number": 6,
+      "marks": 5,
+      "text": "Though India allowed Foreign Direct Investment (FDI) in what is called multi-brand retail through the joint venture route in September 2012, the FDI, even after a year, has not picked up. Discuss the reasons.",
+      "theme": "Economy & Development",
+      "themeId": "misc",
+      "subthemes": [],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2013-q7",
+      "year": 2013,
+      "number": 7,
+      "marks": 10,
+      "text": "Adoption of PPP model for infrastructure development of the country has not been free of criticism. Critically discuss pros and cons of the model.",
+      "theme": "Economy & Development",
+      "themeId": "economy-development",
+      "subthemes": [],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2013-q8",
+      "year": 2013,
+      "number": 8,
+      "marks": 10,
+      "text": "Bringing out the circumstances in 2005 which forced amendment to the section 3(d) in Indian Patent Law, 1970, discuss how it has been utilized by the Supreme Court in its judgement in rejecting Novratis' patent application for 'Glivec'. Discuss briefly the pros and cons of the decision.",
+      "theme": "Economy & Development",
+      "themeId": "economy-development",
+      "subthemes": [
+        "Science & Technology"
+      ],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs3-2013-q9",
+      "year": 2013,
+      "number": 9,
+      "marks": 10,
+      "text": "Discuss the rationale for introducing Goods and Services Tax (GST) in India. Bring out critically the reasons for the delay in roll out for its regime. [200 words]",
+      "theme": "Economy & Development",
+      "themeId": "economy-development",
+      "subthemes": [],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
     }
   ]
 }

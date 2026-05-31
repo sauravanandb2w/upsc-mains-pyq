@@ -5,10 +5,29 @@ A lightweight, offline-friendly web app to browse **UPSC Civil Services (Main) E
 ## Features
 
 - **Paper-wise navigation** — GS I (Heritage, History, Geography), GS II (Polity, Governance, IR), GS III (Economy, S&T, Environment, Security), GS IV (Ethics & case studies)
-- **Year filter** — 2020–2024 (extend by editing JSON under `data/`)
+- **Year filter** — 2013–2025 (per paper; see coverage note in app)
 - **Marks filter** — 10, 15, 20 marks and case studies (Paper IV)
-- **Keyword search** — search question text and topics
+- **Keyword search** — questions, topics, and study notes
+- **Syllabus theme** on every question (filter by theme)
+- **Your notes** — Introduction · Static notes · Quotes · CA · Topper points · Value material (saved in browser; not auto-generated)
 - **Dark mode** — persisted in browser storage
+
+## Build / update question bank
+
+Questions are compiled from [UPSC-Star](https://github.com/amanbh2/UPSC-Star) (GS I–III, 2013–2021) plus ClearIAS pages and local supplements (`data/sources/`).
+
+```bash
+cd upsc-mains-pyq
+# Download UPSC-Star source (once)
+curl -sL "https://raw.githubusercontent.com/amanbh2/UPSC-Star/master/UPSC%20Star%20Data.json" \
+  -o scripts/upsc-star-source.json
+# Rebuild all four JSON files (network; ~2 min)
+python3 scripts/build-pyq-data.py
+```
+
+Use `python3 scripts/build-pyq-data.py --no-fetch` to rebuild from local files only.
+
+**Coverage (approx.):** GS II & III 2013–2024; GS I from 2015; GS IV partial (ethics paper parsing is harder). Missing years are listed in the app. Add JSON under `data/sources/` and rebuild. Verify wording on [upsc.gov.in](https://upsc.gov.in/examinations/previous-question-papers).
 
 ## Run locally
 
@@ -55,21 +74,27 @@ upsc-mains-pyq/
 
 ## Adding more questions
 
-Edit the JSON file for the paper. Each question object:
+Add a file under `data/sources/` (or edit generated `data/gs-paper-N.json` then run build), e.g.:
 
 ```json
 {
-  "year": 2024,
-  "number": 1,
-  "marks": 10,
-  "text": "Full question text as in the official paper.",
-  "topics": ["Topic A", "Topic B"]
+  "paper": 2,
+  "questions": [
+    {
+      "year": 2025,
+      "number": 1,
+      "marks": 10,
+      "text": "Official question text…"
+    }
+  ]
 }
 ```
 
-For GS Paper IV case studies, use `"marks": "case"` or any string containing `"case"` (e.g. `"20 case"`).
+Each question has `theme`, `themeId`, and empty `notes` fields. Edit `data/themes.json` to tune classification keywords.
 
-Always verify wording against the official question papers on [upsc.gov.in](https://upsc.gov.in).
+For GS Paper IV case studies, use `"marks": "case"`.
+
+Always verify wording against official papers on [upsc.gov.in](https://upsc.gov.in).
 
 ## Disclaimer
 
