@@ -82,9 +82,10 @@
       "text": "The application of Artificial Intelligence as a dependable source of input for administrative rational decision-making is a debatable issue. Critically examine the statement from the ethical point of view.",
       "theme": "Public Service Values",
       "themeId": "public-service-values",
-      "themeParent": "",
+      "themeParent": "Public Service & Governance",
       "subthemes": [
-        "Aptitude & Emotional Intelligence"
+        "Aptitude & Emotional Intelligence",
+        "Corporate & Applied Ethics"
       ],
       "notes": {
         "introduction": "",
@@ -103,11 +104,8 @@
       "text": "Ethics encompasses several key dimensions that are crucial in guiding individuals and organizations towards morally responsible behavior. Explain the key dimensions of ethics that influence human actions. Discuss how these dimensions shape ethical decision-making in professional contexts.",
       "theme": "Ethics & Human Interface",
       "themeId": "ethics-human-interface",
-      "themeParent": "",
-      "subthemes": [
-        "Attitude",
-        "Integrity & Probity"
-      ],
+      "themeParent": "Ethics & Values",
+      "subthemes": [],
       "notes": {
         "introduction": "",
         "staticNotes": "",
@@ -123,12 +121,11 @@
       "number": "2a",
       "marks": 10,
       "text": "It is not enough to talk about peace, one must believe in it; and it is not enough to believe in it, one must act upon it. In the present context, the major weapon industries of the developed nations are adversely influencing continuation of wars. What are the ethical considerations of powerful nations in today's international arena to stop ongoing conflicts?",
-      "theme": "Corporate & Applied Ethics",
-      "themeId": "corporate-governance",
-      "themeParent": "",
+      "theme": "Thinkers & Quotations",
+      "themeId": "thinkers-quotes",
+      "themeParent": "Ethics & Values",
       "subthemes": [
-        "Thinkers & Quotations",
-        "Integrity & Probity"
+        "Corporate & Applied Ethics"
       ],
       "notes": {
         "introduction": "",
@@ -147,11 +144,8 @@
       "text": "Global warming and climate change are the outcomes of human greed in the name of development. How do you put an end to this to protect life and bring equilibrium between society and the environment?",
       "theme": "Corporate & Applied Ethics",
       "themeId": "corporate-governance",
-      "themeParent": "",
-      "subthemes": [
-        "Case Study",
-        "Ethics & Human Interface"
-      ],
+      "themeParent": "Applied & Corporate Ethics",
+      "subthemes": [],
       "notes": {
         "introduction": "",
         "staticNotes": "",
@@ -169,7 +163,7 @@
       "text": "Given below are three quotations of great thinkers. What do each of these quotations convey to you in the present context? (Swami Vivekananda; Sardar Patel; Immanuel Kant)",
       "theme": "Thinkers & Quotations",
       "themeId": "thinkers-quotes",
-      "themeParent": "",
+      "themeParent": "Ethics & Values",
       "subthemes": [],
       "notes": {
         "introduction": "",
@@ -188,8 +182,11 @@
       "text": "The concept of just and unjust is contextual. What was just a year back may turn out to be unjust in today's context. Changing context should be constantly under scrutiny to prevent miscarriage of justice. Examine with suitable examples.",
       "theme": "Ethics & Human Interface",
       "themeId": "ethics-human-interface",
-      "themeParent": "",
-      "subthemes": [],
+      "themeParent": "Ethics & Values",
+      "subthemes": [
+        "Integrity & Probity",
+        "Thinkers & Quotations"
+      ],
       "notes": {
         "introduction": "",
         "staticNotes": "",
@@ -207,9 +204,10 @@
       "text": "Mindless addiction to form, ignoring the substance of the matter, results in rendering of injustice. A perceptive civil servant is one who ignores such literalness and carries out true intent. Examine with suitable illustrations.",
       "theme": "Ethics & Human Interface",
       "themeId": "ethics-human-interface",
-      "themeParent": "",
+      "themeParent": "Ethics & Values",
       "subthemes": [
-        "Public Service Values"
+        "Public Service Values",
+        "Integrity & Probity"
       ],
       "notes": {
         "introduction": "",
@@ -228,7 +226,7 @@
       "text": "The Code of Conduct and Code of Ethics are sources of guidance in public administration. Suggest a suitable model for a code of ethics to maintain integrity, probity, and transparency in governance.",
       "theme": "Integrity & Probity",
       "themeId": "integrity-probity",
-      "themeParent": "",
+      "themeParent": "Ethics & Values",
       "subthemes": [],
       "notes": {
         "introduction": "",
@@ -247,7 +245,7 @@
       "text": "The soul of the new law, Bharatiya Nyaya Sanhita (BNS) is Equality and Impartiality based on Indian culture and ethos. Discuss in the light of major shift from punishment to justice in the present judicial system.",
       "theme": "Public Service Values",
       "themeId": "public-service-values",
-      "themeParent": "",
+      "themeParent": "Public Service & Governance",
       "subthemes": [],
       "notes": {
         "introduction": "",
@@ -266,7 +264,7 @@
       "text": "Examine the gender-specific challenges faced by female public servants and suggest suitable measures to increase their efficiency and maintain high standards of probity.",
       "theme": "Public Service Values",
       "themeId": "public-service-values",
-      "themeParent": "",
+      "themeParent": "Public Service & Governance",
       "subthemes": [
         "Integrity & Probity"
       ],
@@ -287,7 +285,7 @@
       "text": "How will Mission Karmayogi empower civil servants in enhancing productive efficiency and delivering services at the grassroots level?",
       "theme": "Public Service Values",
       "themeId": "public-service-values",
-      "themeParent": "",
+      "themeParent": "Public Service & Governance",
       "subthemes": [],
       "notes": {
         "introduction": "",

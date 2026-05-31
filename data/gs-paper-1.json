@@ -7,15 +7,21 @@
     2025
   ],
   "themes": [
-    "Indian Art & Culture",
-    "Ancient & Medieval History",
-    "Modern Indian History",
+    "Architecture & Sculpture",
+    "Literature, Religion & Philosophy",
+    "Heritage & Performing Arts",
+    "Ancient & Medieval India",
+    "Modern India & Freedom Struggle",
     "Post-Independence India",
     "World History",
     "Physical Geography",
     "Indian Geography",
     "World Geography",
-    "Indian Society"
+    "Caste, Tribe & Social Structure",
+    "Women, Gender & Empowerment",
+    "Urbanization & Migration",
+    "Social Reform & Change",
+    "Development & Inequality"
   ],
   "questions": [
     {
@@ -24,11 +30,11 @@
       "number": 1,
       "marks": 10,
       "text": "Underline the changes in the field of society and economy from the Rig Vedic to the later Vedic period.",
-      "theme": "Ancient & Medieval History",
-      "themeId": "ancient-medieval",
-      "themeParent": "",
+      "theme": "Literature, Religion & Philosophy",
+      "themeId": "literature-religion",
+      "themeParent": "Indian Art & Culture",
       "subthemes": [
-        "Indian Society"
+        "Women, Gender & Empowerment"
       ],
       "notes": {
         "introduction": "",
@@ -45,9 +51,9 @@
       "number": 10,
       "marks": 10,
       "text": "In dealing with socio-economic issues of development, what kind of collaboration between government, NGOs and private sector would be most productive?",
-      "theme": "Indian Society",
-      "themeId": "indian-society",
-      "themeParent": "",
+      "theme": "Development & Inequality",
+      "themeId": "development-inequality",
+      "themeParent": "Indian Society",
       "subthemes": [],
       "notes": {
         "introduction": "",
@@ -64,9 +70,9 @@
       "number": 11,
       "marks": 15,
       "text": "Though the great Cholas are no more yet their name is still remembered with great pride because of their highest achievements in the domain of art and architecture. Comment.",
-      "theme": "Indian Art & Culture",
-      "themeId": "art-culture",
-      "themeParent": "",
+      "theme": "Architecture & Sculpture",
+      "themeId": "architecture-sculpture",
+      "themeParent": "Indian Art & Culture",
       "subthemes": [],
       "notes": {
         "introduction": "",
@@ -85,7 +91,7 @@
       "text": "How far is it correct to say that the First World War was fought essentially for the preservation of balance of power?",
       "theme": "World History",
       "themeId": "world-history",
-      "themeParent": "",
+      "themeParent": "World History & Geography",
       "subthemes": [],
       "notes": {
         "introduction": "",
@@ -104,9 +110,10 @@
       "text": "How far was the Industrial Revolution in England responsible for the decline of handicrafts and cottage industries in India?",
       "theme": "Post-Independence India",
       "themeId": "post-independence",
-      "themeParent": "",
+      "themeParent": "Indian History",
       "subthemes": [
-        "World History"
+        "World History",
+        "Indian Geography"
       ],
       "notes": {
         "introduction": "",
@@ -125,9 +132,9 @@
       "text": "The groundwater potential of the gangetic valley is on a serious decline. How may it affect the food security of India?",
       "theme": "Indian Geography",
       "themeId": "indian-geo",
-      "themeParent": "",
+      "themeParent": "Geography",
       "subthemes": [
-        "Modern Indian History"
+        "Modern India & Freedom Struggle"
       ],
       "notes": {
         "introduction": "",
@@ -146,7 +153,7 @@
       "text": "What are aurora australis and aurora borealis? How are these triggered?",
       "theme": "Physical Geography",
       "themeId": "physical-geo",
-      "themeParent": "",
+      "themeParent": "Geography",
       "subthemes": [],
       "notes": {
         "introduction": "",
@@ -163,10 +170,13 @@
       "number": 16,
       "marks": 15,
       "text": "What is a twister? Why are the majority of twisters observed in areas around the Gulf of Mexico?",
-      "theme": "Indian Society",
-      "themeId": "indian-society",
-      "themeParent": "",
-      "subthemes": [],
+      "theme": "Physical Geography",
+      "themeId": "physical-geo",
+      "themeParent": "Geography",
+      "subthemes": [
+        "World Geography",
+        "Social Reform & Change"
+      ],
       "notes": {
         "introduction": "",
         "staticNotes": "",
@@ -182,10 +192,12 @@
       "number": 17,
       "marks": 15,
       "text": "What is regional disparity? How does it differ from diversity? How serious is the issue of regional disparity in India?",
-      "theme": "Indian Society",
-      "themeId": "indian-society",
-      "themeParent": "",
-      "subthemes": [],
+      "theme": "World Geography",
+      "themeId": "world-geo",
+      "themeParent": "World History & Geography",
+      "subthemes": [
+        "Development & Inequality"
+      ],
       "notes": {
         "introduction": "",
         "staticNotes": "",
@@ -201,9 +213,9 @@
       "number": 18,
       "marks": 15,
       "text": "Despite comprehensive policies for equity and social justice, underprivileged sections are not yet getting the full benefits of affirmative action envisaged by the Constitution. Comment.",
-      "theme": "Indian Society",
-      "themeId": "indian-society",
-      "themeParent": "",
+      "theme": "Development & Inequality",
+      "themeId": "development-inequality",
+      "themeParent": "Indian Society",
       "subthemes": [],
       "notes": {
         "introduction": "",
@@ -220,11 +232,11 @@
       "number": 19,
       "marks": 15,
       "text": "Globalization has increased urban migration by skilled, young, unmarried women from various classes. How has this trend impacted upon their personal freedom and relationship with family?",
-      "theme": "Indian Society",
-      "themeId": "indian-society",
-      "themeParent": "",
+      "theme": "Women, Gender & Empowerment",
+      "themeId": "women-gender",
+      "themeParent": "Indian Society",
       "subthemes": [
-        "Modern Indian History"
+        "Urbanization & Migration"
       ],
       "notes": {
         "introduction": "",
@@ -241,11 +253,12 @@
       "number": 2,
       "marks": 10,
       "text": "Estimate the contribution of Pallavas of Kanchi for the development of art and literature of South India.",
-      "theme": "Indian Art & Culture",
-      "themeId": "art-culture",
-      "themeParent": "",
+      "theme": "Architecture & Sculpture",
+      "themeId": "architecture-sculpture",
+      "themeParent": "Indian Art & Culture",
       "subthemes": [
-        "Ancient & Medieval History"
+        "Literature, Religion & Philosophy",
+        "Ancient & Medieval India"
       ],
       "notes": {
         "introduction": "",
@@ -262,10 +275,12 @@
       "number": 20,
       "marks": 15,
       "text": "Critically analyse the proposition that there is a high correlation between India's cultural diversities and socio-economic marginalities.",
-      "theme": "Modern Indian History",
-      "themeId": "modern-history",
-      "themeParent": "",
-      "subthemes": [],
+      "theme": "Development & Inequality",
+      "themeId": "development-inequality",
+      "themeParent": "Indian Society",
+      "subthemes": [
+        "Caste, Tribe & Social Structure"
+      ],
       "notes": {
         "introduction": "",
         "staticNotes": "",
@@ -281,9 +296,9 @@
       "number": 3,
       "marks": 10,
       "text": "What were the events that led to the Quit India Movement? Point out its results.",
-      "theme": "Modern Indian History",
+      "theme": "Modern India & Freedom Struggle",
       "themeId": "modern-history",
-      "themeParent": "",
+      "themeParent": "Indian History",
       "subthemes": [],
       "notes": {
         "introduction": "",
@@ -302,7 +317,7 @@
       "text": "What is sea surface temperature rise? How does it affect the formation of tropical cyclones?",
       "theme": "Physical Geography",
       "themeId": "physical-geo",
-      "themeParent": "",
+      "themeParent": "Geography",
       "subthemes": [],
       "notes": {
         "introduction": "",
@@ -319,9 +334,9 @@
       "number": 5,
       "marks": 10,
       "text": "Why do large cities tend to attract more migrants than smaller towns? Discuss in the light of conditions in developing countries.",
-      "theme": "Indian Society",
-      "themeId": "indian-society",
-      "themeParent": "",
+      "theme": "Urbanization & Migration",
+      "themeId": "urbanization-migration",
+      "themeParent": "Indian Society",
       "subthemes": [],
       "notes": {
         "introduction": "",
@@ -340,7 +355,7 @@
       "text": "What is the phenomenon of 'cloudbursts'? Explain.",
       "theme": "Physical Geography",
       "themeId": "physical-geo",
-      "themeParent": "",
+      "themeParent": "Geography",
       "subthemes": [],
       "notes": {
         "introduction": "",
@@ -359,7 +374,7 @@
       "text": "What is the concept of a 'demographic winter'? Is the world moving towards such a situation? Elaborate.",
       "theme": "World Geography",
       "themeId": "world-geo",
-      "themeParent": "",
+      "themeParent": "World History & Geography",
       "subthemes": [
         "World History"
       ],
@@ -378,12 +393,10 @@
       "number": 8,
       "marks": 10,
       "text": "Distinguish between gender equality, equity and women's empowerment. Why is it important to take gender concerns into account in programme design and implementation?",
-      "theme": "Indian Society",
-      "themeId": "indian-society",
-      "themeParent": "",
-      "subthemes": [
-        "World History"
-      ],
+      "theme": "Women, Gender & Empowerment",
+      "themeId": "women-gender",
+      "themeParent": "Indian Society",
+      "subthemes": [],
       "notes": {
         "introduction": "",
         "staticNotes": "",
@@ -399,9 +412,9 @@
       "number": 9,
       "marks": 10,
       "text": "Intercaste marriages between castes which have socio-economic parity have increased, to some extent, but this is less true of interreligious marriages. Discuss.",
-      "theme": "Indian Society",
-      "themeId": "indian-society",
-      "themeParent": "",
+      "theme": "Caste, Tribe & Social Structure",
+      "themeId": "caste-tribe",
+      "themeParent": "Indian Society",
       "subthemes": [],
       "notes": {
         "introduction": "",
@@ -418,12 +431,11 @@
       "number": 1,
       "marks": 10,
       "text": "Evaluate the nature of the Bhakti literature and its contribution to Indian culture.",
-      "theme": "Indian Art & Culture",
-      "themeId": "art-culture",
-      "themeParent": "",
+      "theme": "Literature, Religion & Philosophy",
+      "themeId": "literature-religion",
+      "themeParent": "Indian Art & Culture",
       "subthemes": [
-        "Ancient & Medieval History",
-        "Modern Indian History"
+        "Modern India & Freedom Struggle"
       ],
       "notes": {
         "introduction": "",
@@ -440,9 +452,9 @@
       "number": 10,
       "marks": 15,
       "text": "Discuss the main objectives of Population Education and point out the measures to achieve them in India in detail.",
-      "theme": "Modern Indian History",
-      "themeId": "modern-history",
-      "themeParent": "",
+      "theme": "Social Reform & Change",
+      "themeId": "social-reform-change",
+      "themeParent": "Indian Society",
       "subthemes": [],
       "notes": {
         "introduction": "",
@@ -459,11 +471,12 @@
       "number": 11,
       "marks": 15,
       "text": "What is Cryptocurrency? How does it affect global society? Has it been affecting Indian society also?",
-      "theme": "Indian Society",
-      "themeId": "indian-society",
-      "themeParent": "",
+      "theme": "Social Reform & Change",
+      "themeId": "social-reform-change",
+      "themeParent": "Indian Society",
       "subthemes": [
-        "Modern Indian History"
+        "Modern India & Freedom Struggle",
+        "Urbanization & Migration"
       ],
       "notes": {
         "introduction": "",
@@ -480,12 +493,10 @@
       "number": 12,
       "marks": 15,
       "text": "How does Indian society maintain continuity in traditional social values Enumerate the changes taking place in it.",
-      "theme": "Indian Society",
-      "themeId": "indian-society",
-      "themeParent": "",
-      "subthemes": [
-        "Modern Indian History"
-      ],
+      "theme": "Social Reform & Change",
+      "themeId": "social-reform-change",
+      "themeParent": "Indian Society",
+      "subthemes": [],
       "notes": {
         "introduction": "",
         "staticNotes": "",
@@ -503,7 +514,7 @@
       "text": "Differentiate the causes of landslides in the Himalayan region and Western Ghats.",
       "theme": "Indian Geography",
       "themeId": "indian-geo",
-      "themeParent": "",
+      "themeParent": "Geography",
       "subthemes": [],
       "notes": {
         "introduction": "",
@@ -520,12 +531,12 @@
       "number": 14,
       "marks": 10,
       "text": "Despite India being one of the countries of the Gondwanaland, its mining industry contributes much less to its Gross Domestic Product (GDP) in percentage. Discuss.",
-      "theme": "Indian Art & Culture",
-      "themeId": "art-culture",
-      "themeParent": "",
+      "theme": "Indian Geography",
+      "themeId": "indian-geo",
+      "themeParent": "Geography",
       "subthemes": [
-        "Ancient & Medieval History",
-        "Modern Indian History"
+        "Urbanization & Migration",
+        "Literature, Religion & Philosophy"
       ],
       "notes": {
         "introduction": "",
@@ -542,10 +553,12 @@
       "number": 15,
       "marks": 10,
       "text": "What are the environmental implications of the reclamation of water bodies into urban land use? Explain with examples.",
-      "theme": "Indian Society",
-      "themeId": "indian-society",
-      "themeParent": "",
-      "subthemes": [],
+      "theme": "Urbanization & Migration",
+      "themeId": "urbanization-migration",
+      "themeParent": "Indian Society",
+      "subthemes": [
+        "Social Reform & Change"
+      ],
       "notes": {
         "introduction": "",
         "staticNotes": "",
@@ -561,10 +574,13 @@
       "number": 16,
       "marks": 10,
       "text": "Mention the global occurrence of volcanic eruptions in 2021 and their impact on regional environment.",
-      "theme": "Indian Society",
-      "themeId": "indian-society",
-      "themeParent": "",
-      "subthemes": [],
+      "theme": "Indian Geography",
+      "themeId": "indian-geo",
+      "themeParent": "Geography",
+      "subthemes": [
+        "World Geography",
+        "Development & Inequality"
+      ],
       "notes": {
         "introduction": "",
         "staticNotes": "",
@@ -582,9 +598,9 @@
       "text": "Why is India considered as a subcontinent? Elaborate your answer.",
       "theme": "World Geography",
       "themeId": "world-geo",
-      "themeParent": "",
+      "themeParent": "World History & Geography",
       "subthemes": [
-        "Modern Indian History"
+        "Modern India & Freedom Struggle"
       ],
       "notes": {
         "introduction": "",
@@ -601,10 +617,13 @@
       "number": 18,
       "marks": 15,
       "text": "Briefly mention the alignment of major mountain ranges of the world and explain their impact on local weather conditions, with examples.",
-      "theme": "World History",
-      "themeId": "world-history",
-      "themeParent": "",
-      "subthemes": [],
+      "theme": "Physical Geography",
+      "themeId": "physical-geo",
+      "themeParent": "Geography",
+      "subthemes": [
+        "World History",
+        "Urbanization & Migration"
+      ],
       "notes": {
         "introduction": "",
         "staticNotes": "",
@@ -620,9 +639,9 @@
       "number": 19,
       "marks": 15,
       "text": "How do the melting of the Arctic ice and glaciers of the Antarctic differently affect the weather patterns and human activities on the Earth ? Explain.",
-      "theme": "Indian Society",
-      "themeId": "indian-society",
-      "themeParent": "",
+      "theme": "Physical Geography",
+      "themeId": "physical-geo",
+      "themeParent": "Geography",
       "subthemes": [],
       "notes": {
         "introduction": "",
@@ -639,9 +658,9 @@
       "number": 2,
       "marks": 10,
       "text": "Trace the rise and growth of socio-religious reform movements with special reference to Young Bengal and Brahmo Samaj.",
-      "theme": "Indian Society",
-      "themeId": "indian-society",
-      "themeParent": "",
+      "theme": "Social Reform & Change",
+      "themeId": "social-reform-change",
+      "themeParent": "Indian Society",
       "subthemes": [],
       "notes": {
         "introduction": "",
@@ -660,10 +679,10 @@
       "text": "Discuss the multi-dimensional implications of uneven distribution of mineral oil in the world.",
       "theme": "Indian Geography",
       "themeId": "indian-geo",
-      "themeParent": "",
+      "themeParent": "Geography",
       "subthemes": [
         "World Geography",
-        "World History"
+        "Social Reform & Change"
       ],
       "notes": {
         "introduction": "",
@@ -680,11 +699,11 @@
       "number": 21,
       "marks": 10,
       "text": "The rock-cut architecture represents one Of the most important sources of our knowledge of early Indian art and history. Discuss.",
-      "theme": "Indian Art & Culture",
-      "themeId": "art-culture",
-      "themeParent": "",
+      "theme": "Architecture & Sculpture",
+      "themeId": "architecture-sculpture",
+      "themeParent": "Indian Art & Culture",
       "subthemes": [
-        "Modern Indian History"
+        "Caste, Tribe & Social Structure"
       ],
       "notes": {
         "introduction": "",
@@ -701,10 +720,12 @@
       "number": 22,
       "marks": 10,
       "text": "Pala period is the most significant phase in the history of Buddhism in India. Enumerate.",
-      "theme": "Modern Indian History",
-      "themeId": "modern-history",
-      "themeParent": "",
-      "subthemes": [],
+      "theme": "Literature, Religion & Philosophy",
+      "themeId": "literature-religion",
+      "themeParent": "Indian Art & Culture",
+      "subthemes": [
+        "Modern India & Freedom Struggle"
+      ],
       "notes": {
         "introduction": "",
         "staticNotes": "",
@@ -720,9 +741,9 @@
       "number": 23,
       "marks": 10,
       "text": "Evaluate the policies of Lord Curzon and their long term implications on the national movement.",
-      "theme": "Indian Society",
-      "themeId": "indian-society",
-      "themeParent": "",
+      "theme": "Modern India & Freedom Struggle",
+      "themeId": "modern-history",
+      "themeParent": "Indian History",
       "subthemes": [],
       "notes": {
         "introduction": "",
@@ -739,11 +760,12 @@
       "number": 24,
       "marks": 10,
       "text": "Has caste lost its relevance in Understanding the multi-cultural Indian Society? Elaborate your answer with illustrations.",
-      "theme": "Indian Society",
-      "themeId": "indian-society",
-      "themeParent": "",
+      "theme": "Caste, Tribe & Social Structure",
+      "themeId": "caste-tribe",
+      "themeParent": "Indian Society",
       "subthemes": [
-        "Modern Indian History"
+        "Urbanization & Migration",
+        "Development & Inequality"
       ],
       "notes": {
         "introduction": "",
@@ -760,12 +782,10 @@
       "number": 25,
       "marks": 10,
       "text": "COVID-19 pandemic accelerated class inequalities and poverty in India. Comment.",
-      "theme": "Indian Society",
-      "themeId": "indian-society",
-      "themeParent": "",
-      "subthemes": [
-        "Modern Indian History"
-      ],
+      "theme": "Development & Inequality",
+      "themeId": "development-inequality",
+      "themeParent": "Indian Society",
+      "subthemes": [],
       "notes": {
         "introduction": "",
         "staticNotes": "",
@@ -781,11 +801,11 @@
       "number": 26,
       "marks": 15,
       "text": "DO you agree that regionalism in India appears to be a consequence Of rising cultural assertiveness? Argue.",
-      "theme": "Indian Society",
-      "themeId": "indian-society",
-      "themeParent": "",
+      "theme": "Urbanization & Migration",
+      "themeId": "urbanization-migration",
+      "themeParent": "Indian Society",
       "subthemes": [
-        "Modern Indian History"
+        "Development & Inequality"
       ],
       "notes": {
         "introduction": "",
@@ -802,12 +822,10 @@
       "number": 27,
       "marks": 15,
       "text": "Indian philosophy and tradition played a significant role in conceiving and shaping the monuments and their art in India. Discuss.",
-      "theme": "Indian Art & Culture",
-      "themeId": "art-culture",
-      "themeParent": "",
-      "subthemes": [
-        "Modern Indian History"
-      ],
+      "theme": "Literature, Religion & Philosophy",
+      "themeId": "literature-religion",
+      "themeParent": "Indian Art & Culture",
+      "subthemes": [],
       "notes": {
         "introduction": "",
         "staticNotes": "",
@@ -823,11 +841,11 @@
       "number": 28,
       "marks": 15,
       "text": "Persian literary sources of Medieval India reflect the spirit of the age. Comment.",
-      "theme": "Ancient & Medieval History",
+      "theme": "Ancient & Medieval India",
       "themeId": "ancient-medieval",
-      "themeParent": "",
+      "themeParent": "Indian History",
       "subthemes": [
-        "Modern Indian History"
+        "Modern India & Freedom Struggle"
       ],
       "notes": {
         "introduction": "",
@@ -844,9 +862,9 @@
       "number": 3,
       "marks": 10,
       "text": "Assess the main administrative issues and socio-cultural problems in the integration process of Indian Princely States.",
-      "theme": "Modern Indian History",
+      "theme": "Modern India & Freedom Struggle",
       "themeId": "modern-history",
-      "themeParent": "",
+      "themeParent": "Indian History",
       "subthemes": [],
       "notes": {
         "introduction": "",
@@ -863,9 +881,9 @@
       "number": 4,
       "marks": 10,
       "text": "Examine the uniqueness of tribal knowledge system when compared with mainstream knowledge and cultural systems.",
-      "theme": "Indian Society",
-      "themeId": "indian-society",
-      "themeParent": "",
+      "theme": "Caste, Tribe & Social Structure",
+      "themeId": "caste-tribe",
+      "themeParent": "Indian Society",
       "subthemes": [],
       "notes": {
         "introduction": "",
@@ -882,13 +900,10 @@
       "number": 5,
       "marks": 10,
       "text": "Examine the role of 'Gig Economy' in the process of empowerment of women in India.",
-      "theme": "Modern Indian History",
-      "themeId": "modern-history",
-      "themeParent": "",
-      "subthemes": [
-        "World History",
-        "Indian Society"
-      ],
+      "theme": "Women, Gender & Empowerment",
+      "themeId": "women-gender",
+      "themeParent": "Indian Society",
+      "subthemes": [],
       "notes": {
         "introduction": "",
         "staticNotes": "",
@@ -904,9 +919,9 @@
       "number": 6,
       "marks": 15,
       "text": "To what extent did the role of the Moderates prepare a base for the wider freedom movement? Comment.",
-      "theme": "Modern Indian History",
+      "theme": "Modern India & Freedom Struggle",
       "themeId": "modern-history",
-      "themeParent": "",
+      "themeParent": "Indian History",
       "subthemes": [],
       "notes": {
         "introduction": "",
@@ -923,9 +938,9 @@
       "number": 7,
       "marks": 15,
       "text": "Bring out the constructive programmes of Mahatma Gandhi during Non-Cooperation Movement and Civil Disobedience Movement.",
-      "theme": "Modern Indian History",
+      "theme": "Modern India & Freedom Struggle",
       "themeId": "modern-history",
-      "themeParent": "",
+      "themeParent": "Indian History",
       "subthemes": [],
       "notes": {
         "introduction": "",
@@ -944,8 +959,11 @@
       "text": "\"There arose a serious challenge to the Democratic State System between the two World Wars.\" Evaluate the statement.",
       "theme": "World History",
       "themeId": "world-history",
-      "themeParent": "",
-      "subthemes": [],
+      "themeParent": "World History & Geography",
+      "subthemes": [
+        "Caste, Tribe & Social Structure",
+        "Social Reform & Change"
+      ],
       "notes": {
         "introduction": "",
         "staticNotes": "",
@@ -961,13 +979,10 @@
       "number": 9,
       "marks": 15,
       "text": "What are the main socio-economic implications arising out of the development of IT industries in major cities of India?",
-      "theme": "Indian Art & Culture",
-      "themeId": "art-culture",
-      "themeParent": "",
-      "subthemes": [
-        "Ancient & Medieval History",
-        "Modern Indian History"
-      ],
+      "theme": "Social Reform & Change",
+      "themeId": "social-reform-change",
+      "themeParent": "Indian Society",
+      "subthemes": [],
       "notes": {
         "introduction": "",
         "staticNotes": "",
@@ -983,9 +998,9 @@
       "number": 1,
       "marks": 10,
       "text": "Since the decade Of the 1920s, the national movement acquired various ideological strands and thereby expanded its social base. Discuss.",
-      "theme": "Indian Society",
-      "themeId": "indian-society",
-      "themeParent": "",
+      "theme": "Modern India & Freedom Struggle",
+      "themeId": "modern-history",
+      "themeParent": "Indian History",
       "subthemes": [],
       "notes": {
         "introduction": "",
@@ -1002,12 +1017,10 @@
       "number": 10,
       "marks": 15,
       "text": "India has immense potential of solar energy though there are regional variations in its development. Elaborate",
-      "theme": "Indian Society",
-      "themeId": "indian-society",
-      "themeParent": "",
-      "subthemes": [
-        "Modern Indian History"
-      ],
+      "theme": "Indian Geography",
+      "themeId": "indian-geo",
+      "themeParent": "Geography",
+      "subthemes": [],
       "notes": {
         "introduction": "",
         "staticNotes": "",
@@ -1025,7 +1038,7 @@
       "text": "Examine the status of forest resources of India and its resultant impact on climate change.",
       "theme": "Physical Geography",
       "themeId": "physical-geo",
-      "themeParent": "",
+      "themeParent": "Geography",
       "subthemes": [
         "Indian Geography",
         "World Geography"
@@ -1045,11 +1058,11 @@
       "number": 12,
       "marks": 15,
       "text": "Account for the present location of iron and steel industries away from the source of raw material, by giving examples.",
-      "theme": "Indian Art & Culture",
-      "themeId": "art-culture",
-      "themeParent": "",
+      "theme": "Architecture & Sculpture",
+      "themeId": "architecture-sculpture",
+      "themeParent": "Indian Art & Culture",
       "subthemes": [
-        "Ancient & Medieval History"
+        "Indian Geography"
       ],
       "notes": {
         "introduction": "",
@@ -1066,12 +1079,10 @@
       "number": 13,
       "marks": 15,
       "text": "Account for the huge flooding of million cities in India including the smart ones like Hyderabad and Pune. Suggest lasting remedial measures.",
-      "theme": "Modern Indian History",
-      "themeId": "modern-history",
-      "themeParent": "",
-      "subthemes": [
-        "Indian Geography"
-      ],
+      "theme": "Physical Geography",
+      "themeId": "physical-geo",
+      "themeParent": "Geography",
+      "subthemes": [],
       "notes": {
         "introduction": "",
         "staticNotes": "",
@@ -1087,10 +1098,12 @@
       "number": 14,
       "marks": 10,
       "text": "Highlight the Central Asian and Greco-Bactrian elements in Gandhara art.",
-      "theme": "Indian Art & Culture",
-      "themeId": "art-culture",
-      "themeParent": "",
-      "subthemes": [],
+      "theme": "Architecture & Sculpture",
+      "themeId": "architecture-sculpture",
+      "themeParent": "Indian Art & Culture",
+      "subthemes": [
+        "Literature, Religion & Philosophy"
+      ],
       "notes": {
         "introduction": "",
         "staticNotes": "",
@@ -1106,10 +1119,12 @@
       "number": 15,
       "marks": 10,
       "text": "The 1857 Uprising was the culmination of the recurrent big and small local rebellions that had occurred in the preceding hundred years of British rule. Elucidate.",
-      "theme": "Modern Indian History",
+      "theme": "Modern India & Freedom Struggle",
       "themeId": "modern-history",
-      "themeParent": "",
-      "subthemes": [],
+      "themeParent": "Indian History",
+      "subthemes": [
+        "Urbanization & Migration"
+      ],
       "notes": {
         "introduction": "",
         "staticNotes": "",
@@ -1125,10 +1140,12 @@
       "number": 16,
       "marks": 10,
       "text": "Examine the linkages between the nineteenth century's 'Indian Renaissance' and the emergence of national identity.",
-      "theme": "Modern Indian History",
-      "themeId": "modern-history",
-      "themeParent": "",
-      "subthemes": [],
+      "theme": "Urbanization & Migration",
+      "themeId": "urbanization-migration",
+      "themeParent": "Indian Society",
+      "subthemes": [
+        "Modern India & Freedom Struggle"
+      ],
       "notes": {
         "introduction": "",
         "staticNotes": "",
@@ -1146,10 +1163,10 @@
       "text": "Can the strategy of regional resource-based manufacturing help in promoting employment in India ?",
       "theme": "Indian Geography",
       "themeId": "indian-geo",
-      "themeParent": "",
+      "themeParent": "Geography",
       "subthemes": [
         "World Geography",
-        "Indian Society"
+        "Development & Inequality"
       ],
       "notes": {
         "introduction": "",
@@ -1166,12 +1183,10 @@
       "number": 18,
       "marks": 15,
       "text": "What makes the Indian society unique in sustaining its culture ? Discuss.",
-      "theme": "Indian Society",
-      "themeId": "indian-society",
-      "themeParent": "",
-      "subthemes": [
-        "Modern Indian History"
-      ],
+      "theme": "Modern India & Freedom Struggle",
+      "themeId": "modern-history",
+      "themeParent": "Indian History",
+      "subthemes": [],
       "notes": {
         "introduction": "",
         "staticNotes": "",
@@ -1187,11 +1202,12 @@
       "number": 19,
       "marks": 15,
       "text": "\"Empowering women is the key to control population growth.\" Discuss.",
-      "theme": "World History",
-      "themeId": "world-history",
-      "themeParent": "",
+      "theme": "Women, Gender & Empowerment",
+      "themeId": "women-gender",
+      "themeParent": "Indian Society",
       "subthemes": [
-        "Indian Society"
+        "Social Reform & Change",
+        "World History"
       ],
       "notes": {
         "introduction": "",
@@ -1208,12 +1224,10 @@
       "number": 2,
       "marks": 10,
       "text": "Account for the huge flooding Of million cities in India including the smart ones like Hyderabad and Pune. Suggest lasting remedial measures.",
-      "theme": "Modern Indian History",
-      "themeId": "modern-history",
-      "themeParent": "",
-      "subthemes": [
-        "Indian Geography"
-      ],
+      "theme": "Physical Geography",
+      "themeId": "physical-geo",
+      "themeParent": "Geography",
+      "subthemes": [],
       "notes": {
         "introduction": "",
         "staticNotes": "",
@@ -1229,10 +1243,13 @@
       "number": 20,
       "marks": 10,
       "text": "What are the challenges to Our cultural practices in the name Of secularism ?",
-      "theme": "Indian Society",
-      "themeId": "indian-society",
-      "themeParent": "",
-      "subthemes": [],
+      "theme": "Caste, Tribe & Social Structure",
+      "themeId": "caste-tribe",
+      "themeParent": "Indian Society",
+      "subthemes": [
+        "Urbanization & Migration",
+        "Development & Inequality"
+      ],
       "notes": {
         "introduction": "",
         "staticNotes": "",
@@ -1248,9 +1265,9 @@
       "number": 21,
       "marks": 15,
       "text": "Many voices had strengthened and enriched the nationalist movement during the Gandhian phase. Elaborate.",
-      "theme": "Modern Indian History",
+      "theme": "Modern India & Freedom Struggle",
       "themeId": "modern-history",
-      "themeParent": "",
+      "themeParent": "Indian History",
       "subthemes": [],
       "notes": {
         "introduction": "",
@@ -1267,9 +1284,9 @@
       "number": 22,
       "marks": 10,
       "text": "Assess the role of British imperial power in complicating the process Of transfer of power during the 1940s.",
-      "theme": "Modern Indian History",
+      "theme": "Modern India & Freedom Struggle",
       "themeId": "modern-history",
-      "themeParent": "",
+      "themeParent": "Indian History",
       "subthemes": [
         "World History"
       ],
@@ -1290,7 +1307,7 @@
       "text": "Explain how the foundations of the modern world were laid b' the American and French Revolutions.",
       "theme": "World History",
       "themeId": "world-history",
-      "themeParent": "",
+      "themeParent": "World History & Geography",
       "subthemes": [
         "Post-Independence India"
       ],
@@ -1309,9 +1326,9 @@
       "number": 24,
       "marks": 10,
       "text": "How is emcient and affordable urban mass transport key to the rapid economic development of India ?",
-      "theme": "Modern Indian History",
-      "themeId": "modern-history",
-      "themeParent": "",
+      "theme": "Urbanization & Migration",
+      "themeId": "urbanization-migration",
+      "themeParent": "Indian Society",
       "subthemes": [],
       "notes": {
         "introduction": "",
@@ -1328,10 +1345,13 @@
       "number": 25,
       "marks": 15,
       "text": "Do we have cultural pockets of small India all over the nation ? Elaborate with examples.",
-      "theme": "Modern Indian History",
-      "themeId": "modern-history",
-      "themeParent": "",
-      "subthemes": [],
+      "theme": "Caste, Tribe & Social Structure",
+      "themeId": "caste-tribe",
+      "themeParent": "Indian Society",
+      "subthemes": [
+        "Urbanization & Migration",
+        "Development & Inequality"
+      ],
       "notes": {
         "introduction": "",
         "staticNotes": "",
@@ -1347,11 +1367,11 @@
       "number": 26,
       "marks": 15,
       "text": "What are the continued challenges for women in India against time and space ?",
-      "theme": "Modern Indian History",
-      "themeId": "modern-history",
-      "themeParent": "",
+      "theme": "Women, Gender & Empowerment",
+      "themeId": "women-gender",
+      "themeParent": "Indian Society",
       "subthemes": [
-        "Indian Society"
+        "Modern India & Freedom Struggle"
       ],
       "notes": {
         "introduction": "",
@@ -1368,9 +1388,9 @@
       "number": 27,
       "marks": 15,
       "text": "Are we losing our local identity for the global identity ? Discuss.",
-      "theme": "Indian Society",
-      "themeId": "indian-society",
-      "themeParent": "",
+      "theme": "Urbanization & Migration",
+      "themeId": "urbanization-migration",
+      "themeParent": "Indian Society",
       "subthemes": [],
       "notes": {
         "introduction": "",
@@ -1387,10 +1407,13 @@
       "number": 28,
       "marks": 10,
       "text": "Assess the impact of global warming on coral life system with examples.",
-      "theme": "Indian Society",
-      "themeId": "indian-society",
-      "themeParent": "",
-      "subthemes": [],
+      "theme": "Caste, Tribe & Social Structure",
+      "themeId": "caste-tribe",
+      "themeParent": "Indian Society",
+      "subthemes": [
+        "Urbanization & Migration",
+        "Social Reform & Change"
+      ],
       "notes": {
         "introduction": "",
         "staticNotes": "",
@@ -1408,7 +1431,7 @@
       "text": "How do ocean currents and water masses differ in their impacts on marine life and the coastal environment? Give suitable examples?",
       "theme": "Indian Geography",
       "themeId": "indian-geo",
-      "themeParent": "",
+      "themeParent": "Geography",
       "subthemes": [
         "World Geography"
       ],
@@ -1427,11 +1450,12 @@
       "number": 3,
       "marks": 10,
       "text": "Is diversity and pluralism in India under threat due to globalisation? Justify your answer.",
-      "theme": "Indian Society",
-      "themeId": "indian-society",
-      "themeParent": "",
+      "theme": "World Geography",
+      "themeId": "world-geo",
+      "themeParent": "World History & Geography",
       "subthemes": [
-        "Modern Indian History"
+        "Modern India & Freedom Struggle",
+        "Urbanization & Migration"
       ],
       "notes": {
         "introduction": "",
@@ -1448,9 +1472,9 @@
       "number": 4,
       "marks": 10,
       "text": "Customs and traditions suppress reason leading to obscurantism. DO you agree?",
-      "theme": "Indian Society",
-      "themeId": "indian-society",
-      "themeParent": "",
+      "theme": "Literature, Religion & Philosophy",
+      "themeId": "literature-religion",
+      "themeParent": "Indian Art & Culture",
       "subthemes": [],
       "notes": {
         "introduction": "",
@@ -1467,9 +1491,9 @@
       "number": 5,
       "marks": 10,
       "text": "How have digital initiatives in India contributed to the functioning Of the education system in the country? Elaborate on your answer.",
-      "theme": "Modern Indian History",
-      "themeId": "modern-history",
-      "themeParent": "",
+      "theme": "Social Reform & Change",
+      "themeId": "social-reform-change",
+      "themeParent": "Indian Society",
       "subthemes": [],
       "notes": {
         "introduction": "",
@@ -1486,9 +1510,9 @@
       "number": 6,
       "marks": 10,
       "text": "Discuss the geophysical characteristics of Circum-Pacific Zone.",
-      "theme": "Indian Society",
-      "themeId": "indian-society",
-      "themeParent": "",
+      "theme": "Physical Geography",
+      "themeId": "physical-geo",
+      "themeParent": "Geography",
       "subthemes": [],
       "notes": {
         "introduction": "",
@@ -1505,9 +1529,9 @@
       "number": 7,
       "marks": 15,
       "text": "The process of desertification does not have climatic boundaries. Justify with examples.",
-      "theme": "Indian Society",
-      "themeId": "indian-society",
-      "themeParent": "",
+      "theme": "Physical Geography",
+      "themeId": "physical-geo",
+      "themeParent": "Geography",
       "subthemes": [],
       "notes": {
         "introduction": "",
@@ -1524,10 +1548,11 @@
       "number": 8,
       "marks": 15,
       "text": "How will the melting of Himalayan glaciers have a far-reaching impact on the water resources of India?",
-      "theme": "Indian Geography",
-      "themeId": "indian-geo",
-      "themeParent": "",
+      "theme": "Physical Geography",
+      "themeId": "physical-geo",
+      "themeParent": "Geography",
       "subthemes": [
+        "Indian Geography",
         "World Geography"
       ],
       "notes": {
@@ -1547,7 +1572,7 @@
       "text": "The interlinking of rivers can provide viable solutions to the multi-dimensional inter-related problems of droughts, floods and interrupted navigation. Critically examine.",
       "theme": "Indian Geography",
       "themeId": "indian-geo",
-      "themeParent": "",
+      "themeParent": "Geography",
       "subthemes": [],
       "notes": {
         "introduction": "",
@@ -1566,7 +1591,7 @@
       "text": "Discuss the causes of depletion of mangroves and explain their importance in maintaining coastal ecology.",
       "theme": "Indian Geography",
       "themeId": "indian-geo",
-      "themeParent": "",
+      "themeParent": "Geography",
       "subthemes": [],
       "notes": {
         "introduction": "",
@@ -1583,9 +1608,9 @@
       "number": 10,
       "marks": 15,
       "text": "Throw light on the significance of the thoughts of Mahatma Gandhi in the present times.",
-      "theme": "Modern Indian History",
+      "theme": "Modern India & Freedom Struggle",
       "themeId": "modern-history",
-      "themeParent": "",
+      "themeParent": "Indian History",
       "subthemes": [],
       "notes": {
         "introduction": "",
@@ -1602,11 +1627,12 @@
       "number": 11,
       "marks": 15,
       "text": "\"Caste system is assuming new identities and associational forms. Hence, caste system cannot be eradicated in India.\" Comment.",
-      "theme": "Modern Indian History",
-      "themeId": "modern-history",
-      "themeParent": "",
+      "theme": "Caste, Tribe & Social Structure",
+      "themeId": "caste-tribe",
+      "themeParent": "Indian Society",
       "subthemes": [
-        "Indian Society"
+        "Modern India & Freedom Struggle",
+        "Social Reform & Change"
       ],
       "notes": {
         "introduction": "",
@@ -1623,12 +1649,10 @@
       "number": 12,
       "marks": 15,
       "text": "Despite implementation Of various programmes for eradication Of poverty by the government in India, poverty is still existing.' Explain by giving reasons.",
-      "theme": "Indian Society",
-      "themeId": "indian-society",
-      "themeParent": "",
-      "subthemes": [
-        "Modern Indian History"
-      ],
+      "theme": "Development & Inequality",
+      "themeId": "development-inequality",
+      "themeParent": "Indian Society",
+      "subthemes": [],
       "notes": {
         "introduction": "",
         "staticNotes": "",
@@ -1644,9 +1668,9 @@
       "number": 13,
       "marks": 15,
       "text": "How the Indian concept of secularism is different from the western model of secularism? Discuss.",
-      "theme": "Modern Indian History",
+      "theme": "Modern India & Freedom Struggle",
       "themeId": "modern-history",
-      "themeParent": "",
+      "themeParent": "Indian History",
       "subthemes": [],
       "notes": {
         "introduction": "",
@@ -1663,10 +1687,12 @@
       "number": 14,
       "marks": 15,
       "text": "The Bhakti movement received a remarkable re-orientation With the advent Of Sri Chaitanya Mahaprabhu- Discuss.",
-      "theme": "Ancient & Medieval History",
-      "themeId": "ancient-medieval",
-      "themeParent": "",
-      "subthemes": [],
+      "theme": "Modern India & Freedom Struggle",
+      "themeId": "modern-history",
+      "themeParent": "Indian History",
+      "subthemes": [
+        "Literature, Religion & Philosophy"
+      ],
       "notes": {
         "introduction": "",
         "staticNotes": "",
@@ -1682,10 +1708,12 @@
       "number": 15,
       "marks": 10,
       "text": "Discuss whether formation of new states in recent times is beneficial or not for the economy of India.",
-      "theme": "Modern Indian History",
+      "theme": "Modern India & Freedom Struggle",
       "themeId": "modern-history",
-      "themeParent": "",
-      "subthemes": [],
+      "themeParent": "Indian History",
+      "subthemes": [
+        "Women, Gender & Empowerment"
+      ],
       "notes": {
         "introduction": "",
         "staticNotes": "",
@@ -1701,10 +1729,12 @@
       "number": 16,
       "marks": 15,
       "text": "Why indentured labour Was taken by the British from India to Other colonies? Have they been able to preserve their cultural identity over there?",
-      "theme": "Modern Indian History",
-      "themeId": "modern-history",
-      "themeParent": "",
-      "subthemes": [],
+      "theme": "Urbanization & Migration",
+      "themeId": "urbanization-migration",
+      "themeParent": "Indian Society",
+      "subthemes": [
+        "Modern India & Freedom Struggle"
+      ],
       "notes": {
         "introduction": "",
         "staticNotes": "",
@@ -1720,10 +1750,12 @@
       "number": 17,
       "marks": 10,
       "text": "Mention core strategies for the transformation Of aspirational districts in India and explain the nature of convergence, collaboration and competition for its success.",
-      "theme": "Modern Indian History",
-      "themeId": "modern-history",
-      "themeParent": "",
-      "subthemes": [],
+      "theme": "Development & Inequality",
+      "themeId": "development-inequality",
+      "themeParent": "Indian Society",
+      "subthemes": [
+        "Modern India & Freedom Struggle"
+      ],
       "notes": {
         "introduction": "",
         "staticNotes": "",
@@ -1739,11 +1771,12 @@
       "number": 18,
       "marks": 15,
       "text": "Women's movement in India has not addressed the issues of women of lower social strata.' Substantiate your view.",
-      "theme": "Modern Indian History",
+      "theme": "Modern India & Freedom Struggle",
       "themeId": "modern-history",
-      "themeParent": "",
+      "themeParent": "Indian History",
       "subthemes": [
-        "Indian Society"
+        "Women, Gender & Empowerment",
+        "Development & Inequality"
       ],
       "notes": {
         "introduction": "",
@@ -1760,10 +1793,13 @@
       "number": 19,
       "marks": 15,
       "text": "Globalization is generally said to promote cultural homogenization but due to this cultural specificities appear to be strengthened in the Indian Society.' Elucidate.",
-      "theme": "Indian Society",
-      "themeId": "indian-society",
-      "themeParent": "",
-      "subthemes": [],
+      "theme": "Urbanization & Migration",
+      "themeId": "urbanization-migration",
+      "themeParent": "Indian Society",
+      "subthemes": [
+        "Caste, Tribe & Social Structure",
+        "Development & Inequality"
+      ],
       "notes": {
         "introduction": "",
         "staticNotes": "",
@@ -1779,10 +1815,12 @@
       "number": 2,
       "marks": 10,
       "text": "How can the mountain ecosystem be restored from the negative impact of development initiatives and tourism?",
-      "theme": "Indian Society",
-      "themeId": "indian-society",
-      "themeParent": "",
-      "subthemes": [],
+      "theme": "Social Reform & Change",
+      "themeId": "social-reform-change",
+      "themeParent": "Indian Society",
+      "subthemes": [
+        "Caste, Tribe & Social Structure"
+      ],
       "notes": {
         "introduction": "",
         "staticNotes": "",
@@ -1798,9 +1836,9 @@
       "number": 20,
       "marks": 10,
       "text": "Communalism arises either due to power struggle or relative deprivation.' Argue by giving suitable illustrations.",
-      "theme": "Modern Indian History",
+      "theme": "Modern India & Freedom Struggle",
       "themeId": "modern-history",
-      "themeParent": "",
+      "themeParent": "Indian History",
       "subthemes": [
         "World History"
       ],
@@ -1821,10 +1859,10 @@
       "text": "Why is India taking keen interest in resources of Artic region?",
       "theme": "Indian Geography",
       "themeId": "indian-geo",
-      "themeParent": "",
+      "themeParent": "Geography",
       "subthemes": [
         "World Geography",
-        "Modern Indian History"
+        "Modern India & Freedom Struggle"
       ],
       "notes": {
         "introduction": "",
@@ -1841,11 +1879,12 @@
       "number": 22,
       "marks": 10,
       "text": "Why is Indian Regional Navigational Satellite System (IRNSS) needed? How does it help in navigation?",
-      "theme": "Indian Society",
-      "themeId": "indian-society",
-      "themeParent": "",
+      "theme": "Indian Geography",
+      "themeId": "indian-geo",
+      "themeParent": "Geography",
       "subthemes": [
-        "Modern Indian History"
+        "World Geography",
+        "Development & Inequality"
       ],
       "notes": {
         "introduction": "",
@@ -1864,7 +1903,7 @@
       "text": "Define mantle plume and explain its role in plate tectonics.",
       "theme": "Physical Geography",
       "themeId": "physical-geo",
-      "themeParent": "",
+      "themeParent": "Geography",
       "subthemes": [],
       "notes": {
         "introduction": "",
@@ -1881,10 +1920,12 @@
       "number": 24,
       "marks": 10,
       "text": "What are the consequences of spreading of Dead Zones on marine ecosystem?",
-      "theme": "Indian Society",
-      "themeId": "indian-society",
-      "themeParent": "",
-      "subthemes": [],
+      "theme": "Caste, Tribe & Social Structure",
+      "themeId": "caste-tribe",
+      "themeParent": "Indian Society",
+      "subthemes": [
+        "Social Reform & Change"
+      ],
       "notes": {
         "introduction": "",
         "staticNotes": "",
@@ -1900,11 +1941,12 @@
       "number": 25,
       "marks": 15,
       "text": "Women's movement in India has not addressed the issue of women of lower social strata. Substantiate your view.",
-      "theme": "Modern Indian History",
+      "theme": "Modern India & Freedom Struggle",
       "themeId": "modern-history",
-      "themeParent": "",
+      "themeParent": "Indian History",
       "subthemes": [
-        "Indian Society"
+        "Women, Gender & Empowerment",
+        "Social Reform & Change"
       ],
       "notes": {
         "introduction": "",
@@ -1923,7 +1965,7 @@
       "text": "Define blue revolution, explain the problems and strategies for pisciculture development in India.",
       "theme": "Post-Independence India",
       "themeId": "post-independence",
-      "themeParent": "",
+      "themeParent": "Indian History",
       "subthemes": [
         "World History"
       ],
@@ -1944,10 +1986,10 @@
       "text": "What is the significance of Industrial Corridors in India? Identify industrial corridors, explain their main characteristics.",
       "theme": "World History",
       "themeId": "world-history",
-      "themeParent": "",
+      "themeParent": "World History & Geography",
       "subthemes": [
-        "Indian Art & Culture",
-        "Ancient & Medieval History"
+        "Literature, Religion & Philosophy",
+        "Ancient & Medieval India"
       ],
       "notes": {
         "introduction": "",
@@ -1966,10 +2008,10 @@
       "text": "“The ideal solution of depleting ground water resources in India is water harvesting system.” How can it be made effective in urban areas?",
       "theme": "Indian Geography",
       "themeId": "indian-geo",
-      "themeParent": "",
+      "themeParent": "Geography",
       "subthemes": [
         "World Geography",
-        "Modern Indian History"
+        "Urbanization & Migration"
       ],
       "notes": {
         "introduction": "",
@@ -1986,11 +2028,12 @@
       "number": 29,
       "marks": 10,
       "text": "How do you justify the view that the level of excellence of the Gupta numismatic art is not at all noticeable in later times ? (150 words)",
-      "theme": "Ancient & Medieval History",
-      "themeId": "ancient-medieval",
-      "themeParent": "",
+      "theme": "Architecture & Sculpture",
+      "themeId": "architecture-sculpture",
+      "themeParent": "Indian Art & Culture",
       "subthemes": [
-        "Indian Art & Culture"
+        "Literature, Religion & Philosophy",
+        "Ancient & Medieval India"
       ],
       "notes": {
         "introduction": "",
@@ -2007,11 +2050,12 @@
       "number": 3,
       "marks": 10,
       "text": "What is water stress? How and why does it differ regionally in India?",
-      "theme": "Indian Society",
-      "themeId": "indian-society",
-      "themeParent": "",
+      "theme": "Indian Geography",
+      "themeId": "indian-geo",
+      "themeParent": "Geography",
       "subthemes": [
-        "Modern Indian History"
+        "World Geography",
+        "Development & Inequality"
       ],
       "notes": {
         "introduction": "",
@@ -2028,9 +2072,9 @@
       "number": 30,
       "marks": 15,
       "text": "Clarify how mid-eighteenth century India was beset with the spectre of a fragmented polity. (150 words)",
-      "theme": "Modern Indian History",
+      "theme": "Modern India & Freedom Struggle",
       "themeId": "modern-history",
-      "themeParent": "",
+      "themeParent": "Indian History",
       "subthemes": [],
       "notes": {
         "introduction": "",
@@ -2047,9 +2091,9 @@
       "number": 31,
       "marks": 10,
       "text": "Why did the 'Moderates' fail to carry conviction with the nation about their proclaimed ideology and political goals by the end of the nineteenth century ? (150 words)",
-      "theme": "Modern Indian History",
+      "theme": "Modern India & Freedom Struggle",
       "themeId": "modern-history",
-      "themeParent": "",
+      "themeParent": "Indian History",
       "subthemes": [],
       "notes": {
         "introduction": "",
@@ -2068,7 +2112,7 @@
       "text": "What problems were germane to the decolonization process in the Malay Peninsula ? (150 words)",
       "theme": "World History",
       "themeId": "world-history",
-      "themeParent": "",
+      "themeParent": "World History & Geography",
       "subthemes": [
         "Indian Geography"
       ],
@@ -2087,11 +2131,12 @@
       "number": 4,
       "marks": 10,
       "text": "Empowering women is the key to control population growth. Discuss",
-      "theme": "World History",
-      "themeId": "world-history",
-      "themeParent": "",
+      "theme": "Women, Gender & Empowerment",
+      "themeId": "women-gender",
+      "themeParent": "Indian Society",
       "subthemes": [
-        "Indian Society"
+        "Social Reform & Change",
+        "World History"
       ],
       "notes": {
         "introduction": "",
@@ -2108,11 +2153,11 @@
       "number": 5,
       "marks": 10,
       "text": "What are the continued challenges for women in India against time and space?",
-      "theme": "Modern Indian History",
-      "themeId": "modern-history",
-      "themeParent": "",
+      "theme": "Women, Gender & Empowerment",
+      "themeId": "women-gender",
+      "themeParent": "Indian Society",
       "subthemes": [
-        "Indian Society"
+        "Modern India & Freedom Struggle"
       ],
       "notes": {
         "introduction": "",
@@ -2129,13 +2174,10 @@
       "number": 6,
       "marks": 10,
       "text": "Discuss the factors for localization of agro-based food processing industries of North-West India.",
-      "theme": "Indian Art & Culture",
-      "themeId": "art-culture",
-      "themeParent": "",
-      "subthemes": [
-        "Ancient & Medieval History",
-        "Modern Indian History"
-      ],
+      "theme": "Indian Geography",
+      "themeId": "indian-geo",
+      "themeParent": "Geography",
+      "subthemes": [],
       "notes": {
         "introduction": "",
         "staticNotes": "",
@@ -2151,9 +2193,9 @@
       "number": 7,
       "marks": 10,
       "text": "How is efficient and affordable urban mass transport key to the rapid economic development of India?",
-      "theme": "Modern Indian History",
-      "themeId": "modern-history",
-      "themeParent": "",
+      "theme": "Urbanization & Migration",
+      "themeId": "urbanization-migration",
+      "themeParent": "Indian Society",
       "subthemes": [],
       "notes": {
         "introduction": "",
@@ -2170,12 +2212,10 @@
       "number": 8,
       "marks": 15,
       "text": "Safeguarding the Indian art heritage is the need of the moment. Discuss.",
-      "theme": "Indian Art & Culture",
-      "themeId": "art-culture",
-      "themeParent": "",
-      "subthemes": [
-        "Modern Indian History"
-      ],
+      "theme": "Heritage & Performing Arts",
+      "themeId": "heritage-performing-arts",
+      "themeParent": "Indian Art & Culture",
+      "subthemes": [],
       "notes": {
         "introduction": "",
         "staticNotes": "",
@@ -2191,9 +2231,9 @@
       "number": 9,
       "marks": 15,
       "text": "Assess the importance of the accounts of the Chinese and Arab travellers in the reconstruction of the history Of India.",
-      "theme": "Modern Indian History",
+      "theme": "Modern India & Freedom Struggle",
       "themeId": "modern-history",
-      "themeParent": "",
+      "themeParent": "Indian History",
       "subthemes": [],
       "notes": {
         "introduction": "",
@@ -2210,11 +2250,12 @@
       "number": 1,
       "marks": 10,
       "text": "In the context of the diversity of India, can it be said that the regions form cultural units rather than the States ? Give reasons with examples for your viewpoint. (150 words)",
-      "theme": "Indian Society",
-      "themeId": "indian-society",
-      "themeParent": "",
+      "theme": "Modern India & Freedom Struggle",
+      "themeId": "modern-history",
+      "themeParent": "Indian History",
       "subthemes": [
-        "Modern Indian History"
+        "World Geography",
+        "Caste, Tribe & Social Structure"
       ],
       "notes": {
         "introduction": "",
@@ -2231,9 +2272,9 @@
       "number": 10,
       "marks": 15,
       "text": "In spite of adverse environmental impact, coal mining is still inevitable for development.” Discuss.",
-      "theme": "Indian Society",
-      "themeId": "indian-society",
-      "themeParent": "",
+      "theme": "Indian Geography",
+      "themeId": "indian-geo",
+      "themeParent": "Geography",
       "subthemes": [],
       "notes": {
         "introduction": "",
@@ -2250,9 +2291,9 @@
       "number": 11,
       "marks": 15,
       "text": "Mention the advantages of the cultivation of pulse because of which the year 2016 was declared as the International Year of Pulses by the United Nations.",
-      "theme": "Indian Society",
-      "themeId": "indian-society",
-      "themeParent": "",
+      "theme": "Modern India & Freedom Struggle",
+      "themeId": "modern-history",
+      "themeParent": "Indian History",
       "subthemes": [],
       "notes": {
         "introduction": "",
@@ -2271,8 +2312,10 @@
       "text": "How does the cryosphere affect global climate?",
       "theme": "Physical Geography",
       "themeId": "physical-geo",
-      "themeParent": "",
-      "subthemes": [],
+      "themeParent": "Geography",
+      "subthemes": [
+        "Urbanization & Migration"
+      ],
       "notes": {
         "introduction": "",
         "staticNotes": "",
@@ -2288,10 +2331,12 @@
       "number": 13,
       "marks": 15,
       "text": "Account for variations in oceanic salinity and discuss its multi-dimensional effects.",
-      "theme": "World Geography",
-      "themeId": "world-geo",
-      "themeParent": "",
-      "subthemes": [],
+      "theme": "Indian Geography",
+      "themeId": "indian-geo",
+      "themeParent": "Geography",
+      "subthemes": [
+        "World Geography"
+      ],
       "notes": {
         "introduction": "",
         "staticNotes": "",
@@ -2309,9 +2354,10 @@
       "text": "In what way can flood be converted into a sustainable source of irrigation and all-weather inland navigation in India?",
       "theme": "Indian Geography",
       "themeId": "indian-geo",
-      "themeParent": "",
+      "themeParent": "Geography",
       "subthemes": [
-        "Modern Indian History"
+        "Physical Geography",
+        "Modern India & Freedom Struggle"
       ],
       "notes": {
         "introduction": "",
@@ -2330,8 +2376,10 @@
       "text": "What characteristics can be assigned to monsoon climate that succeeds in feeding more than 50 percent of the won population residing in Monsoon Asia?",
       "theme": "Physical Geography",
       "themeId": "physical-geo",
-      "themeParent": "",
-      "subthemes": [],
+      "themeParent": "Geography",
+      "subthemes": [
+        "Social Reform & Change"
+      ],
       "notes": {
         "introduction": "",
         "staticNotes": "",
@@ -2347,10 +2395,12 @@
       "number": 16,
       "marks": 10,
       "text": "Petroleum refineries are not necessarily located nearer to crude oil producing areas, particularly in many of the developing countries. Explain its implications.",
-      "theme": "Indian Society",
-      "themeId": "indian-society",
-      "themeParent": "",
-      "subthemes": [],
+      "theme": "Urbanization & Migration",
+      "themeId": "urbanization-migration",
+      "themeParent": "Indian Society",
+      "subthemes": [
+        "Social Reform & Change"
+      ],
       "notes": {
         "introduction": "",
         "staticNotes": "",
@@ -2366,9 +2416,9 @@
       "number": 17,
       "marks": 10,
       "text": "The growth of cities as I.T. hubs has opened up new avenues employment but has also created new problems. Substantiate this statement with examples. Urbanization",
-      "theme": "Indian Society",
-      "themeId": "indian-society",
-      "themeParent": "",
+      "theme": "Urbanization & Migration",
+      "themeId": "urbanization-migration",
+      "themeParent": "Indian Society",
       "subthemes": [],
       "notes": {
         "introduction": "",
@@ -2385,10 +2435,13 @@
       "number": 18,
       "marks": 15,
       "text": "Early Buddhist Stupa-art, while depicting folk motifs and narratives successfully expounds Buddhist ideals. Elucidate.",
-      "theme": "Indian Art & Culture",
-      "themeId": "art-culture",
-      "themeParent": "",
-      "subthemes": [],
+      "theme": "Heritage & Performing Arts",
+      "themeId": "heritage-performing-arts",
+      "themeParent": "Indian Art & Culture",
+      "subthemes": [
+        "Architecture & Sculpture",
+        "Literature, Religion & Philosophy"
+      ],
       "notes": {
         "introduction": "",
         "staticNotes": "",
@@ -2404,11 +2457,12 @@
       "number": 19,
       "marks": 15,
       "text": "Krishnadeva Raya, the King of Vijayanagar, was not only an accomplished scholar himself but was also a great patron of learning and literature. Discuss.",
-      "theme": "Indian Art & Culture",
-      "themeId": "art-culture",
-      "themeParent": "",
+      "theme": "Literature, Religion & Philosophy",
+      "themeId": "literature-religion",
+      "themeParent": "Indian Art & Culture",
       "subthemes": [
-        "Ancient & Medieval History"
+        "Architecture & Sculpture",
+        "Ancient & Medieval India"
       ],
       "notes": {
         "introduction": "",
@@ -2425,11 +2479,12 @@
       "number": 2,
       "marks": 10,
       "text": "What are the two major legal initiatives by the State since Independence, addressing discrimination against Scheduled Tribes (STs) ? (150 words)",
-      "theme": "Modern Indian History",
-      "themeId": "modern-history",
-      "themeParent": "",
+      "theme": "Caste, Tribe & Social Structure",
+      "themeId": "caste-tribe",
+      "themeParent": "Indian Society",
       "subthemes": [
-        "Indian Society"
+        "Social Reform & Change",
+        "Modern India & Freedom Struggle"
       ],
       "notes": {
         "introduction": "",
@@ -2446,9 +2501,9 @@
       "number": 20,
       "marks": 15,
       "text": "Explain how the Uprising of 1857 constitutes an important watershed in the evolution of British policies towards colonial India.",
-      "theme": "Modern Indian History",
+      "theme": "Modern India & Freedom Struggle",
       "themeId": "modern-history",
-      "themeParent": "",
+      "themeParent": "Indian History",
       "subthemes": [],
       "notes": {
         "introduction": "",
@@ -2465,10 +2520,12 @@
       "number": 21,
       "marks": 15,
       "text": "Discuss the role of women in the freedom struggle especially during the Gandhian phase.",
-      "theme": "Modern Indian History",
+      "theme": "Modern India & Freedom Struggle",
       "themeId": "modern-history",
-      "themeParent": "",
-      "subthemes": [],
+      "themeParent": "Indian History",
+      "subthemes": [
+        "Women, Gender & Empowerment"
+      ],
       "notes": {
         "introduction": "",
         "staticNotes": "",
@@ -2484,9 +2541,9 @@
       "number": 22,
       "marks": 10,
       "text": "Highlight the differences in the approach of Subhash Chandra Bose and Mahatma Gandhi in the struggle for freedom.",
-      "theme": "Modern Indian History",
+      "theme": "Modern India & Freedom Struggle",
       "themeId": "modern-history",
-      "themeParent": "",
+      "themeParent": "Indian History",
       "subthemes": [],
       "notes": {
         "introduction": "",
@@ -2503,11 +2560,11 @@
       "number": 23,
       "marks": 10,
       "text": "Has the formation Of linguistic States strengthened the cause of Indian Unity?",
-      "theme": "Post-Independence India",
-      "themeId": "post-independence",
-      "themeParent": "",
+      "theme": "Modern India & Freedom Struggle",
+      "themeId": "modern-history",
+      "themeParent": "Indian History",
       "subthemes": [
-        "Modern Indian History"
+        "Post-Independence India"
       ],
       "notes": {
         "introduction": "",
@@ -2524,9 +2581,9 @@
       "number": 24,
       "marks": 10,
       "text": "The anti-colonial struggles in West Africa were led by the new elite of Western-educated Africans. Examine.",
-      "theme": "Modern Indian History",
+      "theme": "Modern India & Freedom Struggle",
       "themeId": "modern-history",
-      "themeParent": "",
+      "themeParent": "Indian History",
       "subthemes": [],
       "notes": {
         "introduction": "",
@@ -2543,10 +2600,13 @@
       "number": 25,
       "marks": 10,
       "text": "To what extent globalization has influenctxl the core Of cultural diversity in India? Explain.",
-      "theme": "Indian Society",
-      "themeId": "indian-society",
-      "themeParent": "",
-      "subthemes": [],
+      "theme": "Urbanization & Migration",
+      "themeId": "urbanization-migration",
+      "themeParent": "Indian Society",
+      "subthemes": [
+        "World Geography",
+        "Caste, Tribe & Social Structure"
+      ],
       "notes": {
         "introduction": "",
         "staticNotes": "",
@@ -2562,9 +2622,9 @@
       "number": 26,
       "marks": 15,
       "text": "\"An essential condition to eradicate poverty is to liberate the poor from the process of deprivation.\" Substantiate this statement with suitable examples.",
-      "theme": "Indian Society",
-      "themeId": "indian-society",
-      "themeParent": "",
+      "theme": "Development & Inequality",
+      "themeId": "development-inequality",
+      "themeParent": "Indian Society",
       "subthemes": [],
       "notes": {
         "introduction": "",
@@ -2581,12 +2641,10 @@
       "number": 27,
       "marks": 15,
       "text": "Why are the tribals in India referred to as the Scheduled Tribes? Indicate the major provisions enshrined in the Constitution of India for their upliftment.",
-      "theme": "Modern Indian History",
-      "themeId": "modern-history",
-      "themeParent": "",
-      "subthemes": [
-        "Indian Society"
-      ],
+      "theme": "Caste, Tribe & Social Structure",
+      "themeId": "caste-tribe",
+      "themeParent": "Indian Society",
+      "subthemes": [],
       "notes": {
         "introduction": "",
         "staticNotes": "",
@@ -2602,9 +2660,9 @@
       "number": 28,
       "marks": 15,
       "text": "With a brief background of quality of urban life in India, introduce the objectives and of the 'Smart City Programme'.",
-      "theme": "Modern Indian History",
-      "themeId": "modern-history",
-      "themeParent": "",
+      "theme": "Urbanization & Migration",
+      "themeId": "urbanization-migration",
+      "themeParent": "Indian Society",
       "subthemes": [],
       "notes": {
         "introduction": "",
@@ -2623,9 +2681,10 @@
       "text": "What is the basis of regionalism? Is it that unequal distribution of benefits of development on regional basis eventually promotes regionalism? Substantiate your answer.",
       "theme": "World Geography",
       "themeId": "world-geo",
-      "themeParent": "",
+      "themeParent": "World History & Geography",
       "subthemes": [
-        "Indian Society"
+        "Indian Geography",
+        "Urbanization & Migration"
       ],
       "notes": {
         "introduction": "",
@@ -2642,12 +2701,10 @@
       "number": 3,
       "marks": 10,
       "text": "The spirit of tolerance and love is not only an interesting feature of Indian Society from very early times, but it is also playing an important part at the present. Elaborate. (250 words)",
-      "theme": "Indian Society",
-      "themeId": "indian-society",
-      "themeParent": "",
-      "subthemes": [
-        "Modern Indian History"
-      ],
+      "theme": "Modern India & Freedom Struggle",
+      "themeId": "modern-history",
+      "themeParent": "Indian History",
+      "subthemes": [],
       "notes": {
         "introduction": "",
         "staticNotes": "",
@@ -2663,12 +2720,12 @@
       "number": 4,
       "marks": 10,
       "text": "Examine how the decline of traditional artisanal industry in colonial India crippled the rural economy. (250 words)",
-      "theme": "Modern Indian History",
-      "themeId": "modern-history",
-      "themeParent": "",
+      "theme": "Literature, Religion & Philosophy",
+      "themeId": "literature-religion",
+      "themeParent": "Indian Art & Culture",
       "subthemes": [
-        "Indian Art & Culture",
-        "Ancient & Medieval History"
+        "Modern India & Freedom Struggle",
+        "Women, Gender & Empowerment"
       ],
       "notes": {
         "introduction": "",
@@ -2685,9 +2742,9 @@
       "number": 5,
       "marks": 10,
       "text": "Highlight the importance of the new objectives that got added to the vision of Indian independence since the twenties of the last century. (250 words)",
-      "theme": "Modern Indian History",
+      "theme": "Modern India & Freedom Struggle",
       "themeId": "modern-history",
-      "themeParent": "",
+      "themeParent": "Indian History",
       "subthemes": [],
       "notes": {
         "introduction": "",
@@ -2704,11 +2761,12 @@
       "number": 6,
       "marks": 10,
       "text": "The women's questions arose in modern India as a part of the 19 century reform movement. What were the major issues and debates concerning women in that period ? (250 words)",
-      "theme": "Modern Indian History",
+      "theme": "Modern India & Freedom Struggle",
       "themeId": "modern-history",
-      "themeParent": "",
+      "themeParent": "Indian History",
       "subthemes": [
-        "Indian Society"
+        "Women, Gender & Empowerment",
+        "Social Reform & Change"
       ],
       "notes": {
         "introduction": "",
@@ -2725,9 +2783,9 @@
       "number": 7,
       "marks": 15,
       "text": "Distinguish betwæn religiousness/religiosity and communalism giving one example of how the former has got transformed into the latter in independent India. (250 words)",
-      "theme": "Modern Indian History",
+      "theme": "Modern India & Freedom Struggle",
       "themeId": "modern-history",
-      "themeParent": "",
+      "themeParent": "Indian History",
       "subthemes": [],
       "notes": {
         "introduction": "",
@@ -2744,10 +2802,12 @@
       "number": 8,
       "marks": 15,
       "text": "\"The growth of cities as I.T. hubs has opened up new avenues of employment, but has also created new problems.\" Substantiat.e this statement with examples. (250 words)",
-      "theme": "Indian Society",
-      "themeId": "indian-society",
-      "themeParent": "",
-      "subthemes": [],
+      "theme": "Physical Geography",
+      "themeId": "physical-geo",
+      "themeParent": "Geography",
+      "subthemes": [
+        "Social Reform & Change"
+      ],
       "notes": {
         "introduction": "",
         "staticNotes": "",
@@ -2763,8 +2823,8 @@
       "number": 9,
       "marks": 15,
       "text": "How does the Juno Mission of NASA help to understand the origin and evolution of the Earth?",
-      "theme": "Indian Society",
-      "themeId": "indian-society",
+      "theme": "Development & Inequality",
+      "themeId": "development-inequality",
       "themeParent": "",
       "subthemes": [],
       "notes": {
@@ -2784,7 +2844,7 @@
       "text": "“The Himalayas are highly prone to landslides.” Discuss the causes and suggest suitable measures of mitigation.",
       "theme": "Indian Geography",
       "themeId": "indian-geo",
-      "themeParent": "",
+      "themeParent": "Geography",
       "subthemes": [],
       "notes": {
         "introduction": "",
@@ -2803,7 +2863,7 @@
       "text": "Why did the industrial revolution first occur in England ? Discuss the quality of life of the people there during the industrialization. How does it compare with that in India at present ?",
       "theme": "Post-Independence India",
       "themeId": "post-independence",
-      "themeParent": "",
+      "themeParent": "Indian History",
       "subthemes": [
         "World History"
       ],
@@ -2824,7 +2884,7 @@
       "text": "To what extent can Germany be held responsible for causing the two World Wars ? Discuss critically.",
       "theme": "World History",
       "themeId": "world-history",
-      "themeParent": "",
+      "themeParent": "World History & Geography",
       "subthemes": [],
       "notes": {
         "introduction": "",
@@ -2841,11 +2901,11 @@
       "number": 12,
       "marks": 15,
       "text": "Describe any four cultural elements of diversity in India and rate their relative significance in building a national identity.",
-      "theme": "Indian Society",
-      "themeId": "indian-society",
-      "themeParent": "",
+      "theme": "Urbanization & Migration",
+      "themeId": "urbanization-migration",
+      "themeParent": "Indian Society",
       "subthemes": [
-        "Modern Indian History"
+        "Modern India & Freedom Struggle"
       ],
       "notes": {
         "introduction": "",
@@ -2862,11 +2922,11 @@
       "number": 13,
       "marks": 10,
       "text": "Critically examine whether growing population is the cause of poverty OR poverty is the main cause of population increase in India.",
-      "theme": "Indian Society",
-      "themeId": "indian-society",
-      "themeParent": "",
+      "theme": "Development & Inequality",
+      "themeId": "development-inequality",
+      "themeParent": "Indian Society",
       "subthemes": [
-        "Modern Indian History"
+        "Social Reform & Change"
       ],
       "notes": {
         "introduction": "",
@@ -2883,11 +2943,11 @@
       "number": 14,
       "marks": 10,
       "text": "How do you explain the statistics that show that the sex ratio in Tribes in India is more favourable to women than the sex ratio among Scheduled Castes?",
-      "theme": "Indian Society",
-      "themeId": "indian-society",
-      "themeParent": "",
+      "theme": "Caste, Tribe & Social Structure",
+      "themeId": "caste-tribe",
+      "themeParent": "Indian Society",
       "subthemes": [
-        "Modern Indian History"
+        "Women, Gender & Empowerment"
       ],
       "notes": {
         "introduction": "",
@@ -2904,11 +2964,11 @@
       "number": 15,
       "marks": 10,
       "text": "Discuss the changes in the trends of labour migration within and outside India in the last four decades.",
-      "theme": "Indian Society",
-      "themeId": "indian-society",
-      "themeParent": "",
+      "theme": "Urbanization & Migration",
+      "themeId": "urbanization-migration",
+      "themeParent": "Indian Society",
       "subthemes": [
-        "Modern Indian History"
+        "Modern India & Freedom Struggle"
       ],
       "notes": {
         "introduction": "",
@@ -2925,11 +2985,12 @@
       "number": 16,
       "marks": 10,
       "text": "Discuss the positive and negative effects of globalization on women in India.",
-      "theme": "Indian Society",
-      "themeId": "indian-society",
-      "themeParent": "",
+      "theme": "Urbanization & Migration",
+      "themeId": "urbanization-migration",
+      "themeParent": "Indian Society",
       "subthemes": [
-        "Modern Indian History"
+        "Women, Gender & Empowerment",
+        "Modern India & Freedom Struggle"
       ],
       "notes": {
         "introduction": "",
@@ -2946,10 +3007,12 @@
       "number": 17,
       "marks": 15,
       "text": "Debate the issue Of whether and how contemporary movements for assertion of Dalit identity work towards annihilation Of caste.",
-      "theme": "Indian Society",
-      "themeId": "indian-society",
-      "themeParent": "",
-      "subthemes": [],
+      "theme": "Urbanization & Migration",
+      "themeId": "urbanization-migration",
+      "themeParent": "Indian Society",
+      "subthemes": [
+        "Modern India & Freedom Struggle"
+      ],
       "notes": {
         "introduction": "",
         "staticNotes": "",
@@ -2965,12 +3028,12 @@
       "number": 18,
       "marks": 15,
       "text": "Explain the factors responsible for the origin of ocean currents. How do they influence regional climates, fishing and navigation?",
-      "theme": "Physical Geography",
-      "themeId": "physical-geo",
-      "themeParent": "",
+      "theme": "World Geography",
+      "themeId": "world-geo",
+      "themeParent": "World History & Geography",
       "subthemes": [
-        "Indian Society",
-        "World Geography"
+        "Physical Geography",
+        "Indian Geography"
       ],
       "notes": {
         "introduction": "",
@@ -2989,9 +3052,9 @@
       "text": "How far do you agree that the behavior of the Indian monsoon has been changing due to humanizing landscapes? Discuss.",
       "theme": "Physical Geography",
       "themeId": "physical-geo",
-      "themeParent": "",
+      "themeParent": "Geography",
       "subthemes": [
-        "Modern Indian History"
+        "Modern India & Freedom Struggle"
       ],
       "notes": {
         "introduction": "",
@@ -3008,9 +3071,9 @@
       "number": 2,
       "marks": 10,
       "text": "Discuss the concept of air mass and explain its role in macro-climatic changes.",
-      "theme": "Indian Society",
-      "themeId": "indian-society",
-      "themeParent": "",
+      "theme": "Urbanization & Migration",
+      "themeId": "urbanization-migration",
+      "themeParent": "Indian Society",
       "subthemes": [],
       "notes": {
         "introduction": "",
@@ -3027,10 +3090,13 @@
       "number": 20,
       "marks": 15,
       "text": "Mumbai, Delhi and Kolkata are the three mega cities of the country but the air pollution is much more serious problem in Delhi as compared to the other two. Why is this so?",
-      "theme": "Ancient & Medieval History",
+      "theme": "Ancient & Medieval India",
       "themeId": "ancient-medieval",
-      "themeParent": "",
-      "subthemes": [],
+      "themeParent": "Indian History",
+      "subthemes": [
+        "Physical Geography",
+        "Social Reform & Change"
+      ],
       "notes": {
         "introduction": "",
         "staticNotes": "",
@@ -3046,10 +3112,13 @@
       "number": 21,
       "marks": 15,
       "text": "Smart cities in India cannot sustain without smart villages. Discuss this statement in the backdrop of rural urban integration.",
-      "theme": "Modern Indian History",
+      "theme": "Modern India & Freedom Struggle",
       "themeId": "modern-history",
-      "themeParent": "",
-      "subthemes": [],
+      "themeParent": "Indian History",
+      "subthemes": [
+        "Urbanization & Migration",
+        "Physical Geography"
+      ],
       "notes": {
         "introduction": "",
         "staticNotes": "",
@@ -3065,12 +3134,11 @@
       "number": 22,
       "marks": 10,
       "text": "To what extent has the urban planning and culture of the Indus Valley Civilization provided inputs to the present day urbanization ? Discuss.",
-      "theme": "Post-Independence India",
-      "themeId": "post-independence",
-      "themeParent": "",
+      "theme": "Urbanization & Migration",
+      "themeId": "urbanization-migration",
+      "themeParent": "Indian Society",
       "subthemes": [
-        "Indian Society",
-        "Indian Art & Culture"
+        "Post-Independence India"
       ],
       "notes": {
         "introduction": "",
@@ -3087,10 +3155,12 @@
       "number": 23,
       "marks": 10,
       "text": "Gandhara sculpture owed as much to the Romans as to the Greeks. Explain.",
-      "theme": "Indian Art & Culture",
-      "themeId": "art-culture",
-      "themeParent": "",
-      "subthemes": [],
+      "theme": "Architecture & Sculpture",
+      "themeId": "architecture-sculpture",
+      "themeParent": "Indian Art & Culture",
+      "subthemes": [
+        "Literature, Religion & Philosophy"
+      ],
       "notes": {
         "introduction": "",
         "staticNotes": "",
@@ -3108,7 +3178,7 @@
       "text": "Taxila university was one of the oldest universities of the world with which were associated a number of learned personalities of different disciplines. Its strategic locat.ion caused its fame to flourish, but unlike Nalanda, it is not considered as a university in the modem sense. Discuss.",
       "theme": "World History",
       "themeId": "world-history",
-      "themeParent": "",
+      "themeParent": "World History & Geography",
       "subthemes": [],
       "notes": {
         "introduction": "",
@@ -3125,8 +3195,8 @@
       "number": 25,
       "marks": 10,
       "text": "The third battle of Panipat was fought in 1761. Why were so many empire-shaking battles fought at Panipat?",
-      "theme": "Indian Society",
-      "themeId": "indian-society",
+      "theme": "Development & Inequality",
+      "themeId": "development-inequality",
       "themeParent": "",
       "subthemes": [],
       "notes": {
@@ -3144,9 +3214,9 @@
       "number": 26,
       "marks": 15,
       "text": "Sufis and medieval mystic saints failed to modify either the religious ideas and practices or the outward structure of Hindu / Muslim scwietiæ to any appreciable extent. Comment.",
-      "theme": "Ancient & Medieval History",
+      "theme": "Ancient & Medieval India",
       "themeId": "ancient-medieval",
-      "themeParent": "",
+      "themeParent": "Indian History",
       "subthemes": [],
       "notes": {
         "introduction": "",
@@ -3163,9 +3233,9 @@
       "number": 27,
       "marks": 15,
       "text": "Examine critically the various facets of economic policies of the British in India from mid-eighteenth century till independence.",
-      "theme": "Modern Indian History",
+      "theme": "Modern India & Freedom Struggle",
       "themeId": "modern-history",
-      "themeParent": "",
+      "themeParent": "Indian History",
       "subthemes": [],
       "notes": {
         "introduction": "",
@@ -3182,9 +3252,9 @@
       "number": 28,
       "marks": 15,
       "text": "In what ways did the naval mutiny prove to be the last nail in the coffin of British colonial aspirations in India?",
-      "theme": "Modern Indian History",
+      "theme": "Modern India & Freedom Struggle",
       "themeId": "modern-history",
-      "themeParent": "",
+      "themeParent": "Indian History",
       "subthemes": [],
       "notes": {
         "introduction": "",
@@ -3201,10 +3271,12 @@
       "number": 29,
       "marks": 15,
       "text": "What were the major political; economic and social developments in the world which motivated the anti-colonial struggle in India'?",
-      "theme": "Modern Indian History",
+      "theme": "Modern India & Freedom Struggle",
       "themeId": "modern-history",
-      "themeParent": "",
-      "subthemes": [],
+      "themeParent": "Indian History",
+      "subthemes": [
+        "Social Reform & Change"
+      ],
       "notes": {
         "introduction": "",
         "staticNotes": "",
@@ -3220,9 +3292,9 @@
       "number": 3,
       "marks": 10,
       "text": "With a brief background of quality of urban life in India, introduce the objectives and strategy of the ‘Smart City Programme’.",
-      "theme": "Modern Indian History",
-      "themeId": "modern-history",
-      "themeParent": "",
+      "theme": "Urbanization & Migration",
+      "themeId": "urbanization-migration",
+      "themeParent": "Indian Society",
       "subthemes": [],
       "notes": {
         "introduction": "",
@@ -3241,7 +3313,7 @@
       "text": "What were the évedts that led to the Suez Crisis in 1956? How did it deal a final blow to Britain's self-image as a world power?",
       "theme": "World History",
       "themeId": "world-history",
-      "themeParent": "",
+      "themeParent": "World History & Geography",
       "subthemes": [],
       "notes": {
         "introduction": "",
@@ -3258,11 +3330,12 @@
       "number": 4,
       "marks": 10,
       "text": "Major cities of India are becoming more vulnerable to flood conditions. Discuss.",
-      "theme": "Modern Indian History",
-      "themeId": "modern-history",
-      "themeParent": "",
+      "theme": "Social Reform & Change",
+      "themeId": "social-reform-change",
+      "themeParent": "Indian Society",
       "subthemes": [
-        "Indian Geography"
+        "Modern India & Freedom Struggle",
+        "Physical Geography"
       ],
       "notes": {
         "introduction": "",
@@ -3279,11 +3352,12 @@
       "number": 5,
       "marks": 10,
       "text": "The ancient civilization in Indian sub-continent differed from those of Egypt, Mesopotamia and Greece in that its culture and traditions have been preserved without a breakdown to the present day. Comment.",
-      "theme": "Modern Indian History",
-      "themeId": "modern-history",
-      "themeParent": "",
+      "theme": "Literature, Religion & Philosophy",
+      "themeId": "literature-religion",
+      "themeParent": "Indian Art & Culture",
       "subthemes": [
-        "World Geography"
+        "Ancient & Medieval India",
+        "Modern India & Freedom Struggle"
       ],
       "notes": {
         "introduction": "",
@@ -3300,10 +3374,13 @@
       "number": 6,
       "marks": 10,
       "text": "Mesolithic rock cut architecture of India not only reflects the cultural life of the times but also a fine aesthetic sense comparable to modern painting. Critically evaluate this comment.",
-      "theme": "Indian Art & Culture",
-      "themeId": "art-culture",
-      "themeParent": "",
-      "subthemes": [],
+      "theme": "Architecture & Sculpture",
+      "themeId": "architecture-sculpture",
+      "themeParent": "Indian Art & Culture",
+      "subthemes": [
+        "Heritage & Performing Arts",
+        "Caste, Tribe & Social Structure"
+      ],
       "notes": {
         "introduction": "",
         "staticNotes": "",
@@ -3319,9 +3396,9 @@
       "number": 7,
       "marks": 15,
       "text": "How different would have Eren the achievement of Indian independence without Mahatma Gandhi ? Discuss.",
-      "theme": "Modern Indian History",
+      "theme": "Modern India & Freedom Struggle",
       "themeId": "modern-history",
-      "themeParent": "",
+      "themeParent": "Indian History",
       "subthemes": [],
       "notes": {
         "introduction": "",
@@ -3338,9 +3415,9 @@
       "number": 8,
       "marks": 15,
       "text": "Mahatma Gandhi and Dr. B.R. Ambedkar despite having divergent approaches and strategies, had a common goal of amelioration of the downtrodden. Elucidate.",
-      "theme": "Modern Indian History",
+      "theme": "Modern India & Freedom Struggle",
       "themeId": "modern-history",
-      "themeParent": "",
+      "themeParent": "Indian History",
       "subthemes": [],
       "notes": {
         "introduction": "",
@@ -3357,10 +3434,12 @@
       "number": 9,
       "marks": 15,
       "text": "It would have been difficult for the Constituent Assembly to complete its historic task of drafting the Constitution for Independent India in just three years but for the experience gained with the Government of India Act, 1935. Discuss.",
-      "theme": "Modern Indian History",
-      "themeId": "modern-history",
-      "themeParent": "",
-      "subthemes": [],
+      "theme": "Development & Inequality",
+      "themeId": "development-inequality",
+      "themeParent": "Indian Society",
+      "subthemes": [
+        "Modern India & Freedom Struggle"
+      ],
       "notes": {
         "introduction": "",
         "staticNotes": "",
@@ -3376,9 +3455,9 @@
       "number": 1,
       "marks": 12,
       "text": "The New Economic Policy — 1921 of Lenin had influenced the policies adopted by India soon after independence. Evaluate.",
-      "theme": "Modern Indian History",
+      "theme": "Modern India & Freedom Struggle",
       "themeId": "modern-history",
-      "themeParent": "",
+      "themeParent": "Indian History",
       "subthemes": [],
       "notes": {
         "introduction": "",
@@ -3395,8 +3474,8 @@
       "number": 10,
       "marks": 12,
       "text": "Most of the unusual climatic happenings are explained as an outcome of the El-Nino effect. Do you agree?",
-      "theme": "Indian Society",
-      "themeId": "indian-society",
+      "theme": "Development & Inequality",
+      "themeId": "development-inequality",
       "themeParent": "",
       "subthemes": [],
       "notes": {
@@ -3416,7 +3495,7 @@
       "text": "Bring out the relationship between the shrinking Himalayan glaciers and the symptoms of climate change in the Indian sub-continent.",
       "theme": "Physical Geography",
       "themeId": "physical-geo",
-      "themeParent": "",
+      "themeParent": "Geography",
       "subthemes": [
         "Indian Geography",
         "World Geography"
@@ -3436,10 +3515,12 @@
       "number": 12,
       "marks": 12,
       "text": "How does patriarchy impact the position of a middle class working woman in India?",
-      "theme": "Modern Indian History",
+      "theme": "Modern India & Freedom Struggle",
       "themeId": "modern-history",
-      "themeParent": "",
-      "subthemes": [],
+      "themeParent": "Indian History",
+      "subthemes": [
+        "Development & Inequality"
+      ],
       "notes": {
         "introduction": "",
         "staticNotes": "",
@@ -3455,9 +3536,9 @@
       "number": 13,
       "marks": 12,
       "text": "Whereas the British planters had developed tea gardens all along the Shivaliks and Lesser Himalayas from Assam to Himachal Pradesh, in effect they did not succeed beyond the Darjeeling area. Explain.",
-      "theme": "Modern Indian History",
+      "theme": "Modern India & Freedom Struggle",
       "themeId": "modern-history",
-      "themeParent": "",
+      "themeParent": "Indian History",
       "subthemes": [
         "Indian Geography"
       ],
@@ -3476,12 +3557,12 @@
       "number": 14,
       "marks": 12,
       "text": "Account for the change in the spatial pattern of the Iron and Steel industry in the world.",
-      "theme": "Indian Art & Culture",
-      "themeId": "art-culture",
-      "themeParent": "",
+      "theme": "Architecture & Sculpture",
+      "themeId": "architecture-sculpture",
+      "themeParent": "Indian Art & Culture",
       "subthemes": [
-        "Ancient & Medieval History",
-        "World History"
+        "Indian Geography",
+        "Literature, Religion & Philosophy"
       ],
       "notes": {
         "introduction": "",
@@ -3500,7 +3581,7 @@
       "text": "Why did the Green Revolution in India virtually by-pass the eastern region despite fertile soil and good availability of water?",
       "theme": "Post-Independence India",
       "themeId": "post-independence",
-      "themeParent": "",
+      "themeParent": "Indian History",
       "subthemes": [
         "World History"
       ],
@@ -3519,11 +3600,12 @@
       "number": 16,
       "marks": 12,
       "text": "Though not very useful from the point of view of a connected political history of South India, the Sangam literature portrays the social and economic conditions of its time with remarkable vividness. Comment. (200 words)",
-      "theme": "Indian Art & Culture",
-      "themeId": "art-culture",
-      "themeParent": "",
+      "theme": "Literature, Religion & Philosophy",
+      "themeId": "literature-religion",
+      "themeParent": "Indian Art & Culture",
       "subthemes": [
-        "Modern Indian History"
+        "Modern India & Freedom Struggle",
+        "Social Reform & Change"
       ],
       "notes": {
         "introduction": "",
@@ -3540,11 +3622,11 @@
       "number": 17,
       "marks": 12,
       "text": "Discuss the 'Tandava' dance as recorded in early Indian inscriptions. (100 words)",
-      "theme": "Indian Art & Culture",
-      "themeId": "art-culture",
-      "themeParent": "",
+      "theme": "Heritage & Performing Arts",
+      "themeId": "heritage-performing-arts",
+      "themeParent": "Indian Art & Culture",
       "subthemes": [
-        "Modern Indian History"
+        "Modern India & Freedom Struggle"
       ],
       "notes": {
         "introduction": "",
@@ -3561,9 +3643,9 @@
       "number": 18,
       "marks": 12,
       "text": "Chola architecture represents a high watermark in the evolution of temple architecture. Discuss. (100 words)",
-      "theme": "Indian Art & Culture",
-      "themeId": "art-culture",
-      "themeParent": "",
+      "theme": "Architecture & Sculpture",
+      "themeId": "architecture-sculpture",
+      "themeParent": "Indian Art & Culture",
       "subthemes": [],
       "notes": {
         "introduction": "",
@@ -3580,11 +3662,11 @@
       "number": 19,
       "marks": 12,
       "text": "Defying the barriers of age, gender and religion, the Indian women became the torch- bearer during the struggle for freedom in India. Discuss. (200 words)",
-      "theme": "Modern Indian History",
+      "theme": "Modern India & Freedom Struggle",
       "themeId": "modern-history",
-      "themeParent": "",
+      "themeParent": "Indian History",
       "subthemes": [
-        "Indian Society"
+        "Women, Gender & Empowerment"
       ],
       "notes": {
         "introduction": "",
@@ -3601,10 +3683,12 @@
       "number": 2,
       "marks": 12,
       "text": "How does patriarchy impact the position of a middle-class working woman in India?",
-      "theme": "Modern Indian History",
+      "theme": "Modern India & Freedom Struggle",
       "themeId": "modern-history",
-      "themeParent": "",
-      "subthemes": [],
+      "themeParent": "Indian History",
+      "subthemes": [
+        "Development & Inequality"
+      ],
       "notes": {
         "introduction": "",
         "staticNotes": "",
@@ -3620,9 +3704,9 @@
       "number": 20,
       "marks": 12,
       "text": "Several foreigners made India their homeland and participated in various movements. Analyze their role in the Indian struggle for freedom. (200 words)",
-      "theme": "Modern Indian History",
+      "theme": "Modern India & Freedom Struggle",
       "themeId": "modern-history",
-      "themeParent": "",
+      "themeParent": "Indian History",
       "subthemes": [],
       "notes": {
         "introduction": "",
@@ -3639,11 +3723,11 @@
       "number": 3,
       "marks": 12,
       "text": "Why do some of the most prosperous regions Of India have an adverse Sex ratio for Women? Give your arguments.",
-      "theme": "Modern Indian History",
-      "themeId": "modern-history",
-      "themeParent": "",
+      "theme": "Women, Gender & Empowerment",
+      "themeId": "women-gender",
+      "themeParent": "Indian Society",
       "subthemes": [
-        "Indian Society"
+        "Modern India & Freedom Struggle"
       ],
       "notes": {
         "introduction": "",
@@ -3660,10 +3744,12 @@
       "number": 4,
       "marks": 12,
       "text": "The life cycle Of a joint family depends on economic factors rather than social values. Discuss.",
-      "theme": "Indian Society",
-      "themeId": "indian-society",
-      "themeParent": "",
-      "subthemes": [],
+      "theme": "Social Reform & Change",
+      "themeId": "social-reform-change",
+      "themeParent": "Indian Society",
+      "subthemes": [
+        "Development & Inequality"
+      ],
       "notes": {
         "introduction": "",
         "staticNotes": "",
@@ -3681,9 +3767,10 @@
       "text": "Discuss the various economic and socio-cultural forces that are driving increasing feminization of agriculture in India.",
       "theme": "Indian Geography",
       "themeId": "indian-geo",
-      "themeParent": "",
+      "themeParent": "Geography",
       "subthemes": [
-        "Modern Indian History"
+        "Caste, Tribe & Social Structure",
+        "Urbanization & Migration"
       ],
       "notes": {
         "introduction": "",
@@ -3700,9 +3787,9 @@
       "number": 6,
       "marks": 12,
       "text": "HOW do the Indian debates on •secularism differ from the debates in the West?",
-      "theme": "Modern Indian History",
+      "theme": "Modern India & Freedom Struggle",
       "themeId": "modern-history",
-      "themeParent": "",
+      "themeParent": "Indian History",
       "subthemes": [],
       "notes": {
         "introduction": "",
@@ -3719,8 +3806,8 @@
       "number": 7,
       "marks": 12,
       "text": "Explain the formation of thousands of islands in Indonesian and Philippines archipelagos.",
-      "theme": "Indian Society",
-      "themeId": "indian-society",
+      "theme": "Development & Inequality",
+      "themeId": "development-inequality",
       "themeParent": "",
       "subthemes": [],
       "notes": {
@@ -3740,9 +3827,10 @@
       "text": "Why are the world’s fold mountain systems located along the margins of continents? Bring out the association between the global distribution of Fold Mountains and the earthquakes and volcanoes.",
       "theme": "Physical Geography",
       "themeId": "physical-geo",
-      "themeParent": "",
+      "themeParent": "Geography",
       "subthemes": [
-        "World Geography"
+        "World Geography",
+        "Caste, Tribe & Social Structure"
       ],
       "notes": {
         "introduction": "",
@@ -3761,8 +3849,11 @@
       "text": "Tropical cyclones are largely confined to South China Sea, Bay of Bengal and Gulf of Mexico. Why?",
       "theme": "Physical Geography",
       "themeId": "physical-geo",
-      "themeParent": "",
-      "subthemes": [],
+      "themeParent": "Geography",
+      "subthemes": [
+        "World Geography",
+        "Social Reform & Change"
+      ],
       "notes": {
         "introduction": "",
         "staticNotes": "",
@@ -3778,9 +3869,9 @@
       "number": 1,
       "marks": 12,
       "text": "\"In many ways, Lord Dalhousie was the founder of modern India.\" Elaborate. (200 words)",
-      "theme": "Modern Indian History",
+      "theme": "Modern India & Freedom Struggle",
       "themeId": "modern-history",
-      "themeParent": "",
+      "themeParent": "Indian History",
       "subthemes": [],
       "notes": {
         "introduction": "",
@@ -3797,8 +3888,8 @@
       "number": 10,
       "marks": 12,
       "text": "What policy instruments were deployed to contain the Great Economic Depression? (200 words)",
-      "theme": "Indian Society",
-      "themeId": "indian-society",
+      "theme": "Development & Inequality",
+      "themeId": "development-inequality",
       "themeParent": "",
       "subthemes": [],
       "notes": {
@@ -3816,12 +3907,10 @@
       "number": 11,
       "marks": 12,
       "text": "Discuss the various social problems which originated out of the speedy process of urbanization in India. (200 words)",
-      "theme": "Indian Society",
-      "themeId": "indian-society",
-      "themeParent": "",
-      "subthemes": [
-        "Modern Indian History"
-      ],
+      "theme": "Urbanization & Migration",
+      "themeId": "urbanization-migration",
+      "themeParent": "Indian Society",
+      "subthemes": [],
       "notes": {
         "introduction": "",
         "staticNotes": "",
@@ -3837,9 +3926,9 @@
       "number": 12,
       "marks": 12,
       "text": "\"Male membership needs to be encouraged in order to make women's organizations free from gender bias.\" Comment. (200 words)",
-      "theme": "Indian Society",
-      "themeId": "indian-society",
-      "themeParent": "",
+      "theme": "Women, Gender & Empowerment",
+      "themeId": "women-gender",
+      "themeParent": "Indian Society",
       "subthemes": [],
       "notes": {
         "introduction": "",
@@ -3856,11 +3945,12 @@
       "number": 13,
       "marks": 12,
       "text": "Critically examine the effect of globalization on the aged population in India. (200 words)",
-      "theme": "Indian Society",
-      "themeId": "indian-society",
-      "themeParent": "",
+      "theme": "Urbanization & Migration",
+      "themeId": "urbanization-migration",
+      "themeParent": "Indian Society",
       "subthemes": [
-        "Modern Indian History"
+        "Social Reform & Change",
+        "Modern India & Freedom Struggle"
       ],
       "notes": {
         "introduction": "",
@@ -3877,10 +3967,13 @@
       "number": 14,
       "marks": 12,
       "text": "Growing feeling of regionalism is an important factor in generation of demand for a separate State. Discuss. (200 words)",
-      "theme": "Indian Society",
-      "themeId": "indian-society",
-      "themeParent": "",
-      "subthemes": [],
+      "theme": "Indian Geography",
+      "themeId": "indian-geo",
+      "themeParent": "Geography",
+      "subthemes": [
+        "World Geography",
+        "Urbanization & Migration"
+      ],
       "notes": {
         "introduction": "",
         "staticNotes": "",
@@ -3898,7 +3991,7 @@
       "text": "What do you understand by the theory of continental drift? Discuss the prominent evidences in its support.",
       "theme": "World Geography",
       "themeId": "world-geo",
-      "themeParent": "",
+      "themeParent": "World History & Geography",
       "subthemes": [],
       "notes": {
         "introduction": "",
@@ -3917,7 +4010,7 @@
       "text": "There is.no formation of deltas by rivers of the Western Ghat. Why?",
       "theme": "Indian Geography",
       "themeId": "indian-geo",
-      "themeParent": "",
+      "themeParent": "Geography",
       "subthemes": [],
       "notes": {
         "introduction": "",
@@ -3936,8 +4029,10 @@
       "text": "Major hot deserts in northern hemisphere are located between 20-30 degree north and on the western side of the continents. Why?",
       "theme": "World Geography",
       "themeId": "world-geo",
-      "themeParent": "",
-      "subthemes": [],
+      "themeParent": "World History & Geography",
+      "subthemes": [
+        "Social Reform & Change"
+      ],
       "notes": {
         "introduction": "",
         "staticNotes": "",
@@ -3955,7 +4050,7 @@
       "text": "Bring out the causes for more frequent landslides in the Himalayas than in Western Ghats.",
       "theme": "Indian Geography",
       "themeId": "indian-geo",
-      "themeParent": "",
+      "themeParent": "Geography",
       "subthemes": [],
       "notes": {
         "introduction": "",
@@ -3974,9 +4069,9 @@
       "text": "The recent cyclone on the east coast of India was called “Phailin”. How are the tropical cyclones named across the world?",
       "theme": "Physical Geography",
       "themeId": "physical-geo",
-      "themeParent": "",
+      "themeParent": "Geography",
       "subthemes": [
-        "Modern Indian History",
+        "Modern India & Freedom Struggle",
         "World History"
       ],
       "notes": {
@@ -3994,9 +4089,9 @@
       "number": 2,
       "marks": 12,
       "text": "Critically discuss the objectives of Bhoodan and Gramdan Movements initiated by Acharya Vinoba Bhave and their success. (200 words)",
-      "theme": "Indian Society",
-      "themeId": "indian-society",
-      "themeParent": "",
+      "theme": "Modern India & Freedom Struggle",
+      "themeId": "modern-history",
+      "themeParent": "Indian History",
       "subthemes": [],
       "notes": {
         "introduction": "",
@@ -4013,10 +4108,12 @@
       "number": 20,
       "marks": 12,
       "text": "Bring out the causes for the formation of heat islands in the urban habitat of the world.",
-      "theme": "World History",
-      "themeId": "world-history",
-      "themeParent": "",
-      "subthemes": [],
+      "theme": "Urbanization & Migration",
+      "themeId": "urbanization-migration",
+      "themeParent": "Indian Society",
+      "subthemes": [
+        "World History"
+      ],
       "notes": {
         "introduction": "",
         "staticNotes": "",
@@ -4032,9 +4129,9 @@
       "number": 21,
       "marks": 12,
       "text": "What do you understand by the phenomenon of temperature inversion in meteorology? How does it affect the weather and the habitants of the place?",
-      "theme": "Indian Society",
-      "themeId": "indian-society",
-      "themeParent": "",
+      "theme": "Physical Geography",
+      "themeId": "physical-geo",
+      "themeParent": "Geography",
       "subthemes": [],
       "notes": {
         "introduction": "",
@@ -4051,9 +4148,9 @@
       "number": 22,
       "marks": 12,
       "text": "Do you agree that there is a growing trend of opening new Sugar mills in the Southern states of India? Discuss with Justification.",
-      "theme": "Modern Indian History",
+      "theme": "Modern India & Freedom Struggle",
       "themeId": "modern-history",
-      "themeParent": "",
+      "themeParent": "Indian History",
       "subthemes": [],
       "notes": {
         "introduction": "",
@@ -4070,12 +4167,12 @@
       "number": 23,
       "marks": 12,
       "text": "Analyze the factors for highly decentralized cotton textile industry in India.",
-      "theme": "Indian Art & Culture",
-      "themeId": "art-culture",
-      "themeParent": "",
+      "theme": "Literature, Religion & Philosophy",
+      "themeId": "literature-religion",
+      "themeParent": "Indian Art & Culture",
       "subthemes": [
-        "Ancient & Medieval History",
-        "Modern Indian History"
+        "Ancient & Medieval India",
+        "Modern India & Freedom Struggle"
       ],
       "notes": {
         "introduction": "",
@@ -4092,8 +4189,8 @@
       "number": 3,
       "marks": 12,
       "text": "Write a critical note on the evolution and significance of the slogan, 'Jai Jawan Jai Kisan'. (200 words)",
-      "theme": "Indian Society",
-      "themeId": "indian-society",
+      "theme": "Development & Inequality",
+      "themeId": "development-inequality",
       "themeParent": "",
       "subthemes": [],
       "notes": {
@@ -4111,9 +4208,9 @@
       "number": 4,
       "marks": 12,
       "text": "Discuss the contributions of Maulana Abul Kalam Azad to pre- and post- independent India. (200 words)",
-      "theme": "Modern Indian History",
+      "theme": "Modern India & Freedom Struggle",
       "themeId": "modern-history",
-      "themeParent": "",
+      "themeParent": "Indian History",
       "subthemes": [],
       "notes": {
         "introduction": "",
@@ -4130,8 +4227,8 @@
       "number": 5,
       "marks": 12,
       "text": "Analyze the circumstances that led to the Tashkent Agreement in 1966. Discuss the highlights of the Agreement. (200 words)",
-      "theme": "Indian Society",
-      "themeId": "indian-society",
+      "theme": "Development & Inequality",
+      "themeId": "development-inequality",
       "themeParent": "",
       "subthemes": [],
       "notes": {
@@ -4149,9 +4246,9 @@
       "number": 6,
       "marks": 12,
       "text": "Critically examine the compulsions which prompted India to play a decisive role in the emergence of Bangladesh. (200 words)",
-      "theme": "Modern Indian History",
+      "theme": "Modern India & Freedom Struggle",
       "themeId": "modern-history",
-      "themeParent": "",
+      "themeParent": "Indian History",
       "subthemes": [],
       "notes": {
         "introduction": "",
@@ -4170,7 +4267,7 @@
       "text": "Latecomer' Industrial Revolution in Japan involved certain factors that were markedly different from what West had experienced.\" Analyze. (200 words)",
       "theme": "Post-Independence India",
       "themeId": "post-independence",
-      "themeParent": "",
+      "themeParent": "Indian History",
       "subthemes": [
         "World History"
       ],
@@ -4189,10 +4286,12 @@
       "number": 8,
       "marks": 12,
       "text": "\"Africa was chopped into States artificially created by accidents of European competition.\" Analyze. (200 words)",
-      "theme": "World History",
-      "themeId": "world-history",
-      "themeParent": "",
-      "subthemes": [],
+      "theme": "Modern India & Freedom Struggle",
+      "themeId": "modern-history",
+      "themeParent": "Indian History",
+      "subthemes": [
+        "World History"
+      ],
       "notes": {
         "introduction": "",
         "staticNotes": "",
@@ -4210,7 +4309,7 @@
       "text": "\"American Revolution was an economic revolt against mercantilism.\" Substantiate. (200 words)",
       "theme": "Post-Independence India",
       "themeId": "post-independence",
-      "themeParent": "",
+      "themeParent": "Indian History",
       "subthemes": [
         "World History"
       ],

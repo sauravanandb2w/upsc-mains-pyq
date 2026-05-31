@@ -99,9 +99,9 @@ def classify_theme(text: str, paper: int, marks: int | str) -> dict:
         }
 
     fallback = {
-        1: ("Indian Society", "indian-society"),
+        1: ("Development & Inequality", "development-inequality"),
         2: ("Accountability & Citizen Charter", "accountability-transparency"),
-        3: ("Economy & Development", "economy-development"),
+        3: ("Fiscal, Monetary & Growth", "fiscal-monetary-growth"),
         4: ("Ethics & Human Interface", "ethics-human-interface"),
     }
     name, tid = fallback.get(paper, ("General", "misc"))

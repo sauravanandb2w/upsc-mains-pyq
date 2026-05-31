@@ -3,49 +3,94 @@
     "label": "GS Paper I",
     "themes": [
       {
-        "id": "art-culture",
-        "name": "Indian Art & Culture",
-        "keywords": "art architecture sculpture temple painting literature dance music heritage buddhist jain gandhara chola pallava vijayanagara mughal miniature indus pottery coin inscript"
+        "id": "architecture-sculpture",
+        "name": "Architecture & Sculpture",
+        "parent": "Indian Art & Culture",
+        "keywords": "architecture sculpture temple rock-cut stupa gandhara chola pallava vijayanagara mughal cave art monuments iron steel location raw material"
+      },
+      {
+        "id": "literature-religion",
+        "name": "Literature, Religion & Philosophy",
+        "parent": "Indian Art & Culture",
+        "keywords": "literature bhakti sufi buddhist jain philosophy gandhara indus pala buddhism vedic rig later vedic philosophy tradition conceiving shaping"
+      },
+      {
+        "id": "heritage-performing-arts",
+        "name": "Heritage & Performing Arts",
+        "parent": "Indian Art & Culture",
+        "keywords": "dance music painting miniature puppet heritage safeguarding coin inscript pottery performing folk motifs narratives ideals"
       },
       {
         "id": "ancient-medieval",
-        "name": "Ancient & Medieval History",
-        "keywords": "vedic rig later vedic maurya gupta kushan harappan indus magadha sultanate delhi sultan medieval feudal agrarian pallava chola vijayanagara bhakti sufi"
+        "name": "Ancient & Medieval India",
+        "parent": "Indian History",
+        "keywords": "ancient harappan indus maurya gupta kushan magadha sultanate delhi sultan medieval feudal agrarian pallava chola vijayanagara harappa"
       },
       {
         "id": "modern-history",
-        "name": "Modern Indian History",
-        "keywords": "freedom struggle colonial british 1857 gandhi nehru congress partition independence quit india civil disobedience non-cooperation moderates extremists subhash bose"
+        "name": "Modern India & Freedom Struggle",
+        "parent": "Indian History",
+        "keywords": "freedom struggle colonial british 1857 gandhi nehru congress partition independence quit india civil disobedience non-cooperation moderates extremists subhash bose integration princely states administrative issues curzon lord curzon national movement policies"
       },
       {
         "id": "post-independence",
         "name": "Post-Independence India",
+        "parent": "Indian History",
         "keywords": "post-independence nehruvian planning linguistic reorganization emergency coalition politics green revolution white revolution"
       },
       {
         "id": "world-history",
         "name": "World History",
-        "keywords": "world war cold war europe america industrial revolution colonization decolonization balance of power fascism communism ussr"
+        "parent": "World History & Geography",
+        "keywords": "world war cold war europe america industrial revolution colonization decolonization balance power fascism communism ussr"
       },
       {
         "id": "physical-geo",
         "name": "Physical Geography",
-        "keywords": "monsoon cyclone earthquake tsunami volcano climate cloudburst aurora tornado fjord physiography landform plate tectonic precipitation"
+        "parent": "Geography",
+        "keywords": "monsoon cyclone earthquake tsunami volcano climate cloudburst aurora tornado twister fjord physiography landform plate tectonic precipitation flooding million cities smart hyderabad pune remedial arctic antarctic geophysical circum-pacific desertification melting glaciers weather patterns"
       },
       {
         "id": "indian-geo",
         "name": "Indian Geography",
-        "keywords": "river ganga brahmaputra groundwater irrigation canal drought flood himalaya deccan coastal peninsula soil agriculture mineral resource"
+        "parent": "Geography",
+        "keywords": "river ganga brahmaputra groundwater irrigation canal drought flood himalaya deccan coastal peninsula soil agriculture mineral resource mining gondwanaland localization agro-based food processing north-west iron steel industries solar energy regional variations"
       },
       {
         "id": "world-geo",
         "name": "World Geography",
-        "keywords": "continent ocean trade route geopolitical resource distribution demographic transition"
+        "parent": "World History & Geography",
+        "keywords": "continent ocean trade route geopolitical resource distribution demographic transition gulf mexico regional disparity diversity"
       },
       {
-        "id": "indian-society",
-        "name": "Indian Society",
-        "keywords": "caste tribe gender women marriage divorce urbanization migration globalization society secularization poverty inequality regional disparity diversity marginality"
+        "id": "caste-tribe",
+        "name": "Caste, Tribe & Social Structure",
+        "parent": "Indian Society",
+        "keywords": "caste intercaste tribe tribal scheduled marginality socio-economic parity uniqueness tribal knowledge system mainstream cultural systems"
+      },
+      {
+        "id": "women-gender",
+        "name": "Women, Gender & Empowerment",
+        "parent": "Indian Society",
+        "keywords": "gender equality equity women empowerment feminist marriage divorce gig economy skilled young unmarried women patriarchal"
+      },
+      {
+        "id": "urbanization-migration",
+        "name": "Urbanization & Migration",
+        "parent": "Indian Society",
+        "keywords": "urban urbanization migration globalization city million smart developing countries attract migrants smaller towns urban mass transport local identity global identity regionalism cultural assertiveness"
+      },
+      {
+        "id": "social-reform-change",
+        "name": "Social Reform & Change",
+        "parent": "Indian Society",
+        "keywords": "reform brahmo young bengal socio-religious secularization continuity traditional social values population education cryptocurrency digital initiatives education system socio-economic implications information technology industries major cities"
+      },
+      {
+        "id": "development-inequality",
+        "name": "Development & Inequality",
+        "parent": "Indian Society",
+        "keywords": "poverty inequality regional disparity underprivileged affirmative action equity social justice collaboration government ngos private sector socio-economic issues cultural diversities margin class inequalities eradication poverty programmes covid-19 pandemic"
       }
     ]
   },
@@ -220,34 +265,112 @@
     "label": "GS Paper III",
     "themes": [
       {
-        "id": "economy-development",
-        "name": "Economy & Development",
-        "keywords": "gdp growth inflation monetary fiscal budget tax gst subsidy ppp msme manufacturing industrial policy inclusive growth land reform food inflation buffer stock labour code pli monetisation"
+        "id": "fiscal-monetary-growth",
+        "name": "Fiscal, Monetary & Growth",
+        "parent": "Economy & Development",
+        "keywords": "gdp growth inflation monetary fiscal budget tax rbi food inflation v-shaped recovery capital revenue gross domestic product computing methodology subsidy inclusive growth"
       },
       {
-        "id": "agriculture-food",
-        "name": "Agriculture & Food Security",
-        "keywords": "agriculture crop irrigation millet farmer fci msp food security land holding green revolution white revolution horticulture"
+        "id": "industry-infrastructure",
+        "name": "Industry, MSME & Infrastructure",
+        "parent": "Economy & Development",
+        "keywords": "msme manufacturing industrial policy pli infrastructure investment udhan regional air connectivity monetisation public expenditure social services post-reforms"
       },
       {
-        "id": "science-technology",
-        "name": "Science & Technology",
-        "keywords": "technology innovation research patent ipr biotechnology space satellite nuclear ai artificial intelligence digital data protection cyber toll highway ict"
+        "id": "banking-finance",
+        "name": "Banking & Financial Sector",
+        "parent": "Economy & Development",
+        "keywords": "banking financial sector insurance gst ppp financial institution product diversification overlapping"
       },
       {
-        "id": "environment-biodiversity",
-        "name": "Environment & Biodiversity",
-        "keywords": "environment pollution climate change biodiversity eia ngo conservation wetland forest wildlife emission net zero renewable energy water freshwater"
+        "id": "employment-labour",
+        "name": "Employment & Labour",
+        "parent": "Economy & Development",
+        "keywords": "labour code labour market reforms employment job skill land reform small marginal farmers socio-economic conditions"
+      },
+      {
+        "id": "crops-farmers",
+        "name": "Crops & Farmers",
+        "parent": "Agriculture & Food Security",
+        "keywords": "agriculture crop millet farmer msp horticulture green revolution white revolution land holding"
+      },
+      {
+        "id": "food-security-fci",
+        "name": "Food Security & PDS",
+        "parent": "Agriculture & Food Security",
+        "keywords": "food security fci buffer stock public distribution stabilizing agricultural prices challenges"
+      },
+      {
+        "id": "irrigation-agri-economy",
+        "name": "Irrigation & Agro-Industries",
+        "parent": "Agriculture & Food Security",
+        "keywords": "irrigation agro-based food processing localization north-west farmer distress"
+      },
+      {
+        "id": "space-nuclear-defence",
+        "name": "Space, Nuclear & Defence Tech",
+        "parent": "Science & Technology",
+        "keywords": "space satellite nuclear biotechnology defence technology"
+      },
+      {
+        "id": "digital-ai-cyber",
+        "name": "Digital, AI & Cyber",
+        "parent": "Science & Technology",
+        "keywords": "ai artificial intelligence digital data protection cyber encryption ict highway toll technology innovation"
+      },
+      {
+        "id": "ipr-innovation",
+        "name": "IPR & Innovation",
+        "parent": "Science & Technology",
+        "keywords": "patent ipr innovation research asteroids threat extinction strategies prevent"
+      },
+      {
+        "id": "climate-energy",
+        "name": "Climate Change & Energy",
+        "parent": "Environment & Biodiversity",
+        "keywords": "climate change cop net zero renewable energy green grid emission cop26 whO aqg air quality guidelines sunlight electric energy conventional generation"
+      },
+      {
+        "id": "pollution-eia",
+        "name": "Pollution & EIA",
+        "parent": "Environment & Biodiversity",
+        "keywords": "pollution eia notification industrial river sand mining environment impact assessment ngo activist coastal mining legal illegal"
+      },
+      {
+        "id": "biodiversity-water",
+        "name": "Biodiversity, Forests & Water",
+        "parent": "Environment & Biodiversity",
+        "keywords": "biodiversity wildlife forest wetland jal shakti freshwater water conservation carrying capacity ecosystem visvesvaaraya swaminathan water engineering alternative technologies shortage clean safe"
       },
       {
         "id": "disaster-management",
         "name": "Disaster Management",
+        "parent": "Environment & Biodiversity",
         "keywords": "disaster resilience sendai framework flood drought landslide urban flood cyclone preparedness mitigation adaptation"
       },
       {
-        "id": "internal-security",
-        "name": "Internal Security",
-        "keywords": "security terror naxal left wing extremism narco cyber social media encryption border badp bim china pakistan insurgency intelligence"
+        "id": "terrorism-insurgency",
+        "name": "Terrorism & Insurgency",
+        "parent": "Internal Security",
+        "keywords": "terror terrorist jamaat insurgent cross-border complexity intensity causes linkages obnoxious nexus ogws over-ground workers"
+      },
+      {
+        "id": "lwe-naxal",
+        "name": "Left Wing Extremism",
+        "parent": "Internal Security",
+        "keywords": "naxal left-wing extremism lwe tribal naxalite determinants eastern strategy civil administration"
+      },
+      {
+        "id": "border-security",
+        "name": "Border & Geopolitical Security",
+        "parent": "Internal Security",
+        "keywords": "border myanmar bangladesh pakistan loc badp china cpec one belt road troubled border contentious issues transborder crimes line control"
+      },
+      {
+        "id": "cyber-narco",
+        "name": "Cyber & Narco Security",
+        "parent": "Internal Security",
+        "keywords": "cyber narco-terrorism social media encrypting messaging attacks defensive measures internal security militants deny local support"
       }
     ]
   },
@@ -257,42 +380,50 @@
       {
         "id": "ethics-human-interface",
         "name": "Ethics & Human Interface",
-        "keywords": "ethics moral value human interface dimension responsible behavior just unjust contextual literalness substance"
+        "parent": "Ethics & Values",
+        "keywords": "ethics moral value human interface dimension responsible behavior just unjust contextual literalness substance encompasses key dimensions morally"
       },
       {
         "id": "attitude",
         "name": "Attitude",
+        "parent": "Ethics & Values",
         "keywords": "attitude behaviour behavior influence workplace coercion undue influence"
       },
       {
         "id": "aptitude-ei",
         "name": "Aptitude & Emotional Intelligence",
+        "parent": "Ethics & Values",
         "keywords": "emotional intelligence eq aptitude resilience stress"
       },
       {
         "id": "integrity-probity",
         "name": "Integrity & Probity",
-        "keywords": "integrity probity transparency code of conduct code of ethics corruption moral integrity professional efficiency conflict of interest"
+        "parent": "Ethics & Values",
+        "keywords": "integrity probity transparency code of conduct code of ethics corruption moral integrity professional efficiency conflict of interest suitable model guidance public administration"
       },
       {
         "id": "thinkers-quotes",
         "name": "Thinkers & Quotations",
-        "keywords": "quotation thinker vivekananda gandhi kant patel guru nanak philosopher peace believe act"
+        "parent": "Ethics & Values",
+        "keywords": "quotation thinker vivekananda gandhi kant patel guru nanak philosopher peace believe act quotations great thinkers convey present context"
       },
       {
         "id": "public-service-values",
         "name": "Public Service Values",
-        "keywords": "public service civil servant governance karmayogi gender female officer mission administrative rational bns nyaya sanhita law equality impartiality"
+        "parent": "Public Service & Governance",
+        "keywords": "public service civil servant governance karmayogi gender female officer mission administrative rational bns nyaya sanhita law equality impartiality productive efficiency delivering services grassroots challenges female public servants"
       },
       {
         "id": "corporate-governance",
         "name": "Corporate & Applied Ethics",
-        "keywords": "corporate governance company ceo shareholder ai greenhouse emission net zero weapon industry developed nation war peace climate greed"
+        "parent": "Applied & Corporate Ethics",
+        "keywords": "corporate governance company ceo shareholder ai greenhouse emission net zero weapon industry developed nation war peace climate greed global warming human greed development abc incorporated ethical issues"
       },
       {
         "id": "case-study",
         "name": "Case Study",
-        "keywords": "you are district magistrate dm sp ias officer hospital procurement water farmer industry dilemma case landslide vinod sneha rohit raman srinivasan abc incorporated terrorist social media naxal tribal"
+        "parent": "Case Studies",
+        "keywords": "you are district magistrate dm sp ias officer hospital procurement water farmer industry dilemma case landslide vinod sneha rohit raman srinivasan abc incorporated terrorist social media naxal tribal collector shortage course action options compatible measures"
       }
     ]
   }
