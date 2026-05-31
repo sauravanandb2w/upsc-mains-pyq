@@ -150,8 +150,6 @@ export async function renderStudyMaterials(basePath, container) {
     } else if (section.type === "image") {
       const src = resolveAssetUrl(basePath, section.file);
       if (!section.file) continue;
-      const check = await fetch(src, { method: "HEAD" }).catch(() => null);
-      if (!check?.ok) continue;
       hasContent = true;
       const caption = section.caption || section.title || "";
       parts.push(`
@@ -189,7 +187,10 @@ export function bindLazyStudyMaterials(detailsEl, basePath) {
     loaded = true;
     const ok = await renderStudyMaterials(basePath, body);
     if (!ok) {
-      detailsEl.remove();
+      body.innerHTML =
+        '<p class="study-empty">No study files yet. Add <code>study/questions/' +
+        escapeHtml(basePath.split("/").pop() || "") +
+        "/README.md</code> and push to GitHub.</p>";
     }
   });
 }
