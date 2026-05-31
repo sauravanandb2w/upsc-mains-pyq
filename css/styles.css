@@ -946,6 +946,142 @@ body {
   line-height: 1.55;
 }
 
+/* Constitution bare act panel (GS II Polity) */
+.constitution-panel {
+  margin-top: 1rem;
+  padding-top: 0.75rem;
+  border-top: 1px dashed var(--border);
+}
+
+.constitution-panel summary {
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.constitution-hint,
+.constitution-meta,
+.constitution-loading,
+.constitution-empty,
+.constitution-error {
+  margin: 0.35rem 0 0.75rem;
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+
+.constitution-error {
+  color: var(--danger, #b42318);
+}
+
+.constitution-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+.constitution-search-wrap {
+  flex: 1 1 200px;
+}
+
+.constitution-search {
+  width: 100%;
+  padding: 0.45rem 0.65rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--bg);
+  color: var(--text);
+  font: inherit;
+  font-size: 0.88rem;
+}
+
+.constitution-detected-label {
+  margin: 0 0 0.4rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.constitution-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin-bottom: 0.65rem;
+}
+
+.constitution-chip {
+  padding: 0.2rem 0.55rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--accent) 8%, var(--bg));
+  color: var(--accent);
+  font-size: 0.78rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.constitution-chip:hover {
+  background: color-mix(in srgb, var(--accent) 16%, var(--bg));
+}
+
+.constitution-article {
+  margin-bottom: 0.65rem;
+  padding: 0.65rem 0.75rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: color-mix(in srgb, var(--text) 3%, var(--bg));
+}
+
+.constitution-article.is-highlight {
+  border-color: color-mix(in srgb, var(--accent) 40%, var(--border));
+}
+
+.constitution-article-head {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 0.75rem;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 0.35rem;
+}
+
+.constitution-article-head h4 {
+  margin: 0;
+  font-size: 0.85rem;
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+.btn-link-sm {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--accent);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.btn-link-sm:hover {
+  text-decoration: underline;
+}
+
+.constitution-article-text {
+  margin: 0;
+  font-size: 0.82rem;
+  line-height: 1.55;
+  color: var(--text-muted);
+}
+
+.constitution-detected-list,
+.constitution-results {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
 .study-content {
   display: flex;
   flex-direction: column;

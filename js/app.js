@@ -3,6 +3,12 @@ import {
   bindLazyStudyMaterials,
 } from "./study-materials.js";
 import {
+  constitutionPanelHtml,
+  mountConstitutionPanel,
+  isPolityTheme,
+  isPolityQuestion,
+} from "./constitution-ref.js";
+import {
   initSupabase,
   isSupabaseConfigured,
   getSupabase,
@@ -379,6 +385,24 @@ async function renderThemeDetail(themeId) {
   const studyPath = `study/themes/${themeId}`;
   const hasStudy = await renderStudyMaterials(studyPath, els.themeStudyMaterials);
   els.themeStudyPanel.classList.toggle("hidden", !hasStudy);
+
+  let constitutionHost = document.getElementById("themeConstitutionHost");
+  if (isPolityTheme(theme)) {
+    if (!constitutionHost) {
+      constitutionHost = document.createElement("div");
+      constitutionHost.id = "themeConstitutionHost";
+      els.themeStudyPanel.insertAdjacentElement("afterend", constitutionHost);
+    }
+    constitutionHost.innerHTML = constitutionPanelHtml();
+    constitutionHost.classList.remove("hidden");
+    const body = constitutionHost.querySelector(".constitution-panel-body");
+    await mountConstitutionPanel(body, {
+      relatedTexts: related.map((q) => q.text),
+    });
+  } else if (constitutionHost) {
+    constitutionHost.classList.add("hidden");
+    constitutionHost.innerHTML = "";
+  }
 }
 
 function getYearsForPaper(paperNum) {
@@ -583,6 +607,7 @@ function renderQuestions(questions) {
         <summary>Diagrams &amp; images</summary>
         <div class="study-materials-body" data-study-path="study/questions/${escapeAttr(q.id)}"></div>
       </details>
+      ${isPolityQuestion(q) ? constitutionPanelHtml() : ""}
       ${renderBestAnswerSection(q)}
     `;
 
@@ -592,6 +617,11 @@ function renderQuestions(questions) {
         studyDetails,
         `study/questions/${q.id}`
       );
+    }
+
+    const constitutionBody = card.querySelector(".constitution-panel-body");
+    if (constitutionBody) {
+      mountConstitutionPanel(constitutionBody, { contextText: q.text });
     }
 
     const themeBtn = card.querySelector(".link-theme");
