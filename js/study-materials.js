@@ -145,9 +145,10 @@ async function renderImageSection(section, basePath) {
     `;
   }
 
+  const cacheBust = `?t=${Date.now()}`;
   return `
     <figure class="study-figure study-figure--standalone">
-      <img src="${escapeHtml(src)}" alt="${escapeHtml(alt)}" loading="lazy">
+      <img src="${escapeHtml(src)}${cacheBust}" alt="${escapeHtml(alt)}" loading="lazy">
       ${captionHtml}
     </figure>
   `;
