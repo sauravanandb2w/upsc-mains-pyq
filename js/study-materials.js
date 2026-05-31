@@ -28,9 +28,9 @@ async function getMermaid() {
   return mermaidLib;
 }
 
-async function tryFetchText(url) {
+async function tryFetchText(url, noCache = false) {
   try {
-    const res = await fetch(url);
+    const res = await fetch(url, noCache ? { cache: "no-store" } : undefined);
     if (!res.ok) return null;
     return await res.text();
   } catch {
@@ -39,7 +39,7 @@ async function tryFetchText(url) {
 }
 
 async function tryFetchJson(url) {
-  const text = await tryFetchText(url);
+  const text = await tryFetchText(`${url}${url.includes("?") ? "&" : "?"}t=${Date.now()}`, true);
   if (!text) return null;
   try {
     return JSON.parse(text);
@@ -135,7 +135,7 @@ async function renderImageSection(section, basePath) {
     : "";
 
   if (section.file.toLowerCase().endsWith(".svg")) {
-    const svg = await tryFetchText(src);
+    const svg = await tryFetchText(`${src}?t=${Date.now()}`, true);
     if (!svg?.trim()) return "";
     return `
       <figure class="study-figure study-figure--standalone">
@@ -175,7 +175,7 @@ export async function renderStudyMaterials(basePath, container) {
   for (const section of sections) {
     if (section.type === "markdown") {
       const file = section.file || "README.md";
-      const md = await tryFetchText(`${basePath}/${file}`);
+      const md = await tryFetchText(`${basePath}/${file}?t=${Date.now()}`, true);
       if (!md?.trim()) continue;
       hasContent = true;
       const html = await markdownToHtml(md, basePath);
@@ -207,11 +207,8 @@ export function bindLazyStudyMaterials(detailsEl, basePath) {
   const body = detailsEl.querySelector(".study-materials-body");
   if (!body) return;
 
-  let loaded = false;
-
   detailsEl.addEventListener("toggle", async () => {
-    if (!detailsEl.open || loaded) return;
-    loaded = true;
+    if (!detailsEl.open) return;
     const ok = await renderStudyMaterials(basePath, body);
     if (!ok) {
       body.innerHTML =
