@@ -1,0 +1,11 @@
+{
+  "sections": [
+    { "type": "markdown", "file": "README.md" },
+    {
+      "type": "image",
+      "file": "rig-to-later-vedic-comparison.svg",
+      "caption": "Rig Vedic → Later Vedic: society & economy at a glance",
+      "alt": "Comparison diagram of Rig Vedic and Later Vedic society and economy"
+    }
+  ]
+}
