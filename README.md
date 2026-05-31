@@ -11,8 +11,8 @@ A lightweight, offline-friendly web app to browse **UPSC Civil Services (Main) E
 - **Theme-wise notes** — brainstorm by syllabus theme (primary mode); sync across devices when signed in
 - **Question mode** — browse PYQs with filters; optional per-question notes
 - **Cloud sync** — Supabase (phone + laptop) or local-only fallback
-- **Your notes** — Brainstorm · Static · Quotes · CA · Value (themes); Intro · Topper points (questions)
-- **Dark mode** — persisted in browser storage
+- **Study materials** — markdown, tables, mermaid flowcharts, images from `study/` folder (push to GitHub)
+- **Your notes** — Brainstorm · Static · Quotes · CA · Value (themes); Intro · Topper points (questions) — synced via Supabase
 
 ## Build / update question bank
 
@@ -118,6 +118,8 @@ Each question has `theme`, `themeId`, and empty `notes` fields. Edit `data/theme
 For GS Paper IV case studies, use `"marks": "case"`.
 
 Always verify wording against official papers on [upsc.gov.in](https://upsc.gov.in).
+
+Rich diagrams/tables: see **[STUDY_MATERIALS.md](./STUDY_MATERIALS.md)**.
 
 ## Disclaimer
 

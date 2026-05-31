@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 320" role="img" aria-label="Union State and Concurrent lists">
+  <defs>
+    <style>
+      .title { font: 600 16px 'Segoe UI', system-ui, sans-serif; fill: #1c1917; }
+      .label { font: 500 13px 'Segoe UI', system-ui, sans-serif; fill: #57534e; }
+      .box { fill: #fff7ed; stroke: #9a3412; stroke-width: 2; rx: 10; }
+      .arrow { stroke: #9a3412; stroke-width: 2; fill: none; marker-end: url(#arrowhead); }
+    </style>
+    <marker id="arrowhead" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#9a3412"/>
+    </marker>
+  </defs>
+  <rect class="box" x="20" y="40" width="170" height="90"/>
+  <text class="title" x="105" y="72" text-anchor="middle">Union List</text>
+  <text class="label" x="105" y="95" text-anchor="middle">Defence, Foreign</text>
+  <text class="label" x="105" y="112" text-anchor="middle"> Affairs, Currency</text>
+
+  <rect class="box" x="235" y="40" width="170" height="90"/>
+  <text class="title" x="320" y="72" text-anchor="middle">State List</text>
+  <text class="label" x="320" y="95" text-anchor="middle">Police, Health</text>
+  <text class="label" x="320" y="112" text-anchor="middle"> Agriculture, Land</text>
+
+  <rect class="box" x="450" y="40" width="170" height="90"/>
+  <text class="title" x="535" y="72" text-anchor="middle">Concurrent</text>
+  <text class="label" x="535" y="95" text-anchor="middle">Education, Forest</text>
+  <text class="label" x="535" y="112" text-anchor="middle"> Marriage, Adoption</text>
+
+  <rect x="180" y="180" width="280" height="100" fill="#f6f3ee" stroke="#e7e5e4" stroke-width="2" rx="10"/>
+  <text class="title" x="320" y="210" text-anchor="middle">Art. 246 + 7th Schedule</text>
+  <text class="label" x="320" y="235" text-anchor="middle">Union prevails on Concurrent if conflict</text>
+  <text class="label" x="320" y="255" text-anchor="middle">(Art. 254) · Residuary ’ Union (Art. 248)</text>
+
+  <path class="arrow" d="M105 130 L105 175"/>
+  <path class="arrow" d="M320 130 L320 175"/>
+  <path class="arrow" d="M535 130 L535 175 L400 175"/>
+</svg>

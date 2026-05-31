@@ -1,4 +1,8 @@
 import {
+  renderStudyMaterials,
+  bindLazyStudyMaterials,
+} from "./study-materials.js";
+import {
   initSupabase,
   isSupabaseConfigured,
   getSupabase,
@@ -69,6 +73,8 @@ const els = {
   themeDetailMeta: document.getElementById("themeDetailMeta"),
   themeSaveHint: document.getElementById("themeSaveHint"),
   themeNotesEditor: document.getElementById("themeNotesEditor"),
+  themeStudyPanel: document.getElementById("themeStudyPanel"),
+  themeStudyMaterials: document.getElementById("themeStudyMaterials"),
   themeRelatedQuestions: document.getElementById("themeRelatedQuestions"),
   themeBackBtn: document.getElementById("themeBackBtn"),
   questionView: document.getElementById("questionView"),
@@ -347,6 +353,10 @@ async function renderThemeDetail(themeId) {
         )
         .join("")
     : '<p class="empty-inline">No PYQs tagged to this theme yet.</p>';
+
+  const studyPath = `study/themes/${themeId}`;
+  const hasStudy = await renderStudyMaterials(studyPath, els.themeStudyMaterials);
+  els.themeStudyPanel.classList.toggle("hidden", !hasStudy);
 }
 
 function getYearsForPaper(paperNum) {
@@ -510,7 +520,19 @@ function renderQuestions(questions) {
         <summary>Your notes for this question</summary>
         <div class="notes-editor">${renderQuestionNotesEditor(q)}</div>
       </details>
+      <details class="study-materials-details">
+        <summary>Study materials — diagrams · tables · flowcharts</summary>
+        <div class="study-materials-body" data-study-path="study/questions/${escapeAttr(q.id)}"></div>
+      </details>
     `;
+
+    const studyDetails = card.querySelector(".study-materials-details");
+    if (studyDetails) {
+      bindLazyStudyMaterials(
+        studyDetails,
+        `study/questions/${q.id}`
+      );
+    }
 
     const themeBtn = card.querySelector(".link-theme");
     if (themeBtn) {
