@@ -8,8 +8,10 @@ A lightweight, offline-friendly web app to browse **UPSC Civil Services (Main) E
 - **Year filter** — 2013–2025 (per paper; see coverage note in app)
 - **Marks filter** — 10, 15, 20 marks and case studies (Paper IV)
 - **Keyword search** — questions, topics, and study notes
-- **Syllabus theme** on every question (filter by theme)
-- **Your notes** — Introduction · Static notes · Quotes · CA · Topper points · Value material (saved in browser; not auto-generated)
+- **Theme-wise notes** — brainstorm by syllabus theme (primary mode); sync across devices when signed in
+- **Question mode** — browse PYQs with filters; optional per-question notes
+- **Cloud sync** — Supabase (phone + laptop) or local-only fallback
+- **Your notes** — Brainstorm · Static · Quotes · CA · Value (themes); Intro · Topper points (questions)
 - **Dark mode** — persisted in browser storage
 
 ## Build / update question bank
@@ -40,6 +42,21 @@ python3 -m http.server 8080
 
 Then open [http://localhost:8080](http://localhost:8080).
 
+## Sync notes (phone + laptop)
+
+Notes sync via **Supabase** (free tier). Without setup, notes save in the browser only.
+
+```bash
+cp js/config.example.js js/config.js
+# Edit js/config.js with your Supabase URL + anon key
+```
+
+Full setup: **[SUPABASE_SETUP.md](./SUPABASE_SETUP.md)** — create project, run `supabase/schema.sql`, sign in.
+
+- **Themes** tab — main brainstorm workspace per syllabus theme
+- **Questions** tab — PYQ browser with per-question notes
+- Same login on phone and laptop → same notes
+
 ## Host online (free)
 
 This is a static site — no server or database. Pick any option below.
@@ -63,7 +80,13 @@ After deploy, your site URL will look like:
 upsc-mains-pyq/
 ├── index.html
 ├── css/styles.css
-├── js/app.js
+├── js/
+│   ├── app.js
+│   ├── notes-store.js
+│   ├── supabase-client.js
+│   └── config.example.js   → copy to config.js
+├── supabase/schema.sql
+├── SUPABASE_SETUP.md
 ├── data/
 │   ├── gs-paper-1.json
 │   ├── gs-paper-2.json

@@ -2,3 +2,4 @@
 *.zip
 .env
 .env.*
+js/config.js

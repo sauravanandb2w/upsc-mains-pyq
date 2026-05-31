@@ -1,27 +1,77 @@
+import {
+  initSupabase,
+  isSupabaseConfigured,
+  getSupabase,
+  onAuthStateChange,
+  getSession,
+  signInWithEmail,
+  signUpWithEmail,
+  signInWithGoogle,
+  signOut,
+} from "./supabase-client.js";
+import {
+  THEME_NOTE_FIELDS,
+  QUESTION_NOTE_FIELDS,
+  initNotesStore,
+  clearNotesStore,
+  getSyncStatus,
+  loadThemeNotesForPaper,
+  getThemeNotes,
+  saveThemeNote,
+  loadQuestionNotesForIds,
+  getQuestionNotes,
+  saveQuestionNote,
+  migrateLocalNotesToCloud,
+  themeNotesHaystack,
+  questionNotesHaystack,
+} from "./notes-store.js";
+
 /** @type {Record<number, { title: string; syllabus: string; themes?: string[]; questions: object[] }>} */
 let papers = {};
-
-const NOTES_STORAGE_KEY = "upsc-pyq-notes-v1";
-
-const NOTE_FIELDS = [
-  { id: "introduction", label: "Introduction", placeholder: "Your intro hook, context, definition…" },
-  { id: "staticNotes", label: "Static notes", placeholder: "Core syllabus content, facts, diagrams…" },
-  { id: "quotes", label: "Quotes", placeholder: "Thinkers, committees, constitutional quotes…" },
-  { id: "currentAffairs", label: "Current affairs", placeholder: "Link recent events (year-specific)…" },
-  { id: "topperPoints", label: "Topper points", placeholder: "Structure, presentation, high-scoring angles…" },
-  { id: "valueMaterial", label: "Value material", placeholder: "Cases, reports, data, maps, examples…" },
-];
+/** @type {Record<string, { label: string; themes: { id: string; name: string }[] }>} */
+let themeConfig = {};
 
 const state = {
   paper: 1,
+  viewMode: "themes",
+  selectedThemeId: null,
   year: "all",
   marks: "all",
   theme: "all",
   search: "",
+  authTab: "signin",
 };
 
+/** @type {import('@supabase/supabase-js').User | null} */
+let currentUser = null;
+
 const els = {
+  syncBadge: document.getElementById("syncBadge"),
+  authArea: document.getElementById("authArea"),
+  authOpenBtn: document.getElementById("authOpenBtn"),
+  authDialog: document.getElementById("authDialog"),
+  authForm: document.getElementById("authForm"),
+  authCloseBtn: document.getElementById("authCloseBtn"),
+  authDialogTitle: document.getElementById("authDialogTitle"),
+  authEmail: document.getElementById("authEmail"),
+  authPassword: document.getElementById("authPassword"),
+  authError: document.getElementById("authError"),
+  authSubmitBtn: document.getElementById("authSubmitBtn"),
+  authGoogleBtn: document.getElementById("authGoogleBtn"),
+  authConfigNote: document.getElementById("authConfigNote"),
   paperTabs: document.querySelectorAll(".paper-tab"),
+  viewTabs: document.querySelectorAll(".view-tab"),
+  themeView: document.getElementById("themeView"),
+  themeListView: document.getElementById("themeListView"),
+  themeDetailView: document.getElementById("themeDetailView"),
+  themeGrid: document.getElementById("themeGrid"),
+  themePaperMeta: document.getElementById("themePaperMeta"),
+  themeDetailMeta: document.getElementById("themeDetailMeta"),
+  themeSaveHint: document.getElementById("themeSaveHint"),
+  themeNotesEditor: document.getElementById("themeNotesEditor"),
+  themeRelatedQuestions: document.getElementById("themeRelatedQuestions"),
+  themeBackBtn: document.getElementById("themeBackBtn"),
+  questionView: document.getElementById("questionView"),
   searchInput: document.getElementById("searchInput"),
   yearFilter: document.getElementById("yearFilter"),
   marksFilter: document.getElementById("marksFilter"),
@@ -49,48 +99,260 @@ function toggleTheme() {
   localStorage.setItem("upsc-pyq-theme", next);
 }
 
-function loadNotesStore() {
+function updateSyncBadge() {
+  const status = getSyncStatus();
+  if (status === "cloud" && currentUser) {
+    els.syncBadge.textContent = "Synced";
+    els.syncBadge.className = "sync-badge sync-badge--cloud";
+    els.themeSaveHint.textContent = "Notes auto-save to cloud as you type.";
+  } else if (isSupabaseConfigured()) {
+    els.syncBadge.textContent = "Sign in to sync";
+    els.syncBadge.className = "sync-badge sync-badge--warn";
+    els.themeSaveHint.textContent = "Notes save locally. Sign in to sync across devices.";
+  } else {
+    els.syncBadge.textContent = "Local only";
+    els.syncBadge.className = "sync-badge";
+    els.themeSaveHint.textContent = "Notes save in this browser. Set up Supabase to sync (see SUPABASE_SETUP.md).";
+  }
+}
+
+function renderAuthArea() {
+  if (currentUser) {
+    const email = currentUser.email || "Signed in";
+    els.authArea.innerHTML = `
+      <span class="auth-user" title="${escapeAttr(email)}">${escapeHtml(email.split("@")[0])}</span>
+      <button type="button" class="btn-ghost btn-sm" id="signOutBtn">Sign out</button>
+    `;
+    document.getElementById("signOutBtn").addEventListener("click", () => signOut());
+  } else {
+    els.authArea.innerHTML =
+      '<button type="button" class="btn-primary btn-sm" id="authOpenBtn">Sign in</button>';
+    document.getElementById("authOpenBtn").addEventListener("click", openAuthDialog);
+  }
+}
+
+function openAuthDialog() {
+  els.authError.classList.add("hidden");
+  els.authConfigNote.classList.toggle("hidden", isSupabaseConfigured());
+  els.authDialog.showModal();
+}
+
+function closeAuthDialog() {
+  els.authDialog.close();
+}
+
+async function handleAuthSubmit(e) {
+  e.preventDefault();
+  if (!isSupabaseConfigured()) {
+    showAuthError("Configure js/config.js first (see SUPABASE_SETUP.md).");
+    return;
+  }
+
+  const email = els.authEmail.value.trim();
+  const password = els.authPassword.value;
+  els.authSubmitBtn.disabled = true;
+
   try {
-    return JSON.parse(localStorage.getItem(NOTES_STORAGE_KEY) || "{}");
-  } catch {
-    return {};
+    const fn = state.authTab === "signup" ? signUpWithEmail : signInWithEmail;
+    const { error } = await fn(email, password);
+    if (error) throw error;
+
+    if (state.authTab === "signup") {
+      showAuthError("Check your email to confirm, then sign in.", false);
+    } else {
+      closeAuthDialog();
+    }
+  } catch (err) {
+    showAuthError(err.message || "Authentication failed.");
+  } finally {
+    els.authSubmitBtn.disabled = false;
   }
 }
 
-function saveNotesStore(store) {
-  localStorage.setItem(NOTES_STORAGE_KEY, JSON.stringify(store));
+function showAuthError(msg, isError = true) {
+  els.authError.textContent = msg;
+  els.authError.classList.toggle("hidden", !msg);
+  els.authError.classList.toggle("auth-error--info", !isError);
 }
 
-function getQuestionNotes(q) {
-  const store = loadNotesStore();
-  const fromFile = q.notes || {};
-  const fromLocal = store[q.id] || {};
-  const merged = { ...fromFile };
-  for (const f of NOTE_FIELDS) {
-    if (fromLocal[f.id]?.trim()) merged[f.id] = fromLocal[f.id];
+async function handleGoogleSignIn() {
+  if (!isSupabaseConfigured()) {
+    showAuthError("Configure js/config.js first.");
+    return;
   }
-  return merged;
+  const { error } = await signInWithGoogle();
+  if (error) showAuthError(error.message);
 }
 
-function saveQuestionNote(questionId, fieldId, value) {
-  const store = loadNotesStore();
-  if (!store[questionId]) store[questionId] = {};
-  store[questionId][fieldId] = value;
-  saveNotesStore(store);
+function setAuthTab(tab) {
+  state.authTab = tab;
+  document.querySelectorAll(".auth-tab").forEach((btn) => {
+    btn.classList.toggle("active", btn.dataset.authTab === tab);
+  });
+  const isSignUp = tab === "signup";
+  els.authDialogTitle.textContent = isSignUp ? "Create account" : "Sign in";
+  els.authSubmitBtn.textContent = isSignUp ? "Sign up" : "Sign in";
+  els.authPassword.autocomplete = isSignUp ? "new-password" : "current-password";
+}
+
+async function onUserSession(session) {
+  currentUser = session?.user ?? null;
+
+  if (currentUser && getSupabase()) {
+    initNotesStore(getSupabase(), currentUser.id);
+    const migratedKey = `upsc-pyq-migrated-${currentUser.id}`;
+    if (!localStorage.getItem(migratedKey)) {
+      await migrateLocalNotesToCloud(papers, themeConfig);
+      localStorage.setItem(migratedKey, "1");
+    }
+  } else {
+    clearNotesStore();
+  }
+
+  renderAuthArea();
+  updateSyncBadge();
+  await refreshView();
+}
+
+async function refreshView() {
+  if (state.viewMode === "themes") {
+    await renderThemeView();
+  } else {
+    await renderQuestionView();
+  }
+}
+
+function getThemesForPaper(paperNum) {
+  return themeConfig[String(paperNum)]?.themes || [];
+}
+
+function getThemeById(paperNum, themeId) {
+  return getThemesForPaper(paperNum).find((t) => t.id === themeId);
+}
+
+function countQuestionsForTheme(paperNum, themeId) {
+  const paper = papers[paperNum];
+  if (!paper) return 0;
+  return paper.questions.filter((q) => q.themeId === themeId).length;
+}
+
+function themeHasNotes(themeId) {
+  const notes = getThemeNotes(themeId);
+  return Object.values(notes).some((v) => String(v).trim());
+}
+
+async function renderThemeView() {
+  els.themeView.classList.remove("hidden");
+  els.questionView.classList.add("hidden");
+
+  const paper = papers[state.paper];
+  if (!paper) return;
+
+  await loadThemeNotesForPaper(state.paper);
+
+  if (state.selectedThemeId) {
+    els.themeListView.classList.add("hidden");
+    els.themeDetailView.classList.remove("hidden");
+    await renderThemeDetail(state.selectedThemeId);
+  } else {
+    els.themeListView.classList.remove("hidden");
+    els.themeDetailView.classList.add("hidden");
+    renderThemeGrid(paper);
+  }
+}
+
+function renderThemeGrid(paper) {
+  const themes = getThemesForPaper(state.paper);
+
+  els.themePaperMeta.innerHTML = `
+    <h2>${escapeHtml(paper.title)} — Themes</h2>
+    <p>${escapeHtml(paper.syllabus)}</p>
+    <p class="meta-range">Brainstorm by syllabus theme · Notes sync when signed in</p>
+  `;
+
+  els.themeGrid.innerHTML = themes
+    .map((t) => {
+      const count = countQuestionsForTheme(state.paper, t.id);
+      const hasNotes = themeHasNotes(t.id);
+      return `
+        <button type="button" class="theme-card" data-theme-id="${escapeAttr(t.id)}" role="listitem">
+          <span class="theme-card-name">${escapeHtml(t.name)}</span>
+          <span class="theme-card-meta">${count} PYQ${count === 1 ? "" : "s"}${hasNotes ? " · has notes" : ""}</span>
+        </button>
+      `;
+    })
+    .join("");
+
+  els.themeGrid.querySelectorAll(".theme-card").forEach((btn) => {
+    btn.addEventListener("click", async () => {
+      state.selectedThemeId = btn.dataset.themeId;
+      await renderThemeView();
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  });
+}
+
+async function renderThemeDetail(themeId) {
+  const theme = getThemeById(state.paper, themeId);
+  const paper = papers[state.paper];
+  if (!theme || !paper) return;
+
+  const notes = getThemeNotes(themeId);
+  const related = paper.questions
+    .filter((q) => q.themeId === themeId)
+    .sort((a, b) => b.year - a.year || String(a.number).localeCompare(String(b.number), undefined, { numeric: true }));
+
+  els.themeDetailMeta.innerHTML = `
+    <h2>${escapeHtml(theme.name)}</h2>
+    <p>${escapeHtml(paper.title)} · ${related.length} related PYQ${related.length === 1 ? "" : "s"}</p>
+  `;
+
+  els.themeNotesEditor.innerHTML = THEME_NOTE_FIELDS.map(
+    (f) => `
+      <label class="note-field">
+        <span class="note-label">${f.label}</span>
+        <textarea
+          data-theme-id="${escapeAttr(themeId)}"
+          data-field="${escapeAttr(f.id)}"
+          rows="${f.id === "brainstorm" ? 8 : 4}"
+          placeholder="${escapeAttr(f.placeholder)}"
+        >${escapeHtml(notes[f.id] || "")}</textarea>
+      </label>
+    `
+  ).join("");
+
+  els.themeNotesEditor.querySelectorAll("textarea").forEach((ta) => {
+    ta.addEventListener(
+      "input",
+      debounce(() => {
+        saveThemeNote(ta.dataset.themeId, state.paper, ta.dataset.field, ta.value);
+        updateSyncBadge();
+      }, 400)
+    );
+  });
+
+  els.themeRelatedQuestions.innerHTML = related.length
+    ? related
+        .map(
+          (q) => `
+          <article class="related-q">
+            <div class="question-header">
+              <span class="badge">${q.year}</span>
+              <span class="badge marks">${formatMarks(q.marks)}</span>
+              <span class="question-num">Q.${q.number}</span>
+            </div>
+            <p class="question-text">${escapeHtml(q.text)}</p>
+          </article>
+        `
+        )
+        .join("")
+    : '<p class="empty-inline">No PYQs tagged to this theme yet.</p>';
 }
 
 function getYearsForPaper(paperNum) {
   const paper = papers[paperNum];
   if (!paper) return [];
   return [...new Set(paper.questions.map((q) => q.year))].sort((a, b) => b - a);
-}
-
-function getThemesForPaper(paperNum) {
-  const paper = papers[paperNum];
-  if (!paper) return [];
-  if (paper.themes?.length) return paper.themes;
-  const set = new Set(paper.questions.map((q) => q.theme).filter(Boolean));
-  return [...set].sort();
 }
 
 function populateYearFilter() {
@@ -107,7 +369,7 @@ function populateYearFilter() {
 }
 
 function populateThemeFilter() {
-  const themes = getThemesForPaper(state.paper);
+  const themes = getThemesForPaper(state.paper).map((t) => t.name);
   const prev = state.theme;
   els.themeFilter.innerHTML = '<option value="all">All themes</option>';
   themes.forEach((t) => {
@@ -130,12 +392,11 @@ function normalizeMarks(marks) {
 }
 
 function questionHaystack(q) {
-  const notes = getQuestionNotes(q);
   return [
     q.text,
     q.theme,
     ...(q.subthemes || []),
-    ...Object.values(notes),
+    questionNotesHaystack(q.id, q.notes),
   ]
     .join(" ")
     .toLowerCase();
@@ -163,7 +424,7 @@ function renderPaperMeta(paper) {
   els.paperMeta.innerHTML = `
     <h2>${paper.title}</h2>
     <p>${paper.syllabus}</p>
-    <p class="meta-range">Questions only · Classified by syllabus theme · Add your notes below each question (saved in browser)</p>
+    <p class="meta-range">Questions · Filter by year, theme, marks · Per-question notes below</p>
   `;
 }
 
@@ -187,8 +448,8 @@ function formatMarks(marks) {
   return `${marks} marks`;
 }
 
-function renderNotesEditor(q) {
-  return NOTE_FIELDS.map(
+function renderQuestionNotesEditor(q) {
+  return QUESTION_NOTE_FIELDS.map(
     (f) => `
       <label class="note-field">
         <span class="note-label">${f.label}</span>
@@ -203,8 +464,8 @@ function renderNotesEditor(q) {
   ).join("");
 }
 
-function bindNoteEditors(card, q) {
-  const notes = getQuestionNotes(q);
+function bindQuestionNoteEditors(card, q) {
+  const notes = getQuestionNotes(q.id, q.notes);
   card.querySelectorAll("textarea[data-qid]").forEach((ta) => {
     ta.value = notes[ta.dataset.field] || "";
     ta.addEventListener(
@@ -231,6 +492,10 @@ function renderQuestions(questions) {
             .join("")}</ul>`
         : "";
 
+    const themeLink = q.themeId
+      ? `<button type="button" class="link-theme" data-theme-id="${escapeAttr(q.themeId)}">Open theme notes →</button>`
+      : "";
+
     card.innerHTML = `
       <div class="question-header">
         <span class="badge">${q.year}</span>
@@ -240,30 +505,29 @@ function renderQuestions(questions) {
       </div>
       <p class="question-text">${escapeHtml(q.text)}</p>
       ${subHtml}
-      <details class="study-details" open>
-        <summary>Your notes (introduction · static · quotes · CA · topper · value)</summary>
-        <div class="notes-editor">${renderNotesEditor(q)}</div>
+      ${themeLink}
+      <details class="study-details">
+        <summary>Your notes for this question</summary>
+        <div class="notes-editor">${renderQuestionNotesEditor(q)}</div>
       </details>
     `;
 
-    bindNoteEditors(card, q);
+    const themeBtn = card.querySelector(".link-theme");
+    if (themeBtn) {
+      themeBtn.addEventListener("click", async () => {
+        state.viewMode = "themes";
+        state.selectedThemeId = themeBtn.dataset.themeId;
+        setViewMode("themes");
+        await renderThemeView();
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      });
+    }
+
+    bindQuestionNoteEditors(card, q);
     els.questionsList.appendChild(card);
   });
 
   els.emptyState.classList.toggle("hidden", questions.length > 0);
-}
-
-function escapeHtml(str) {
-  const div = document.createElement("div");
-  div.textContent = str;
-  return div.innerHTML;
-}
-
-function escapeAttr(str) {
-  return String(str)
-    .replace(/&/g, "&amp;")
-    .replace(/"/g, "&quot;")
-    .replace(/</g, "&lt;");
 }
 
 function updateDataNote(paper) {
@@ -285,7 +549,10 @@ function updateDataNote(paper) {
   els.dataNote.textContent = msg;
 }
 
-function render() {
+async function renderQuestionView() {
+  els.themeView.classList.add("hidden");
+  els.questionView.classList.remove("hidden");
+
   const paper = papers[state.paper];
   if (!paper) return;
 
@@ -293,10 +560,10 @@ function render() {
 
   filtered.sort((a, b) => {
     if (b.year !== a.year) return b.year - a.year;
-    return String(a.number).localeCompare(String(b.number), undefined, {
-      numeric: true,
-    });
+    return String(a.number).localeCompare(String(b.number), undefined, { numeric: true });
   });
+
+  await loadQuestionNotesForIds(filtered.map((q) => q.id));
 
   renderPaperMeta(paper);
   renderStats(filtered, paper.questions.length);
@@ -304,10 +571,18 @@ function render() {
   renderQuestions(filtered);
 }
 
-function setActivePaper(paperNum) {
+function setViewMode(mode) {
+  state.viewMode = mode;
+  els.viewTabs.forEach((tab) => {
+    tab.classList.toggle("active", tab.dataset.view === mode);
+  });
+}
+
+async function setActivePaper(paperNum) {
   state.paper = paperNum;
   state.year = "all";
   state.theme = "all";
+  state.selectedThemeId = null;
 
   els.paperTabs.forEach((tab) => {
     tab.classList.toggle("active", Number(tab.dataset.paper) === paperNum);
@@ -315,7 +590,7 @@ function setActivePaper(paperNum) {
 
   populateYearFilter();
   populateThemeFilter();
-  render();
+  await refreshView();
 }
 
 function clearAllFilters() {
@@ -327,41 +602,76 @@ function clearAllFilters() {
   els.yearFilter.value = "all";
   els.marksFilter.value = "all";
   els.themeFilter.value = "all";
-  render();
+  renderQuestionView();
 }
 
 function bindEvents() {
   els.paperTabs.forEach((tab) => {
-    tab.addEventListener("click", () => {
-      setActivePaper(Number(tab.dataset.paper));
+    tab.addEventListener("click", () => setActivePaper(Number(tab.dataset.paper)));
+  });
+
+  els.viewTabs.forEach((tab) => {
+    tab.addEventListener("click", async () => {
+      setViewMode(tab.dataset.view);
+      if (tab.dataset.view === "themes") {
+        state.selectedThemeId = null;
+      }
+      await refreshView();
     });
+  });
+
+  els.themeBackBtn.addEventListener("click", async () => {
+    state.selectedThemeId = null;
+    await renderThemeView();
   });
 
   els.searchInput.addEventListener(
     "input",
     debounce((e) => {
       state.search = e.target.value;
-      render();
+      renderQuestionView();
     }, 200)
   );
 
   els.yearFilter.addEventListener("change", (e) => {
     state.year = e.target.value;
-    render();
+    renderQuestionView();
   });
 
   els.marksFilter.addEventListener("change", (e) => {
     state.marks = e.target.value;
-    render();
+    renderQuestionView();
   });
 
   els.themeFilter.addEventListener("change", (e) => {
     state.theme = e.target.value;
-    render();
+    renderQuestionView();
   });
 
   els.clearFilters.addEventListener("click", clearAllFilters);
   els.themeToggle.addEventListener("click", toggleTheme);
+
+  els.authOpenBtn?.addEventListener("click", openAuthDialog);
+  els.authCloseBtn.addEventListener("click", closeAuthDialog);
+  els.authForm.addEventListener("submit", handleAuthSubmit);
+  els.authGoogleBtn.addEventListener("click", handleGoogleSignIn);
+
+  document.querySelectorAll(".auth-tab").forEach((btn) => {
+    btn.addEventListener("click", () => setAuthTab(btn.dataset.authTab));
+  });
+}
+
+function escapeHtml(str) {
+  const div = document.createElement("div");
+  div.textContent = str;
+  return div.innerHTML;
+}
+
+function escapeAttr(str) {
+  return String(str)
+    .replace(/&/g, "&amp;")
+    .replace(/"/g, "&quot;")
+    .replace(/</g, "&lt;");
 }
 
 function debounce(fn, ms) {
@@ -374,26 +684,43 @@ function debounce(fn, ms) {
 
 async function loadData() {
   const ids = [1, 2, 3, 4];
-  const results = await Promise.all(
-    ids.map((n) =>
+  const [themeData, ...paperResults] = await Promise.all([
+    fetch("data/themes.json").then((r) => r.json()),
+    ...ids.map((n) =>
       fetch(`data/gs-paper-${n}.json`).then((r) => {
         if (!r.ok) throw new Error(`Failed to load GS Paper ${n}`);
         return r.json();
       })
-    )
-  );
+    ),
+  ]);
+
+  themeConfig = themeData;
   ids.forEach((n, i) => {
-    papers[n] = results[i];
+    papers[n] = paperResults[i];
   });
 }
 
 initTheme();
 bindEvents();
 
-loadData()
-  .then(() => setActivePaper(1))
-  .catch((err) => {
+(async () => {
+  try {
+    await loadData();
+    await initSupabase();
+
+    if (isSupabaseConfigured()) {
+      onAuthStateChange((session) => onUserSession(session));
+      const session = await getSession();
+      await onUserSession(session);
+    } else {
+      updateSyncBadge();
+      renderAuthArea();
+    }
+
+    await setActivePaper(1);
+  } catch (err) {
     console.error(err);
-    els.questionsList.innerHTML =
-      '<p class="empty-state">Could not load questions. Serve with: python3 -m http.server 8080</p>';
-  });
+    els.themeGrid.innerHTML =
+      '<p class="empty-state">Could not load data. Serve with: python3 -m http.server 8080</p>';
+  }
+})();
