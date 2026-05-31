@@ -1,5 +1,37 @@
 # Deploy UPSC Mains PYQ online
 
+## GitHub Pages + Supabase sync (recommended after git push)
+
+`js/config.js` is **not in git** (contains keys). CI generates it from GitHub Secrets at deploy time.
+
+### 1. Add repository secrets
+
+Repo → **Settings** → **Secrets and variables** → **Actions** → **New repository secret**
+
+| Name | Value |
+|------|--------|
+| `SUPABASE_URL` | `https://xxxxx.supabase.co` |
+| `SUPABASE_ANON_KEY` | your anon / publishable key |
+
+### 2. Enable GitHub Pages
+
+1. Repo → **Settings** → **Pages**
+2. **Build and deployment** → **Source** → **GitHub Actions**
+3. Push to `main` — workflow deploys automatically
+
+Site URL: **`https://sauravanandb2w.github.io/upsc-mains-pyq/`**
+
+### 3. Supabase redirect URLs (required for sign-in on live site)
+
+**Authentication** → **URL Configuration**:
+
+- **Site URL:** `https://sauravanandb2w.github.io/upsc-mains-pyq/`
+- **Redirect URLs** — add:
+  - `https://sauravanandb2w.github.io/upsc-mains-pyq/`
+  - `http://localhost:8080` (keep for local dev)
+
+---
+
 ## Option A — Netlify Drop (fastest, no Git)
 
 1. Zip the project (from the parent folder):
