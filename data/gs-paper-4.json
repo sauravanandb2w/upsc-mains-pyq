@@ -1,0 +1,105 @@
+{
+  "paper": 4,
+  "title": "General Studies Paper IV",
+  "syllabus": "Ethics, Integrity and Aptitude — theory questions and case studies on public service values.",
+  "questions": [
+    {
+      "year": 2024,
+      "number": 1,
+      "marks": 10,
+      "text": "What do you understand by 'emotional intelligence'? How can it be developed in public servants?",
+      "topics": ["Ethics", "Emotional Intelligence"]
+    },
+    {
+      "year": 2024,
+      "number": 3,
+      "marks": 10,
+      "text": "Distinguish between 'probity' and 'integrity'. Why are they essential in governance?",
+      "topics": ["Integrity", "Governance"]
+    },
+    {
+      "year": 2024,
+      "number": 6,
+      "marks": 20,
+      "text": "Case Study: You are the District Magistrate. A large protest is planned regarding a land acquisition project. Local leaders allege procedural violations, while the company cites national importance. Discuss the ethical issues and your course of action.",
+      "topics": ["Case Study", "Administration", "Stakeholders"]
+    },
+    {
+      "year": 2024,
+      "number": 8,
+      "marks": 20,
+      "text": "Case Study: A senior officer asks you to expedite clearance for a firm in which a relative has interest. You are a junior officer in the department. What are the ethical dilemmas and options available to you?",
+      "topics": ["Case Study", "Conflict of Interest"]
+    },
+    {
+      "year": 2023,
+      "number": 2,
+      "marks": 10,
+      "text": "Explain the concept of 'attitude' and its components. How does attitude influence behaviour in public service?",
+      "topics": ["Aptitude", "Attitude"]
+    },
+    {
+      "year": 2023,
+      "number": 5,
+      "marks": 15,
+      "text": "Discuss the role of conscience in ethical decision-making for civil servants.",
+      "topics": ["Ethics", "Conscience"]
+    },
+    {
+      "year": 2023,
+      "number": 7,
+      "marks": 20,
+      "text": "Case Study: As head of a government hospital, you discover that substandard medicines have been procured. Suppliers and some staff resist investigation. Identify ethical issues and suggest a response.",
+      "topics": ["Case Study", "Public Health", "Accountability"]
+    },
+    {
+      "year": 2022,
+      "number": 1,
+      "marks": 10,
+      "text": "What is meant by 'crisis of conscience'? How can a civil servant resolve it?",
+      "topics": ["Ethics", "Conscience"]
+    },
+    {
+      "year": 2022,
+      "number": 4,
+      "marks": 10,
+      "text": "Define 'corporate governance'. What ethical principles should guide corporate governance in India?",
+      "topics": ["Ethics", "Corporate Governance"]
+    },
+    {
+      "year": 2022,
+      "number": 6,
+      "marks": 20,
+      "text": "Case Study: You are supervising a rural employment scheme. Beneficiaries report that middlemen demand cuts for inclusion in muster rolls. Discuss ethical issues and administrative steps.",
+      "topics": ["Case Study", "Social Justice", "Corruption"]
+    },
+    {
+      "year": 2021,
+      "number": 2,
+      "marks": 10,
+      "text": "Discuss the importance of empathy in public service. How can it be cultivated?",
+      "topics": ["Aptitude", "Empathy"]
+    },
+    {
+      "year": 2021,
+      "number": 7,
+      "marks": 20,
+      "text": "Case Study: A whistle-blower in your office shares evidence of financial irregularities involving a senior colleague. Analyze the ethical dilemmas and your duty as a civil servant.",
+      "topics": ["Case Study", "Whistleblowing", "Integrity"]
+    },
+    {
+      "year": 2020,
+      "number": 1,
+      "marks": 10,
+      "text": "What do you understand by 'values' and 'ethics'? Discuss the relationship between them in the context of civil services.",
+      "topics": ["Ethics", "Values"]
+    },
+    {
+      "year": 2020,
+      "number": 6,
+      "marks": 20,
+      "text": "Case Study: During a disaster relief operation, you find that relief material is being diverted for political patronage. What ethical principles are violated and what action would you take?",
+      "topics": ["Case Study", "Disaster Management", "Impartiality"]
+    }
+  ]
+}

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="UPSC Civil Services Mains — General Studies Previous Year Questions (GS Paper I to IV), year-wise."
+    />
+    <title>UPSC Mains PYQ | GS Paper I–IV</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="header-inner">
+        <div class="brand">
+          <span class="brand-mark" aria-hidden="true">भारत</span>
+          <div>
+            <h1>UPSC Mains PYQ</h1>
+            <p class="tagline">General Studies · Paper I to IV · Year-wise</p>
+          </div>
+        </div>
+        <button
+          type="button"
+          class="theme-toggle"
+          id="themeToggle"
+          aria-label="Toggle dark mode"
+        >
+          <span class="theme-icon" aria-hidden="true">◐</span>
+        </button>
+      </div>
+    </header>
+
+    <main class="main">
+      <nav class="paper-nav" aria-label="GS papers">
+        <button type="button" class="paper-tab active" data-paper="1">
+          <span class="tab-label">GS Paper I</span>
+          <span class="tab-desc">Heritage · History · Geography</span>
+        </button>
+        <button type="button" class="paper-tab" data-paper="2">
+          <span class="tab-label">GS Paper II</span>
+          <span class="tab-desc">Polity · Governance · IR</span>
+        </button>
+        <button type="button" class="paper-tab" data-paper="3">
+          <span class="tab-label">GS Paper III</span>
+          <span class="tab-desc">Economy · Tech · Environment · Security</span>
+        </button>
+        <button type="button" class="paper-tab" data-paper="4">
+          <span class="tab-label">GS Paper IV</span>
+          <span class="tab-desc">Ethics · Integrity · Aptitude</span>
+        </button>
+      </nav>
+
+      <section class="controls" aria-label="Filters">
+        <div class="search-wrap">
+          <label for="searchInput" class="visually-hidden">Search questions</label>
+          <input
+            type="search"
+            id="searchInput"
+            placeholder="Search by keyword, topic, or year…"
+            autocomplete="off"
+          />
+        </div>
+        <div class="filter-row">
+          <div class="filter-group">
+            <label for="yearFilter">Year</label>
+            <select id="yearFilter">
+              <option value="all">All years</option>
+            </select>
+          </div>
+          <div class="filter-group">
+            <label for="marksFilter">Marks</label>
+            <select id="marksFilter">
+              <option value="all">All marks</option>
+              <option value="10">10 marks</option>
+              <option value="15">15 marks</option>
+              <option value="20">20 marks</option>
+              <option value="case">Case study</option>
+            </select>
+          </div>
+          <button type="button" class="btn-ghost" id="clearFilters">Clear filters</button>
+        </div>
+      </section>
+
+      <div class="paper-meta" id="paperMeta"></div>
+
+      <div class="stats-bar" id="statsBar" aria-live="polite"></div>
+
+      <div class="questions" id="questionsList" role="list"></div>
+
+      <p class="empty-state hidden" id="emptyState">
+        No questions match your filters. Try another year or clear the search.
+      </p>
+    </main>
+
+    <footer class="site-footer">
+      <p>
+        Questions are from official UPSC Civil Services (Main) Examination papers.
+        Verify against the
+        <a href="https://upsc.gov.in" target="_blank" rel="noopener noreferrer"
+          >UPSC website</a
+        >
+        for authoritative text.
+      </p>
+    </footer>
+
+    <script type="module" src="js/app.js"></script>
+  </body>
+</html>

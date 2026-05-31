@@ -1,0 +1,105 @@
+{
+  "paper": 2,
+  "title": "General Studies Paper II",
+  "syllabus": "Governance, Constitution, Polity, Social Justice and International relations.",
+  "questions": [
+    {
+      "year": 2024,
+      "number": 1,
+      "marks": 10,
+      "text": "Discuss the significance of the Preamble to the Constitution of India.",
+      "topics": ["Constitution", "Preamble"]
+    },
+    {
+      "year": 2024,
+      "number": 3,
+      "marks": 10,
+      "text": "What is the role of the Finance Commission in Indian federalism?",
+      "topics": ["Polity", "Federalism", "Finance Commission"]
+    },
+    {
+      "year": 2024,
+      "number": 6,
+      "marks": 15,
+      "text": "Examine the challenges in the implementation of the Right to Education Act.",
+      "topics": ["Social Justice", "Education"]
+    },
+    {
+      "year": 2024,
+      "number": 9,
+      "marks": 15,
+      "text": "Analyze India's approach to its neighbourhood policy in recent years.",
+      "topics": ["International Relations", "Neighbourhood"]
+    },
+    {
+      "year": 2023,
+      "number": 2,
+      "marks": 10,
+      "text": "Discuss the powers and functions of the Election Commission of India.",
+      "topics": ["Polity", "Election Commission"]
+    },
+    {
+      "year": 2023,
+      "number": 5,
+      "marks": 15,
+      "text": "Examine the role of civil society in strengthening democracy in India.",
+      "topics": ["Governance", "Civil Society"]
+    },
+    {
+      "year": 2023,
+      "number": 8,
+      "marks": 15,
+      "text": "Discuss the significance of India's membership in multilateral forums such as BRICS and SCO.",
+      "topics": ["International Relations", "Multilateralism"]
+    },
+    {
+      "year": 2022,
+      "number": 1,
+      "marks": 10,
+      "text": "Explain the doctrine of basic structure as evolved by the judiciary.",
+      "topics": ["Constitution", "Judiciary", "Basic Structure"]
+    },
+    {
+      "year": 2022,
+      "number": 4,
+      "marks": 10,
+      "text": "Discuss the role of Panchayati Raj institutions in grassroots democracy.",
+      "topics": ["Governance", "Local Government"]
+    },
+    {
+      "year": 2022,
+      "number": 7,
+      "marks": 15,
+      "text": "Analyze the impact of globalization on India's foreign policy.",
+      "topics": ["International Relations", "Globalization"]
+    },
+    {
+      "year": 2021,
+      "number": 3,
+      "marks": 10,
+      "text": "What are the constitutional provisions for the protection of minorities in India?",
+      "topics": ["Constitution", "Minorities"]
+    },
+    {
+      "year": 2021,
+      "number": 6,
+      "marks": 15,
+      "text": "Discuss the challenges of urban governance in India.",
+      "topics": ["Governance", "Urbanization"]
+    },
+    {
+      "year": 2020,
+      "number": 2,
+      "marks": 10,
+      "text": "Discuss the role of the Rajya Sabha in the Indian parliamentary system.",
+      "topics": ["Polity", "Parliament"]
+    },
+    {
+      "year": 2020,
+      "number": 5,
+      "marks": 15,
+      "text": "Examine India's relations with major powers in the context of a multipolar world.",
+      "topics": ["International Relations", "Great Powers"]
+    }
+  ]
+}

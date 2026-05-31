@@ -1,0 +1,105 @@
+{
+  "paper": 3,
+  "title": "General Studies Paper III",
+  "syllabus": "Technology, Economic Development, Biodiversity, Environment, Security and Disaster Management.",
+  "questions": [
+    {
+      "year": 2024,
+      "number": 1,
+      "marks": 10,
+      "text": "Discuss the role of the MSME sector in employment generation and economic growth in India.",
+      "topics": ["Economy", "MSME"]
+    },
+    {
+      "year": 2024,
+      "number": 4,
+      "marks": 10,
+      "text": "What are the applications of biotechnology in agriculture? Discuss with examples.",
+      "topics": ["Science & Technology", "Biotechnology"]
+    },
+    {
+      "year": 2024,
+      "number": 7,
+      "marks": 15,
+      "text": "Examine the challenges of water management in India and suggest measures for sustainable use.",
+      "topics": ["Environment", "Water Resources"]
+    },
+    {
+      "year": 2024,
+      "number": 10,
+      "marks": 15,
+      "text": "Analyze the internal security challenges posed by left-wing extremism in India.",
+      "topics": ["Security", "LWE"]
+    },
+    {
+      "year": 2023,
+      "number": 2,
+      "marks": 10,
+      "text": "Discuss the significance of the Production Linked Incentive (PLI) scheme for manufacturing in India.",
+      "topics": ["Economy", "Industry Policy"]
+    },
+    {
+      "year": 2023,
+      "number": 5,
+      "marks": 15,
+      "text": "Examine the impact of climate change on Indian agriculture and adaptation strategies.",
+      "topics": ["Environment", "Climate Change", "Agriculture"]
+    },
+    {
+      "year": 2023,
+      "number": 8,
+      "marks": 15,
+      "text": "Discuss the role of space technology in disaster management in India.",
+      "topics": ["S&T", "Disaster Management"]
+    },
+    {
+      "year": 2022,
+      "number": 1,
+      "marks": 10,
+      "text": "Discuss the objectives and challenges of the National Monetisation Pipeline.",
+      "topics": ["Economy", "Infrastructure"]
+    },
+    {
+      "year": 2022,
+      "number": 6,
+      "marks": 15,
+      "text": "Analyze the threats to cybersecurity in India and the institutional framework to address them.",
+      "topics": ["Security", "Cybersecurity"]
+    },
+    {
+      "year": 2022,
+      "number": 9,
+      "marks": 15,
+      "text": "Discuss the conservation strategies for biodiversity hotspots in India.",
+      "topics": ["Environment", "Biodiversity"]
+    },
+    {
+      "year": 2021,
+      "number": 3,
+      "marks": 10,
+      "text": "Explain the concept of inflation and its impact on the Indian economy.",
+      "topics": ["Economy", "Inflation"]
+    },
+    {
+      "year": 2021,
+      "number": 7,
+      "marks": 15,
+      "text": "Discuss the role of renewable energy in achieving India's climate commitments.",
+      "topics": ["Environment", "Renewable Energy"]
+    },
+    {
+      "year": 2020,
+      "number": 4,
+      "marks": 10,
+      "text": "What is the significance of the National Education Policy for skill development and innovation?",
+      "topics": ["Economy", "Education", "Innovation"]
+    },
+    {
+      "year": 2020,
+      "number": 8,
+      "marks": 15,
+      "text": "Examine the border management challenges of India and measures to strengthen border security.",
+      "topics": ["Security", "Border Management"]
+    }
+  ]
+}

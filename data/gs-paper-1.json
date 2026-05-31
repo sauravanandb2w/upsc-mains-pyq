@@ -1,0 +1,119 @@
+{
+  "paper": 1,
+  "title": "General Studies Paper I",
+  "syllabus": "Indian Heritage and Culture, History and Geography of the World and Society.",
+  "questions": [
+    {
+      "year": 2024,
+      "number": 1,
+      "marks": 10,
+      "text": "Discuss the main features of the urban planning of the Indus Valley Civilization.",
+      "topics": ["Ancient History", "Indus Valley"]
+    },
+    {
+      "year": 2024,
+      "number": 2,
+      "marks": 10,
+      "text": "What were the factors that led to the rise of Magadha as the foremost Mahajanapada?",
+      "topics": ["Ancient History", "Magadha"]
+    },
+    {
+      "year": 2024,
+      "number": 5,
+      "marks": 15,
+      "text": "Evaluate the contribution of the Bhakti and Sufi movements to the composite culture of India.",
+      "topics": ["Medieval History", "Bhakti", "Sufi"]
+    },
+    {
+      "year": 2024,
+      "number": 8,
+      "marks": 15,
+      "text": "Examine the role of trade and commerce in the urbanization of India during the medieval period.",
+      "topics": ["Medieval History", "Economy"]
+    },
+    {
+      "year": 2024,
+      "number": 12,
+      "marks": 15,
+      "text": "Discuss the evolution and significance of Gandhara art in the context of cultural exchanges in ancient India.",
+      "topics": ["Art & Culture", "Ancient India"]
+    },
+    {
+      "year": 2023,
+      "number": 1,
+      "marks": 10,
+      "text": "What were the main features of the architecture of the Vijayanagara Empire?",
+      "topics": ["Medieval History", "Architecture"]
+    },
+    {
+      "year": 2023,
+      "number": 3,
+      "marks": 10,
+      "text": "Discuss the significance of the Revolt of 1857 in the history of India's freedom struggle.",
+      "topics": ["Modern History", "1857 Revolt"]
+    },
+    {
+      "year": 2023,
+      "number": 6,
+      "marks": 15,
+      "text": "Analyze the impact of colonial land revenue systems on Indian agriculture.",
+      "topics": ["Modern History", "Colonial Economy"]
+    },
+    {
+      "year": 2023,
+      "number": 10,
+      "marks": 15,
+      "text": "Explain the mechanism of the Indian monsoon and its variability. How does it affect Indian agriculture?",
+      "topics": ["Geography", "Climate", "Monsoon"]
+    },
+    {
+      "year": 2022,
+      "number": 2,
+      "marks": 10,
+      "text": "Discuss the contributions of the Pallavas to South Indian art and architecture.",
+      "topics": ["Ancient History", "Art & Culture"]
+    },
+    {
+      "year": 2022,
+      "number": 5,
+      "marks": 15,
+      "text": "Examine the role of women in the Indian National Movement.",
+      "topics": ["Modern History", "Freedom Struggle"]
+    },
+    {
+      "year": 2022,
+      "number": 9,
+      "marks": 15,
+      "text": "Discuss the major physiographic divisions of India and their economic significance.",
+      "topics": ["Geography", "Physiography"]
+    },
+    {
+      "year": 2021,
+      "number": 1,
+      "marks": 10,
+      "text": "Evaluate the nature and significance of the Mauryan art and architecture.",
+      "topics": ["Ancient History", "Mauryan"]
+    },
+    {
+      "year": 2021,
+      "number": 7,
+      "marks": 15,
+      "text": "Discuss the salient features of the Indian society and the challenges of social transformation.",
+      "topics": ["Society", "Social Change"]
+    },
+    {
+      "year": 2020,
+      "number": 3,
+      "marks": 10,
+      "text": "Discuss the main teachings of Buddhism and its impact on Indian society.",
+      "topics": ["Ancient History", "Buddhism"]
+    },
+    {
+      "year": 2020,
+      "number": 8,
+      "marks": 15,
+      "text": "Examine the geographical factors that influenced the location of major industrial regions in India.",
+      "topics": ["Geography", "Industry"]
+    }
+  ]
+}
