@@ -985,6 +985,20 @@ body {
   background: #fff;
 }
 
+.study-svg-wrap {
+  max-width: 100%;
+  overflow-x: auto;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: #fff;
+}
+
+.study-svg-wrap svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
 .study-figure figcaption {
   margin-top: 0.35rem;
   font-size: 0.78rem;
@@ -1005,4 +1019,17 @@ body {
   font-size: 0.78rem;
   color: #dc2626;
   white-space: pre-wrap;
+}
+
+.study-empty {
+  margin: 0;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.study-empty code {
+  font-size: 0.78rem;
+  padding: 0.1rem 0.35rem;
+  border-radius: 4px;
+  background: color-mix(in srgb, var(--text) 6%, var(--bg));
 }

@@ -517,11 +517,11 @@ function renderQuestions(questions) {
       ${subHtml}
       ${themeLink}
       <details class="study-details">
-        <summary>Your notes for this question</summary>
+        <summary>Your notes for this question (text · synced)</summary>
         <div class="notes-editor">${renderQuestionNotesEditor(q)}</div>
       </details>
       <details class="study-materials-details">
-        <summary>Study materials — diagrams · tables · flowcharts</summary>
+        <summary>Diagrams &amp; images</summary>
         <div class="study-materials-body" data-study-path="study/questions/${escapeAttr(q.id)}"></div>
       </details>
     `;

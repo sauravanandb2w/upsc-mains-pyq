@@ -117,6 +117,42 @@ async function renderMermaidBlocks(root) {
   }
 }
 
+function sanitizeSvg(svg) {
+  return svg
+    .replace(/<script[\s\S]*?<\/script>/gi, "")
+    .replace(/\son\w+="[^"]*"/gi, "")
+    .replace(/\son\w+='[^']*'/gi, "");
+}
+
+async function renderImageSection(section, basePath) {
+  const src = resolveAssetUrl(basePath, section.file);
+  if (!section.file) return "";
+
+  const caption = section.caption || section.title || "";
+  const alt = section.alt || caption || "Study diagram";
+  const captionHtml = caption
+    ? `<figcaption>${escapeHtml(caption)}</figcaption>`
+    : "";
+
+  if (section.file.toLowerCase().endsWith(".svg")) {
+    const svg = await tryFetchText(src);
+    if (!svg?.trim()) return "";
+    return `
+      <figure class="study-figure study-figure--standalone">
+        <div class="study-svg-wrap" role="img" aria-label="${escapeHtml(alt)}">${sanitizeSvg(svg)}</div>
+        ${captionHtml}
+      </figure>
+    `;
+  }
+
+  return `
+    <figure class="study-figure study-figure--standalone">
+      <img src="${escapeHtml(src)}" alt="${escapeHtml(alt)}" loading="lazy">
+      ${captionHtml}
+    </figure>
+  `;
+}
+
 function wrapSection(title, innerHtml) {
   if (!title) return innerHtml;
   return `<section class="study-section"><h3 class="study-section-title">${escapeHtml(title)}</h3>${innerHtml}</section>`;
@@ -131,10 +167,7 @@ export async function renderStudyMaterials(basePath, container) {
   container.innerHTML = '<p class="study-loading">Loading study materials…</p>';
 
   const manifest = await tryFetchJson(`${basePath}/manifest.json`);
-  const sections =
-    manifest?.sections?.length > 0
-      ? manifest.sections
-      : [{ type: "markdown", file: "README.md" }];
+  const sections = manifest?.sections?.length > 0 ? manifest.sections : [];
 
   const parts = [];
   let hasContent = false;
@@ -148,16 +181,10 @@ export async function renderStudyMaterials(basePath, container) {
       const html = await markdownToHtml(md, basePath);
       parts.push(wrapSection(section.title || "", html));
     } else if (section.type === "image") {
-      const src = resolveAssetUrl(basePath, section.file);
-      if (!section.file) continue;
+      const html = await renderImageSection(section, basePath);
+      if (!html) continue;
       hasContent = true;
-      const caption = section.caption || section.title || "";
-      parts.push(`
-        <figure class="study-figure study-figure--standalone">
-          <img src="${escapeHtml(src)}" alt="${escapeHtml(section.alt || caption)}" loading="lazy">
-          ${caption ? `<figcaption>${escapeHtml(caption)}</figcaption>` : ""}
-        </figure>
-      `);
+      parts.push(html);
     }
   }
 
@@ -188,9 +215,7 @@ export function bindLazyStudyMaterials(detailsEl, basePath) {
     const ok = await renderStudyMaterials(basePath, body);
     if (!ok) {
       body.innerHTML =
-        '<p class="study-empty">No study files yet. Add <code>study/questions/' +
-        escapeHtml(basePath.split("/").pop() || "") +
-        "/README.md</code> and push to GitHub.</p>";
+        '<p class="study-empty">No diagram yet. Add an image + <code>manifest.json</code> in this question folder.</p>';
     }
   });
 }
