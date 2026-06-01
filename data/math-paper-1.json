@@ -428,9 +428,10 @@
       "number": 1,
       "section": "A",
       "marks": 20,
-      "text": "UPSC 2023 · Mathematics Paper 1 · Question 1 · Section A · Linear Algebra (official scan, page split)",
+      "text": "UPSC 2023 · Mathematics Paper 1 · Question 1 · Section A · Linear Algebra (official scan)",
       "scanImages": [
-        "scan-01.jpg"
+        "scan-01.jpg",
+        "scan-02.jpg"
       ],
       "moduleId": "linear-algebra",
       "module": "Linear Algebra",
@@ -453,7 +454,7 @@
       "number": 2,
       "section": "A",
       "marks": 20,
-      "text": "UPSC 2023 · Mathematics Paper 1 · Question 2 · Section A · Linear Algebra (official scan, page split)",
+      "text": "UPSC 2023 · Mathematics Paper 1 · Question 2 · Section A · Linear Algebra (official scan)",
       "scanImages": [
         "scan-01.jpg"
       ],
@@ -478,9 +479,36 @@
       "number": 3,
       "section": "A",
       "marks": 20,
-      "text": "UPSC 2023 · Mathematics Paper 1 · Question 3 · Section A · Linear Algebra (official scan, page split)",
+      "text": "UPSC 2023 · Mathematics Paper 1 · Question 3 · Section A · Linear Algebra (official scan)",
       "scanImages": [
-        "scan-01.jpg"
+        "scan-01.jpg",
+        "scan-02.jpg"
+      ],
+      "moduleId": "linear-algebra",
+      "module": "Linear Algebra",
+      "themeId": "linear-algebra",
+      "theme": "Linear Algebra",
+      "subthemes": [],
+      "sourcePdf": "https://www.upsc.gov.in/sites/default/files/QP-CSM-23-MATHEMATICS-PAPER-I-29092023.pdf",
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "math1-2023-q4",
+      "year": 2023,
+      "number": 4,
+      "section": "A",
+      "marks": 20,
+      "text": "UPSC 2023 · Mathematics Paper 1 · Question 4 · Section A · Linear Algebra (official scan)",
+      "scanImages": [
+        "scan-01.jpg",
+        "scan-02.jpg"
       ],
       "moduleId": "linear-algebra",
       "module": "Linear Algebra",
@@ -503,14 +531,15 @@
       "number": 5,
       "section": "B",
       "marks": 20,
-      "text": "UPSC 2023 · Mathematics Paper 1 · Question 5 · Section B · Analytic Geometry (official scan, page split)",
+      "text": "UPSC 2023 · Mathematics Paper 1 · Question 5 · Section B · Calculus (official scan)",
       "scanImages": [
-        "scan-01.jpg"
+        "scan-01.jpg",
+        "scan-02.jpg"
       ],
-      "moduleId": "analytic-geometry",
-      "module": "Analytic Geometry",
-      "themeId": "analytic-geometry",
-      "theme": "Analytic Geometry",
+      "moduleId": "calculus",
+      "module": "Calculus",
+      "themeId": "calculus",
+      "theme": "Calculus",
       "subthemes": [],
       "sourcePdf": "https://www.upsc.gov.in/sites/default/files/QP-CSM-23-MATHEMATICS-PAPER-I-29092023.pdf",
       "notes": {
@@ -528,14 +557,15 @@
       "number": 6,
       "section": "B",
       "marks": 20,
-      "text": "UPSC 2023 · Mathematics Paper 1 · Question 6 · Section B · Ordinary Differential Equations (official scan, page split)",
+      "text": "UPSC 2023 · Mathematics Paper 1 · Question 6 · Section B · Linear Algebra (official scan)",
       "scanImages": [
-        "scan-01.jpg"
+        "scan-01.jpg",
+        "scan-02.jpg"
       ],
-      "moduleId": "ode",
-      "module": "Ordinary Differential Equations",
-      "themeId": "ode",
-      "theme": "Ordinary Differential Equations",
+      "moduleId": "linear-algebra",
+      "module": "Linear Algebra",
+      "themeId": "linear-algebra",
+      "theme": "Linear Algebra",
       "subthemes": [],
       "sourcePdf": "https://www.upsc.gov.in/sites/default/files/QP-CSM-23-MATHEMATICS-PAPER-I-29092023.pdf",
       "notes": {
@@ -553,9 +583,10 @@
       "number": 7,
       "section": "B",
       "marks": 20,
-      "text": "UPSC 2023 · Mathematics Paper 1 · Question 7 · Section B · Vector Analysis (official scan, page split)",
+      "text": "UPSC 2023 · Mathematics Paper 1 · Question 7 · Section B · Vector Analysis (official scan)",
       "scanImages": [
-        "scan-01.jpg"
+        "scan-01.jpg",
+        "scan-02.jpg"
       ],
       "moduleId": "vector-analysis",
       "module": "Vector Analysis",
@@ -578,14 +609,14 @@
       "number": 8,
       "section": "B",
       "marks": 20,
-      "text": "UPSC 2023 · Mathematics Paper 1 · Question 8 · Section B · Ordinary Differential Equations (official scan, page split)",
+      "text": "UPSC 2023 · Mathematics Paper 1 · Question 8 · Section B · Dynamics & Statics (official scan)",
       "scanImages": [
         "scan-01.jpg"
       ],
-      "moduleId": "ode",
-      "module": "Ordinary Differential Equations",
-      "themeId": "ode",
-      "theme": "Ordinary Differential Equations",
+      "moduleId": "dynamics-statics",
+      "module": "Dynamics & Statics",
+      "themeId": "dynamics-statics",
+      "theme": "Dynamics & Statics",
       "subthemes": [],
       "sourcePdf": "https://www.upsc.gov.in/sites/default/files/QP-CSM-23-MATHEMATICS-PAPER-I-29092023.pdf",
       "notes": {
@@ -808,14 +839,15 @@
       "number": 1,
       "section": "A",
       "marks": 20,
-      "text": "UPSC 2021 · Mathematics Paper 1 · Question 1 · Section A · Ordinary Differential Equations (official scan, page split)",
+      "text": "UPSC 2021 · Mathematics Paper 1 · Question 1 · Section A · Linear Algebra (official scan)",
       "scanImages": [
-        "scan-01.jpg"
+        "scan-01.jpg",
+        "scan-02.jpg"
       ],
-      "moduleId": "ode",
-      "module": "Ordinary Differential Equations",
-      "themeId": "ode",
-      "theme": "Ordinary Differential Equations",
+      "moduleId": "linear-algebra",
+      "module": "Linear Algebra",
+      "themeId": "linear-algebra",
+      "theme": "Linear Algebra",
       "subthemes": [],
       "sourcePdf": "https://www.upsc.gov.in/sites/default/files/Mathematics Paper-I.pdf",
       "notes": {
@@ -833,7 +865,33 @@
       "number": 2,
       "section": "A",
       "marks": 20,
-      "text": "UPSC 2021 · Mathematics Paper 1 · Question 2 · Section A · Analytic Geometry (official scan, page split)",
+      "text": "UPSC 2021 · Mathematics Paper 1 · Question 2 · Section A · Linear Algebra (official scan)",
+      "scanImages": [
+        "scan-01.jpg",
+        "scan-02.jpg"
+      ],
+      "moduleId": "linear-algebra",
+      "module": "Linear Algebra",
+      "themeId": "linear-algebra",
+      "theme": "Linear Algebra",
+      "subthemes": [],
+      "sourcePdf": "https://www.upsc.gov.in/sites/default/files/Mathematics Paper-I.pdf",
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "math1-2021-q3",
+      "year": 2021,
+      "number": 3,
+      "section": "A",
+      "marks": 20,
+      "text": "UPSC 2021 · Mathematics Paper 1 · Question 3 · Section A · Analytic Geometry (official scan, page split)",
       "scanImages": [
         "scan-01.jpg"
       ],
@@ -853,14 +911,15 @@
       }
     },
     {
-      "id": "math1-2021-q3",
+      "id": "math1-2021-q4",
       "year": 2021,
-      "number": 3,
+      "number": 4,
       "section": "A",
       "marks": 20,
-      "text": "UPSC 2021 · Mathematics Paper 1 · Question 3 · Section A · Linear Algebra (official scan, page split)",
+      "text": "UPSC 2021 · Mathematics Paper 1 · Question 4 · Section A · Linear Algebra (official scan)",
       "scanImages": [
-        "scan-01.jpg"
+        "scan-01.jpg",
+        "scan-02.jpg"
       ],
       "moduleId": "linear-algebra",
       "module": "Linear Algebra",
@@ -883,14 +942,15 @@
       "number": 5,
       "section": "B",
       "marks": 20,
-      "text": "UPSC 2021 · Mathematics Paper 1 · Question 5 · Section B · Analytic Geometry (official scan, page split)",
+      "text": "UPSC 2021 · Mathematics Paper 1 · Question 5 · Section B · Ordinary Differential Equations (official scan)",
       "scanImages": [
-        "scan-01.jpg"
+        "scan-01.jpg",
+        "scan-02.jpg"
       ],
-      "moduleId": "analytic-geometry",
-      "module": "Analytic Geometry",
-      "themeId": "analytic-geometry",
-      "theme": "Analytic Geometry",
+      "moduleId": "ode",
+      "module": "Ordinary Differential Equations",
+      "themeId": "ode",
+      "theme": "Ordinary Differential Equations",
       "subthemes": [],
       "sourcePdf": "https://www.upsc.gov.in/sites/default/files/Mathematics Paper-I.pdf",
       "notes": {
@@ -908,14 +968,15 @@
       "number": 6,
       "section": "B",
       "marks": 20,
-      "text": "UPSC 2021 · Mathematics Paper 1 · Question 6 · Section B · Linear Algebra (official scan, page split)",
+      "text": "UPSC 2021 · Mathematics Paper 1 · Question 6 · Section B · Dynamics & Statics (official scan)",
       "scanImages": [
-        "scan-01.jpg"
+        "scan-01.jpg",
+        "scan-02.jpg"
       ],
-      "moduleId": "linear-algebra",
-      "module": "Linear Algebra",
-      "themeId": "linear-algebra",
-      "theme": "Linear Algebra",
+      "moduleId": "dynamics-statics",
+      "module": "Dynamics & Statics",
+      "themeId": "dynamics-statics",
+      "theme": "Dynamics & Statics",
       "subthemes": [],
       "sourcePdf": "https://www.upsc.gov.in/sites/default/files/Mathematics Paper-I.pdf",
       "notes": {
@@ -933,9 +994,10 @@
       "number": 7,
       "section": "B",
       "marks": 20,
-      "text": "UPSC 2021 · Mathematics Paper 1 · Question 7 · Section B · Ordinary Differential Equations (official scan, page split)",
+      "text": "UPSC 2021 · Mathematics Paper 1 · Question 7 · Section B · Ordinary Differential Equations (official scan)",
       "scanImages": [
-        "scan-01.jpg"
+        "scan-01.jpg",
+        "scan-02.jpg"
       ],
       "moduleId": "ode",
       "module": "Ordinary Differential Equations",
@@ -958,7 +1020,7 @@
       "number": 8,
       "section": "B",
       "marks": 20,
-      "text": "UPSC 2021 · Mathematics Paper 1 · Question 8 · Section B · Ordinary Differential Equations (official scan, page split)",
+      "text": "UPSC 2021 · Mathematics Paper 1 · Question 8 · Section B · Ordinary Differential Equations (official scan)",
       "scanImages": [
         "scan-01.jpg"
       ],
@@ -1140,14 +1202,14 @@
       "number": 7,
       "section": "B",
       "marks": 20,
-      "text": "UPSC 2019 · Mathematics Paper 1 · Question 7 · Section B · Linear Algebra (official scan, page split)",
+      "text": "UPSC 2019 · Mathematics Paper 1 · Question 7 · Section B · Analytic Geometry (official scan, page split)",
       "scanImages": [
         "scan-01.jpg"
       ],
-      "moduleId": "linear-algebra",
-      "module": "Linear Algebra",
-      "themeId": "linear-algebra",
-      "theme": "Linear Algebra",
+      "moduleId": "analytic-geometry",
+      "module": "Analytic Geometry",
+      "themeId": "analytic-geometry",
+      "theme": "Analytic Geometry",
       "subthemes": [],
       "sourcePdf": "https://www.upsc.gov.in/sites/default/files/QP-CSM19-Mathematics-I.pdf",
       "notes": {
@@ -1165,16 +1227,15 @@
       "number": 8,
       "section": "B",
       "marks": 20,
-      "text": "UPSC 2019 · Mathematics Paper 1 · Question 8 · Section B · Analytic Geometry (official scan, page split)",
+      "text": "UPSC 2019 · Mathematics Paper 1 · Question 8 · Section B · Vector Analysis (official scan, page split)",
       "scanImages": [
         "scan-01.jpg",
-        "scan-02.jpg",
-        "scan-03.jpg"
+        "scan-02.jpg"
       ],
-      "moduleId": "analytic-geometry",
-      "module": "Analytic Geometry",
-      "themeId": "analytic-geometry",
-      "theme": "Analytic Geometry",
+      "moduleId": "vector-analysis",
+      "module": "Vector Analysis",
+      "themeId": "vector-analysis",
+      "theme": "Vector Analysis",
       "subthemes": [],
       "sourcePdf": "https://www.upsc.gov.in/sites/default/files/QP-CSM19-Mathematics-I.pdf",
       "notes": {
@@ -1348,8 +1409,7 @@
       "marks": 20,
       "text": "UPSC 2018 · Mathematics Paper 1 · Question 7 · Section B · Linear Algebra (official scan)",
       "scanImages": [
-        "scan-01.jpg",
-        "scan-02.jpg"
+        "scan-01.jpg"
       ],
       "moduleId": "linear-algebra",
       "module": "Linear Algebra",
@@ -1372,7 +1432,7 @@
       "number": 8,
       "section": "B",
       "marks": 20,
-      "text": "UPSC 2018 · Mathematics Paper 1 · Question 8 · Section B · Vector Analysis (official scan)",
+      "text": "UPSC 2018 · Mathematics Paper 1 · Question 8 · Section B · Vector Analysis (official scan, page split)",
       "scanImages": [
         "scan-01.jpg"
       ],
@@ -1547,7 +1607,7 @@
       "number": 7,
       "section": "B",
       "marks": 20,
-      "text": "UPSC 2015 · Mathematics Paper 1 · Question 7 · Section B · Dynamics & Statics (official scan, page split)",
+      "text": "UPSC 2015 · Mathematics Paper 1 · Question 7 · Section B · Dynamics & Statics (official scan)",
       "scanImages": [
         "scan-01.jpg"
       ],

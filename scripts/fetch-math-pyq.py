@@ -248,9 +248,58 @@ def parse_qnum(token: str) -> int | None:
     token = token.strip()
     if token.lower() == "ql.":
         return 1
+    m = re.match(r"^(?:Q|O)?([1-8])(?:\.\([a-eA-E]\)|\.\s*\([a-eA-E]\)|\s*\([a-eA-E]\))", token, re.I)
+    if m:
+        return int(m.group(1))
     m = re.match(r"^(?:Q|O)?([1-8])\.?$", token, re.I)
     if m:
         return int(m.group(1))
+    return None
+
+
+MAIN_Q_PATTERNS = [
+    re.compile(r"^(?:Q|O)?([1-8])\.\([a-eA-E]\)", re.I),
+    re.compile(r"^(?:Q|O)?([1-8])\.\s*\([a-eA-E]\)", re.I),
+    re.compile(r"^(?:Q|O)?([1-8])\s*\([a-eA-E]\)", re.I),
+    re.compile(r"^(?:Q|O)?([1-8])\.\s*[a-eA-E]\)", re.I),
+]
+
+
+def extract_qnum_from_line(joined: str) -> int | None:
+    """Detect main question number from a left-margin line (handles 1(a) and 4.(c))."""
+    compact = re.sub(r"\s+", " ", joined.strip())
+    if not compact:
+        return None
+
+    upper = compact.upper()
+    if any(
+        w in upper
+        for w in (
+            "COMPULSORY",
+            "EIGHT QUESTION",
+            "CANDIDATE MUST",
+            "TIME ALLOWED",
+            "MAXIMUM MARKS",
+            "DETACHABLE",
+        )
+    ):
+        return None
+
+    for pat in MAIN_Q_PATTERNS:
+        m = pat.match(compact)
+        if m:
+            return int(m.group(1))
+
+    # OCR merges digit with subpart: "24a)" -> question 2
+    m = re.match(r"^([1-8])4\s*([a-eA-E])\)", compact, re.I)
+    if m:
+        return int(m.group(1))
+
+    # Subpart marker later on line: "… 5.(d) …"
+    m = re.search(r"(?:^|\s)(?:Q|O)?([1-8])\.\([a-eA-E]\)", compact, re.I)
+    if m:
+        return int(m.group(1))
+
     return None
 
 
@@ -264,6 +313,8 @@ def is_instructions_page(page_path: Path) -> bool:
     if "SPECIFIC INSTRUCTION" in text or "QUESTION PAPER SPECIFIC" in text:
         return True
     if "EIGHT QUESTION" in text and "COMPULSORY" in text:
+        return True
+    if "TIME ALLOWED" in text and "MAXIMUM MARKS" in text:
         return True
     if "INSTRUCTION" in text and "COMPULSORY" in text and "SECTION" not in text:
         return True
@@ -282,16 +333,14 @@ def find_content_start_page(page_paths: list[Path]) -> int:
 
 
 def looks_like_question_line(joined: str) -> bool:
-    """Real PYQ lines start like '1. (a)' not instruction bullets."""
-    compact = re.sub(r"\s+", " ", joined.strip())
-    if re.match(r"^[1-8]\.\s*\([a-eA-E]\)", compact):
-        return True
-    if re.match(r"^Q?[1-8]\.\s*\([a-eA-E]\)", compact, re.I):
-        return True
-    return False
+    """Real PYQ lines start like '1(a)', '1. (a)', or '4.(c)' — not instruction bullets."""
+    return extract_qnum_from_line(joined) is not None
 
 
 def looks_like_question_line_loose(joined: str, *, page_idx: int, content_start: int) -> bool:
+    if extract_qnum_from_line(joined) is not None:
+        return True
+
     compact = re.sub(r"\s+", " ", joined.strip())
     if not re.match(r"^[1-8]\.", compact):
         return False
@@ -322,9 +371,9 @@ def collect_anchors_on_page(
             continue
         if row["conf"] >= 0 and row["conf"] < 20:
             continue
-        if row["left"] > width * 0.28:
+        if row["left"] > width * 0.32:
             continue
-        bucket = row["top"] // 10
+        bucket = row["top"] // 8
         line_words.setdefault(bucket, []).append(row)
 
     for bucket in sorted(line_words.keys()):
@@ -337,8 +386,10 @@ def collect_anchors_on_page(
         )
         if not ok:
             continue
-        first = words[0]["text"]
-        qnum = parse_qnum(first) or parse_qnum(joined.split()[0] if joined else "")
+        qnum = extract_qnum_from_line(joined)
+        if not qnum:
+            first = words[0]["text"]
+            qnum = parse_qnum(first) or parse_qnum(joined.split()[0] if joined else "")
         if not qnum or qnum in seen:
             continue
         seen.add(qnum)
@@ -400,13 +451,18 @@ def content_page_indices(page_paths: list[Path], content_start: int) -> list[int
 def chunk_pages_to_questions(pages: list[int], q_start: int, q_count: int) -> dict[int, list[CropSlice]]:
     if not pages:
         return {}
+    n = len(pages)
     out: dict[int, list[CropSlice]] = {}
-    per = max(1, len(pages) // q_count)
     for offset in range(q_count):
         qnum = q_start + offset
-        start = offset * per
-        end = len(pages) if offset == q_count - 1 else (offset + 1) * per
-        out[qnum] = [CropSlice(page=p, top=0, bottom=10_000) for p in pages[start:end]]
+        start = (offset * n) // q_count
+        end = ((offset + 1) * n) // q_count
+        if start >= end:
+            # Fewer pages than questions — assign nearest page rather than skip.
+            page_idx = pages[min(offset, n - 1)]
+            out[qnum] = [CropSlice(page=page_idx, top=0, bottom=10_000)]
+        else:
+            out[qnum] = [CropSlice(page=p, top=0, bottom=10_000) for p in pages[start:end]]
     return out
 
 
@@ -466,6 +522,63 @@ def build_slices(anchors: list[Anchor], page_count: int) -> dict[int, list[CropS
         slices[qnum] = parts
 
     return slices
+
+
+INSTRUCTION_SCAN_MARKERS = (
+    "QUESTION PAPER SPECIFIC",
+    "SPECIFIC INSTRUCTION",
+    "TIME ALLOWED",
+    "MAXIMUM MARKS",
+    "EIGHT QUESTIONS",
+    "DETACHABLE",
+    "CANDIDATE MUST",
+)
+
+
+def ocr_image_file(image_path: Path) -> str:
+    tesseract = shutil.which("tesseract")
+    if not tesseract:
+        return ""
+    proc = subprocess.run(
+        [tesseract, str(image_path), "stdout", "-l", "eng", "--psm", "6"],
+        capture_output=True,
+    )
+    return (proc.stdout or b"").decode("utf-8", errors="replace")
+
+
+def scan_image_issues(image_path: Path) -> list[str]:
+    """Return validation issues for a cutout (instruction bleed, missing question body)."""
+    if not image_path.is_file():
+        return ["missing file"]
+
+    text = ocr_image_file(image_path)
+    upper = text.upper()
+    issues: list[str] = []
+
+    marker_hits = [m for m in INSTRUCTION_SCAN_MARKERS if m in upper]
+    if "QUESTION PAPER SPECIFIC" in upper or "SPECIFIC INSTRUCTION" in upper:
+        issues.append("contains exam instructions")
+    elif len(marker_hits) >= 2:
+        issues.append(f"likely instruction page ({', '.join(marker_hits[:2])})")
+
+    if not re.search(r"[1-8]\s*[\.\(]\s*[A-E]\)", upper) and not re.search(r"[1-8]\s*\([A-E]\)", upper):
+        if "SECTION" in upper and len(upper.strip()) < 500:
+            pass  # section header only at top of Q5+ is OK
+        elif len(upper.strip()) < 80:
+            issues.append("very little question text detected")
+
+    return issues
+
+
+def validate_all_scans(questions: list[dict]) -> list[tuple[str, str, list[str]]]:
+    problems: list[tuple[str, str, list[str]]] = []
+    for q in questions:
+        for img in q.get("scanImages") or []:
+            path = STUDY_QUESTIONS / q["id"] / img
+            issues = scan_image_issues(path)
+            if issues:
+                problems.append((q["id"], img, issues))
+    return problems
 
 
 def crop_and_save(page_paths: list[Path], slices: list[CropSlice], out_dir: Path) -> list[str]:
@@ -651,7 +764,20 @@ def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--no-fetch", action="store_true", help="Use cached PDFs only")
     parser.add_argument("--year", type=int, help="Process a single year")
+    parser.add_argument("--validate", action="store_true", help="Validate scan images only (no fetch)")
     args = parser.parse_args()
+
+    if args.validate:
+        q1 = json.loads(OUT_P1.read_text(encoding="utf-8")).get("questions", []) if OUT_P1.is_file() else []
+        q2 = json.loads(OUT_P2.read_text(encoding="utf-8")).get("questions", []) if OUT_P2.is_file() else []
+        problems = validate_all_scans(q1 + q2)
+        if not problems:
+            print("All math scan images passed validation.")
+            return 0
+        print(f"Found {len(problems)} scan issue(s):")
+        for qid, img, issues in problems:
+            print(f"  {qid}/{img}: {', '.join(issues)}")
+        return 1
 
     module_cfg = load_module_config()
     modules_p1 = module_cfg["5"]["themes"]
@@ -707,6 +833,14 @@ def main() -> int:
 
     write_paper_json(OUT_P1, 1, all_q1)
     write_paper_json(OUT_P2, 2, all_q2)
+
+    problems = validate_all_scans(all_q1 + all_q2)
+    if problems:
+        print(f"\nScan validation warnings ({len(problems)}):")
+        for qid, img, issues in problems[:20]:
+            print(f"  {qid}/{img}: {', '.join(issues)}")
+        if len(problems) > 20:
+            print(f"  … and {len(problems) - 20} more")
 
     missing = [y for y in range(2013, 2026) if str(y) not in index["years"] or len(index["years"][str(y)]) < 2]
     if missing:
