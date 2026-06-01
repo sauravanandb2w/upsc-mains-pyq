@@ -21,6 +21,10 @@ function saveRecent(list) {
 export function trackRecentQuestion(item) {
   if (!item?.qid) return;
 
+  import("./activity-tracker.js")
+    .then(({ recordQuestionViewActivity }) => recordQuestionViewActivity(item.qid))
+    .catch(() => {});
+
   const entry = {
     qid: item.qid,
     paper: item.paper,

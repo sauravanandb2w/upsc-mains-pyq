@@ -344,6 +344,13 @@ export function saveQuestionMeta(questionId, patch) {
 
   attachMetaToCache(questionId, next);
 
+  import("./activity-tracker.js")
+    .then(({ recordStatusActivity, recordBookmarkActivity }) => {
+      if (patch.status !== undefined) recordStatusActivity(questionId);
+      if (patch.bookmarked !== undefined) recordBookmarkActivity(questionId);
+    })
+    .catch(() => {});
+
   if (isCloudSyncEnabled()) {
     const cached = questionCache.get(questionId) || {};
     pendingQuestion.set(questionId, cached);
@@ -533,6 +540,10 @@ export function saveThemeNote(themeId, paper, fieldId, value) {
   current[fieldId] = value;
   themeCache.set(themeId, current);
 
+  import("./activity-tracker.js")
+    .then(({ recordNoteActivity }) => recordNoteActivity("theme", `p${paper}-${themeId}`, fieldId, value))
+    .catch(() => {});
+
   if (isCloudSyncEnabled()) {
     pendingTheme.set(themeId, { paper, notes: current });
     scheduleThemeFlush();
@@ -619,6 +630,10 @@ export function saveQuestionNote(questionId, fieldId, value) {
   current[fieldId] = value;
   questionCache.set(questionId, { ...current, __meta: getQuestionMeta(questionId) });
 
+  import("./activity-tracker.js")
+    .then(({ recordNoteActivity }) => recordNoteActivity("question", questionId, fieldId, value))
+    .catch(() => {});
+
   if (isCloudSyncEnabled()) {
     pendingQuestion.set(questionId, current);
     scheduleQuestionFlush();
@@ -638,6 +653,11 @@ export function saveMathPartNote(questionId, partId, fieldId, value) {
   const current = getQuestionNotes(questionId);
   const parts = mergeMathParts(emptyMathParts(), current.parts);
   parts[partId][fieldId] = value;
+  import("./activity-tracker.js")
+    .then(({ recordNoteActivity }) =>
+      recordNoteActivity("question", questionId, `${partId}:${fieldId}`, value)
+    )
+    .catch(() => {});
   persistMathQuestionNotes(questionId, parts);
 }
 

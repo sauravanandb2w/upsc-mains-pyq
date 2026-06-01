@@ -1765,3 +1765,231 @@ body {
 .github-upload-note--warn {
   color: var(--warn, #b45309);
 }
+
+/* Study activity tracker (Progress tab) */
+.activity-dashboard {
+  max-width: 920px;
+}
+
+.activity-seed-note {
+  margin: 0 0 1rem;
+  padding: 0.65rem 0.85rem;
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  background: var(--accent-soft);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+.activity-streak-banner {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+  padding: 1.1rem 1.25rem;
+  border-radius: var(--radius);
+  background: linear-gradient(
+    135deg,
+    color-mix(in srgb, var(--accent) 12%, var(--bg-elevated)),
+    var(--bg-elevated)
+  );
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+}
+
+.activity-streak-flame {
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.activity-streak-main {
+  margin: 0;
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.activity-streak-sub {
+  margin: 0.25rem 0 0;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.activity-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.activity-stat {
+  padding: 0.85rem 1rem;
+  border-radius: var(--radius);
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+}
+
+.activity-stat-value {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  color: var(--accent);
+}
+
+.activity-stat-label {
+  margin: 0.2rem 0 0;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--text-muted);
+}
+
+.activity-stat-hint {
+  margin: 0.35rem 0 0;
+  font-size: 0.72rem;
+  color: var(--text-muted);
+}
+
+.activity-heatmap-section {
+  margin-bottom: 1.25rem;
+  padding: 1rem 1.1rem;
+  border-radius: var(--radius);
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  overflow-x: auto;
+}
+
+.activity-section-title {
+  margin: 0 0 0.5rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.activity-legend {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  margin: 0 0 0.75rem;
+  font-size: 0.72rem;
+  color: var(--text-muted);
+}
+
+.activity-legend .activity-cell {
+  width: 11px;
+  height: 11px;
+}
+
+.activity-heatmap-wrap {
+  min-width: min(100%, 640px);
+}
+
+.activity-months {
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 0.35rem;
+  font-size: 0.65rem;
+  color: var(--text-muted);
+}
+
+.activity-months-track {
+  display: flex;
+  gap: 3px;
+  flex: 1;
+}
+
+.activity-month {
+  flex: 1 1 0;
+  min-width: 0;
+  text-align: left;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.activity-row {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  margin-bottom: 3px;
+}
+
+.activity-wday {
+  flex: 0 0 2rem;
+  font-size: 0.65rem;
+  color: var(--text-muted);
+  text-align: right;
+}
+
+.activity-wday--spacer {
+  visibility: hidden;
+}
+
+.activity-week {
+  display: flex;
+  gap: 3px;
+  flex: 1;
+}
+
+.activity-cell {
+  display: block;
+  width: 11px;
+  height: 11px;
+  border-radius: 2px;
+  border: 1px solid color-mix(in srgb, var(--border) 80%, transparent);
+  flex-shrink: 0;
+}
+
+.activity-cell--future {
+  opacity: 0.25;
+  background: transparent !important;
+}
+
+.activity-level-0 {
+  background: color-mix(in srgb, var(--border) 55%, var(--bg));
+}
+
+.activity-level-1 {
+  background: color-mix(in srgb, var(--accent) 28%, var(--bg));
+  border-color: color-mix(in srgb, var(--accent) 20%, var(--border));
+}
+
+.activity-level-2 {
+  background: color-mix(in srgb, var(--accent) 48%, var(--bg));
+  border-color: color-mix(in srgb, var(--accent) 35%, var(--border));
+}
+
+.activity-level-3 {
+  background: color-mix(in srgb, var(--accent) 68%, var(--bg));
+  border-color: color-mix(in srgb, var(--accent) 50%, var(--border));
+}
+
+.activity-level-4 {
+  background: var(--accent);
+  border-color: var(--accent);
+}
+
+[data-theme="dark"] .activity-level-0 {
+  background: #292524;
+}
+
+.activity-how {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.activity-how summary {
+  cursor: pointer;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.activity-how ul {
+  margin: 0.5rem 0 0;
+  padding-left: 1.2rem;
+}
+
+.activity-how-foot {
+  margin: 0.75rem 0 0;
+  font-size: 0.78rem;
+}

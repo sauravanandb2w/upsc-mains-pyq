@@ -61,6 +61,7 @@ import {
   bindRecentPanel,
   getRecentQuestions,
 } from "./recent-questions.js";
+import { renderActivityDashboard } from "./activity-dashboard.js";
 import { loadRepoSolutionScans, solutionScanGitCommand } from "./solution-scans.js";
 import {
   renderGitHubUploadButton,
@@ -164,6 +165,7 @@ const els = {
   paperQuestionsList: document.getElementById("paperQuestionsList"),
   paperEmptyState: document.getElementById("paperEmptyState"),
   recentPanelHostPaper: document.getElementById("recentPanelHostPaper"),
+  progressView: document.getElementById("progressView"),
 };
 
 function initTheme() {
@@ -299,11 +301,14 @@ async function refreshView() {
   els.themeView.classList.toggle("hidden", state.viewMode !== "themes");
   els.questionView.classList.toggle("hidden", state.viewMode !== "questions");
   els.paperView?.classList.toggle("hidden", state.viewMode !== "paper");
+  els.progressView?.classList.toggle("hidden", state.viewMode !== "progress");
 
   if (state.viewMode === "themes") {
     await renderThemeView();
   } else if (state.viewMode === "paper") {
     await renderFullPaperView();
+  } else if (state.viewMode === "progress") {
+    renderActivityDashboard(els.progressView);
   } else {
     await renderQuestionView();
   }
@@ -1601,6 +1606,12 @@ function bindEvents() {
 
   bindGitHubHeaderButton(els.githubConnectBtn).then((refresh) => {
     refreshGitHubHeader = refresh;
+  });
+
+  window.addEventListener("upsc-activity-updated", () => {
+    if (state.viewMode === "progress") {
+      renderActivityDashboard(els.progressView);
+    }
   });
 }
 
