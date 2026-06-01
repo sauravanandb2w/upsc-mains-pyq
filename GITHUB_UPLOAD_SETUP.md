@@ -68,15 +68,16 @@ export const GITHUB_OAUTH_SCOPE = "public_repo";
 
 ### GitHub Actions (production)
 
-Add repository **Secrets**:
+Add repository **Secrets** (names must **not** start with `GITHUB_` — that prefix is reserved by GitHub Actions):
 
 | Secret | Value |
 |--------|--------|
 | `SUPABASE_URL` | (already used for notes) |
 | `SUPABASE_ANON_KEY` | (already used) |
-| `GITHUB_OAUTH_CLIENT_ID` | OAuth App Client ID |
-| `GITHUB_REPO_OWNER` | `sauravanandb2w` |
-| `GITHUB_REPO_NAME` | `upsc-mains-pyq` |
+| `GH_OAUTH_CLIENT_ID` | OAuth App Client ID |
+| `GH_REPO_OWNER` | `sauravanandb2w` |
+| `GH_REPO_NAME` | `upsc-mains-pyq` |
+| `GH_OAUTH_SCOPE` | `public_repo` (optional; default if omitted) |
 
 Update `scripts/generate-config.sh` runs on deploy and writes `js/config.js`.
 
