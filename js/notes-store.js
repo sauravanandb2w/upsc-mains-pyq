@@ -474,11 +474,12 @@ function questionNotesToRow(questionId, notes, userId) {
 
   if (isMathPaper(paper)) {
     const json = JSON.stringify(notes.parts || emptyMathParts());
-    row.introduction = "";
-    row.static_notes = json;
+    const partA = notes.parts?.a || emptyMathPart();
+    row.introduction = partA.approach || "";
+    row.static_notes = partA.standardResultsUsed || "";
+    row.topper_points = partA.mistakes || "";
     row.quotes = json;
     row.current_affairs = "";
-    row.topper_points = "";
     row.value_material = "";
     row.best_answer_online = "";
     return row;
@@ -506,8 +507,7 @@ const pendingTheme = new Map();
 const pendingQuestion = new Map();
 let themeTimer = null;
 let questionTimer = null;
-/** @type {Map<string, ReturnType<typeof setTimeout>>} */
-const mathCloudFlushTimers = new Map();
+const CLOUD_BATCH_SIZE = 40;
 /** @type {string | null} */
 let lastSyncError = null;
 
@@ -517,6 +517,10 @@ export function getLastSyncError() {
 
 export function clearLastSyncError() {
   lastSyncError = null;
+}
+
+export function setLastSyncError(message) {
+  lastSyncError = message || null;
 }
 
 export function initNotesStore(client, uid) {
@@ -669,6 +673,19 @@ export function getQuestionNotes(questionId, fileNotes = {}) {
   return merged;
 }
 
+/** Same cloud path for GS and math: localStorage → cache → pendingQuestion → flush. */
+function persistQuestionNotes(questionId, payload) {
+  const paper = paperFromQuestionId(questionId);
+  const withMeta = { ...payload, __meta: payload.__meta || getQuestionMeta(questionId) };
+  questionCache.set(questionId, withMeta);
+  writeLocalQuestionNotes(questionId, withMeta, paper);
+
+  if (isCloudSyncEnabled()) {
+    pendingQuestion.set(questionId, withMeta);
+    scheduleQuestionFlush();
+  }
+}
+
 export function saveQuestionNote(questionId, fieldId, value) {
   const paper = paperFromQuestionId(questionId);
   if (isMathPaper(paper)) {
@@ -678,18 +695,12 @@ export function saveQuestionNote(questionId, fieldId, value) {
 
   const current = getQuestionNotes(questionId);
   current[fieldId] = value;
-  questionCache.set(questionId, { ...current, __meta: getQuestionMeta(questionId) });
 
   import("./activity-tracker.js")
     .then(({ recordNoteActivity }) => recordNoteActivity("question", questionId, fieldId, value))
     .catch(() => {});
 
-  writeLocalQuestionNotes(questionId, current, paper);
-
-  if (isCloudSyncEnabled()) {
-    pendingQuestion.set(questionId, current);
-    scheduleQuestionFlush();
-  }
+  persistQuestionNotes(questionId, current);
 }
 
 export function saveMathPartNote(questionId, partId, fieldId, value) {
@@ -704,7 +715,7 @@ export function saveMathPartNote(questionId, partId, fieldId, value) {
       recordNoteActivity("question", questionId, `${partId}:${fieldId}`, value)
     )
     .catch(() => {});
-  persistMathQuestionNotes(questionId, parts);
+  persistQuestionNotes(questionId, { parts });
 }
 
 function writeLocalQuestionNotes(questionId, notes, paper = null) {
@@ -721,37 +732,6 @@ function writeLocalQuestionNotes(questionId, notes, paper = null) {
     }
   }
   saveLocal(LOCAL_QUESTION_KEY, local);
-}
-
-async function flushSingleMathQuestion(questionId) {
-  if (!isCloudSyncEnabled()) return false;
-
-  const paper = paperFromQuestionId(questionId);
-  const merged = mergeMathNotesFromSources(questionId);
-  if (!mathPartsHasContent(merged.parts)) return false;
-
-  const payload = { parts: merged.parts, __meta: getQuestionMeta(questionId) };
-  questionCache.set(questionId, payload);
-  writeLocalQuestionNotes(questionId, payload, paper);
-
-  const row = questionNotesToRow(questionId, payload, userId);
-  const { error } = await supabase
-    .from("question_notes")
-    .upsert(row, { onConflict: "user_id,question_id" });
-
-  if (error) {
-    lastSyncError = error.message;
-    console.error("Math note cloud save failed:", questionId, error.message, row);
-    window.dispatchEvent(
-      new CustomEvent("upsc-math-cloud-sync", { detail: { questionId, ok: false, error: error.message } })
-    );
-    return false;
-  }
-
-  window.dispatchEvent(
-    new CustomEvent("upsc-math-cloud-sync", { detail: { questionId, ok: true } })
-  );
-  return true;
 }
 
 /** Fetch one PYQ's notes from Supabase into cache + localStorage. */
@@ -775,32 +755,6 @@ export async function pullQuestionNoteFromCloud(questionId) {
   return mathPartsHasContent(mergeMathNotesFromSources(questionId).parts);
 }
 
-function scheduleMathCloudFlush(questionId) {
-  const existing = mathCloudFlushTimers.get(questionId);
-  if (existing) clearTimeout(existing);
-  mathCloudFlushTimers.set(
-    questionId,
-    setTimeout(() => {
-      mathCloudFlushTimers.delete(questionId);
-      flushSingleMathQuestion(questionId).catch((err) => {
-        lastSyncError = err?.message || String(err);
-        console.error("Math note cloud flush error:", questionId, err);
-      });
-    }, 250)
-  );
-}
-
-function persistMathQuestionNotes(questionId, parts) {
-  const paper = paperFromQuestionId(questionId);
-  const payload = { parts, __meta: getQuestionMeta(questionId) };
-  questionCache.set(questionId, payload);
-  writeLocalQuestionNotes(questionId, payload, paper);
-
-  if (isCloudSyncEnabled()) {
-    scheduleMathCloudFlush(questionId);
-  }
-}
-
 function scheduleThemeFlush() {
   clearTimeout(themeTimer);
   themeTimer = setTimeout(() => flushThemeNotes(), 700);
@@ -812,16 +766,11 @@ function scheduleQuestionFlush() {
 }
 
 export async function flushPendingNotesNow() {
-  const mathIds = [...mathCloudFlushTimers.keys()];
-  for (const id of mathIds) {
-    clearTimeout(mathCloudFlushTimers.get(id));
-    mathCloudFlushTimers.delete(id);
-  }
-  await Promise.all([
-    flushThemeNotes(),
-    flushQuestionNotes(),
-    ...mathIds.map((id) => flushSingleMathQuestion(id)),
-  ]);
+  clearTimeout(questionTimer);
+  clearTimeout(themeTimer);
+  questionTimer = null;
+  themeTimer = null;
+  await Promise.all([flushThemeNotes(), flushQuestionNotes()]);
 }
 
 async function flushThemeNotes() {
@@ -850,12 +799,17 @@ async function flushQuestionNotes() {
   pendingQuestion.clear();
 
   for (const [questionId, notes] of batch) {
-    const payload = { ...notes, __meta: notes.__meta || getQuestionMeta(questionId) };
     const paper = paperFromQuestionId(questionId);
+    let payload;
     if (isMathPaper(paper)) {
-      if (!mathPartsHasContent(payload.parts || {})) continue;
-    } else if (!hasContent(payload)) {
-      continue;
+      const merged = mergeMathNotesFromSources(questionId);
+      if (!mathPartsHasContent(merged.parts)) continue;
+      payload = { parts: merged.parts, __meta: getQuestionMeta(questionId) };
+      questionCache.set(questionId, payload);
+      writeLocalQuestionNotes(questionId, payload, paper);
+    } else {
+      payload = { ...notes, __meta: notes.__meta || getQuestionMeta(questionId) };
+      if (!hasContent(payload)) continue;
     }
 
     const row = questionNotesToRow(questionId, payload, userId);
@@ -912,16 +866,72 @@ export async function pullAllNotesFromCloud() {
   return { themes: (tRes.data || []).length, questions: (qRes.data || []).length };
 }
 
-/** Push this browser's notes up, then pull cloud (run on every sign-in). */
+async function upsertInBatches(table, rows, onConflict) {
+  for (let i = 0; i < rows.length; i += CLOUD_BATCH_SIZE) {
+    const chunk = rows.slice(i, i + CLOUD_BATCH_SIZE);
+    const { error } = await supabase.from(table).upsert(chunk, { onConflict });
+    if (error) throw error;
+  }
+}
+
+/** Push local notes in batches (fast; same as GS path). */
+export async function pushLocalNotesToCloud() {
+  if (!isCloudSyncEnabled()) return { themes: 0, questions: 0 };
+
+  const themeRows = [];
+  for (const [key, notes] of Object.entries(loadLocal(LOCAL_THEME_KEY))) {
+    const m = key.match(/^p(\d)-(.+)$/);
+    if (!m || !hasContent(notes)) continue;
+    const paper = Number(m[1]);
+    themeRows.push(themeNotesToRow(m[2], paper, { ...emptyThemeNotes(paper), ...notes }, userId));
+  }
+
+  const questionRows = [];
+  const localMeta = loadLocalMetaStore();
+  for (const [questionId, notes] of Object.entries(loadLocal(LOCAL_QUESTION_KEY))) {
+    const meta = localMeta[questionId];
+    if (!hasContent(notes) && (!meta || (meta.status === "not-started" && !meta.bookmarked))) continue;
+    const paper = paperFromQuestionId(questionId);
+    const payload = isMathPaper(paper) ? parseLocalMathNotes(notes) : { ...emptyQuestionNotes(paper), ...notes };
+    if (meta) payload.__meta = { ...DEFAULT_META, ...meta };
+    questionRows.push(questionNotesToRow(questionId, payload, userId));
+  }
+
+  if (themeRows.length) await upsertInBatches("theme_notes", themeRows, "user_id,theme_id");
+  if (questionRows.length) await upsertInBatches("question_notes", questionRows, "user_id,question_id");
+
+  return { themes: themeRows.length, questions: questionRows.length };
+}
+
+export function withSyncTimeout(promise, ms = 45000) {
+  return Promise.race([
+    promise,
+    new Promise((_, reject) => {
+      setTimeout(() => reject(new Error("Sync timed out. Try Sync notes again.")), ms);
+    }),
+  ]).catch((err) => {
+    setLastSyncError(err?.message || String(err));
+    throw err;
+  });
+}
+
+/** Flush pending edits and download from cloud (fast; use on sign-in). */
+export async function pullNotesFromCloud() {
+  if (!isCloudSyncEnabled()) return { themes: 0, questions: 0 };
+  clearLastSyncError();
+  await flushPendingNotesNow();
+  return pullAllNotesFromCloud();
+}
+
+/** Push all local notes up, then pull cloud (use Sync notes button). */
 export async function syncNotesWithCloud() {
   if (!isCloudSyncEnabled()) return { pushed: { themes: 0, questions: 0 }, pulled: { themes: 0, questions: 0 } };
 
   clearLastSyncError();
   await flushPendingNotesNow();
-  const pulledFirst = await pullAllNotesFromCloud();
-  const pushed = await migrateLocalNotesToCloud();
+  const pushed = await pushLocalNotesToCloud();
   const pulled = await pullAllNotesFromCloud();
-  return { pushed, pulled: pulled, pulledFirst };
+  return { pushed, pulled };
 }
 
 /** Pull latest cloud notes (e.g. after editing on another browser). */
@@ -940,83 +950,15 @@ export function installNotesSyncLifecycle() {
     });
   };
 
-  const flushMathImmediately = () => {
-    if (!isCloudSyncEnabled()) return;
-    for (const [qid, timer] of mathCloudFlushTimers.entries()) {
-      clearTimeout(timer);
-      mathCloudFlushTimers.delete(qid);
-      flushSingleMathQuestion(qid).catch(console.error);
-    }
-  };
-
-  const pullOnVisible = () => {
-    if (!isCloudSyncEnabled() || document.visibilityState !== "visible") return;
-    refreshNotesFromCloud()
-      .then(() => {
-        window.dispatchEvent(new CustomEvent("upsc-notes-cloud-updated"));
-      })
-      .catch((err) => {
-        lastSyncError = err?.message || String(err);
-        console.error("Notes pull on focus failed:", err);
-      });
-  };
-
-  window.addEventListener("pagehide", () => {
-    flushMathImmediately();
-    flushOnHide();
-  });
-  window.addEventListener("pageshow", pullOnVisible);
+  window.addEventListener("pagehide", flushOnHide);
   document.addEventListener("visibilitychange", () => {
-    if (document.visibilityState === "hidden") {
-      flushMathImmediately();
-      flushOnHide();
-    } else {
-      pullOnVisible();
-    }
+    if (document.visibilityState === "hidden") flushOnHide();
   });
 }
 
-/** Merge browser localStorage notes into cloud on first login. */
-export async function migrateLocalNotesToCloud(papers, themesByPaper) {
-  if (!isCloudSyncEnabled()) return { themes: 0, questions: 0 };
-
-  let themeCount = 0;
-  let questionCount = 0;
-
-  const localThemes = loadLocal(LOCAL_THEME_KEY);
-  for (const [key, notes] of Object.entries(localThemes)) {
-    const m = key.match(/^p(\d)-(.+)$/);
-    if (!m || !hasContent(notes)) continue;
-
-    const paper = Number(m[1]);
-    const themeId = m[2];
-    const row = themeNotesToRow(themeId, paper, { ...emptyThemeNotes(paper), ...notes }, userId);
-    const { error } = await supabase
-      .from("theme_notes")
-      .upsert(row, { onConflict: "user_id,theme_id", ignoreDuplicates: false });
-
-    if (!error) themeCount += 1;
-  }
-
-  const localQuestions = loadLocal(LOCAL_QUESTION_KEY);
-  const localMeta = loadLocalMetaStore();
-  for (const [questionId, notes] of Object.entries(localQuestions)) {
-    const meta = localMeta[questionId];
-    if (!hasContent(notes) && (!meta || (meta.status === "not-started" && !meta.bookmarked))) continue;
-
-    const paper = paperFromQuestionId(questionId);
-    const payload = isMathPaper(paper) ? parseLocalMathNotes(notes) : { ...emptyQuestionNotes(paper), ...notes };
-    const localMeta = loadLocalMetaStore()[questionId];
-    if (localMeta) payload.__meta = { ...DEFAULT_META, ...localMeta };
-    const row = questionNotesToRow(questionId, payload, userId);
-    const { error } = await supabase
-      .from("question_notes")
-      .upsert(row, { onConflict: "user_id,question_id", ignoreDuplicates: false });
-
-    if (!error) questionCount += 1;
-  }
-
-  return { themes: themeCount, questions: questionCount };
+/** @deprecated Use pushLocalNotesToCloud — kept as alias. */
+export async function migrateLocalNotesToCloud() {
+  return pushLocalNotesToCloud();
 }
 
 function hasContent(notes) {

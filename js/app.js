@@ -42,9 +42,12 @@ import {
   MATH_PART_TEXT_FIELDS,
   MATH_PART_NOTE_FIELDS,
   syncNotesWithCloud,
+  pullNotesFromCloud,
+  withSyncTimeout,
   refreshNotesFromCloud,
   pullQuestionNoteFromCloud,
   getLastSyncError,
+  setLastSyncError,
   installNotesSyncLifecycle,
   isCloudSyncEnabled,
   themeNotesHaystack,
@@ -301,9 +304,10 @@ async function onUserSession(session) {
   if (currentUser && getSupabase()) {
     initNotesStore(getSupabase(), currentUser.id);
     try {
-      await syncNotesWithCloud();
+      await withSyncTimeout(pullNotesFromCloud(), 20000);
     } catch (err) {
-      console.error("Notes sync on sign-in failed:", err);
+      setLastSyncError(err?.message || String(err));
+      console.error("Notes pull on sign-in failed:", err);
     }
   } else {
     clearNotesStore();
@@ -1085,12 +1089,8 @@ function renderQuestionStudyImagesDetails(q) {
 
 function renderMathPartNotesEditor(q) {
   const notes = getQuestionNotes(q.id, q.notes);
-  const cloudHint = isCloudSyncEnabled()
-    ? "Signed in — notes sync to your account (use Sync notes in header after editing)."
-    : "Sign in to sync math notes across Chrome, Safari, and phone.";
 
   return `
-    <p class="math-cloud-hint" data-math-cloud-hint="${escapeAttr(q.id)}">${escapeHtml(cloudHint)}</p>
     <div class="math-part-notes">
       ${MATH_PARTS.map((part) => {
         const partNotes = notes.parts?.[part];
@@ -1202,47 +1202,27 @@ function bindQuestionNoteEditors(card, q) {
   });
 }
 
-function updateMathCloudHint(card, qid, message) {
-  const el = card.querySelector(`[data-math-cloud-hint="${qid}"]`);
-  if (el && message) el.textContent = message;
-}
-
 function refillMathTextareas(card, qid) {
   const notes = getQuestionNotes(qid);
   card.querySelectorAll("textarea[data-part]").forEach((ta) => {
-    ta.value = notes.parts?.[ta.dataset.part]?.[field] || "";
+    ta.value = notes.parts?.[ta.dataset.part]?.[ta.dataset.field] || "";
   });
 }
 
 function bindMathPartNoteEditors(card, q) {
   const notes = getQuestionNotes(q.id, q.notes);
 
-  const onMathNoteEdit = (ta) => {
-    const part = ta.dataset.part;
-    const field = ta.dataset.field;
-    saveMathPartNote(ta.dataset.qid, part, field, ta.value);
-    updateMathPartFilledState(ta.closest(".math-part-details"));
-    if (isCloudSyncEnabled()) {
-      updateMathCloudHint(card, q.id, "Saving to cloud…");
-    }
-  };
-
   card.querySelectorAll("textarea[data-part]").forEach((ta) => {
     const part = ta.dataset.part;
     const field = ta.dataset.field;
     ta.value = notes.parts?.[part]?.[field] || "";
-    ta.addEventListener("input", () => onMathNoteEdit(ta));
-    ta.addEventListener("change", () => onMathNoteEdit(ta));
-    ta.addEventListener("blur", () => onMathNoteEdit(ta));
-  });
-
-  window.addEventListener("upsc-math-cloud-sync", (ev) => {
-    if (ev.detail?.questionId !== q.id) return;
-    if (ev.detail.ok) {
-      updateMathCloudHint(card, q.id, "Saved to cloud — open Sync notes on your other browser.");
-    } else {
-      updateMathCloudHint(card, q.id, `Cloud save failed: ${ev.detail.error || "unknown"}`);
-    }
+    const save = () => {
+      saveMathPartNote(ta.dataset.qid, part, field, ta.value);
+      updateMathPartFilledState(ta.closest(".math-part-details"));
+    };
+    ta.addEventListener("input", save);
+    ta.addEventListener("change", save);
+    ta.addEventListener("blur", save);
   });
 
   card.querySelectorAll(".solution-scan-gallery").forEach((gallery) => {
@@ -1380,15 +1360,12 @@ function renderQuestions(questions, listEl = els.questionsList, emptyEl = els.em
     if (noteDetails && isMath) {
       noteDetails.addEventListener("toggle", async () => {
         if (!noteDetails.open || !isCloudSyncEnabled()) return;
-        updateMathCloudHint(card, q.id, "Loading from cloud…");
         try {
           await pullQuestionNoteFromCloud(q.id);
           refillMathTextareas(card, q.id);
           card.querySelectorAll(".math-part-details").forEach((d) => updateMathPartFilledState(d));
-          updateMathCloudHint(card, q.id, "Loaded — edits auto-save to cloud.");
         } catch (err) {
-          console.error("Math cloud pull failed:", q.id, err);
-          updateMathCloudHint(card, q.id, "Could not load from cloud — still saved on this device.");
+          console.error("Notes pull failed:", q.id, err);
         }
       });
     }
@@ -1673,10 +1650,11 @@ function bindEvents() {
     els.syncNotesBtn.disabled = true;
     els.syncNotesBtn.textContent = "Syncing…";
     try {
-      await syncNotesWithCloud();
+      await withSyncTimeout(syncNotesWithCloud(), 45000);
       updateSyncBadge();
       await refreshView();
     } catch (err) {
+      setLastSyncError(err?.message || String(err));
       console.error("Manual notes sync failed:", err);
       updateSyncBadge();
     } finally {
@@ -1689,11 +1667,6 @@ function bindEvents() {
     if (state.viewMode === "progress") {
       renderActivityDashboard(els.progressView);
     }
-  });
-
-  window.addEventListener("upsc-notes-cloud-updated", () => {
-    updateSyncBadge();
-    refreshView().catch((err) => console.error("Refresh after cloud pull failed:", err));
   });
 }
 
