@@ -480,6 +480,16 @@ const pendingTheme = new Map();
 const pendingQuestion = new Map();
 let themeTimer = null;
 let questionTimer = null;
+/** @type {string | null} */
+let lastSyncError = null;
+
+export function getLastSyncError() {
+  return lastSyncError;
+}
+
+export function clearLastSyncError() {
+  lastSyncError = null;
+}
 
 export function initNotesStore(client, uid) {
   supabase = client;
@@ -706,7 +716,11 @@ function scheduleThemeFlush() {
 
 function scheduleQuestionFlush() {
   clearTimeout(questionTimer);
-  questionTimer = setTimeout(() => flushQuestionNotes(), 700);
+  questionTimer = setTimeout(() => flushQuestionNotes(), 400);
+}
+
+export async function flushPendingNotesNow() {
+  await Promise.all([flushThemeNotes(), flushQuestionNotes()]);
 }
 
 async function flushThemeNotes() {
@@ -721,7 +735,10 @@ async function flushThemeNotes() {
       .from("theme_notes")
       .upsert(row, { onConflict: "user_id,theme_id" });
 
-    if (error) console.error("Theme note save failed:", error.message);
+    if (error) {
+      lastSyncError = error.message;
+      console.error("Theme note save failed:", error.message);
+    }
   }
 }
 
@@ -737,8 +754,79 @@ async function flushQuestionNotes() {
       .from("question_notes")
       .upsert(row, { onConflict: "user_id,question_id" });
 
-    if (error) console.error("Question note save failed:", error.message);
+    if (error) {
+      lastSyncError = error.message;
+      console.error("Question note save failed:", error.message);
+    }
   }
+}
+
+function cacheQuestionRowFromCloud(row) {
+  const parsed = rowToQuestionNotes(row);
+  questionCache.set(row.question_id, parsed);
+  const paper = paperFromQuestionId(row.question_id);
+  if (isMathPaper(paper)) {
+    writeLocalQuestionNotes(row.question_id, { parts: parsed.parts }, paper);
+  } else {
+    writeLocalQuestionNotes(row.question_id, parsed, paper);
+  }
+  const meta = parseMetaFromRow(row);
+  const localMeta = loadLocalMetaStore();
+  localMeta[row.question_id] = meta;
+  saveLocal(LOCAL_META_KEY, localMeta);
+}
+
+/** Download all cloud notes into memory + localStorage (other device / browser). */
+export async function pullAllNotesFromCloud() {
+  if (!isCloudSyncEnabled()) return { themes: 0, questions: 0 };
+
+  const [qRes, tRes] = await Promise.all([
+    supabase.from("question_notes").select("*").eq("user_id", userId),
+    supabase.from("theme_notes").select("*").eq("user_id", userId),
+  ]);
+
+  if (qRes.error) throw qRes.error;
+  if (tRes.error) throw tRes.error;
+
+  for (const row of qRes.data || []) {
+    cacheQuestionRowFromCloud(row);
+  }
+
+  const localThemes = loadLocal(LOCAL_THEME_KEY);
+  for (const row of tRes.data || []) {
+    const notes = rowToThemeNotes(row, row.paper);
+    themeCache.set(row.theme_id, notes);
+    localThemes[`p${row.paper}-${row.theme_id}`] = notes;
+  }
+  saveLocal(LOCAL_THEME_KEY, localThemes);
+
+  return { themes: (tRes.data || []).length, questions: (qRes.data || []).length };
+}
+
+/** Push this browser's notes up, then pull cloud (run on every sign-in). */
+export async function syncNotesWithCloud() {
+  if (!isCloudSyncEnabled()) return { pushed: { themes: 0, questions: 0 }, pulled: { themes: 0, questions: 0 } };
+
+  clearLastSyncError();
+  await flushPendingNotesNow();
+  const pushed = await migrateLocalNotesToCloud();
+  const pulled = await pullAllNotesFromCloud();
+  return { pushed, pulled };
+}
+
+export function installNotesSyncLifecycle() {
+  const flushOnHide = () => {
+    if (!isCloudSyncEnabled()) return;
+    flushPendingNotesNow().catch((err) => {
+      lastSyncError = err?.message || String(err);
+      console.error("Notes flush on hide failed:", err);
+    });
+  };
+
+  window.addEventListener("pagehide", flushOnHide);
+  document.addEventListener("visibilitychange", () => {
+    if (document.visibilityState === "hidden") flushOnHide();
+  });
 }
 
 /** Merge browser localStorage notes into cloud on first login. */

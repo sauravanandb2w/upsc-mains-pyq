@@ -41,7 +41,9 @@ import {
   MATH_PARTS,
   MATH_PART_TEXT_FIELDS,
   MATH_PART_NOTE_FIELDS,
-  migrateLocalNotesToCloud,
+  syncNotesWithCloud,
+  getLastSyncError,
+  installNotesSyncLifecycle,
   themeNotesHaystack,
   questionNotesHaystack,
   QUESTION_STATUSES,
@@ -184,10 +186,20 @@ function toggleTheme() {
 
 function updateSyncBadge() {
   const status = getSyncStatus();
+  const syncErr = getLastSyncError();
   if (status === "cloud" && currentUser) {
-    els.syncBadge.textContent = "Synced";
-    els.syncBadge.className = "sync-badge sync-badge--cloud";
-    els.themeSaveHint.textContent = "Notes auto-save to cloud as you type.";
+    if (syncErr) {
+      els.syncBadge.textContent = "Sync issue";
+      els.syncBadge.className = "sync-badge sync-badge--warn";
+      els.syncBadge.title = syncErr;
+      els.themeSaveHint.textContent =
+        "Cloud sync failed — notes still save in this browser. Check console or try signing out and in.";
+    } else {
+      els.syncBadge.textContent = "Cloud sync on";
+      els.syncBadge.className = "sync-badge sync-badge--cloud";
+      els.syncBadge.title = "Notes upload to Supabase when signed in";
+      els.themeSaveHint.textContent = "Notes save here and sync to your account (other browsers after sign-in).";
+    }
   } else if (isSupabaseConfigured()) {
     els.syncBadge.textContent = "Sign in to sync";
     els.syncBadge.className = "sync-badge sync-badge--warn";
@@ -283,10 +295,10 @@ async function onUserSession(session) {
 
   if (currentUser && getSupabase()) {
     initNotesStore(getSupabase(), currentUser.id);
-    const migratedKey = `upsc-pyq-migrated-${currentUser.id}`;
-    if (!localStorage.getItem(migratedKey)) {
-      await migrateLocalNotesToCloud(papers, themeConfig);
-      localStorage.setItem(migratedKey, "1");
+    try {
+      await syncNotesWithCloud();
+    } catch (err) {
+      console.error("Notes sync on sign-in failed:", err);
     }
   } else {
     clearNotesStore();
@@ -1653,6 +1665,7 @@ async function loadData() {
 
 initTheme();
 bindEvents();
+installNotesSyncLifecycle();
 
 (async () => {
   try {
