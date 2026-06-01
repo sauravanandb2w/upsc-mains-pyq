@@ -38,12 +38,20 @@ import {
   getQuestionNotes,
   saveQuestionNote,
   saveMathPartNote,
+  saveMathPartLocalScans,
   MATH_PARTS,
+  MATH_PART_TEXT_FIELDS,
   MATH_PART_NOTE_FIELDS,
   migrateLocalNotesToCloud,
   themeNotesHaystack,
   questionNotesHaystack,
 } from "./notes-store.js";
+import {
+  loadRepoSolutionScans,
+  loadLocalSolutionScanUrls,
+  saveLocalSolutionScan,
+  deleteLocalSolutionScan,
+} from "./solution-scans.js";
 
 /** @type {Record<number, { title: string; syllabus: string; themes?: string[]; questions: object[] }>} */
 let papers = {};
@@ -673,15 +681,20 @@ function renderQuestionNotesEditor(q) {
   ).join("");
 }
 
+function partHasAnyNotes(partNotes) {
+  if (!partNotes) return false;
+  if (Array.isArray(partNotes.localScans) && partNotes.localScans.length > 0) return true;
+  return MATH_PART_TEXT_FIELDS.some((f) => String(partNotes[f.id] || "").trim());
+}
+
 function renderMathPartNotesEditor(q) {
   const notes = getQuestionNotes(q.id, q.notes);
 
   return `
     <div class="math-part-notes">
       ${MATH_PARTS.map((part) => {
-        const hasNotes = MATH_PART_NOTE_FIELDS.some(
-          (f) => String(notes.parts?.[part]?.[f.id] || "").trim()
-        );
+        const partNotes = notes.parts?.[part];
+        const hasNotes = partHasAnyNotes(partNotes);
         return `
           <details class="math-part-details"${hasNotes ? " open" : ""}>
             <summary>
@@ -690,7 +703,7 @@ function renderMathPartNotesEditor(q) {
               ${hasNotes ? '<span class="math-part-has-notes">has notes</span>' : ""}
             </summary>
             <div class="notes-editor math-part-editor">
-              ${MATH_PART_NOTE_FIELDS.map(
+              ${MATH_PART_TEXT_FIELDS.map(
                 (f) => `
                 <label class="note-field">
                   <span class="note-label">${f.label}</span>
@@ -704,12 +717,99 @@ function renderMathPartNotesEditor(q) {
                 </label>
               `
               ).join("")}
+              <div class="solution-scan-section">
+                <span class="note-label">Solution scan</span>
+                <p class="solution-scan-desc">Photo of your handwritten solution — not typed text.</p>
+                <div
+                  class="solution-scan-gallery"
+                  data-qid="${escapeAttr(q.id)}"
+                  data-part="${part}"
+                  aria-live="polite"
+                ></div>
+                <label class="solution-scan-upload btn-ghost btn-sm">
+                  <input
+                    type="file"
+                    accept="image/*"
+                    capture="environment"
+                    data-qid="${escapeAttr(q.id)}"
+                    data-part="${part}"
+                    hidden
+                  />
+                  Add photo (this device)
+                </label>
+                <p class="solution-scan-hint">
+                  To share on all devices: add
+                  <code>study/questions/${escapeHtml(q.id)}/solutions/part-${part}.jpg</code>
+                  and push — see <code>ADDING_IMAGES.md</code>
+                </p>
+              </div>
             </div>
           </details>
         `;
       }).join("")}
     </div>
   `;
+}
+
+async function mountPartSolutionScans(container, questionId, part) {
+  const notes = getQuestionNotes(questionId);
+  const localMeta = notes.parts?.[part]?.localScans || [];
+
+  const [repoScans, localScans] = await Promise.all([
+    loadRepoSolutionScans(questionId, part),
+    loadLocalSolutionScanUrls(questionId, part),
+  ]);
+
+  const localById = new Map(localScans.map((s) => [s.id, s]));
+  const orderedLocal = localMeta
+    .map((m) => localById.get(m.id))
+    .filter(Boolean);
+
+  const items = [...repoScans, ...orderedLocal];
+
+  if (!items.length) {
+    container.innerHTML = '<p class="solution-scan-empty">No solution scan yet — add a photo or push a repo image.</p>';
+    return;
+  }
+
+  container.innerHTML = items
+    .map((item) => {
+      const removeBtn =
+        item.kind === "local"
+          ? `<button type="button" class="solution-scan-remove" data-scan-id="${escapeAttr(item.id)}" data-qid="${escapeAttr(questionId)}" data-part="${part}" aria-label="Remove photo">×</button>`
+          : "";
+      return `
+        <figure class="study-figure solution-scan-figure">
+          <img src="${escapeAttr(item.src)}" alt="${escapeAttr(item.label)}" loading="lazy">
+          <figcaption>${escapeHtml(item.label)}${item.kind === "repo" ? " · synced via git" : " · this device only"}</figcaption>
+          ${removeBtn}
+        </figure>
+      `;
+    })
+    .join("");
+
+  container.querySelectorAll(".solution-scan-remove").forEach((btn) => {
+    btn.addEventListener("click", async () => {
+      const scanId = btn.dataset.scanId;
+      await deleteLocalSolutionScan(scanId);
+      const next = (getQuestionNotes(questionId).parts?.[part]?.localScans || []).filter(
+        (s) => s.id !== scanId
+      );
+      saveMathPartLocalScans(questionId, part, next);
+      await mountPartSolutionScans(container, questionId, part);
+      updateMathPartFilledState(container.closest(".math-part-details"));
+    });
+  });
+}
+
+function updateMathPartFilledState(details) {
+  if (!details) return;
+  const hasText = MATH_PART_TEXT_FIELDS.some((f) => {
+    const el = details.querySelector(`textarea[data-field="${f.id}"]`);
+    return el?.value.trim();
+  });
+  const hasGallery = Boolean(details.querySelector(".solution-scan-figure"));
+  details.classList.toggle("math-part-details--filled", hasText || hasGallery);
 }
 
 function bindQuestionNoteEditors(card, q) {
@@ -741,28 +841,39 @@ function bindMathPartNoteEditors(card, q) {
       "input",
       debounce(() => {
         saveMathPartNote(ta.dataset.qid, part, field, ta.value);
-        const details = ta.closest(".math-part-details");
-        if (details) {
-          details.classList.toggle(
-            "math-part-details--filled",
-            MATH_PART_NOTE_FIELDS.some((f) => {
-              const el = details.querySelector(`textarea[data-field="${f.id}"]`);
-              return el?.value.trim();
-            })
-          );
-        }
+        updateMathPartFilledState(ta.closest(".math-part-details"));
       }, 400)
     );
   });
 
+  card.querySelectorAll(".solution-scan-gallery").forEach((gallery) => {
+    mountPartSolutionScans(gallery, gallery.dataset.qid, gallery.dataset.part);
+  });
+
+  card.querySelectorAll('input[type="file"][data-part]').forEach((input) => {
+    input.addEventListener("change", async () => {
+      const file = input.files?.[0];
+      input.value = "";
+      if (!file || !file.type.startsWith("image/")) return;
+
+      const questionId = input.dataset.qid;
+      const part = input.dataset.part;
+      const meta = await saveLocalSolutionScan(questionId, part, file);
+      const existing = getQuestionNotes(questionId).parts?.[part]?.localScans || [];
+      saveMathPartLocalScans(questionId, part, [...existing, meta]);
+
+      const gallery = card.querySelector(
+        `.solution-scan-gallery[data-qid="${questionId}"][data-part="${part}"]`
+      );
+      if (gallery) {
+        await mountPartSolutionScans(gallery, questionId, part);
+        updateMathPartFilledState(gallery.closest(".math-part-details"));
+      }
+    });
+  });
+
   card.querySelectorAll(".math-part-details").forEach((details) => {
-    details.classList.toggle(
-      "math-part-details--filled",
-      MATH_PART_NOTE_FIELDS.some((f) => {
-        const el = details.querySelector(`textarea[data-field="${f.id}"]`);
-        return el?.value.trim();
-      })
-    );
+    updateMathPartFilledState(details);
   });
 }
 

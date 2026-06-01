@@ -123,21 +123,20 @@ export const MATH_QUESTION_NOTE_FIELDS = [
     label: "Mistakes to avoid",
     placeholder: "Sign errors, boundary cases, common traps…",
   },
-  {
-    id: "solutionNotes",
-    db: "value_material",
-    label: "Solution sketch",
-    placeholder: "Full solution outline or reference link…",
-  },
 ];
+
+/** Text fields per part — solution itself is a scan (photo), not typed text. */
+export const MATH_PART_TEXT_FIELDS = MATH_QUESTION_NOTE_FIELDS;
+
+export const MATH_PART_NOTE_FIELDS = MATH_PART_TEXT_FIELDS;
 
 /** Sub-parts (a)–(e) on each UPSC Mathematics main question. */
 export const MATH_PARTS = ["a", "b", "c", "d", "e"];
 
-export const MATH_PART_NOTE_FIELDS = MATH_QUESTION_NOTE_FIELDS;
-
 function emptyMathPart() {
-  return Object.fromEntries(MATH_PART_NOTE_FIELDS.map((f) => [f.id, ""]));
+  const fields = Object.fromEntries(MATH_PART_TEXT_FIELDS.map((f) => [f.id, ""]));
+  fields.localScans = [];
+  return fields;
 }
 
 export function emptyMathParts() {
@@ -147,13 +146,20 @@ export function emptyMathParts() {
 function mergeMathParts(base, patch) {
   const out = { ...base };
   for (const part of MATH_PARTS) {
-    out[part] = { ...base[part], ...(patch?.[part] || {}) };
+    const merged = { ...base[part], ...(patch?.[part] || {}) };
+    if (patch?.[part]?.localScans) {
+      merged.localScans = patch[part].localScans;
+    } else if (!Array.isArray(merged.localScans)) {
+      merged.localScans = base[part]?.localScans || [];
+    }
+    out[part] = merged;
   }
   return out;
 }
 
 function mathPartHasContent(partNotes) {
-  return MATH_PART_NOTE_FIELDS.some((f) => String(partNotes?.[f.id] || "").trim());
+  if (Array.isArray(partNotes?.localScans) && partNotes.localScans.length > 0) return true;
+  return MATH_PART_TEXT_FIELDS.some((f) => String(partNotes?.[f.id] || "").trim());
 }
 
 function mathPartsHasContent(parts) {
@@ -207,7 +213,7 @@ function legacyFlatToPartA(row) {
     approach: row.introduction || "",
     standardResultsUsed: row.static_notes || "",
     mistakes: row.topper_points || "",
-    solutionNotes: row.value_material || "",
+    localScans: [],
   };
 }
 
@@ -239,9 +245,10 @@ function parseLocalMathNotes(stored) {
 
   const parts = emptyMathParts();
   const legacy = emptyMathPart();
-  for (const f of MATH_PART_NOTE_FIELDS) {
+  for (const f of MATH_PART_TEXT_FIELDS) {
     if (stored?.[f.id]?.trim()) legacy[f.id] = stored[f.id];
   }
+  if (stored?.localScans?.length) legacy.localScans = stored.localScans;
   if (mathPartHasContent(legacy)) {
     parts.a = legacy;
   }
@@ -488,10 +495,24 @@ export function saveQuestionNote(questionId, fieldId, value) {
 
 export function saveMathPartNote(questionId, partId, fieldId, value) {
   if (!MATH_PARTS.includes(partId)) return;
+  if (!MATH_PART_TEXT_FIELDS.some((f) => f.id === fieldId)) return;
 
   const current = getQuestionNotes(questionId);
   const parts = mergeMathParts(emptyMathParts(), current.parts);
   parts[partId][fieldId] = value;
+  persistMathQuestionNotes(questionId, parts);
+}
+
+export function saveMathPartLocalScans(questionId, partId, localScans) {
+  if (!MATH_PARTS.includes(partId)) return;
+
+  const current = getQuestionNotes(questionId);
+  const parts = mergeMathParts(emptyMathParts(), current.parts);
+  parts[partId].localScans = localScans;
+  persistMathQuestionNotes(questionId, parts);
+}
+
+function persistMathQuestionNotes(questionId, parts) {
   const payload = { parts };
   questionCache.set(questionId, payload);
 
@@ -599,7 +620,13 @@ export function themeNotesHaystack(themeId) {
 export function questionNotesHaystack(questionId, fileNotes) {
   const notes = getQuestionNotes(questionId, fileNotes);
   if (notes.parts) {
-    return MATH_PARTS.flatMap((p) => Object.values(notes.parts[p] || {}))
+    return MATH_PARTS.flatMap((p) => {
+      const part = notes.parts[p] || {};
+      return [
+        ...MATH_PART_TEXT_FIELDS.map((f) => part[f.id]),
+        ...(part.localScans || []).map((s) => s.name),
+      ];
+    })
       .join(" ")
       .toLowerCase();
   }

@@ -340,6 +340,32 @@ PDF cache (gitignored): `data/sources/math-pdfs/`. After regenerating, commit `s
 
 If auto-cropping misses a question on an old scan, open **Official PDF on upsc.gov.in** from the question card, or replace images manually in that question’s folder.
 
+### Your handwritten solution scans (parts a–e)
+
+In the app, each part has **Solution scan** (photo), not typed text. Two ways to add:
+
+1. **In the app:** **Add photo (this device)** — stored in your browser (IndexedDB). Good for quick notebook photos; does not sync the image to other devices.
+2. **Via git (syncs everywhere):** add JPG/PNG under:
+
+```text
+study/questions/math1-2024-q1/solutions/part-a.jpg
+study/questions/math1-2024-q1/solutions/part-b.jpg
+```
+
+Or list them in `manifest.json`:
+
+```json
+{
+  "images": ["scan-01.jpg"],
+  "solutions": {
+    "a": ["solutions/part-a.jpg"],
+    "b": ["solutions/part-b.jpg"]
+  }
+}
+```
+
+Text fields (approach, standard results, mistakes) still sync via Supabase when signed in.
+
 ---
 
 ## `manifest.json` reference
