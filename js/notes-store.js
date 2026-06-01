@@ -544,16 +544,29 @@ export function saveThemeNote(themeId, paper, fieldId, value) {
     .then(({ recordNoteActivity }) => recordNoteActivity("theme", `p${paper}-${themeId}`, fieldId, value))
     .catch(() => {});
 
-  if (isCloudSyncEnabled()) {
-    pendingTheme.set(themeId, { paper, notes: current });
-    scheduleThemeFlush();
-    return;
-  }
-
   const local = loadLocal(LOCAL_THEME_KEY);
   const key = `p${paper}-${themeId}`;
   local[key] = current;
   saveLocal(LOCAL_THEME_KEY, local);
+
+  if (isCloudSyncEnabled()) {
+    pendingTheme.set(themeId, { paper, notes: current });
+    scheduleThemeFlush();
+  }
+}
+
+function hydrateQuestionCacheFromLocal(questionIds) {
+  const local = loadLocal(LOCAL_QUESTION_KEY);
+  for (const id of questionIds) {
+    if (questionCache.has(id) || !local[id]) continue;
+    const paper = paperFromQuestionId(id);
+    const parsed = isMathPaper(paper)
+      ? parseLocalMathNotes(local[id])
+      : { ...emptyQuestionNotes(paper), ...local[id] };
+    const localMeta = loadLocalMetaStore()[id];
+    if (localMeta) parsed.__meta = { ...DEFAULT_META, ...localMeta };
+    questionCache.set(id, parsed);
+  }
 }
 
 export async function loadQuestionNotesForIds(questionIds) {
@@ -561,18 +574,19 @@ export async function loadQuestionNotesForIds(questionIds) {
 
   if (isCloudSyncEnabled()) {
     const missing = questionIds.filter((id) => !questionCache.has(id));
-    if (!missing.length) return;
+    if (missing.length) {
+      const { data, error } = await supabase
+        .from("question_notes")
+        .select("*")
+        .eq("user_id", userId)
+        .in("question_id", missing);
 
-    const { data, error } = await supabase
-      .from("question_notes")
-      .select("*")
-      .eq("user_id", userId)
-      .in("question_id", missing);
+      if (error) throw error;
 
-    if (error) throw error;
-
-    for (const row of data || []) {
-      questionCache.set(row.question_id, rowToQuestionNotes(row));
+      for (const row of data || []) {
+        questionCache.set(row.question_id, rowToQuestionNotes(row));
+      }
+      hydrateQuestionCacheFromLocal(missing);
     }
     return;
   }
@@ -634,16 +648,12 @@ export function saveQuestionNote(questionId, fieldId, value) {
     .then(({ recordNoteActivity }) => recordNoteActivity("question", questionId, fieldId, value))
     .catch(() => {});
 
+  writeLocalQuestionNotes(questionId, current, paper);
+
   if (isCloudSyncEnabled()) {
     pendingQuestion.set(questionId, current);
     scheduleQuestionFlush();
-    return;
   }
-
-  const local = loadLocal(LOCAL_QUESTION_KEY);
-  if (!local[questionId]) local[questionId] = {};
-  local[questionId][fieldId] = value;
-  saveLocal(LOCAL_QUESTION_KEY, local);
 }
 
 export function saveMathPartNote(questionId, partId, fieldId, value) {
@@ -661,19 +671,32 @@ export function saveMathPartNote(questionId, partId, fieldId, value) {
   persistMathQuestionNotes(questionId, parts);
 }
 
+function writeLocalQuestionNotes(questionId, notes, paper = null) {
+  const resolvedPaper = paper ?? paperFromQuestionId(questionId);
+  const local = loadLocal(LOCAL_QUESTION_KEY);
+  if (isMathPaper(resolvedPaper)) {
+    local[questionId] = { parts: notes.parts || emptyMathParts() };
+  } else {
+    if (!local[questionId] || typeof local[questionId] !== "object") {
+      local[questionId] = {};
+    }
+    for (const f of allQuestionNoteFields(resolvedPaper)) {
+      if (notes[f.id] !== undefined) local[questionId][f.id] = notes[f.id];
+    }
+  }
+  saveLocal(LOCAL_QUESTION_KEY, local);
+}
+
 function persistMathQuestionNotes(questionId, parts) {
+  const paper = paperFromQuestionId(questionId);
   const payload = { parts, __meta: getQuestionMeta(questionId) };
   questionCache.set(questionId, payload);
+  writeLocalQuestionNotes(questionId, payload, paper);
 
   if (isCloudSyncEnabled()) {
     pendingQuestion.set(questionId, payload);
     scheduleQuestionFlush();
-    return;
   }
-
-  const local = loadLocal(LOCAL_QUESTION_KEY);
-  local[questionId] = payload;
-  saveLocal(LOCAL_QUESTION_KEY, local);
 }
 
 function scheduleThemeFlush() {

@@ -521,13 +521,10 @@ async function renderThemeDetail(themeId) {
   ).join("");
 
   els.themeNotesEditor.querySelectorAll("textarea").forEach((ta) => {
-    ta.addEventListener(
-      "input",
-      debounce(() => {
-        saveThemeNote(ta.dataset.themeId, state.paper, ta.dataset.field, ta.value);
-        updateSyncBadge();
-      }, 400)
-    );
+    ta.addEventListener("input", () => {
+      saveThemeNote(ta.dataset.themeId, state.paper, ta.dataset.field, ta.value);
+      updateSyncBadge();
+    });
   });
 
   els.themeRelatedQuestions.innerHTML = related.length
@@ -1178,12 +1175,9 @@ function bindQuestionNoteEditors(card, q) {
   const notes = getQuestionNotes(q.id, q.notes);
   card.querySelectorAll("textarea[data-qid]").forEach((ta) => {
     ta.value = notes[ta.dataset.field] || "";
-    ta.addEventListener(
-      "input",
-      debounce(() => {
-        saveQuestionNote(ta.dataset.qid, ta.dataset.field, ta.value);
-      }, 400)
-    );
+    ta.addEventListener("input", () => {
+      saveQuestionNote(ta.dataset.qid, ta.dataset.field, ta.value);
+    });
   });
 }
 
@@ -1194,13 +1188,10 @@ function bindMathPartNoteEditors(card, q) {
     const part = ta.dataset.part;
     const field = ta.dataset.field;
     ta.value = notes.parts?.[part]?.[field] || "";
-    ta.addEventListener(
-      "input",
-      debounce(() => {
-        saveMathPartNote(ta.dataset.qid, part, field, ta.value);
-        updateMathPartFilledState(ta.closest(".math-part-details"));
-      }, 400)
-    );
+    ta.addEventListener("input", () => {
+      saveMathPartNote(ta.dataset.qid, part, field, ta.value);
+      updateMathPartFilledState(ta.closest(".math-part-details"));
+    });
   });
 
   card.querySelectorAll(".solution-scan-gallery").forEach((gallery) => {
