@@ -30,6 +30,29 @@ export function repoBase() {
   return repoBaseCache;
 }
 
+function githubRepoSlugForCdn() {
+  const meta = document.querySelector('meta[name="pyq-github-repo"]');
+  if (meta?.content?.trim()) return meta.content.trim();
+  const base = repoBase();
+  if (!base) return null;
+  const repo = base.replace(/^\//, "");
+  if (!repo) return null;
+  return `sauravanandb2w/${repo}`;
+}
+
+function githubBranchForCdn() {
+  return document.querySelector('meta[name="pyq-github-branch"]')?.content?.trim() || "main";
+}
+
+/**
+ * jsDelivr serves study assets from the GitHub repo (avoids GitHub Pages 429 on many images).
+ */
+function jsdelivrStudyUrl(path, query = "") {
+  const slug = githubRepoSlugForCdn();
+  if (!slug) return null;
+  return `https://cdn.jsdelivr.net/gh/${slug}@${githubBranchForCdn()}/${path}${query}`;
+}
+
 /** Turn `study/questions/foo.jpg` into a URL that works on GitHub Pages and locally. */
 export function assetUrl(relativePath) {
   const raw = String(relativePath || "");
@@ -37,6 +60,16 @@ export function assetUrl(relativePath) {
   const pathPart = qIndex >= 0 ? raw.slice(0, qIndex) : raw;
   const query = qIndex >= 0 ? raw.slice(qIndex) : "";
   const path = pathPart.replace(/^\//, "");
+
+  if (
+    typeof location !== "undefined" &&
+    location.hostname.endsWith(".github.io") &&
+    path.startsWith("study/")
+  ) {
+    const cdn = jsdelivrStudyUrl(path, query);
+    if (cdn) return cdn;
+  }
+
   const base = repoBase();
   const resolved = base ? `${base}/${path}`.replace(/\/+/g, "/") : path;
   return `${resolved}${query}`;

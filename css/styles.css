@@ -1156,6 +1156,14 @@ body {
   background: #fff;
 }
 
+.math-pyq-scan img.hidden {
+  display: none;
+}
+
+.math-pyq-scan--failed {
+  padding: 0.35rem 0;
+}
+
 .math-pdf-link {
   margin: 0.25rem 0 0.5rem;
   font-size: 0.85rem;

@@ -731,6 +731,13 @@ async function renderThemeDetail(themeId) {
         .join("")
     : '<p class="empty-inline">No PYQs tagged to this theme yet.</p>';
 
+  if (isMath) {
+    els.themeRelatedQuestions.querySelectorAll(".related-q").forEach((article, i) => {
+      const rq = related[i];
+      if (rq?.scanImages?.length) bindMathScanImages(article, rq);
+    });
+  }
+
   const studyPath = studyPathForTheme(themeId, state.paper);
   const hasStudy = await renderStudyMaterials(studyPath, els.themeStudyMaterials);
   if (!hasStudy) {
@@ -1022,19 +1029,37 @@ function renderMathScanGallery(q) {
   return `<div class="math-pyq-scans">${figures}</div>${pdfLink}`;
 }
 
-function bindMathScanFallbacks(card, q) {
-  card.querySelectorAll(".math-pyq-scan img").forEach((img) => {
+function bindMathScanImages(root, q) {
+  root.querySelectorAll(".math-pyq-scan img").forEach((img) => {
+    const figure = img.closest("figure");
+    const baseSrc = img.getAttribute("src") || "";
+    let attempts = 0;
+
+    const showFigureError = () => {
+      if (!figure || figure.dataset.scanFailed) return;
+      figure.dataset.scanFailed = "1";
+      figure.classList.add("math-pyq-scan--failed");
+      img.classList.add("hidden");
+      const msg = document.createElement("p");
+      msg.className = "scan-load-error";
+      msg.innerHTML = `Scan image could not load. ${
+        q.sourcePdf
+          ? `<a href="${escapeHtml(q.sourcePdf)}" target="_blank" rel="noopener noreferrer">Open official PDF ↗</a>`
+          : "Try again later or use a hard refresh."
+      }`;
+      figure.appendChild(msg);
+    };
+
     img.addEventListener("error", () => {
-      const wrap = img.closest(".math-pyq-scans");
-      if (!wrap || wrap.dataset.fallbackApplied) return;
-      wrap.dataset.fallbackApplied = "1";
-      wrap.innerHTML = `
-        <p class="question-text question-text--caption">${escapeHtml(q.text)}</p>
-        <p class="scan-load-error">Scan image could not load. ${
-          q.sourcePdf
-            ? `<a href="${escapeHtml(q.sourcePdf)}" target="_blank" rel="noopener noreferrer">Open official PDF ↗</a>`
-            : "Try a hard refresh (Ctrl+Shift+R)."
-        }</p>`;
+      attempts += 1;
+      if (attempts < 3) {
+        const join = baseSrc.includes("?") ? "&" : "?";
+        setTimeout(() => {
+          img.src = `${baseSrc}${join}retry=${attempts}`;
+        }, attempts * 700);
+        return;
+      }
+      showFigureError();
     });
   });
 }
@@ -1531,7 +1556,7 @@ function renderQuestions(questions, listEl = els.questionsList, emptyEl = els.em
     bindQuestionNoteEditors(card, q);
     bindQuestionStudyToolbar(card, q);
     if (isMath && q.scanImages?.length) {
-      bindMathScanFallbacks(card, q);
+      bindMathScanImages(card, q);
     }
 
     const noteDetails = card.querySelector(".study-details");
