@@ -53,6 +53,7 @@ import {
   bindStudyMaterialsUpload,
   bindThemeStudyUpload,
   bindAllGitHubUploadControls,
+  bindSolutionScanDeletes,
 } from "./github-upload-ui.js";
 import { initGitHubUploadConfig } from "./github-auth.js";
 
@@ -778,13 +779,20 @@ async function mountPartSolutionScans(container, questionId, part) {
   container.innerHTML = repoScans
     .map(
       (item) => `
-        <figure class="study-figure solution-scan-figure">
-          <img src="${escapeAttr(item.src)}" alt="${escapeAttr(item.label)}" loading="lazy">
+        <figure class="study-figure solution-scan-figure study-figure--deletable">
+          <div class="study-figure-media">
+            <img src="${escapeAttr(item.src)}" alt="${escapeAttr(item.label)}" loading="lazy">
+            <button type="button" class="github-delete-btn solution-scan-remove hidden" data-delete-kind="math-solution" data-qid="${escapeAttr(questionId)}" data-part="${escapeAttr(part)}" data-study-file="${escapeAttr(item.file)}" aria-label="Delete solution scan" title="Delete from git">×</button>
+          </div>
           <figcaption>${escapeHtml(item.label)} · from git</figcaption>
         </figure>
       `
     )
     .join("");
+
+  bindSolutionScanDeletes(container, questionId, part, () => {
+    updateMathPartFilledState(container.closest(".math-part-details"));
+  });
 }
 
 function updateMathPartFilledState(details) {

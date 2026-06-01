@@ -95,8 +95,11 @@ Update `scripts/generate-config.sh` runs on deploy and writes `js/config.js`.
    - **Maths:** each part (a)–(e) → **Upload solution photo**
    - **GS question:** **Diagrams & images** → **Upload image to git**
    - **GS theme / Maths module:** study materials panel → **Upload study image**
+   - **Delete:** **×** on any uploaded image (requires **GitHub ✓**)
 
-Each upload creates a commit on `main`. GitHub Actions deploys Pages automatically.
+Each upload or delete creates a commit on `main`. GitHub Actions deploys Pages automatically.
+
+User guide: **`IMAGE_UPLOAD_SERVICE.md`**
 
 ---
 

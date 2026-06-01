@@ -148,9 +148,13 @@ async function renderImageSection(section, basePath) {
   }
 
   const cacheBust = `?t=${Date.now()}`;
+  const repoFile = section.file.replace(/^\.\//, "");
   return `
-    <figure class="study-figure study-figure--standalone">
-      <img src="${escapeHtml(src)}${cacheBust}" alt="${escapeHtml(alt)}" loading="lazy">
+    <figure class="study-figure study-figure--standalone study-figure--deletable" data-study-file="${escapeHtml(repoFile)}">
+      <div class="study-figure-media">
+        <img src="${escapeHtml(src)}${cacheBust}" alt="${escapeHtml(alt)}" loading="lazy">
+        <button type="button" class="github-delete-btn hidden" data-study-path="${escapeHtml(basePath)}" data-study-file="${escapeHtml(repoFile)}" aria-label="Delete image" title="Delete from git">×</button>
+      </div>
       ${captionHtml}
     </figure>
   `;
@@ -270,6 +274,8 @@ export async function renderStudyMaterials(basePath, container) {
 
   container.innerHTML = `<div class="study-content">${parts.join("")}</div>`;
   await renderMermaidBlocks(container);
+  const { bindStudyImageDeletes } = await import("./github-upload-ui.js");
+  bindStudyImageDeletes(container, basePath);
   return true;
 }
 

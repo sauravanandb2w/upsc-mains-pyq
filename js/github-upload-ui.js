@@ -13,6 +13,9 @@ import {
   uploadMathSolutionScan,
   uploadQuestionStudyImage,
   uploadThemeStudyImage,
+  deleteQuestionStudyImage,
+  deleteMathSolutionScan,
+  deleteThemeStudyImage,
 } from "./github-upload.js";
 
 export async function isGitHubUploadConfigured() {
@@ -179,4 +182,80 @@ export function bindThemeStudyUpload(panelEl, studyPath) {
 
 export function bindAllGitHubUploadControls(root = document) {
   root.querySelectorAll(".github-upload-control").forEach((el) => bindGitHubUploadControl(el));
+}
+
+export function bindStudyImageDeletes(container, basePath) {
+  if (!container) return;
+
+  container.querySelectorAll(".github-delete-btn[data-study-file]").forEach((btn) => {
+    if (btn.dataset.deleteKind === "math-solution") return;
+    if (!isGitHubConnected()) {
+      btn.classList.add("hidden");
+      return;
+    }
+    btn.classList.remove("hidden");
+    if (btn.dataset.boundDelete) return;
+    btn.dataset.boundDelete = "1";
+
+    btn.addEventListener("click", async () => {
+      const studyPath = btn.dataset.studyPath || basePath;
+      const file = btn.dataset.studyFile;
+      if (!studyPath || !file) return;
+      if (!window.confirm(`Delete this image from git?\n\n${file}`)) return;
+
+      btn.disabled = true;
+      const figure = btn.closest(".study-figure");
+
+      try {
+        if (studyPath.startsWith("study/questions/")) {
+          const qid = studyPath.replace(/^study\/questions\//, "");
+          await deleteQuestionStudyImage(qid, file);
+        } else {
+          await deleteThemeStudyImage(studyPath, file);
+        }
+        figure?.remove();
+        container.dispatchEvent(new CustomEvent("github-delete-done", { bubbles: true }));
+      } catch (err) {
+        window.alert(err.message || String(err));
+        btn.disabled = false;
+      }
+    });
+  });
+}
+
+export function bindSolutionScanDeletes(container, questionId, part, onChange) {
+  if (!container) return;
+
+  container.querySelectorAll('.github-delete-btn[data-delete-kind="math-solution"]').forEach((btn) => {
+    if (!isGitHubConnected()) {
+      btn.classList.add("hidden");
+      return;
+    }
+    btn.classList.remove("hidden");
+    if (btn.dataset.boundDelete) return;
+    btn.dataset.boundDelete = "1";
+
+    btn.addEventListener("click", async () => {
+      const file = btn.dataset.studyFile;
+      if (!file) return;
+      if (!window.confirm(`Delete this solution scan from git?\n\n${file}`)) return;
+
+      btn.disabled = true;
+      const figure = btn.closest(".study-figure");
+
+      try {
+        await deleteMathSolutionScan(questionId, part, file);
+        figure?.remove();
+        if (!container.querySelector(".solution-scan-figure")) {
+          container.innerHTML =
+            '<p class="solution-scan-empty">No solution scan yet — use Upload solution photo above.</p>';
+        }
+        onChange?.();
+        container.dispatchEvent(new CustomEvent("github-delete-done", { bubbles: true }));
+      } catch (err) {
+        window.alert(err.message || String(err));
+        btn.disabled = false;
+      }
+    });
+  });
 }

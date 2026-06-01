@@ -10,8 +10,11 @@ Diagrams, maps, flowcharts, and **photos of handwritten notes** live in the **`s
    - **Theme / module** → **Study materials** panel
    - **Math optional** → part notes → **Upload solution photo**
 3. After upload, GitHub Pages redeploys in **~1–2 minutes** — then images appear on phone and laptop.
+4. To **delete**, click **×** on an image (requires **GitHub ✓** in the header).
 
 Setup (OAuth App + Supabase function): **`GITHUB_UPLOAD_SETUP.md`**
+
+Full user guide (GS + Math, upload + delete): **`IMAGE_UPLOAD_SERVICE.md`**
 
 ## Or add files in git (CLI)
 

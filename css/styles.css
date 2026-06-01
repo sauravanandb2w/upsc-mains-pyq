@@ -1087,6 +1087,46 @@ body {
   background: #fff;
 }
 
+.study-figure-media {
+  position: relative;
+  display: inline-block;
+  max-width: 100%;
+}
+
+.study-figure-media img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.github-delete-btn {
+  position: absolute;
+  top: 0.35rem;
+  right: 0.35rem;
+  width: 1.75rem;
+  height: 1.75rem;
+  padding: 0;
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  background: color-mix(in srgb, var(--bg) 92%, #000);
+  color: var(--text);
+  cursor: pointer;
+  font-size: 1.1rem;
+  line-height: 1;
+  opacity: 0.85;
+}
+
+.github-delete-btn:hover:not(:disabled) {
+  opacity: 1;
+  background: color-mix(in srgb, #c62828 15%, var(--bg));
+  color: #c62828;
+}
+
+.github-delete-btn:disabled {
+  cursor: wait;
+  opacity: 0.5;
+}
+
 .solution-scan-remove {
   position: absolute;
   top: 0.35rem;

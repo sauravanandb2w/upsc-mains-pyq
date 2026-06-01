@@ -80,6 +80,47 @@ export async function putRepoFile(path, base64Content, message, sha = null) {
   return res.json();
 }
 
+export async function deleteRepoFile(path, sha, message) {
+  const token = getGitHubToken();
+  const { owner, name } = await getGitHubRepo();
+  if (!token || !owner || !name) throw new Error("Connect GitHub first.");
+
+  const res = await fetch(`${API}/repos/${owner}/${name}/contents/${path}`, {
+    method: "DELETE",
+    headers: { ...apiHeaders(token), "Content-Type": "application/json" },
+    body: JSON.stringify({ message, sha, branch: "main" }),
+  });
+
+  if (!res.ok) {
+    const err = await res.json().catch(() => ({}));
+    throw new Error(err.message || `GitHub delete failed (${res.status})`);
+  }
+
+  return res.json();
+}
+
+function basename(path) {
+  return path.replace(/^\.\//, "").split("/").pop() || path;
+}
+
+function removeImageEntry(images, targetFile) {
+  const key = basename(targetFile);
+  return (images || []).filter((item) => {
+    const file = typeof item === "string" ? item : item?.file;
+    if (!file) return true;
+    return file !== targetFile && basename(file) !== key;
+  });
+}
+
+function removeSolutionEntry(entries, targetFile) {
+  const key = basename(targetFile);
+  return (entries || []).filter((item) => {
+    const file = typeof item === "string" ? item : item?.file;
+    if (!file) return true;
+    return file !== targetFile && basename(file) !== key;
+  });
+}
+
 async function loadManifest(questionOrThemePath) {
   const manifestPath = `${questionOrThemePath}/manifest.json`;
   const file = await getRepoFile(manifestPath);
@@ -174,4 +215,55 @@ export async function uploadThemeStudyImage(studyPath, file, caption = "") {
   await saveManifest(manifest.path, manifest.sha, manifest.data, `Update manifest ${studyPath}`);
 
   return { path: filePath, name: destName };
+}
+
+/** Delete image from study/questions/{id}/ and remove from manifest.images */
+export async function deleteQuestionStudyImage(questionId, fileName) {
+  const cleanName = basename(fileName);
+  const folder = `study/questions/${questionId}`;
+  const filePath = `${folder}/${cleanName}`;
+
+  const file = await getRepoFile(filePath);
+  if (!file) throw new Error("Image not found in repo.");
+
+  const manifest = await loadManifest(folder);
+  manifest.data.images = removeImageEntry(manifest.data.images, cleanName);
+
+  await deleteRepoFile(filePath, file.sha, `Remove study image ${questionId}/${cleanName}`);
+  await saveManifest(manifest.path, manifest.sha, manifest.data, `Update manifest ${questionId}`);
+  return { path: filePath, name: cleanName };
+}
+
+/** Delete math solution scan and remove from manifest.solutions[part] */
+export async function deleteMathSolutionScan(questionId, part, relFile) {
+  const clean = relFile.replace(/^\.\//, "");
+  const folder = `study/questions/${questionId}`;
+  const filePath = clean.startsWith("solutions/") ? `${folder}/${clean}` : `${folder}/solutions/${clean}`;
+
+  const file = await getRepoFile(filePath);
+  if (!file) throw new Error("Solution scan not found in repo.");
+
+  const manifest = await loadManifest(folder);
+  manifest.data.solutions = manifest.data.solutions || {};
+  manifest.data.solutions[part] = removeSolutionEntry(manifest.data.solutions[part], clean);
+
+  await deleteRepoFile(filePath, file.sha, `Remove ${questionId} part (${part}) solution scan`);
+  await saveManifest(manifest.path, manifest.sha, manifest.data, `Update ${questionId} solutions manifest`);
+  return { path: filePath, file: clean };
+}
+
+/** Delete image from study/themes/ or study/modules/ */
+export async function deleteThemeStudyImage(studyPath, fileName) {
+  const cleanName = basename(fileName);
+  const filePath = `${studyPath}/${cleanName}`;
+
+  const file = await getRepoFile(filePath);
+  if (!file) throw new Error("Image not found in repo.");
+
+  const manifest = await loadManifest(studyPath);
+  manifest.data.images = removeImageEntry(manifest.data.images, cleanName);
+
+  await deleteRepoFile(filePath, file.sha, `Remove study image ${studyPath}/${cleanName}`);
+  await saveManifest(manifest.path, manifest.sha, manifest.data, `Update manifest ${studyPath}`);
+  return { path: filePath, name: cleanName };
 }
