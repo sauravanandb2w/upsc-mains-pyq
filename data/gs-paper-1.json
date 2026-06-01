@@ -2536,25 +2536,6 @@
       }
     },
     {
-      "id": "gs1-2020-q13",
-      "year": 2020,
-      "number": 13,
-      "marks": 15,
-      "text": "Account for the huge flooding of million cities in India including the smart ones like Hyderabad and Pune. Suggest lasting remedial measures.",
-      "theme": "Physical Geography",
-      "themeId": "physical-geo",
-      "themeParent": "Geography",
-      "subthemes": [],
-      "notes": {
-        "introduction": "",
-        "staticNotes": "",
-        "quotes": "",
-        "currentAffairs": "",
-        "topperPoints": "",
-        "valueMaterial": ""
-      }
-    },
-    {
       "id": "gs1-2020-q14",
       "year": 2020,
       "number": 14,
@@ -3381,28 +3362,6 @@
       }
     },
     {
-      "id": "gs1-2019-q25",
-      "year": 2019,
-      "number": 25,
-      "marks": 15,
-      "text": "Women's movement in India has not addressed the issue of women of lower social strata. Substantiate your view.",
-      "theme": "Modern India & Freedom Struggle",
-      "themeId": "modern-history",
-      "themeParent": "Indian History",
-      "subthemes": [
-        "Women, Gender & Empowerment",
-        "Social Reform & Change"
-      ],
-      "notes": {
-        "introduction": "",
-        "staticNotes": "",
-        "quotes": "",
-        "currentAffairs": "",
-        "topperPoints": "",
-        "valueMaterial": ""
-      }
-    },
-    {
       "id": "gs1-2019-q26",
       "year": 2019,
       "number": 26,
@@ -3868,25 +3827,6 @@
       "subthemes": [
         "Social Reform & Change"
       ],
-      "notes": {
-        "introduction": "",
-        "staticNotes": "",
-        "quotes": "",
-        "currentAffairs": "",
-        "topperPoints": "",
-        "valueMaterial": ""
-      }
-    },
-    {
-      "id": "gs1-2018-q17",
-      "year": 2018,
-      "number": 17,
-      "marks": 10,
-      "text": "The growth of cities as I.T. hubs has opened up new avenues employment but has also created new problems. Substantiate this statement with examples. Urbanization",
-      "theme": "Urbanization & Migration",
-      "themeId": "urbanization-migration",
-      "themeParent": "Indian Society",
-      "subthemes": [],
       "notes": {
         "introduction": "",
         "staticNotes": "",
@@ -4970,27 +4910,6 @@
       "subthemes": [
         "Indian Geography",
         "World Geography"
-      ],
-      "notes": {
-        "introduction": "",
-        "staticNotes": "",
-        "quotes": "",
-        "currentAffairs": "",
-        "topperPoints": "",
-        "valueMaterial": ""
-      }
-    },
-    {
-      "id": "gs1-2016-q12",
-      "year": 2016,
-      "number": 12,
-      "marks": 12,
-      "text": "How does patriarchy impact the position of a middle class working woman in India?",
-      "theme": "Modern India & Freedom Struggle",
-      "themeId": "modern-history",
-      "themeParent": "Indian History",
-      "subthemes": [
-        "Development & Inequality"
       ],
       "notes": {
         "introduction": "",

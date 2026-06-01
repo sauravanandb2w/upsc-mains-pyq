@@ -30,6 +30,13 @@ python3 scripts/build-pyq-data.py
 
 Use `python3 scripts/build-pyq-data.py --no-fetch` to rebuild from local files only.
 
+Remove duplicate or junk GS questions (exact/near-duplicate text, bad scrape rows):
+
+```bash
+python3 scripts/dedupe-pyq-questions.py --dry-run
+python3 scripts/dedupe-pyq-questions.py
+```
+
 ### GS Paper IV (Ethics) — Insights on India index
 
 Builds **`data/gs-paper-4.json`** (237 PYQs, 2013–2025) from the subject-wise list at [Insights on India](https://www.insightsonindia.com/upsc-mains-general-studies-4-pyq/), with **`insightsSection`** on each question matching their categories (Ethics and Human Interface, Attitude, Case Study blocks, etc.).

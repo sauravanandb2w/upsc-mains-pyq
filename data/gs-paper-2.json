@@ -56,6 +56,166 @@
       }
     },
     {
+      "id": "gs2-2025-q2",
+      "year": 2025,
+      "number": 2,
+      "marks": 10,
+      "text": "Comment on the need of administrative tribunals as compared to the court system. Assess the impact of the recent tribunal reforms through rationalization of tribunals made in 2021.",
+      "theme": "Judiciary & Judicial Review",
+      "themeId": "judiciary",
+      "themeParent": "Constitution & Polity",
+      "subthemes": [],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs2-2025-q3",
+      "year": 2025,
+      "number": 3,
+      "marks": 10,
+      "text": "Compare and contrast the President's power to pardon in India and in the USA. Are there any limits to it in both the countries? What are 'preemptive pardons'?",
+      "theme": "Union & State Executive",
+      "themeId": "union-state-executive",
+      "themeParent": "Constitution & Polity",
+      "subthemes": [
+        "Comparative Constitutions",
+        "Diaspora & Soft Power"
+      ],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs2-2025-q4",
+      "year": 2025,
+      "number": 4,
+      "marks": 10,
+      "text": "Discuss the nature of Jammu and Kashmir Legislative Assembly after the Jammu and Kashmir Reorganization Act, 2019. Briefly describe the powers and functions of the Assembly of the Union Territory of Jammu and Kashmir.",
+      "theme": "UTs & Special Provisions",
+      "themeId": "special-provisions-ut",
+      "themeParent": "Constitution & Polity",
+      "subthemes": [
+        "Parliament & Legislatures"
+      ],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs2-2025-q5",
+      "year": 2025,
+      "number": 5,
+      "marks": 10,
+      "text": "The Attorney General of India plays a crucial role in guiding the legal framework of the Union Government and ensuring sound governance through legal counsel. Discuss his responsibilities, rights and limitations in this regard.",
+      "theme": "Union & State Executive",
+      "themeId": "union-state-executive",
+      "themeParent": "Constitution & Polity",
+      "subthemes": [
+        "Local Government & Decentralization",
+        "Accountability & Citizen Charter"
+      ],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs2-2025-q6",
+      "year": 2025,
+      "number": 6,
+      "marks": 10,
+      "text": "Women's social capital complements in advancing empowerment and gender equity. Explain.",
+      "theme": "Women, Children & Disability",
+      "themeId": "vulnerable-groups",
+      "themeParent": "Social Justice & Welfare",
+      "subthemes": [],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs2-2025-q7",
+      "year": 2025,
+      "number": 7,
+      "marks": 10,
+      "text": "E-governance projects have a built-in bias towards technology and back-end integration than user-centric designs. Examine.",
+      "theme": "E-Governance & Digital India",
+      "themeId": "e-governance",
+      "themeParent": "Governance & Administration",
+      "subthemes": [],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs2-2025-q8",
+      "year": 2025,
+      "number": 8,
+      "marks": 10,
+      "text": "Civil Society Organizations are often perceived as being anti-State actors than non-State actors. Do you agree? Justify.",
+      "theme": "Pressure Groups & Civil Society",
+      "themeId": "pressure-groups-civil-society",
+      "themeParent": "Social Justice & Welfare",
+      "subthemes": [],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs2-2025-q9",
+      "year": 2025,
+      "number": 9,
+      "marks": 10,
+      "text": "India-Africa digital partnership is achieving mutual respect, co-development and long-term institutional partnerships. Elaborate.",
+      "theme": "Energy & Economic Diplomacy",
+      "themeId": "energy-economic-diplomacy",
+      "themeParent": "International Relations",
+      "subthemes": [],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
       "id": "gs2-2025-q10",
       "year": 2025,
       "number": 10,
@@ -254,25 +414,6 @@
       }
     },
     {
-      "id": "gs2-2025-q2",
-      "year": 2025,
-      "number": 2,
-      "marks": 10,
-      "text": "Comment on the need of administrative tribunals as compared to the court system. Assess the impact of the recent tribunal reforms through rationalization of tribunals made in 2021.",
-      "theme": "Judiciary & Judicial Review",
-      "themeId": "judiciary",
-      "themeParent": "Constitution & Polity",
-      "subthemes": [],
-      "notes": {
-        "introduction": "",
-        "staticNotes": "",
-        "quotes": "",
-        "currentAffairs": "",
-        "topperPoints": "",
-        "valueMaterial": ""
-      }
-    },
-    {
       "id": "gs2-2025-q20",
       "year": 2025,
       "number": 20,
@@ -295,35 +436,13 @@
       }
     },
     {
-      "id": "gs2-2025-q3",
-      "year": 2025,
-      "number": 3,
+      "id": "gs2-2024-q1",
+      "year": 2024,
+      "number": 1,
       "marks": 10,
-      "text": "Compare and contrast the President's power to pardon in India and in the USA. Are there any limits to it in both the countries? What are 'preemptive pardons'?",
-      "theme": "Union & State Executive",
-      "themeId": "union-state-executive",
-      "themeParent": "Constitution & Polity",
-      "subthemes": [
-        "Comparative Constitutions",
-        "Diaspora & Soft Power"
-      ],
-      "notes": {
-        "introduction": "",
-        "staticNotes": "",
-        "quotes": "",
-        "currentAffairs": "",
-        "topperPoints": "",
-        "valueMaterial": ""
-      }
-    },
-    {
-      "id": "gs2-2025-q4",
-      "year": 2025,
-      "number": 4,
-      "marks": 10,
-      "text": "Discuss the nature of Jammu and Kashmir Legislative Assembly after the Jammu and Kashmir Reorganization Act, 2019. Briefly describe the powers and functions of the Assembly of the Union Territory of Jammu and Kashmir.",
-      "theme": "UTs & Special Provisions",
-      "themeId": "special-provisions-ut",
+      "text": "Examine the need for electoral reforms as suggested by various committees, with particular reference to \"one nation – one election\" principle.",
+      "theme": "Elections & RPA",
+      "themeId": "elections-rpa",
       "themeParent": "Constitution & Polity",
       "subthemes": [
         "Parliament & Legislatures"
@@ -338,36 +457,14 @@
       }
     },
     {
-      "id": "gs2-2025-q5",
-      "year": 2025,
-      "number": 5,
+      "id": "gs2-2024-q2",
+      "year": 2024,
+      "number": 2,
       "marks": 10,
-      "text": "The Attorney General of India plays a crucial role in guiding the legal framework of the Union Government and ensuring sound governance through legal counsel. Discuss his responsibilities, rights and limitations in this regard.",
-      "theme": "Union & State Executive",
-      "themeId": "union-state-executive",
+      "text": "Explain and distinguish between Lok Adalats and Arbitration Tribunals. Whether they entertain civil as well as criminal cases?",
+      "theme": "Judiciary & Judicial Review",
+      "themeId": "judiciary",
       "themeParent": "Constitution & Polity",
-      "subthemes": [
-        "Local Government & Decentralization",
-        "Accountability & Citizen Charter"
-      ],
-      "notes": {
-        "introduction": "",
-        "staticNotes": "",
-        "quotes": "",
-        "currentAffairs": "",
-        "topperPoints": "",
-        "valueMaterial": ""
-      }
-    },
-    {
-      "id": "gs2-2025-q6",
-      "year": 2025,
-      "number": 6,
-      "marks": 10,
-      "text": "Women's social capital complements in advancing empowerment and gender equity. Explain.",
-      "theme": "Women, Children & Disability",
-      "themeId": "vulnerable-groups",
-      "themeParent": "Social Justice & Welfare",
       "subthemes": [],
       "notes": {
         "introduction": "",
@@ -379,13 +476,54 @@
       }
     },
     {
-      "id": "gs2-2025-q7",
-      "year": 2025,
-      "number": 7,
+      "id": "gs2-2024-q3",
+      "year": 2024,
+      "number": 3,
       "marks": 10,
-      "text": "E-governance projects have a built-in bias towards technology and back-end integration than user-centric designs. Examine.",
-      "theme": "E-Governance & Digital India",
-      "themeId": "e-governance",
+      "text": "The growth of cabinet system has practically resulted in the marginalisation of the parliamentary supremacy. Elucidate.",
+      "theme": "Parliament & Legislatures",
+      "themeId": "parliament-legislature",
+      "themeParent": "Constitution & Polity",
+      "subthemes": [],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs2-2024-q4",
+      "year": 2024,
+      "number": 4,
+      "marks": 10,
+      "text": "The duty of the Comptroller and Auditor General is not merely to ensure the legality of expenditure but also its propriety. Comment.",
+      "theme": "Constitutional Bodies",
+      "themeId": "constitutional-bodies",
+      "themeParent": "Constitution & Polity",
+      "subthemes": [
+        "Union & State Executive",
+        "Judiciary & Judicial Review"
+      ],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs2-2024-q5",
+      "year": 2024,
+      "number": 5,
+      "marks": 10,
+      "text": "Analyse the role of local bodies in providing good governance at local level and bring out the pros and cons of merging the rural local bodies with the urban local bodies.",
+      "theme": "Local Government & Decentralization",
+      "themeId": "local-government",
       "themeParent": "Governance & Administration",
       "subthemes": [],
       "notes": {
@@ -398,11 +536,11 @@
       }
     },
     {
-      "id": "gs2-2025-q8",
-      "year": 2025,
-      "number": 8,
+      "id": "gs2-2024-q6",
+      "year": 2024,
+      "number": 6,
       "marks": 10,
-      "text": "Civil Society Organizations are often perceived as being anti-State actors than non-State actors. Do you agree? Justify.",
+      "text": "Public charitable trusts have the potential to make India's development more inclusive as they relate to certain vital public issues. Comment.",
       "theme": "Pressure Groups & Civil Society",
       "themeId": "pressure-groups-civil-society",
       "themeParent": "Social Justice & Welfare",
@@ -417,14 +555,14 @@
       }
     },
     {
-      "id": "gs2-2025-q9",
-      "year": 2025,
-      "number": 9,
+      "id": "gs2-2024-q7",
+      "year": 2024,
+      "number": 7,
       "marks": 10,
-      "text": "India-Africa digital partnership is achieving mutual respect, co-development and long-term institutional partnerships. Elaborate.",
-      "theme": "Energy & Economic Diplomacy",
-      "themeId": "energy-economic-diplomacy",
-      "themeParent": "International Relations",
+      "text": "Poverty and malnutrition create a vicious cycle, adversely affecting human capital formation. What steps can be taken to break the cycle?",
+      "theme": "Poverty, Hunger & Inequality",
+      "themeId": "poverty-inequality",
+      "themeParent": "Social Justice & Welfare",
       "subthemes": [],
       "notes": {
         "introduction": "",
@@ -436,16 +574,35 @@
       }
     },
     {
-      "id": "gs2-2024-q1",
+      "id": "gs2-2024-q8",
       "year": 2024,
-      "number": 1,
+      "number": 8,
       "marks": 10,
-      "text": "Examine the need for electoral reforms as suggested by various committees, with particular reference to \"one nation – one election\" principle.",
-      "theme": "Elections & RPA",
-      "themeId": "elections-rpa",
-      "themeParent": "Constitution & Polity",
+      "text": "The Doctrine of Democratic Governance makes it necessary that the public perception of the integrity and commitment of civil servants becomes absolutely positive. Discuss.",
+      "theme": "Civil Services & Bureaucracy",
+      "themeId": "civil-services",
+      "themeParent": "Governance & Administration",
+      "subthemes": [],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs2-2024-q9",
+      "year": 2024,
+      "number": 9,
+      "marks": 10,
+      "text": "The West is fostering India as an alternative to reduce dependence on China's supply chain and as a strategic ally to counter China's political and economic dominance. Explain this statement with examples.",
+      "theme": "Indo-Pacific & Strategic Partnerships",
+      "themeId": "indo-pacific-bilateral",
+      "themeParent": "International Relations",
       "subthemes": [
-        "Parliament & Legislatures"
+        "Energy & Economic Diplomacy"
       ],
       "notes": {
         "introduction": "",
@@ -656,25 +813,6 @@
       }
     },
     {
-      "id": "gs2-2024-q2",
-      "year": 2024,
-      "number": 2,
-      "marks": 10,
-      "text": "Explain and distinguish between Lok Adalats and Arbitration Tribunals. Whether they entertain civil as well as criminal cases?",
-      "theme": "Judiciary & Judicial Review",
-      "themeId": "judiciary",
-      "themeParent": "Constitution & Polity",
-      "subthemes": [],
-      "notes": {
-        "introduction": "",
-        "staticNotes": "",
-        "quotes": "",
-        "currentAffairs": "",
-        "topperPoints": "",
-        "valueMaterial": ""
-      }
-    },
-    {
       "id": "gs2-2024-q20",
       "year": 2024,
       "number": 20,
@@ -697,144 +835,6 @@
       }
     },
     {
-      "id": "gs2-2024-q3",
-      "year": 2024,
-      "number": 3,
-      "marks": 10,
-      "text": "The growth of cabinet system has practically resulted in the marginalisation of the parliamentary supremacy. Elucidate.",
-      "theme": "Parliament & Legislatures",
-      "themeId": "parliament-legislature",
-      "themeParent": "Constitution & Polity",
-      "subthemes": [],
-      "notes": {
-        "introduction": "",
-        "staticNotes": "",
-        "quotes": "",
-        "currentAffairs": "",
-        "topperPoints": "",
-        "valueMaterial": ""
-      }
-    },
-    {
-      "id": "gs2-2024-q4",
-      "year": 2024,
-      "number": 4,
-      "marks": 10,
-      "text": "The duty of the Comptroller and Auditor General is not merely to ensure the legality of expenditure but also its propriety. Comment.",
-      "theme": "Constitutional Bodies",
-      "themeId": "constitutional-bodies",
-      "themeParent": "Constitution & Polity",
-      "subthemes": [
-        "Union & State Executive",
-        "Judiciary & Judicial Review"
-      ],
-      "notes": {
-        "introduction": "",
-        "staticNotes": "",
-        "quotes": "",
-        "currentAffairs": "",
-        "topperPoints": "",
-        "valueMaterial": ""
-      }
-    },
-    {
-      "id": "gs2-2024-q5",
-      "year": 2024,
-      "number": 5,
-      "marks": 10,
-      "text": "Analyse the role of local bodies in providing good governance at local level and bring out the pros and cons of merging the rural local bodies with the urban local bodies.",
-      "theme": "Local Government & Decentralization",
-      "themeId": "local-government",
-      "themeParent": "Governance & Administration",
-      "subthemes": [],
-      "notes": {
-        "introduction": "",
-        "staticNotes": "",
-        "quotes": "",
-        "currentAffairs": "",
-        "topperPoints": "",
-        "valueMaterial": ""
-      }
-    },
-    {
-      "id": "gs2-2024-q6",
-      "year": 2024,
-      "number": 6,
-      "marks": 10,
-      "text": "Public charitable trusts have the potential to make India's development more inclusive as they relate to certain vital public issues. Comment.",
-      "theme": "Pressure Groups & Civil Society",
-      "themeId": "pressure-groups-civil-society",
-      "themeParent": "Social Justice & Welfare",
-      "subthemes": [],
-      "notes": {
-        "introduction": "",
-        "staticNotes": "",
-        "quotes": "",
-        "currentAffairs": "",
-        "topperPoints": "",
-        "valueMaterial": ""
-      }
-    },
-    {
-      "id": "gs2-2024-q7",
-      "year": 2024,
-      "number": 7,
-      "marks": 10,
-      "text": "Poverty and malnutrition create a vicious cycle, adversely affecting human capital formation. What steps can be taken to break the cycle?",
-      "theme": "Poverty, Hunger & Inequality",
-      "themeId": "poverty-inequality",
-      "themeParent": "Social Justice & Welfare",
-      "subthemes": [],
-      "notes": {
-        "introduction": "",
-        "staticNotes": "",
-        "quotes": "",
-        "currentAffairs": "",
-        "topperPoints": "",
-        "valueMaterial": ""
-      }
-    },
-    {
-      "id": "gs2-2024-q8",
-      "year": 2024,
-      "number": 8,
-      "marks": 10,
-      "text": "The Doctrine of Democratic Governance makes it necessary that the public perception of the integrity and commitment of civil servants becomes absolutely positive. Discuss.",
-      "theme": "Civil Services & Bureaucracy",
-      "themeId": "civil-services",
-      "themeParent": "Governance & Administration",
-      "subthemes": [],
-      "notes": {
-        "introduction": "",
-        "staticNotes": "",
-        "quotes": "",
-        "currentAffairs": "",
-        "topperPoints": "",
-        "valueMaterial": ""
-      }
-    },
-    {
-      "id": "gs2-2024-q9",
-      "year": 2024,
-      "number": 9,
-      "marks": 10,
-      "text": "The West is fostering India as an alternative to reduce dependence on China's supply chain and as a strategic ally to counter China's political and economic dominance. Explain this statement with examples.",
-      "theme": "Indo-Pacific & Strategic Partnerships",
-      "themeId": "indo-pacific-bilateral",
-      "themeParent": "International Relations",
-      "subthemes": [
-        "Energy & Economic Diplomacy"
-      ],
-      "notes": {
-        "introduction": "",
-        "staticNotes": "",
-        "quotes": "",
-        "currentAffairs": "",
-        "topperPoints": "",
-        "valueMaterial": ""
-      }
-    },
-    {
       "id": "gs2-2023-q1",
       "year": 2023,
       "number": 1,
@@ -846,6 +846,176 @@
       "subthemes": [
         "Amendment & Basic Structure",
         "Constitutional Bodies"
+      ],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs2-2023-q2",
+      "year": 2023,
+      "number": 2,
+      "marks": 10,
+      "text": "Who are entitled to receive free legal aid? Assess the role of National Legal Services Authority (NALSA) in rendering free legal aid in India.",
+      "theme": "Judiciary & Judicial Review",
+      "themeId": "judiciary",
+      "themeParent": "Constitution & Polity",
+      "subthemes": [
+        "Public Service Delivery & NGOs",
+        "E-Governance & Digital India"
+      ],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs2-2023-q3",
+      "year": 2023,
+      "number": 3,
+      "marks": 10,
+      "text": "The states in India seem reluctant to empower urban local bodies both functionally as well as financially. Comment.",
+      "theme": "Local Government & Decentralization",
+      "themeId": "local-government",
+      "themeParent": "Governance & Administration",
+      "subthemes": [
+        "Federalism & Centre-State",
+        "Parliament & Legislatures"
+      ],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs2-2023-q4",
+      "year": 2023,
+      "number": 4,
+      "marks": 10,
+      "text": "Compare and contrast the British and Indian approaches to Parliamentary sovereignty.",
+      "theme": "Comparative Constitutions",
+      "themeId": "comparative-constitution",
+      "themeParent": "Constitution & Polity",
+      "subthemes": [
+        "Parliament & Legislatures"
+      ],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs2-2023-q5",
+      "year": 2023,
+      "number": 5,
+      "marks": 10,
+      "text": "Discuss the role of Presiding Officers of state legislatures in maintaining order and impartiality in conducting legislative work and in facilitating best democratic practices.",
+      "theme": "Parliament & Legislatures",
+      "themeId": "parliament-legislature",
+      "themeParent": "Constitution & Polity",
+      "subthemes": [
+        "Elections & RPA"
+      ],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs2-2023-q6",
+      "year": 2023,
+      "number": 6,
+      "marks": 10,
+      "text": "The crucial aspect of development process has been the inadequate attention paid to Human Resource Development in India. Suggest measures that can address this inadequacy.",
+      "theme": "Local Government & Decentralization",
+      "themeId": "local-government",
+      "themeParent": "Governance & Administration",
+      "subthemes": [
+        "Federalism & Centre-State",
+        "Pressure Groups & Civil Society"
+      ],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs2-2023-q7",
+      "year": 2023,
+      "number": 7,
+      "marks": 10,
+      "text": "Discuss the role of the Competition Commission of India in containing the abuse of dominant position by the Multi-National Corporations in India. Refer to the recent decisions.",
+      "theme": "Constitutional Bodies",
+      "themeId": "constitutional-bodies",
+      "themeParent": "Constitution & Polity",
+      "subthemes": [],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs2-2023-q8",
+      "year": 2023,
+      "number": 8,
+      "marks": 10,
+      "text": "E-governance, as a critical tool of governance, has ushered in effectiveness, transparency and accountability in governments. What inadequacies hamper the enhancement of these features?",
+      "theme": "E-Governance & Digital India",
+      "themeId": "e-governance",
+      "themeParent": "Governance & Administration",
+      "subthemes": [
+        "Accountability & Citizen Charter"
+      ],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs2-2023-q9",
+      "year": 2023,
+      "number": 9,
+      "marks": 10,
+      "text": "Virus of Conflict is affecting the functioning of the SCO In the light of the above statement point out the role of India in mitigating the the problems.",
+      "theme": "Federalism & Centre-State",
+      "themeId": "federalism-centre-state",
+      "themeParent": "Constitution & Polity",
+      "subthemes": [
+        "Pressure Groups & Civil Society",
+        "Elections & RPA"
       ],
       "notes": {
         "introduction": "",
@@ -1066,17 +1236,17 @@
       }
     },
     {
-      "id": "gs2-2023-q2",
-      "year": 2023,
-      "number": 2,
+      "id": "gs2-2022-q1",
+      "year": 2022,
+      "number": 1,
       "marks": 10,
-      "text": "Who are entitled to receive free legal aid? Assess the role of National Legal Services Authority (NALSA) in rendering free legal aid in India.",
+      "text": "The most significant achievement of modern law in India is the constitutionalization of environmental problems by the Supreme Court. Discuss this statement with the help of relevant case laws .",
       "theme": "Judiciary & Judicial Review",
       "themeId": "judiciary",
       "themeParent": "Constitution & Polity",
       "subthemes": [
-        "Public Service Delivery & NGOs",
-        "E-Governance & Digital India"
+        "Fundamental Rights & DPSP",
+        "Amendment & Basic Structure"
       ],
       "notes": {
         "introduction": "",
@@ -1088,39 +1258,17 @@
       }
     },
     {
-      "id": "gs2-2023-q2023",
-      "year": 2023,
-      "number": 2023,
-      "marks": 10,
-      "text": "A total of 20 questions are asked in the paper. Out of which 10 questions are of 10 marks and the rest of the 10 are of 15 marks. Further details related to the UPSC CSE mains 2023 GS paper 2 question paper and exam analysis are provided below. Table of Contents Toggle GS Paper 2 UPSC 2023: Instructions General Studies Paper 2 Question Paper: UPSC Civil Services Main Exam (Written) 2023 UPSC Mains 2023: Question Topics in General Studies Paper 2 GS Paper 2 UPSC 2023 (Mains): Question Paper Analysis",
-      "theme": "Civil Services & Bureaucracy",
-      "themeId": "civil-services",
-      "themeParent": "Governance & Administration",
-      "subthemes": [
-        "Public Service Delivery & NGOs",
-        "Union & State Executive"
-      ],
-      "notes": {
-        "introduction": "",
-        "staticNotes": "",
-        "quotes": "",
-        "currentAffairs": "",
-        "topperPoints": "",
-        "valueMaterial": ""
-      }
-    },
-    {
-      "id": "gs2-2023-q3",
-      "year": 2023,
+      "id": "gs2-2022-q3",
+      "year": 2022,
       "number": 3,
       "marks": 10,
-      "text": "The states in India seem reluctant to empower urban local bodies both functionally as well as financially. Comment.",
+      "text": "To what extent in your opinion has the decentralisation of power in India changed the governance landscape at the grassroots?",
       "theme": "Local Government & Decentralization",
       "themeId": "local-government",
       "themeParent": "Governance & Administration",
       "subthemes": [
         "Federalism & Centre-State",
-        "Parliament & Legislatures"
+        "Civil Services & Bureaucracy"
       ],
       "notes": {
         "introduction": "",
@@ -1132,37 +1280,17 @@
       }
     },
     {
-      "id": "gs2-2023-q4",
-      "year": 2023,
+      "id": "gs2-2022-q4",
+      "year": 2022,
       "number": 4,
       "marks": 10,
-      "text": "Compare and contrast the British and Indian approaches to Parliamentary sovereignty.",
-      "theme": "Comparative Constitutions",
-      "themeId": "comparative-constitution",
-      "themeParent": "Constitution & Polity",
-      "subthemes": [
-        "Parliament & Legislatures"
-      ],
-      "notes": {
-        "introduction": "",
-        "staticNotes": "",
-        "quotes": "",
-        "currentAffairs": "",
-        "topperPoints": "",
-        "valueMaterial": ""
-      }
-    },
-    {
-      "id": "gs2-2023-q5",
-      "year": 2023,
-      "number": 5,
-      "marks": 10,
-      "text": "Discuss the role of Presiding Officers of state legislatures in maintaining order and impartiality in conducting legislative work and in facilitating best democratic practices.",
+      "text": "Discuss the role of the Vice President of India as the chairman of Rajya Sabha. 10 mark Qn",
       "theme": "Parliament & Legislatures",
       "themeId": "parliament-legislature",
       "themeParent": "Constitution & Polity",
       "subthemes": [
-        "Elections & RPA"
+        "Union & State Executive",
+        "Diaspora & Soft Power"
       ],
       "notes": {
         "introduction": "",
@@ -1174,33 +1302,11 @@
       }
     },
     {
-      "id": "gs2-2023-q6",
-      "year": 2023,
-      "number": 6,
+      "id": "gs2-2022-q5",
+      "year": 2022,
+      "number": 5,
       "marks": 10,
-      "text": "The crucial aspect of development process has been the inadequate attention paid to Human Resource Development in India. Suggest measures that can address this inadequacy.",
-      "theme": "Local Government & Decentralization",
-      "themeId": "local-government",
-      "themeParent": "Governance & Administration",
-      "subthemes": [
-        "Federalism & Centre-State",
-        "Pressure Groups & Civil Society"
-      ],
-      "notes": {
-        "introduction": "",
-        "staticNotes": "",
-        "quotes": "",
-        "currentAffairs": "",
-        "topperPoints": "",
-        "valueMaterial": ""
-      }
-    },
-    {
-      "id": "gs2-2023-q7",
-      "year": 2023,
-      "number": 7,
-      "marks": 10,
-      "text": "Discuss the role of the Competition Commission of India in containing the abuse of dominant position by the Multi-National Corporations in India. Refer to the recent decisions.",
+      "text": "Discuss the role of the National Commission for Backward Classes in the wake of its transformation from a statutory body to a constitutional body.",
       "theme": "Constitutional Bodies",
       "themeId": "constitutional-bodies",
       "themeParent": "Constitution & Polity",
@@ -1215,14 +1321,33 @@
       }
     },
     {
-      "id": "gs2-2023-q8",
-      "year": 2023,
-      "number": 8,
+      "id": "gs2-2022-q6",
+      "year": 2022,
+      "number": 6,
       "marks": 10,
-      "text": "E-governance, as a critical tool of governance, has ushered in effectiveness, transparency and accountability in governments. What inadequacies hamper the enhancement of these features?",
-      "theme": "E-Governance & Digital India",
-      "themeId": "e-governance",
-      "themeParent": "Governance & Administration",
+      "text": "The Gati-Shakti Yojana needs meticulous coordination between the government and the private sector to achieve the goal of connectivity. Discuss.",
+      "theme": "Elections & RPA",
+      "themeId": "elections-rpa",
+      "themeParent": "Constitution & Polity",
+      "subthemes": [],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs2-2022-q7",
+      "year": 2022,
+      "number": 7,
+      "marks": 10,
+      "text": "The rights of persons with disabilities Act, 2016 remains only a legal document without intense sensitisation of Government functionaries and citizens regarding disability. Comment.",
+      "theme": "Women, Children & Disability",
+      "themeId": "vulnerable-groups",
+      "themeParent": "Social Justice & Welfare",
       "subthemes": [
         "Accountability & Citizen Charter"
       ],
@@ -1236,17 +1361,17 @@
       }
     },
     {
-      "id": "gs2-2023-q9",
-      "year": 2023,
-      "number": 9,
+      "id": "gs2-2022-q8",
+      "year": 2022,
+      "number": 8,
       "marks": 10,
-      "text": "Virus of Conflict is affecting the functioning of the SCO In the light of the above statement point out the role of India in mitigating the the problems.",
-      "theme": "Federalism & Centre-State",
-      "themeId": "federalism-centre-state",
+      "text": "Reforming the government delivery system through the Direct Benefit Transfer Scheme is a progressive step, but it has limitations too. Comment.",
+      "theme": "Elections & RPA",
+      "themeId": "elections-rpa",
       "themeParent": "Constitution & Polity",
       "subthemes": [
-        "Pressure Groups & Civil Society",
-        "Elections & RPA"
+        "Amendment & Basic Structure",
+        "E-Governance & Digital India"
       ],
       "notes": {
         "introduction": "",
@@ -1258,17 +1383,17 @@
       }
     },
     {
-      "id": "gs2-2022-q1",
+      "id": "gs2-2022-q9",
       "year": 2022,
-      "number": 1,
+      "number": 9,
       "marks": 10,
-      "text": "The most significant achievement of modern law in India is the constitutionalization of environmental problems by the Supreme Court. Discuss this statement with the help of relevant case laws .",
-      "theme": "Judiciary & Judicial Review",
-      "themeId": "judiciary",
+      "text": "India is an age-old friend of Sri Lanka . Discuss India s role in the recent crisis in Sri Lanka in light of the preceding statement.",
+      "theme": "Federalism & Centre-State",
+      "themeId": "federalism-centre-state",
       "themeParent": "Constitution & Polity",
       "subthemes": [
-        "Fundamental Rights & DPSP",
-        "Amendment & Basic Structure"
+        "Elections & RPA",
+        "Women, Children & Disability"
       ],
       "notes": {
         "introduction": "",
@@ -1484,13 +1609,13 @@
       }
     },
     {
-      "id": "gs2-2022-q1951",
-      "year": 2022,
-      "number": 1951,
-      "marks": 15,
-      "text": "What are the grounds on which the election of any returned candidate may be declared void? What remedy is available to the aggrieved party against the decision? Refer to the case laws 15 mark Qn",
-      "theme": "Elections & RPA",
-      "themeId": "elections-rpa",
+      "id": "gs2-2021-q1",
+      "year": 2021,
+      "number": 1,
+      "marks": 10,
+      "text": "‘Constitutional Morality’ is rooted in the Constitution itself and is founded on its essential facets. Explain the doctrine of ‘Constitutional Morality’ with the help of relevant judicial decisions.",
+      "theme": "Amendment & Basic Structure",
+      "themeId": "constitutional-amendment",
       "themeParent": "Constitution & Polity",
       "subthemes": [],
       "notes": {
@@ -1503,160 +1628,13 @@
       }
     },
     {
-      "id": "gs2-2022-q2",
-      "year": 2022,
+      "id": "gs2-2021-q2",
+      "year": 2021,
       "number": 2,
       "marks": 10,
-      "text": "of UPSC 2022 Civil Services Mains Examination (written). UPSC conducted the General Studies Paper 2 , as part of the Civil Services Main Exam 2022 on 17-09-2022. There were 20 questions. 10 questions were 10 marks each, while the remaining 10 questions were 15 marks each. Table of Contents Toggle GS Paper 2 UPSC 2022: Instructions General Studies Paper 2 Question Paper – UPSC Civil Services Main Exam (Written) 2022 Question Topics in General Studies Paper 2 (2022 Mains) GS Paper 2 UPSC 2022 (Mains): Question Paper",
-      "theme": "Civil Services & Bureaucracy",
-      "themeId": "civil-services",
-      "themeParent": "Governance & Administration",
-      "subthemes": [
-        "Public Service Delivery & NGOs",
-        "Union & State Executive"
-      ],
-      "notes": {
-        "introduction": "",
-        "staticNotes": "",
-        "quotes": "",
-        "currentAffairs": "",
-        "topperPoints": "",
-        "valueMaterial": ""
-      }
-    },
-    {
-      "id": "gs2-2022-q3",
-      "year": 2022,
-      "number": 3,
-      "marks": 10,
-      "text": "To what extent in your opinion has the decentralisation of power in India changed the governance landscape at the grassroots?",
-      "theme": "Local Government & Decentralization",
-      "themeId": "local-government",
-      "themeParent": "Governance & Administration",
-      "subthemes": [
-        "Federalism & Centre-State",
-        "Civil Services & Bureaucracy"
-      ],
-      "notes": {
-        "introduction": "",
-        "staticNotes": "",
-        "quotes": "",
-        "currentAffairs": "",
-        "topperPoints": "",
-        "valueMaterial": ""
-      }
-    },
-    {
-      "id": "gs2-2022-q4",
-      "year": 2022,
-      "number": 4,
-      "marks": 10,
-      "text": "Discuss the role of the Vice President of India as the chairman of Rajya Sabha. 10 mark Qn",
-      "theme": "Parliament & Legislatures",
-      "themeId": "parliament-legislature",
-      "themeParent": "Constitution & Polity",
-      "subthemes": [
-        "Union & State Executive",
-        "Diaspora & Soft Power"
-      ],
-      "notes": {
-        "introduction": "",
-        "staticNotes": "",
-        "quotes": "",
-        "currentAffairs": "",
-        "topperPoints": "",
-        "valueMaterial": ""
-      }
-    },
-    {
-      "id": "gs2-2022-q5",
-      "year": 2022,
-      "number": 5,
-      "marks": 10,
-      "text": "Discuss the role of the National Commission for Backward Classes in the wake of its transformation from a statutory body to a constitutional body.",
-      "theme": "Constitutional Bodies",
-      "themeId": "constitutional-bodies",
-      "themeParent": "Constitution & Polity",
-      "subthemes": [],
-      "notes": {
-        "introduction": "",
-        "staticNotes": "",
-        "quotes": "",
-        "currentAffairs": "",
-        "topperPoints": "",
-        "valueMaterial": ""
-      }
-    },
-    {
-      "id": "gs2-2022-q6",
-      "year": 2022,
-      "number": 6,
-      "marks": 10,
-      "text": "The Gati-Shakti Yojana needs meticulous coordination between the government and the private sector to achieve the goal of connectivity. Discuss.",
-      "theme": "Elections & RPA",
-      "themeId": "elections-rpa",
-      "themeParent": "Constitution & Polity",
-      "subthemes": [],
-      "notes": {
-        "introduction": "",
-        "staticNotes": "",
-        "quotes": "",
-        "currentAffairs": "",
-        "topperPoints": "",
-        "valueMaterial": ""
-      }
-    },
-    {
-      "id": "gs2-2022-q7",
-      "year": 2022,
-      "number": 7,
-      "marks": 10,
-      "text": "The rights of persons with disabilities Act, 2016 remains only a legal document without intense sensitisation of Government functionaries and citizens regarding disability. Comment.",
-      "theme": "Women, Children & Disability",
-      "themeId": "vulnerable-groups",
-      "themeParent": "Social Justice & Welfare",
-      "subthemes": [
-        "Accountability & Citizen Charter"
-      ],
-      "notes": {
-        "introduction": "",
-        "staticNotes": "",
-        "quotes": "",
-        "currentAffairs": "",
-        "topperPoints": "",
-        "valueMaterial": ""
-      }
-    },
-    {
-      "id": "gs2-2022-q8",
-      "year": 2022,
-      "number": 8,
-      "marks": 10,
-      "text": "Reforming the government delivery system through the Direct Benefit Transfer Scheme is a progressive step, but it has limitations too. Comment.",
-      "theme": "Elections & RPA",
-      "themeId": "elections-rpa",
-      "themeParent": "Constitution & Polity",
-      "subthemes": [
-        "Amendment & Basic Structure",
-        "E-Governance & Digital India"
-      ],
-      "notes": {
-        "introduction": "",
-        "staticNotes": "",
-        "quotes": "",
-        "currentAffairs": "",
-        "topperPoints": "",
-        "valueMaterial": ""
-      }
-    },
-    {
-      "id": "gs2-2022-q9",
-      "year": 2022,
-      "number": 9,
-      "marks": 10,
-      "text": "India is an age-old friend of Sri Lanka . Discuss India s role in the recent crisis in Sri Lanka in light of the preceding statement.",
-      "theme": "Federalism & Centre-State",
-      "themeId": "federalism-centre-state",
+      "text": "Discuss the desirability of greater representation to women in the higher judiciary to ensure diversity, equity and inclusiveness.",
+      "theme": "Judiciary & Judicial Review",
+      "themeId": "judiciary",
       "themeParent": "Constitution & Polity",
       "subthemes": [
         "Elections & RPA",
@@ -1672,15 +1650,140 @@
       }
     },
     {
-      "id": "gs2-2021-q1",
+      "id": "gs2-2021-q3",
       "year": 2021,
-      "number": 1,
+      "number": 3,
       "marks": 10,
-      "text": "‘Constitutional Morality’ is rooted in the Constitution itself and is founded on its essential facets. Explain the doctrine of ‘Constitutional Morality’ with the help of relevant judicial decisions.",
-      "theme": "Amendment & Basic Structure",
-      "themeId": "constitutional-amendment",
+      "text": "How have the recommendations of the 14th Finance Commission of India enabled the States to improve their fiscal position?",
+      "theme": "Federalism & Centre-State",
+      "themeId": "federalism-centre-state",
       "themeParent": "Constitution & Polity",
+      "subthemes": [
+        "Constitutional Bodies"
+      ],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs2-2021-q4",
+      "year": 2021,
+      "number": 4,
+      "marks": 10,
+      "text": "To what extent, in your view, the Parliament is able to ensure accountability of the executive in India?",
+      "theme": "Parliament & Legislatures",
+      "themeId": "parliament-legislature",
+      "themeParent": "Constitution & Polity",
+      "subthemes": [
+        "Union & State Executive",
+        "Judiciary & Judicial Review"
+      ],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs2-2021-q5",
+      "year": 2021,
+      "number": 5,
+      "marks": 10,
+      "text": "“Pressure groups play a vital role in influencing public policy making in India.” Explain how the business associations contribute to public policies.",
+      "theme": "Pressure Groups & Civil Society",
+      "themeId": "pressure-groups-civil-society",
+      "themeParent": "Social Justice & Welfare",
       "subthemes": [],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs2-2021-q6",
+      "year": 2021,
+      "number": 6,
+      "marks": 10,
+      "text": "‘Besides being a moral imperative of a Welfare State, primary health structure is a necessary precondition for sustainable development.” Analyze.",
+      "theme": "Public Health & Nutrition",
+      "themeId": "health-nutrition",
+      "themeParent": "Social Justice & Welfare",
+      "subthemes": [
+        "Federalism & Centre-State",
+        "Pressure Groups & Civil Society"
+      ],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs2-2021-q7",
+      "year": 2021,
+      "number": 7,
+      "marks": 10,
+      "text": "“Earn while you learn’ scheme needs to be strengthened to make vocational education and skill training meaningful.” Comment.",
+      "theme": "Education & Skill Development",
+      "themeId": "education-skills",
+      "themeParent": "Social Justice & Welfare",
+      "subthemes": [],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs2-2021-q8",
+      "year": 2021,
+      "number": 8,
+      "marks": 10,
+      "text": "Can the vicious cycle of gender inequality, poverty and malnutrition be broken through microfinancing of women SHGs? Explain with examples.",
+      "theme": "Poverty, Hunger & Inequality",
+      "themeId": "poverty-inequality",
+      "themeParent": "Social Justice & Welfare",
+      "subthemes": [],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs2-2021-q9",
+      "year": 2021,
+      "number": 9,
+      "marks": 10,
+      "text": "“If the last few decades were of Asia’s growth story, the next few are expected to be of Africa’s.” In the light of this statement, examine India’s influence in Africa in recent years.",
+      "theme": "Elections & RPA",
+      "themeId": "elections-rpa",
+      "themeParent": "Constitution & Polity",
+      "subthemes": [
+        "Federalism & Centre-State",
+        "Women, Children & Disability"
+      ],
       "notes": {
         "introduction": "",
         "staticNotes": "",
@@ -1898,28 +2001,6 @@
       }
     },
     {
-      "id": "gs2-2021-q2",
-      "year": 2021,
-      "number": 2,
-      "marks": 10,
-      "text": "Discuss the desirability of greater representation to women in the higher judiciary to ensure diversity, equity and inclusiveness.",
-      "theme": "Judiciary & Judicial Review",
-      "themeId": "judiciary",
-      "themeParent": "Constitution & Polity",
-      "subthemes": [
-        "Elections & RPA",
-        "Women, Children & Disability"
-      ],
-      "notes": {
-        "introduction": "",
-        "staticNotes": "",
-        "quotes": "",
-        "currentAffairs": "",
-        "topperPoints": "",
-        "valueMaterial": ""
-      }
-    },
-    {
       "id": "gs2-2021-q20",
       "year": 2021,
       "number": 20,
@@ -1939,57 +2020,14 @@
       }
     },
     {
-      "id": "gs2-2021-q3",
-      "year": 2021,
-      "number": 3,
+      "id": "gs2-2020-q1",
+      "year": 2020,
+      "number": 1,
       "marks": 10,
-      "text": "How have the recommendations of the 14th Finance Commission of India enabled the States to improve their fiscal position?",
-      "theme": "Federalism & Centre-State",
-      "themeId": "federalism-centre-state",
+      "text": "“There is a need for simplification of procedure. for disqualification of persons found guilty of corrupt practices under the Representation of Peoples Act”. Comment.",
+      "theme": "Elections & RPA",
+      "themeId": "elections-rpa",
       "themeParent": "Constitution & Polity",
-      "subthemes": [
-        "Constitutional Bodies"
-      ],
-      "notes": {
-        "introduction": "",
-        "staticNotes": "",
-        "quotes": "",
-        "currentAffairs": "",
-        "topperPoints": "",
-        "valueMaterial": ""
-      }
-    },
-    {
-      "id": "gs2-2021-q4",
-      "year": 2021,
-      "number": 4,
-      "marks": 10,
-      "text": "To what extent, in your view, the Parliament is able to ensure accountability of the executive in India?",
-      "theme": "Parliament & Legislatures",
-      "themeId": "parliament-legislature",
-      "themeParent": "Constitution & Polity",
-      "subthemes": [
-        "Union & State Executive",
-        "Judiciary & Judicial Review"
-      ],
-      "notes": {
-        "introduction": "",
-        "staticNotes": "",
-        "quotes": "",
-        "currentAffairs": "",
-        "topperPoints": "",
-        "valueMaterial": ""
-      }
-    },
-    {
-      "id": "gs2-2021-q5",
-      "year": 2021,
-      "number": 5,
-      "marks": 10,
-      "text": "“Pressure groups play a vital role in influencing public policy making in India.” Explain how the business associations contribute to public policies.",
-      "theme": "Pressure Groups & Civil Society",
-      "themeId": "pressure-groups-civil-society",
-      "themeParent": "Social Justice & Welfare",
       "subthemes": [],
       "notes": {
         "introduction": "",
@@ -2001,16 +2039,79 @@
       }
     },
     {
-      "id": "gs2-2021-q6",
-      "year": 2021,
-      "number": 6,
+      "id": "gs2-2020-q2",
+      "year": 2020,
+      "number": 2,
       "marks": 10,
-      "text": "‘Besides being a moral imperative of a Welfare State, primary health structure is a necessary precondition for sustainable development.” Analyze.",
-      "theme": "Public Health & Nutrition",
-      "themeId": "health-nutrition",
-      "themeParent": "Social Justice & Welfare",
+      "text": "“Recent amendments to the Right to Information Act will have profound impact on the autonomy and independence of the Information Commission”. Discuss.",
+      "theme": "Constitutional Bodies",
+      "themeId": "constitutional-bodies",
+      "themeParent": "Constitution & Polity",
       "subthemes": [
         "Federalism & Centre-State",
+        "Amendment & Basic Structure"
+      ],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs2-2020-q3",
+      "year": 2020,
+      "number": 3,
+      "marks": 10,
+      "text": "How far do you think cooperation, competition atid confrontation have shaped the nature of federation in India? Cite same recent examples to validate your answer.",
+      "theme": "Federalism & Centre-State",
+      "themeId": "federalism-centre-state",
+      "themeParent": "Constitution & Polity",
+      "subthemes": [],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs2-2020-q4",
+      "year": 2020,
+      "number": 4,
+      "marks": 10,
+      "text": "The judicial systems in India and UK seer to be converging as well as diverging in recent timds. Highlight the key points of convergence and divergence between the two nations in terms of their judicial practices.",
+      "theme": "Elections & RPA",
+      "themeId": "elections-rpa",
+      "themeParent": "Constitution & Polity",
+      "subthemes": [
+        "Judiciary & Judicial Review",
+        "Poverty, Hunger & Inequality"
+      ],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs2-2020-q5",
+      "year": 2020,
+      "number": 5,
+      "marks": 10,
+      "text": "‘Once a Speaker, Always a Speaker’ ! Do you think this practice should be adopted to impart objectivity to the office of the Speaker of Lok Sabha? What could be its implications for the robust functioning of parliamentary business in India ?",
+      "theme": "Parliament & Legislatures",
+      "themeId": "parliament-legislature",
+      "themeParent": "Constitution & Polity",
+      "subthemes": [
+        "Elections & RPA",
         "Pressure Groups & Civil Society"
       ],
       "notes": {
@@ -2023,14 +2124,33 @@
       }
     },
     {
-      "id": "gs2-2021-q7",
-      "year": 2021,
+      "id": "gs2-2020-q6",
+      "year": 2020,
+      "number": 6,
+      "marks": 10,
+      "text": "In order to enhance the prospects of social development, sound and adequate health care policies are needed particularly in the fields of geriatric and maternal healthcare. Discuss.",
+      "theme": "Public Health & Nutrition",
+      "themeId": "health-nutrition",
+      "themeParent": "Social Justice & Welfare",
+      "subthemes": [],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs2-2020-q7",
+      "year": 2020,
       "number": 7,
       "marks": 10,
-      "text": "“Earn while you learn’ scheme needs to be strengthened to make vocational education and skill training meaningful.” Comment.",
-      "theme": "Education & Skill Development",
-      "themeId": "education-skills",
-      "themeParent": "Social Justice & Welfare",
+      "text": "“Institutional quality is a crucial driver of economic performance”. In this context suggest reforms in Civil Service for strengthening democracy.",
+      "theme": "Civil Services & Bureaucracy",
+      "themeId": "civil-services",
+      "themeParent": "Governance & Administration",
       "subthemes": [],
       "notes": {
         "introduction": "",
@@ -2042,14 +2162,14 @@
       }
     },
     {
-      "id": "gs2-2021-q8",
-      "year": 2021,
+      "id": "gs2-2020-q8",
+      "year": 2020,
       "number": 8,
       "marks": 10,
-      "text": "Can the vicious cycle of gender inequality, poverty and malnutrition be broken through microfinancing of women SHGs? Explain with examples.",
-      "theme": "Poverty, Hunger & Inequality",
-      "themeId": "poverty-inequality",
-      "themeParent": "Social Justice & Welfare",
+      "text": "“The emergence of Fourth Industrial Revolution (Digital Revolution) has initiated e-Governance as an integral part of government”. Discuss.",
+      "theme": "E-Governance & Digital India",
+      "themeId": "e-governance",
+      "themeParent": "Governance & Administration",
       "subthemes": [],
       "notes": {
         "introduction": "",
@@ -2061,37 +2181,17 @@
       }
     },
     {
-      "id": "gs2-2021-q9",
-      "year": 2021,
+      "id": "gs2-2020-q9",
+      "year": 2020,
       "number": 9,
       "marks": 10,
-      "text": "“If the last few decades were of Asia’s growth story, the next few are expected to be of Africa’s.” In the light of this statement, examine India’s influence in Africa in recent years.",
-      "theme": "Elections & RPA",
-      "themeId": "elections-rpa",
-      "themeParent": "Constitution & Polity",
+      "text": "Critically examine the role of WHO in providing global health security during the Covid-19 pandemic.",
+      "theme": "Multilateral Institutions",
+      "themeId": "multilateral-institutions",
+      "themeParent": "International Relations",
       "subthemes": [
-        "Federalism & Centre-State",
-        "Women, Children & Disability"
+        "Terrorism & Conflict"
       ],
-      "notes": {
-        "introduction": "",
-        "staticNotes": "",
-        "quotes": "",
-        "currentAffairs": "",
-        "topperPoints": "",
-        "valueMaterial": ""
-      }
-    },
-    {
-      "id": "gs2-2020-q1",
-      "year": 2020,
-      "number": 1,
-      "marks": 10,
-      "text": "“There is a need for simplification of procedure. for disqualification of persons found guilty of corrupt practices under the Representation of Peoples Act”. Comment.",
-      "theme": "Elections & RPA",
-      "themeId": "elections-rpa",
-      "themeParent": "Constitution & Polity",
-      "subthemes": [],
       "notes": {
         "introduction": "",
         "staticNotes": "",
@@ -2315,28 +2415,6 @@
       }
     },
     {
-      "id": "gs2-2020-q2",
-      "year": 2020,
-      "number": 2,
-      "marks": 10,
-      "text": "“Recent amendments to the Right to Information Act will have profound impact on the autonomy and independence of the Information Commission”. Discuss.",
-      "theme": "Constitutional Bodies",
-      "themeId": "constitutional-bodies",
-      "themeParent": "Constitution & Polity",
-      "subthemes": [
-        "Federalism & Centre-State",
-        "Amendment & Basic Structure"
-      ],
-      "notes": {
-        "introduction": "",
-        "staticNotes": "",
-        "quotes": "",
-        "currentAffairs": "",
-        "topperPoints": "",
-        "valueMaterial": ""
-      }
-    },
-    {
       "id": "gs2-2020-q20",
       "year": 2020,
       "number": 20,
@@ -2346,147 +2424,6 @@
       "themeId": "indo-pacific-bilateral",
       "themeParent": "International Relations",
       "subthemes": [],
-      "notes": {
-        "introduction": "",
-        "staticNotes": "",
-        "quotes": "",
-        "currentAffairs": "",
-        "topperPoints": "",
-        "valueMaterial": ""
-      }
-    },
-    {
-      "id": "gs2-2020-q3",
-      "year": 2020,
-      "number": 3,
-      "marks": 10,
-      "text": "How far do you think cooperation, competition atid confrontation have shaped the nature of federation in India? Cite same recent examples to validate your answer.",
-      "theme": "Federalism & Centre-State",
-      "themeId": "federalism-centre-state",
-      "themeParent": "Constitution & Polity",
-      "subthemes": [],
-      "notes": {
-        "introduction": "",
-        "staticNotes": "",
-        "quotes": "",
-        "currentAffairs": "",
-        "topperPoints": "",
-        "valueMaterial": ""
-      }
-    },
-    {
-      "id": "gs2-2020-q4",
-      "year": 2020,
-      "number": 4,
-      "marks": 10,
-      "text": "The judicial systems in India and UK seer to be converging as well as diverging in recent timds. Highlight the key points of convergence and divergence between the two nations in terms of their judicial practices.",
-      "theme": "Elections & RPA",
-      "themeId": "elections-rpa",
-      "themeParent": "Constitution & Polity",
-      "subthemes": [
-        "Judiciary & Judicial Review",
-        "Poverty, Hunger & Inequality"
-      ],
-      "notes": {
-        "introduction": "",
-        "staticNotes": "",
-        "quotes": "",
-        "currentAffairs": "",
-        "topperPoints": "",
-        "valueMaterial": ""
-      }
-    },
-    {
-      "id": "gs2-2020-q5",
-      "year": 2020,
-      "number": 5,
-      "marks": 10,
-      "text": "‘Once a Speaker, Always a Speaker’ ! Do you think this practice should be adopted to impart objectivity to the office of the Speaker of Lok Sabha? What could be its implications for the robust functioning of parliamentary business in India ?",
-      "theme": "Parliament & Legislatures",
-      "themeId": "parliament-legislature",
-      "themeParent": "Constitution & Polity",
-      "subthemes": [
-        "Elections & RPA",
-        "Pressure Groups & Civil Society"
-      ],
-      "notes": {
-        "introduction": "",
-        "staticNotes": "",
-        "quotes": "",
-        "currentAffairs": "",
-        "topperPoints": "",
-        "valueMaterial": ""
-      }
-    },
-    {
-      "id": "gs2-2020-q6",
-      "year": 2020,
-      "number": 6,
-      "marks": 10,
-      "text": "In order to enhance the prospects of social development, sound and adequate health care policies are needed particularly in the fields of geriatric and maternal healthcare. Discuss.",
-      "theme": "Public Health & Nutrition",
-      "themeId": "health-nutrition",
-      "themeParent": "Social Justice & Welfare",
-      "subthemes": [],
-      "notes": {
-        "introduction": "",
-        "staticNotes": "",
-        "quotes": "",
-        "currentAffairs": "",
-        "topperPoints": "",
-        "valueMaterial": ""
-      }
-    },
-    {
-      "id": "gs2-2020-q7",
-      "year": 2020,
-      "number": 7,
-      "marks": 10,
-      "text": "“Institutional quality is a crucial driver of economic performance”. In this context suggest reforms in Civil Service for strengthening democracy.",
-      "theme": "Civil Services & Bureaucracy",
-      "themeId": "civil-services",
-      "themeParent": "Governance & Administration",
-      "subthemes": [],
-      "notes": {
-        "introduction": "",
-        "staticNotes": "",
-        "quotes": "",
-        "currentAffairs": "",
-        "topperPoints": "",
-        "valueMaterial": ""
-      }
-    },
-    {
-      "id": "gs2-2020-q8",
-      "year": 2020,
-      "number": 8,
-      "marks": 10,
-      "text": "“The emergence of Fourth Industrial Revolution (Digital Revolution) has initiated e-Governance as an integral part of government”. Discuss.",
-      "theme": "E-Governance & Digital India",
-      "themeId": "e-governance",
-      "themeParent": "Governance & Administration",
-      "subthemes": [],
-      "notes": {
-        "introduction": "",
-        "staticNotes": "",
-        "quotes": "",
-        "currentAffairs": "",
-        "topperPoints": "",
-        "valueMaterial": ""
-      }
-    },
-    {
-      "id": "gs2-2020-q9",
-      "year": 2020,
-      "number": 9,
-      "marks": 10,
-      "text": "Critically examine the role of WHO in providing global health security during the Covid-19 pandemic.",
-      "theme": "Multilateral Institutions",
-      "themeId": "multilateral-institutions",
-      "themeParent": "International Relations",
-      "subthemes": [
-        "Terrorism & Conflict"
-      ],
       "notes": {
         "introduction": "",
         "staticNotes": "",
@@ -2508,6 +2445,177 @@
       "subthemes": [
         "Comparative Constitutions",
         "Federalism & Centre-State"
+      ],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs2-2019-q2",
+      "year": 2019,
+      "number": 2,
+      "marks": 10,
+      "text": "\"The Central Administrative Tribunal which was established for redressel of grievances and complaints by or against central government employees, nowadays is exercising its powers as an independent judicial authority.\" Explain.",
+      "theme": "Judiciary & Judicial Review",
+      "themeId": "judiciary",
+      "themeParent": "Constitution & Polity",
+      "subthemes": [
+        "Neighbourhood & Regional"
+      ],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs2-2019-q3",
+      "year": 2019,
+      "number": 3,
+      "marks": 10,
+      "text": "What are the methods used by Farmers' organisations to influence the policy makers in India and how effective are these methods?",
+      "theme": "Elections & RPA",
+      "themeId": "elections-rpa",
+      "themeParent": "Constitution & Polity",
+      "subthemes": [
+        "Energy & Economic Diplomacy",
+        "Pressure Groups & Civil Society"
+      ],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs2-2019-q4",
+      "year": 2019,
+      "number": 4,
+      "marks": 10,
+      "text": "From the resolution of contentious issues regarding distribution of legislative powers by the courts, 'Principle of Federal Supermacy' and \"Harmonious Construction\" have emerged. Explain.",
+      "theme": "Parliament & Legislatures",
+      "themeId": "parliament-legislature",
+      "themeParent": "Constitution & Polity",
+      "subthemes": [
+        "Judiciary & Judicial Review",
+        "UTs & Special Provisions"
+      ],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs2-2019-q5",
+      "year": 2019,
+      "number": 5,
+      "marks": 10,
+      "text": "What can France learn from the Indian Constitution's approach to secularism?",
+      "theme": "Comparative Constitutions",
+      "themeId": "comparative-constitution",
+      "themeParent": "Constitution & Polity",
+      "subthemes": [
+        "Fundamental Rights & DPSP"
+      ],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs2-2019-q6",
+      "year": 2019,
+      "number": 6,
+      "marks": 10,
+      "text": "Despite consistent experience of high growth, India still goes with lowest indicators of human development. Examine the issues that make balanced and inclusive development elusive.",
+      "theme": "Pressure Groups & Civil Society",
+      "themeId": "pressure-groups-civil-society",
+      "themeParent": "Social Justice & Welfare",
+      "subthemes": [
+        "Federalism & Centre-State",
+        "Local Government & Decentralization"
+      ],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs2-2019-q7",
+      "year": 2019,
+      "number": 7,
+      "marks": 10,
+      "text": "There is a growing divergence in the relationship between poverty and hunger in India. The shrinking of social expenditure by the government is forcing the poor to spend more on non-food essential items squeezing their food budget. Elucidate.",
+      "theme": "Poverty, Hunger & Inequality",
+      "themeId": "poverty-inequality",
+      "themeParent": "Social Justice & Welfare",
+      "subthemes": [],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs2-2019-q8",
+      "year": 2019,
+      "number": 8,
+      "marks": 10,
+      "text": "Implementation of Information and Communication Technology (ICT) based projects/Programmes usually suffers in terms of certain vital factors. Identify these factors, and suggest measures for there effective implementation.",
+      "theme": "E-Governance & Digital India",
+      "themeId": "e-governance",
+      "themeParent": "Governance & Administration",
+      "subthemes": [
+        "Poverty, Hunger & Inequality",
+        "Pressure Groups & Civil Society"
+      ],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs2-2019-q9",
+      "year": 2019,
+      "number": 9,
+      "marks": 10,
+      "text": "“The time has come for India and Japan to build a strong contemporary relationship, one involving global and strategic partnership that will have a great significance for Asia and the world as a whole.’ Comment.",
+      "theme": "Indo-Pacific & Strategic Partnerships",
+      "themeId": "indo-pacific-bilateral",
+      "themeParent": "International Relations",
+      "subthemes": [
+        "Multilateral Institutions",
+        "Energy & Economic Diplomacy"
       ],
       "notes": {
         "introduction": "",
@@ -2727,27 +2835,6 @@
       }
     },
     {
-      "id": "gs2-2019-q2",
-      "year": 2019,
-      "number": 2,
-      "marks": 10,
-      "text": "\"The Central Administrative Tribunal which was established for redressel of grievances and complaints by or against central government employees, nowadays is exercising its powers as an independent judicial authority.\" Explain.",
-      "theme": "Judiciary & Judicial Review",
-      "themeId": "judiciary",
-      "themeParent": "Constitution & Polity",
-      "subthemes": [
-        "Neighbourhood & Regional"
-      ],
-      "notes": {
-        "introduction": "",
-        "staticNotes": "",
-        "quotes": "",
-        "currentAffairs": "",
-        "topperPoints": "",
-        "valueMaterial": ""
-      }
-    },
-    {
       "id": "gs2-2019-q20",
       "year": 2019,
       "number": 20,
@@ -2770,17 +2857,35 @@
       }
     },
     {
-      "id": "gs2-2019-q3",
-      "year": 2019,
-      "number": 3,
+      "id": "gs2-2018-q1",
+      "year": 2018,
+      "number": 1,
       "marks": 10,
-      "text": "What are the methods used by Farmers' organisations to influence the policy makers in India and how effective are these methods?",
-      "theme": "Elections & RPA",
-      "themeId": "elections-rpa",
+      "text": "In the light of recent controversy regarding the use of Electronic Voting Machines (EVM), what are the challenges before the Election Commission of India to ensure the trustworthiness of clections in India?",
+      "theme": "Constitutional Bodies",
+      "themeId": "constitutional-bodies",
+      "themeParent": "Constitution & Polity",
+      "subthemes": [],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs2-2018-q2",
+      "year": 2018,
+      "number": 2,
+      "marks": 10,
+      "text": "Whether National Commission for Scheduled Castes (NCSC) can enforce the implementation of constitutional reservation for the Scheduled Castes in the religious minority institutions? Examine.",
+      "theme": "Constitutional Bodies",
+      "themeId": "constitutional-bodies",
       "themeParent": "Constitution & Polity",
       "subthemes": [
-        "Energy & Economic Diplomacy",
-        "Pressure Groups & Civil Society"
+        "Amendment & Basic Structure"
       ],
       "notes": {
         "introduction": "",
@@ -2792,17 +2897,17 @@
       }
     },
     {
-      "id": "gs2-2019-q4",
-      "year": 2019,
-      "number": 4,
+      "id": "gs2-2018-q3",
+      "year": 2018,
+      "number": 3,
       "marks": 10,
-      "text": "From the resolution of contentious issues regarding distribution of legislative powers by the courts, 'Principle of Federal Supermacy' and \"Harmonious Construction\" have emerged. Explain.",
+      "text": "Under what circumstances cam the Financial Emergency be proclaimed by the President of India? What consequences follow when such a declaration remains in force?",
       "theme": "Parliament & Legislatures",
       "themeId": "parliament-legislature",
       "themeParent": "Constitution & Polity",
       "subthemes": [
-        "Judiciary & Judicial Review",
-        "UTs & Special Provisions"
+        "Union & State Executive",
+        "Public Service Delivery & NGOs"
       ],
       "notes": {
         "introduction": "",
@@ -2814,16 +2919,35 @@
       }
     },
     {
-      "id": "gs2-2019-q5",
-      "year": 2019,
+      "id": "gs2-2018-q4",
+      "year": 2018,
+      "number": 4,
+      "marks": 10,
+      "text": "Why do you think the committees are considered to be useful for parliamentary work? Discuss, in this context, the role of the Estimates Committee.",
+      "theme": "Parliament & Legislatures",
+      "themeId": "parliament-legislature",
+      "themeParent": "Constitution & Polity",
+      "subthemes": [],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs2-2018-q5",
+      "year": 2018,
       "number": 5,
       "marks": 10,
-      "text": "What can France learn from the Indian Constitution's approach to secularism?",
-      "theme": "Comparative Constitutions",
-      "themeId": "comparative-constitution",
+      "text": "\"The Comptroller and Auditor General (CAG) has a very vital role to play.” Explain how this is reflected in the method and terms of his appointment as well as the range of powers he can exercise.",
+      "theme": "Constitutional Bodies",
+      "themeId": "constitutional-bodies",
       "themeParent": "Constitution & Polity",
       "subthemes": [
-        "Fundamental Rights & DPSP"
+        "Union & State Executive"
       ],
       "notes": {
         "introduction": "",
@@ -2835,17 +2959,17 @@
       }
     },
     {
-      "id": "gs2-2019-q6",
-      "year": 2019,
+      "id": "gs2-2018-q6",
+      "year": 2018,
       "number": 6,
       "marks": 10,
-      "text": "Despite consistent experience of high growth, India still goes with lowest indicators of human development. Examine the issues that make balanced and inclusive development elusive.",
+      "text": "\"Policy contradictions among various competing sectors and stakeholders have resulted in inadequate ‘protection and prevention of degradation’ to environment.” Comment with relevant illustrations.",
       "theme": "Pressure Groups & Civil Society",
       "themeId": "pressure-groups-civil-society",
       "themeParent": "Social Justice & Welfare",
       "subthemes": [
-        "Federalism & Centre-State",
-        "Local Government & Decentralization"
+        "Fundamental Rights & DPSP",
+        "Elections & RPA"
       ],
       "notes": {
         "introduction": "",
@@ -2857,13 +2981,13 @@
       }
     },
     {
-      "id": "gs2-2019-q7",
-      "year": 2019,
+      "id": "gs2-2018-q7",
+      "year": 2018,
       "number": 7,
       "marks": 10,
-      "text": "There is a growing divergence in the relationship between poverty and hunger in India. The shrinking of social expenditure by the government is forcing the poor to spend more on non-food essential items squeezing their food budget. Elucidate.",
-      "theme": "Poverty, Hunger & Inequality",
-      "themeId": "poverty-inequality",
+      "text": "Appropriate local community-level healthcare intervention is a prerequisite to achieve ‘Health for All’ in India, Explain.",
+      "theme": "Public Health & Nutrition",
+      "themeId": "health-nutrition",
       "themeParent": "Social Justice & Welfare",
       "subthemes": [],
       "notes": {
@@ -2876,18 +3000,15 @@
       }
     },
     {
-      "id": "gs2-2019-q8",
-      "year": 2019,
+      "id": "gs2-2018-q8",
+      "year": 2018,
       "number": 8,
       "marks": 10,
-      "text": "Implementation of Information and Communication Technology (ICT) based projects/Programmes usually suffers in terms of certain vital factors. Identify these factors, and suggest measures for there effective implementation.",
+      "text": "E-governance is not only about utilization of the power of new technology, but also much about critical importance of the ‘use value’ of information. Explain.",
       "theme": "E-Governance & Digital India",
       "themeId": "e-governance",
       "themeParent": "Governance & Administration",
-      "subthemes": [
-        "Poverty, Hunger & Inequality",
-        "Pressure Groups & Civil Society"
-      ],
+      "subthemes": [],
       "notes": {
         "introduction": "",
         "staticNotes": "",
@@ -2898,36 +3019,14 @@
       }
     },
     {
-      "id": "gs2-2019-q9",
-      "year": 2019,
+      "id": "gs2-2018-q9",
+      "year": 2018,
       "number": 9,
       "marks": 10,
-      "text": "“The time has come for India and Japan to build a strong contemporary relationship, one involving global and strategic partnership that will have a great significance for Asia and the world as a whole.’ Comment.",
+      "text": "\"India’s relations with Israel have, of late, acquired a depth and diversity, which cannot be rolled back.” Discuss.",
       "theme": "Indo-Pacific & Strategic Partnerships",
       "themeId": "indo-pacific-bilateral",
       "themeParent": "International Relations",
-      "subthemes": [
-        "Multilateral Institutions",
-        "Energy & Economic Diplomacy"
-      ],
-      "notes": {
-        "introduction": "",
-        "staticNotes": "",
-        "quotes": "",
-        "currentAffairs": "",
-        "topperPoints": "",
-        "valueMaterial": ""
-      }
-    },
-    {
-      "id": "gs2-2018-q1",
-      "year": 2018,
-      "number": 1,
-      "marks": 10,
-      "text": "In the light of recent controversy regarding the use of Electronic Voting Machines (EVM), what are the challenges before the Election Commission of India to ensure the trustworthiness of clections in India?",
-      "theme": "Constitutional Bodies",
-      "themeId": "constitutional-bodies",
-      "themeParent": "Constitution & Polity",
       "subthemes": [],
       "notes": {
         "introduction": "",
@@ -3152,27 +3251,6 @@
       }
     },
     {
-      "id": "gs2-2018-q2",
-      "year": 2018,
-      "number": 2,
-      "marks": 10,
-      "text": "Whether National Commission for Scheduled Castes (NCSC) can enforce the implementation of constitutional reservation for the Scheduled Castes in the religious minority institutions? Examine.",
-      "theme": "Constitutional Bodies",
-      "themeId": "constitutional-bodies",
-      "themeParent": "Constitution & Polity",
-      "subthemes": [
-        "Amendment & Basic Structure"
-      ],
-      "notes": {
-        "introduction": "",
-        "staticNotes": "",
-        "quotes": "",
-        "currentAffairs": "",
-        "topperPoints": "",
-        "valueMaterial": ""
-      }
-    },
-    {
       "id": "gs2-2018-q20",
       "year": 2018,
       "number": 20,
@@ -3195,36 +3273,14 @@
       }
     },
     {
-      "id": "gs2-2018-q3",
-      "year": 2018,
-      "number": 3,
+      "id": "gs2-2017-q1",
+      "year": 2017,
+      "number": 1,
       "marks": 10,
-      "text": "Under what circumstances cam the Financial Emergency be proclaimed by the President of India? What consequences follow when such a declaration remains in force?",
-      "theme": "Parliament & Legislatures",
-      "themeId": "parliament-legislature",
-      "themeParent": "Constitution & Polity",
-      "subthemes": [
-        "Union & State Executive",
-        "Public Service Delivery & NGOs"
-      ],
-      "notes": {
-        "introduction": "",
-        "staticNotes": "",
-        "quotes": "",
-        "currentAffairs": "",
-        "topperPoints": "",
-        "valueMaterial": ""
-      }
-    },
-    {
-      "id": "gs2-2018-q4",
-      "year": 2018,
-      "number": 4,
-      "marks": 10,
-      "text": "Why do you think the committees are considered to be useful for parliamentary work? Discuss, in this context, the role of the Estimates Committee.",
-      "theme": "Parliament & Legislatures",
-      "themeId": "parliament-legislature",
-      "themeParent": "Constitution & Polity",
+      "text": "“The local self-government system in India has not proved to be effective instrument of governance.” Critically examine the statement and give your views to improve the situation.",
+      "theme": "Local Government & Decentralization",
+      "themeId": "local-government",
+      "themeParent": "Governance & Administration",
       "subthemes": [],
       "notes": {
         "introduction": "",
@@ -3236,16 +3292,16 @@
       }
     },
     {
-      "id": "gs2-2018-q5",
-      "year": 2018,
-      "number": 5,
+      "id": "gs2-2017-q2",
+      "year": 2017,
+      "number": 2,
       "marks": 10,
-      "text": "\"The Comptroller and Auditor General (CAG) has a very vital role to play.” Explain how this is reflected in the method and terms of his appointment as well as the range of powers he can exercise.",
-      "theme": "Constitutional Bodies",
-      "themeId": "constitutional-bodies",
+      "text": "Critically examine the Supreme Court’s judgement on ‘National Judicial Appointments Commission Act, 2014’ with reference to appointment of judges of higher judiciary in India.",
+      "theme": "Judiciary & Judicial Review",
+      "themeId": "judiciary",
       "themeParent": "Constitution & Polity",
       "subthemes": [
-        "Union & State Executive"
+        "Constitutional Bodies"
       ],
       "notes": {
         "introduction": "",
@@ -3257,16 +3313,79 @@
       }
     },
     {
-      "id": "gs2-2018-q6",
-      "year": 2018,
-      "number": 6,
+      "id": "gs2-2017-q3",
+      "year": 2017,
+      "number": 3,
       "marks": 10,
-      "text": "\"Policy contradictions among various competing sectors and stakeholders have resulted in inadequate ‘protection and prevention of degradation’ to environment.” Comment with relevant illustrations.",
+      "text": "“Simultaneous election to the Lok Sabha and the State Assemblies will limit the amount of time and money spent in electioneering but it will reduce the government’s accountability to the people.” Discuss.",
+      "theme": "Elections & RPA",
+      "themeId": "elections-rpa",
+      "themeParent": "Constitution & Polity",
+      "subthemes": [
+        "Parliament & Legislatures",
+        "Judiciary & Judicial Review"
+      ],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs2-2017-q4",
+      "year": 2017,
+      "number": 4,
+      "marks": 10,
+      "text": "How do pressure groups influence Indian political process? Do you agree with this view that informal pressure groups have emerged as more powerful than formal pressure groups in recent years?",
       "theme": "Pressure Groups & Civil Society",
       "themeId": "pressure-groups-civil-society",
       "themeParent": "Social Justice & Welfare",
+      "subthemes": [],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs2-2017-q5",
+      "year": 2017,
+      "number": 5,
+      "marks": 10,
+      "text": "Discuss the role of Public Accounts Committee in establishing accountability of the government to the people.",
+      "theme": "Parliament & Legislatures",
+      "themeId": "parliament-legislature",
+      "themeParent": "Constitution & Polity",
       "subthemes": [
-        "Fundamental Rights & DPSP",
+        "Judiciary & Judicial Review",
+        "Accountability & Citizen Charter"
+      ],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs2-2017-q6",
+      "year": 2017,
+      "number": 6,
+      "marks": 10,
+      "text": "“To ensure effective implementation of policies addressing water, sanitation and hygiene needs the identification of the beneficiary segments is to be synchronized with the anticipated outcomes.” Examine the statement in the context of the WASH scheme.",
+      "theme": "Federalism & Centre-State",
+      "themeId": "federalism-centre-state",
+      "themeParent": "Constitution & Polity",
+      "subthemes": [
+        "Pressure Groups & Civil Society",
         "Elections & RPA"
       ],
       "notes": {
@@ -3279,13 +3398,13 @@
       }
     },
     {
-      "id": "gs2-2018-q7",
-      "year": 2018,
+      "id": "gs2-2017-q7",
+      "year": 2017,
       "number": 7,
       "marks": 10,
-      "text": "Appropriate local community-level healthcare intervention is a prerequisite to achieve ‘Health for All’ in India, Explain.",
-      "theme": "Public Health & Nutrition",
-      "themeId": "health-nutrition",
+      "text": "Does the Rights of Persons with Disabilities Act, 2016 ensure effective mechanism for empowerment and inclusion of the intended beneficiaries in the society? Discuss.",
+      "theme": "Women, Children & Disability",
+      "themeId": "vulnerable-groups",
       "themeParent": "Social Justice & Welfare",
       "subthemes": [],
       "notes": {
@@ -3298,53 +3417,40 @@
       }
     },
     {
-      "id": "gs2-2018-q8",
-      "year": 2018,
+      "id": "gs2-2017-q8",
+      "year": 2017,
       "number": 8,
       "marks": 10,
-      "text": "E-governance is not only about utilization of the power of new technology, but also much about critical importance of the ‘use value’ of information. Explain.",
-      "theme": "E-Governance & Digital India",
-      "themeId": "e-governance",
-      "themeParent": "Governance & Administration",
-      "subthemes": [],
-      "notes": {
-        "introduction": "",
-        "staticNotes": "",
-        "quotes": "",
-        "currentAffairs": "",
-        "topperPoints": "",
-        "valueMaterial": ""
-      }
-    },
-    {
-      "id": "gs2-2018-q9",
-      "year": 2018,
-      "number": 9,
-      "marks": 10,
-      "text": "\"India’s relations with Israel have, of late, acquired a depth and diversity, which cannot be rolled back.” Discuss.",
-      "theme": "Indo-Pacific & Strategic Partnerships",
-      "themeId": "indo-pacific-bilateral",
-      "themeParent": "International Relations",
-      "subthemes": [],
-      "notes": {
-        "introduction": "",
-        "staticNotes": "",
-        "quotes": "",
-        "currentAffairs": "",
-        "topperPoints": "",
-        "valueMaterial": ""
-      }
-    },
-    {
-      "id": "gs2-2017-q1",
-      "year": 2017,
-      "number": 1,
-      "marks": 10,
-      "text": "“The local self-government system in India has not proved to be effective instrument of governance.” Critically examine the statement and give your views to improve the situation.",
+      "text": "Hunger and poverty are the biggest challenges for good governance in India still today. Evaluate how far successive governments have progressed in dealing with these humongous problems. Suggest measures for improvement.",
       "theme": "Local Government & Decentralization",
       "themeId": "local-government",
       "themeParent": "Governance & Administration",
-      "subthemes": [],
+      "subthemes": [
+        "Poverty, Hunger & Inequality",
+        "Civil Services & Bureaucracy"
+      ],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs2-2017-q9",
+      "year": 2017,
+      "number": 9,
+      "marks": 10,
+      "text": "“China is using its economic relations and positive trade surplus as tools to develop potential military power status in Asia.” In the light of this statement, discuss its impact on India as her neighbour.",
+      "theme": "Energy & Economic Diplomacy",
+      "themeId": "energy-economic-diplomacy",
+      "themeParent": "International Relations",
+      "subthemes": [
+        "Accountability & Citizen Charter",
+        "Federalism & Centre-State"
+      ],
       "notes": {
         "introduction": "",
         "staticNotes": "",
@@ -3569,27 +3675,6 @@
       }
     },
     {
-      "id": "gs2-2017-q2",
-      "year": 2017,
-      "number": 2,
-      "marks": 10,
-      "text": "Critically examine the Supreme Court’s judgement on ‘National Judicial Appointments Commission Act, 2014’ with reference to appointment of judges of higher judiciary in India.",
-      "theme": "Judiciary & Judicial Review",
-      "themeId": "judiciary",
-      "themeParent": "Constitution & Polity",
-      "subthemes": [
-        "Constitutional Bodies"
-      ],
-      "notes": {
-        "introduction": "",
-        "staticNotes": "",
-        "quotes": "",
-        "currentAffairs": "",
-        "topperPoints": "",
-        "valueMaterial": ""
-      }
-    },
-    {
       "id": "gs2-2017-q20",
       "year": 2017,
       "number": 20,
@@ -3599,154 +3684,6 @@
       "themeId": "diaspora-soft-power",
       "themeParent": "International Relations",
       "subthemes": [],
-      "notes": {
-        "introduction": "",
-        "staticNotes": "",
-        "quotes": "",
-        "currentAffairs": "",
-        "topperPoints": "",
-        "valueMaterial": ""
-      }
-    },
-    {
-      "id": "gs2-2017-q3",
-      "year": 2017,
-      "number": 3,
-      "marks": 10,
-      "text": "“Simultaneous election to the Lok Sabha and the State Assemblies will limit the amount of time and money spent in electioneering but it will reduce the government’s accountability to the people.” Discuss.",
-      "theme": "Elections & RPA",
-      "themeId": "elections-rpa",
-      "themeParent": "Constitution & Polity",
-      "subthemes": [
-        "Parliament & Legislatures",
-        "Judiciary & Judicial Review"
-      ],
-      "notes": {
-        "introduction": "",
-        "staticNotes": "",
-        "quotes": "",
-        "currentAffairs": "",
-        "topperPoints": "",
-        "valueMaterial": ""
-      }
-    },
-    {
-      "id": "gs2-2017-q4",
-      "year": 2017,
-      "number": 4,
-      "marks": 10,
-      "text": "How do pressure groups influence Indian political process? Do you agree with this view that informal pressure groups have emerged as more powerful than formal pressure groups in recent years?",
-      "theme": "Pressure Groups & Civil Society",
-      "themeId": "pressure-groups-civil-society",
-      "themeParent": "Social Justice & Welfare",
-      "subthemes": [],
-      "notes": {
-        "introduction": "",
-        "staticNotes": "",
-        "quotes": "",
-        "currentAffairs": "",
-        "topperPoints": "",
-        "valueMaterial": ""
-      }
-    },
-    {
-      "id": "gs2-2017-q5",
-      "year": 2017,
-      "number": 5,
-      "marks": 10,
-      "text": "Discuss the role of Public Accounts Committee in establishing accountability of the government to the people.",
-      "theme": "Parliament & Legislatures",
-      "themeId": "parliament-legislature",
-      "themeParent": "Constitution & Polity",
-      "subthemes": [
-        "Judiciary & Judicial Review",
-        "Accountability & Citizen Charter"
-      ],
-      "notes": {
-        "introduction": "",
-        "staticNotes": "",
-        "quotes": "",
-        "currentAffairs": "",
-        "topperPoints": "",
-        "valueMaterial": ""
-      }
-    },
-    {
-      "id": "gs2-2017-q6",
-      "year": 2017,
-      "number": 6,
-      "marks": 10,
-      "text": "“To ensure effective implementation of policies addressing water, sanitation and hygiene needs the identification of the beneficiary segments is to be synchronized with the anticipated outcomes.” Examine the statement in the context of the WASH scheme.",
-      "theme": "Federalism & Centre-State",
-      "themeId": "federalism-centre-state",
-      "themeParent": "Constitution & Polity",
-      "subthemes": [
-        "Pressure Groups & Civil Society",
-        "Elections & RPA"
-      ],
-      "notes": {
-        "introduction": "",
-        "staticNotes": "",
-        "quotes": "",
-        "currentAffairs": "",
-        "topperPoints": "",
-        "valueMaterial": ""
-      }
-    },
-    {
-      "id": "gs2-2017-q7",
-      "year": 2017,
-      "number": 7,
-      "marks": 10,
-      "text": "Does the Rights of Persons with Disabilities Act, 2016 ensure effective mechanism for empowerment and inclusion of the intended beneficiaries in the society? Discuss.",
-      "theme": "Women, Children & Disability",
-      "themeId": "vulnerable-groups",
-      "themeParent": "Social Justice & Welfare",
-      "subthemes": [],
-      "notes": {
-        "introduction": "",
-        "staticNotes": "",
-        "quotes": "",
-        "currentAffairs": "",
-        "topperPoints": "",
-        "valueMaterial": ""
-      }
-    },
-    {
-      "id": "gs2-2017-q8",
-      "year": 2017,
-      "number": 8,
-      "marks": 10,
-      "text": "Hunger and poverty are the biggest challenges for good governance in India still today. Evaluate how far successive governments have progressed in dealing with these humongous problems. Suggest measures for improvement.",
-      "theme": "Local Government & Decentralization",
-      "themeId": "local-government",
-      "themeParent": "Governance & Administration",
-      "subthemes": [
-        "Poverty, Hunger & Inequality",
-        "Civil Services & Bureaucracy"
-      ],
-      "notes": {
-        "introduction": "",
-        "staticNotes": "",
-        "quotes": "",
-        "currentAffairs": "",
-        "topperPoints": "",
-        "valueMaterial": ""
-      }
-    },
-    {
-      "id": "gs2-2017-q9",
-      "year": 2017,
-      "number": 9,
-      "marks": 10,
-      "text": "“China is using its economic relations and positive trade surplus as tools to develop potential military power status in Asia.” In the light of this statement, discuss its impact on India as her neighbour.",
-      "theme": "Energy & Economic Diplomacy",
-      "themeId": "energy-economic-diplomacy",
-      "themeParent": "International Relations",
-      "subthemes": [
-        "Accountability & Citizen Charter",
-        "Federalism & Centre-State"
-      ],
       "notes": {
         "introduction": "",
         "staticNotes": "",
@@ -3768,6 +3705,178 @@
       "subthemes": [
         "Union & State Executive",
         "Pressure Groups & Civil Society"
+      ],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs2-2016-q2",
+      "year": 2016,
+      "number": 2,
+      "marks": 12,
+      "text": "To what extent is Article 370 of the Indian Constitution, bearing marginal note “Temporary provision with respect to the State of Jammu and Kashmir”, temporary? Discuss the future prospects of this provision in the context of Indian polity.",
+      "theme": "UTs & Special Provisions",
+      "themeId": "special-provisions-ut",
+      "themeParent": "Constitution & Polity",
+      "subthemes": [
+        "Federalism & Centre-State",
+        "Amendment & Basic Structure"
+      ],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs2-2016-q3",
+      "year": 2016,
+      "number": 3,
+      "marks": 12,
+      "text": "“The Indian party system is passing through a phase of transition which looks to be full of contradictions and paradoxes.” Discuss.",
+      "theme": "Elections & RPA",
+      "themeId": "elections-rpa",
+      "themeParent": "Constitution & Polity",
+      "subthemes": [],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs2-2016-q4",
+      "year": 2016,
+      "number": 4,
+      "marks": 12,
+      "text": "Exercise of CAG’s powers in relation to the accounts of the Union and the States is derived from Article 149 of the Indian Constitution. Discuss whether audit of the Government’s policy implementation could amount to overstepping its own (CAG) jurisdiction.",
+      "theme": "Federalism & Centre-State",
+      "themeId": "federalism-centre-state",
+      "themeParent": "Constitution & Polity",
+      "subthemes": [
+        "Amendment & Basic Structure",
+        "UTs & Special Provisions"
+      ],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs2-2016-q5",
+      "year": 2016,
+      "number": 5,
+      "marks": 12,
+      "text": "Discuss each adjective attached to the word ‘Republic’ in the ‘Preamble’. Are they defendable in the present circumstances?",
+      "theme": "Pressure Groups & Civil Society",
+      "themeId": "pressure-groups-civil-society",
+      "themeParent": "Social Justice & Welfare",
+      "subthemes": [
+        "Judiciary & Judicial Review",
+        "Public Service Delivery & NGOs"
+      ],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs2-2016-q6",
+      "year": 2016,
+      "number": 6,
+      "marks": 12,
+      "text": "What was held in the Coelho case ? In this context, can you say that judicial review is of key importance amongst the basic features of the Constitution ?",
+      "theme": "Judiciary & Judicial Review",
+      "themeId": "judiciary",
+      "themeParent": "Constitution & Polity",
+      "subthemes": [
+        "Amendment & Basic Structure",
+        "Comparative Constitutions"
+      ],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs2-2016-q7",
+      "year": 2016,
+      "number": 7,
+      "marks": 12,
+      "text": "Did the Government of India Act, 1935 lay down a federal constitution ? Discuss.",
+      "theme": "Amendment & Basic Structure",
+      "themeId": "constitutional-amendment",
+      "themeParent": "Constitution & Polity",
+      "subthemes": [
+        "Comparative Constitutions",
+        "Elections & RPA"
+      ],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs2-2016-q8",
+      "year": 2016,
+      "number": 8,
+      "marks": 12,
+      "text": "What is a quasi-judicial body ? Explain with the help of concrete examples.",
+      "theme": "Judiciary & Judicial Review",
+      "themeId": "judiciary",
+      "themeParent": "Constitution & Polity",
+      "subthemes": [
+        "Constitutional Bodies",
+        "Local Government & Decentralization"
+      ],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs2-2016-q9",
+      "year": 2016,
+      "number": 9,
+      "marks": 12,
+      "text": "Professor Amartya Sen has advocated important reforms in the realms of primary education and primary health care. What are your suggestions to improve their status and performance ?",
+      "theme": "Public Health & Nutrition",
+      "themeId": "health-nutrition",
+      "themeParent": "Social Justice & Welfare",
+      "subthemes": [
+        "Education & Skill Development"
       ],
       "notes": {
         "introduction": "",
@@ -3989,28 +4098,6 @@
       }
     },
     {
-      "id": "gs2-2016-q2",
-      "year": 2016,
-      "number": 2,
-      "marks": 12,
-      "text": "To what extent is Article 370 of the Indian Constitution, bearing marginal note “Temporary provision with respect to the State of Jammu and Kashmir”, temporary? Discuss the future prospects of this provision in the context of Indian polity.",
-      "theme": "UTs & Special Provisions",
-      "themeId": "special-provisions-ut",
-      "themeParent": "Constitution & Polity",
-      "subthemes": [
-        "Federalism & Centre-State",
-        "Amendment & Basic Structure"
-      ],
-      "notes": {
-        "introduction": "",
-        "staticNotes": "",
-        "quotes": "",
-        "currentAffairs": "",
-        "topperPoints": "",
-        "valueMaterial": ""
-      }
-    },
-    {
       "id": "gs2-2016-q20",
       "year": 2016,
       "number": 20,
@@ -4021,156 +4108,6 @@
       "themeParent": "Constitution & Polity",
       "subthemes": [
         "Indo-Pacific & Strategic Partnerships"
-      ],
-      "notes": {
-        "introduction": "",
-        "staticNotes": "",
-        "quotes": "",
-        "currentAffairs": "",
-        "topperPoints": "",
-        "valueMaterial": ""
-      }
-    },
-    {
-      "id": "gs2-2016-q3",
-      "year": 2016,
-      "number": 3,
-      "marks": 12,
-      "text": "“The Indian party system is passing through a phase of transition which looks to be full of contradictions and paradoxes.” Discuss.",
-      "theme": "Elections & RPA",
-      "themeId": "elections-rpa",
-      "themeParent": "Constitution & Polity",
-      "subthemes": [],
-      "notes": {
-        "introduction": "",
-        "staticNotes": "",
-        "quotes": "",
-        "currentAffairs": "",
-        "topperPoints": "",
-        "valueMaterial": ""
-      }
-    },
-    {
-      "id": "gs2-2016-q4",
-      "year": 2016,
-      "number": 4,
-      "marks": 12,
-      "text": "Exercise of CAG’s powers in relation to the accounts of the Union and the States is derived from Article 149 of the Indian Constitution. Discuss whether audit of the Government’s policy implementation could amount to overstepping its own (CAG) jurisdiction.",
-      "theme": "Federalism & Centre-State",
-      "themeId": "federalism-centre-state",
-      "themeParent": "Constitution & Polity",
-      "subthemes": [
-        "Amendment & Basic Structure",
-        "UTs & Special Provisions"
-      ],
-      "notes": {
-        "introduction": "",
-        "staticNotes": "",
-        "quotes": "",
-        "currentAffairs": "",
-        "topperPoints": "",
-        "valueMaterial": ""
-      }
-    },
-    {
-      "id": "gs2-2016-q5",
-      "year": 2016,
-      "number": 5,
-      "marks": 12,
-      "text": "Discuss each adjective attached to the word ‘Republic’ in the ‘Preamble’. Are they defendable in the present circumstances?",
-      "theme": "Pressure Groups & Civil Society",
-      "themeId": "pressure-groups-civil-society",
-      "themeParent": "Social Justice & Welfare",
-      "subthemes": [
-        "Judiciary & Judicial Review",
-        "Public Service Delivery & NGOs"
-      ],
-      "notes": {
-        "introduction": "",
-        "staticNotes": "",
-        "quotes": "",
-        "currentAffairs": "",
-        "topperPoints": "",
-        "valueMaterial": ""
-      }
-    },
-    {
-      "id": "gs2-2016-q6",
-      "year": 2016,
-      "number": 6,
-      "marks": 12,
-      "text": "What was held in the Coelho case ? In this context, can you say that judicial review is of key importance amongst the basic features of the Constitution ?",
-      "theme": "Judiciary & Judicial Review",
-      "themeId": "judiciary",
-      "themeParent": "Constitution & Polity",
-      "subthemes": [
-        "Amendment & Basic Structure",
-        "Comparative Constitutions"
-      ],
-      "notes": {
-        "introduction": "",
-        "staticNotes": "",
-        "quotes": "",
-        "currentAffairs": "",
-        "topperPoints": "",
-        "valueMaterial": ""
-      }
-    },
-    {
-      "id": "gs2-2016-q7",
-      "year": 2016,
-      "number": 7,
-      "marks": 12,
-      "text": "Did the Government of India Act, 1935 lay down a federal constitution ? Discuss.",
-      "theme": "Amendment & Basic Structure",
-      "themeId": "constitutional-amendment",
-      "themeParent": "Constitution & Polity",
-      "subthemes": [
-        "Comparative Constitutions",
-        "Elections & RPA"
-      ],
-      "notes": {
-        "introduction": "",
-        "staticNotes": "",
-        "quotes": "",
-        "currentAffairs": "",
-        "topperPoints": "",
-        "valueMaterial": ""
-      }
-    },
-    {
-      "id": "gs2-2016-q8",
-      "year": 2016,
-      "number": 8,
-      "marks": 12,
-      "text": "What is a quasi-judicial body ? Explain with the help of concrete examples.",
-      "theme": "Judiciary & Judicial Review",
-      "themeId": "judiciary",
-      "themeParent": "Constitution & Polity",
-      "subthemes": [
-        "Constitutional Bodies",
-        "Local Government & Decentralization"
-      ],
-      "notes": {
-        "introduction": "",
-        "staticNotes": "",
-        "quotes": "",
-        "currentAffairs": "",
-        "topperPoints": "",
-        "valueMaterial": ""
-      }
-    },
-    {
-      "id": "gs2-2016-q9",
-      "year": 2016,
-      "number": 9,
-      "marks": 12,
-      "text": "Professor Amartya Sen has advocated important reforms in the realms of primary education and primary health care. What are your suggestions to improve their status and performance ?",
-      "theme": "Public Health & Nutrition",
-      "themeId": "health-nutrition",
-      "themeParent": "Social Justice & Welfare",
-      "subthemes": [
-        "Education & Skill Development"
       ],
       "notes": {
         "introduction": "",
@@ -4193,6 +4130,175 @@
       "subthemes": [
         "Accountability & Citizen Charter",
         "Pressure Groups & Civil Society"
+      ],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs2-2015-q2",
+      "year": 2015,
+      "number": 2,
+      "marks": 12,
+      "text": "Highlight the drawbacks in the existing structure and the extent to which cooperative federalism would answer the shortcomings.",
+      "theme": "Federalism & Centre-State",
+      "themeId": "federalism-centre-state",
+      "themeParent": "Constitution & Polity",
+      "subthemes": [],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs2-2015-q3",
+      "year": 2015,
+      "number": 3,
+      "marks": 12,
+      "text": "In absence of a well-educated and organized local level government system, ‘Panchayats’ and ‘Samitis’ have remained mainly political institutions and not effective instruments of governance. Critically discuss.",
+      "theme": "Local Government & Decentralization",
+      "themeId": "local-government",
+      "themeParent": "Governance & Administration",
+      "subthemes": [
+        "Accountability & Citizen Charter"
+      ],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs2-2015-q4",
+      "year": 2015,
+      "number": 4,
+      "marks": 12,
+      "text": "Khap Panchayats have been in the news for functioning as extra-constitutional authorities, often delivering pronouncements amounting to human rights violations. Discuss critically the actions taken by the legislative, executive and the judiciary to set the things right in this regard.",
+      "theme": "Parliament & Legislatures",
+      "themeId": "parliament-legislature",
+      "themeParent": "Constitution & Polity",
+      "subthemes": [
+        "Amendment & Basic Structure",
+        "Union & State Executive"
+      ],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs2-2015-q5",
+      "year": 2015,
+      "number": 5,
+      "marks": 12,
+      "text": "Resorting to ordinances has always raised concern on violation of the spirit of separation of powers doctrine. While noting the rationales justifying the power to promulgate ordinances, analyze whether the decisions of the Supreme Court on the issue have further facilitated resorting to this power. Should the power to promulgate ordinances be repealed?",
+      "theme": "Judiciary & Judicial Review",
+      "themeId": "judiciary",
+      "themeParent": "Constitution & Polity",
+      "subthemes": [
+        "Neighbourhood & Regional",
+        "Union & State Executive"
+      ],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs2-2015-q6",
+      "year": 2015,
+      "number": 6,
+      "marks": 12,
+      "text": "What are the major changes brought in the Arbitration and Conciliation Act, 1996 through the recent Ordinance promulgated by the President? How far will it improve India’s dispute resolution mechanism? Discuss.",
+      "theme": "Union & State Executive",
+      "themeId": "union-state-executive",
+      "themeParent": "Constitution & Polity",
+      "subthemes": [
+        "Elections & RPA",
+        "Judiciary & Judicial Review"
+      ],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs2-2015-q7",
+      "year": 2015,
+      "number": 7,
+      "marks": 12,
+      "text": "Does the right to clean environment entail legal regulations on burning crackers during Diwali? Discuss in the light of Article 21 of the Indian Constitution and Judgement(s) of the Apex Court in this regard.",
+      "theme": "Judiciary & Judicial Review",
+      "themeId": "judiciary",
+      "themeParent": "Constitution & Polity",
+      "subthemes": [
+        "Fundamental Rights & DPSP",
+        "Amendment & Basic Structure"
+      ],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs2-2015-q8",
+      "year": 2015,
+      "number": 8,
+      "marks": 12,
+      "text": "Examine critically the recent changes in the rules governing foreign funding of NGOs under the Foreign Contribution (Regulation) Act (FCRA), 1976.",
+      "theme": "Public Service Delivery & NGOs",
+      "themeId": "public-service-delivery",
+      "themeParent": "Governance & Administration",
+      "subthemes": [],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs2-2015-q9",
+      "year": 2015,
+      "number": 9,
+      "marks": 12,
+      "text": "The Self-Help Group (SHG) Bank Linkage Programme (SBLP), which is India’s own innovation, has proved to be one of the most effective poverty alleviation and women empowerment programmes. Elucidate.",
+      "theme": "Welfare Schemes & Livelihood",
+      "themeId": "welfare-schemes-livelihood",
+      "themeParent": "Social Justice & Welfare",
+      "subthemes": [
+        "Poverty, Hunger & Inequality",
+        "Women, Children & Disability"
       ],
       "notes": {
         "introduction": "",
@@ -4412,25 +4518,6 @@
       }
     },
     {
-      "id": "gs2-2015-q2",
-      "year": 2015,
-      "number": 2,
-      "marks": 12,
-      "text": "Highlight the drawbacks in the existing structure and the extent to which cooperative federalism would answer the shortcomings.",
-      "theme": "Federalism & Centre-State",
-      "themeId": "federalism-centre-state",
-      "themeParent": "Constitution & Polity",
-      "subthemes": [],
-      "notes": {
-        "introduction": "",
-        "staticNotes": "",
-        "quotes": "",
-        "currentAffairs": "",
-        "topperPoints": "",
-        "valueMaterial": ""
-      }
-    },
-    {
       "id": "gs2-2015-q20",
       "year": 2015,
       "number": 20,
@@ -4440,156 +4527,6 @@
       "themeId": "neighbourhood-regional",
       "themeParent": "International Relations",
       "subthemes": [],
-      "notes": {
-        "introduction": "",
-        "staticNotes": "",
-        "quotes": "",
-        "currentAffairs": "",
-        "topperPoints": "",
-        "valueMaterial": ""
-      }
-    },
-    {
-      "id": "gs2-2015-q3",
-      "year": 2015,
-      "number": 3,
-      "marks": 12,
-      "text": "In absence of a well-educated and organized local level government system, ‘Panchayats’ and ‘Samitis’ have remained mainly political institutions and not effective instruments of governance. Critically discuss.",
-      "theme": "Local Government & Decentralization",
-      "themeId": "local-government",
-      "themeParent": "Governance & Administration",
-      "subthemes": [
-        "Accountability & Citizen Charter"
-      ],
-      "notes": {
-        "introduction": "",
-        "staticNotes": "",
-        "quotes": "",
-        "currentAffairs": "",
-        "topperPoints": "",
-        "valueMaterial": ""
-      }
-    },
-    {
-      "id": "gs2-2015-q4",
-      "year": 2015,
-      "number": 4,
-      "marks": 12,
-      "text": "Khap Panchayats have been in the news for functioning as extra-constitutional authorities, often delivering pronouncements amounting to human rights violations. Discuss critically the actions taken by the legislative, executive and the judiciary to set the things right in this regard.",
-      "theme": "Parliament & Legislatures",
-      "themeId": "parliament-legislature",
-      "themeParent": "Constitution & Polity",
-      "subthemes": [
-        "Amendment & Basic Structure",
-        "Union & State Executive"
-      ],
-      "notes": {
-        "introduction": "",
-        "staticNotes": "",
-        "quotes": "",
-        "currentAffairs": "",
-        "topperPoints": "",
-        "valueMaterial": ""
-      }
-    },
-    {
-      "id": "gs2-2015-q5",
-      "year": 2015,
-      "number": 5,
-      "marks": 12,
-      "text": "Resorting to ordinances has always raised concern on violation of the spirit of separation of powers doctrine. While noting the rationales justifying the power to promulgate ordinances, analyze whether the decisions of the Supreme Court on the issue have further facilitated resorting to this power. Should the power to promulgate ordinances be repealed?",
-      "theme": "Judiciary & Judicial Review",
-      "themeId": "judiciary",
-      "themeParent": "Constitution & Polity",
-      "subthemes": [
-        "Neighbourhood & Regional",
-        "Union & State Executive"
-      ],
-      "notes": {
-        "introduction": "",
-        "staticNotes": "",
-        "quotes": "",
-        "currentAffairs": "",
-        "topperPoints": "",
-        "valueMaterial": ""
-      }
-    },
-    {
-      "id": "gs2-2015-q6",
-      "year": 2015,
-      "number": 6,
-      "marks": 12,
-      "text": "What are the major changes brought in the Arbitration and Conciliation Act, 1996 through the recent Ordinance promulgated by the President? How far will it improve India’s dispute resolution mechanism? Discuss.",
-      "theme": "Union & State Executive",
-      "themeId": "union-state-executive",
-      "themeParent": "Constitution & Polity",
-      "subthemes": [
-        "Elections & RPA",
-        "Judiciary & Judicial Review"
-      ],
-      "notes": {
-        "introduction": "",
-        "staticNotes": "",
-        "quotes": "",
-        "currentAffairs": "",
-        "topperPoints": "",
-        "valueMaterial": ""
-      }
-    },
-    {
-      "id": "gs2-2015-q7",
-      "year": 2015,
-      "number": 7,
-      "marks": 12,
-      "text": "Does the right to clean environment entail legal regulations on burning crackers during Diwali? Discuss in the light of Article 21 of the Indian Constitution and Judgement(s) of the Apex Court in this regard.",
-      "theme": "Judiciary & Judicial Review",
-      "themeId": "judiciary",
-      "themeParent": "Constitution & Polity",
-      "subthemes": [
-        "Fundamental Rights & DPSP",
-        "Amendment & Basic Structure"
-      ],
-      "notes": {
-        "introduction": "",
-        "staticNotes": "",
-        "quotes": "",
-        "currentAffairs": "",
-        "topperPoints": "",
-        "valueMaterial": ""
-      }
-    },
-    {
-      "id": "gs2-2015-q8",
-      "year": 2015,
-      "number": 8,
-      "marks": 12,
-      "text": "Examine critically the recent changes in the rules governing foreign funding of NGOs under the Foreign Contribution (Regulation) Act (FCRA), 1976.",
-      "theme": "Public Service Delivery & NGOs",
-      "themeId": "public-service-delivery",
-      "themeParent": "Governance & Administration",
-      "subthemes": [],
-      "notes": {
-        "introduction": "",
-        "staticNotes": "",
-        "quotes": "",
-        "currentAffairs": "",
-        "topperPoints": "",
-        "valueMaterial": ""
-      }
-    },
-    {
-      "id": "gs2-2015-q9",
-      "year": 2015,
-      "number": 9,
-      "marks": 12,
-      "text": "The Self-Help Group (SHG) Bank Linkage Programme (SBLP), which is India’s own innovation, has proved to be one of the most effective poverty alleviation and women empowerment programmes. Elucidate.",
-      "theme": "Welfare Schemes & Livelihood",
-      "themeId": "welfare-schemes-livelihood",
-      "themeParent": "Social Justice & Welfare",
-      "subthemes": [
-        "Poverty, Hunger & Inequality",
-        "Women, Children & Disability"
-      ],
       "notes": {
         "introduction": "",
         "staticNotes": "",
@@ -4611,6 +4548,173 @@
       "subthemes": [
         "Civil Services & Bureaucracy",
         "Amendment & Basic Structure"
+      ],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs2-2014-q2",
+      "year": 2014,
+      "number": 2,
+      "marks": 12,
+      "text": "Though the federal principle is dominant in our Constitution and that principle is one of its basic features, but it is equally true that federalism under the Indian Constitution leans in favour of a strong Centre, a feature that militates against the concept of strong federalism. Discuss.",
+      "theme": "Federalism & Centre-State",
+      "themeId": "federalism-centre-state",
+      "themeParent": "Constitution & Polity",
+      "subthemes": [
+        "Amendment & Basic Structure",
+        "Constitutional Bodies"
+      ],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs2-2014-q3",
+      "year": 2014,
+      "number": 3,
+      "marks": 12,
+      "text": "The ‘Powers, Privileges and Immunities of Parliament and its Members’ as envisaged in Article 105 of the-Constitution leave room for a large number of un-codified and un-enumerated privileges to continue. Assess the reasons for the absence of legal codification of the ‘parliamentary privileges’. How can this problem be addressed?",
+      "theme": "Parliament & Legislatures",
+      "themeId": "parliament-legislature",
+      "themeParent": "Constitution & Polity",
+      "subthemes": [
+        "Amendment & Basic Structure",
+        "Comparative Constitutions"
+      ],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs2-2014-q4",
+      "year": 2014,
+      "number": 4,
+      "marks": 12,
+      "text": "What do you understand by the. concept “freedom of speech and expression” ? Does it cover hate speech also ? Why do the films in India stand on a slightly different plane from other forms of expression ? Discuss.",
+      "theme": "Fundamental Rights & DPSP",
+      "themeId": "fundamental-rights-dpsp",
+      "themeParent": "Constitution & Polity",
+      "subthemes": [],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs2-2014-q5",
+      "year": 2014,
+      "number": 5,
+      "marks": 12,
+      "text": "Instances of President’s delay in commuting death sentences has come under public debate as denial of justice. Should there be a time limit specified for the President to accept/reject such petitions ? Analyse.",
+      "theme": "Fundamental Rights & DPSP",
+      "themeId": "fundamental-rights-dpsp",
+      "themeParent": "Constitution & Polity",
+      "subthemes": [
+        "Union & State Executive",
+        "Public Health & Nutrition"
+      ],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs2-2014-q6",
+      "year": 2014,
+      "number": 6,
+      "marks": 12,
+      "text": "The size of the cabinet should be as big as governmental work justifies and as big as the Prime Minister can ‘manage as a team. How far is the.efficacy of a government then inversely related to the size of the cabinet ? Discuss.",
+      "theme": "Union & State Executive",
+      "themeId": "union-state-executive",
+      "themeParent": "Constitution & Polity",
+      "subthemes": [],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs2-2014-q7",
+      "year": 2014,
+      "number": 7,
+      "marks": 12,
+      "text": "Though 100 percent FDI is already allowed in non-news media like a trade publication and general entertainment channel, the Government is mulling over the proposal for increased FDI in news media for quite some time. What difference would an increase in FDI make ? Critically evaluate the pros and cons.",
+      "theme": "Union & State Executive",
+      "themeId": "union-state-executive",
+      "themeParent": "Constitution & Polity",
+      "subthemes": [
+        "Public Health & Nutrition",
+        "Pressure Groups & Civil Society"
+      ],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs2-2014-q8",
+      "year": 2014,
+      "number": 8,
+      "marks": 12,
+      "text": "‘The setting up of a Rail Tariff Authority to regulate fares will subject the cash strapped Indian Railways to demand subsidy for obligation to operate non-profitable routes and services. Taking into account the experience in the power sector, discuss if. the proposed reform is expected to benefit the. consumers, the Indian Railways or, the private container operators.",
+      "theme": "Public Service Delivery & NGOs",
+      "themeId": "public-service-delivery",
+      "themeParent": "Governance & Administration",
+      "subthemes": [],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs2-2014-q9",
+      "year": 2014,
+      "number": 9,
+      "marks": 12,
+      "text": "National Human Rights Commission: (NHRC) in India can be most effective when its tasks are adequately supported by other mechanisms that ensure. the accountability of a government. In light of the above observation assess the role of NHRC as an effective complement to the judiciary and other institutions in promoting and protecting human rights standards.",
+      "theme": "Constitutional Bodies",
+      "themeId": "constitutional-bodies",
+      "themeParent": "Constitution & Polity",
+      "subthemes": [
+        "Judiciary & Judicial Review",
+        "Accountability & Citizen Charter"
       ],
       "notes": {
         "introduction": "",
@@ -4839,28 +4943,6 @@
       }
     },
     {
-      "id": "gs2-2014-q2",
-      "year": 2014,
-      "number": 2,
-      "marks": 12,
-      "text": "Though the federal principle is dominant in our Constitution and that principle is one of its basic features, but it is equally true that federalism under the Indian Constitution leans in favour of a strong Centre, a feature that militates against the concept of strong federalism. Discuss.",
-      "theme": "Federalism & Centre-State",
-      "themeId": "federalism-centre-state",
-      "themeParent": "Constitution & Polity",
-      "subthemes": [
-        "Amendment & Basic Structure",
-        "Constitutional Bodies"
-      ],
-      "notes": {
-        "introduction": "",
-        "staticNotes": "",
-        "quotes": "",
-        "currentAffairs": "",
-        "topperPoints": "",
-        "valueMaterial": ""
-      }
-    },
-    {
       "id": "gs2-2014-q20",
       "year": 2014,
       "number": 20,
@@ -4871,151 +4953,6 @@
       "themeParent": "International Relations",
       "subthemes": [
         "Terrorism & Conflict"
-      ],
-      "notes": {
-        "introduction": "",
-        "staticNotes": "",
-        "quotes": "",
-        "currentAffairs": "",
-        "topperPoints": "",
-        "valueMaterial": ""
-      }
-    },
-    {
-      "id": "gs2-2014-q3",
-      "year": 2014,
-      "number": 3,
-      "marks": 12,
-      "text": "The ‘Powers, Privileges and Immunities of Parliament and its Members’ as envisaged in Article 105 of the-Constitution leave room for a large number of un-codified and un-enumerated privileges to continue. Assess the reasons for the absence of legal codification of the ‘parliamentary privileges’. How can this problem be addressed?",
-      "theme": "Parliament & Legislatures",
-      "themeId": "parliament-legislature",
-      "themeParent": "Constitution & Polity",
-      "subthemes": [
-        "Amendment & Basic Structure",
-        "Comparative Constitutions"
-      ],
-      "notes": {
-        "introduction": "",
-        "staticNotes": "",
-        "quotes": "",
-        "currentAffairs": "",
-        "topperPoints": "",
-        "valueMaterial": ""
-      }
-    },
-    {
-      "id": "gs2-2014-q4",
-      "year": 2014,
-      "number": 4,
-      "marks": 12,
-      "text": "What do you understand by the. concept “freedom of speech and expression” ? Does it cover hate speech also ? Why do the films in India stand on a slightly different plane from other forms of expression ? Discuss.",
-      "theme": "Fundamental Rights & DPSP",
-      "themeId": "fundamental-rights-dpsp",
-      "themeParent": "Constitution & Polity",
-      "subthemes": [],
-      "notes": {
-        "introduction": "",
-        "staticNotes": "",
-        "quotes": "",
-        "currentAffairs": "",
-        "topperPoints": "",
-        "valueMaterial": ""
-      }
-    },
-    {
-      "id": "gs2-2014-q5",
-      "year": 2014,
-      "number": 5,
-      "marks": 12,
-      "text": "Instances of President’s delay in commuting death sentences has come under public debate as denial of justice. Should there be a time limit specified for the President to accept/reject such petitions ? Analyse.",
-      "theme": "Fundamental Rights & DPSP",
-      "themeId": "fundamental-rights-dpsp",
-      "themeParent": "Constitution & Polity",
-      "subthemes": [
-        "Union & State Executive",
-        "Public Health & Nutrition"
-      ],
-      "notes": {
-        "introduction": "",
-        "staticNotes": "",
-        "quotes": "",
-        "currentAffairs": "",
-        "topperPoints": "",
-        "valueMaterial": ""
-      }
-    },
-    {
-      "id": "gs2-2014-q6",
-      "year": 2014,
-      "number": 6,
-      "marks": 12,
-      "text": "The size of the cabinet should be as big as governmental work justifies and as big as the Prime Minister can ‘manage as a team. How far is the.efficacy of a government then inversely related to the size of the cabinet ? Discuss.",
-      "theme": "Union & State Executive",
-      "themeId": "union-state-executive",
-      "themeParent": "Constitution & Polity",
-      "subthemes": [],
-      "notes": {
-        "introduction": "",
-        "staticNotes": "",
-        "quotes": "",
-        "currentAffairs": "",
-        "topperPoints": "",
-        "valueMaterial": ""
-      }
-    },
-    {
-      "id": "gs2-2014-q7",
-      "year": 2014,
-      "number": 7,
-      "marks": 12,
-      "text": "Though 100 percent FDI is already allowed in non-news media like a trade publication and general entertainment channel, the Government is mulling over the proposal for increased FDI in news media for quite some time. What difference would an increase in FDI make ? Critically evaluate the pros and cons.",
-      "theme": "Union & State Executive",
-      "themeId": "union-state-executive",
-      "themeParent": "Constitution & Polity",
-      "subthemes": [
-        "Public Health & Nutrition",
-        "Pressure Groups & Civil Society"
-      ],
-      "notes": {
-        "introduction": "",
-        "staticNotes": "",
-        "quotes": "",
-        "currentAffairs": "",
-        "topperPoints": "",
-        "valueMaterial": ""
-      }
-    },
-    {
-      "id": "gs2-2014-q8",
-      "year": 2014,
-      "number": 8,
-      "marks": 12,
-      "text": "‘The setting up of a Rail Tariff Authority to regulate fares will subject the cash strapped Indian Railways to demand subsidy for obligation to operate non-profitable routes and services. Taking into account the experience in the power sector, discuss if. the proposed reform is expected to benefit the. consumers, the Indian Railways or, the private container operators.",
-      "theme": "Public Service Delivery & NGOs",
-      "themeId": "public-service-delivery",
-      "themeParent": "Governance & Administration",
-      "subthemes": [],
-      "notes": {
-        "introduction": "",
-        "staticNotes": "",
-        "quotes": "",
-        "currentAffairs": "",
-        "topperPoints": "",
-        "valueMaterial": ""
-      }
-    },
-    {
-      "id": "gs2-2014-q9",
-      "year": 2014,
-      "number": 9,
-      "marks": 12,
-      "text": "National Human Rights Commission: (NHRC) in India can be most effective when its tasks are adequately supported by other mechanisms that ensure. the accountability of a government. In light of the above observation assess the role of NHRC as an effective complement to the judiciary and other institutions in promoting and protecting human rights standards.",
-      "theme": "Constitutional Bodies",
-      "themeId": "constitutional-bodies",
-      "themeParent": "Constitution & Polity",
-      "subthemes": [
-        "Judiciary & Judicial Review",
-        "Accountability & Citizen Charter"
       ],
       "notes": {
         "introduction": "",
@@ -5038,6 +4975,178 @@
       "subthemes": [
         "Public Health & Nutrition",
         "Parliament & Legislatures"
+      ],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs2-2013-q2",
+      "year": 2013,
+      "number": 2,
+      "marks": 10,
+      "text": "Discuss Section 66A of IT Act, with reference to its alleged violation of Article 19 of the Constitution.",
+      "theme": "Amendment & Basic Structure",
+      "themeId": "constitutional-amendment",
+      "themeParent": "Constitution & Polity",
+      "subthemes": [
+        "Fundamental Rights & DPSP",
+        "Federalism & Centre-State"
+      ],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs2-2013-q3",
+      "year": 2013,
+      "number": 3,
+      "marks": 10,
+      "text": "Recent directives from Ministry of Petroleum and Natural Gas are perceived by the ‘Nagas’ as a threat to override the exceptional status enjoyed by the State. Discuss in light of Article 371A of the Indian Constitution.",
+      "theme": "Fundamental Rights & DPSP",
+      "themeId": "fundamental-rights-dpsp",
+      "themeParent": "Constitution & Polity",
+      "subthemes": [
+        "Federalism & Centre-State",
+        "Amendment & Basic Structure"
+      ],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs2-2013-q4",
+      "year": 2013,
+      "number": 4,
+      "marks": 10,
+      "text": "‘The Supreme Court of India keeps a check on arbitrary power of the Parliament in amending the Constitution.’ Discuss critically.",
+      "theme": "Judiciary & Judicial Review",
+      "themeId": "judiciary",
+      "themeParent": "Constitution & Polity",
+      "subthemes": [
+        "Amendment & Basic Structure",
+        "Parliament & Legislatures"
+      ],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs2-2013-q5",
+      "year": 2013,
+      "number": 5,
+      "marks": 10,
+      "text": "Many State Governments further bifurcate geographical administrative areas like Districts and Talukas for better governance. In light of the above, can it also be justified that more number of smaller States would bring in effective governance at State level ? Discuss.",
+      "theme": "Local Government & Decentralization",
+      "themeId": "local-government",
+      "themeParent": "Governance & Administration",
+      "subthemes": [
+        "Judiciary & Judicial Review",
+        "Federalism & Centre-State"
+      ],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs2-2013-q6",
+      "year": 2013,
+      "number": 6,
+      "marks": 10,
+      "text": "Constitutional mechanisms to resolve the inter-state water disputes have failed to address and solve the problems. Is the failure due to structural or process inadequacy or both ? Discuss.",
+      "theme": "Federalism & Centre-State",
+      "themeId": "federalism-centre-state",
+      "themeParent": "Constitution & Polity",
+      "subthemes": [
+        "Amendment & Basic Structure",
+        "Elections & RPA"
+      ],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs2-2013-q7",
+      "year": 2013,
+      "number": 7,
+      "marks": 10,
+      "text": "Discuss the recommendations of the 134 Finance Commission which have been a departure from the previous commissions for strengthening the local government finances.",
+      "theme": "Constitutional Bodies",
+      "themeId": "constitutional-bodies",
+      "themeParent": "Constitution & Polity",
+      "subthemes": [
+        "Federalism & Centre-State"
+      ],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs2-2013-q8",
+      "year": 2013,
+      "number": 8,
+      "marks": 10,
+      "text": "The product diversification of financial institutions and insurance companies, resulting in overlapping of products and services strengthens the case for the merger of the two regulatory agencies, namely SEBI and IRDA. Justify.",
+      "theme": "Public Service Delivery & NGOs",
+      "themeId": "public-service-delivery",
+      "themeParent": "Governance & Administration",
+      "subthemes": [],
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "gs2-2013-q9",
+      "year": 2013,
+      "number": 9,
+      "marks": 10,
+      "text": "The concept of Mid Day Meal (MDM) scheme is almost a century old in India with early beginnings in Madras Presidency in pre-independent India. The scheme has again been given impetus in most states in the last two decades. Critically examine its twin objectives, latest mandates and success.",
+      "theme": "Federalism & Centre-State",
+      "themeId": "federalism-centre-state",
+      "themeParent": "Constitution & Polity",
+      "subthemes": [
+        "Accountability & Citizen Charter",
+        "Indo-Pacific & Strategic Partnerships"
       ],
       "notes": {
         "introduction": "",
@@ -5261,28 +5370,6 @@
       }
     },
     {
-      "id": "gs2-2013-q2",
-      "year": 2013,
-      "number": 2,
-      "marks": 10,
-      "text": "Discuss Section 66A of IT Act, with reference to its alleged violation of Article 19 of the Constitution.",
-      "theme": "Amendment & Basic Structure",
-      "themeId": "constitutional-amendment",
-      "themeParent": "Constitution & Polity",
-      "subthemes": [
-        "Fundamental Rights & DPSP",
-        "Federalism & Centre-State"
-      ],
-      "notes": {
-        "introduction": "",
-        "staticNotes": "",
-        "quotes": "",
-        "currentAffairs": "",
-        "topperPoints": "",
-        "valueMaterial": ""
-      }
-    },
-    {
       "id": "gs2-2013-q20",
       "year": 2013,
       "number": 20,
@@ -5400,156 +5487,6 @@
       "subthemes": [
         "Public Service Delivery & NGOs",
         "Diaspora & Soft Power"
-      ],
-      "notes": {
-        "introduction": "",
-        "staticNotes": "",
-        "quotes": "",
-        "currentAffairs": "",
-        "topperPoints": "",
-        "valueMaterial": ""
-      }
-    },
-    {
-      "id": "gs2-2013-q3",
-      "year": 2013,
-      "number": 3,
-      "marks": 10,
-      "text": "Recent directives from Ministry of Petroleum and Natural Gas are perceived by the ‘Nagas’ as a threat to override the exceptional status enjoyed by the State. Discuss in light of Article 371A of the Indian Constitution.",
-      "theme": "Fundamental Rights & DPSP",
-      "themeId": "fundamental-rights-dpsp",
-      "themeParent": "Constitution & Polity",
-      "subthemes": [
-        "Federalism & Centre-State",
-        "Amendment & Basic Structure"
-      ],
-      "notes": {
-        "introduction": "",
-        "staticNotes": "",
-        "quotes": "",
-        "currentAffairs": "",
-        "topperPoints": "",
-        "valueMaterial": ""
-      }
-    },
-    {
-      "id": "gs2-2013-q4",
-      "year": 2013,
-      "number": 4,
-      "marks": 10,
-      "text": "‘The Supreme Court of India keeps a check on arbitrary power of the Parliament in amending the Constitution.’ Discuss critically.",
-      "theme": "Judiciary & Judicial Review",
-      "themeId": "judiciary",
-      "themeParent": "Constitution & Polity",
-      "subthemes": [
-        "Amendment & Basic Structure",
-        "Parliament & Legislatures"
-      ],
-      "notes": {
-        "introduction": "",
-        "staticNotes": "",
-        "quotes": "",
-        "currentAffairs": "",
-        "topperPoints": "",
-        "valueMaterial": ""
-      }
-    },
-    {
-      "id": "gs2-2013-q5",
-      "year": 2013,
-      "number": 5,
-      "marks": 10,
-      "text": "Many State Governments further bifurcate geographical administrative areas like Districts and Talukas for better governance. In light of the above, can it also be justified that more number of smaller States would bring in effective governance at State level ? Discuss.",
-      "theme": "Local Government & Decentralization",
-      "themeId": "local-government",
-      "themeParent": "Governance & Administration",
-      "subthemes": [
-        "Judiciary & Judicial Review",
-        "Federalism & Centre-State"
-      ],
-      "notes": {
-        "introduction": "",
-        "staticNotes": "",
-        "quotes": "",
-        "currentAffairs": "",
-        "topperPoints": "",
-        "valueMaterial": ""
-      }
-    },
-    {
-      "id": "gs2-2013-q6",
-      "year": 2013,
-      "number": 6,
-      "marks": 10,
-      "text": "Constitutional mechanisms to resolve the inter-state water disputes have failed to address and solve the problems. Is the failure due to structural or process inadequacy or both ? Discuss.",
-      "theme": "Federalism & Centre-State",
-      "themeId": "federalism-centre-state",
-      "themeParent": "Constitution & Polity",
-      "subthemes": [
-        "Amendment & Basic Structure",
-        "Elections & RPA"
-      ],
-      "notes": {
-        "introduction": "",
-        "staticNotes": "",
-        "quotes": "",
-        "currentAffairs": "",
-        "topperPoints": "",
-        "valueMaterial": ""
-      }
-    },
-    {
-      "id": "gs2-2013-q7",
-      "year": 2013,
-      "number": 7,
-      "marks": 10,
-      "text": "Discuss the recommendations of the 134 Finance Commission which have been a departure from the previous commissions for strengthening the local government finances.",
-      "theme": "Constitutional Bodies",
-      "themeId": "constitutional-bodies",
-      "themeParent": "Constitution & Polity",
-      "subthemes": [
-        "Federalism & Centre-State"
-      ],
-      "notes": {
-        "introduction": "",
-        "staticNotes": "",
-        "quotes": "",
-        "currentAffairs": "",
-        "topperPoints": "",
-        "valueMaterial": ""
-      }
-    },
-    {
-      "id": "gs2-2013-q8",
-      "year": 2013,
-      "number": 8,
-      "marks": 10,
-      "text": "The product diversification of financial institutions and insurance companies, resulting in overlapping of products and services strengthens the case for the merger of the two regulatory agencies, namely SEBI and IRDA. Justify.",
-      "theme": "Public Service Delivery & NGOs",
-      "themeId": "public-service-delivery",
-      "themeParent": "Governance & Administration",
-      "subthemes": [],
-      "notes": {
-        "introduction": "",
-        "staticNotes": "",
-        "quotes": "",
-        "currentAffairs": "",
-        "topperPoints": "",
-        "valueMaterial": ""
-      }
-    },
-    {
-      "id": "gs2-2013-q9",
-      "year": 2013,
-      "number": 9,
-      "marks": 10,
-      "text": "The concept of Mid Day Meal (MDM) scheme is almost a century old in India with early beginnings in Madras Presidency in pre-independent India. The scheme has again been given impetus in most states in the last two decades. Critically examine its twin objectives, latest mandates and success.",
-      "theme": "Federalism & Centre-State",
-      "themeId": "federalism-centre-state",
-      "themeParent": "Constitution & Polity",
-      "subthemes": [
-        "Accountability & Citizen Charter",
-        "Indo-Pacific & Strategic Partnerships"
       ],
       "notes": {
         "introduction": "",
