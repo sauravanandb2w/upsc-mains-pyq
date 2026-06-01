@@ -317,6 +317,31 @@ GS themes and GS questions: add files manually (steps above). Same `manifest.jso
 
 ---
 
+## Mathematics PYQ scans (auto-generated from official PDFs)
+
+Math optional **Questions** view does **not** use OCR text. Each PYQ is shown as a **scan cutout** from the official upsc.gov.in PDF (same idea as GS question images in `study/questions/`).
+
+| Item | Location |
+|------|----------|
+| Scan images | `study/questions/math1-2024-q1/scan-01.jpg` (etc.) |
+| Manifest | `study/questions/math1-2024-q1/manifest.json` |
+| Question metadata | `data/math-paper-1.json`, `data/math-paper-2.json` (`scanImages`, `sourcePdf`) |
+
+Regenerate from cached PDFs (requires `poppler`, `tesseract`, `Pillow`):
+
+```bash
+pip install -r scripts/requirements.txt
+python3 scripts/fetch-math-pyq.py          # download + cut scans
+python3 scripts/fetch-math-pyq.py --no-fetch   # use cached PDFs only
+python3 scripts/fetch-math-pyq.py --year 2024  # one year only
+```
+
+PDF cache (gitignored): `data/sources/math-pdfs/`. After regenerating, commit `study/questions/math*` and the updated JSON files, then push.
+
+If auto-cropping misses a question on an old scan, open **Official PDF on upsc.gov.in** from the question card, or replace images manually in that question’s folder.
+
+---
+
 ## `manifest.json` reference
 
 ### Format A — simple image list (GS themes & GS questions)

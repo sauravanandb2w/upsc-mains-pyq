@@ -948,6 +948,37 @@ body {
   color: var(--text-muted);
 }
 
+/* Mathematics PYQ — official PDF scan cutouts */
+.math-pyq-scans {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin: 0.75rem 0;
+}
+
+.math-pyq-scan img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: #fff;
+}
+
+.math-pdf-link {
+  margin: 0.25rem 0 0.5rem;
+  font-size: 0.85rem;
+}
+
+.math-pdf-link a {
+  color: var(--accent);
+}
+
+.question-text--caption {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+}
+
 .study-materials-hint code {
   font-size: 0.72rem;
   padding: 0.1rem 0.35rem;

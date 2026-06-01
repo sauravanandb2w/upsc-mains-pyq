@@ -11,7 +11,7 @@
     "A",
     "B"
   ],
-  "source": "upsc.gov.in (OCR from official PDFs — verify text before exam use)",
+  "source": "upsc.gov.in — question scans cut from official PDFs (study/questions/math*)",
   "questions": [
     {
       "id": "math2-2025-q1",
@@ -19,11 +19,14 @@
       "number": 1,
       "section": "A",
       "marks": 20,
-      "text": "1. (@) aw ae Gs a sree H OK Kw VER @ fF ofA) > JolG) 3K o(K) > JolG #1\naaigy ff HA K # {e} %, el e TaNs Baa ZI Fel o(H), o(K) 3K o(G) FAN: H, K 3K\nGA ae a aaa a1\nLet H and K be two subgroups of a group G such that o(H) > Jo(G) and\n0({K) > Jo(G). Show that Hn K # {e}, where e is the identity element. Here o(H),\no(K) and o(G) denote the order of H, K and G respectively. 10\n(b) AH G={e, x x”, y yx, yx?) WH Aqsa aaR ze aM o(x) =3 AK oly =2 @1 aaiee\nfH xy = yx? % (ae c, WIR G HI ART Hea @ BK o(x), ofy) HAN: Hara x, y A ale\na cafe @)I\nLet G={e, x x”, y ux yx?} be a non-Abelian group with o(x) =3 and o(y) =2.\nShow that xy = yx? (where e is the identity element of G and o(x), o(y) denote the\norder of the elements x, y respectively). 10\noo (_y)n-l\n(gy mht SOV & Batam: at ate stent 8 A ata AP\nExamine whether the series pis is absolutely or conditionally\nn=l 1\nconvergent. 10\n(@ 1<|zl<3 % fae f( =— + ___a we at eh 4 van Ahr\nExpand f(z) = (ex1e53) in a Laurent series valid for 1 <|z|<3. 10\n(e) wien Fa\n& fer sre ea 2? HH a al aa Af) wa arent ect A den A ae Ae FH\nBera /srgHTA/srAIE FI\nSLPM-B-MTH/27 2\n\nHow many basic solutions are there for the following system of equations?\nFind all of them. Furthermore, find the number of basic solutions, which are\nfeasible /non-feasible/non-degenerate. 10",
-      "moduleId": "linear-programming",
-      "module": "Linear Programming",
-      "themeId": "linear-programming",
-      "theme": "Linear Programming",
+      "text": "UPSC 2025 · Mathematics Paper 2 · Question 1 · Section A · Algebra (official scan, page split)",
+      "scanImages": [
+        "scan-01.jpg"
+      ],
+      "moduleId": "algebra",
+      "module": "Algebra",
+      "themeId": "algebra",
+      "theme": "Algebra",
       "subthemes": [],
       "sourcePdf": "https://www.upsc.gov.in/sites/default/files/MATHEMATICS-PAPER-II-QP-CSM-25-010925.pdf",
       "notes": {
@@ -41,7 +44,11 @@
       "number": 2,
       "section": "A",
       "marks": 20,
-      "text": "2. (a) arf ager A oforn afm sik fra Fife fH arafes erst a wel aftrant saa TH\naif srger 81 ateft A ad ar eT Hera 27\nDefine Cauchy sequence and prove that every convergent sequence of real\nnumbers is a Cauchy sequence. What is the importance of Cauchy condition? 15\n(bo) zaige f qo via Zi] 4-3 wH seta sara 2)\nShow that 3 is an irreducible element in the integral domain Z{[i]. 15\n2\nx*-x+2 Sn\n(oc) wre ware A AY A fee Aifhe fH ( —~—* \"a = 2\nUse the method of contour integration to prove that Ca =.\neZ",
+      "text": "UPSC 2025 · Mathematics Paper 2 · Question 2 · Section A · Real Analysis (official scan)",
+      "scanImages": [
+        "scan-01.jpg",
+        "scan-02.jpg"
+      ],
       "moduleId": "real-analysis",
       "module": "Real Analysis",
       "themeId": "real-analysis",
@@ -63,11 +70,14 @@
       "number": 3,
       "section": "A",
       "marks": 20,
-      "text": "3. (a) FARA t= C:|z|=2 # AR wa Afr)\ne\nEvaluate the integral {= C: |z|=2.\n(b) si lalah Mii let ir’ ie aa seta aaa as orale Gaia Hl ST\na c\n8abc Fy\n—l\nShow that the volume of the greatest rectangular parallelopiped that can be\nDie 2 8\n‘ . A eee ee ee | zi ., 8abe\ninscribed in the ellipsoid —— +=— + —~ =1 is ——. 20\nSLPM-B-MTH/27 3 [ET:0.\n\n(co) tam (Sysfed) % fear wm sein ax fa Yes Sore aren a ea Fie :\nafraatrm Fife Z = 3x, +4x9\nard\nXy-Xg S1\nApply the principle of duality to solve the following linear programming\nproblem :\nMaximize Z =3x, +4xp\nsubject to the constraints\nX-X_q <1",
-      "moduleId": "real-analysis",
-      "module": "Real Analysis",
-      "themeId": "real-analysis",
-      "theme": "Real Analysis",
+      "text": "UPSC 2025 · Mathematics Paper 2 · Question 3 · Section A · Linear Programming (official scan, page split)",
+      "scanImages": [
+        "scan-01.jpg"
+      ],
+      "moduleId": "linear-programming",
+      "module": "Linear Programming",
+      "themeId": "linear-programming",
+      "theme": "Linear Programming",
       "subthemes": [],
       "sourcePdf": "https://www.upsc.gov.in/sites/default/files/MATHEMATICS-PAPER-II-QP-CSM-25-010925.pdf",
       "notes": {
@@ -85,7 +95,12 @@
       "number": 4,
       "section": "A",
       "marks": 20,
-      "text": "4. (a) sie fH RN f(xe ZX] % fae Of) = FO) aE Venta WARM 9:Z[x] > ZH\nwaraiitar @1 Fema Aifire fe yorsTach (x), Z[x] Fw sesa yrnach %, rq Z[x] A oH\nShas Trsrach ae 21\nExamine whether the mapping $:Z[x]>Z defined by 6(f(x))=f(), for\nF(x) € Z[x], is a homomorphism. Deduce that the ideal (x) is a prime ideal in\nZ[x], but not a maximal ideal in Z[x]. 15\n(b) fae Ae fH vets aaa wer fa ware 21\nProve that every continuous function is Riemann integrable. 1S\nSLPM-B-MTH/27 4\n\n(oc) fA are A wees eH FH sae wes, ves are Al star sik wets Mee a wets\nan A garg ohaet cima A ae savers sired a age :\naR\nHt 0 Mm W wean\nagya & sen w ffir aed 3 A agg (Vege) tan Ae :\nAQIR 128, AVMR1 SR, AMV RIE, BANK 15 SE,\nCaIn7 wR IM CANT 1 we\nwean agael atk feam ge Rawr arma ara Fifer)\nThe following table shows all the necessary information on the available supply\nto each warehouse, the requirement of each market and the unit\ntransportation cost from each warehouse to each market :\nMarket\nI DT Mm IV _ Supply\nWarehouse B | 4 8 1 6 15\nRequirement 7 12 17 9\nThe shipping clerk has worked out the following schedule from experience :\n12 units from A to I, 1 unit from A to I, 9 units from A to IV, 15 units\nfrom B to II, 7 units from C to] and 1 unit from C to I\nFind the optimal schedule and minimum total shipping cost. 20\nSLPM-B-MTH/27 5 [E-To;\n\nwre—B / SECTION—B",
+      "text": "UPSC 2025 · Mathematics Paper 2 · Question 4 · Section A · Complex Analysis (official scan)",
+      "scanImages": [
+        "scan-01.jpg",
+        "scan-02.jpg",
+        "scan-03.jpg"
+      ],
       "moduleId": "complex-analysis",
       "module": "Complex Analysis",
       "themeId": "complex-analysis",
@@ -106,8 +121,13 @@
       "year": 2025,
       "number": 5,
       "section": "B",
-      "marks": 10,
-      "text": "5. (a) tet (D? + DD’ -2D?)z = ysin x, Fel pes ak pee 4, wea aa A)\nx y\nFind the solution of the equation (D? +DD’ -2D?)z =ysin x, where D= & and\nx\ney\n10\n(b) Fra tas aioe fer a msa-ciee fats a va Fifer :\nSolve the following system of linear equations by Gauss-Seidel method :\n() =) FST 3479), HH fe-sTeTd Galt sik FEN (7AE-OF), F eA Yala F aefera)\nConvert the number (3479),) into binary system and the number\n(7AE-9F),¢ into decimal system.\n(i) TM WR F(xyyz)=(xt+y+2’)(x’+y’) % fae Fe TER aa Fife) ae\nae a F(x, yz) wet Raseia vera wa ff om Afar)\nDetermine the truth table for the Boolean function\nF(x%Yy2)=(xt+yt2')(x’ ty’)\nAlso derive the full disjunctive normal form of F(x, y, z) from the truth table. 10\nSLPM-B-MTH/27 6\n\n(a) x=a(0-sin®, y=a(l+cos®, 0 <6 <2n) am feu me UH aes H oT A oH aid aK\nKR m Sea Sl UH Ha Peete 8) SETS eM aa AlfSre) sta: seis fs ae a ate",
+      "marks": 20,
+      "text": "UPSC 2025 · Mathematics Paper 2 · Question 5 · Section B · Linear Programming (official scan)",
+      "scanImages": [
+        "scan-01.jpg",
+        "scan-02.jpg",
+        "scan-03.jpg"
+      ],
       "moduleId": "linear-programming",
       "module": "Linear Programming",
       "themeId": "linear-programming",
@@ -129,11 +149,15 @@
       "number": 6,
       "section": "B",
       "marks": 20,
-      "text": "6. (a) we sara ae % fare 2 Oo at ahetin aftarsi\nax? ay?\n\n% aria ea Aiea)\na7u , a2u F ma\nSolve x? + A = 0 for a rectangular plate subject to the boundary conditions\nIx y\nuQ,y)=0, u(ay)=0\n(b) aia wer\nF(x yz) =xyz+x'yz+xy’ z+xyz’\nal Teter Fife sik Wid GATE viva sl taifea Fe)\nSimplify the Boolean function\nF(x yz) =xyzt+x’yzt+xy’zt+xyz’\nand draw the corresponding GATE network. 15\n() 325 M, Bea R SK SS LH HS Sa Aen HH, Sed] ee a VR IM aa Hal\nue age & aa seca ap A oe Alfie, set 2-ta, em HI Ha eK p, AeA}\nfret of fez arae mara 1 dere 3 ws fq Me roma & fore Z, Frets fore x. aT y sae\naa wea areph aaa erm, ft ara Ate)\nCalculate the moment of inertia of a uniform solid cylinder of mass M, radius R\nand length L with respect to a set of axes passing through the centre of the\ncylinder, where z-axis is the axis of the cylinder and p is the constant density\nat any point of the cylinder. Also find 5 for which the moment of inertia about\nx- or yaxis will be minimum for a given mass of the cylinder. 15\nSLPM-B-MTH/27 8\n\na",
-      "moduleId": "real-analysis",
-      "module": "Real Analysis",
-      "themeId": "real-analysis",
-      "theme": "Real Analysis",
+      "text": "UPSC 2025 · Mathematics Paper 2 · Question 6 · Section B · Complex Analysis (official scan)",
+      "scanImages": [
+        "scan-01.jpg",
+        "scan-02.jpg"
+      ],
+      "moduleId": "complex-analysis",
+      "module": "Complex Analysis",
+      "themeId": "complex-analysis",
+      "theme": "Complex Analysis",
       "subthemes": [],
       "sourcePdf": "https://www.upsc.gov.in/sites/default/files/MATHEMATICS-PAPER-II-QP-CSM-25-010925.pdf",
       "notes": {
@@ -151,7 +175,11 @@
       "number": 7,
       "section": "B",
       "marks": 20,
-      "text": "7. (a) z(p?-q?)=x-y; pa, as ay aareel aa aAifsre\nFind the complete integral of z(p* -q*)=x-y; p=—, q=—.\nox oy 15\n(b) W272a eH H ae sada agua, Wh ateei\nmw de dom %, we Am) tea ge HK oie of we Are\nFind the unique polynomial of degree 2 or less which fits the following data :\nx 4 oO a 3\nAlso obtain the bound on the truncation error. ; 15\n(c) wage f& aren feat & wa srdier sraftadt ware % fee aq ew\nU)_hy al z)\n=| =| yee a\nuly) (F)y Qudx\\ oh\nv=0=u, p= p(x) % a, fis aa A agafeate a ofa & ate a age aed 21 ae Ran\nm™ @ & u, hak D xa %\ndx\nShow that for an incompressible steady flow with constant viscosity, the\nvelocity components\nU)\\ ,_hy al x)\n=) = lyase\ngu) (ry Qudxl hk\nv=0=w, with p= p(x), satisfy the equation of motion in the absence of body\nforce. Given that U, h and ap are constants.\nda\n20\nSLPM-B-MTH/27 9 (PPOs",
+      "text": "UPSC 2025 · Mathematics Paper 2 · Question 7 · Section B · Algebra (official scan)",
+      "scanImages": [
+        "scan-01.jpg",
+        "scan-02.jpg"
+      ],
       "moduleId": "algebra",
       "module": "Algebra",
       "themeId": "algebra",
@@ -173,7 +201,10 @@
       "number": 8,
       "section": "B",
       "marks": 20,
-      "text": "8. (a) aikte sane wie\n2,2 az oz\np +a pad ay\n% aftaan (Rackfeaa) wa He sik x =0, z=y 8 SAR FA Ten THe YE (aaa)\nsma =ifarc |\nFind the characteristics of the partial differential equation\neee 0z az\npo+d Pp x q ay\nand determine the integral surface which passes through x =0, z=y. 15\n(b) Berea\nx1 h Qe er pn\nfof ax = 5 Uo + fi) + Ph? Ufo - fi)\nwe xg th=x, fo =Slxoh A =f (m) & AR we (), xB aa Haars FI Prelit\nara %, & fer set p atk ge-ae ara Fire) sta: BATH\nEreax, A=Xy <Xy <0 <Xy =D\nAM ad ae & fee age fas ar fer Afra)\nFind the constant p and error term for the quadrature formula\nPot de = 5 Ufo + fil+ PhP - A)\nwhere x9 +h=x,, fo =f (Xo), fy =F (x) and prime (’) represents derivative with\nrespect to x. Hence deduce the composite rule for integrating\nPr ede a=x9 << <xy =b 15\nSLPM-B-MTH/27 10\n\nVir) = — Roost, k wae\ne\nWaa &a Fo sem m a HE am afte 81 acta yaa eeat (7, @ 9) H\nehtedien sik Mieer a afin ama Afi!\nA particle of mass m moves in a force field of potential\nVir) = Becoee k is constant\nr\nFind the Hamiltonian and the Hamilton’s equations in spherical polar\ncoordinates (r, 6, 9). 10\n(i) was L = mxy-maj xy, we m IK oo aR %, HI fran Are Aaa atk\naft a tfteer weir ara ale! da (fen) A oeaA waTET!\nConsider the Lagrangian\nL=mxy- moe xy\nwhere m and @p are constants. Find the Hamiltonian and Hamilton’s\nequations of motion. Identify the system. 10\nkkk\nSLPM-B-MTH/27 ab 26BS—1308\n\npoe tee ee eer aor ree No Oe re ae\noe oe ae ee ee ee ee eee, ie\noO ee ee ee ete\na 2 ee eee “eee.\nlen een ct cae war Gens: Ye: = eg Be oil sa Gee ae |\nee erie oo. - Sxwm parame 2° ai isl he\n0 Se ee alee “ee eas: 8 ae ay 3 ge mS lrtasata a\n5% a aS Soeeeg.  e ae, st Et een Vee comp a ne\nele See eee. |, ae = Oe ee a.\n3 a re Bighen iB odieig viet ee ie a eet a\nete tee e ee San Rs ae areeee et teat. ae “OM Sa etm\ntee ace a ee ee ee. oe ee\nPe eee aa ae wee er\n2 a on cet peal eee pit Tete” | .\nSee es eae ee Ss ) Bh arth ca ele\ner Be at BP ieee mad os ee a eo i er:\na he re Loa oy ae a aes eh all ay i eee\nBree) RE 7 oe ig Se ae , fig. # le cae Se\nfo! ee ee sie \"eee gE ee ee Seas eres Meare reo wieee |\nie pam ee a. 1) a en je 2a eS ee\nome Cet Seva * See ea Ban ie oe\nea te Pa ee ee Lao oh a segs ne ie ee ee:\nee ae eee epee ee es a ie a eae Perens) a\nSioee Ree ea oe eee ae ae ae sae ote\nce ee ee es ne a eb eee ee po re\nee ee gee et et’ rae ee\nBP eres gee ae sa : e ay ae eUri i eet hia a\nse aaa cl eed eee = es Ma Tse oa aINI HES alae i See a\nee Sy a ee 7\nee ee ey le a oigf 5 i ee a\nea ee ety C8 fee i: eet nae kot. + nea eet\nae ee ee ar —* ed cl ne \" a “Sagat ie\nee ae Ss Z ee ; ae aaa en \" gat ha, me",
+      "text": "UPSC 2025 · Mathematics Paper 2 · Question 8 · Section B · Real Analysis (official scan)",
+      "scanImages": [
+        "scan-01.jpg"
+      ],
       "moduleId": "real-analysis",
       "module": "Real Analysis",
       "themeId": "real-analysis",
@@ -195,11 +226,14 @@
       "number": 1,
       "section": "A",
       "marks": 20,
-      "text": "1. (a) 4m cfifre fe Ste mn a Um offi ag G2, Fei m ait n, (m>n) TTI\nwert @ | auige fe Gar aie maw aftna-stes up sre 2 |\nLet G be a finite group of order mn, where m and n are prime numbers\nwith m > n. Show that G has at most one subgroup of order m. 10\n(b) aie w= f(z), 2 Ue faeces wer 2, oa aan fm\n2 2\nIf w= f(z) is an analytic function of z, then show that\n2 2\n2\n© J 08 x ay & aftr ar var AIC |\n2\nlog x\nTest the convergence of J = — dx. 10\nns 1 Je-0\n@ ae x my & om o ok y area ate a age ad 2, Wt\nauigu fH fz) =p+iqi= J-1 Oo Fave wor &, el p = 2 — am\nBe0b ay\na ee al\nIf @ and y are functions of x and y satisfying Laplace equation, then\nshow that f(z)=p+iq, i= /—1 is an analytic function, where\n=e Ot ON OO\nPE ay eo tes he 10\n\n\n(ce) frafaftad tas stares aren at ea wel & fore fee fafes er sean Fife :\naftr Fife z =x, + 2x»\naad ff Xy—X_23\nUse two phase method to solve the following linear programming\nproblem : 10\nMaximize z= x, + 2X»\nsubject to X1-X_23\nXy, XQ 20",
-      "moduleId": "pde",
-      "module": "Partial Differential Equations",
-      "themeId": "pde",
-      "theme": "Partial Differential Equations",
+      "text": "UPSC 2024 · Mathematics Paper 2 · Question 1 · Section A · Complex Analysis (official scan, page split)",
+      "scanImages": [
+        "scan-01.jpg"
+      ],
+      "moduleId": "complex-analysis",
+      "module": "Complex Analysis",
+      "themeId": "complex-analysis",
+      "theme": "Complex Analysis",
       "subthemes": [],
       "sourcePdf": "https://www.upsc.gov.in/sites/default/files/QP-CSM-24-MATHEMATICS-PAPER-II-031024.pdf",
       "notes": {
@@ -217,7 +251,11 @@
       "number": 2,
       "section": "A",
       "marks": 20,
-      "text": "2. (a) ASS after & orgs (sare) fagia ar Sea wa aU, SHA < fy >\nafter a ata fifi, wet f= 1+ b+ oe eS.\nUsing Cauchy’s general principle of convergence, examine the\nconvergence of the sequence < f, >, where f, = 1+ i + a oho = . 15\n(bo) aalgu fe wp arach aye a wets savant vfafars aneci 2, afer gaat\nfaata savas =O aed ae a |\nShow that every homomorphic image of an abelian group is abelian, but\nthe converse is not necessarily true. 15\n(c) ae er aa Afra St fH Ga C: z= ci, 0<0< In, % WR IM Ta SK\n—1)cos 0+i(a* +1)sin0\nfixate 2 sik c A oR a faa ae @ —Deosdrila +Dsind\nFind the function which is analytic inside and on the circle\nC:z=e!®, 0 < 0 < 2n and has the value ie a ee\non the circumference of C, where a? > 1. 20",
+      "text": "UPSC 2024 · Mathematics Paper 2 · Question 2 · Section A · Complex Analysis (official scan)",
+      "scanImages": [
+        "scan-01.jpg",
+        "scan-02.jpg"
+      ],
       "moduleId": "complex-analysis",
       "module": "Complex Analysis",
       "themeId": "complex-analysis",
@@ -239,7 +277,11 @@
       "number": 3,
       "section": "A",
       "marks": 20,
-      "text": "3. (a) Fe fiz)= +. 8 ive oer eft ora (att) St Vet ETT |\nHl seal WH f(z) & Hasty vt ara Ata |\nLocate the poles and their order for the function f(z) = ——. ‘ ;\nz(sin mz) (« + 5)\nAlso, find the residue of f(z) at these poles. 15\n(b) 30ft S> UpG0, O<x<i am fear fife, fe wet n vt ar asa\nS,(x) = 5 Flee 1+ afx%, x elo, 1) & gra fear er 8 | aarige fH A ag Ah\nn\nwl We-atu¢ sane feat at ana 2, salt Ss UL), [0, 1] % wea\naftratta vat att 2\nConsider the series 5 U, (x), 0 < x < 1, the sum of whose first n terms\nis given by S,(x) = = Ele (1 + n4x?), x €[0, 1]. Show that the given\nn\nseries can be differentiated term-by-term, though SS UL (x), does not\nconverge uniformly on [0, 1]. 20\n(c) 3a fagia a sean aed ee, Aeafefad tes sae aren at ea Fife :\nmaT Az = 4x; + Bxy + xy\nX4, Xgq, Xg 20\nUsing duality principle, solve the following linear programming\nproblem : 15\nMinimize =z = 4x; + 3x9 + xg\nsubject to x, + 2x9 + 4x3 > 12\nXy, Xg, Xg 20",
+      "text": "UPSC 2024 · Mathematics Paper 2 · Question 3 · Section A · Complex Analysis (official scan)",
+      "scanImages": [
+        "scan-01.jpg",
+        "scan-02.jpg"
+      ],
       "moduleId": "complex-analysis",
       "module": "Complex Analysis",
       "themeId": "complex-analysis",
@@ -261,7 +303,12 @@
       "number": 4,
       "section": "A",
       "marks": 20,
-      "text": "4. (a) Wat S aca 2% ae ae Zix] wT aR He | a efifere x ERT ST\nZix] A UH Tac Sz | eaige fH S, Zix] M UH ass FosTach B cites\nshes Toraacht ae @ |\nConsider the polynomial ring Z[x] over the ring Z of integers. Let S be an\nideal of Z[x] generated by x. Show that S is prime but not a maximal\nideal of Z[x]. 15\n\n(b) (0, 11% Ufone Peafefiaa wer f & fee soft ae fe fa eared at\nfifa :\n(1-x2)12, af x aia a |\n(1-x), af x softs? |\nwa: catge fr (0, 1) 1 fda aarHeria aa 2 |\nFind the upper and lower Riemann integrals for the function f defined\non [0, 1] as follows :\n(1-x2)!/2, if x is rational.\n(1 —x), ifx is irrational.\nHence, show that f is not Riemann integrable on [0, 1]. 15\n() We aot aw afte saan, aftarhat A, B sik Cal atta wate fect,\nWas, lero sit Sad 4 Age HoT aed 2 | an asia satel A de\naftenttat & cararacr Ht arma (ean eral FH) AS has 2 :\na a Cee\n| sft | feet _|\nae Raca (saree) ard Au, a code Al Het PTA HT ATA HET F\nait =a wird sft Pratfta Fife |\n\n\nThe personnel manager of a company wants to assign officers A, B and C\nto the regional offices at Delhi, Mumbai, Kolkata and Chennai. The cost\nof relocation (in thousand Rupees) of the three officers at the four\nregional offices are given below :\n\nPerm sere is\n\nae ee ee\nFind the assignment which minimizes the total cost of relocation and\nalso determine the minimum cost. 20\n\n\n\nws B\nSECTION B",
+      "text": "UPSC 2024 · Mathematics Paper 2 · Question 4 · Section A · Real Analysis (official scan)",
+      "scanImages": [
+        "scan-01.jpg",
+        "scan-02.jpg",
+        "scan-03.jpg"
+      ],
       "moduleId": "real-analysis",
       "module": "Real Analysis",
       "themeId": "real-analysis",
@@ -283,11 +330,15 @@
       "number": 5,
       "section": "B",
       "marks": 20,
-      "text": "5. (a) aise f af ¢ ok g HH data ea WS Be oH Zz,\nu = f(x — kt + iay) + g(x — kt —iay),\nOx oy Ce at Cc\nUh ae |\nShow that if f and g are arbitrary functions of their respective\narguments, then u = f(x — kt + iay) + g(x — kt — iay), is a solution of\n2. 2. 2. 2\nON ORNs gh OU. here of a ete 10\nox ay? C2 at? C2\n(bo)  TRe-aTee fafer aro freafafad thas atte Ferre at ea ifr :\nSolve the following system of linear equations by Gauss-Jordan method: 10\n(©) @) (8D) 3K (FF),¢ > afre sam eo A aarera wages ad ire |\nGi) (9B2.1A),, HT Grea BAGes gat Aire |\n@) Determine the decimal equivalent in sign magnitude form of\n(8D) 1g and (FF)4,.\n(ii) | Determine the decimal equivalent of (9B2.1A),,. 10\n(@) SAA m AM a 2a HT UH GU UHaA ats um fad afr daw TET\n2 ot Mea a ue ahh sa UH OK A aR ON TH Ge 2 1 ge Ch\nats ara ca At 7g att ara Alfa |\nA rough uniform board of mass m and length 2a rests on a smooth\nhorizontal plane and a man of mass M walks on it from one end to the\nother. Find the distance covered by the board during this time. 10\n\n\n(ce) Wh vate HI a7 fava 9,\nare fear mar @ | ere vane ara Afra |\nThe velocity potential of a flow is given by\nDetermine the streamlines. 10",
-      "moduleId": "mechanics-fluid",
-      "module": "Mechanics & Fluid Dynamics",
-      "themeId": "mechanics-fluid",
-      "theme": "Mechanics & Fluid Dynamics",
+      "text": "UPSC 2024 · Mathematics Paper 2 · Question 5 · Section B · Linear Programming (official scan)",
+      "scanImages": [
+        "scan-01.jpg",
+        "scan-02.jpg"
+      ],
+      "moduleId": "linear-programming",
+      "module": "Linear Programming",
+      "themeId": "linear-programming",
+      "theme": "Linear Programming",
       "subthemes": [],
       "sourcePdf": "https://www.upsc.gov.in/sites/default/files/QP-CSM-24-MATHEMATICS-PAPER-II-031024.pdf",
       "notes": {
@@ -305,7 +356,11 @@
       "number": 6,
       "section": "B",
       "marks": 20,
-      "text": "6. (a) aise fm fefaa area ata\npa te vo aga =0, xe (-~,~),y20\nal sa, ftdion oftera\nWI |x| >< ait yor,\nox, y= 2 i LES\nRass yt 6)\n> wa F far TT aa? |\nShow that the solution of the two-dimensional Laplace’s equation\nPony) , PHY 6, ge (m,n),y20\nOx oy\nsubject to the boundary condition\nalong with $(x, y) > 0 for |x| — - and y > ~ can be written in the form\nox, y= 2 J eee. 20\n(b) aefa aime Y = ABC + BC + AB & fer adena oitaa (aire athe)\nifax | dia Fest gan staat\n& fer Fria Y (aera art) ft ore Atfire |\nDraw the logical circuit for the Boolean expression\nY = ABC + BC + AB. Also, obtain the output Y (truth table) for the\nthree input bit sequences :\n\n\n2 2\nx yo.\n© Shige fe = +o =1,% Ue again, fran FIA M 2, HI sas Ta\n% caad aM sad HE a TA ach ter H ala, seca arrest gra Fife\nfear tar 2 fee feet oft ferrg ot GCE xy & Baga @ |\nFind the moment of inertia of a quadrant of an elliptic disk\n2 2\nSS + w = 1, of mass M about the line passing through its centre and\na\nperpendicular to its plane. Given that the density at any point is\nproportional to xy. 15",
+      "text": "UPSC 2024 · Mathematics Paper 2 · Question 6 · Section B · Partial Differential Equations (official scan)",
+      "scanImages": [
+        "scan-01.jpg",
+        "scan-02.jpg"
+      ],
       "moduleId": "pde",
       "module": "Partial Differential Equations",
       "themeId": "pde",
@@ -327,7 +382,11 @@
       "number": 7,
       "section": "B",
       "marks": 20,
-      "text": "7. (a) freafefted tenet artnet\npega 2 =x-\no-O a +(@-x) ay x\nWl Fe SaaS ad Al, Tt fH aH o = 0, xy=1 HK GA x+y+=0,\nFind the integral surface of the following quasi-linear equation\nwhich passes through the curve $ = 0, xy = 1 and through the circle\n) @ Aeeh=14 oy fas 2 frag, sit\nGi) Wegh=1% a9 aac (efsitgse) faq\nBl SIT BA fx) = 5x9 — 3x2 4 Ox 4+ LOT x=- 28x =4 oH TAH\nfifa |\nIntegrate f(x) = 5x3 — 3x2+2x+1 from x=—2 to x=4 using\nG) — Simpson’s ; rule with width h = 1, and\nGi) Trapezoidal rule with width h = 1. 15\n\n\n() aM efifee f an a\nB(x? — y’) 2Bxy\nuwy=—3—s5, 4 vV&y=—j— hy, wey) =0,\nWet BU eK 2, seam aeatisa vate & fee ofa ecfiawil a aq se\n2 saan aa a weed (Efaees) aa ar Rao Ae |\nLet the velocity field\nBizde ya ih 2Bxy\nsatisfy the equations of motion for inviscid incompressible flow, where B\nis a constant. Determine the pressure associated with this velocity field. 20",
+      "text": "UPSC 2024 · Mathematics Paper 2 · Question 7 · Section B · Real Analysis (official scan)",
+      "scanImages": [
+        "scan-01.jpg",
+        "scan-02.jpg"
+      ],
       "moduleId": "real-analysis",
       "module": "Real Analysis",
       "themeId": "real-analysis",
@@ -349,7 +408,10 @@
       "number": 8,
       "section": "B",
       "marks": 20,
-      "text": "8. (a) aif sana atte\nwart) *( 9)\nat fafed =o F watatta eee ea Atfire |\nSolve the partial differential equation\nay (2 +4] oe (2 bad\nby transforming it to the canonical form. 15\n(b) Hadar & fare er H sraiat aa wr sua aes Fraferfiad sisi @ 12-5)\nAM OT steecrl Alfa :\nUsing Newton’s forward difference formula for interpolation, estimate\nthe value of (2-5) from the following data : 15\n\n\n(c) am ofr fe we oa ca 8 St Sai, Ga a faata ated wit 2a\nA att wee | cater fe fia & ate era tart alae\n2 2\nx“ +(y-a) y\nlog > OO te Cc\naM a 7 @, Wet CU arn @, Fe-fag Gora wr Hea fag 2, ait afte a\nSist are tat y wr sar z |\nSuppose an infinite liquid contains two parallel, equal and opposite\nrectilinear vortices at a distance 2a. Show that the streamlines relative\nto the vortex are given by the equation\nlog SY =a” ,¥ Lg\nwhere C is a constant, the origin is the middle point of the join, and the\nline joining the vortices is the axis of y. 20\n\n\nRee eT ae ce a a\nss ere sees ote Ce ee one Ree: Page es\nSeen: Be uae Fic coat 4 atta: a a ie gas re ee Se i aa peta ee rea\nes ee oe ee “eee ae par ae ats ah cepa: gee\nae oe a eerie eee es DO OP Shh aa are\n\nDied cage ve WE Nae egies ire gm e TON eg ee\ncee re: Ses ae | a ee oe q\nSS aeene r Be it ie ee POET EE ee ee ae eae ee al\nee ees oo Pi Pa a fs lg fa ae Re ee\nen Sate. Se ie nS Tame ee ee\nS5t Pg ae ei, wears sa TF sew 4 a eee So Oa bates ca: (ee ae <a\nBeare eee ma Sete yy eee SAELOREY +g Ga te Batti 1 ieee Ba\nae et ce = Hf ih. SiMe el a ie degen Bee eet\nSeeees Seve Nias ea ee iis ee i gretet i ae ae oe\n_ ee ee a 1 ead eet: CR eat ae ay Meo ee\nee Me oe aa rie me ee er ee a ee\nER taee ts. oe He wee: ee ee ae ey eee Ha cane a ro ere\nee oe Se ao, Feats a ao SR ae ie ag NR or :\neh net, ei Mey A Wepre . Sea go ihe: SB ips} egal\" cde\na re vie oat ara 8 ee ae val the ee a ae pees\nBehe “die aie peated oh ch ee a Pe ee\nSS Sans HR aah ea ek APOE PRT SO te Ug ah cline 2% a) Pa\n<i ia a Soe a Riso oe ae he ee fee ea, ro\nBecaee Be a ceak neat a Bae ae ava Since sens eo\nEe ee 7 ae ap ae) ar. case a ee ae CORRES et cs ae\neee ne Free Re ee a ad Se mtn yohus aa ae aa\n| ae eee 6 a SR Se As: eee ee ee mee: koe Gaon s\na Bama Is ce aaa ae Pai as a om eee |\naa ae ce oa igs Reo: Peon eae ‘oh a oe tee\na: Bs hate. i ae ee ake pS aaa:\noe a oe ee\nee es aS a Hf pet poet a = ae.\nlee ne Big ee ee Bee © ucts etch yh eat] Heme: ae Se ere\nanne ae St ree S tone, et wee\nbea ca a tt Rea bg fk i ells Pes ke ee ak",
+      "text": "UPSC 2024 · Mathematics Paper 2 · Question 8 · Section B · Numerical Analysis & Computer Programming (official scan)",
+      "scanImages": [
+        "scan-01.jpg"
+      ],
       "moduleId": "numerical-analysis",
       "module": "Numerical Analysis & Computer Programming",
       "themeId": "numerical-analysis",
@@ -371,7 +433,10 @@
       "number": 1,
       "section": "A",
       "marks": 20,
-      "text": "1. (a) FMA Ae ae 10 Hu aR GR aH ae 6 HI UH wR GG’ 2) ata Ah fH aM Ga G’\nRG areas aaa FI afeied 21\nLet G be a group of order 10 and G’ be a group of order 6. Examine whether\nthere exists a homomorphism of G onto G’. 10\n(b) era 42 +62 HH yobs wid ZH wH yea Tach % wa F oa Fife)\nExpress the ideal 42 +6Z as a principal ideal in the integral domain Z. 10\neS - 2an+1\n(o) aot yy 13-5 @n-)) Dx) xo 0% afta ar dem Fre\nTest the convergence of the series\n2.4.6... Qn) (n+l) 10\n(d) HWM f(z) = f(x+ iy) = u(x, y)+iv(x, y) ® Fs ia F faves eA & fore vate oft\nfafa) aa aaige Re F (2) =log 2 a8 win fara wen SL\nState the sufficient conditions for a function f(z) = f(x+iy) =u(x, y) +iv(x, y)\nto be analytic in its domain. Hence, show that f(z) =logz is analytic in its\ndomain and find ca 10\ndz\n(e) we aafe # am sam & fee wae A, BAM CA HAM: 24, 24 aM 20 FH A sa\n81 sere PS weds ada wae A, B aM CA HAM: 2, 4 TM 1 eH e aM SME OF\nwee ada 4 tara A, Bam CA wAM: 2, 1 TS eee 81 ae PR oH Ada\n& 30% a O% & Adam HA F 50 @, wa AH GS eM Sree A oft & fee\nwets sere fear Adar wee sre?\nA person requires 24, 24 and 20 units of chemicals A, B and C respectively for\nhis garden. Product P contains 2, 4 and 1 units of chemicals A, B and C\nrespectively per jar and product Q contains 2, 1 and 5 units of chemicals A,\nB and C respectively per jar. If a jar of P costs ® 30 and a jar of Q costs ¥ 50,\nthen how many jars of each should be purchased in order to minimize the cost\nand meet the requirements? 10",
+      "text": "UPSC 2023 · Mathematics Paper 2 · Question 1 · Section A · Real Analysis (official scan)",
+      "scanImages": [
+        "scan-01.jpg"
+      ],
       "moduleId": "real-analysis",
       "module": "Real Analysis",
       "themeId": "real-analysis",
@@ -393,7 +458,11 @@
       "number": 2,
       "section": "A",
       "marks": 20,
-      "text": "2. (a) fra Ae & 2p we & we ampafahta agg, vel p uw fara aa den 2, Ap ae a\nWH BAAR ST Sas 21\nProve that a non-commutative group of order 2p, where p is an odd prime,\nmust have a subgroup of order p. 15\nSKYC-B-MTH/13 2\n\n(b) wars Tre fais H sein a fag Pl, 6, 3) Ma x? ¢y2 427 =4 9 aH om Ste\n‘afeat ara Fifa\nUsing the method of Lagrange’s multipliers, find the minimum and maximum\ndistances of the point P(2, 6, 3) from the sphere x? +y? +27 =4, 15\n2n cos20\nwarmer ar sat ae [-\" —SOS<\" _ ge an ara ara FATT\n() Fe h 5+4cos® i\nEvaluate Fr 0088 d® using contour integration. 20\n5+4cos®",
+      "text": "UPSC 2023 · Mathematics Paper 2 · Question 2 · Section A · Algebra (official scan)",
+      "scanImages": [
+        "scan-01.jpg",
+        "scan-02.jpg"
+      ],
       "moduleId": "algebra",
       "module": "Algebra",
       "themeId": "algebra",
@@ -415,33 +484,16 @@
       "number": 3,
       "section": "A",
       "marks": 20,
-      "text": "3. (a) fire Ae fH x? +1, 2 ll A ora ge 1 ae Aa A ort ee ZB,\nFae\n9 samt UH Ba ZI\nProve that x? +1 is an irreducible polynomial in Z [x]. Further show that\nthe quotient ring Zale) is a field of 9 elements. 15\n(b) fie Fife f u(x, y) = e*(xcosy-ysin y) Taare 8) FAH GYM weaTA Herr v(x, y) WA\nAfra ae ara faves Gers f(z) HI 2% vel Fare Fist)\nProve that u(x, y) = e*(xcosy-— ysin y) is harmonic. Find its conjugate harmonic\nfunction v(x, y) and express the corresponding analytic function f(z)\nin terms of z. 15\n(c) 41M (fm M) fae a Prafetad titan sae are HI eat Ae :\napie Fe Z = 2x, +3xq\nand ff\nXy+X_ 29\nPT Fen Bet aifadita 8? srt Se I TH Tega Alfere|\nSolve the following linear programming problem by Big M method :\nMinimize Z =2x, +3x9\nsubject to\nXy+X_ 29\nIs the optimal solution unique? Justify your answer. 20\nSKYC-B-MTH/13 3 [ P.T.O.",
+      "text": "UPSC 2023 · Mathematics Paper 2 · Question 3 · Section A · Algebra (official scan)",
+      "scanImages": [
+        "scan-01.jpg",
+        "scan-02.jpg",
+        "scan-03.jpg"
+      ],
       "moduleId": "algebra",
       "module": "Algebra",
       "themeId": "algebra",
       "theme": "Algebra",
-      "subthemes": [],
-      "sourcePdf": "https://www.upsc.gov.in/sites/default/files/QP-CSM-23-MATHEMATICS-PAPER-II-29092023.pdf",
-      "notes": {
-        "introduction": "",
-        "staticNotes": "",
-        "quotes": "",
-        "currentAffairs": "",
-        "topperPoints": "",
-        "valueMaterial": ""
-      }
-    },
-    {
-      "id": "math2-2023-q4",
-      "year": 2023,
-      "number": 4,
-      "section": "A",
-      "marks": 20,
-      "text": "4. (a) fra Fie fH [ab] w wna we as an Reg Ge f a den, wy\n(Lf) ~ Flea) | sq, X2 € la, b]} BI aH BI\nProve that the oscillation of a real-valued bounded function f defined on [a, b]\nis the supremum of the set {|f(x,)- f(x) |: x1, x2 € [a b]}. 15\nat\n(b) A f(z) =——_ 3 fafa fag z=0 @ afi He an gad chi Ach ven a AST\nz-sinz\nam ara Afar\nz\nClassify the singular point z=0 of the function f(z) = 4 and obtain the\nz-sinz\nprincipal part of its Laurent series expansion. 15\n() & fam } sea % ania 5 wierd & an ses oe 5 ard 81 weds aed & fee was\nard Bt Be FI BAG (val H) APS stregg F fea waz :\narf\nA _B C D_E\nFa wa & apattoe & fae, wes shard a ch ard fee war fear sre? ale arta IV a\nart Cxé ft a aan 2, Aah sal et ae A eA aren Ga AH wea ol ara Afr\nA department head has 5 subordinates and 5 jobs to be performed. The time\n(in hours) that each subordinate will take to perform each job is given in the\nmatrix below :\nJobs\nA _B C DE\nSubordinates IT|17 7 15 12 18\nHow should the jobs be assigned, one to each subordinate, so as to minimize\nthe total time? Also, obtain the total minimum time to perform all the jobs if the\nsubordinate IV cannot be assigned job C. 20\nSKYC-B-MTH/13 4\n\nwvse—B / SECTION—B",
-      "moduleId": "complex-analysis",
-      "module": "Complex Analysis",
-      "themeId": "complex-analysis",
-      "theme": "Complex Analysis",
       "subthemes": [],
       "sourcePdf": "https://www.upsc.gov.in/sites/default/files/QP-CSM-23-MATHEMATICS-PAPER-II-29092023.pdf",
       "notes": {
@@ -459,11 +511,15 @@
       "number": 5,
       "section": "B",
       "marks": 20,
-      "text": "5. (a) z=f(x?-y)+g(x2 +y) a Cfeom Fert fam g wm faci a aif Hae SET\naATge |\nBy eliminating the arbitrary functions f and g from z= f(x? -y)+ g(x? +y),\nform partial differential equation. 10\n(o) fen & YE * en mr afte x= 0 He y=1 BI ara A FARE A oT ia\ny~ +x\n(2a da) h=0-1 8a Re x = 0-4 % foe y HAM, TEAS % 4 wart aes we, aa Ahr\ne dy y?-x oy ees .\nGiven ©Y = 4 ~~ with initial condition y=1 at x =O. Find the value of y for\ndx y*+x\nx=0-4 by Euler’s method, correct to 4 decimal places, taking step length\n(c) R-snerd sania an sea an Pefefad seasit ar yeas seh St me Tae A ihre :\nEvaluate, using the binary arithmetic, the following numbers in their given\nsystem :\n(2) mae HH Te MoM & wi A Geo a Te 81 Te A aft Sal Tae Rats Sat\nV, T= imi? +776?) a v=amm(2-*) am a mg %, wel tara Ho ue % ya\naor\nfiais (7, 0) %, qecha feria Ge an deiga (oe a1 a) a AS a 2a Bl Te A aha fee\neftecht cen Bftrees arterett aAt ara Aifere |\nA planet of mass mis revolving around the sun of mass M. The kinetic energy T\nand the potential energy V of the planet are given by T= me? +126?) and\nV=G Mm( > -+), where (r, 6) are the polar coordinates of the planet at time t,\naor\nG is the gravitational constant and 2a is the major axis of the ellipse (the\npath of the planet). Find the Hamiltonian and the Hamilton equations of the\nplanet’s motion. 10\n(ec) WH Wea vars 4, 2m ae aH Ba z=2 KH fa 8 aM m ae & A sift (fH)\n2=2+i 9m 2=2-i fem 81 sare ard aa Fire)\nIn a fluid motion, there is a source of strength 2m placed at z=2 and two\nsinks of strength mare placed at z=2+iand z =2-i. Find the streamlines. 10\nSKYC-B-MTH/13 5 [P-Tio.",
-      "moduleId": "mechanics-fluid",
-      "module": "Mechanics & Fluid Dynamics",
-      "themeId": "mechanics-fluid",
-      "theme": "Mechanics & Fluid Dynamics",
+      "text": "UPSC 2023 · Mathematics Paper 2 · Question 5 · Section B · Partial Differential Equations (official scan)",
+      "scanImages": [
+        "scan-01.jpg",
+        "scan-02.jpg"
+      ],
+      "moduleId": "pde",
+      "module": "Partial Differential Equations",
+      "themeId": "pde",
+      "theme": "Partial Differential Equations",
       "subthemes": [],
       "sourcePdf": "https://www.upsc.gov.in/sites/default/files/QP-CSM-23-MATHEMATICS-PAPER-II-29092023.pdf",
       "notes": {
@@ -481,7 +537,11 @@
       "number": 6,
       "section": "B",
       "marks": 20,
-      "text": "6. (a) & tat z=x=0 WM z-1=x-y=0 a aR A ae oh ait wae ata\naz a?z a?z :\nax? axdy = ay?\nFind the surface passing through the two lines z=x=0 and z-1=x-y=0,\n2 2 2\nand satisfying the partial differential equation O24 OZ qa =0. 15\nax? xdy = ay?\n(b) Nsa-aisa Fra AY @ Yas eater Para\nwl 4 ans sat TH wel ea aa AA sels sega wet x, = xq = xg =0 chfse!\nSolve the system of linear equations\ncorrect up to 4 significant figures by the Gauss-Seidel iterative method. Take\ninitially guessed solution as x; = x2 = x3 =0. 15\n(co) wadam Hh aie 2% ws aif da ar aie\nL= 5 mi? +i)-F wp x? + wy?) +kxy\n2, Fel m, w,, wo, k FAS Fe Trae 6 ara Aifry, Pras fore Sara\nx=q,cos®-qysin®, y=q,sin®+q,cos®\n% sia ah, do % VA 4 camifear 4 WR Fe gq. A ATI Waa 0 a HAA, g, TMG, ¥\nata cas atta a ara Fife)\nA mechanical system with 2 degrees of freedom has the Lagrangian\nL= 5 mii? +y?) ~Fm(wpx? +wy?) +kxy\nwhere m, W,, W2, k are constants. Find the parameter @ so that under the\ntransformation\nx=q,cos®-qysin®, y=q,sin6+q,cos®\nthe Lagrangian in terms of q,, qo will not contain the product term 492- Find\nthe Lagrange’s equations w.r.t. gq, and qj independent of parameter 0. 20\nSKYC-B-MTH/13 6",
+      "text": "UPSC 2023 · Mathematics Paper 2 · Question 6 · Section B · Linear Programming (official scan)",
+      "scanImages": [
+        "scan-01.jpg",
+        "scan-02.jpg"
+      ],
       "moduleId": "linear-programming",
       "module": "Linear Programming",
       "themeId": "linear-programming",
@@ -503,7 +563,11 @@
       "number": 7,
       "section": "B",
       "marks": 20,
-      "text": "7. (a) (@) Pe geha ver a ares ver Seo (CNF) aa Fife\nLOGY Sth=x-y2rxX-y-(t+zZ)\n(i) aa oer\nS(GY Z)=xX4+(K-Y+X- z)+z\nal frisia (feasifaea) vara wey (DNF) 4 aaa fife ae ga Ger ® feu\nAA GRO ATE |\n() Find the conjunctive normal form (CNF) of the following Boolean function :\nL(G YS t)=xX-y Z4+X-y-(t+Z)\n(i) Express the Boolean function\nS(GY Zz) =x4+(K-Y+X-z)+z\nin disjunctive normal form (DNF) and construct the truth table for the\nfunction. 15\n(b) sexi ea te wH Grad serran den 4 fem A fa 481 Te HI HE aaa ws\nagen waa a Va ata stat 2) aM che f a aM b HAE: He aM der A fret FZ)\naft v2 > 22 gb-a)t, wa cage fh ae tee & ore De wr a ae Te\nA perfectly rough ball is at rest within a hollow cylindrical roller. The roller is\ndrawn along a level path with uniform velocity V. Let a and b be the radii of the\nball and the roller respectively. If V? > 27 gib-a), then show that the ball will\nroll completely round the inside of the roller. 15\n(o) SiR atrra ater\n2 2\na2 ou ou, O<x<L, t>0\nax? at?\nwr ad\ndt )r=0\n4 sfeeftra eet ara Fifare |\nSolve the partial differential equation\n207u du\nax? at?\nsubject to the conditions\ndt Jt=0 20\nSKYC-B-MTH/13 A [ P.T.O.",
+      "text": "UPSC 2023 · Mathematics Paper 2 · Question 7 · Section B · Mechanics & Fluid Dynamics (official scan)",
+      "scanImages": [
+        "scan-01.jpg",
+        "scan-02.jpg"
+      ],
       "moduleId": "mechanics-fluid",
       "module": "Mechanics & Fluid Dynamics",
       "themeId": "mechanics-fluid",
@@ -525,7 +589,10 @@
       "number": 8,
       "section": "B",
       "marks": 20,
-      "text": "8. (a) aie sana wie\n2 2\nay? axdy ax dy x) * x\na fated a 4 eariia ifs\nReduce the partial differential equation\n2 2\nay? axdy dx dy x) 2%\nto canonical form. 15\n(b) fren-feafa Coyen-wrfew) fa a sia 0, 3] 4, aT logi9(2x+1)-x?2 +3=0% TH\nFe I, aaa & 6 Vat as ae, afte Fife)\nCompute a root of the equation log}, (2x + 1) — x? +3 =0, in the interval (0, 3], by\nRegula-Falsi method, correct to 6 decimal places. 15\n(c) aa Alfae fH fea eat H sierta a1 Ba (velocity field) u =c(x? -y?), v=-2cxy, w=0\nArea-ealae GT SHR BT UH Fer Bl ae AAA BE AH ad Ara %, Toe ara dea gra Aifare,\nWa zon ean we fis aa B, =0=B,, B, =-gel\nDetermine under what conditions the velocity field u =c(x? -y?), v =-2cexy,\nw =0 is a solution to the Navier-Stokes momentum equations. Assuming that\nthe conditions are met, determine the resulting pressure distribution, when z\nis up and the external body forces are B, =O=B,, Bz =-g. 20\nkkk\nSKYC-B-MTH/13 8 SB24—1368",
+      "text": "UPSC 2023 · Mathematics Paper 2 · Question 8 · Section B · Mechanics & Fluid Dynamics (official scan)",
+      "scanImages": [
+        "scan-01.jpg"
+      ],
       "moduleId": "mechanics-fluid",
       "module": "Mechanics & Fluid Dynamics",
       "themeId": "mechanics-fluid",
@@ -547,7 +614,11 @@
       "number": 1,
       "section": "A",
       "marks": 20,
-      "text": "1. (a) aatga FH yor WAR G={1, -1, i, -i}, Vel i= JC % WRG’ =((0, 1, 2, 3}, +4)\n% gear 21\nShow that the multiplicative group G={1,-1, i, -i}, where i=,(-1), is\nisomorphic to the group G’ =({0, 1, 2, 3}, +4). 10\ninzced\n(b) 4% f(z)=utiv, 2H Peas wer %, aa u-v = OS TSN’ 8, og\n2cosx-e¥ -eY\nf(3)=0% vets pte) a1 a\ni -eY\nIf f(z) =u+iv is an analytic function of z, and uy = osxtsmx-e then\n2cosx-e¥ -eY\nfind f(z) subject to the condition 1(3) =0. 10\n(o) fg SX ae & satire a ade AAA\nl+x\nTest the convergence of i, Ose dx. 10\n(a) f@-=-—__1—_a Rat (i) 0 <|z-1| <2 G (0 <|z-3| <2 % fa Au cet HAF\nfre Afra |\nExpand f(2z)= i in a Laurent series valid for the regions\n(ce) Preferftra ta shore aren a eel Hel fer fae fate ar seer Aisa:\napie AA Z = x, + x2\naad f%\nXy,X_20\nCRNA-S-MTH/18 2\n\ni)\nUse two-phase method to solve the following linear programming problem :\nMinimize Z = x; +x9\nsubject to",
+      "text": "UPSC 2022 · Mathematics Paper 2 · Question 1 · Section A · Complex Analysis (official scan)",
+      "scanImages": [
+        "scan-01.jpg",
+        "scan-02.jpg"
+      ],
       "moduleId": "complex-analysis",
       "module": "Complex Analysis",
       "themeId": "complex-analysis",
@@ -569,7 +640,12 @@
       "number": 2,
       "section": "A",
       "marks": 20,
-      "text": "2. (a) wm cif fF [0, k], kK>O R f(xy=x? B81 aad fH f ae aaa [0, kh] w MHA\n3\nwareerta & aH [ ® pdx =a\n0 3\nLet f(x) = x? on [0, k], k >O. Show that f is Riemann integrable on the closed\n. Fe ke\ninterval [0, k] and fo fac=—. 15\n(b) fire fife fe us BAR G a ets aaa viata, G % Pret feo sag gear 21\nProve that every homomorphic image of a group G is isomorphic to some\nquotient group of G. 15\n() fv, SEE, a> b> 08 ar Parad & fA arate-wea a sehr AA\n: 22 cosxdx\nApply the calculus of residues to evaluate f ae,” 4 > > 0. 20",
+      "text": "UPSC 2022 · Mathematics Paper 2 · Question 2 · Section A · Real Analysis (official scan)",
+      "scanImages": [
+        "scan-01.jpg",
+        "scan-02.jpg",
+        "scan-03.jpg"
+      ],
       "moduleId": "real-analysis",
       "module": "Real Analysis",
       "themeId": "real-analysis",
@@ -591,7 +667,10 @@
       "number": 3,
       "section": "A",
       "marks": 20,
-      "text": "3. (a) (a 2t4 Lae am frat, ae c, |jz+1-i]=221\nEvaluate iL 714 _w, where C is |z+1-i|=2. 15\n(b) oat ate & afte a apr am fafa, wa k+my+nz=0 aH\na c\nSteg ts =) 8 storm 4 satis aren Aisa\n2\na“ b* ec\nFind the maximum and minimum values of t= te when kx +my+nz=0\na” b ec\nand t= 1, Interpret the result geometrically. 20\na? pb? cc?\nCRNA-S-MTH/18 3 [ P.T.O.\n\n(co) Freafeftaa tas story aren at wae fate ert ea ABA! gah Bd) aren fered) A meh\naaer ah gear are B eel BAe a1 ETH wer ohh ferftas :\naftercare HA Z = x, +x2 +x3\nard\nSolve the following linear programming problem by the simplex method. Write\nits dual. Also, write the optimal solution of the dual from the optimal table of\nthe given problem :\nMaximize Z = x) + x9 +Xx3\nsubject to\n4 (@ an cit & R aeafas dent aw aa 8 aM S, H ah agua f(x) e R[x], Pre Ra\n£0) =0= f() %, 4a 21 faa AA fF s, R[x] A eH [nach 2) EN aa ai aaa\nR[x] /S Worse via 8? se SK ar aT AA\nLet R be a field of real numbers and S, the field of all those poly-\nnomials f(x) ¢ R[x] such that f(0)=0 = f(l). Prove that S is an ideal of R[x].\nIs the residue class ring R[x]/S an integral domain? Give justification for\nyour answer. 15\n(b) WH 42S A SM oS ae oT a aT aha\nFra |\nTest for convergence or divergence of the series\nx 2S A SPP (x >0) 15\n(oc). aFta Ah afares fate 8 frafefad vhaed aren a orf one gerd eet ard AA ga\nBal Sea AK BART BHI BETA eel UE Uae aa ara AA:\nTTT\nA B Cc D\nCRNA-S-MTH/18 4\n\nFind the initial basic feasible solution of the following transportation problem\nby Vogel’s approximation method and use it to find the optimal solution and\nthe transportation cost of the problem :\nDestination\nA B C D\nSource S,|17 18 14 23] 13 Availability\nRequirement 6 10 12 15] 43 20\nwve—B / SECTION—B",
+      "text": "UPSC 2022 · Mathematics Paper 2 · Question 3 · Section A · Linear Programming (official scan, page split)",
+      "scanImages": [
+        "scan-01.jpg"
+      ],
       "moduleId": "linear-programming",
       "module": "Linear Programming",
       "themeId": "linear-programming",
@@ -613,11 +692,15 @@
       "number": 5,
       "section": "B",
       "marks": 20,
-      "text": "5. (a) fen’ f sf (a, b, o) a8 Fe vig ar tw f(~=S, ¥=2)-o81 wg HI Bare\nzZ-c Z-Cc\neaten ara iA |\nIt is given that the equation of any cone with vertex at (a, b,c) is\nf (=. w2) =0. Find the differential equation of the cone. 10\nZ-c Z-c\n(b) Tse facia fate aro atten Para\nFea Fa\nSolve, by Gauss elimination method, the system of equations\n(c) FEN 1093 21875),9 F ABET WI AST (1693-0628), F Wer-snerd Tala F\naafer |\n(i) Fea we P(x, y, J=xytx'2 # Aye (Aaaet) BS wa F afters Hi)\n() Convert the number (1093-21875);9 into octal and the number\n(1693 -0628);9 into hexadecimal systems.\n(i) Express the Boolean function F(x, y, 2=xy+x’z in a product of\nmaxterms form. 10\nCRNA-S-MTH/18 5 [ P.T.O.\n\n(@) aa, Aaa ar Wine, asta wa P=”, oat ow frie 8, ow A na\nr\n81 conifer Penfea cen af & ater at ogee Aa\nA particle at a distance r from the centre of force moves under the influence of\nthe central force F = -<, where k is a constant. Obtain the Lagrangian and\nr\nderive the equations of motion. 10\n(ce) feet srttea aa & theta yet Pears (r, 0, y) H A1-aen (2Mr~ cose, Mr~? sin®, 0)\n%, vet M we fers 81 cats fe 2, fora wer ar 81 aT fara cen erates & wetter Ta\nEra |\nThe velocity components of an incompressible fluid in spherical polar\ncoordinates (r, 6, y) are (2Mr~°cos@, Mr? sin, 0), where M is a constant.\nShow that the velocity is of the potential kind. Find the velocity potential and\nthe equations of the streamlines. 10\n2",
-      "moduleId": "mechanics-fluid",
-      "module": "Mechanics & Fluid Dynamics",
-      "themeId": "mechanics-fluid",
-      "theme": "Mechanics & Fluid Dynamics",
+      "text": "UPSC 2022 · Mathematics Paper 2 · Question 5 · Section B · Partial Differential Equations (official scan)",
+      "scanImages": [
+        "scan-01.jpg",
+        "scan-02.jpg"
+      ],
+      "moduleId": "pde",
+      "module": "Partial Differential Equations",
+      "themeId": "pde",
+      "theme": "Partial Differential Equations",
       "subthemes": [],
       "sourcePdf": "https://www.upsc.gov.in/sites/default/files/QP-CSM-22-MATHEMATICS-PAPER-II-280922.pdf",
       "notes": {
@@ -635,7 +718,11 @@
       "number": 6,
       "section": "B",
       "marks": 20,
-      "text": "6. (a) wena 4-94 oc cr toon\net ax?\nuO, t)=u(I, t)=0\nu(x, 0) =x(l-x), O<x<l\nA sfcafetra get ara Aha |\n. du_ d7u ‘ ae\nSolve the heat equation rs = bx?’ O0<x<lI, t>0O subject to the conditions\nx\nu(O, t)=u(I, t)=0\n(b) Fa wR f(x,y, A=[x-Y+A]+y w Ha saafaena via (siferahaa ake) wa\nFifa cen aha & fea ae /Peia (gage/srsege) arch fered\nFind a combinatorial circuit corresponding to the Boolean function\nf(xy A= G+A)+y\nand write the input/output table for the circuit. 15\n() wa ada da wg Heh deft M, Sas ha seR A Pet a} HY eA SH\nfrig tan (sre ten) & ada Vera-sreph ra FAA\nFind the moment of inertia of a right circular solid cone about one of its slant\nsides (generator) in terms of its mass M, height hand the radius of base as a. 15\nCRNA-S-MTH/18 6",
+      "text": "UPSC 2022 · Mathematics Paper 2 · Question 6 · Section B · Partial Differential Equations (official scan)",
+      "scanImages": [
+        "scan-01.jpg",
+        "scan-02.jpg"
+      ],
       "moduleId": "pde",
       "module": "Partial Differential Equations",
       "themeId": "pde",
@@ -657,11 +744,15 @@
       "number": 7,
       "section": "B",
       "marks": 20,
-      "text": "7. (2) sik sana wha\n(D? + DD’ -6D’?)z= x? sin(x +y)\nwet D = 2 an D’ = 2, a ae Fe ara FA\nox oy\nFind the general solution of the partial differential equation\n(D? + DD’ -6D’)z= x? sin(x+y)\nwhere Da? and ps2, 15\nox oy\n\n(b) THtearmd, FP are 8 sern ws Heh @, a an Praferftad arch ara fen we 81 we a\n\nera A oT fire F ae AT AI fo Mo /aver F FI aA ze\nfers % 1 Ram a sein a 20 fire FH aa A eh Ga GA (eM) a aH fio Ho F\nfa\nThe velocity of a train which starts from rest is given by the following table, the\ntime being reckoned in minutes from the start and the velocity in km/hour :\n\nUsing Simpson’s rd rule, estimate approximately in km the total distance run\nin 20 minutes. 15\n\nfo) firg wf, set arts ar med kB, (ka, 0) 8 fea & en —* armed a ow fig wie,\nAefeg wm fra 81 culel fH ae ae aaa 8 an etarail & aftaer of ara Afra ale\narivart, st f& safide fagsit (rea vigz) a aed &, xs H (tb, 0) & fread %, aa\naatsa ff 3V3 (b? -a?)? =16a%b.\nTwo point vortices each of strength k are situated at (ta, 0) and a point vortex\nof strength -§ is situated at the origin. Show that the fluid motion is stationary\nand also find the equations of streamlines. If the streamlines, which pass\nthrough the stagnation points, meet the x-axis at (tb, 0), then show that\n\nCRNA-S-MTH/18 7 [ P.T.O.",
-      "moduleId": "mechanics-fluid",
-      "module": "Mechanics & Fluid Dynamics",
-      "themeId": "mechanics-fluid",
-      "theme": "Mechanics & Fluid Dynamics",
+      "text": "UPSC 2022 · Mathematics Paper 2 · Question 7 · Section B · Linear Programming (official scan)",
+      "scanImages": [
+        "scan-01.jpg",
+        "scan-02.jpg"
+      ],
+      "moduleId": "linear-programming",
+      "module": "Linear Programming",
+      "themeId": "linear-programming",
+      "theme": "Linear Programming",
       "subthemes": [],
       "sourcePdf": "https://www.upsc.gov.in/sites/default/files/QP-CSM-22-MATHEMATICS-PAPER-II-280922.pdf",
       "notes": {
@@ -679,7 +770,10 @@
       "number": 8,
       "section": "B",
       "marks": 20,
-      "text": "8. (a) Fefafas sift sane wir\nYU xx +(X+YUyy + XUyy, =O\nai fafed eo 4 aria Asa sik saa gaat eat ARTA\nReduce the following partial differential equation to a canonical form and\nhence solve it :\nYU xx +(X + YUgy +XUyy =O 15\n(b) Sad A A ger fA ar seen a sae et SY = 4 y?, sa yO)=18, A\nx=0-2 % a Fifa) afew 4 amea H ae wal aw ae om ces (Ro aa) 0-1 FT\narin Asa\nUsing Runge-Kutta method of fourth order, solve the differential equation\n& =x+y? with y(0) =1, at x =0-2. Use four decimal places for calculation and\nstep length 0-1. 15\n() Feat AA fe wH gaan ae & ee-fid uw ae & aohadl ware a aia fava\nw = iklog {(z— ia) /(z+ia)} %, set WII y=0 TH Fe MM 21 Ae A UHH crs (aR\naa) ] Rea ao aera a ga wT of a AAA\nVerify that w = iklog {(z- ia) /(z+ia)} is the complex potential of a steady flow\nof fluid about a circular cylinder, where the plane y=0 is a rigid boundary.\nFind also the force exerted by the fluid on unit length of the cylinder. 20\nkkk\nCRNA-S-MTH/18 8 SS23—1278",
+      "text": "UPSC 2022 · Mathematics Paper 2 · Question 8 · Section B · Partial Differential Equations (official scan)",
+      "scanImages": [
+        "scan-01.jpg"
+      ],
       "moduleId": "pde",
       "module": "Partial Differential Equations",
       "themeId": "pde",
@@ -701,7 +795,11 @@
       "number": 1,
       "section": "A",
       "marks": 20,
-      "text": "1. (a) FR cfr FH m, mg, --, mm TAH Ys F aM d>O0, m, mg, --, mj, Bl AKA\nwarmads 81 cage fe BA YUMTR xy, x0, ++, x, Beara HS aT\nd= xym, + XgMyq +++ +X_M,\nLet m,, Mg, «+, M_, be positive integers and d > 0 the greatest common divisor of\n™M, Mg, -**, M,. Show that there exist integers x), Xx, ---, x, such that\nd= xymy, + XgMq ++ +X_M, 10\n(b) oth\n4 4 4\nx? tpt tat\n% 0, YR GAR afer A ata Fre)\nTest the uniform convergence of the series\n4 4 4\n() aft we wer f, ARNT (a, ba wale 2, oa fae Fie fH SF, [gO] A OAR wHerta 2)\nIf a function f is monotonic in the interval [a, b], then prove that f is Riemann\nintegrable in [a, bj. 10\n(@) aM dife  c:0, JOC, ct)=e*™, O<ts1% ae Menta GH am 21 SR SI\nJ — 4 — an Prete\nLet c: [0, 1] >C be the curve, where c(t) = efntt | O<ts<1. Evaluate the contour\nintegral j—_“—.\n(e) GH wert & us fim & ota atenhal aw ota ered aera wer G1 fare aaa (set F) ww oats\nwe ort al aera we & fee aa @, ae wera sree F fen ren 81 ota nal at\naot erat at ga ae Rutita ffir fred fH aac orf aera el a1 GAY =A et:\narart\nI I ig IV Vv\nHXS-B-MTH/10 2\n\nA department of a company has five employees with five jobs to be performed.\nThe time (in hours) that each man takes to perform each job is given in the\neffectiveness matrix. Assign all the jobs to these five employees to minimize the\ntotal processing time :\nEmployees\nI I ig IV Vv",
+      "text": "UPSC 2021 · Mathematics Paper 2 · Question 1 · Section A · Real Analysis (official scan)",
+      "scanImages": [
+        "scan-01.jpg",
+        "scan-02.jpg"
+      ],
       "moduleId": "real-analysis",
       "module": "Real Analysis",
       "themeId": "real-analysis",
@@ -723,11 +821,15 @@
       "number": 2,
       "section": "A",
       "marks": 20,
-      "text": "2. (a) f(x)=x° -9x? +26x-24 FI, O< x 51% fey, afteean oe =H A rarer\nFind the maximum and minimum values of f(x) = x3 -9x? +26x-24 for\n(b) Fm die fH FU at aM f(xye F[x], A FS SK Ta >O H UH aye 21 aaigy fH\nWe 8a Fan Ue ae q: FF’ ea THR A oafeera FB fH aeTE fF | F’ [x] HH\nWe FAR, wel £4, f wets Ts a H gia) a sheenfta BA A oma AT aI\nLet F be a field and f(x)¢ F[x] a polynomial of degree >O over F. Show\nthat there is a field F’ and an imbedding q:F —>F’ s.t. the polynomial\nf% € F’ |x] has a root in F’, where f? is obtained by replacing each coefficient a\nof f by q(a). 15\n2\n() @a|z+1[>34 fle) = 22 _ a cet dot wer, (+1) A art 4 ara Af\nFind the Laurent series expansion of f(z) = = in the powers of (z+1)\nin the region |z+1|>3. 20",
-      "moduleId": "algebra",
-      "module": "Algebra",
-      "themeId": "algebra",
-      "theme": "Algebra",
+      "text": "UPSC 2021 · Mathematics Paper 2 · Question 2 · Section A · Complex Analysis (official scan)",
+      "scanImages": [
+        "scan-01.jpg",
+        "scan-02.jpg"
+      ],
+      "moduleId": "complex-analysis",
+      "module": "Complex Analysis",
+      "themeId": "complex-analysis",
+      "theme": "Complex Analysis",
       "subthemes": [],
       "sourcePdf": "https://www.upsc.gov.in/sites/default/files/Mathematics Paper-II.pdf",
       "notes": {
@@ -745,11 +847,14 @@
       "number": 3,
       "section": "A",
       "marks": 20,
-      "text": "3. (a) am cife fe f um ada aecite wer 8 fires Se z=0 H ten AH waR F sha wa a\nate ve 1 catia fe s(2)8 2=0 UW aftard fafeaat &1\nZz\nLet f be an entire function whose Taylor series expansion with centre z= 0 has\ninfinitely many terms. Show that z=0 is an essential singularity of f (2) 15\nZz\nHXS-B-MTH/10 3 [P.T.O.\n\n(b) Wat ax? + by? +c2? =1 TH e+ mytnz=0 @ siraha x? +y? +22 wer (aR)\nar Premfere! afore aft Senfircia career <tr)\nFind the stationary values of x? +y? +27 subject to the conditions\nax? + by? +cz7 =1 and kx+ my+nz=0. Interpret the result geometrically. 20\n(co) Fe Ras Sea aren a Ee tas loa aren Rata Afr :\napie Hm Z = x, - 3x2 -2x5\nad\nWel x, Xp [0 TM x4 a fe aofeaftra 81\nConvert the following LPP into dual LPP :\nMinimize Z =X, -3xXq -2x3\nsubject to\nwhere x,, x2 20 and x3 is unrestricted in sign. 15",
-      "moduleId": "complex-analysis",
-      "module": "Complex Analysis",
-      "themeId": "complex-analysis",
-      "theme": "Complex Analysis",
+      "text": "UPSC 2021 · Mathematics Paper 2 · Question 3 · Section A · Real Analysis (official scan, page split)",
+      "scanImages": [
+        "scan-01.jpg"
+      ],
+      "moduleId": "real-analysis",
+      "module": "Real Analysis",
+      "themeId": "real-analysis",
+      "theme": "Real Analysis",
       "subthemes": [],
       "sourcePdf": "https://www.upsc.gov.in/sites/default/files/Mathematics Paper-II.pdf",
       "notes": {
@@ -767,7 +872,11 @@
       "number": 4,
       "section": "A",
       "marks": 20,
-      "text": "4. (a) wige fe ahha densi % asa aa QS aroha wa a ars saa eI\nShow that there are infinitely many subgroups of the additive group Q of\nrational numbers. 15\n(b) RR Be a SHAT a ATT | ~ Sinx@e gos an am Ae\ne Pi . : e sinxdx\nUsing contour integration, evaluate the integral J ——;,, a>0. 20\n-© yiy2 a q2\n(co) StM (fer M) fat at saan ach Prafefad tas soa aren aA ea Aifere :\nafteratiae FRR — Z = 4x, +5x_ +2x3\nard £5\nXX +X_t+XxXz=6\nX%}, XQ, Xz 20\nHXS-B-MTH/10 4\n\nSolve the following linear programming problem using Big M method :\nMaximize Z =4x, +5x +2x3\nsubject to\nX1 +3X_q+Xg3 S12\nXxX, +X_+Xz=6\nwavs—B / SECTION—B",
+      "text": "UPSC 2021 · Mathematics Paper 2 · Question 4 · Section A · Algebra (official scan)",
+      "scanImages": [
+        "scan-01.jpg",
+        "scan-02.jpg"
+      ],
       "moduleId": "algebra",
       "module": "Algebra",
       "themeId": "algebra",
@@ -789,11 +898,16 @@
       "number": 5,
       "section": "B",
       "marks": 20,
-      "text": "5. (a) whem f(x+ytz, x2 +y?+27)=0 a Riese oer fa faci ee Fie saad\nwot at ore Fife |\nObtain the partial differential equation by eliminating arbitrary function f from\nthe equation f(x+y+z, x? +y? +27) =0. 10\n(b) sr ArH 0, 5 ar seein es ae dearer Tardy aI alta 3x = 1+cosx HT\neer Fe aa Aire, aan Iea-TR fate % ara ahora sl 8 aris stat ae sik Ya AM H\nfrme CET |\nFind a positive root of the equation 3x =1+cosx by a numerical technique\nusing initial values 0, % and further improve the result using\nNewton-Raphson method correct to 8 significant figures. 10\n() =) (8798-3875),9 * erent aan Temend Gerrit F aafere\nf) (P29 RAQHP) a Fe He aA 6 (fifeoe sifees aia wel) we Aire)\n(i) Convert (83798-3875))9 into octal and hexadecimal equivalents.\n(ii) Obtain the principal conjunctive normal form of (]P > R)A(Q=P). 10\n(@) seater xy-aa 4 fea we ga & agen ws a fa & fee ace 81 Duerad & fa A\nwere & aatge fee earch ms ae AHR xy — ix - gx =0%, Tel g Feta aM ZI\nA particle is constrained to move along a circle lying in the vertical xy-plane.\nWith the help of the D’Alembert’s principle, show that its equation of motion is\nXy-yx- gx =0, where g is the acceleration due to gravity. 10\nHXS-B-MTH/10 5 [P.T.O.\n\n2 5\n(ce) seri (aid) a aferit (el) % Ro Roa 8 tw atop, =~) 8 ee 8 Hr\nZz\neritensit a are ifm ok fae Aire fe Ha a, Tar =a aM yaa 4 ween\nah a\nWhat arrangements of sources and sinks can have the velocity potential\n2\nw= os.( =~ ? Draw the corresponding sketch of the streamlines and prove\nz\nthat two of them subdivide into the circle r=a and the axis of y. 10",
-      "moduleId": "mechanics-fluid",
-      "module": "Mechanics & Fluid Dynamics",
-      "themeId": "mechanics-fluid",
-      "theme": "Mechanics & Fluid Dynamics",
+      "text": "UPSC 2021 · Mathematics Paper 2 · Question 5 · Section B · Numerical Analysis & Computer Programming (official scan)",
+      "scanImages": [
+        "scan-01.jpg",
+        "scan-02.jpg",
+        "scan-03.jpg"
+      ],
+      "moduleId": "numerical-analysis",
+      "module": "Numerical Analysis & Computer Programming",
+      "themeId": "numerical-analysis",
+      "theme": "Numerical Analysis & Computer Programming",
       "subthemes": [],
       "sourcePdf": "https://www.upsc.gov.in/sites/default/files/Mathematics Paper-II.pdf",
       "notes": {
@@ -810,12 +924,15 @@
       "year": 2021,
       "number": 6,
       "section": "B",
-      "marks": 15,
-      "text": "6. (@@) Tate\n2 2.\nazo u_ ou O<x<L, t>0O\nax? at?\nwl Wet\n1 ou\nule =ix-x), SH\n@ sftafera eet ara Aifare |\nSolve the wave equation\n2 2\nqo u_ vu O<x<L, t>0\nax? at?\nsubject to the conditions\n1 dul\nul )=Fxc—x, 20\n(b) AR A ag areh T srk sea GEA F(x y, z)  Profee aik wa F(x, y z) Hae\nfife aM FAH BTEI GATE vftay Wife :\n[ «x | oy | z [Freya\n1 1 1 1\n1 0 1 1\n1 fo) Oo oO\noO 1 Oo oO\nOo oO 1 (0)\nHXS-B-MTH/10 6\n\nObtain the Boolean function F(x, y, z) based on the table given below. Then\nsimplify F(x, y, z) and draw the corresponding GATE network :\n[x | vy | 2 [Pwus\n1 1 1 1\n1 al Oo af\n0 1 1 1\n(0) il Oo 0\nOo Oo 1 Oo\nfo) Oo Oo Oo\n15\n() OA frat Ret on a ae seh wH afsara Sh & fae a so seamM sofa aA a\npot & Prara At afer & fore cash etter ara Aire |\nObtain the Lagrangian equation for the motion of a system of two particles of\nunequal masses connected by an inextensible string passing over a small\nsmooth pulley. 15",
-      "moduleId": "pde",
-      "module": "Partial Differential Equations",
-      "themeId": "pde",
-      "theme": "Partial Differential Equations",
+      "marks": 20,
+      "text": "UPSC 2021 · Mathematics Paper 2 · Question 6 · Section B · Mechanics & Fluid Dynamics (official scan, page split)",
+      "scanImages": [
+        "scan-01.jpg"
+      ],
+      "moduleId": "mechanics-fluid",
+      "module": "Mechanics & Fluid Dynamics",
+      "themeId": "mechanics-fluid",
+      "theme": "Mechanics & Fluid Dynamics",
       "subthemes": [],
       "sourcePdf": "https://www.upsc.gov.in/sites/default/files/Mathematics Paper-II.pdf",
       "notes": {
@@ -833,11 +950,15 @@
       "number": 7,
       "section": "B",
       "marks": 20,
-      "text": "7. (a) Sits sana wie\nar ae Fa ara Af, et D =? aon D’ = 2%\nox oy\nFind the general solution of the partial differential equation\nCc) a\nwhere D = — and D’=—.\nax oy 15\n(b) wate % Freee\na settee fa arr 4 arede sist oes wal ee ara Fife, we Te ae} are fH en ae\nfat sma ar fara & watatta wo 4 sega 21\nHXS-B-MTH/10 7 [ P.T.O.\n\nSolve the system of equations\ncorrect up to 4 significant figures by using Gauss-Seidel method after verifying\nwhether the method is applicable in your transformed form of the system. 15\n> A(-yi+xj) 2 p E\n() waigg fH G =F, (a, = fears) ww dees onitied ae af 1 ara-tart Fanfare\nx“ +y\nRa afer waER fara 2? ate vi, Aan fava Fanfare)\nShow that q =Atyi+ ed) (A = constant) is a possible incompressible fluid\nx*+y\nmotion. Determine the streamlines. Is the kind of the motion potential? If yes,\nthen find the velocity potential. 20",
-      "moduleId": "mechanics-fluid",
-      "module": "Mechanics & Fluid Dynamics",
-      "themeId": "mechanics-fluid",
-      "theme": "Mechanics & Fluid Dynamics",
+      "text": "UPSC 2021 · Mathematics Paper 2 · Question 7 · Section B · Linear Programming (official scan)",
+      "scanImages": [
+        "scan-01.jpg",
+        "scan-02.jpg"
+      ],
+      "moduleId": "linear-programming",
+      "module": "Linear Programming",
+      "themeId": "linear-programming",
+      "theme": "Linear Programming",
       "subthemes": [],
       "sourcePdf": "https://www.upsc.gov.in/sites/default/files/Mathematics Paper-II.pdf",
       "notes": {
@@ -855,7 +976,10 @@
       "number": 8,
       "section": "B",
       "marks": 20,
-      "text": "8. (a) ~ifie fate ar saa Sem aif Hae atte p = (z+ gy)? BY TarHe aa AT)\nFind a complete integral of the partial differential equation p=(z+qy)” by\nusing Charpit’s method. 15\n(b) Fea} Wea siader wa A oqrafa Afsre cen gle-faxetor oft Asie\nDerive Newton’s backward difference interpolation formula and also do error\nanalysis. 15\n(o) aaige f af fara tan) z & fae oro-tant an anf am, ga 1 feet of fg KT\nPraag an z= +i % fafa sifae)\nShow that for the complex potential tan”! z, the streamlines and equipo-\ntential curves are circles. Find the velocity at any point and check the\nsingularities at z= +i. 20\nkkk\nHXS-B-MTH/10 8 SB22—738",
+      "text": "UPSC 2021 · Mathematics Paper 2 · Question 8 · Section B · Partial Differential Equations (official scan)",
+      "scanImages": [
+        "scan-01.jpg"
+      ],
       "moduleId": "pde",
       "module": "Partial Differential Equations",
       "themeId": "pde",
@@ -872,12 +996,115 @@
       }
     },
     {
+      "id": "math2-2019-q1",
+      "year": 2019,
+      "number": 1,
+      "section": "A",
+      "marks": 20,
+      "text": "UPSC 2019 · Mathematics Paper 2 · Question 1 · Section A · Algebra (official scan, page split)",
+      "scanImages": [
+        "scan-01.jpg"
+      ],
+      "moduleId": "algebra",
+      "module": "Algebra",
+      "themeId": "algebra",
+      "theme": "Algebra",
+      "subthemes": [],
+      "sourcePdf": "https://www.upsc.gov.in/sites/default/files/QP-CSM19-Mathematics-II.pdf",
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "math2-2019-q2",
+      "year": 2019,
+      "number": 2,
+      "section": "A",
+      "marks": 20,
+      "text": "UPSC 2019 · Mathematics Paper 2 · Question 2 · Section A · Algebra (official scan, page split)",
+      "scanImages": [
+        "scan-01.jpg"
+      ],
+      "moduleId": "algebra",
+      "module": "Algebra",
+      "themeId": "algebra",
+      "theme": "Algebra",
+      "subthemes": [],
+      "sourcePdf": "https://www.upsc.gov.in/sites/default/files/QP-CSM19-Mathematics-II.pdf",
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
       "id": "math2-2019-q3",
       "year": 2019,
       "number": 3,
       "section": "A",
-      "marks": 6,
-      "text": "3.(a) x)=—™ __, VxeR(C~, 0)\nuaa afr a Tat ae |\nDiscuss the uniform convergence of\n; mx\nIu) 1+n?x?\n= eS 2 Sis 15\n3.(o) Uren ferftr a setae aR ee fee Me aE at ea AA:\naareriteeet Aine Z =x, + 2x,-3x,— 2x, i\nare fee\nMR xxx ae 0\nSolve the linear programming problem using Simplex method.\nMinimize Z= x, + 2x,—3x,— 2x,\nsubject to\n3.00) war | Re(2?)de a ARTE a CH MTI-AT OF 2+ 47 TH R, Tet CTH ;\nWand y=x72 | :\nEvaluate the integral j. Re(z?)dz from 0 to 2 + 4i along the curve C where C is a\nparabola y =x’. 10\n3.4) Fife fs 0, afer aera Ro UH HEM Hae @ aa Peat fH R/(a) TH BAZ |\nLet a be an irreducible element of the Euclidean ring R, then prove that R/(a) is a\nfield. ; 10\n4(a) fx, y, D=er2 a after ae at at ad fH am wd 224+324+2=c2,\nFind the maximum value of f(x, y, z) =xy?z* subject to the subsidiary condition\nSDF-B-MTH 4\n\n4(o) A fem sy 3 fig 2-0 She dike Boh freak &, waa da ue wre ae,\nwt fe 84 O<|z|<27 4 AHF |\nObtain the first three terms of the Laurent series expansion of the function\nfO=ary about the point z= 0 valid in the region 0<|z|<2m. 10\n7 vx\n4) f Jade % after at AAfE |\n1\n2\nDiscuss the convergence of f Hae 15\n1 fn\n4(é) Frafafaa ua. th. oh. oe fra ae,\n: aftrrcriie fife Z= 2x, + 4x, + 4x3 —3x,\nawd f&\nwhe are ar Saar aA EE, Teafr ae fos qPrarel MATT (x, x) FTA AEF |\nConsider the following LPP,\nMaximize Z=2x, + 4x2 + 4x3 — 3x,\nsubject to\nand —X), Xz, X3, x4 20\n: Use the dual problem to verify that the basic solution (x,, x2) is not optimal. 10\n‘Gus ‘B’ SECTION ‘B’\n5(a)  freafafaa case :\n& ae feu ae ys ga an Ue aiken sat allen sary |\nForm a partial differential equation of the family of surfaces given by the following\nexpression :\n5(b) ether fat ar goal axe et sefisita (ifesea) arlene x logy) x= 1-2 FT\n; arate Wet eaaera & da eal ae wet fra |\nApply Newton-Raphson method, to find a real root of transcendental equation\nx log) x = 1-2, correct to three decimal places. 10\n5 SDF-B-MTH\n\n5(c) WH 2a TTS AY Ue UT BS Od a RR OO Sete GA fa aes 2,\nWt O@ sea OZ Saka: oma aa a gat @, stk Oa Psa HT oc Tat 2;\noA. ATA At ALAA |\nA uniform rod OA, of length 2a, free to turn about its end O, revolves with angular\nvelocity @ about the vertical OZ through QO, and is inclined at a constant angle @ to\nOZ; find the value of a. 10\n\n5d) ae ae A et-ger fa ar went ae (0)=1 & aA saat ata\n\n2 2\nBATA * a x02 ww | ahaa SAA aK GEE EI ste rT\ny+x\narg (ey 4) 0.2 aT STaT Fife |\n: Gi yax bs\nUsing Runge-Kutta method of fourth order, solve —-=-;——> with y(0)=1 at\ndx y* +x\nx=0-2. Use four decimal places for calculation and step length 0-2. 10 {\n5(e)  eagea fran} sera} ge waaA y= | Sy a pier wa 8 fA,\nware aré sarge cea we Sheard veer (ag /C/C't) fre |\nDraw a flow chart and write a basic algorithm (in FORTRAN/C/C**) for evaluating\n6\ny=] a using Trapezoidal rule. 10\n9 itz\n6(a) wae ailfe Uaenncd aifttes aan alee\nou ou\nae ea eer u=l+y % WA x=1 K :\nIx\nafteratirs fate % ext et Ft | ;\nSolve the first order quasilinear partial differential equation by the method of charac-\nteristics :\nou ou ; nmeeoen &\n. x—+(u-x-y)— =x+2y in x>0,-0o<y<o with uw=1+yonx=1. 15\nox oy\n6(o) weatfefea densi & qaqa at wah aye cand as fate den vale A wa\naie :\nGi) yorten 524 at fared vale F\n(iii) GAs 5280 HI Vequaea dala F |\n_ SDEB-MTH 6\n\n‘ Find the equivalent numbers given in a specified number to the system mentioned\nagainst them :\n(i) Integer 524 in binary system.\n(iii) decimal number 5280 to hexadecimal system.\n(iv) Find the unknown number (1101-101), — (?)10. 1S:\n6(c) we Pret a wake Bear karen aera faire fet free, us b Pret are,\nfre ere’ fae Hew (rol) & | eater AR aa HB et UH @-af1+45]\na\n: THATS Tet MTR wiles H ere BI\nA circular cylinder of radius a and radius of gyration k rolls without slipping inside\na fixed hollow cylinder of radius b. Show that the plane through axes moves in a\n2\ncircular pendulum of length (6— oft + | : 20\na\n7a)  Sfteer erat ar oat axa EU, UH Alen, Wt fH UH Geek aa Tet (inclined\nplane) We Ata A AK eH TTS, HAT aa a, AAS x, ter OK Aksar fag a alet\nwerd ferg Ht atte |\nUsing Hamilton’s equation, find the acceleration for a sphere rolling down a rough\ninclined plane, if x be the distance of the point of contact of the sphere from a fixed\npoint on the plane. 15\n7.00)  frafefaa atari at aea-adea graf ff & ea, area & at da Sart\nApply Gauss-Seidel iteration method to solve the following system of equations :\n2x — 3y + 20z = 25, correct to three decimal places. 15\n: ¢ SDF-B-MTH",
+      "marks": 20,
+      "text": "UPSC 2019 · Mathematics Paper 2 · Question 3 · Section A · Real Analysis (official scan, page split)",
+      "scanImages": [
+        "scan-01.jpg"
+      ],
+      "moduleId": "real-analysis",
+      "module": "Real Analysis",
+      "themeId": "real-analysis",
+      "theme": "Real Analysis",
+      "subthemes": [],
+      "sourcePdf": "https://www.upsc.gov.in/sites/default/files/QP-CSM19-Mathematics-II.pdf",
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "math2-2019-q5",
+      "year": 2019,
+      "number": 5,
+      "section": "B",
+      "marks": 20,
+      "text": "UPSC 2019 · Mathematics Paper 2 · Question 5 · Section B · Complex Analysis (official scan, page split)",
+      "scanImages": [
+        "scan-01.jpg"
+      ],
+      "moduleId": "complex-analysis",
+      "module": "Complex Analysis",
+      "themeId": "complex-analysis",
+      "theme": "Complex Analysis",
+      "subthemes": [],
+      "sourcePdf": "https://www.upsc.gov.in/sites/default/files/QP-CSM19-Mathematics-II.pdf",
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "math2-2019-q6",
+      "year": 2019,
+      "number": 6,
+      "section": "B",
+      "marks": 20,
+      "text": "UPSC 2019 · Mathematics Paper 2 · Question 6 · Section B · Real Analysis (official scan, page split)",
+      "scanImages": [
+        "scan-01.jpg"
+      ],
       "moduleId": "real-analysis",
       "module": "Real Analysis",
       "themeId": "real-analysis",
@@ -899,7 +1126,35 @@
       "number": 7,
       "section": "B",
       "marks": 20,
-      "text": "7.(c) feafafra fedta anfe & aiftts sage eeieer at fafea ea A aarti ae siz\nAAT Sat Wa SR :\nOy poe eee Ot 5. |\nax? dxdy ay? ay\nReduce the following second order partial differential equation to canonical form\nand find the general solution : :\nFat 7 Be ee es, ; 20\nax? axdy ay? ay\n8(a) fa a ata ae & faz\nX=AB+ABC+ ABC + AC\n(i) worn & fea afta arta di |\n(i) Sos ATA FE I\nGi) arta aoe & fea ase ara dis | ;\nGiven the Boolean expression .\nX= AB+ABC+ ABC + AC\n(i) Draw the logical diagram for the expression.\n(ii) Minimize the expression.\n(iii) Draw the logical diagram for the reduced expression. 15\n8b) wh Boar Rav aien, free ag FRR 3 ae UAT ph UH ata seed oe F fsa:\nSOT SRT S| GAR SHA HK car TS, at ule fee ae Ft ae oR feet AT HK CTs\nnie eZ) em |\nDela dts :\nA sphere of radius R, whose centre is at rest, vibrates radially in an infinite\nincompressible fluid of density p, which is at rest at infinity. If the pressure at\ninfinity is JT, so that the pressure at the surface of the sphere at time ¢ is s\n1 |d?R?_ (adRyY :\n8(c) at Wei, He m afeH aT Ca, 0), (a, 0) frgait oe TAT 2m afte aT eH ae fry\nue fea 81 cule fe akan aw 2 +2)? = 022-2 + Ary) EAST ARH\nterftex 2 |\nafte & sft carte fea aerate feet st firg & (2ma?)/(r, 7273) % Wet T1312 r, atat a\nafte fire & fargait At sere: afar & |\nTwo sources, each of strength m, are placed at the points (a, 0), (a, 0) and\na sink of strength 2m at origin. Show that the stream lines are the curves\n(x2 +97)? = a2(x? —y? + Axy), where A is a variable parameter.\nShow also that the fluid speed at any point is (2ma*)/(r, 1273), where r;,r2 andr;\nare the distances of the points from the sources and the sink, respectively. 20\nSDF-B-MTH 8",
+      "text": "UPSC 2019 · Mathematics Paper 2 · Question 7 · Section B · Algebra (official scan, page split)",
+      "scanImages": [
+        "scan-01.jpg"
+      ],
+      "moduleId": "algebra",
+      "module": "Algebra",
+      "themeId": "algebra",
+      "theme": "Algebra",
+      "subthemes": [],
+      "sourcePdf": "https://www.upsc.gov.in/sites/default/files/QP-CSM19-Mathematics-II.pdf",
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "math2-2019-q8",
+      "year": 2019,
+      "number": 8,
+      "section": "B",
+      "marks": 20,
+      "text": "UPSC 2019 · Mathematics Paper 2 · Question 8 · Section B · Linear Programming (official scan, page split)",
+      "scanImages": [
+        "scan-01.jpg"
+      ],
       "moduleId": "linear-programming",
       "module": "Linear Programming",
       "themeId": "linear-programming",
@@ -916,12 +1171,90 @@
       }
     },
     {
+      "id": "math2-2018-q1",
+      "year": 2018,
+      "number": 1,
+      "section": "A",
+      "marks": 20,
+      "text": "UPSC 2018 · Mathematics Paper 2 · Question 1 · Section A · Complex Analysis (official scan, page split)",
+      "scanImages": [
+        "scan-01.jpg"
+      ],
+      "moduleId": "complex-analysis",
+      "module": "Complex Analysis",
+      "themeId": "complex-analysis",
+      "theme": "Complex Analysis",
+      "subthemes": [],
+      "sourcePdf": "https://www.upsc.gov.in/sites/default/files/MATHEMATICS-PAPER-II.pdf",
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "math2-2018-q2",
+      "year": 2018,
+      "number": 2,
+      "section": "A",
+      "marks": 20,
+      "text": "UPSC 2018 · Mathematics Paper 2 · Question 2 · Section A · Linear Programming (official scan, page split)",
+      "scanImages": [
+        "scan-01.jpg"
+      ],
+      "moduleId": "linear-programming",
+      "module": "Linear Programming",
+      "themeId": "linear-programming",
+      "theme": "Linear Programming",
+      "subthemes": [],
+      "sourcePdf": "https://www.upsc.gov.in/sites/default/files/MATHEMATICS-PAPER-II.pdf",
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
       "id": "math2-2018-q3",
       "year": 2018,
       "number": 3,
       "section": "A",
       "marks": 20,
-      "text": "3.(b) wae wa agua ae cutee fe pepe, gar?\nShow by applying the residue theorem that -_——. — .a>0. 15\nA(etay 4a>",
+      "text": "UPSC 2018 · Mathematics Paper 2 · Question 3 · Section A · Linear Programming (official scan, page split)",
+      "scanImages": [
+        "scan-01.jpg"
+      ],
+      "moduleId": "linear-programming",
+      "module": "Linear Programming",
+      "themeId": "linear-programming",
+      "theme": "Linear Programming",
+      "subthemes": [],
+      "sourcePdf": "https://www.upsc.gov.in/sites/default/files/MATHEMATICS-PAPER-II.pdf",
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "math2-2018-q5",
+      "year": 2018,
+      "number": 5,
+      "section": "B",
+      "marks": 20,
+      "text": "UPSC 2018 · Mathematics Paper 2 · Question 5 · Section B · Algebra (official scan, page split)",
+      "scanImages": [
+        "scan-01.jpg"
+      ],
       "moduleId": "algebra",
       "module": "Algebra",
       "themeId": "algebra",
@@ -938,16 +1271,44 @@
       }
     },
     {
-      "id": "math2-2018-q4",
+      "id": "math2-2018-q6",
       "year": 2018,
-      "number": 4,
-      "section": "A",
+      "number": 6,
+      "section": "B",
       "marks": 20,
-      "text": "4.(a) ae atte fe Rat arate denst a aqeaa & aa (ROR tan Fate\nait x, yer %& fae frafataa witecr any eid é :\n(i) fae +y) =f) +I)\nGi) fey) =f) JO)\neulen fir aft wx EIR fear at at f(x) =0 7 fl =x z1\nSuppose JR be the set of all real numbers and f: RR is a function such that the\nfollowing equations hold for all x, y EWR:\n(ii) fey) =f) SO)\nShow that x EUR either f(x) = 0, or, f(x) =x. 20\n1\n40) FF G42) am frefia at art citer Avi wa Ae wa\n(iii) |z\\>2\n. . 7 2 - 1\nFind the Laurent’s series which represent the function @7)\\G+2) when\nEGT-D-MTH 4\n\n4(c) wer tad H ula wares O,, 0,, 0;,0,,0, eat Wha Afit M,, Mp, Ms, My, Ms @ |\naftaret arta, wa f& O, Wate M, (i,j=1,2,...,5) Aaftr at after aa @,\n2 a € | afr um wits 2 f O, a ded asia M, ar ofa Set TAT O, aT\niadt waft M, ar afta aa ct gona vet toon went @ 1 arr areqe a a\n@ | seam fraaa aon zeae Praca at arta sere Fife |\naatia\nMachine\nM,; M, My M, Ms\nIn a factory there are five operators O),0 ,0;,0,,0; and five machines\nMy,, M2, M3, My, Ms. The operating costs are given when the O, operator operates\nthe M; machine (i, j = 1, 2, ..., 5). But there is a restriction that O, cannot be allowed\nto operate the third machine M, and O, cannot be allowed to operate the fifth\nmachine Ms. The cost matrix is given above. Find the optimal assignment and the\noptimal assignment cost also. 15\navs ‘B’ SECTION ‘B’\n$(a) 9 Wega: x2 + 42+ 422 = 4% TH a @al-ael & Gas a aif caaa wlaT\nara Afra, A xy Gada * aa adi 1\nFind the partial differential equation of the family of all tangent planes to the\nellipsoid : x? + 4y? + 4z2=4, which are not perpendicular to the xy plane. 10\n5(b) 9 er H gaia ef a Petas—ardia weg u, we Ae ae fH uy =1, w= 9,\nuy = 25, uy = 55 TAT us = 105 eat wa ze |\nUsing Newton’s forward difference formula find the lowest degree polynomial u,\nwhen it is given that u, =1, w.=9, u,=25, ug=55 and us= 105. 10\nS(c) WH aefisa aa ware & fee a7 (ujv,w) H BA yew wax? +2432 4\nvexty—ye tax Re ae o 1 ae det eee wom fruier Afi arf & aiaer\nwie A aqe | aT aes A A na Afra |\nFor an incompressible fluid flow, two components of velocity (u, v, w) are given by\nu=2x2 + 2y2 + 322, p= x2y—y!z + zx. Determine the third component w so that they\nsatisfy the equation of continuity. Also, find the z-component of acceleration. 10\n5 EGT-D-MTH\n\n5(d) fam wae & wren Bt aR Ue tart At cra (fait /a 4) fafa aot (fre\n4) x fea aot & ga di a2:\nfear & 4 far & eetara @ uw & 20 faeei Fae ag afar Gat (fei. A)\nara aAtfire |\nwaa (fiz)\nTime (Minutes)\ncH (feet /a) 32 5\nSpeed (Km/h)\nStarting from rest in the beginning, the speed (in Km/h) of a train at different times\n(in minutes) is given by the above table :\nUsing Simpson’s rd tule, find the approximate distance travelled (in Km) in\n20 minutes from the beginning. 10\nS(e) WATT: xex—-1 = 0 fH fRar-fale & Ge, Games & 4 Hat TH, Ba AG fw,\narent treitfter farfira |\nWrite down the basic algorithm for solving the equation : xe*— 1 =0 by bisection\nmethod, correct to 4 decimal places. 10\n6(a)  - HR HAH BATT:\nmet p= Sat, ar earns Gat are Ae, Tar THB, WH: x= Ky =P,z=1\n43 ye ae wares ye A A wa Afra |\nFind the general solution of the partial differential equation :\nwhere p -%, q -%, and find its integral surface that passes through the curve :\nx \\y\nxX=LyY=P,2=1 15\n6(o)  wetfefaa dest & ange wt was wae calf af fare den yafe 4, aa\narin, |\n(iii) (C4F2),, A earmea Taft F\n(iv) (418),9 1 feared vate F\nEGT-D-MTH 6\n\nFind the equivalent of numbers given in a specified number system to the system\nmentioned against them.\n(i) (111011-101), to decimal system\n(ii) (1000111110000-00101100), to hexadecimal system\n(iii) (C4F2),¢ to decimal system\n(iv) (418), to binary system 15\n6(c) aa afifere fae aiPrefrare a Gracie:\nL=A4m(ai? + 2biy + oh?) -Lk(ax? + 2bxry+ cy”),\n& Err etka & wet a, b,c, m(>0), k(>0) ris Ean beac Sra wlan\nwa fafar aa fra at vested |\nSuppose the Lagrangian of a mechanical system is given by\nL=4m(ai* + 2biy + cf”) -—Lk(ax? + 2bxy + cy),\nwhere a, b, c, m(>0), k(>0) are constants and b?# ac. Write down the Lagrangian\nequations of motion and identify the system. 20\n74a) -ifaren seen afer\n(2D? -5DD’ +2D\")z = Ssin(2x+ y)+24(y-x) +e\" at ca Az\nCl) Cl)\nwel = \">\nSolve the partial differential equation :\nwhere pad Dad. 15\n7.(b) — feartest a, b,c ara Prarie anf aaa\nA h\n[reas = Harcoy+ty{*) +o(h| aif & sf west urdta aust & fare wet\nSt | xawa teq-afe an ar it rat Afra |\nFind the values of the constants a, b,c such that the quadrature formula\nir (x)dx = Har (0) +4) +of (| is exact for polynomials of as high degree as\npossible, and hence find the order of the truncation error. 15\n7 EGT-D-MTH\n\nT.Ac) fet aiPrer Brava ar @frectfraat H = pyq, — 0g? +593 — progr % GA era %,\nwet a,b ferin % | Mreaaa wlth an ga Panfere car guise fe\nPa bt _ faq |\nq\nThe Hamiltonian of a mechanical system is given by,\nH = p,q, — aq} +693 — p2g2, where a,b are the constants. Solve the Hamiltonian\nequations and show that ba = constant. 20\n1\n8(a) gala are:\n(a+b)-(b+c)+b-(2+2) ® aeita-aemrina & frat at sya ae & Gr ae\nAre | zt At acaar-aroit & seat Pael wars ws F ferfar |\nSimplify the boolean expression :\n(a+b)-(b +c) +b-(@ +7) by using the laws of boolean algebra. From its truth table\nwrite it in minterm normal form. 15",
-      "moduleId": "linear-programming",
-      "module": "Linear Programming",
-      "themeId": "linear-programming",
-      "theme": "Linear Programming",
+      "text": "UPSC 2018 · Mathematics Paper 2 · Question 6 · Section B · Partial Differential Equations (official scan, page split)",
+      "scanImages": [
+        "scan-01.jpg"
+      ],
+      "moduleId": "pde",
+      "module": "Partial Differential Equations",
+      "themeId": "pde",
+      "theme": "Partial Differential Equations",
+      "subthemes": [],
+      "sourcePdf": "https://www.upsc.gov.in/sites/default/files/MATHEMATICS-PAPER-II.pdf",
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "math2-2018-q7",
+      "year": 2018,
+      "number": 7,
+      "section": "B",
+      "marks": 20,
+      "text": "UPSC 2018 · Mathematics Paper 2 · Question 7 · Section B · Partial Differential Equations (official scan, page split)",
+      "scanImages": [
+        "scan-01.jpg"
+      ],
+      "moduleId": "pde",
+      "module": "Partial Differential Equations",
+      "themeId": "pde",
+      "theme": "Partial Differential Equations",
       "subthemes": [],
       "sourcePdf": "https://www.upsc.gov.in/sites/default/files/MATHEMATICS-PAPER-II.pdf",
       "notes": {
@@ -965,13 +1326,41 @@
       "number": 8,
       "section": "B",
       "marks": 20,
-      "text": "8.(b) Ua fefaeta fawa-ware & fare Se fart @= 27 p—ay? 44° -y*) Gre fe eT\n2 xay Renst & aafeu aa seat an Raker Ae | arrewert y ar ht fate\nAfi sik aia Afra fe aa g wR aera ware aH frefia axa @ saat Ae |\nFor a two-dimensional potential flow, the velocity potential is given by\n9 =x?y—xy? +4 (x3 — y’). Determine the velocity components along the directions\nx and y. Also, determine the stream function y and check whether ¢ represents a\npossible case of flow or not. 15\n&(c) Wen Yael walter (uaa) BA O<a<r<b, 0<0<2n FH Met | HAH Ta TTG-\nsade €.1 arate Rent & ara-ara ary 0° x (Sx wat ore 2 wale are fare\nar amy T= Keoss UR aaTY Tar stat, Wel K wen Ferien @ 1 aera F arse\naa faker ftir |\nA thin annulus occupies the region 0<a<r<5, 0<0<2z7. The faces are insulated.\nAlong the inner edge the temperature is maintained at 0°, while along the outer edge\nthe temperature is held at T=K cost where K is a constant. Determine the\ntemperature distribution in the annulus. 20\nEGT-D-MTH 8",
-      "moduleId": "mechanics-fluid",
-      "module": "Mechanics & Fluid Dynamics",
-      "themeId": "mechanics-fluid",
-      "theme": "Mechanics & Fluid Dynamics",
+      "text": "UPSC 2018 · Mathematics Paper 2 · Question 8 · Section B · Partial Differential Equations (official scan, page split)",
+      "scanImages": [
+        "scan-01.jpg"
+      ],
+      "moduleId": "pde",
+      "module": "Partial Differential Equations",
+      "themeId": "pde",
+      "theme": "Partial Differential Equations",
       "subthemes": [],
       "sourcePdf": "https://www.upsc.gov.in/sites/default/files/MATHEMATICS-PAPER-II.pdf",
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "math2-2015-q1",
+      "year": 2015,
+      "number": 1,
+      "section": "A",
+      "marks": 20,
+      "text": "UPSC 2015 · Mathematics Paper 2 · Question 1 · Section A · Real Analysis (official scan, page split)",
+      "scanImages": [
+        "scan-01.jpg"
+      ],
+      "moduleId": "real-analysis",
+      "module": "Real Analysis",
+      "themeId": "real-analysis",
+      "theme": "Real Analysis",
+      "subthemes": [],
+      "sourcePdf": "https://www.upsc.gov.in/sites/default/files/MATHEMATICS_II.pdf",
       "notes": {
         "introduction": "",
         "staticNotes": "",
@@ -987,7 +1376,10 @@
       "number": 2,
       "section": "A",
       "marks": 20,
-      "text": "2. (a) FR ww ae 2, Rem aes sara 1 8 aM R seas R’ (R onto KR’) MH\nrari 6%, at fire ARE Re HI AGH BAT ofl) 2\nIf R is a ring with unit element 1 and ¢ is a homomorphism of R onto R’,\nprove that $(l) is the unit element of R’. 15\n(b) Ml ee\n1 tiexsi\n- f= { n? ont n\n4\n‘dan aarnertia 2? aR af, @ f feds sa ae AP)\nIs the function\n1\nseay=[ wi <*Sh\nRiemann integrable? If yes, obtain the value of i f(x) dx. 15\n() aR ft) = —22-3_ & fey 2-0 ee wo aa Ber en AT AR A wer a aT\nFIST |\nFind all possible Taylor’s and Laurent’s series expansions of the function\nfig=— 743 about the point z=0.",
+      "text": "UPSC 2015 · Mathematics Paper 2 · Question 2 · Section A · Complex Analysis (official scan)",
+      "scanImages": [
+        "scan-01.jpg"
+      ],
       "moduleId": "complex-analysis",
       "module": "Complex Analysis",
       "themeId": "complex-analysis",
@@ -1009,7 +1401,11 @@
       "number": 3,
       "section": "A",
       "marks": 20,
-      "text": "3. (a) arf sats waa a eer faftac) gaa FATS HM EL TT\n2\ni et ae; C:|z[=2\nar aM Prafere|\nState Cauchy’s residue theorem. Using it, evaluate the integral\nz\n: (b) Berth AL AOR > Re Fen afta & fore shar FRc\nnal (Ltn°x*)\nTest the series of functions x — for uniform convergence. 15\nnal (itn’x*)\n| C-AVZ-0-RNBUB/35 3 { P.T.O.\n\n(oc) Prafefas Yes sora aren x fran Fife :\naftrnartione HIE Z = x +2xq -3xg +4X4\nara\nXy +Xq +2x3 +3xq =12\nXqt2xz+xX4=8\nXy, Xq,%3, Xq_ 20\nConsider the following linear programming problem : 5 :\n: Maximize Z = x, +2xq -3x3 +4x4 {\nsubject to\nXqt2x3 +x, =8\nX1, XQ, X3, Xq 20\n() Stern ar gee are Be ea SH sree gorge Are) Fa BWA-A stae send gaa ea\n$ ak Sa-a sre aed Gara eri 8?\nUsing the definition, find its all basic solutions. Which of these are\ndegenerate basic feasible solutions and which are non-degenerate basic\nfeasible solutions?\n(i) WHEN Hl oe Poe Pet aay fH paar FETA Fa Bl sree Gea Bell F SA-a1/a GEM FA\na/e\nWithout solving the problem, show that it has an optimal solution. Which\nof the basic feasible solution(s) is/are optimal? 20",
+      "text": "UPSC 2015 · Mathematics Paper 2 · Question 3 · Section A · Real Analysis (official scan)",
+      "scanImages": [
+        "scan-01.jpg",
+        "scan-02.jpg"
+      ],
       "moduleId": "real-analysis",
       "module": "Real Analysis",
       "themeId": "real-analysis",
@@ -1031,11 +1427,15 @@
       "number": 4,
       "section": "A",
       "marks": 20,
-      "text": "4. (a) &n Peafaied apa ser am an yo & seria yoie wid sara 8? ate ter 8, a ame\nfan a ak:\nDo the following sets form integral domains with respect to ordinary addition\nand multiplication? If so, state if they are fields : 5+6+4=15,\n() bv2 se A densi w apes, sel Doha dene\nThe set of numbers of the form bV2 with b rational\n(i) wa isi a aE\nThe set of even integers\n(iy Ter Goel a ayer :\nThe set of positive integers\n(b} Ba x? +2y? <1 RM f(x, Y= x? +3y? -y % Ade (tate) Saas we Ae al\nal ae Afr)\nFind the absolute maximum and minimum values of the function\nF(x, wax? +3y? -y over the region x? +2y? <1. 15\nC-AV%-0-RBYUB/35 4\n\n() Prefefes Yes dora aren at caer fe a ga Ae) ee Se aren fafau: A 7g\nwren ft gan aro 8 at aren a geen eet A fafa :\narmenia He Z = 2x, -4x_ +5x3\naad\n7 jolve the following linear programming problem by the simplex method. Write\ni Solve the following li I pl\nits dual. Also, write the optimal solution of the dual from the optimal table of\nthe given problem : 20\nMaximize Z =2x, —-4xq +5x3\nsubject to\nX, +4xXq-2xz $2\nws—B / SECTION—B",
-      "moduleId": "linear-programming",
-      "module": "Linear Programming",
-      "themeId": "linear-programming",
-      "theme": "Linear Programming",
+      "text": "UPSC 2015 · Mathematics Paper 2 · Question 4 · Section A · Real Analysis (official scan)",
+      "scanImages": [
+        "scan-01.jpg",
+        "scan-02.jpg"
+      ],
+      "moduleId": "real-analysis",
+      "module": "Real Analysis",
+      "themeId": "real-analysis",
+      "theme": "Real Analysis",
       "subthemes": [],
       "sourcePdf": "https://www.upsc.gov.in/sites/default/files/MATHEMATICS_II.pdf",
       "notes": {
@@ -1053,11 +1453,15 @@
       "number": 5,
       "section": "B",
       "marks": 20,
-      "text": "5. (a) sift sana atta\nwet p= 22 an gq = 2, Bea A\nax oy\nSolve the partial differential equation\nwhere po and Pes,\nox oy 10\n(b) (D? +DD’-2D’?)u=e**¥ A wa Af, vel p= 2 am p=2.\nx y\nSolve (D? + DD’ -2D’)u =e** ¥, where D = 2 ana p'=2., 10\n2 Ox ay\n‘ (o) aia sae (pag) > 1) v (png) > -r) & fee fa ad p,q, r 4 ge (aa fRiea)\nfrig (Rasigita) wary wa wa He! en Ra en aia cass UH Adu 8 a Hu\nyraefa 8?\nFind the principal (or canonical) disjunctive normal form in three variables\np,q,r for the Boolean expression ((p~q)—> 17) v ((p~q)—-1). Is the given\nBoolean expression a contradiction or a tautology? 10\nC-AVZ-0-RBYB/35 5 [ P.T.O.\n\n(a) wrens x-feen 3 we GRA Fare Uy a fran Fifa! Ben a aw UH Ber Aphrg T fa 21\nware Ger wen an fava are Fife) wefite (eee) fieg A ara FIR!\nConsider a uniform flow Ug in the positive x-direction. A cylinder of radius ais\nlocated at the origin. Find the stream function and the velocity potential. Find\nalso the stagnation points. 10\nfe) Wms we ae wren tend x2 44? +2? =a?, 220%, O2-na & K-Fed, Tera-\nart a afta Fr) ;\nCalculate the moment of inertia of a solid uniform hemisphere t\nx? +y” +2? =a”, 220 with mass m about the OZ-axis. 10\na:",
-      "moduleId": "mechanics-fluid",
-      "module": "Mechanics & Fluid Dynamics",
-      "themeId": "mechanics-fluid",
-      "theme": "Mechanics & Fluid Dynamics",
+      "text": "UPSC 2015 · Mathematics Paper 2 · Question 5 · Section B · Partial Differential Equations (official scan)",
+      "scanImages": [
+        "scan-01.jpg",
+        "scan-02.jpg"
+      ],
+      "moduleId": "pde",
+      "module": "Partial Differential Equations",
+      "themeId": "pde",
+      "theme": "Partial Differential Equations",
       "subthemes": [],
       "sourcePdf": "https://www.upsc.gov.in/sites/default/files/MATHEMATICS_II.pdf",
       "notes": {
@@ -1075,7 +1479,10 @@
       "number": 6,
       "section": "B",
       "marks": 20,
-      "text": "6. (a) pcos(x+y)+qsin begaa we p= Sn ga, ah ares ea re we Are\nSolve for the general solution pcos(x+y)+q sin (x+y) =z, where p= 2 and\nIx.\noz\nay 15\n(b) treater sara a Feta HN EQ AAT Has aAET wh ve lPre Ten eaige fH A ahs a\nwe fanz 21\nSolve the plane pendulum problem using the Hamiltonian approach and show\nthat H is a constant of motion. 15\n(o) Tas aaaeh agua wa Fife, wt fraffea atest A wi eM ze :\nfQ-5) aa Aes\nFind the Lagrange interpolating polynomial that fits the following data :",
+      "text": "UPSC 2015 · Mathematics Paper 2 · Question 6 · Section B · Algebra (official scan)",
+      "scanImages": [
+        "scan-01.jpg"
+      ],
       "moduleId": "algebra",
       "module": "Algebra",
       "themeId": "algebra",
@@ -1097,11 +1504,15 @@
       "number": 7,
       "section": "B",
       "marks": 20,
-      "text": "7. (a) wiire-siein 4A wen\nUp-Uy +u=0, O<x<il, t>0\nuQ, }=u(ihL g=0, t20\nu(x, O)=x(l-x), O<x<l\nml a ae HE\nC-AVZ-0-RBYB/35 6\n\nFind the solution of the initial-boundary value problem\nUy —Uy, tuU=0, O<x<l, t>0\nu(x, O)=x{l-x), O<x<l 15\n(b) 7 HR A = 0-2 % wa D-ga agen fA ar ga ae RE ws aM aE\nBH - xy-2, y2)=3 A sivae (2, 2-4] 4 ea Fie\n\\ Solve the initial value problem B- xy-2, y{2)=3 in the interval [2, 2-4]\nusing the Runge-Kutta fourth-order method with step size h = 0-2. 15\n(co) Mara HR ue UH fare % WH Siteditaa a1 wa Fie 2 :\n2\nH=2_- bape\" 4 2 g2enatig tbe) 4K q?\nwel a, b, k erie %, g aretiga Pears 8 ae p ana sarehtaa FAT 81\nA Hamiltonian of a system with one degree of freedom has the form\n2\nH=P_~bape-®! 4 Po g2e-atig 4 heat) 4 Kg?\nwhere a, b, k are constants, q is the generalized coordinate and p is the\ncorresponding generalized momentum.\nf) we Meda & are we cash gra Ah)\ni Find a Lagrangian corresponding to this Hamiltonian.\nfi) WH Ira tare aa Alfie, Th fs aaa wT we wa SB snfira TE BI\nFind an equivalent Lagrangian that is not explicitly dependent on time.",
-      "moduleId": "linear-programming",
-      "module": "Linear Programming",
-      "themeId": "linear-programming",
-      "theme": "Linear Programming",
+      "text": "UPSC 2015 · Mathematics Paper 2 · Question 7 · Section B · Algebra (official scan)",
+      "scanImages": [
+        "scan-01.jpg",
+        "scan-02.jpg"
+      ],
+      "moduleId": "algebra",
+      "module": "Algebra",
+      "themeId": "algebra",
+      "theme": "Algebra",
       "subthemes": [],
       "sourcePdf": "https://www.upsc.gov.in/sites/default/files/MATHEMATICS_II.pdf",
       "notes": {
@@ -1119,11 +1530,14 @@
       "number": 8,
       "section": "B",
       "marks": 20,
-      "text": "8. (a) fida-wR site sana we\n2 2 2\n2 d0°u o*u 20*u du ou\nax2 Yay 7 ay? ax Yay\nwi fafea 69 8 aariia Ate cen gaa MATT eel Ba FA\n{ Reduce the second-order partial differential equation\n2 2 2\n20°u ou 2d*u du ou\n* ax? Yar ay ¥ ay? * Ox wy\ninto canonical form. Hence, find its general solution. 1s\nC-AVZ-0-RBUB/35 7 [ P.T.O.\n\n(b) TTsa-aide BR ar FRA Fe RU ae\nmr ee a Ary (aR yATShH Fifsr) 1\nFind the solution of the system x\nusing Gauss-Seidel method (make four iterations). 15\n(o) aig 3 sera: wafira nie A aire eae Bar eT He aI safes BI ITT He | vet A\nan acal a or aAtfire| aie ware are 8, a aterm ara Aifie err He aTT Hge\naa 81\nIn an axisymmetric motion, show that stream function exists due to equation\nof continuity. Express the velocity components in terms of the stream function.\nFind the equation satisfied by the stream function if the flow is irrotational. 20\nkkk\nbal ’",
-      "moduleId": "mechanics-fluid",
-      "module": "Mechanics & Fluid Dynamics",
-      "themeId": "mechanics-fluid",
-      "theme": "Mechanics & Fluid Dynamics",
+      "text": "UPSC 2015 · Mathematics Paper 2 · Question 8 · Section B · Linear Programming (official scan)",
+      "scanImages": [
+        "scan-01.jpg"
+      ],
+      "moduleId": "linear-programming",
+      "module": "Linear Programming",
+      "themeId": "linear-programming",
+      "theme": "Linear Programming",
       "subthemes": [],
       "sourcePdf": "https://www.upsc.gov.in/sites/default/files/MATHEMATICS_II.pdf",
       "notes": {
@@ -1141,11 +1555,15 @@
       "number": 1,
       "section": "A",
       "marks": 20,
-      "text": "1. (a) wo aie Gt 2.2 ae oro | & U | aga, at faa x0. eee\n. 1\nSeg ora es 8 i, wae || #22] a atta went\nmI N we Gam aA (aie) sayy 8? am a aT TH oRGe FIR)\nLet G be the set of all real2 x2 matsces| 3 I where xz #0. Show that Gis a 4\n1\ngroup under matrix multiplication. Let N denote the subset {| 0 t [ae Rh\nIs N a normal subgroup of G? Justify your answer. 10\n: dx\n(b) aria wre [° —— — & aaftteee ar oder RT\nTest the convergence of the improper integral i’ et 10\n(o) fre Afie fH WaT f(z) =u+iv, we |\n3 ay 3y a7\nx+y\n| Aperg oe shelters atten aot aE HEH 8, WY 20K fH Harpers HT ais Ae EI\n‘ Prove that the function f(z)=u+iv, where\n3 a ee\nx+y\n. satisfies Cauchy-Riemann equations at the origin, but the derivative of f at\nZ=0 does not exist. 10\n(a) WH fle) = oH an 0 ar a1 REE a eh aK -\nExpand in Laurent series the function f(z) a about z=O and z=1. 10\n27 (2-1)\nCP AS-A-OMUT/39 2 :\n\nfe) sierdta (arfta) fait & ara eat Ff :\naftemiga FRR Z =6x,4+5x5\nard fe\nSolve graphically :\nMaximize Z = 6x, + 5x9\nsubject to\nxX, +Xq S11\nXx, +2xy 26",
-      "moduleId": "real-analysis",
-      "module": "Real Analysis",
-      "themeId": "real-analysis",
-      "theme": "Real Analysis",
+      "text": "UPSC 2014 · Mathematics Paper 2 · Question 1 · Section A · Algebra (official scan)",
+      "scanImages": [
+        "scan-01.jpg",
+        "scan-02.jpg"
+      ],
+      "moduleId": "algebra",
+      "module": "Algebra",
+      "themeId": "algebra",
+      "theme": "Algebra",
       "subthemes": [],
       "sourcePdf": "https://www.upsc.gov.in/sites/default/files/MATHEMATICS-II.pdf",
       "notes": {
@@ -1163,11 +1581,15 @@
       "number": 2,
       "section": "A",
       "marks": 20,
-      "text": "2. (a) wate f Z, we Ba 21 wa Z, A (5) + 6)? wen (- [4]! ane AHL\nShow that Z, is a field. Then find ({5] + 6]? and (- [4])\"? in Z7. 15\n(b) [fej dx a ame fin, wef\n2xsinl-cost , xe]0,1)\nad) = x x\n. Integrate if f(x) dx, where\n2Qxsint-cost , xe]0,])\n= x x\n€-BRA-X-OBUB/39 3 [P.T.O.\n\ni\n() Prafefan visas aren % fer atte A aires ff & gr omnis anette area ga aT\nase) FIAT FEIT Fel co =H shee UI oft ga Ac :\n: Teter\nPo [effet its] wu\nLo tetas Te Tal s\nFind the initial basic feasible solution to the following transportation problem -\nby Vogel’s approximation method. Also, find its optimal solution and the\n| minimum transportation cost :\n| : Destinations\n[ [Pe | by] by | supply\n_ Loa tela tai Ts)\nLo [4 |s [oe Tal s\nDemand 6 10 15 4\n20",
-      "moduleId": "linear-programming",
-      "module": "Linear Programming",
-      "themeId": "linear-programming",
-      "theme": "Linear Programming",
+      "text": "UPSC 2014 · Mathematics Paper 2 · Question 2 · Section A · Algebra (official scan)",
+      "scanImages": [
+        "scan-01.jpg",
+        "scan-02.jpg"
+      ],
+      "moduleId": "algebra",
+      "module": "Algebra",
+      "themeId": "algebra",
+      "theme": "Algebra",
       "subthemes": [],
       "sourcePdf": "https://www.upsc.gov.in/sites/default/files/MATHEMATICS-II.pdf",
       "notes": {
@@ -1185,7 +1607,11 @@
       "number": 3,
       "section": "A",
       "marks": 20,
-      "text": "3. (a) waige f& aye {a+ bo:0° =1}, Fe a TH b as Gem &, wary am ae a\normia we aa 21 ;\nShow that the set {a+ bo:w° = 1}, where a and'b are real numbers, is a field\nwith respect to usual addition and multiplication. 1s\n(b) Wer , :\n% ant SS oe HT my, ,0) ROL aa SS\nfore ax dy ey ax wa we aa, rg (0 0) ox dy dy ox\naiace & sft fleet Fai\n' Obtain —A— and 4\" for the function\naxdy dy ox\nAlso, discuss the continuity of can and or at (0, 0).\naxdy dy ax ’ 15\ni}\ni}\n\n(c) arate ar ged ed ge eine (\"9 at ae\n2\nEvaluate the integral f a using residues\n2",
+      "text": "UPSC 2014 · Mathematics Paper 2 · Question 3 · Section A · Real Analysis (official scan)",
+      "scanImages": [
+        "scan-01.jpg",
+        "scan-02.jpg"
+      ],
       "moduleId": "real-analysis",
       "module": "Real Analysis",
       "themeId": "real-analysis",
@@ -1207,11 +1633,40 @@
       "number": 4,
       "section": "A",
       "marks": 20,
-      "text": "4. (a) fie Fife fe ape Q (5) = {a+ bV5: a, be O} acme afta UH wafahia aaa Bt\nProve that the set Q (/5)={a+bV5:a, be Q} is a commutative ring with\nidentity. 15\n(>) wars ore A Pa aT x24 y2 4 2? AEA A a Ae amd fe xyz =a.\nFind the minimum value of x? + y? + 2? subject to the condition xyz=a° by\nthe method of Lagrange multipliers. 15\n(co) Gren fa & aro Prefers Yee soma aaen & at gem ea ata Fife :\naftramiga fife Z = 30x, + 24x9\naad fer\nFind all optimal solutions of the following linear programming problem by the\nsimplex method :\nMaximize Z = 30x, + 24xq\n- subject to\n€-BAN-A-OB1M/39 5 { P.T.O.\n\nwWis—B / SECTION—B\n: 5. fa)‘ aifite sara wile (2D? -5DD' + 2D’) z=24(y— x) A ee Aira)\nSolve the partial differential equation (2D? -SDD’ + 2D\") z= 24(y - x). 10\nt\n(b) adtemt cosx —xe* =0 1, SR ae wel aw aa, Wer aa HE fae qa-toaa fale ne\nwr era Hifi)\nApply Newton-Raphson method to determine a root of the equation\ncosx -xe* =0 correct up to four decimal places. 10\n(o) rat Po 3 are ff Ear ees ame & fr ata oui ar Fee EL\n: l+x\nUse five subintervals to integrate i —z using trapezoidal rule. 10\nO1+x\n(d) *aa AND oH OR aaa ah SAT BA BE ae Bs 2 = xy + uv % fee UH TS Ths\nSl GT ifs |\nUse only AND and OR logic gates to construct a logic circuit for the Boolean\nexpression z= xy + uv. 10\n(ce) @ficea & artnet a eae we ga ore ees A aft a ae ara Fife)\n‘Find the equation of motion of a compound pendulum using Hamilton’s\nequations. 10",
+      "text": "UPSC 2014 · Mathematics Paper 2 · Question 4 · Section A · Linear Programming (official scan)",
+      "scanImages": [
+        "scan-01.jpg",
+        "scan-02.jpg"
+      ],
       "moduleId": "linear-programming",
       "module": "Linear Programming",
       "themeId": "linear-programming",
       "theme": "Linear Programming",
+      "subthemes": [],
+      "sourcePdf": "https://www.upsc.gov.in/sites/default/files/MATHEMATICS-II.pdf",
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "math2-2014-q5",
+      "year": 2014,
+      "number": 5,
+      "section": "B",
+      "marks": 20,
+      "text": "UPSC 2014 · Mathematics Paper 2 · Question 5 · Section B · Partial Differential Equations (official scan, page split)",
+      "scanImages": [
+        "scan-01.jpg"
+      ],
+      "moduleId": "pde",
+      "module": "Partial Differential Equations",
+      "themeId": "pde",
+      "theme": "Partial Differential Equations",
       "subthemes": [],
       "sourcePdf": "https://www.upsc.gov.in/sites/default/files/MATHEMATICS-II.pdf",
       "notes": {
@@ -1229,7 +1684,11 @@
       "number": 6,
       "section": "B",
       "marks": 20,
-      "text": "6. (a) ater D2 = x? 9% at fae wo A anria HRI\nax? ay”\n2 2\nReduce the equation oe =x? ae to canonical form.\nax? ay? 15\nEDUS-R-OBVR/39 6\n\nfb) Tisa-gsa Frosty fae & go ata fara\na eet fife (dt Groafeai tere) |\nSolve the system of equations\nusing Gauss-Seidel iteration method (Perform three iterations). 1S\n) x=0-.8nyH OM am as fr, wei Be fey, yO-4)=0-41 agai & w-ge\nwe aw gaara A) oT cag A =0-2 afr\nUse Runge-Kutta formula of fourth order to find the value of y at x=0-8,\nwhere ow =fx+y, yO-4)=0-41. Take the step length h=0-2. 20",
+      "text": "UPSC 2014 · Mathematics Paper 2 · Question 6 · Section B · Partial Differential Equations (official scan)",
+      "scanImages": [
+        "scan-01.jpg",
+        "scan-02.jpg"
+      ],
       "moduleId": "pde",
       "module": "Partial Differential Equations",
       "themeId": "pde",
@@ -1251,33 +1710,14 @@
       "number": 7,
       "section": "B",
       "marks": 20,
-      "text": "7. (a) wean Sh (was = 7, rR, Sp Sp) ar Reds ae ie, wis a yA\nt ix\natk wifite faaa f(x) = k(sin x — sin 2x) al\n2 2\nFind the deflection of a vibrating string (length =x, ends fixed, SG = so)\nt xe\ncorresponding to zero initial velocity and initial deflection\nf(x) =k(sin x - sin 2x) . 415\n(b) freer & wa-frerg Pam & feu wH veare-ae aa)\nDraw a flowchart for Simpson’s one-third rule. 15\n() aq an fara p=} tog] MAO FY | & fae saree ae AB\n2542\nGiven the velocity potential ¢ = L log erg tye , determine the streamlines. 20\n2° Lea? ty\n€-BAN-A-OWUF/39 7 [ P.T.O.\n\n2 2",
+      "text": "UPSC 2014 · Mathematics Paper 2 · Question 7 · Section B · Mechanics & Fluid Dynamics (official scan)",
+      "scanImages": [
+        "scan-01.jpg"
+      ],
       "moduleId": "mechanics-fluid",
       "module": "Mechanics & Fluid Dynamics",
       "themeId": "mechanics-fluid",
       "theme": "Mechanics & Fluid Dynamics",
-      "subthemes": [],
-      "sourcePdf": "https://www.upsc.gov.in/sites/default/files/MATHEMATICS-II.pdf",
-      "notes": {
-        "introduction": "",
-        "staticNotes": "",
-        "quotes": "",
-        "currentAffairs": "",
-        "topperPoints": "",
-        "valueMaterial": ""
-      }
-    },
-    {
-      "id": "math2-2014-q8",
-      "year": 2014,
-      "number": 8,
-      "section": "B",
-      "marks": 20,
-      "text": "8. (a)! wa ctttig #2 Oct, t>0, Rd\nat? ax?\n(ii) oe ig Qe x2, O<x<1\not .\n(ii) uO, ) =u, =O, wh ¢% fag\n2 2\n; Solve fue » O<x<1, t>0, given that\n| at? ax :\nfi) u(x,Q)=0, OSx<1 a\n(ii) 84 ig Oye x, O<x<l\nat :\n: fii) uO, =u, 4 =0, for all t 15\n(b) feet oA aga ae x sit y & fee calge fe x + y= x.\n| For any Boolean variables x and y, show that x + xy =X. 15\n(oc) A ota anim wl & de, GH wa aadies wet % ouhadl arta (afin) vere & fer, ,\nafew weiter are Ares\nFind Navier-Stokes equation for a steady laminar flow of a viscous 5\nincompressible fluid between two infinite parallel plates. 20\nkkk\n€-DRX-K-OWUD/39 8 5BS—S550 .",
-      "moduleId": "pde",
-      "module": "Partial Differential Equations",
-      "themeId": "pde",
-      "theme": "Partial Differential Equations",
       "subthemes": [],
       "sourcePdf": "https://www.upsc.gov.in/sites/default/files/MATHEMATICS-II.pdf",
       "notes": {

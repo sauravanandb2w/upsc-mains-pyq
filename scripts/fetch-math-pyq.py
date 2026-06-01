@@ -1,38 +1,45 @@
 #!/usr/bin/env python3
 """
-Fetch UPSC Civil Services (Main) Mathematics Optional PDFs from upsc.gov.in,
-OCR with tesseract, parse questions, classify by module, write JSON.
+Fetch UPSC Mathematics Optional PDFs from upsc.gov.in and build question entries
+as **PDF scan cutouts** (PNG/JPG per question) — no garbled OCR question text.
 
-Requires: tesseract, pdftoppm (poppler), pypdf — see scripts/requirements.txt
+Requires: poppler (pdftoppm), tesseract, Pillow
 
 Usage:
   python3 scripts/fetch-math-pyq.py
-  python3 scripts/fetch-math-pyq.py --no-fetch      # reuse cached PDFs
-  python3 scripts/fetch-math-pyq.py --year 2024     # single year
+  python3 scripts/fetch-math-pyq.py --no-fetch
+  python3 scripts/fetch-math-pyq.py --year 2024
 """
 
 from __future__ import annotations
 
 import argparse
+import csv
+import io
 import json
 import re
 import shutil
 import subprocess
 import sys
-import tempfile
 import urllib.request
+from dataclasses import dataclass
 from pathlib import Path
 from urllib.parse import quote, unquote
+
+from PIL import Image
 
 ROOT = Path(__file__).resolve().parent.parent
 MODULES_FILE = ROOT / "data" / "math-modules.json"
 PDF_CACHE = ROOT / "data" / "sources" / "math-pdfs"
 INDEX_FILE = ROOT / "data" / "sources" / "math-pdf-index.json"
+STUDY_QUESTIONS = ROOT / "study" / "questions"
 OUT_P1 = ROOT / "data" / "math-paper-1.json"
 OUT_P2 = ROOT / "data" / "math-paper-2.json"
 
 BASE_URL = "https://www.upsc.gov.in"
 UA = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36"
+RENDER_DPI = 150
+JPEG_QUALITY = 88
 
 PAPER_META = {
     1: {
@@ -46,6 +53,23 @@ PAPER_META = {
         "syllabus": "Algebra · Real Analysis · Complex Analysis · Linear Programming · PDE · Numerical Analysis · Mechanics & Fluid Dynamics",
     },
 }
+
+Q_MARKER = re.compile(r"^(?:Q|O)?([1-8])\.?$|^Ql\.?$", re.I)
+_TSV_CACHE: dict[str, list[dict]] = {}
+
+
+@dataclass
+class Anchor:
+    page: int
+    top: int
+    qnum: int
+
+
+@dataclass
+class CropSlice:
+    page: int
+    top: int
+    bottom: int
 
 
 def load_module_config() -> dict:
@@ -72,7 +96,6 @@ def fetch_html(url: str) -> str:
 
 def download_pdf(url: str, dest: Path) -> bool:
     dest.parent.mkdir(parents=True, exist_ok=True)
-    # Encode filename (spaces in e.g. Mathematics Paper-I.pdf)
     if "/sites/default/files/" in url:
         base, fname = url.rsplit("/", 1)
         url = base + "/" + quote(fname, safe="")
@@ -108,7 +131,6 @@ def is_csm_math_path(path: str) -> bool:
 
 
 def discover_pdfs_by_year() -> dict[int, dict[int, str]]:
-    """Return {year: {1: url, 2: url}} from official UPSC examination pages."""
     by_year: dict[int, dict[int, str]] = {}
 
     for year in range(2013, 2026):
@@ -117,7 +139,6 @@ def discover_pdfs_by_year() -> dict[int, dict[int, str]]:
             html = fetch_html(page)
         except Exception:
             continue
-
         for raw in re.findall(r"/sites/default/files/[^\"\s<>]+?\.pdf", html, re.I):
             path = unquote(raw)
             if not is_csm_math_path(path):
@@ -127,7 +148,6 @@ def discover_pdfs_by_year() -> dict[int, dict[int, str]]:
                 continue
             by_year.setdefault(year, {})[num] = BASE_URL + path
 
-    # Supplement from civil-services listing (recent years)
     try:
         html = fetch_html(
             f"{BASE_URL}/examinations/previous-question-papers?field_exam_name_value=civil+services"
@@ -158,157 +178,345 @@ def discover_pdfs_by_year() -> dict[int, dict[int, str]]:
     return by_year
 
 
-def ocr_pdf(pdf_path: Path) -> str:
-    tesseract = shutil.which("tesseract")
-    pdftoppm = shutil.which("pdftoppm")
-    if not tesseract or not pdftoppm:
-        raise RuntimeError("Install tesseract and poppler (pdftoppm). macOS: brew install tesseract poppler")
-
-    with tempfile.TemporaryDirectory(prefix="math-ocr-") as tmp:
-        tmp_path = Path(tmp)
-        prefix = tmp_path / "page"
-        subprocess.run(
-            [pdftoppm, "-png", str(pdf_path), str(prefix)],
-            check=True,
-            capture_output=True,
-        )
-        parts = []
-        for img in sorted(tmp_path.glob("page-*.png")):
-            result = subprocess.run(
-                [tesseract, str(img), "stdout", "-l", "eng", "--psm", "6"],
-                check=True,
-                capture_output=True,
-                text=True,
-            )
-            parts.append(result.stdout)
-        return "\n\n".join(parts)
-
-
-def english_ratio(line: str) -> float:
-    if not line.strip():
-        return 0.0
-    letters = len(re.findall(r"[A-Za-z]", line))
-    return letters / max(len(line.strip()), 1)
-
-
-def clean_ocr_text(text: str) -> str:
-    lines = []
-    for line in text.splitlines():
-        s = line.strip()
-        if not s:
-            lines.append("")
-            continue
-        # Always keep structural / question lines
-        if re.match(r"^\d+\.", s):
-            lines.append(s)
-            continue
-        if re.match(r"^\d+\.\([a-e]\)", s, re.I):
-            lines.append(s)
-            continue
-        if re.match(r"^\([a-e]\)", s, re.I):
-            lines.append(s)
-            continue
-        if re.match(r"^SECTION", s, re.I):
-            lines.append(s)
-            continue
-        if english_ratio(s) >= 0.35:
-            lines.append(s)
-        elif re.match(r"^[\d\.\(\)\[\]\s\-–—]+$", s):
-            lines.append(s)
-    text = "\n".join(lines)
-    text = re.sub(r"\n{3,}", "\n\n", text)
-    return text
-
-
 def default_section(qnum: int) -> str:
-    """UPSC Math papers: Q1–4 Section A, Q5–8 Section B."""
     return "A" if qnum <= 4 else "B"
 
 
-def detect_section_headers(text: str) -> list[tuple[int, str]]:
-    """Return list of (position, 'A'|'B') for section headers."""
-    headers = []
-    for m in re.finditer(r"(?mi)^SECTION\s*[—\-–]?\s*([AB])\b", text):
-        headers.append((m.start(), m.group(1).upper()))
-    return headers
+def render_pdf_pages(pdf_path: Path, out_dir: Path) -> list[Path]:
+    out_dir.mkdir(parents=True, exist_ok=True)
+    pdftoppm = shutil.which("pdftoppm")
+    if not pdftoppm:
+        raise RuntimeError("pdftoppm not found — install poppler")
+
+    prefix = out_dir / "page"
+    subprocess.run(
+        [pdftoppm, "-png", "-r", str(RENDER_DPI), str(pdf_path), str(prefix)],
+        check=True,
+        capture_output=True,
+    )
+    pages = sorted(out_dir.glob("page-*.png"))
+    if not pages:
+        raise RuntimeError(f"No pages rendered from {pdf_path}")
+    return pages
 
 
-def section_for_pos(headers: list[tuple[int, str]], pos: int) -> str:
-    sec = "A"
-    for hpos, label in headers:
-        if hpos <= pos:
-            sec = label
-        else:
-            break
-    return sec
+def tesseract_tsv(image_path: Path) -> list[dict]:
+    key = str(image_path.resolve())
+    if key in _TSV_CACHE:
+        return _TSV_CACHE[key]
+
+    tesseract = shutil.which("tesseract")
+    if not tesseract:
+        raise RuntimeError("tesseract not found")
+
+    proc = subprocess.run(
+        [tesseract, str(image_path), "stdout", "-l", "eng", "--psm", "6", "tsv"],
+        check=False,
+        capture_output=True,
+    )
+    stdout = proc.stdout.decode("utf-8", errors="replace")
+    if proc.returncode != 0 and not stdout.strip():
+        _TSV_CACHE[key] = []
+        return []
+
+    reader = csv.DictReader(io.StringIO(stdout), delimiter="\t")
+    rows = []
+    for row in reader:
+        try:
+            rows.append(
+                {
+                    "level": int(row["level"]),
+                    "text": (row["text"] or "").strip(),
+                    "left": int(float(row["left"])),
+                    "top": int(float(row["top"])),
+                    "width": int(float(row["width"])),
+                    "height": int(float(row["height"])),
+                    "conf": int(float(row["conf"])) if row["conf"] != "-1" else -1,
+                }
+            )
+        except (KeyError, ValueError):
+            continue
+    _TSV_CACHE[key] = rows
+    return rows
 
 
-def extract_marks(block: str) -> int | None:
-    trailing = re.findall(r"(?m)^(\d{1,2})\s*$", block)
-    vals = [int(x) for x in trailing if 5 <= int(x) <= 50]
-    if 1 <= len(vals) <= 8:
-        return sum(vals)
-    m = re.search(r"(?i)(\d{1,2})\s*marks?", block)
+def clear_tsv_cache() -> None:
+    _TSV_CACHE.clear()
+
+
+def parse_qnum(token: str) -> int | None:
+    token = token.strip()
+    if token.lower() == "ql.":
+        return 1
+    m = re.match(r"^(?:Q|O)?([1-8])\.?$", token, re.I)
     if m:
         return int(m.group(1))
     return None
 
 
-def normalize_question_numbers(text: str) -> str:
-    """Fix common OCR misreads of question numbers (Q1, Ql, etc.)."""
-    text = re.sub(r"(?m)^Q([1-8])\.", r"\1.", text)
-    text = re.sub(r"(?m)^Ql\.", "1.", text)
-    text = re.sub(r"(?m)^Q([1-8])\s*\.", r"\1.", text)
-    text = re.sub(r"(?m)^O([1-8])\.", r"\1.", text)
-    return text
+def page_text(page_path: Path) -> str:
+    rows = tesseract_tsv(page_path)
+    return " ".join(r["text"] for r in rows if r["text"])
 
 
-QUESTION_START = re.compile(
-    r"(?m)^([1-8])\.(?:\s|\s*\([a-e]\)\s*)(?=[A-Za-z\"'(\[])",
-    re.IGNORECASE,
-)
+def is_instructions_page(page_path: Path) -> bool:
+    text = page_text(page_path).upper()
+    if "SPECIFIC INSTRUCTION" in text or "QUESTION PAPER SPECIFIC" in text:
+        return True
+    if "EIGHT QUESTION" in text and "COMPULSORY" in text:
+        return True
+    if "INSTRUCTION" in text and "COMPULSORY" in text and "SECTION" not in text:
+        return True
+    return False
 
 
-def parse_questions(text: str) -> list[dict]:
-    text = normalize_question_numbers(clean_ocr_text(text))
+def find_content_start_page(page_paths: list[Path]) -> int:
+    for idx, page_path in enumerate(page_paths):
+        text = page_text(page_path).upper()
+        if "SECTION" in text and re.search(r"SECTION[^A-Z]*A\b|SECTION—A|SECTION-A", text):
+            return idx
+    for idx, page_path in enumerate(page_paths):
+        if not is_instructions_page(page_path):
+            return idx
+    return 1 if len(page_paths) > 1 else 0
 
-    matches = list(QUESTION_START.finditer(text))
-    if not matches:
-        return []
 
-    questions = []
-    for i, m in enumerate(matches):
-        qnum = int(m.group(1))
-        if qnum < 1 or qnum > 8:
+def looks_like_question_line(joined: str) -> bool:
+    """Real PYQ lines start like '1. (a)' not instruction bullets."""
+    compact = re.sub(r"\s+", " ", joined.strip())
+    if re.match(r"^[1-8]\.\s*\([a-eA-E]\)", compact):
+        return True
+    if re.match(r"^Q?[1-8]\.\s*\([a-eA-E]\)", compact, re.I):
+        return True
+    return False
+
+
+def looks_like_question_line_loose(joined: str, *, page_idx: int, content_start: int) -> bool:
+    compact = re.sub(r"\s+", " ", joined.strip())
+    if not re.match(r"^[1-8]\.", compact):
+        return False
+    upper = compact.upper()
+    if any(w in upper for w in ("COMPULSORY", "INSTRUCTION", "EIGHT QUESTION", "CANDIDATE", "THERE ARE")):
+        return False
+    if page_idx == content_start and re.match(r"^1\.", compact) and not re.search(r"\([a-eA-E]\)", compact):
+        return False
+    return len(compact) > 12
+
+
+def collect_anchors_on_page(
+    page_idx: int,
+    page_path: Path,
+    seen: set[int],
+    *,
+    strict: bool,
+    content_start: int,
+) -> list[Anchor]:
+    found: list[Anchor] = []
+    img = Image.open(page_path)
+    width = img.width
+    rows = tesseract_tsv(page_path)
+
+    line_words: dict[int, list[dict]] = {}
+    for row in rows:
+        if row["level"] not in (4, 5) or not row["text"]:
             continue
-        start = m.start()
-        end = matches[i + 1].start() if i + 1 < len(matches) else len(text)
-        block = text[start:end].strip()
-        block = re.sub(r"(?m)^PHKM[^\n]*$", "", block).strip()
-        block = re.sub(r"(?m)^\[\s*P\.T\.O\.\s*\]$", "", block).strip()
-        if len(block) < 30:
+        if row["conf"] >= 0 and row["conf"] < 20:
             continue
+        if row["left"] > width * 0.28:
+            continue
+        bucket = row["top"] // 10
+        line_words.setdefault(bucket, []).append(row)
 
-        section = default_section(qnum)
-        marks = extract_marks(block)
-        questions.append(
-            {
-                "number": qnum,
-                "section": section,
-                "marks": marks if marks else 20,
-                "text": block,
-            }
+    for bucket in sorted(line_words.keys()):
+        words = sorted(line_words[bucket], key=lambda w: w["left"])
+        joined = " ".join(w["text"] for w in words)
+        ok = (
+            looks_like_question_line(joined)
+            if strict
+            else looks_like_question_line_loose(joined, page_idx=page_idx, content_start=content_start)
+        )
+        if not ok:
+            continue
+        first = words[0]["text"]
+        qnum = parse_qnum(first) or parse_qnum(joined.split()[0] if joined else "")
+        if not qnum or qnum in seen:
+            continue
+        seen.add(qnum)
+        found.append(Anchor(page=page_idx, top=words[0]["top"], qnum=qnum))
+    return found
+
+
+def find_anchors(page_paths: list[Path]) -> list[Anchor]:
+    """Find question-number anchors on the left margin of each page."""
+    content_start = find_content_start_page(page_paths)
+    anchors: list[Anchor] = []
+    seen: set[int] = set()
+
+    for page_idx, page_path in enumerate(page_paths):
+        if page_idx < content_start:
+            continue
+        if is_instructions_page(page_path):
+            continue
+        anchors.extend(
+            collect_anchors_on_page(
+                page_idx, page_path, seen, strict=True, content_start=content_start
+            )
         )
 
-    # Deduplicate by question number (OCR sometimes repeats)
-    seen: set[int] = set()
-    unique = []
-    for q in sorted(questions, key=lambda x: x["number"]):
-        if q["number"] in seen:
+    if len(anchors) < 6:
+        seen = {a.qnum for a in anchors}
+        for page_idx, page_path in enumerate(page_paths):
+            if page_idx < content_start:
+                continue
+            if is_instructions_page(page_path):
+                continue
+            anchors.extend(
+                collect_anchors_on_page(
+                    page_idx, page_path, seen, strict=False, content_start=content_start
+                )
+            )
+
+    anchors.sort(key=lambda a: (a.page, a.top))
+    return anchors
+
+
+def find_section_b_page(page_paths: list[Path], content_start: int) -> int | None:
+    for page_idx in range(content_start, len(page_paths)):
+        text = page_text(page_paths[page_idx]).upper()
+        if re.search(r"SECTION[^A-Z]*B\b|SECTION—B|SECTION-B|SECTION — B", text):
+            return page_idx
+    return None
+
+
+def content_page_indices(page_paths: list[Path], content_start: int) -> list[int]:
+    indices: list[int] = []
+    for page_idx in range(content_start, len(page_paths)):
+        if is_instructions_page(page_paths[page_idx]):
             continue
-        seen.add(q["number"])
-        unique.append(q)
-    return unique
+        indices.append(page_idx)
+    return indices
+
+
+def chunk_pages_to_questions(pages: list[int], q_start: int, q_count: int) -> dict[int, list[CropSlice]]:
+    if not pages:
+        return {}
+    out: dict[int, list[CropSlice]] = {}
+    per = max(1, len(pages) // q_count)
+    for offset in range(q_count):
+        qnum = q_start + offset
+        start = offset * per
+        end = len(pages) if offset == q_count - 1 else (offset + 1) * per
+        out[qnum] = [CropSlice(page=p, top=0, bottom=10_000) for p in pages[start:end]]
+    return out
+
+
+def build_page_fallback_slices(page_paths: list[Path], content_start: int) -> dict[int, list[CropSlice]]:
+    """When OCR anchors fail, split content pages evenly across Q1–8."""
+    pages = content_page_indices(page_paths, content_start)
+    if not pages:
+        return {}
+
+    section_b = find_section_b_page(page_paths, content_start)
+    if section_b is None:
+        mid = max(1, len(pages) // 2)
+        part_a = pages[:mid]
+        part_b = pages[mid:]
+    else:
+        part_a = [p for p in pages if p < section_b]
+        part_b = [p for p in pages if p >= section_b]
+
+    slices: dict[int, list[CropSlice]] = {}
+    slices.update(chunk_pages_to_questions(part_a, 1, 4))
+    slices.update(chunk_pages_to_questions(part_b, 5, 4))
+    return slices
+
+
+def build_slices(anchors: list[Anchor], page_count: int) -> dict[int, list[CropSlice]]:
+    """Map question number -> vertical slices (may span pages)."""
+    if not anchors:
+        return {}
+
+    by_q = {a.qnum: a for a in anchors}
+    ordered = sorted(anchors, key=lambda a: (a.page, a.top))
+    slices: dict[int, list[CropSlice]] = {}
+
+    for i, anchor in enumerate(ordered):
+        qnum = anchor.qnum
+        next_anchor = ordered[i + 1] if i + 1 < len(ordered) else None
+        parts: list[CropSlice] = []
+
+        if not next_anchor:
+            parts.append(CropSlice(page=anchor.page, top=max(0, anchor.top - 8), bottom=10_000))
+        elif next_anchor.page == anchor.page:
+            parts.append(
+                CropSlice(
+                    page=anchor.page,
+                    top=max(0, anchor.top - 8),
+                    bottom=max(anchor.top + 40, next_anchor.top - 8),
+                )
+            )
+        else:
+            parts.append(CropSlice(page=anchor.page, top=max(0, anchor.top - 8), bottom=10_000))
+            for p in range(anchor.page + 1, next_anchor.page):
+                parts.append(CropSlice(page=p, top=0, bottom=10_000))
+            parts.append(
+                CropSlice(page=next_anchor.page, top=0, bottom=max(40, next_anchor.top - 8))
+            )
+
+        slices[qnum] = parts
+
+    return slices
+
+
+def crop_and_save(page_paths: list[Path], slices: list[CropSlice], out_dir: Path) -> list[str]:
+    out_dir.mkdir(parents=True, exist_ok=True)
+    saved: list[str] = []
+
+    for idx, sl in enumerate(slices, start=1):
+        page_path = page_paths[sl.page]
+        with Image.open(page_path) as img:
+            w, h = img.size
+            top = min(sl.top, h - 1)
+            bottom = min(sl.bottom, h) if sl.bottom < 9000 else h
+            if bottom - top < 60:
+                continue
+            crop = img.crop((0, top, w, bottom))
+            fname = f"scan-{idx:02d}.jpg"
+            dest = out_dir / fname
+            crop.convert("RGB").save(dest, "JPEG", quality=JPEG_QUALITY, optimize=True)
+            saved.append(fname)
+
+    if saved:
+        manifest = {"images": saved}
+        (out_dir / "manifest.json").write_text(json.dumps(manifest, indent=2) + "\n", encoding="utf-8")
+    return saved
+
+
+def ocr_for_module(page_paths: list[Path], slices: list[CropSlice]) -> str:
+    """Light OCR on first slice for module keyword matching."""
+    import tempfile
+
+    tesseract = shutil.which("tesseract")
+    if not tesseract or not slices:
+        return ""
+
+    sl = slices[0]
+    with Image.open(page_paths[sl.page]) as img:
+        w, h = img.size
+        top = min(sl.top, h - 1)
+        bottom = min(sl.bottom, h) if sl.bottom < 9000 else min(h, top + 800)
+        crop = img.crop((0, top, w, bottom))
+        with tempfile.NamedTemporaryFile(suffix=".png", delete=False) as tmp:
+            tmp_path = Path(tmp.name)
+        try:
+            crop.save(tmp_path)
+            proc = subprocess.run(
+                [tesseract, str(tmp_path), "stdout", "-l", "eng", "--psm", "6"],
+                capture_output=True,
+            )
+            return proc.stdout.decode("utf-8", errors="replace") or ""
+        finally:
+            tmp_path.unlink(missing_ok=True)
 
 
 def keyword_matches(keyword: str, text: str) -> bool:
@@ -317,7 +525,7 @@ def keyword_matches(keyword: str, text: str) -> bool:
     return keyword in text
 
 
-def classify_module(text: str, paper_num: int, modules: list[dict]) -> dict:
+def classify_module(text: str, modules: list[dict]) -> dict:
     lower = text.lower()
     scores: list[tuple[int, dict]] = []
     for mod in modules:
@@ -342,24 +550,69 @@ def classify_module(text: str, paper_num: int, modules: list[dict]) -> dict:
     }
 
 
-def normalize_entry(paper_json_num: int, year: int, q: dict, modules: list[dict], pdf_url: str) -> dict:
-    mod = classify_module(q["text"], paper_json_num, modules)
-    qid = f"math{paper_json_num}-{year}-q{q['number']}"
-    return {
-        "id": qid,
-        "year": year,
-        "number": q["number"],
-        "section": q["section"],
-        "marks": q["marks"],
-        "text": q["text"],
-        "moduleId": mod["moduleId"],
-        "module": mod["module"],
-        "themeId": mod["themeId"],
-        "theme": mod["theme"],
-        "subthemes": [],
-        "sourcePdf": pdf_url,
-        "notes": empty_notes(),
-    }
+def process_pdf(
+    paper_json_num: int,
+    year: int,
+    pdf_path: Path,
+    pdf_url: str,
+    modules: list[dict],
+) -> list[dict]:
+    clear_tsv_cache()
+    work_dir = PDF_CACHE / str(year) / f"render-p{paper_json_num}"
+    page_paths = render_pdf_pages(pdf_path, work_dir)
+    content_start = find_content_start_page(page_paths)
+    anchors = find_anchors(page_paths)
+    slice_map = build_slices(anchors, len(page_paths))
+
+    if len(slice_map) < 8:
+        fallback = build_page_fallback_slices(page_paths, content_start)
+        for qnum in range(1, 9):
+            if qnum not in slice_map and qnum in fallback:
+                slice_map[qnum] = fallback[qnum]
+        if len(slice_map) < 8:
+            print(f"    Warning: {len(slice_map)}/8 questions — using page fallback where needed")
+
+    entries: list[dict] = []
+
+    for qnum in range(1, 9):
+        if qnum not in slice_map:
+            continue
+        qid = f"math{paper_json_num}-{year}-q{qnum}"
+        out_dir = STUDY_QUESTIONS / qid
+        images = crop_and_save(page_paths, slice_map[qnum], out_dir)
+        if not images:
+            continue
+
+        used_fallback = qnum not in {a.qnum for a in anchors}
+        ocr_snippet = ocr_for_module(page_paths, slice_map[qnum])
+        mod = classify_module(ocr_snippet, modules)
+        section = default_section(qnum)
+        label = (
+            f"UPSC {year} · Mathematics Paper {paper_json_num} · "
+            f"Question {qnum} · Section {section} · {mod['module']} (official scan"
+            f"{', page split' if used_fallback else ''})"
+        )
+
+        entries.append(
+            {
+                "id": qid,
+                "year": year,
+                "number": qnum,
+                "section": section,
+                "marks": 20,
+                "text": label,
+                "scanImages": images,
+                "moduleId": mod["moduleId"],
+                "module": mod["module"],
+                "themeId": mod["themeId"],
+                "theme": mod["theme"],
+                "subthemes": [],
+                "sourcePdf": pdf_url,
+                "notes": empty_notes(),
+            }
+        )
+
+    return entries
 
 
 def load_preserved_notes(path: Path) -> dict[str, dict]:
@@ -387,14 +640,11 @@ def write_paper_json(path: Path, paper_json_num: int, questions: list[dict]) -> 
         "syllabus": meta["syllabus"],
         "yearRange": [2013, 2025],
         "sections": ["A", "B"],
-        "source": "upsc.gov.in (OCR from official PDFs — verify text before exam use)",
-        "questions": sorted(
-            questions,
-            key=lambda q: (-q["year"], q["number"]),
-        ),
+        "source": "upsc.gov.in — question scans cut from official PDFs (study/questions/math*)",
+        "questions": sorted(questions, key=lambda q: (-q["year"], q["number"])),
     }
     path.write_text(json.dumps(payload, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
-    print(f"Wrote {path.name}: {len(questions)} questions, years {years}")
+    print(f"  Wrote {path.name}: {len(questions)} questions, years {years}")
 
 
 def main() -> int:
@@ -440,21 +690,17 @@ def main() -> int:
             else:
                 print(f"  Paper {paper_num}: cached")
 
-            print(f"  OCR Paper {paper_num}…")
+            print(f"  Cutting scans Paper {paper_num}…")
             try:
-                ocr_text = ocr_pdf(cache_path)
+                modules = modules_p1 if paper_num == 1 else modules_p2
+                entries = process_pdf(paper_num, year, cache_path, url, modules)
+                print(f"  → {len(entries)} question scans")
+                if paper_num == 1:
+                    all_q1.extend(entries)
+                else:
+                    all_q2.extend(entries)
             except Exception as exc:
-                print(f"  OCR failed: {exc}")
-                continue
-
-            parsed = parse_questions(ocr_text)
-            modules = modules_p1 if paper_num == 1 else modules_p2
-            entries = [normalize_entry(paper_num, year, q, modules, url) for q in parsed]
-            print(f"  Parsed {len(entries)} questions (Paper {paper_num})")
-            if paper_num == 1:
-                all_q1.extend(entries)
-            else:
-                all_q2.extend(entries)
+                print(f"  Failed Paper {paper_num}: {exc}")
 
     INDEX_FILE.parent.mkdir(parents=True, exist_ok=True)
     INDEX_FILE.write_text(json.dumps(index, indent=2) + "\n", encoding="utf-8")
@@ -462,11 +708,11 @@ def main() -> int:
     write_paper_json(OUT_P1, 1, all_q1)
     write_paper_json(OUT_P2, 2, all_q2)
 
-    missing_years = [y for y in range(2013, 2026) if str(y) not in index["years"] or len(index["years"][str(y)]) < 2]
-    if missing_years:
-        print(f"\nNot available on upsc.gov.in (both papers): {missing_years}")
+    missing = [y for y in range(2013, 2026) if str(y) not in index["years"] or len(index["years"][str(y)]) < 2]
+    if missing:
+        print(f"\nNot on upsc.gov.in (both papers): {missing}")
 
-    print("\nDone. Verify OCR text against official PDFs before relying on it.")
+    print("\nDone. Question text in app = scan images under study/questions/math*")
     return 0
 
 

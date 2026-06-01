@@ -11,15 +11,68 @@
     "A",
     "B"
   ],
-  "source": "upsc.gov.in (OCR from official PDFs — verify text before exam use)",
+  "source": "upsc.gov.in — question scans cut from official PDFs (study/questions/math*)",
   "questions": [
+    {
+      "id": "math1-2025-q1",
+      "year": 2025,
+      "number": 1,
+      "section": "A",
+      "marks": 20,
+      "text": "UPSC 2025 · Mathematics Paper 1 · Question 1 · Section A · Linear Algebra (official scan, page split)",
+      "scanImages": [
+        "scan-01.jpg"
+      ],
+      "moduleId": "linear-algebra",
+      "module": "Linear Algebra",
+      "themeId": "linear-algebra",
+      "theme": "Linear Algebra",
+      "subthemes": [],
+      "sourcePdf": "https://www.upsc.gov.in/sites/default/files/MATHEMATICS-PAPER I-QP-CSM-25-010925.pdf",
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "math1-2025-q2",
+      "year": 2025,
+      "number": 2,
+      "section": "A",
+      "marks": 20,
+      "text": "UPSC 2025 · Mathematics Paper 1 · Question 2 · Section A · Linear Algebra (official scan, page split)",
+      "scanImages": [
+        "scan-01.jpg"
+      ],
+      "moduleId": "linear-algebra",
+      "module": "Linear Algebra",
+      "themeId": "linear-algebra",
+      "theme": "Linear Algebra",
+      "subthemes": [],
+      "sourcePdf": "https://www.upsc.gov.in/sites/default/files/MATHEMATICS-PAPER I-QP-CSM-25-010925.pdf",
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
     {
       "id": "math1-2025-q3",
       "year": 2025,
       "number": 3,
       "section": "A",
       "marks": 20,
-      "text": "3. (a)  frefefac sreqe et ators (oxic) BT aa FIT\n2 -2 2 1\n1-7 10 2\nReduce the following matrix to echelon form : 15\n1-7 10 2\n(b) St Met & aeftenco ara Ate SA aT x? + y2 + 22 - 2x + Qy + 42-3 = 0,\nOx ty +2= 48 Saya gS St GHA 8x + dy = 14 HT eT ATE |\nFind the equations of the spheres which pass through the circle\nx2 + y2 4 22-2x + 2y + 4z2-3=0, 2x+y+z-=4 and touch the plane\n@ {J y dx dy 14M aid Fife, sei R, y = x My = 4x- x? S ohag Aa\nR\nal\nEvaluate iJ y dx dy, where R is the region bounded by y = x and\nR\nGi) aR ucx, y) -x4(2) +¢(Z) a. set foit g aes vere, araniea\nrE x2 +yS =xA{Z) 8\n2 2 2.\nax ax ay ay\nIf u(x, y)=xf (2) + (2). where f and g are arbitrary functions,\nthen show that\na a +y@ =xe(Z),\nOx oy x\n2 2. 2\nIl. eee ee eas ace =0. 10\nax éxdy * ay\nSLPM-P-MTH 4",
+      "text": "UPSC 2025 · Mathematics Paper 1 · Question 3 · Section A · Linear Algebra (official scan)",
+      "scanImages": [
+        "scan-01.jpg"
+      ],
       "moduleId": "linear-algebra",
       "module": "Linear Algebra",
       "themeId": "linear-algebra",
@@ -41,11 +94,16 @@
       "number": 4,
       "section": "A",
       "marks": 20,
-      "text": "4. (a) aiigufemter\nar aig Car eaet aaadet ae @, sit fer are VET ae y+3=2+ 108 RAS!\nShow that there is no tangent plane to the sphere\nthat can be passed through the straight line\nHG San4 1. 15\n2\n2 2\nx\" -y\n(b) -afe fix, y)= x24 y”\n2 2\nIf f(x, y) = x+y\nthen find\n1 2 0\n2-2 3\n& aftcranfires re Stk aire srftrcrenfires ales are ITT |\nFind the eigenvalues and the corresponding eigenvectors of the\nmatrix 12\n1 2 0\n2-2 3\nGi) ARTP,, RRA <n Heh Teal & alee Take Ht aartar S| Aearita Atfre fs\naim{ = dim P, - dim P,\nPo\nLet P,, denote the vector space of all polynomials of degree < n over\nR. Verify that\naim( $+) dim P, — dim Pp. 8\nP,\nSLPM-P-MTH 5\n\nwseB\nSECTION B\n5. -y? w (2) - 22 Yow I",
-      "moduleId": "linear-algebra",
-      "module": "Linear Algebra",
-      "themeId": "linear-algebra",
-      "theme": "Linear Algebra",
+      "text": "UPSC 2025 · Mathematics Paper 1 · Question 4 · Section A · Analytic Geometry (official scan)",
+      "scanImages": [
+        "scan-01.jpg",
+        "scan-02.jpg",
+        "scan-03.jpg"
+      ],
+      "moduleId": "analytic-geometry",
+      "module": "Analytic Geometry",
+      "themeId": "analytic-geometry",
+      "theme": "Analytic Geometry",
       "subthemes": [],
       "sourcePdf": "https://www.upsc.gov.in/sites/default/files/MATHEMATICS-PAPER I-QP-CSM-25-010925.pdf",
       "notes": {
@@ -63,7 +121,10 @@
       "number": 5,
       "section": "B",
       "marks": 20,
-      "text": "5. (a) [ y +4) — xdx* 2 eet Fife\n4 2 2\n2,y \\(dyy _oydy ye _\n(bo) aett cheat, fares ater Praeticn otait ch dart &, ar starcmer eaten aaST |\nForm the differential equation of all ellipses whose axes coincide with\ncoordinate axes. 10\n(c) fara shite fee yest at srett sear & are ar, site He ERT Se aT TAT S BK\nqe aa 2, sa at daria sar A a (Glee) & 2, Han aa ae aren ae\nome aa a fer after 8 eT aT athe\nProve that the time taken by the Earth to travel over half of its orbit,\nwhich is separated by the minor axis and is remote from the Sun, when\nthe Sun is at the focus of the elliptic orbit, is two days more than half of\nthe year. The eccentricity of the orbit is taken as é : 10\n(@) fearmaré fe A ok B wm & Afar var wy Rea & fig & fart tte At at 2a 21\nAO ik BO 2 aaa ait Set @ St O ot UH are deft f sik rar a O HEL ale\nweds Skt i ciang / 2 TM d, AB A Ate O Ft Tes 2, at cutee fH se HAM, frat\nSkt aest 2, FIAT c\nc\narr fearrareé |\nGiven that A and B are two points in the same horizontal line distant 2a\napart. AO and BO are two equal heavy strings tied together at O and\ncarrying their weight at O. If/ is length of each string and d is depth of O\nbelow AB, then show that the parameter c of this catenary, in which the\nstrings hang, is given by\nc\n(e) af usxtytz, v=x2+y24 22 3 waxy dyed ox % aaateufe\ngrad u, grad v 3K grad w GHdefla z |\nIfu=x+y+z, v=x2+y2+22 and w=xy+yz+ zx, then show that\ngrad u, grad v and grad w are coplanar. 10\nSLPM-P-MTH 6",
+      "text": "UPSC 2025 · Mathematics Paper 1 · Question 5 · Section B · Analytic Geometry (official scan, page split)",
+      "scanImages": [
+        "scan-01.jpg"
+      ],
       "moduleId": "analytic-geometry",
       "module": "Analytic Geometry",
       "themeId": "analytic-geometry",
@@ -85,7 +146,11 @@
       "number": 6,
       "section": "B",
       "marks": 20,
-      "text": "6. (a) afe f(t) SX g(t) & aes BUR HAT: F(s) SN G(s) @ i faa Fife fe\nt\n= i knees = F(s) G(s) 21 ga ahora ar aT aa Be, SET\n0\nfj\ny(t) =t+ i) y(x) sin(t — x) dx Area AR |\n0\nIf F(s) and G(s) are Laplace transforms of f(t) and g(t) respectively, then\nt\nprove that ie i f(x) g(t — x) x = F(s) G(s). Using this result, solve the\n0)\nt\nequation y(t)=t+ J y(x) sin(t — x) dx. 15\n0\n(b) Um wearer Ste, farecht srepicras charg a &, aT UH BN fepett fig O we fear g stk SH\nSet oH UH at ao Ger aT 2 | Sh at Seater Ate Fr aK felg C oH Ta TH\nGa aT ae TH ae Sra orephcsy cag SAT TAT AT ST STE ce fee Bry fee STAT\n@ 1 ate Skt ar yee We aT UR aT 2, at cater fH am\n‘a (28 +42) wna F sett felg CO ATT ST STEET |\ng\nOne end of an elastic string, having natural length a, is fixed at some\npoint O and a heavy particle is attached to the other end of the string.\nThe string is drawn vertically downward till it is four times its natural\nlength at the point C and then released. If the modulus of elasticity of the\nstring is equal to the weight of the particle, then show that the particle\nwill return to the same point C in the time & (2s + a : 15\ng\nz=t—cost, H fers t = OT Ere ten ft fee F festa ar ter A\nra aAifsrT |\nFind the absolute value of the directional derivative of\n(x, y, z) = x2y2z2 at the point (1, 1, -1) in the direction of the\ntangent to the curve x=e', y=2sint+1, z=t-—cost, att=0. 10\nSLPM-P-MTH i\n\nGi) a&v.E =-0, v.H=0, vx B=- 2 ohtvx B= Ee\not ot\n2 Ota oo ee\nataiga fs v2H = > ahv2E => 1\not ot\nfv. E =0, V.H=0, vx E=- 2H anavx = 2,\not ot\n> eH >. &EF\nthen show that V2H = aon and V2E = rah 10\not ot",
+      "text": "UPSC 2025 · Mathematics Paper 1 · Question 6 · Section B · Ordinary Differential Equations (official scan)",
+      "scanImages": [
+        "scan-01.jpg",
+        "scan-02.jpg"
+      ],
       "moduleId": "ode",
       "module": "Ordinary Differential Equations",
       "themeId": "ode",
@@ -106,8 +171,12 @@
       "year": 2025,
       "number": 7,
       "section": "B",
-      "marks": 10,
-      "text": "7. (a) Haein orate a ap faser & Rex war sreitiictia wet F var gar 2 | afe\nUH AST AR, fora A St, Met & ware Sea fig we Gere, Tt ease fe agers fear |\nA solid sphere rests inside a fixed rough and hemispherical bowl of twice\nits radius. If a large amount of weight, whatsoever, is attached to the\nhighest point of the sphere, then show that the equilibrium is stable. 15\n(b) ) [xy + y2) dx + x2 dy], 3et C, tal y =x Sy = x2 ga ohteg aa A after\nCc\n@, & fee anda a ia ar saa aera Alfa |\nVerify Green’s theorem in the plane for > [(xy + y2) dx + x? dyl, where\nCc\nC is the boundary of the region bounded by the curves y = x and y = x2. 15\n3 3\nBane TART | == es\n(ce) (2 + ay) re (x+y) (2 az\naes eet Si fafa eet are AIST |\nFind the general solution and singular solution of the differential\n3 3\nequation (1+) = Zixty) (1-2) 3 10\n3. 2.\n(ii) wey + 3x20 ¥ re xiv +y =x log x Ht ea aa Ale |\ndx’ dx? dx = :\n3. 2.\nFind the complete solution of wey + ax2 ty ep y=xlogx.\ndx dx dx\n10\nSLPM-P-MTH 8\n\n2.",
+      "marks": 20,
+      "text": "UPSC 2025 · Mathematics Paper 1 · Question 7 · Section B · Ordinary Differential Equations (official scan)",
+      "scanImages": [
+        "scan-01.jpg",
+        "scan-02.jpg"
+      ],
       "moduleId": "ode",
       "module": "Ordinary Differential Equations",
       "themeId": "ode",
@@ -129,11 +198,14 @@
       "number": 8,
       "section": "B",
       "marks": 20,
-      "text": "8. (a)  sanet ata (x + afr — (x + ast + 2y = (14x) eX A ora frat\ndx\nfafer art eet Afar |\n; 5 . dy dy\nSolve the differential equation (x + eS — (2x + 5) + 2y = (1+ x) e*\nx x\nby the method of variation of parameters. 15\n(b)  aaalfre aniaseeth O<x<a, O<y<b, O<z<c%\n& fee Tse sre wae emit AIST |\nVerify Gauss’s divergence theorem for\n=> Aa A A\nF = [(x2 — yz)i + (y? - zx)j + (22 — xy)k], taken over the\nrectangular parallelopiped 0<x<a, O<y<b, 0<z<ce. 15\n(c) Gram at Heater cer f gare srprea-attede aver fee fend ster & ora aera\nfest a7 u are ware raret fig  watfta Fare sare | carte Fs\nGi) (u2 < 2ag) & fae; au frat aad arr a area feafa & orem\n(about) ate XAT,\nGi) (u2 > 5ag)% fee; aor guia: ace aft ea @, Sk\nGi) @ag <u2 < 5ag) & fat; a, aa HT UH east At fen 4, at afas & ae\nute 2ag\nAM o Fardt &, BS OM, Hales cos o = aes\nag\nal\nA particle is projected inside a fixed smooth cylinder with circular\ncross-section in a vertical plane from the lowest point with initial\nhorizontal velocity u. Show that for\n@) (u? < 2ag); the particle oscillates about the mean position in\nthe lower half,\nGi) (u2 > Sag); the particle executes complete circular motion,\nand\n(iii) (2ag < u? < 5ag); the particle will leave the curve in a tangential\ndirection, making an angle o with the horizontal\n2\nsudh tliat, cos o= M288: 20\n3ag\nSLPM-P-MTH 9\n\nLe Tee seca a Pg eee ees ean eligea!” | ; =~\noS Peace se aes any ae a care Fe taeaet re a os tie\nhee edie, Baa teat bear GS St gat: ;\n2424. epee a meee CO a ax es .\npc ete ee eo Bt ne a eee a)\nOe et ee SRE ae eta P po he | ac aal\nbore earn ee ee ee ee - a pee\nor ioc ea ee me oes — ape ye 4: ches ae\nee eas Bes pc , wee “ae ae i a etter ie Be Patong\ngee ae ae wn gis hy A ee Bt goes 2\npet oes a Aa Le Aega TP ae - ee pie oe *\na ine aah Gey py as ut gee sind! rare ie : 4\na i. peomhe w es Fe ee, ae\ncee . SE ae ge Ht Oa te a ae Saal ‘f\nBe Mes ye oe re oe at 2a - ate\nbeer OA oat ee Cibd aries wena ie pane\nghee ag? PP RE SE Ebr BASES te ae nak ae anand\na, eee: eps to ae tt Tae te whore oa ices 7\neee. ea te ying hgh er aa ft a oe tgtie, “ea Pace\na ne an a a Faas 5 + aid 8 La ye ei}\nSa ogi ope th, wee te we ke ae Cigars Fass 8\npeas ee ae ne tebete Ter cai Ae a a Bee eee ee pa |\npe ad eae rane Beale ea (eae cr Bn ike the atin os Bee Eee ay 4\nspares Ce ae eb tee es ee Ba es ee elie ssh NaN eas gees ed se: eae cL\noN es ig ae Ta ance ba ee er eae ee ae 7\nee ee ee ee ee, ees Ren ae Bae ec ene eee\nee oe ay Pasi 2s ep ak Wat ba Ore eae ec ae ae\nSsas as Pia cera, tr a fi Bb ‘oa Bet hy eo ‘tele ag ae a oe cag\na elo\nBr ase is ae A tio Shee es 0 SSeS ae eee ee eo ee\nee Seeos Pees he ee ita ity hes Fang eis, coy (CaS ea ere aig\nee Pr oa Mes area eet Peapiientss eee +H See 1 oe oS ake\npee: ee og one ale ee eal? Rieecd Tee eb an: aerate SOROS ie en\nae See. Sevens iat Some | OEoRS Li ae ie jae 8 Poi ease eee pay Re”\nee ee ile Seer kia re dein ee i. 2. Cie arenes eh: ee\ni Se ae eg ret. te Stee | Se\nBa dacs eT te ea eee cs bale",
-      "moduleId": "analytic-geometry",
-      "module": "Analytic Geometry",
-      "themeId": "analytic-geometry",
-      "theme": "Analytic Geometry",
+      "text": "UPSC 2025 · Mathematics Paper 1 · Question 8 · Section B · Vector Analysis (official scan)",
+      "scanImages": [
+        "scan-01.jpg"
+      ],
+      "moduleId": "vector-analysis",
+      "module": "Vector Analysis",
+      "themeId": "vector-analysis",
+      "theme": "Vector Analysis",
       "subthemes": [],
       "sourcePdf": "https://www.upsc.gov.in/sites/default/files/MATHEMATICS-PAPER I-QP-CSM-25-010925.pdf",
       "notes": {
@@ -151,7 +223,10 @@
       "number": 1,
       "section": "A",
       "marks": 20,
-      "text": "1. (a) aM H, R* A we seen 3, af ate vy, =(L -2, 5, -3), v2 =(2, 3,1, -4),\nv3 =@, 8, -3, —5) at ha 81 ca WO aren a fen ae Ae ae AS ze ore\na R4 & wm ater am fag Fife)\nLet H be a subspace of R* spanned by the vectors v, = (1, -2, 5, -3),\nv2 = (2, 3, 1, —4), v3 =(3, 8, -3, -5). Then find a basis and dimension of H, and\nextend the basis of H to a basis of R*. 10\n(b) WaT: RS RS we Yas dares 8 an R WR a GH STIR B= (vj, vo, v3} 81 AMT\nfee we sre aa ifsc)\nLet T: R° -R® be a linear operator and B={vj, vg, v3} be a basis of R?\nover R. Suppose that Tv, = (1, 1, 0), Tv =(1, 0, -), Tv3 =(2, 1, -1). Find a basis\nfor the range space and null space of T. 10\n() x aft ani & fee gen\na\n% aaa A sal Fife\nDiscuss the continuity of the function\n1\nse=[ re ane\nfor all values of x. 10\n(a) eR 9A BT In(x) I (x-1) A ara 4 weR Ae eM In(.- 1) a aI aK WI ae eA\nam we Fife)\nExpand In(x) in powers of (x — 1) by Taylor’s theorem and hence find the value of\nIn(1-1) correct up to four decimal places. 10\n(e—) Fix? +y? +2? =9, x-y+z=38 SRN aA wa a AeA aH aR ae AAT\nFind the equation of the right circular cylinder which passes through the circle",
+      "text": "UPSC 2024 · Mathematics Paper 1 · Question 1 · Section A · Linear Algebra (official scan)",
+      "scanImages": [
+        "scan-01.jpg"
+      ],
       "moduleId": "linear-algebra",
       "module": "Linear Algebra",
       "themeId": "linear-algebra",
@@ -173,7 +248,11 @@
       "number": 2,
       "section": "A",
       "marks": 20,
-      "text": "2. (a) AMR SRRS HK um Yeas HHH T, Tx, y, 2) = (2x, 4x-y, 2x4+3y- 2) a Tema\n81 an 7 pena 2? aft ef, a ot ae am ah wege Ae an 7) aa Aira\nConsider a linear operator T on R®* _ over R_ defined by\nT(x, 4 2) =(2x, 4x-y, 2x+3y-2). Is T invertible? If yes, justify your answer\nand find T7}, 15\n\n\n(.) Aua=(x+W/0-xy TH v= tan! x+tan ye, TAY, v) /Ax y) Wa HU) AT u\naa v era: Waa 8? ae ef, ty aera ara ifsc)\nIf u=(x+y)/(1-xy) and v =tan7!x+tan7ly, then find au, v)/ ax y). Are u\nand v functionally related? If yes, find the relationship. 15\n() Wa x=3-6t, y=2t, 2=3+2t Hl AAA 3x+4y-5z+26 =0 F sfafers aa Fife)\nFind the image of the line x=3-6t, y=2t, z=3+2t in the plane",
+      "text": "UPSC 2024 · Mathematics Paper 1 · Question 2 · Section A · Linear Algebra (official scan)",
+      "scanImages": [
+        "scan-01.jpg",
+        "scan-02.jpg"
+      ],
       "moduleId": "linear-algebra",
       "module": "Linear Algebra",
       "themeId": "linear-algebra",
@@ -195,7 +274,10 @@
       "number": 3,
       "section": "A",
       "marks": 20,
-      "text": "3. (a) AAV = Moyo (R) ARs Gere % Aa KH TH afer aA eater 21 Moyo (R) % ARR\n1 2\nan & eat F o-(5 2a Re fem o:VoV am area aa Fife\nak aa 6 A AR (tH) ara Ares an o ara 8? aA ST a eh vega Fifer\nLet V = M2, (R) denote a vector space over the field of real numbers. Find the\n1 2\nmatrix of the linear mapping : V > V given by $(v) = ( 3-1 } v with respect to\nstandard basis of M2, (R), and hence find the rank of 9 Is 6 invertible?\nJustify your answer. 15\n(b) Saé nen ae-ai So area UH ig & sila wad aS Fem aT ora aa Fifa\nFind the volume of the greatest cylinder which can be inscribed in a cone of\nheight h and semi-vertical angle a. 20\n(co) WH 4x? ~y? +22? +2xy-3yz+12x-1ly+6z+4=0 #1 Bd wa fre\nFind the vertex of the cone 4x? -y? +227 +2xy-3yz+12x-lly+6z+4=0. 15\n324",
+      "text": "UPSC 2024 · Mathematics Paper 1 · Question 3 · Section A · Linear Algebra (official scan)",
+      "scanImages": [
+        "scan-01.jpg"
+      ],
       "moduleId": "linear-algebra",
       "module": "Linear Algebra",
       "themeId": "linear-algebra",
@@ -217,7 +299,11 @@
       "number": 4,
       "section": "A",
       "marks": 20,
-      "text": "4. (a) WIA=|2 0 2 3x3 wee 21 Aw atenaties aM cen ara aPrereatirs ater\n42 3\naa Aim) aa: ATS a aftrenafies am an dna afrenafes afer ara Aire, wef\n324\nLet A=|2 0 2] be a 3x3 matrix. Find the eigenvalues and the\n423\ncorresponding eigenvectors of A. Hence find the eigenvalues and the\ncorresponding eigenvectors of As, where A~!5 =(A7})'5, 20\n(ob) fee: Bare aI aT SA ge Kea (HfSatigs) r= all +cos 6) % HR WM FI r=aF\nara fer aa a Aare ara ifsc)\nUsing double integration, find the area lying inside the cardioid r = a(1+cos Q)\nand outside the circle r=a. 15\n\n\n() Satie ar wet gra Afra, Th MA 3x +2y-2+2 =0 F fs (1, - 2, 1) KR eRT aT\n@ oR WA x? +y? +2? -4x46y4+4 =0 A aiftma: sea 31\nFind the equation of the sphere which touches the plane 3x+2y-z+2=0\nat the point (1,-2,1) and cuts orthogonally the sphere\nWvs—B / SECTION—B é",
+      "text": "UPSC 2024 · Mathematics Paper 1 · Question 4 · Section A · Linear Algebra (official scan)",
+      "scanImages": [
+        "scan-01.jpg",
+        "scan-02.jpg"
+      ],
       "moduleId": "linear-algebra",
       "module": "Linear Algebra",
       "themeId": "linear-algebra",
@@ -239,11 +325,15 @@
       "number": 5,
       "section": "B",
       "marks": 20,
-      "text": "5. (a) W-FA r=c(sec 0+ tan 6) % Tasha da aa Af, wel c UH Waa 3)\nFind the orthogonal trajectories of the family of curves r= c(sec 6+ tan 6),\nwhere c is a parameter. 10\n(b) ACA BAR BT WANT aA BU aA eet Y(t) = cost +f) ylx) cos (t- x)dx al et\nFifer |\nSolve the integral equation y(t)=cost +f, U(x) cos (t-x)dx using Laplace\ntransform. 10\n(c) feet ara t (Aare 3) He WHR Bain-wenes A aeaUrt fa Best\nHatit+ (+) j+(2t+yk\nB=2ti+@t-j+tk\ny=i+3ty+k\nan Pefia €1 aain-agys, Pref werent feat o sik 7%, & afeeta dame A ohada\nWI 2? t=1 Save H ai-aeweH H ora A ohtada we ft aa Are\nAt any time t (in seconds), the coterminous edges of a variable parallelepiped\nare represented by the vectors\n. Hatit+ (t+ j+(2t+HkK\nB=2t?+(@t-1)j+tk\nFait3tj+k\nWhat is the rate of change of the vectorial area of the parallelogram, whose\ncoterminous edges are @ and 7? Also find the rate of change of the volume of\nthe parallelepiped at t =1 second. 10\n@ we oata % or wa fea a we da ted aera I wa 21 2 Ral FG wa\nTrend ar ase ye ae (i) Sa Trent an waacia gE AH fer &, area ar wena a\nifs |\nA solid hemisphere rests in equilibrium on a solid sphere of equal radius.\nDetermine the stability of the equilibrium in the two situations—(i) when the\ncurved surface and (ii) when the flat surface of the hemisphere rests on the\nsphere. 10\n\n\n]\n() @) ACU Wa ww 7) = fi +g] % Tel f ak g % fade ae % saw FI\naatgy f am & feet fg we aaa\n81 ee am & feet feeg H tee (eis) ca eM 2?\nLet C be a plane curve 7(t) = f| (i +g(t)j, where f and g have second-order\nderivatives. Show that the curvature at a point is given by\nWhat is the value of torsion t at any point of this curve? 5\n(i) calf feet am 2 parr fares ne yea area wide ae ara aa ae fe tea (zieha)\nWwa7al\nShow that the principal normals at two consecutive points of a curve do\nnot intersect unless torsion t is zero. 5",
-      "moduleId": "ode",
-      "module": "Ordinary Differential Equations",
-      "themeId": "ode",
-      "theme": "Ordinary Differential Equations",
+      "text": "UPSC 2024 · Mathematics Paper 1 · Question 5 · Section B · Calculus (official scan)",
+      "scanImages": [
+        "scan-01.jpg",
+        "scan-02.jpg"
+      ],
+      "moduleId": "calculus",
+      "module": "Calculus",
+      "themeId": "calculus",
+      "theme": "Calculus",
       "subthemes": [],
       "sourcePdf": "https://www.upsc.gov.in/sites/default/files/QP-CSM-24-MATHEMATICS-PAPER-I-031024.pdf",
       "notes": {
@@ -261,7 +351,11 @@
       "number": 6,
       "section": "B",
       "marks": 20,
-      "text": "6. (a) TARAS: eA ost a Afia cH an aq UH faa Afia wad Wael WAM\nwr fea a wm ogi fre ys ao srafeaa 8) afera ari fad a sein aed BE\nfrat fice aft yen 4 ofa aa Ae)\nA regular tetrahedron, formed of six light rods, each of length J, rests on a\nsmooth horizontal plane. A ring of weight W and radius r is supported by the\nslant sides. Using the principle of virtual work, find the stress in any of the\nhorizontal sides. 15\ne\n(b) Wea aad ahs A eH am A al fafa Fan u sk ve aM a aa aM f, a fy Bk H\nfea ara /fear ART & fare ari feted % sta Al eo k(v? -u?) 2? ae of eaten fafa a\nar\n1 Qos Bp 2p 2 a Bp Qi 0/2\nsae Wu - ou fa - FPN\n2 -fe\nal\nA particle executes simple harmonic motion such that in two of its positions,\nvelocities are u and v, and the two corresponding accelerations are f, and f.\nFor what value(s) of k, the distance between the two positions is k(v? -u?)?\nShow also that the amplitude of the motion is\n1 Dig Dy Dp 2. Bp a/2.\nsae lt - ou fa - 0° FY)\nSE -fP 15\n\nea i al a\n\n() (i) CREAS BAF ula) =-e* Hr aaa Hea BU BAHT Be xy” +(x —1y’—-y-0F\nFeu teat wa Fire)\nFind the second solution of the differential equation xy” +(x-l)jy’-y=0\nusing u(x) =-e~* as one of the solutions. 10\n(i) wrerei-frarer Fate ar saa ae sree TAT x2 y” —2xy’ +2y = x? sin x HI SITS\nBa aa Fire)\n' Find the general solution oof the differential equation\nxy” -2xy’ +2y =x sin x by the method of variation of parameters. 10",
+      "text": "UPSC 2024 · Mathematics Paper 1 · Question 6 · Section B · Dynamics & Statics (official scan)",
+      "scanImages": [
+        "scan-01.jpg",
+        "scan-02.jpg"
+      ],
       "moduleId": "dynamics-statics",
       "module": "Dynamics & Statics",
       "themeId": "dynamics-statics",
@@ -283,11 +377,15 @@
       "number": 7,
       "section": "B",
       "marks": 20,
-      "text": "7. (a) arate a R:\\x-xy|<a, ly-yol<b 9 abies a wre SY - F(x, Ys UX) = Yo ®\nafd ta % afters & faq afedian wie ar ae fafa! we soa aaa RA aR a\nwren =u, yl) =0 % ea & afta sik afictan ar wham Are) ae ws a afte\nwe dee %, af ah ect A ae A\nState uniqueness theorem for the existence of unique solution of the initial\nvalue problem o =f (% Y, Yl(xo) = Yo in the rectangular region R: |x-x9|<a,\nly-Yo|<b. Test the existence and uniqueness of the solution of the initial\nvalue problem ie =2/y, y(l) =0, in a suitable rectangle R. If more than one\nsolution exist, then find all the solutions. 15\n(b) Tray 1H UH Behl wea SO aT TH faa fg a sealer Gear Gan UH aT a TRH\nwus we UH Fa A Gen YS wee 8 as eH Sealer aaa A we Di oie aR ah\naarige fm feet of one & fet we arat ar an arr 21\nA heavy particle hanging vertically from a fixed point by a light inextensible\nstring of length / starts to move with initial velocity u in a circle so as to make a\ncomplete revolution in a vertical plane. Show that the sum of tensions at the\nends of any diameter is constant. 15\n() rea wha ar er ferftay sen gual afte aa F = xyltyzj+axk % fy SKA\nae z=1-x?; O<x<1, -2<ys2 Hm Tye alia wm %, enfia Afi)\nState Stokes’ theorem and verify it for the vector field F= xyi +yzj+2xk\nover the surface S, which is the upwardly oriented part of the cylinder",
-      "moduleId": "analytic-geometry",
-      "module": "Analytic Geometry",
-      "themeId": "analytic-geometry",
-      "theme": "Analytic Geometry",
+      "text": "UPSC 2024 · Mathematics Paper 1 · Question 7 · Section B · Ordinary Differential Equations (official scan)",
+      "scanImages": [
+        "scan-01.jpg",
+        "scan-02.jpg"
+      ],
+      "moduleId": "ode",
+      "module": "Ordinary Differential Equations",
+      "themeId": "ode",
+      "theme": "Ordinary Differential Equations",
       "subthemes": [],
       "sourcePdf": "https://www.upsc.gov.in/sites/default/files/QP-CSM-24-MATHEMATICS-PAPER-I-031024.pdf",
       "notes": {
@@ -305,7 +403,10 @@
       "number": 8,
       "section": "B",
       "marks": 20,
-      "text": "8. (a) Te SRR a Sea ae oR a aE\nal eat aif, set 9(t-2) fete Seer we A cater 81\nUsing Laplace transform, solve the initial value problem\nwhere &(t-2) denotes the Dirac delta function. 15\n(b) Tea arr wea ar se aA BE AeA x? +y? =16 aM Bae z=1 3 z=5 AI\nufag aa a aT\nSwi + x29 +(z-1)?k)- Ads\nal aM Panter)\nUsing Gauss divergence theorem, evaluate the integral\nsw? +xz°j+(z-1)?k)- Ads\nover the region bounded by the cylinder x? +y? =16 and the planes z=1\nand z=5. 15\n() daw am a wm aw fa w ae 4 aes AT} ae a1 a 45° & So | Alia\n2\nseh ewe Re eon a 6 SE) ae a Ae\nr r\nwean a ary F_/2-7) 2)\nA particle moves with a central acceleration p ats being projected from\nr r\na distance d at an angle 45° with a velocity equal to that in a circle at the\nsame distance. Prove that the time it takes to reach the centre of force is\n2\nkkk",
+      "text": "UPSC 2024 · Mathematics Paper 1 · Question 8 · Section B · Vector Analysis (official scan)",
+      "scanImages": [
+        "scan-01.jpg"
+      ],
       "moduleId": "vector-analysis",
       "module": "Vector Analysis",
       "themeId": "vector-analysis",
@@ -322,12 +423,40 @@
       }
     },
     {
+      "id": "math1-2023-q1",
+      "year": 2023,
+      "number": 1,
+      "section": "A",
+      "marks": 20,
+      "text": "UPSC 2023 · Mathematics Paper 1 · Question 1 · Section A · Linear Algebra (official scan, page split)",
+      "scanImages": [
+        "scan-01.jpg"
+      ],
+      "moduleId": "linear-algebra",
+      "module": "Linear Algebra",
+      "themeId": "linear-algebra",
+      "theme": "Linear Algebra",
+      "subthemes": [],
+      "sourcePdf": "https://www.upsc.gov.in/sites/default/files/QP-CSM-23-MATHEMATICS-PAPER-I-29092023.pdf",
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
       "id": "math1-2023-q2",
       "year": 2023,
       "number": 2,
       "section": "A",
       "marks": 20,
-      "text": "2.(c)(i)  aatgy fs after 2x2 + 3y?— 8x + Gy— 122+ 11 =0\nwe diate wacam woffa ser 21 ae a ger ae sk yer aaaat Ft st ae\nathe |\nShow that the equation 2x? + 3y?- 8x + 6y—12z+11=0 represents an elliptic\nparaboloid. Also find its principal axis and principal planes. 10",
+      "text": "UPSC 2023 · Mathematics Paper 1 · Question 2 · Section A · Linear Algebra (official scan, page split)",
+      "scanImages": [
+        "scan-01.jpg"
+      ],
       "moduleId": "linear-algebra",
       "module": "Linear Algebra",
       "themeId": "linear-algebra",
@@ -348,30 +477,11 @@
       "year": 2023,
       "number": 3,
       "section": "A",
-      "marks": 15,
-      "text": "3.(b) oh afer autea fH (0, 0), EA fr, y) = 2x4 -3x°y +? aT aRA-ferg B ae AEE |\nJustify whether (0, 0) is an extreme point for the function f(x, y) = 2x4 — 3xy + y*.\n15\n3.0.) FA P+ y? +2? 4x Gy + 2z-16=0; 3x+y+3z-4=0% BR TR ae Ae\nat etter fer ct feafrat a ara fife |\n(i) fear TH ga We a WH ged ga a\nFind the equation of the sphere through the circle\nin the following two cases.\n(i) the point (1, 0, -3) lies on the sphere.\n(ii) the given circle is a great circle of the sphere. 15",
-      "moduleId": "analytic-geometry",
-      "module": "Analytic Geometry",
-      "themeId": "analytic-geometry",
-      "theme": "Analytic Geometry",
-      "subthemes": [],
-      "sourcePdf": "https://www.upsc.gov.in/sites/default/files/QP-CSM-23-MATHEMATICS-PAPER-I-29092023.pdf",
-      "notes": {
-        "introduction": "",
-        "staticNotes": "",
-        "quotes": "",
-        "currentAffairs": "",
-        "topperPoints": "",
-        "valueMaterial": ""
-      }
-    },
-    {
-      "id": "math1-2023-q4",
-      "year": 2023,
-      "number": 4,
-      "section": "A",
       "marks": 20,
-      "text": "4.(a) areyg A= De ieee\nfe 1 ee\nat dfs aaria dora ea 4 aaa ah sect aie aa Afr |\nFind the rank of the matrix\nLe 2a\nAlo 3\n1 Eafe, nears Wye\nby reducing it to row-reduced echelon form. 15",
+      "text": "UPSC 2023 · Mathematics Paper 1 · Question 3 · Section A · Linear Algebra (official scan, page split)",
+      "scanImages": [
+        "scan-01.jpg"
+      ],
       "moduleId": "linear-algebra",
       "module": "Linear Algebra",
       "themeId": "linear-algebra",
@@ -393,7 +503,10 @@
       "number": 5,
       "section": "B",
       "marks": 20,
-      "text": "5.(c)  AGeaTA ‘a’ aT UH Serr (flere) Ue eH tar safer um Heakex da Ft ant\nfrat Gat S| Ser aT Het fest: fee & | ars 7 aa AR SW aT Us Us AA\nWd TS Tealat A 45° a HIT sara BU ao Rei at dan & wet aa aear K\nframe @ | ame adr aa ae %, aa case fH\n1 42\ndan 3k dea At waar ft aa Arc |\nA cylinder of radius ‘a’ touches a vertical wall along a generating line. Axis of the\ncylinder is fixed horizontally. A uniform flat beam of length ‘/’ and weight ‘W’ rests\nwith its extremities in contact with the wall and the cylinder, making an angle of 45°\nwith the vertical. If frictional forces are neglected, then show that\n1 42\nAlso, find the reactions of the cylinder and wall. 10\n5 SKYC-U-MTH",
+      "text": "UPSC 2023 · Mathematics Paper 1 · Question 5 · Section B · Analytic Geometry (official scan, page split)",
+      "scanImages": [
+        "scan-01.jpg"
+      ],
       "moduleId": "analytic-geometry",
       "module": "Analytic Geometry",
       "themeId": "analytic-geometry",
@@ -415,11 +528,14 @@
       "number": 6,
       "section": "B",
       "marks": 20,
-      "text": "6.(c) aarat [I(e2 i+ 42?x? jt 2 'y? é) -ndS\nSs\nSAM aed Afie; Wel S Pade 2=0 H BK GS 4x24 4y? +422 =1 a ad AT\n2 aK yw ERI Mag 2 | ada aia-seT Waa aw aenfta Af |\nEvaluate the integral {I(o# 24 427x? js 2?y? é) -ndS,\nSs\nwhere S is the upper part of the surface 4x? + 4y? + 4z”=1 above the plane z = 0 and\nbounded by the xy-plane. Hence, verify Gauss-Divergence theorem. 20\nTai) waea wen: 2 --<9 \"\" _ aoe aa Ae |\noe dx 3x7y? + Bet”\n3\nFind the solution of the differential equation : Dies es 10\n\nTAayGi) At xp? + y(2x+y)p+y=0 a Wem y=u IR xy=v EI WI STH\nwart ffie | sa: adie a ea Pranfere sik culse fH y+4x=0 Tame\nwien at us fifi ea 31\nReduce the equation xp? + y(2x + y)p + y>= 0 to Clairaut’s form by the substitution\ny=u and xy=v. Hence solve the equation and show that y+ 4x=0 is a singular\nsolution of the differential equation. 10\n\n7(b) wR ote Heaters ws Ste gr, reat Us fer us frat seater dan oe us fry\na atk gaa fier adie & feat (fa) fara uw fag 8 cen 2, wealex dae\n& wer fear 2 | Sta adits ar aia ge dan a eal axa 3 | ae Heat\nare So ar arafa air 6 & atk sais & aaa ara (Aa) a HAs ao gz\nat (tang—tand) at ar aa Afi |\nA solid hemisphere is supported by a string fixed to a point on its rim and to a\npoint on a smooth vertical wall with which the curved surface is in contact. If 0 is\nthe angle of inclination of the string with vertical and ¢ is the angle of inclination\nof the plane base of the hemisphere to the vertical, then find the value of\n(tang — tan@). 15\n\n7 SKYC-U-MTH",
-      "moduleId": "vector-analysis",
-      "module": "Vector Analysis",
-      "themeId": "vector-analysis",
-      "theme": "Vector Analysis",
+      "text": "UPSC 2023 · Mathematics Paper 1 · Question 6 · Section B · Ordinary Differential Equations (official scan, page split)",
+      "scanImages": [
+        "scan-01.jpg"
+      ],
+      "moduleId": "ode",
+      "module": "Ordinary Differential Equations",
+      "themeId": "ode",
+      "theme": "Ordinary Differential Equations",
       "subthemes": [],
       "sourcePdf": "https://www.upsc.gov.in/sites/default/files/QP-CSM-23-MATHEMATICS-PAPER-I-29092023.pdf",
       "notes": {
@@ -437,7 +553,35 @@
       "number": 7,
       "section": "B",
       "marks": 20,
-      "text": "7.(c) Sa Us ass St east Yar Us Praa Yar & ara ws Sx 1 o aan @ at fe Fife\nfe amet At Bisa & area ooada Prean ar aq tand & sara S | sik art fe\nAire fH aK ae saa we feria @, dt eal tar uw faa fen & ara os fe\namt aardt & |\nIf the tangent to a curve makes a constant angle @ with a fixed line, then prove\nthat the ratio of radius of torsion to radius of curvature is proportional to tané.\nFurther prove that if this ratio is constant, then the tangent makes a constant angle\nwith a fixed direction. ibe)\n8(a) area eae wha an saat ax Prafefaa wR art are at eet ifsc |\nay\nSe y(t) = f(t),\ny0)=1, yO) =0 RK fH, eH TH fea wT Fe E |\nSolve the following initial value problem by using Laplace transform technique :\ndy Wy\nrae a y(t) = £0),\n(0) = 1, y'(0) =0 and f(d) is a given function of ¢. 15\n8(b) Wa, aaa A Ve oO faa OH aa a Pac Sar & wafer Rien ara\n2 dk ae ae TT A — 2) @ fate 2 | ge ar tafe ae ae ArT |\na We ah xt+yt=c? SM ?\nA particle is projected from an apse at a distance le from the centre of force with\na velocity mes and is moving with central acceleration A(r>° — c’r) . Find the path\nof motion of this particle. Will that be the curve x* + y4=c? ? 20\n8(c) Ur afar fig war ¢ atk afer fig oa fo fee fraferfad adafian fre Fife\nVGf)=VO-FtOV-S)\nv( L227) ax as tar ie at si ete weer A\nFor a scalar point function @ and vector point function fie prove the identity\nV-(9 f)=VO-f+G(V: f). Also find the value of V- arnt and then verify stated\nidentity. 15\nSKYC-U-MTH 8",
+      "text": "UPSC 2023 · Mathematics Paper 1 · Question 7 · Section B · Vector Analysis (official scan, page split)",
+      "scanImages": [
+        "scan-01.jpg"
+      ],
+      "moduleId": "vector-analysis",
+      "module": "Vector Analysis",
+      "themeId": "vector-analysis",
+      "theme": "Vector Analysis",
+      "subthemes": [],
+      "sourcePdf": "https://www.upsc.gov.in/sites/default/files/QP-CSM-23-MATHEMATICS-PAPER-I-29092023.pdf",
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "math1-2023-q8",
+      "year": 2023,
+      "number": 8,
+      "section": "B",
+      "marks": 20,
+      "text": "UPSC 2023 · Mathematics Paper 1 · Question 8 · Section B · Ordinary Differential Equations (official scan, page split)",
+      "scanImages": [
+        "scan-01.jpg"
+      ],
       "moduleId": "ode",
       "module": "Ordinary Differential Equations",
       "themeId": "ode",
@@ -458,8 +602,11 @@
       "year": 2022,
       "number": 1,
       "section": "A",
-      "marks": 8,
-      "text": "1. (a) fag Are fH n forte afem anise VS few n tama: cada ates ar als sft\naye Vd fae UH AE FATT 2 |\nProve that any set of n linearly independent vectors in a vector space V\nof dimension n constitutes a basis for V. 10\nnile ee\n(b) FATT: R?> Ro um tas ena, ter 2 fe | ): 2| aT m(1)- 2\n2\nca a) al ata Ifa |\n4 1\nLet T : R? > R® be a linear transformation such that a(;) =|2]| and\n3\nAe ee 2\n1 4\n8\ni\n(c) Tim (e* + x)* A Prete |\nXoo\n1\nEvaluate lim (e* +x)*. 10\nx—0o\n2\n(@) J So saftrenfer aor ater =f |\n0\n2\n‘A dx\nExamine the convergence of f pe 10\n0\nCRNA-F-MTH 2\n\n(ec) Whe a aaa UH FBR F< (a, b, c) FT STM Beil Hl HAM: A, BAC\nfagat a faa 2 | fgait 0, A, Ba Ca aed ae Met & eg a fags\nara fife, set O Aer-ferg 2 |\nA variable plane passes through a fixed point (a, b, c) and meets the axes\nat points A, B and C respectively. Find the locus of the centre of the\nsphere passing through the points O, A, B and C, O being the origin. 10",
+      "marks": 20,
+      "text": "UPSC 2022 · Mathematics Paper 1 · Question 1 · Section A · Linear Algebra (official scan, page split)",
+      "scanImages": [
+        "scan-01.jpg"
+      ],
       "moduleId": "linear-algebra",
       "module": "Linear Algebra",
       "themeId": "linear-algebra",
@@ -481,7 +628,11 @@
       "number": 2,
       "section": "A",
       "marks": 20,
-      "text": "2. (a) feed atte freee & att cit at ofte-aartia fafa a ara Fifa :\nFind all solutions to the following system of equations by row-reduced\nmethod : 15\n\n(b) WH LS HAR BT St MET A reat aT: UH at ae UH ga wT A et :\nme | cas A afetita qn fat or watt ach, ga ate a orca fu ae\nape & arte Sl Ads A ara Alfa |\nA wire of length / is cut into two parts which are bent in the form of a\nsquare and a circle respectively. Using Lagrange’s method of\nundetermined multipliers, find the least value of the sum of the areas so\nformed. 15\n\neo! EO)\n\n© ae P,Q,R; P,Q, Rw frg a cigar tt Br ae: (fara)\naftera oe & a Ix + my + nz = p a Wade PQR frefia @, amisu fH\n<9 ,4 41.0, ama PQRr a fiefia ar? |\natl< Bem .eon.: P\nIf P, Q, R; P’, Q’, R’ are feet of the six normals drawn from a point\n\nete 2\nto the ellipsoid Ge a + S =1, and the plane PQR is represented\na b c\n\nby /x+my+nz=p, show that the plane P’Q’R’ is given by\n\nx y Z 1\na-l, bem = e-n. P\n\nCRNA-F-MTH 3\n\nx\nx-y-z=07",
+      "text": "UPSC 2022 · Mathematics Paper 1 · Question 2 · Section A · Ordinary Differential Equations (official scan)",
+      "scanImages": [
+        "scan-01.jpg",
+        "scan-02.jpg"
+      ],
       "moduleId": "ode",
       "module": "Ordinary Differential Equations",
       "themeId": "ode",
@@ -503,7 +654,10 @@
       "number": 3,
       "section": "A",
       "marks": 20,
-      "text": "3. (a) AMA P=lly\n2x-y+z=0\nZz\nafer aafse RR) & afesit ar UH aA 8 | Ta\n@) fag Hifi fe P, Ro At wp soa 2 |\nGi) Part tm stem cen fam ara ifsc |\nee\nx-y-—z=Oand\nLet the set P={|y\n2x-y+z=0\nZz\nbe the collection of vectors of a vector space R°(R). Then\n(i) prove that P is a subspace of R.\n(ii) find a basis and dimension of P. 10+10\n(b) FRI: PATH I STAT He, Fe x2 + y2 = 4 dM ae y? = 3x h syahaS\narpa st after ifr |\nUse double integration to calculate the area common to the circle\nx? + y2 = 4 and the parabola y? = 3x. 15\n(c) gam Harea fase & aie cr atten ara Alfa Sit ace Vara :\nFind the equation of the sphere of smallest possible radius\nwhich touches the straight lines : oa eS was = ee and\nx+3 pe Veo = z-6 15\n-3 2 4",
+      "text": "UPSC 2022 · Mathematics Paper 1 · Question 3 · Section A · Analytic Geometry (official scan)",
+      "scanImages": [
+        "scan-01.jpg"
+      ],
       "moduleId": "analytic-geometry",
       "module": "Analytic Geometry",
       "themeId": "analytic-geometry",
@@ -525,7 +679,13 @@
       "number": 4,
       "section": "A",
       "marks": 20,
-      "text": "4. (a) we than sfifea T: R? 5 R? re Fife HH R2% vel afer HO HM\na ym em 2 | ae Hh fag Atha fee o=5 & feu, Tar aig oft sftrcrattrs\nAM (aga) RF a 2 |\nFind a linear map T : IR? — R? which rotates each vector of R? by an\nangle 0. Also, prove that for 0 = : , T has no eigenvalue in R. 15\nCRNA-F-MTH 4\n\n(b) a y2x2=x2— a2 ar ate (ga) ifs, Tel aH arecferH are z |\nTrace the curve yx? = x? — a?, where a is a real constant. 20\n(c) ae Wade ux + vy + wz = 0, Wh ax? + by? + cz2 = 0-H a Sra A Hea\n@, ct fag Afi fF (b +c) u2 + (c +a) v2 + (a+ b) w2=0.\nIfthe plane ux + vy + wz=0 cuts the cone ax” + by? + cz?=0 in\n; perpendicular generators, then prove that\nCRNA-F-MTH 5\n\navB\nSECTION B",
+      "text": "UPSC 2022 · Mathematics Paper 1 · Question 4 · Section A · Linear Algebra (official scan)",
+      "scanImages": [
+        "scan-01.jpg",
+        "scan-02.jpg",
+        "scan-03.jpg",
+        "scan-04.jpg"
+      ],
       "moduleId": "linear-algebra",
       "module": "Linear Algebra",
       "themeId": "linear-algebra",
@@ -547,11 +707,14 @@
       "number": 5,
       "section": "B",
       "marks": 20,
-      "text": "5. (@) aise fe saat aia ®.Py=Q aI OATH Eat\nx\nQ_-jpadx JP dx (2)\ni ie Cc di =\ny=p7e +e Pp\n& Ba 4 faa Tt aad 2, sei P,Q, xb ye oe FMT Cu ew a\na1\nShow that the general solution of the differential equation * +Py=Q\nx\ncan be written in the form y = ® —e !P dx {ec ef fer dx (2) , where\nP, Q are non-zero functions of x and C, an arbitrary constant. 10\n(ob) Gaigu fe wacrat & fer : x? = 4a (y+ a) dasha dda, ah Ae\nfea aa é |\nShow that the orthogonal trajectories of the system of parabolas :\nx? = 4a (y + a) belong to the same system. 10\n(©) wih a U fis, om a ah et uh Ba aaa H fea @, aio Ww py,\ntanod afte @ | fis at aaa HSK A ae batt aw LR Sat ger\name omftrs frrg a diet & feu ae ad at aa Fife, set amen et\naa ets aM F aad AAR? |\nA body of weight w rests on a rough inclined plane of inclination 0, the\ncoefficient of friction, 1, being greater than tan 0. Find the work done in\nslowly dragging the body a distance ‘b’ up the plane and then dragging it\nback to the starting point, the applied force being in each case parallel\nto the plane. 10\n@) Gwar J2gh a1 are fg OS vata fee wen ae ana & fie\nPlx, y) Heiter & cau @ Tet sat OX an OY wa: fis O 8 Afar\naa aetgat Seater tart & 1 ale waa At at dua feet aaa x a, at\naug fei x2 = Qhy den satan At da fensit Fa up, alt POX at feed\nart 2 |\nA projectile is fired from a point O with velocity /2gh and hits a\ntangent at the point P(x, y) in the plane, the axes OX and OY being\nhorizontal and vertically downward lines through the point O,\nrespectively. Show that if the two possible directions of projection be at i\nright angles, then x? = 2hy and then one of the possible directions of\nprojection bisects the angle POX. 10\nCRNA-F-MTH 6\n\nSaad A A A\n(ec) gage fH A =(6xy +23)i + (8x2—z)j + Gxz2-y)k BS | o a\noft ara ifaw A = Vo.\n= a A A\nShow that A =(6xy +2z9)i +(8x?-z)j + (8xz2-—y)k is irrotational.\npe k\nAlso find @ such that A = Vo. : 10",
-      "moduleId": "dynamics-statics",
-      "module": "Dynamics & Statics",
-      "themeId": "dynamics-statics",
-      "theme": "Dynamics & Statics",
+      "text": "UPSC 2022 · Mathematics Paper 1 · Question 5 · Section B · Analytic Geometry (official scan, page split)",
+      "scanImages": [
+        "scan-01.jpg"
+      ],
+      "moduleId": "analytic-geometry",
+      "module": "Analytic Geometry",
+      "themeId": "analytic-geometry",
+      "theme": "Analytic Geometry",
       "subthemes": [],
       "sourcePdf": "https://www.upsc.gov.in/sites/default/files/QP-CSM-22-MATHEMATICS-PAPER-I-280922.pdf",
       "notes": {
@@ -569,11 +732,65 @@
       "number": 6,
       "section": "B",
       "marks": 20,
-      "text": "6. (a) 21 aeaTs HH am (chiar) freer UK w oft gH (Alle) TA 2, UH\nafta tar & a fai Pam Qa aed & 2 | cate fH an A faa\n(ea) afi 2 2, wet han & Haat ich ef feta A wea ar aa 2 |\nA cable of weight w per unit length and length 27 hangs from two points\nP and Q in the same horizontal line. Show that the span of the cable is\n2\n2l f = 2 where h is the sag in the middle of the tightly stretched\nposition. 20\n(ob) Wrae-feracor fate ar saan ach, Prefered sana ater :\n2\nal ga Afse, sel wars alin aH UH ey =x aT |\nSolve the following differential eapation by using the method of\nvariation of parameters : (ee = - ax + 2y = G@*-1)\" > given\nthat y = x is one solution of the reduced equation. 15\n(@) aaa # ofa & waa a f (3x2 — 8y2) dx + (4y — 6xy) dy % fare wenfira\nAim, wet C, x=0, y=0, x+y =1 ER Vieniea Ba or i awe |\nVerify Green’s theorem in the plane for { (8x? — 8y2) dx + (4y — 6xy) dy,\nCc\nwhere C is the boundary curve of the region defined by x = 0, y = 0,\nxty=l1. 15\nQi. (2) Kawa EF =e eo yee % fare yan areeire 4 fora waar\nWS: xtyt+ 2= 1 Getta His |\nVerify Stokes’ theorem for F = a + 223 + yk over the plane\nsurface : x + y + z = 1 lying in the first octant. 20\nCRNA-F-MTH y 6\n\n(b) ART So ar Sea ach Frafead wifes aA aT :\n£Y_ 3 5 oy =nit), wet hit) = =0, y()=\nal eet Fife |\nSolve the following initial value problem by using Laplace’s\n2\ntransformation ay. -3 dy + 2y = h(t), where\nat? | dt\n(t) fn ney y(0) yO)\n\n(c) at fret sh staverare ot Uh Sem cat fx de w aaferd 2, wet aha\nqatar dest Ba 2 ca suafss citer afas 2 | ar Sai aaa & caf\nferg m aah amc feat p cea p's sik deel freq a Gud dem % yea\nAl Sag he | cise fe cat ary F Sat ders agian @ ale h<—PP_|\n\np+p\nSuppose a cylinder of any cross-section is balanced on another fixed\ncylinder, the contact of curved surfaces being rough and the common\ntangent line horizontal. Let p and p’ be the radii of curvature of the two\ncylinders at the point of contact and h be the height of centre of gravity\nof the upper cylinder above the point of contact. Show that the upper\ncylinder is balanced in stable equilibrium if h< ae 2 15\npt+p\nQs. (a) W@W rere ata : (x? — a2) p? — Quyp + y? + a? = 0, ae p= SY, %\nx\n\ncame a fafa eel a aa Sife | ge a fafa act & ate\n\nSafida dae cpt sft cfc |\n\nFind the general and singular solutions of the differential\n\nequation : (x? — a2) p? — 2xyp + y? + a2 = 0, where p=. Also\n\nx\n\ngive the geometric relation between the general and singular\n\nsolutions. 10\nGi) Fefafad aena afte at gat Sif :\n\n2\nSolve the following differential equation : 10\n2\nCRNA-F-MTH 8\n\n(b) FUR HMA Sei Hl CH FECT UH-gR H aa fant wT a Get we aM\nyah wh RA, ced Be | UH Aft aa P FUT H aat HAL K\nwren rar @ | ary ferara F sete Seater tar a wel & gana ara Afar |\nA chain of n equal uniform rods is smoothly jointed together and\nsuspended from its one end Aj. A horizontal force P is applied to the\nother end A,,; of the chain. Find the inclinations of the rods to the\ndownward vertical line in the equilibrium configuration. 15\nNg S\n\n() Tees aya yas a soa ah {J F.n dS @ 4m flaifen, vet\nite A A S\nBar ae 2 |\n\nUsing Gauss’ divergence theorem, evaluate {J F.n dS, where\n> A A A Ss\nF =xi —yj +(z?-1)k and S is the cylinder formed by the surfaces\nCRNA-F-MTH 9",
+      "text": "UPSC 2022 · Mathematics Paper 1 · Question 6 · Section B · Ordinary Differential Equations (official scan)",
+      "scanImages": [
+        "scan-01.jpg"
+      ],
       "moduleId": "ode",
       "module": "Ordinary Differential Equations",
       "themeId": "ode",
       "theme": "Ordinary Differential Equations",
+      "subthemes": [],
+      "sourcePdf": "https://www.upsc.gov.in/sites/default/files/QP-CSM-22-MATHEMATICS-PAPER-I-280922.pdf",
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "math1-2022-q7",
+      "year": 2022,
+      "number": 7,
+      "section": "B",
+      "marks": 20,
+      "text": "UPSC 2022 · Mathematics Paper 1 · Question 7 · Section B · Analytic Geometry (official scan, page split)",
+      "scanImages": [
+        "scan-01.jpg"
+      ],
+      "moduleId": "analytic-geometry",
+      "module": "Analytic Geometry",
+      "themeId": "analytic-geometry",
+      "theme": "Analytic Geometry",
+      "subthemes": [],
+      "sourcePdf": "https://www.upsc.gov.in/sites/default/files/QP-CSM-22-MATHEMATICS-PAPER-I-280922.pdf",
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "math1-2022-q8",
+      "year": 2022,
+      "number": 8,
+      "section": "B",
+      "marks": 20,
+      "text": "UPSC 2022 · Mathematics Paper 1 · Question 8 · Section B · Vector Analysis (official scan, page split)",
+      "scanImages": [
+        "scan-01.jpg",
+        "scan-02.jpg"
+      ],
+      "moduleId": "vector-analysis",
+      "module": "Vector Analysis",
+      "themeId": "vector-analysis",
+      "theme": "Vector Analysis",
       "subthemes": [],
       "sourcePdf": "https://www.upsc.gov.in/sites/default/files/QP-CSM-22-MATHEMATICS-PAPER-I-280922.pdf",
       "notes": {
@@ -591,11 +808,14 @@
       "number": 1,
       "section": "A",
       "marks": 20,
-      "text": "1.(d) walter fi eX cos x= 1 & frét a apt & dhe F etsinx-1=0 WH a HOS\nfram 2 |\nShow that between any two roots of e*cos x = 1, there exists at least one root of\ne sinx-1=0. 10\nl(c) Wa Set at atte aa Aire fas wea, tar:\na ae\naa la TAMIR\naor firrent Préaa-am x?+2y?=1, z=0 21\nHXS-U-MTH 2\n\nFind the equation of the cylinder whose generators are parallel to the line\ntenes and whose guiding curve is x4+2y=1, z=0. 10\n2a) aatigy HS aaa, BH fH ag ax? + dy? +cz7=0 A ca wat FH area Z,\n2 2 2\n_ Xx y Zz\n“S bic e+a a+b :\nShow that the planes, which cut the cone ‘ax? + by’ +cz*=0 in perpendicular\n2 2 2\ngenerators, touch the cone ~*~ 4% +7 =0. 20\nbt+c cta atb\n2(o) Ret WaT B= f(x,y) = |x2-y7], TA fy (0, 0) TAY, (0, 0) we SAfSTE | se: autgg\nGiven that f(x, y) = |x? -y?|. Find Sry O, 0) and f,, (0, 0).\n2(c) -autew fe S= f(x, 2y, 3x): x, y Teas Teme BH RR) A wR wraae 2 |\nsea amen aa Ae s Ht fer ot ara Fife |\nShow that S= {(x, 2y, 3x) : x, y are real numbers} is a subspace of R°(R). Find two\nbases of S. Also find the dimension of S. 15\nx O(u, Vv\n3a) AR w=? +y’, v=2x?-y?, FER x=rcosd, y=r sind %, aa an aa Afr |\nF o(u, Vv)\nIfu=x2+y, v=x*—y, where x=r cos, y=r sin@, then find 20r.8)\" 7\nBayi) aR f f()dt=x+ frsae 2, Ff) w AM ae Afr |\nIf ff@dt=x a frat, then find the value of f(1). 5\n6 7\n3a)(iii) f(x-a)\"@-x)\"dx A Ater-wer & eT H oT Afi |\na\nb\nExpress J@ —a)\"(b-x)\"dx in terms of Beta function. 8\na\n3.0) eR Bet Om The Fe-fag O8 wen 2 oT ae a A, B,C fagstt\nm wea 2108 wa 4BC RK GA wy daa aw feqre ae Sif |\nA sphere of constant radius r passes through the origin O and cuts the axes at\nthe points A, B and C. Find, the locus of the foot of the perpendicular drawn from\nO to the plane ABC. 15\n3 HXS-U-MTH\n\n300) fra fy fe we ares anf sree & a fra aftaette at & ea\nafraatirs afte, cifer € |\nProve that the eigen vectors, corresponding to two distinct eigen values of a real\nsymmetric matrix, are orthogonal. 8\n3.)i) A at sage 4 am B Recht ane, 2 @ & fem cuigg fe sta (42)= sata\n(BA) | atta eaiey ff AB- BAe], Vet 1, UH 2-afe a dems mee 2 |\nFor two square matrices A and B of order 2, show that trace (4B) = trace (BA).\nHence show that AB- BA #J,, where J, is an identity matrix of order 2. 7\n4.a)i) frafefaa agg ar uft-aarta dome eo FH aaa Afi wi ada sat\notfe sit ara fife |\n3.9 1 10 6 :\nReduce the following matrix to a row-reduced echelon form and hence also, find\nits rank:\n1 3 2 4 1\n3.9 1 10 6 10\n4(a\\ii) ara den ar ame 4 =(? 2) & aftaafies aa aa daa afteatirs\nafesit at ara Afi |\nFind the eigen values and the corresponding eigen vectors of the matrix\nA= (? ry , over the complex-number field. 10",
-      "moduleId": "linear-algebra",
-      "module": "Linear Algebra",
-      "themeId": "linear-algebra",
-      "theme": "Linear Algebra",
+      "text": "UPSC 2021 · Mathematics Paper 1 · Question 1 · Section A · Ordinary Differential Equations (official scan, page split)",
+      "scanImages": [
+        "scan-01.jpg"
+      ],
+      "moduleId": "ode",
+      "module": "Ordinary Differential Equations",
+      "themeId": "ode",
+      "theme": "Ordinary Differential Equations",
       "subthemes": [],
       "sourcePdf": "https://www.upsc.gov.in/sites/default/files/Mathematics Paper-I.pdf",
       "notes": {
@@ -608,12 +828,40 @@
       }
     },
     {
-      "id": "math1-2021-q4",
+      "id": "math1-2021-q2",
       "year": 2021,
-      "number": 4,
+      "number": 2,
       "section": "A",
       "marks": 20,
-      "text": "4.(b)  aaligy fe tegigs : x79 + y= 0? ar OT ae ona” el\nShow that the entire area of the Astroid : x77 + y?/? = a?’ is 2 na’. 15",
+      "text": "UPSC 2021 · Mathematics Paper 1 · Question 2 · Section A · Analytic Geometry (official scan, page split)",
+      "scanImages": [
+        "scan-01.jpg"
+      ],
+      "moduleId": "analytic-geometry",
+      "module": "Analytic Geometry",
+      "themeId": "analytic-geometry",
+      "theme": "Analytic Geometry",
+      "subthemes": [],
+      "sourcePdf": "https://www.upsc.gov.in/sites/default/files/Mathematics Paper-I.pdf",
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "math1-2021-q3",
+      "year": 2021,
+      "number": 3,
+      "section": "A",
+      "marks": 20,
+      "text": "UPSC 2021 · Mathematics Paper 1 · Question 3 · Section A · Linear Algebra (official scan, page split)",
+      "scanImages": [
+        "scan-01.jpg"
+      ],
       "moduleId": "linear-algebra",
       "module": "Linear Algebra",
       "themeId": "linear-algebra",
@@ -635,7 +883,60 @@
       "number": 5,
       "section": "B",
       "marks": 20,
-      "text": "5.(a) waa Ca :\n2\ndx\nat ea Afi |\nSolve the differential equation :\n. 2 .\nzy +2y = x7e™ + e*cos2x 10\ndx\n5.0) 9 area STR fat ar saat ad ea ues A wae:\n2\nTp e4yaesindx; (0) = y'(0) =0\nx\nat eat Fife |\nSolve the initial value problem :\n2\nartsy =e*sin2x; y(0) = y'(0)=0\nIx\nusing Laplace transform method. 10\n5(c) Bs LMaMN fra Me sea a =e wR Fé fe (LM)? + (MN)? = (LN)?\nwar 4 waa eo S araaen F AR fg LK SHS 1 ArT ff Sat uaa Bet\nor wife Wale WE, HR o Sl BSLM aw Sealer fen F aa aA aM a wel A\nwees & eT A aa Afi |\nTwo rods LM and MN are joined rigidly at the point M such that\n(LM/ + (MN)? =(LNY and they are hanged freely in equilibrium from a fixed\npoint L. Let @ be the weight per unit length of both the rods which are uniform.\nDetermine the angle, which the rod LM makes with the vertical direction, in terms\nof lengths of the rods. 10\n5d) ae wa we, at & oR: adie wen Foose axa 2, sare ot Get Fda\nfer ore @, at ae aaa, fret ae a 4 fix ore, ara Sifire | gee fea & aa\nal ve & often sradera @ aqua sit ara Afr |\n5 HXS-U-MTH\n\nIf a planet, which revolves around the Sun in a circular orbit, is suddenly stopped\nin its orbit, then find the time in which it would fall into the Sun. Also, find the ratio\nof its falling time to the period of revolution of the planet. 10\n5(e) aateu f& *(F = = we F=xityj+zk %1\nShow that He 7] = a where 7 = xi + yj + zk. 10\nr\n6(a) ww at Sk, freer wat UH aA ae. e, a fg o Sh es tl arr fH\nT,, Ty, T; FAM: Here & ara & fergat 4, B, Cw wave %, for we sae Bf BH\nara safe ar, ad sick BH aT GAR AA FE | aT fH SA SH 4B aT BC amt\nFAR PAM: o, TH 0, &1 fre Hf ;\n® mh 3 TRIG 1+2cosB\nA heavy string, which is not of uniform density, is hung up from two points. Let\nT,, T,, T; be the tensions at the intermediate points A, B, C of the catenary\nrespectively where its inclinations to the horizontal are in arithmetic progression\nwith common difference B. Let @, and @, be the weights of the parts AB and BC\nof the string respectively. Prove that\ni) H i f T,, T,and T; = ——2—\n(i) Harmonic mean of 7;, T, 3~ Ty 20088\n6b)  aet areafer (anf) aeot at aaa ea ait :\n2\neS + (tan x — 3cosx) + 2y cos” x = cos*x\ndx dx\na pt eq a ea Afi |\nSolve the equation :\n2\nxy + (tan x — 3c0sx) 2 + 2ycos?x = cos*x\ndx dx\ncompletely by demonstrating all the steps involved. 15\nHXS-U-MTH 6\n\n6c) [Far a am Prati,\nc A 4\nwet C, xy-aret Fo us eee aga ame aT Feat el\nx ty\nEvaluate Far, where C is an arbitrary closed curve in the xy-plane and\nie\n> -yity\nx+y?\n7a) Wan weir Hy? +22=9 wa x=2 GR ohag Aa KW F = 2x yf — yf 4 4x22h\n& few mee amen waa at aenfta Fifer |\nVerify Gauss divergence theorem for F = 2x? yi — yj +4xz27k taken over the\nregion in the first octant bounded by 7 + z?=9 and x=2. 20\n7(b) Hane AAR : :\nit =x t+]\ny logy = xy dx We\n& ait ara ca aa Afr |\nFind all possible solutions of the differential equation :\n2\n2 dy |{ dy\ny logy = xy de. | di\n7c) WR AT aT g Tag Ht aeferarea SAS ws Ax farg SS 3 aM eh WA Ais\nfee # wafer fen ore @ 1 ae Z>a>a &, a fg Mifng wom fing\n4(a+2h) Sag Te KR am A aha aft Ga Soe @ | ae A fie Afi fs\nwa aT GAT WaT fag Bae wre afta Sarg Ga MGs 2h)” |\nA heavy particle hangs by an inextensible string of length a from a fixed point\nSa\nand is then projected horizontally with a velocity ./2gh. If ry >h>a, then prove\nthat the circular motion ceases when the particle has reached the height tia + 2h)\nfrom the point of projection. Also, prove that the greatest height ever reached by\n2\nthe particle above the point of projection is Gan weeey., 15\n8.(ay(i) GaP aime Het\n2 2\n4 a]; a> b> 0 FRET AG Wa 3,\nata B+A\n& aaarha det ara Are | cule fe fear wa aH-gea acifers 2 |\n7 HXS-U-MTH\nd\n\nFind the orthogonal trajectories of the family of confocal conics e\n2 2\n———_ + ———- = 1; a > b > 0 are constants and A is a parameter. .\na+aA B+a e\nShow that the given family of curves is self orthogonal. 10\n2",
+      "text": "UPSC 2021 · Mathematics Paper 1 · Question 5 · Section B · Analytic Geometry (official scan, page split)",
+      "scanImages": [
+        "scan-01.jpg"
+      ],
+      "moduleId": "analytic-geometry",
+      "module": "Analytic Geometry",
+      "themeId": "analytic-geometry",
+      "theme": "Analytic Geometry",
+      "subthemes": [],
+      "sourcePdf": "https://www.upsc.gov.in/sites/default/files/Mathematics Paper-I.pdf",
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "math1-2021-q6",
+      "year": 2021,
+      "number": 6,
+      "section": "B",
+      "marks": 20,
+      "text": "UPSC 2021 · Mathematics Paper 1 · Question 6 · Section B · Linear Algebra (official scan, page split)",
+      "scanImages": [
+        "scan-01.jpg"
+      ],
+      "moduleId": "linear-algebra",
+      "module": "Linear Algebra",
+      "themeId": "linear-algebra",
+      "theme": "Linear Algebra",
+      "subthemes": [],
+      "sourcePdf": "https://www.upsc.gov.in/sites/default/files/Mathematics Paper-I.pdf",
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "math1-2021-q7",
+      "year": 2021,
+      "number": 7,
+      "section": "B",
+      "marks": 20,
+      "text": "UPSC 2021 · Mathematics Paper 1 · Question 7 · Section B · Ordinary Differential Equations (official scan, page split)",
+      "scanImages": [
+        "scan-01.jpg"
+      ],
       "moduleId": "ode",
       "module": "Ordinary Differential Equations",
       "themeId": "ode",
@@ -657,7 +958,10 @@
       "number": 8,
       "section": "B",
       "marks": 20,
-      "text": "8.(a)(ii) area wow sx? FF —2x(14+ 3) 2420+ xy = 0 a aT Set aa Sify |\nx Ix\n2\nHa: Haat ata : 2 Frat) 2 420 tay = a8 al wma frat\nIx Ix\nfaf grt ea ifr |\nFind the general solution of the differential equation :\n2\ndx dx ia u\nHence, solve the differential equation: x” - — 2x(1+ x) - +2(1+x)y =x?\nx\nby the method of variation of parameters. 10\n8b) SAA m am, A AT aT faeg 8 AT & ae Aft fen & aa aT\naa ae fear F waar feg 8 aR are Heat aaa FH wafia feat ora 2,\nset af sar ae ar avis Afra | afe awit at wet feeg A set Seater Gas F Aa\n4/g % ara yatta fer ore @, at oak vat & shah & forge at ot fraitta\nathe |\nDescribe the motion and path of a particle of mass m which is projected in a vertical\n. plane through a point of projection with velocity u in a direction making an angle\n6 with the horizontal direction. Further, if particles are projected from that point in\n» the same vertical plane with velocity 4fg , then determine the locus of vertices of\ntheir paths. 15\n8c) Sra waa ar oH aKa Be ff (VxF)-ads ar aM Profi, wet x\nF=(x2 + y—4)i+3xyj+(2xy+22)k Wa S, Wats z=4-(x2 + y?) AT\nxyRAI A GK A YS S| et A, SHR Us afefet aftca afer z |\nUsing Stokes’ theorem, evaluate ff (VxF)-fdS,\nSs\nwhere F = (x? + y—4)i+3xyj+(2xy+z\")k and S is the surface of the paraboloid\nz=4-(x? + y’) above the xy-plane. Here, # is the unit outward normal vector\non S. 15\nHXS-U-MTH 8\nA",
+      "text": "UPSC 2021 · Mathematics Paper 1 · Question 8 · Section B · Ordinary Differential Equations (official scan, page split)",
+      "scanImages": [
+        "scan-01.jpg"
+      ],
       "moduleId": "ode",
       "module": "Ordinary Differential Equations",
       "themeId": "ode",
@@ -679,7 +983,12 @@
       "number": 1,
       "section": "A",
       "marks": 20,
-      "text": "1. (a) wf f:[0, 2) +R ww dea we 8, Sef\ni= cos? x o< T\nAG ore rane paeisy ;\nLet f': [2 z] —R be a continuous function such that\n$j SESE vege yee\nFind the value of f (3)\n2 10\n(b) arf f: DCR?) RG eH @ ait (a, HED. FR f(x, y FE a, DH aa 8, 7 |\naartge fi Ger f(x, bak fla, y) FAM: x=ast y=_ NATE\nLet DE R?) +R be a function and (a, De D. If f(x, y) is continuous at (a, B,\nthen show that the functions f(x, b) and f(a, y) are continuous at x =a and at\ny=b respectively. 10\n(c) arn f& T:R? +R? we Yiaw wfifea &, Sar fH 72, 1)=6, 7) GTA, 2)=@, 3). aK\nAMS aM ce, e. & aa TH aa sey z, aA A Ae ara Afra) i\nEs ‘\nLet T:R? +R? be a linear map such that T(2, 1)=(5, 7) and T(1, 2) =@, 3).\nIf A is the matrix corresponding to T with respect to the standard bases e}, eg,\nthen find Rank (A). 10\nSDF-U-MTH/10 2\n\n| (dd aK\n3- 0 3 21-1\n%, ft cai f AB=6/,. Tom ws ae Re Aefafed ate fa a ea\nQxty+z=5\nQx+y-z=1\nIf\nthen show that AB =6/3. Use this result to solve the following system of\nequations :\nQx+y+z=5\nx-y=0\n(e) zaigy f&\n-3 2 1 1 -3 2\nwiredd Yard 2) wftede fag & Reuiat ait sa aaa, fet eh tart %, a ata\nwa Fer\nShow that the lines\nx+l ly 3 242 og Xo¥n 7 2t7\n- -3 2 1 1 -3 2\nintersect. Find the coordinates of the point of intersection and the equation of\n| the plane containing them. 10\nH",
+      "text": "UPSC 2019 · Mathematics Paper 1 · Question 1 · Section A · Linear Algebra (official scan)",
+      "scanImages": [
+        "scan-01.jpg",
+        "scan-02.jpg",
+        "scan-03.jpg"
+      ],
       "moduleId": "linear-algebra",
       "module": "Linear Algebra",
       "themeId": "linear-algebra",
@@ -701,7 +1010,10 @@
       "number": 2,
       "section": "A",
       "marks": 20,
-      "text": "2. (a) ® f(x) =|cosx|+|sin x], x=2 saperta 8? arn sir SH at 8, a fly HI aes\nx= Do are ares se rv See ATS, A THA Se ST fe |\nIs f(x) =|cosx|+|sin x| differentiable at x = Ba If yes, then find its derivative at |\nxef. If no, then give a proof of it. 15 : |\n(b) TH A a Baa He % 2 aifes sreqe F ae det A +det B =O. aaigu fH A+B UH\nsecre (faye) sere 21\nLet A and B be two orthogonal matrices of same order and det A+det B =0.\nShow that A+B is a singular matrix. 15\n() (i) Waa x+2y+3z=12 Peas sat A, B, CH sfrede oem 21 fy ABC %\naitga ar aattercn ara Fifa |\n(i) fee Fife fH ara z=0 Wes x2 +y?2 427 =11 % orareih wg, from sid |\n(2, 4,1) 1%, Fe arate afta wT ufrede eM 81 |\n() The plane x +2y+3z=12 cuts the axes of coordinates in A, B, C. Find the\nequations of the circle circumscribing the triangle ABC. 10\n(ii) Prove that the plane z=0 cuts the enveloping cone of the sphere\nx? +y?+2z7 =11 which has the vertex at (2,4, 1) in a rectangular\nhyperbola. 10",
+      "text": "UPSC 2019 · Mathematics Paper 1 · Question 2 · Section A · Analytic Geometry (official scan)",
+      "scanImages": [
+        "scan-01.jpg"
+      ],
       "moduleId": "analytic-geometry",
       "module": "Analytic Geometry",
       "themeId": "analytic-geometry",
@@ -723,7 +1035,13 @@
       "number": 3,
       "section": "A",
       "marks": 20,
-      "text": "3. (a) BR f(x) =2x9 -9x? +12x4+6 HI sme (2, 3] K afta ait Aa AM ae Ah 7\nFind the maximum and the minimum value of the function\nf(x) = 2x3 -9x? +12x+6 on the interval [2, 3}. 15\nSDF-U-MTH/10 4 |\n\n| (b) fire Afra fs aera: Peat we fag 8 wae x? +y? = 202% AA afica wae ST aA\n%, afr arn fag ade 27a(x? +y7)+8(a-2° =-0 0% fant, da i aie Ha a\n| aca we @ #1\n| Prove that, in general, three normals can be drawn from a given point to the\n| paraboloid x? +y? =2az, but if the point lies on the surface\n- then two of the three normals coincide. 15\ni () Af\n34-31\n| () sag AA aie ara Fifer)\n| (i) sree\n| V=4(xy, Xq, Xg3, Xq)ER*A =0\n| A fen ara Fifer\n| Let\nazj[i i 7-82\ni f@) Find the rank of matrix A.\n\\ (ii) Find the dimension of the subspace\nx3\nSDF-U-MTH/10 5 [ P.T.O.",
+      "text": "UPSC 2019 · Mathematics Paper 1 · Question 3 · Section A · Linear Algebra (official scan)",
+      "scanImages": [
+        "scan-01.jpg",
+        "scan-02.jpg",
+        "scan-03.jpg",
+        "scan-04.jpg"
+      ],
       "moduleId": "linear-algebra",
       "module": "Linear Algebra",
       "themeId": "linear-algebra",
@@ -745,11 +1063,15 @@
       "number": 4,
       "section": "A",
       "marks": 20,
-      "text": "4. (@) %a-tRreer a a Fem forse! ga ae ar saa wes AO ar a ara Sify, set\n100\n010\nState the Cayley-Hamilton theorem. Use this theorem to find A!°°, where\n100\n010 15\n(b) fag PA TTA ah das\na b c\nA afieia star A cary ara Aifare sik fre sifire fH SK ae 4 PG, % TAM 2, Tel G; FE\nfag 2 wel PA Tse arch afteia Stat xy-da fra %, HPs\n2 2 2\na® b® ct\n& faz!\nFind the length of the normal chord through a point P of the ellipsoid\n2 wey\na? pb?\nand prove that if it is equal to 4PG3, where G3 is the point where the normal\nchord through P meets the xyplane, then P lies on the cone\n2 2 2\nmaint? [oe\nie Voi? 4 yl? ,\n8, dl emtiee PE sin? wy, x ote yt —2 srafate aa were BI rae ca .\n2 2. 2. 2\n2 0*u o*u 20*u_tanu(13., tan“u\nSDF-U-MTH/10 6\n\n(i) Shr fat a ara A RE eee FH OM f(x) = + athe $) = 0%, A\nl+x\nfos ss 242)\nl-xy\n() If\nu=sin a a oe\nthen show that sin? u is a homogeneous function of x and y of degree -2.\n' Hence show that\n2. 2 2 2\nx2 TU pony ou gyi 2 & _tanu 13, tan u\n(ii) Using the Jacobian method, show that if f’(x) = eo and f(0) =0, then\n+x\nfe+sO=f (=)\nwve—B / SECTION—B",
-      "moduleId": "linear-algebra",
-      "module": "Linear Algebra",
-      "themeId": "linear-algebra",
-      "theme": "Linear Algebra",
+      "text": "UPSC 2019 · Mathematics Paper 1 · Question 4 · Section A · Vector Analysis (official scan, page split)",
+      "scanImages": [
+        "scan-01.jpg",
+        "scan-02.jpg"
+      ],
+      "moduleId": "vector-analysis",
+      "module": "Vector Analysis",
+      "themeId": "vector-analysis",
+      "theme": "Vector Analysis",
       "subthemes": [],
       "sourcePdf": "https://www.upsc.gov.in/sites/default/files/QP-CSM19-Mathematics-I.pdf",
       "notes": {
@@ -767,11 +1089,15 @@
       "number": 5,
       "section": "B",
       "marks": 20,
-      "text": "5. (a) saad wae\n(2ysin x +3y* sin xcosx)dx -(4y> cos?x +cosx)dy =0\n# ea FR)\nSolve the differential equation\nysin x+3y* sin xcos x) dx -(4y? cos*x +cosx) dy =0 10\n(b) wean Ba\n2\nfy _,ay +4y =3x7e* sin2x\ndx? dk\n. ar ea ara ARTI\nDetermine the complete solution of the differential equation\n2\nfy 4d +4y =3x7e?* sin2x\ndx dx 10\nSDF-U-MTH/10 7 [ P.T.O.\n\n() we at GMM Bs AB Te fir we wa Afi os AC, Fras ae ae ae (fT) & a yl\nBt Rae we t BUG Cw eh a BF va vs wh fg x 2,\nAC? - AB? = BC? @\\ afe Sfis tan a ABS ata i wT 88, ah Be Afr PH ain qos\n\ncot®\n— 7\n2+cot? 6\nOne end of a heavy uniform rod AB can slide along a rough horizontal rod AC,\nto which it is attached by a ring. B and C are joined by a string. When the rod is\non the point of sliding, then AC? - AB? = BC?. If @ is the angle between AB and =\nthe horizontal line, then prove that the coefficient of friction is =O\n\n(@) ao a ye a ara aa a aS get See a GS aH George #1 eH am,\nfarrar an yet Al ame TH WR, aoe a 3h Sard a yest A cae we fice 81 aerigy fH geet\nsar er ar Feq re ard ar ata SAW &, set nya A fea el\nThe force of attraction of a particle by the earth is inversely proportional to the\nsquare of its distance from the earth’s centre. A particle, whose weight on the\nsurface of the earth is W, falls to the surface of the earth from a height 3h\nabove it. Show that the magnitude of work done by the earth’s attraction force\nis Saw, where h is the radius of the earth. 10\n\n(e) wWx=t, y=t?, z=t? % fig 0, 1,1 % Seiten A fem Foe xy? +27 42x?\nRees sere ae fT\nFind the directional derivative of the function xy? +yz + 2x along the tangent\nto the curve x=t, y=t?, z=t° at the point (1, 1, 1). 10",
-      "moduleId": "dynamics-statics",
-      "module": "Dynamics & Statics",
-      "themeId": "dynamics-statics",
-      "theme": "Dynamics & Statics",
+      "text": "UPSC 2019 · Mathematics Paper 1 · Question 5 · Section B · Ordinary Differential Equations (official scan)",
+      "scanImages": [
+        "scan-01.jpg",
+        "scan-02.jpg"
+      ],
+      "moduleId": "ode",
+      "module": "Ordinary Differential Equations",
+      "themeId": "ode",
+      "theme": "Ordinary Differential Equations",
       "subthemes": [],
       "sourcePdf": "https://www.upsc.gov.in/sites/default/files/QP-CSM19-Mathematics-I.pdf",
       "notes": {
@@ -788,8 +1114,11 @@
       "year": 2019,
       "number": 6,
       "section": "B",
-      "marks": 27,
-      "text": "6. (a) & fue we vig 3k ad AN steitta 3 wT 21 HS soe wen seta & fra a sriona\natl qo firs we wa Sf Aa HR Tar 2, faa areitien As st cael Hen 8) euige fH vig AH\naftraa Seng, fared fe arene fen ww, V3 az!\n\nA body consists of a cone and underlying hemisphere. The base of the cone and\nthe top of the hemisphere have same radius a. The whole body rests on a\nrough horizontal table with hemisphere in contact with the table. Show that\nthe greatest height of the cone, so that the equilibrium may be stable, is V3 a. 15\n\n() am Ce ani ae Fw oa am Af, wet F =Qx+y2)i+@y-49]j 3h ©, fig\n©, 0) a fag 0, 1) oH aH y=x? % ae oe fag (1, 1) a fag 0, 0) aH aH y? =x H BO\nufenfita 21 .\nFind the circulation of F round the curve C, where F =(2x+y?)i +By-4x)j\nand C is the curve y= x? from (0, 0) to (1, 1) and the curve y” = x from (1, 1) to\n\nSDF-U-MTH/10 8\n\n()  () Fa ate\n2\nay +@sin x—cotx) Y +2ysin? x = e7 S* sin? x\ndx dx\na ea Fife)\n(i) 7/2 en 2 ar creer wai aa FART fire ihre ft 2 aT eT BATA\n27\nniet\naia @, Sef ne N.\nf) Solve the differential equation\n2\n4Y . gsinx-cotyY +2ysin? x =e\" ©°S* sin? x\ndx? dx 10\n(i) Find the Laplace transforms of t-/2 and t!/?. Prove that the Laplace\nI ae\ntransform of t™ 2, where neN, is\nn+l+ i",
+      "marks": 20,
+      "text": "UPSC 2019 · Mathematics Paper 1 · Question 6 · Section B · Analytic Geometry (official scan)",
+      "scanImages": [
+        "scan-01.jpg"
+      ],
       "moduleId": "analytic-geometry",
       "module": "Analytic Geometry",
       "themeId": "analytic-geometry",
@@ -811,11 +1140,14 @@
       "number": 7,
       "section": "B",
       "marks": 20,
-      "text": "7. () whem x2y”-2xy'+2y=x%sinx % Oa aah saz Shaw a tds aa wa\nPanfare sik ca faq my atta a wraei-fraer fae are AAT eat Praha |\nFind the linearly independent solutions of the corresponding homogeneous\ndifferential equation of the equation x?y” -2xy’ +2y= x? sin x and then find\nthe general solution of the given equation by the method of variation of\n. parameters. 15\n. (b) Hele x = acosu, y=asinu, z= autana ® fay ape A fase aen fetes A Fe aa\nFifa\nFind the radius of curvature and radius of torsion of the helix x =acosu,\n{ y=asinu, z=autana. 15\n\\ SDF-U-MTH/10 9 [P.T.O.\n\n() yaa A fen 4 ah we ar a Aeifag A atk wa Fy ?, wel F, y HI UH Ves a aH\nBer 81 Fa HM y=-a TM y=as a F HH HEM @, va BaHI sradara TAI aaiee fH\n2n 2n\nVF VFo\nwel F, GF. We [-a, a] 4 FS aftrean Ga =A AM 81 AM eaige fH we ae la eH\nwa clas seat tar & feet ft sit 30° aH ae we 2%, wa 7, 2nJi/g aM\nQnJI/g \\x/3 % Sa 4 tem 21\nA particle moving along the y-axis has an acceleration Fy towards the origin,\nwhere F is a positive and even function of y. The periodic time, when the\nparticle vibrates between y=-a and y=a, is T. Show that\n2n 2n\nVF Fa\nwhere F, and Fy are the greatest and the least values of F within the range\n[-a, a]. Further, show that when a simple pendulum of length / oscillates\nthrough 30° on either side of the vertical line, T lies between 2n,/1/g and\nanJi/g Jn /3. 20",
-      "moduleId": "ode",
-      "module": "Ordinary Differential Equations",
-      "themeId": "ode",
-      "theme": "Ordinary Differential Equations",
+      "text": "UPSC 2019 · Mathematics Paper 1 · Question 7 · Section B · Linear Algebra (official scan, page split)",
+      "scanImages": [
+        "scan-01.jpg"
+      ],
+      "moduleId": "linear-algebra",
+      "module": "Linear Algebra",
+      "themeId": "linear-algebra",
+      "theme": "Linear Algebra",
       "subthemes": [],
       "sourcePdf": "https://www.upsc.gov.in/sites/default/files/QP-CSM19-Mathematics-I.pdf",
       "notes": {
@@ -833,7 +1165,12 @@
       "number": 8,
       "section": "B",
       "marks": 20,
-      "text": "8. (a) sane ata\n272 2\ndx a, dx)\\ x. x.\nai fafa ee ore Fife) faq ge Hae See ar et gaa ft ara Afr eH gaa cen fafa |\na Ft Satis caren Fifer\nObtain the singular solution of the differential equation |\ndx) \\x dx)\\ x. Se\nAlso find the complete primitive of the given differential equation. Give the\ngeometrical interpretations of the complete primitive and singular solution. 15\n(b) sii tala“ edi iincih ace iniahs Uitti atte iene\n(\nfee Ae fH sa ae HI WU GH eig-sitede 213 witde ara Fife, fas seria ae éhiga,\n(i) Tae SK (iii) BRA aA ATT 21 .\nProve that the path of a planet, which is moving so that its acceleration is\nalways directed to a fixed point (star) and is equal to — Ea, is a conic\n: (distance)?\nsection. Find the conditions under which the path becomes (i) ellipse,\n(i) parabola and (ii) hyperbola. 15 |\nSDF-U-MTH/10 10 |\n\n© f) ma % sme waa a wer fafee awa a F =4x7-2y2j+27k % fou\nx? +y? =4, z=0 9 z=34 TR ge aa 4 Gena ATI\ni\n| (ii) wana wha & aM f . e*dx +2ydy—de aM ad Fife, el C, aw x? +y? =4,\n‘ () State Gauss divergence theorem. Verify this theorem for\n> Fy x -\n. F=4xi -2y?j+27k, taken over the region bounded by x? +y? =4,2=0 .\nand z=3. 15\n(i) Evaluate by Stokes’ theorem fo e*dx + 2ydy-dz, where C is the curve\nkk ke\n| SDF-U-MTH/10 ll 20SB—864",
+      "text": "UPSC 2019 · Mathematics Paper 1 · Question 8 · Section B · Analytic Geometry (official scan, page split)",
+      "scanImages": [
+        "scan-01.jpg",
+        "scan-02.jpg",
+        "scan-03.jpg"
+      ],
       "moduleId": "analytic-geometry",
       "module": "Analytic Geometry",
       "themeId": "analytic-geometry",
@@ -855,7 +1192,10 @@
       "number": 1,
       "section": "A",
       "marks": 20,
-      "text": "1. (a) FR cf fe A we 3x2 wee ok BU 2x3 HR RI mea fH C-A-B\nsepta areqg &)\nLet A be a3x2 matrix and B a 2x3 matrix. Show that C= A-B is a singular\nmatrix, 10\nare aha\nExpress basis vectors e, =(1,0) and e, =(0,1) as linear combinations of\nfo) Frater fsa FR Lim (1 — 2) tan wn feta Ban A aah) se ae ein fe &, a Fe\nz\nAM wa Sahara\nDetermine if lim - tan exists or not. If the limit exists, then find its value. 10\nz=\nnal\n(a) ta tim LS Vn? — 7? a ar ara af\navwen rad\nn=l\nFind the limit lim + Sn? -7?, 10\nLenaade (Susy\n(e) ae Yen 21 YET = 2D a are x+y +22 = 6: Be wT AA\nFind the projection of the straight line eee on the plane",
+      "text": "UPSC 2018 · Mathematics Paper 1 · Question 1 · Section A · Linear Algebra (official scan)",
+      "scanImages": [
+        "scan-01.jpg"
+      ],
       "moduleId": "linear-algebra",
       "module": "Linear Algebra",
       "themeId": "linear-algebra",
@@ -877,11 +1217,15 @@
       "number": 2,
       "section": "A",
       "marks": 20,
-      "text": "2. (a) RAIN BaREG nxn BER Se, A aie fe ee He OA UH AE -\nShow that if A and 8 are similar nxn matrices, then they have the same\neigenvalues. 12\n(b) fry (1, 0) A yeaa y? = 4x 7 A aa gO a PA\nFind the shortest distance from the point (1, 0) to the parabola y? = 4x. 13\nEGT-P-MTH/7 2\n\n2 42\n(c} tn =1 x39 % ae ace vor ae tel 8) ofoefie aa a sere are AAA\na\nee oe\nThe ellipse — + = 1 revolves about the x-axis. Find the volume of the solid of\na\nrevolution, 13\n(a) Vai\nax+by+c2z+d,=0\n2X +bay+c,z+d, =0\natt 2a & ate A apres af ara Aifaa\nFind the shortest distance between the lines\naxtbyt+oqz+d, =0\nQgx+bgy+cgz+dy =0\nand the z-axis. 12",
-      "moduleId": "analytic-geometry",
-      "module": "Analytic Geometry",
-      "themeId": "analytic-geometry",
-      "theme": "Analytic Geometry",
+      "text": "UPSC 2018 · Mathematics Paper 1 · Question 2 · Section A · Linear Algebra (official scan)",
+      "scanImages": [
+        "scan-01.jpg",
+        "scan-02.jpg"
+      ],
+      "moduleId": "linear-algebra",
+      "module": "Linear Algebra",
+      "themeId": "linear-algebra",
+      "theme": "Linear Algebra",
       "subthemes": [],
       "sourcePdf": "https://www.upsc.gov.in/sites/default/files/MATHEMATICS-PAPER-I.pdf",
       "notes": {
@@ -899,7 +1243,11 @@
       "number": 3,
       "section": "A",
       "marks": 20,
-      "text": "3. (a) Yas wie fa\n% fea Putts Asa fs Prafatias ser Fa ahaa ae @ stk wa-3 aera:\n(i) Beiter Frere an arg fh get wet By\n(a) Bette rare ar firk ue Ht ea 2)\n(iii) oefemen Parr % one ae Hoar Fa FI\nFor the system of linear equations\nx=2y-Sz=7\ndetermine which of the following statements are true and which are false :\nfi) The systern has no solution.\n(i) The system has a unique solution.\nfii) The system has infinitely many solutions. 13\nEGT-P-MTH/7 3 [P.T.O.\n\n(b) ar citar Fe\nSig y=xy?, aR y>o\n=-xy?, ae yso\nFre tf SF 0, 1) ote C0, 15-8 rear if ah Ren ira af\nLet\nfix wary?, if y>0\nw-xy?, if ysO\nD P ‘ of of . ‘i -\njetermine which of Fra 1) and ay” 1) exists and which does not exist. 12\n(co) Wa (x+y+2)Qx+y-2)=62 FH aw Tat & wie woe HA, a fag\nFind the equations to the generating lines of the paraboloid\n(x+y + z)(2x+y—2)=6z which pass through the point (1, 1, 1). 13\n(d) xyz-mte 4 fea, Frys (0, 0, 0), (0, 1-1), C1, 2, 0) Ae, 2, 3) FA DRA\nate an weft ga Fs\nFind the equation of the sphere in xyz-plane passing through the points",
+      "text": "UPSC 2018 · Mathematics Paper 1 · Question 3 · Section A · Ordinary Differential Equations (official scan)",
+      "scanImages": [
+        "scan-01.jpg",
+        "scan-02.jpg"
+      ],
       "moduleId": "ode",
       "module": "Ordinary Differential Equations",
       "themeId": "ode",
@@ -921,7 +1269,11 @@
       "number": 4,
       "section": "A",
       "marks": 20,
-      "text": "4. (a) sear (2, 3) % x4 -Sx? 44% afte sh ape OR ara AA)\nFind the maximum and the minimum values of x*-5x?+4 on the\ninterval |2, 3]. 13\nx xdydx Senfea\n, u x xdydx\nEvaluate the integral 1S i wes 12\n(c) sa wy, Farrar zirt (0, 0, 1) & sit farran Fees am 2x? -y? =4, 2=0 %, a ate ;\nara fafa\nFind the equation of the cone with (0, 0, 1) as the vertex and 2x* -y? =4, z=0 ,\nas the guiding curve. 13\n(d) 3x-ys+32=8% ware AK fey (1, 1, 1) FA RA yA eae iH a AIA\nFind the equation of the plane parallel to 3x-y+3z=8 and passing through\nEGT-P-NTH/7 4\n\nwis—B / SECTION—B",
+      "text": "UPSC 2018 · Mathematics Paper 1 · Question 4 · Section A · Calculus (official scan)",
+      "scanImages": [
+        "scan-01.jpg",
+        "scan-02.jpg"
+      ],
       "moduleId": "calculus",
       "module": "Calculus",
       "themeId": "calculus",
@@ -943,7 +1295,10 @@
       "number": 5,
       "section": "B",
       "marks": 20,
-      "text": "5. (a) *a Fifaa/Solve : 10\n(b) x=3t, y=3t?, 2=30 wie aa ae % ue am fag a exit sh ta\ny=2-x=0 % a wm wea Aha\nFind the angle between the tangent at a general point of the curve whose\nequations are x =3t, y=3t?, z=3t° and the line y=z-x=0, 10\nfc) ta #PH/Solve : 10\n(q) $00) = rere mR aT HE\nFind the Laplace transform of f(t) “FF\nc\n(i) SS\" 43818 _ ey Peete arcana sare gra APRA |\nFind the inverse Laplace transform of ——————_—_. 10\nfe) eH am #) ee % we fey 8 aa eA ge ae eH dan, A vam fg a od at HF sit\nfat Sa ht, ae a Ve ace 2) ae ae am Sain ce TA 2 oi Ta Ait\nUta RR, a waa At sera ara Aaa)\nA particle projected from a given point on the ground just clears a wall of\nheight A at a distance d from the point of projection. If the particle moves\nin a vertical plane and if the horizontal range is R, find the elevation of\nthe projection. 10",
+      "text": "UPSC 2018 · Mathematics Paper 1 · Question 5 · Section B · Ordinary Differential Equations (official scan)",
+      "scanImages": [
+        "scan-01.jpg"
+      ],
       "moduleId": "ode",
       "module": "Ordinary Differential Equations",
       "themeId": "ode",
@@ -965,11 +1320,15 @@
       "number": 6,
       "section": "B",
       "marks": 20,
-      "text": "6. (a) *a AP /Solve : 13\n2\n(2) y+2Htx-y=o\n, (bo) wea, Th we are Lar 8 are rad nf A wa were, Has HAA, x, Mei Ran\n‘ wat vy, AR vy $1 se aia ar sradaret ara Fifa\nA particle moving with simple harmonic motion in a straight line has velocities\nv, and vz at distances x, and x respectively from the centre of its path.\nFind the period of its motion. 12\n(c) Ba Fifa/Solve : 13\ny” +16y =32sec2x\nEGT-P-INTH/7 5 [ P.T.O.\n\n(a) series x? +y? +2? 2a? aye St, Ae sa Wag ae eT A A\nffi + 2) dydz +(y+ 2) dzdx +(x + y)dxdy}\ns\naa He Prefer |\nIf S is the surface of the sphere x? +y? +2? =a?, then evaluate\n[five + 2) duda+ (y+ 2) dedx +(x+y)dxdy}\ns\nusing Gauss’ divergence theorem. 12 |",
-      "moduleId": "vector-analysis",
-      "module": "Vector Analysis",
-      "themeId": "vector-analysis",
-      "theme": "Vector Analysis",
+      "text": "UPSC 2018 · Mathematics Paper 1 · Question 6 · Section B · Analytic Geometry (official scan)",
+      "scanImages": [
+        "scan-01.jpg",
+        "scan-02.jpg"
+      ],
+      "moduleId": "analytic-geometry",
+      "module": "Analytic Geometry",
+      "themeId": "analytic-geometry",
+      "theme": "Analytic Geometry",
       "subthemes": [],
       "sourcePdf": "https://www.upsc.gov.in/sites/default/files/MATHEMATICS-PAPER-I.pdf",
       "notes": {
@@ -987,11 +1346,15 @@
       "number": 7,
       "section": "B",
       "marks": 20,
-      "text": "7. (a) *a APA/Solve : 13\n(b)\n7 =a(u-sin ui +a(l ~cosu)} +buk\nAi aan att Patten ara Aha\nFind the curvature and torsion of the curve\n7 =a(u-sinujt +a(l ~cosu)j +buk 12\nfo) RRR A eT\ny” -Sy’+4y=e*\nwi ta Fife\nSolve the initial value problem\nyO=T5 Y'M=5 +3\n(4) a SBA, Pree fA x%y? altar (4y? +3xypdx-Bxy+2x7)dy=0 HUH WE\nwerk &, ara Asa she eee ga Ahr)\nFind a and § such that x*y’ is an integrating factor of\n(4y? +3xy) dx - (Bxy+2x) dy =O and solve the equation. 12\nEGT-P-MTH/7 6",
-      "moduleId": "ode",
-      "module": "Ordinary Differential Equations",
-      "themeId": "ode",
-      "theme": "Ordinary Differential Equations",
+      "text": "UPSC 2018 · Mathematics Paper 1 · Question 7 · Section B · Linear Algebra (official scan)",
+      "scanImages": [
+        "scan-01.jpg",
+        "scan-02.jpg"
+      ],
+      "moduleId": "linear-algebra",
+      "module": "Linear Algebra",
+      "themeId": "linear-algebra",
+      "theme": "Linear Algebra",
       "subthemes": [],
       "sourcePdf": "https://www.upsc.gov.in/sites/default/files/MATHEMATICS-PAPER-I.pdf",
       "notes": {
@@ -1009,7 +1372,10 @@
       "number": 8,
       "section": "B",
       "marks": 20,
-      "text": "8. (a) WM ifs FO =f +v2) +ugk B1 eae fF curl(curl B) = grad(divv)-V? v.\nLet J =i +ug) +vgk. Show that curl (curl 3) = grad (div v) - V2 v. 12\n(o) ree we ar gets at A ten aHPRAT [—ySae + xSdy+z%dz A OAR free)\nc\nuel faire x? + y? =1 ath ane x+y +2=1 7 wires CRICR afiere ayaa\n4 amrad aft % ara B)\nEvaluate the line integral [-y°dx +x°dy+2z°dz using Stokes’ theorem. Here\ne\nC is the intersection of the cylinder x*+y? =1 and the plane x+y+z=1.\nThe orientation on C corresponds to counterclockwise motion in the xy-plane. 13\nfo) A AR PF = xy? + y+) Bi te % wae we eee HA BA eR AQuin 4 ast\nyeox? ae y= x am thee 8a HV xP). Rae A)\nLet F = xy?t +(y+x)f. Integrate (vx F). K over the region in the first quadrant\nbounded by the curves y= x? and y=x using Green’s theorem. 13\n(a) fly), Pre HA wher 2xe4 +3y7)dy+ Bx? + fy)de=0 aur &, a APA sie\na Pantera |\nFind f(y) such that (2xe¥ +3y?)dy+(8x? + f(y))dx =O is exact and hence solve. 19\nee\nEGT-P-INTH/7 7 BS9—642",
+      "text": "UPSC 2018 · Mathematics Paper 1 · Question 8 · Section B · Vector Analysis (official scan)",
+      "scanImages": [
+        "scan-01.jpg"
+      ],
       "moduleId": "vector-analysis",
       "module": "Vector Analysis",
       "themeId": "vector-analysis",
@@ -1026,12 +1392,190 @@
       }
     },
     {
+      "id": "math1-2015-q1",
+      "year": 2015,
+      "number": 1,
+      "section": "A",
+      "marks": 20,
+      "text": "UPSC 2015 · Mathematics Paper 1 · Question 1 · Section A · Linear Algebra (official scan, page split)",
+      "scanImages": [
+        "scan-01.jpg"
+      ],
+      "moduleId": "linear-algebra",
+      "module": "Linear Algebra",
+      "themeId": "linear-algebra",
+      "theme": "Linear Algebra",
+      "subthemes": [],
+      "sourcePdf": "https://www.upsc.gov.in/sites/default/files/MATHEMATICS_I.pdf",
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
       "id": "math1-2015-q2",
       "year": 2015,
       "number": 2,
       "section": "A",
       "marks": 20,
-      "text": "2.\nQ. 8d) Pra xem wie A wt Ft :\nd‘ da’ a d\nXH St a hy a +2cos (log, x) .\nSolve :\ndx* dx? dx? dx\nCAVZ-O-HE GH 2 F",
+      "text": "UPSC 2015 · Mathematics Paper 1 · Question 2 · Section A · Analytic Geometry (official scan, page split)",
+      "scanImages": [
+        "scan-01.jpg"
+      ],
+      "moduleId": "analytic-geometry",
+      "module": "Analytic Geometry",
+      "themeId": "analytic-geometry",
+      "theme": "Analytic Geometry",
+      "subthemes": [],
+      "sourcePdf": "https://www.upsc.gov.in/sites/default/files/MATHEMATICS_I.pdf",
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "math1-2015-q3",
+      "year": 2015,
+      "number": 3,
+      "section": "A",
+      "marks": 20,
+      "text": "UPSC 2015 · Mathematics Paper 1 · Question 3 · Section A · Linear Algebra (official scan, page split)",
+      "scanImages": [
+        "scan-01.jpg"
+      ],
+      "moduleId": "linear-algebra",
+      "module": "Linear Algebra",
+      "themeId": "linear-algebra",
+      "theme": "Linear Algebra",
+      "subthemes": [],
+      "sourcePdf": "https://www.upsc.gov.in/sites/default/files/MATHEMATICS_I.pdf",
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "math1-2015-q4",
+      "year": 2015,
+      "number": 4,
+      "section": "A",
+      "marks": 20,
+      "text": "UPSC 2015 · Mathematics Paper 1 · Question 4 · Section A · Linear Algebra (official scan, page split)",
+      "scanImages": [
+        "scan-01.jpg"
+      ],
+      "moduleId": "linear-algebra",
+      "module": "Linear Algebra",
+      "themeId": "linear-algebra",
+      "theme": "Linear Algebra",
+      "subthemes": [],
+      "sourcePdf": "https://www.upsc.gov.in/sites/default/files/MATHEMATICS_I.pdf",
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "math1-2015-q5",
+      "year": 2015,
+      "number": 5,
+      "section": "B",
+      "marks": 20,
+      "text": "UPSC 2015 · Mathematics Paper 1 · Question 5 · Section B · Analytic Geometry (official scan, page split)",
+      "scanImages": [
+        "scan-01.jpg"
+      ],
+      "moduleId": "analytic-geometry",
+      "module": "Analytic Geometry",
+      "themeId": "analytic-geometry",
+      "theme": "Analytic Geometry",
+      "subthemes": [],
+      "sourcePdf": "https://www.upsc.gov.in/sites/default/files/MATHEMATICS_I.pdf",
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "math1-2015-q6",
+      "year": 2015,
+      "number": 6,
+      "section": "B",
+      "marks": 20,
+      "text": "UPSC 2015 · Mathematics Paper 1 · Question 6 · Section B · Ordinary Differential Equations (official scan, page split)",
+      "scanImages": [
+        "scan-01.jpg"
+      ],
+      "moduleId": "ode",
+      "module": "Ordinary Differential Equations",
+      "themeId": "ode",
+      "theme": "Ordinary Differential Equations",
+      "subthemes": [],
+      "sourcePdf": "https://www.upsc.gov.in/sites/default/files/MATHEMATICS_I.pdf",
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "math1-2015-q7",
+      "year": 2015,
+      "number": 7,
+      "section": "B",
+      "marks": 20,
+      "text": "UPSC 2015 · Mathematics Paper 1 · Question 7 · Section B · Dynamics & Statics (official scan, page split)",
+      "scanImages": [
+        "scan-01.jpg"
+      ],
+      "moduleId": "dynamics-statics",
+      "module": "Dynamics & Statics",
+      "themeId": "dynamics-statics",
+      "theme": "Dynamics & Statics",
+      "subthemes": [],
+      "sourcePdf": "https://www.upsc.gov.in/sites/default/files/MATHEMATICS_I.pdf",
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "math1-2015-q8",
+      "year": 2015,
+      "number": 8,
+      "section": "B",
+      "marks": 20,
+      "text": "UPSC 2015 · Mathematics Paper 1 · Question 8 · Section B · Linear Algebra (official scan, page split)",
+      "scanImages": [
+        "scan-01.jpg"
+      ],
       "moduleId": "linear-algebra",
       "module": "Linear Algebra",
       "themeId": "linear-algebra",
@@ -1053,11 +1597,39 @@
       "number": 1,
       "section": "A",
       "marks": 20,
-      "text": "1. aa? vel hs an afar ;\nAnswer all the questions : 10x5=50\n(a) w& afee Rot wa Ah, af V ae Wa wiaede ar oe 3, Tet V\nGh xy Wael @ aM W Ales (1, 2, 3) aM BeN (1, -1, ) & ga a fear\nTen arraret (Ste) 2 .\nFind one vector in R® which generates the intersection of V and W,\nwhere V is the xy plane and W is the space generated by the vectors\n(bo) URRRe Ute a ai abenii or ve aH, are (Aaa) ,\n0 1 -3 -1]\n0 0 1 1\n1 1 -2 0\nht aie ara Fire |\nUsing elementary row or column operations, find the rank of the matrix 10\n0 1 -3 -1\n0 0 1 1\n(c) fag Sif fH eX cosx+1=0 % tt areas Wet & che e¥ sinx + 1=0 :\nBI Us aah et fra 2 |\nProve that between two real roots of e* cos x + 1 = 0, a real root of\n; e*sinx +1=0 lies. 10\nC-DRN-N-OBUA 2 .\n\n“@  ARiaa Afi: —\nj loge O5% ax . : ;\n: Evaluate : : _ - 10°\nj loge O*®) ay : ; . -\n; (e) hen Alfie fi a an x+y +2=0 MH yet x+ xy.=0 |\n; armies (aa) tera 4 sre 3\nExamine whether the plane x + y +z=0 cuts the cone ya+ox+xy=0\nin perpendicular lines. . . ‘ : lo:\n(@2. (a) aM oifta f& V att wits saenfbal 2 Rta .\n7 @ V, Gi W, Gil) VN W at Ge oTER ait faeat ara AIT I ;\n: } Let V and W. be the following subspaces of R: : . ;\n. V ={(a, b,c, d):b-2¢+d=0} and ne\n, \"Find a basis and the dimension of (i) V, Gi) W, ii) VN W. 18\n(b) Gi) wen pa are wits Afra afte afta x+y +2 = 6, x4 2y + 92= 10, -\n- xg By + Ans pT (1) OIE Bet Al 2, (2) UH afer war 2, (3) oa\n, _ Investigate the values of A and p so that the equations x + y+2z=6, .\nx + 2y + 3z = 10, x + 2y + Az =p have (1) no solution, (2) a unique :\nsolution, (3) an infinite number of solutions. oe 10,\n, C-DRN-N-OBUA 3 ee\n\n(i) eR A = | & fe Sef - teed waa wenfta fifi sit aaa\n; saat egewr ara aifere | art et, Ao 4At—7A3 4 11A27~-A-101%\na Prefta sreqg of ara ifs | ; ;\n1.4] .\n. Verify Cayley - Hamilton theorem for the matrix A = ; and\n. 2\nhence find its inverse. Also, find the matrix represented by\n; (ce) BK x+y =u, y= uv Bl FAM BU Be, TAHT ff fy (1— x - y)}? dx dy\nar eet tame x =0, y=0 TH x+y=1 4 ge hag os Rai ‘\nBy using the transformation x + y= u, y = uv, evaluate the integral\nff {xy -x- yy2 dx dy taken over the area enclosed by the straight\nlines x=0, y=0 and x+y=1. 15",
+      "text": "UPSC 2014 · Mathematics Paper 1 · Question 1 · Section A · Linear Algebra (official scan, page split)",
+      "scanImages": [
+        "scan-01.jpg"
+      ],
       "moduleId": "linear-algebra",
       "module": "Linear Algebra",
       "themeId": "linear-algebra",
       "theme": "Linear Algebra",
+      "subthemes": [],
+      "sourcePdf": "https://www.upsc.gov.in/sites/default/files/MATHEMATICS-I.pdf",
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "math1-2014-q2",
+      "year": 2014,
+      "number": 2,
+      "section": "A",
+      "marks": 20,
+      "text": "UPSC 2014 · Mathematics Paper 1 · Question 2 · Section A · Analytic Geometry (official scan, page split)",
+      "scanImages": [
+        "scan-01.jpg"
+      ],
+      "moduleId": "analytic-geometry",
+      "module": "Analytic Geometry",
+      "themeId": "analytic-geometry",
+      "theme": "Analytic Geometry",
       "subthemes": [],
       "sourcePdf": "https://www.upsc.gov.in/sites/default/files/MATHEMATICS-I.pdf",
       "notes": {
@@ -1075,7 +1647,39 @@
       "number": 3,
       "section": "A",
       "marks": 20,
-      "text": "3. (a) ww ta neem ae ae A Sad ara Sia GH PS a fen BS\nFind the height of the cylinder of maximum volume that can be\n, inscribed in a sphere of radius a. - : “45 ~\n(b) ax” + by? + ez\" = 1 Wa ix+myt+nz=0 % gm wie x2+y24 22? Bo | .\n; aftenay a fesrae ar are Aifore | afters aft serfs career stew poe\nFind the maximum or minimum values of x” + y? + z” subject to the\nconditions ax? + by? + cz? =1 and Ix+ my + nz = 0. Interpret the result ‘\n. geometrically. : 20\n() @) waeificf A=) 2 1 -6 |. A% angie ami ait aaa onsta\nafeat at aa fifa | ;\nLet A = 2 1 —6 |. Find the eigen values of A and the :\n: corresponding eigen vectors. : 8\nGi) fag Fife fis Uns oreqg & angie ari ar fader aa 1 era 2\nProve that the eigen values of a unitary matrix have absolute\nvalue 1. 7\nC-DRN-N-OBUA 4 : ;\n\n4.. (a) Gi) Them x? + y2 42? 4x4 ay = 4  feegal & Peaie ara Afar fe\n. ; wal Gade, WA Qx-y+2z2=1 HAMM | oe\nFind the co-ordinates of the points on the sphere .\nOO x? + y? + 2? — 4x + Qy = 4, the tangent planes at which are parallel |...\n. to the plane 2x - y + 2z=1. - 10\n; . | Gi) fag ifr fH arf ax? + by? + ce? + Qux+ Qvy + Qweed=0 HT\nos sig Prefira aan @, afe tpt ta '\nProve that the equation ax’ + by” + cz” + Qux + Qvy + 2wz+d=0,\n, awe ye. we ;\nrepresents a cone if — +— +—-=d. oO 10\n. a ob .c\n@) wie fe sam (qgfirg) a cht @ tet, a ash we\n; ‘ ax? + by® + cz =1 % wave Ix + my + nz = p & ay wieder frgail &\n. 2 2 2 2\nwat & waren 8 we p2}2 42 42 -(2 ++) wl Wa Hed\noo . . a bee a boc\na Show that the lines drawn from the origin parallel to the normals to the © :\n\\ central conicoid ax? + by? +27 = 1, at its points of intersection with the\n: 4 plane /x + my + nz = p generate the cone : . ,\na a boc a boc . ; :\n© HRs Were 2 = OF GAT Gor eeigea wars TS + a1, 2-0 :\nalg firg (a cos 0, bsin@, 0) 4-8 & ate tenatl & atten aa Afar | ;\n. _ Find the equations of the two generating lines through any point |\n: (a cos 8, b sin 6, 0), of the principal elliptic section = + w =1, z=0, of\n; the hyperboloid by the plane z = 0. - . 15\nC-DRN-N-OBUA 5. :\n\n: SECTION B. :",
+      "text": "UPSC 2014 · Mathematics Paper 1 · Question 3 · Section A · Analytic Geometry (official scan)",
+      "scanImages": [
+        "scan-01.jpg",
+        "scan-02.jpg",
+        "scan-03.jpg",
+        "scan-04.jpg",
+        "scan-05.jpg"
+      ],
+      "moduleId": "analytic-geometry",
+      "module": "Analytic Geometry",
+      "themeId": "analytic-geometry",
+      "theme": "Analytic Geometry",
+      "subthemes": [],
+      "sourcePdf": "https://www.upsc.gov.in/sites/default/files/MATHEMATICS-I.pdf",
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "math1-2014-q4",
+      "year": 2014,
+      "number": 4,
+      "section": "A",
+      "marks": 20,
+      "text": "UPSC 2014 · Mathematics Paper 1 · Question 4 · Section A · Analytic Geometry (official scan, page split)",
+      "scanImages": [
+        "scan-01.jpg"
+      ],
       "moduleId": "analytic-geometry",
       "module": "Analytic Geometry",
       "themeId": "analytic-geometry",
@@ -1097,7 +1701,10 @@
       "number": 5,
       "section": "B",
       "marks": 20,
-      "text": "5. ait seth ae die : ,\nAnswer all the questions : ; 10x5=50\n(a) 3fa ceugu fir\naA wife arapet Tefteer wet fH fx? + y9), 2 + y*) UH See hed a,\nCh aMdY Hae THe ael f ae SAAT — Wh THC TH F |\nx“ +y\nSTAS SH sree THT aH fix? + y?) = (x? + 2)? & fore eet AIT I\nJustify that a differential equation of the form: - .\nwhere fix? + y?) is an arbitrary function of (x2 4 y), is not an exact\ndifferential equation and — is an integrating factor for it. Hence\nx“ +y\nsolve this differential equation for fx? + y?) = (x24 yy’. 10 oo\n(>) ae am are ify fret re fH eae an ae A aa gee gona, eT\nfargo ferrite a I \" ,\nFind the curve for which the part of the tangent cut-off by the axes is\nbisected at the point of tangency. 10\n, () Wh HU UH Hel aad Wa (SH.M.), he OR Sree (sada) T, aaa\nat MY Wa Hl Tel 2 Te Fe UH fers PA THEM z, Gel fe OP =b, OPH\nfen 4 | fae sie fH IA we wa va ze PR ae chem 2,\na cos (2) a1\n: Fa a\nA particle is performing a simple harmonic motion (S.H.M.) of period T ,\nabout a centre O with amplitude a and it passes through a point P,\n, where OP = b in the direction OP. Prove that the time which elapses ,\nbefore it returns to P is T cos“! (2) . : 10\nTT a are\nC-DRN-N-OBUA 6 .\n\n“@ QD aUR UHI GS ABTT AC TAS Ie, ARAM ARs | y\nr& fret faa Seater ga wm fem 2 1 ale def & ata wm 202, tt wfeta :\n; ard firgia & van a 1, r cao 8 aaa ara AAT I ; :\nTwo equal uniform rods AB and AC; each of length 1, are freely jointed a\nat A and rest on a smooth fixed vertical circle of radius r. If 20 is the ‘\n- . angle between the rods, then find the relation between J, r and 0, by of\nyO \"using the principle of virtual work. 10 ‘\nSH Ft =teosti +tsint j, O<tsanh fe Mfg Kamm ats\nFind the curvature vector at any point of the curve : ;\nF(t)=teost i +tsint j, O<t<2n. , : ; |\nGive its magnitude also. 10\n. . 4",
+      "text": "UPSC 2014 · Mathematics Paper 1 · Question 5 · Section B · Ordinary Differential Equations (official scan, page split)",
+      "scanImages": [
+        "scan-01.jpg"
+      ],
       "moduleId": "ode",
       "module": "Ordinary Differential Equations",
       "themeId": "ode",
@@ -1119,11 +1726,14 @@
       "number": 6,
       "section": "B",
       "marks": 20,
-      "text": "6. (a) wae & fram Ft fait & gra se Fifi ae :\nw - Sy =sinx - : 7\n. Solve by the method of variation of parameters : * 10 1\n. : ge ye sin . an -\n: | (b)  aaac ate ga Ae:\n\nSolve the differential equation: 20° ,\n; x9 Sp oe? Tog x + By = 65s (loge :\n() Waa} wha & or apaias A : a oa\nfo dx+zdy+xdz) : .\n\nwel Pam @ x24 y+ 22 ~ 2ax—2ay =0,x+y = 2a, Wt (2a, 0, oY a YK :\nBar. 8 ai Rx cae & a a sare sea | a\n. Evaluate by Stokes’ theorem ; ; .\n\n. f Gax+zdy+xdz) : ; oO a\n\n. -where T is the curve given by x” + y® + 2” — 2ax — 2ay = 0, x + y = 2a, 4\n. starting from (2a, 0,.0) and then going below the z-plane. 20 ; :\nC-DRN-N-OBUA: : 7 ; ne",
-      "moduleId": "vector-analysis",
-      "module": "Vector Analysis",
-      "themeId": "vector-analysis",
-      "theme": "Vector Analysis",
+      "text": "UPSC 2014 · Mathematics Paper 1 · Question 6 · Section B · Dynamics & Statics (official scan, page split)",
+      "scanImages": [
+        "scan-01.jpg"
+      ],
+      "moduleId": "dynamics-statics",
+      "module": "Dynamics & Statics",
+      "themeId": "dynamics-statics",
+      "theme": "Dynamics & Statics",
       "subthemes": [],
       "sourcePdf": "https://www.upsc.gov.in/sites/default/files/MATHEMATICS-I.pdf",
       "notes": {
@@ -1141,7 +1751,10 @@
       "number": 7,
       "section": "B",
       "marks": 20,
-      "text": "7. (@) fafefad sana atten aa sifae :\n2\nx TF ates DF 4x4 2)y Oe D0 : . ;\nmah eX ga Ura THETA Hechet THT HI TH TAs |\nSolve the following differential equation :\nx SFB 4 DE +x Dy =e 290%, :\nwhen e* is a solution to its corresponding homogeneous differential\nequation. 15\n6) AR mw & a vt wean 7 uw fen fg 8 ww ah afar -\n(a faa ore) 1 tard St SHS area gen 2, St ws Afes sired fea stat ;\n3 oft f seat an ove yer HUT 2 | ar ar aT wet we SO Afra a TE\naa wrfire ere & ee & geht Gray aa Ale |\nA particle of mass m, hanging vertically from a fixed point by a light\ninextensible cord of length J, is struck by a horizontal blow which\nimparts to it a velocity 2/g?. Find the velocity and height of the particle\nfrom the level of its initial position when the cord becomes slack. 15\n() Ge ae Faye (arn ter) ABCDE ate UM THAI Sel St ga TT a\n; aon 8, stg Aa aes WH 2 TT BCS DES neq fergall a isd Eee :\nwel og & gr ae ae ea A otra 2 | ge os A ofaaet aa AIA |\n: A regular pentagon ABCDE, formed of equal heavy uniform bars jointed\ntogether, is suspended from the joint A, and is maintained in form by.a\nlight rod joining the middle points of BC and DE. Find the stress in this",
+      "text": "UPSC 2014 · Mathematics Paper 1 · Question 7 · Section B · Ordinary Differential Equations (official scan, page split)",
+      "scanImages": [
+        "scan-01.jpg"
+      ],
       "moduleId": "ode",
       "module": "Ordinary Differential Equations",
       "themeId": "ode",
@@ -1163,7 +1776,10 @@
       "number": 8,
       "section": "B",
       "marks": 20,
-      "text": "8. (a)  HacHet aA Mo, y) dx + N(x, y) dy = 0 & fam vate wd ara AiR aS\nSE TAH WOH, (x + y) BI He St | Ba eR A Aa WOH BT ENT 2 ;\nBAUS sae BHM (x? + xy) dx + (y? + xy) dy = 0 Wl TAH WH Wd\naAifire aon get ifr |\nFind the sufficient condition for the differential equation .\nM(x, y) dx + N(x, y) dy = 0 to have an integrating factor as a function of\n(x + y). What will be the integrating factor in that case ? Hence find the. ~\nintegrating factor for the differential equation . oe\nand solve it. 1d\nC-DRN-N-OBUA 8\n\n(bo) GH HT WH yas GA UH Fe TT BoM 2, raw cay (Ada x He Fh\nam) py 22 aM Wa yaa 8, Ta we TA aT Pe 4 vata 2 | ao\n3 aa or ara wei at A | ae pH TAS\nA particle is acted on by a force parallel to the axis of y whose\nacceleration (always towards the axis of x) is uy and when y = a, it is\nprojected parallel to the axis of x with velocity , 2a . Find the\na\nparametric equation of the path of the particle. Here 1 is a constant. 15\n() wife a are\n2\nse ty=8esint, y(0)=0, y(0)=0\nIt ‘\nHl UTES H WATT a set HTAAT |\nSolve the initial value problem .\n2\nTY py=8e%sint, y0)=0, y(0)=0\ndt .\nby using Laplace-transform. 20\nC-DRN-N-OBUA 9",
+      "text": "UPSC 2014 · Mathematics Paper 1 · Question 8 · Section B · Ordinary Differential Equations (official scan)",
+      "scanImages": [
+        "scan-01.jpg"
+      ],
       "moduleId": "ode",
       "module": "Ordinary Differential Equations",
       "themeId": "ode",

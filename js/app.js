@@ -406,7 +406,11 @@ async function renderThemeDetail(themeId) {
               ${q.section ? `<span class="badge section-badge">Sec ${escapeHtml(q.section)}</span>` : ""}
               <span class="question-num">Q.${q.number}</span>
             </div>
-            <p class="question-text">${escapeHtml(q.text)}</p>
+            ${
+              isMath
+                ? renderMathScanGallery(q)
+                : `<p class="question-text">${escapeHtml(q.text)}</p>`
+            }
           </article>
         `
         )
@@ -549,11 +553,34 @@ function questionHaystack(q) {
   return [
     q.text,
     q.theme,
+    q.module,
+    q.year,
+    q.number,
     ...(q.subthemes || []),
     questionNotesHaystack(q.id, q.notes),
   ]
     .join(" ")
     .toLowerCase();
+}
+
+function renderMathScanGallery(q) {
+  const base = `study/questions/${q.id}`;
+  const imgs = q.scanImages || [];
+  if (!imgs.length) {
+    return `<p class="question-text question-text--caption">${escapeHtml(q.text)}</p>`;
+  }
+  const figures = imgs
+    .map(
+      (file, i) => `
+      <figure class="study-figure math-pyq-scan">
+        <img src="${escapeHtml(`${base}/${file}`)}" alt="Mathematics Paper Q.${q.number} (${q.year}) — scan ${i + 1}" loading="lazy">
+      </figure>`
+    )
+    .join("");
+  const pdfLink = q.sourcePdf
+    ? `<p class="math-pdf-link"><a href="${escapeHtml(q.sourcePdf)}" target="_blank" rel="noopener noreferrer">Official PDF on upsc.gov.in ↗</a></p>`
+    : "";
+  return `<div class="math-pyq-scans">${figures}</div>${pdfLink}`;
 }
 
 function filterQuestions(questions) {
@@ -674,6 +701,18 @@ function renderQuestions(questions) {
       ? `<span class="badge section-badge">Sec ${escapeHtml(q.section)}</span>`
       : "";
 
+    const isMath = isMathPaper(state.paper);
+    const bodyHtml = isMath
+      ? renderMathScanGallery(q)
+      : `<p class="question-text">${escapeHtml(q.text)}</p>`;
+    const extraImagesDetails = isMath && !(q.scanImages && q.scanImages.length)
+      ? `
+      <details class="study-materials-details">
+        <summary>Diagrams &amp; images</summary>
+        <div class="study-materials-body" data-study-path="study/questions/${escapeAttr(q.id)}"></div>
+      </details>`
+      : "";
+
     card.innerHTML = `
       <div class="question-header">
         <span class="badge">${q.year}</span>
@@ -682,27 +721,21 @@ function renderQuestions(questions) {
         <span class="badge theme-badge">${escapeHtml(q.theme || q.module || "—")}</span>
         <span class="question-num">Q.${q.number}</span>
       </div>
-      <p class="question-text">${escapeHtml(q.text)}</p>
+      ${bodyHtml}
       ${subHtml}
       ${themeLink}
       <details class="study-details">
         <summary>Your notes for this question (text · synced)</summary>
         <div class="notes-editor">${renderQuestionNotesEditor(q)}</div>
       </details>
-      <details class="study-materials-details">
-        <summary>Diagrams &amp; images</summary>
-        <div class="study-materials-body" data-study-path="study/questions/${escapeAttr(q.id)}"></div>
-      </details>
+      ${extraImagesDetails}
       ${isPolityQuestion(q) ? constitutionPanelHtml() : ""}
-      ${isMathPaper(state.paper) ? "" : renderBestAnswerSection(q)}
+      ${isMath ? "" : renderBestAnswerSection(q)}
     `;
 
     const studyDetails = card.querySelector(".study-materials-details");
     if (studyDetails) {
-      bindLazyStudyMaterials(
-        studyDetails,
-        `study/questions/${q.id}`
-      );
+      bindLazyStudyMaterials(studyDetails, `study/questions/${q.id}`);
     }
 
     const constitutionBody = card.querySelector(".constitution-panel-body");
@@ -747,7 +780,7 @@ function updateDataNote(paper) {
     for (let y = 2013; y <= 2025; y++) {
       if (!byYear[y]) missing.push(y);
     }
-    let msg = `${paper.questions.length} questions from official upsc.gov.in PDFs (OCR — verify text).`;
+    let msg = `${paper.questions.length} questions as official PDF scan cutouts (study/questions/math*).`;
     if (missing.length) msg += ` Not on UPSC site: ${missing.join(", ")}.`;
     if (thin.length) msg += ` Partial years: ${thin.join(", ")}. Re-run: python3 scripts/fetch-math-pyq.py`;
     els.dataNote.textContent = msg;
