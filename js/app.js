@@ -3,6 +3,7 @@ import {
   bindLazyStudyMaterials,
   studyPathForTheme,
 } from "./study-materials.js";
+import { assetUrl } from "./paths.js";
 import {
   constitutionPanelHtml,
   mountConstitutionPanel,
@@ -564,7 +565,7 @@ function questionHaystack(q) {
 }
 
 function renderMathScanGallery(q) {
-  const base = `study/questions/${q.id}`;
+  const base = assetUrl(`study/questions/${q.id}`);
   const imgs = q.scanImages || [];
   if (!imgs.length) {
     return `<p class="question-text question-text--caption">${escapeHtml(q.text)}</p>`;
@@ -573,7 +574,7 @@ function renderMathScanGallery(q) {
     .map(
       (file, i) => `
       <figure class="study-figure math-pyq-scan">
-        <img src="${escapeHtml(`${base}/${file}`)}" alt="Mathematics Paper Q.${q.number} (${q.year}) — scan ${i + 1}" loading="lazy">
+        <img src="${escapeAttr(`${base}/${file}`)}" alt="Mathematics Paper Q.${q.number} (${q.year}) — scan ${i + 1}" loading="lazy" decoding="async">
       </figure>`
     )
     .join("");
@@ -581,6 +582,23 @@ function renderMathScanGallery(q) {
     ? `<p class="math-pdf-link"><a href="${escapeHtml(q.sourcePdf)}" target="_blank" rel="noopener noreferrer">Official PDF on upsc.gov.in ↗</a></p>`
     : "";
   return `<div class="math-pyq-scans">${figures}</div>${pdfLink}`;
+}
+
+function bindMathScanFallbacks(card, q) {
+  card.querySelectorAll(".math-pyq-scan img").forEach((img) => {
+    img.addEventListener("error", () => {
+      const wrap = img.closest(".math-pyq-scans");
+      if (!wrap || wrap.dataset.fallbackApplied) return;
+      wrap.dataset.fallbackApplied = "1";
+      wrap.innerHTML = `
+        <p class="question-text question-text--caption">${escapeHtml(q.text)}</p>
+        <p class="scan-load-error">Scan image could not load. ${
+          q.sourcePdf
+            ? `<a href="${escapeHtml(q.sourcePdf)}" target="_blank" rel="noopener noreferrer">Open official PDF ↗</a>`
+            : "Try a hard refresh (Ctrl+Shift+R)."
+        }</p>`;
+    });
+  });
 }
 
 function filterQuestions(questions) {
@@ -755,6 +773,9 @@ function renderQuestions(questions) {
     }
 
     bindQuestionNoteEditors(card, q);
+    if (isMath && q.scanImages?.length) {
+      bindMathScanFallbacks(card, q);
+    }
     els.questionsList.appendChild(card);
   });
 
@@ -871,6 +892,7 @@ function updateViewTabLabels() {
 async function setActiveSubject(subject) {
   state.subject = subject;
   if (subject === "math") {
+    setViewMode("questions");
     await setActivePaper(5);
   } else {
     await setActivePaper(1);
@@ -978,7 +1000,7 @@ function debounce(fn, ms) {
 }
 
 async function fetchJson(url) {
-  const res = await fetch(url, { cache: "no-store" });
+  const res = await fetch(assetUrl(url), { cache: "no-store" });
   if (!res.ok) throw new Error(`Failed to load ${url}`);
   return res.json();
 }

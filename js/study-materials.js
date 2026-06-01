@@ -3,6 +3,8 @@
  * Edit files locally in Cursor → git push → live on GitHub Pages.
  */
 
+import { assetUrl } from "./paths.js";
+
 let markedLib = null;
 let mermaidLib = null;
 
@@ -30,7 +32,7 @@ async function getMermaid() {
 
 async function tryFetchText(url, noCache = false) {
   try {
-    const res = await fetch(url, noCache ? { cache: "no-store" } : undefined);
+    const res = await fetch(assetUrl(url), noCache ? { cache: "no-store" } : undefined);
     if (!res.ok) return null;
     return await res.text();
   } catch {
@@ -53,7 +55,7 @@ function resolveAssetUrl(basePath, src) {
     return src;
   }
   const clean = src.replace(/^\.\//, "");
-  return `${basePath}/${clean}`.replace(/\/+/g, "/");
+  return assetUrl(`${basePath}/${clean}`.replace(/\/+/g, "/"));
 }
 
 function escapeHtml(str) {
