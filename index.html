@@ -90,6 +90,7 @@
       <nav class="view-nav" aria-label="View mode">
         <button type="button" class="view-tab active" data-view="themes">Themes</button>
         <button type="button" class="view-tab" data-view="questions">Questions</button>
+        <button type="button" class="view-tab" data-view="paper">Full paper</button>
       </nav>
 
       <!-- Theme mode -->
@@ -189,6 +190,7 @@
         </section>
 
         <div class="paper-meta" id="paperMeta"></div>
+        <div id="recentPanelHost"></div>
         <section class="revise-today-panel hidden" id="reviseTodayPanel" aria-label="Revise today">
           <h3 class="revise-today-title">Revise today</h3>
           <ul class="revise-today-list" id="reviseTodayList"></ul>
@@ -198,6 +200,22 @@
         <p class="empty-state hidden" id="emptyState">
           No questions match your filters. Try another year or clear the search.
         </p>
+      </section>
+
+      <!-- Full paper mode — one exam year, all questions -->
+      <section id="paperView" class="view-panel hidden">
+        <section class="paper-view-controls" aria-label="Full paper year">
+          <div class="filter-group">
+            <label for="paperYearSelect">Exam year</label>
+            <select id="paperYearSelect"></select>
+          </div>
+          <p class="paper-view-hint">All questions from one year on one scroll — closer to sitting the paper.</p>
+        </section>
+        <div id="recentPanelHostPaper"></div>
+        <div class="paper-meta" id="paperMetaPaper"></div>
+        <div class="stats-bar" id="paperStatsBar" aria-live="polite"></div>
+        <div class="questions paper-questions-scroll" id="paperQuestionsList" role="list"></div>
+        <p class="empty-state hidden" id="paperEmptyState">No questions for this year yet.</p>
       </section>
     </main>
 

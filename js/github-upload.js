@@ -2,10 +2,16 @@
  * Upload study images to GitHub repo via Contents API (commits to main).
  */
 
-import { getGitHubRepo, getGitHubToken } from "./github-auth.js";
+import { getGitHubRepo, getGitHubToken, isGitHubUploadAllowed } from "./github-auth.js";
 
 const API = "https://api.github.com";
 const VALID_EXT = new Set([".jpg", ".jpeg", ".png", ".webp", ".gif"]);
+
+async function assertUploadAllowed() {
+  if (!(await isGitHubUploadAllowed())) {
+    throw new Error("Image upload is restricted to the repo owner (sauravanandb2w).");
+  }
+}
 
 function apiHeaders(token) {
   return {
@@ -189,6 +195,7 @@ function rel(path) {
 
 /** Upload image to study/questions/{id}/ and append to manifest.images */
 export async function uploadQuestionStudyImage(questionId, file) {
+  await assertUploadAllowed();
   const ext = normalizeExt(file);
   const destName = `${slugify(file.name)}${ext}`;
   const folder = `study/questions/${questionId}`;
@@ -210,6 +217,7 @@ export async function uploadQuestionStudyImage(questionId, file) {
 
 /** Upload math solution scan to solutions/ and manifest.solutions[part] */
 export async function uploadMathSolutionScan(questionId, part, file) {
+  await assertUploadAllowed();
   const ext = normalizeExt(file);
   const folder = `study/questions/${questionId}`;
   const manifest = await loadManifest(folder);
@@ -232,6 +240,7 @@ export async function uploadMathSolutionScan(questionId, part, file) {
 
 /** Upload image to study/themes/{themeId}/ or study/modules/{moduleId}/ */
 export async function uploadThemeStudyImage(studyPath, file, caption = "") {
+  await assertUploadAllowed();
   const ext = normalizeExt(file);
   const destName = `${slugify(file.name)}${ext}`;
   const filePath = `${studyPath}/${destName}`;
@@ -253,6 +262,7 @@ export async function uploadThemeStudyImage(studyPath, file, caption = "") {
 
 /** Delete image from study/questions/{id}/ and remove from manifest.images */
 export async function deleteQuestionStudyImage(questionId, fileName) {
+  await assertUploadAllowed();
   const cleanName = basename(fileName);
   const folder = `study/questions/${questionId}`;
   const filePath = `${folder}/${cleanName}`;
@@ -270,6 +280,7 @@ export async function deleteQuestionStudyImage(questionId, fileName) {
 
 /** Delete math solution scan and remove from manifest.solutions[part] */
 export async function deleteMathSolutionScan(questionId, part, relFile) {
+  await assertUploadAllowed();
   const clean = relFile.replace(/^\.\//, "");
   const folder = `study/questions/${questionId}`;
   const filePath = clean.startsWith("solutions/") ? `${folder}/${clean}` : `${folder}/solutions/${clean}`;
@@ -288,6 +299,7 @@ export async function deleteMathSolutionScan(questionId, part, relFile) {
 
 /** Delete image from study/themes/ or study/modules/ */
 export async function deleteThemeStudyImage(studyPath, fileName) {
+  await assertUploadAllowed();
   const cleanName = basename(fileName);
   const filePath = `${studyPath}/${cleanName}`;
 

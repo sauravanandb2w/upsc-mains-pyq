@@ -5,6 +5,7 @@
 import {
   isGitHubConnected,
   isGitHubUploadConfiguredSync,
+  isGitHubUploadAllowed,
   startGitHubLogin,
   disconnectGitHub,
   initGitHubUploadConfig,
@@ -31,6 +32,23 @@ export function renderGitHubConnectHint() {
     return `<p class="github-upload-note github-upload-note--ok">GitHub connected — uploads commit to your repo (live in ~1–2 min after deploy).</p>`;
   }
   return `<p class="github-upload-note">Connect GitHub once to upload images from this app.</p>`;
+}
+
+async function applyUploadControlVisibility(host) {
+  if (!host || !(await isGitHubUploadConfigured())) return;
+
+  const allowed = await isGitHubUploadAllowed();
+  const connected = isGitHubConnected();
+
+  host.querySelectorAll(".github-upload-control").forEach((el) => {
+    el.classList.toggle("hidden", !connected || !allowed);
+  });
+
+  const hint = host.querySelector(".github-upload-note");
+  if (hint && connected && !allowed) {
+    hint.textContent = "Upload restricted to repo owner (sauravanandb2w).";
+    hint.classList.add("github-upload-note--warn");
+  }
 }
 
 export function renderGitHubUploadButton(kind, attrs = {}) {
@@ -66,10 +84,16 @@ export async function bindGitHubHeaderButton(btn) {
       return;
     }
     btn.classList.remove("hidden");
-    btn.textContent = isGitHubConnected() ? "GitHub ✓" : "Connect GitHub";
-    btn.title = isGitHubConnected()
-      ? "Connected for image uploads — click to disconnect"
-      : "Sign in with GitHub to upload images to the repo";
+    if (isGitHubConnected()) {
+      const allowed = await isGitHubUploadAllowed();
+      btn.textContent = allowed ? "GitHub ✓" : "GitHub ⚠";
+      btn.title = allowed
+        ? "Connected for image uploads — click to disconnect"
+        : "Connected as wrong GitHub user — upload restricted to repo owner";
+    } else {
+      btn.textContent = "Connect GitHub";
+      btn.title = "Sign in with GitHub to upload images to the repo";
+    }
   }
 
   await refresh();
@@ -114,6 +138,11 @@ export function bindGitHubUploadControl(root) {
       return;
     }
 
+    if (!(await isGitHubUploadAllowed())) {
+      status.textContent = "Upload restricted to repo owner (sauravanandb2w).";
+      return;
+    }
+
     const kind = control.dataset.uploadKind;
     status.textContent = "Uploading…";
 
@@ -144,6 +173,7 @@ export function bindStudyMaterialsUpload(detailsEl, basePath, kind = "question")
   uploadHost.innerHTML =
     renderGitHubConnectHint() + renderGitHubUploadButton(kind === "theme" ? "theme" : "question", attrs);
   bindGitHubUploadControl(uploadHost);
+  applyUploadControlVisibility(uploadHost);
 
   uploadHost.addEventListener("github-upload-done", async () => {
     const body = detailsEl.querySelector(".study-materials-body");
@@ -171,6 +201,7 @@ export function bindThemeStudyUpload(panelEl, studyPath) {
   host.innerHTML =
     renderGitHubConnectHint() + renderGitHubUploadButton("theme", { "study-path": studyPath });
   bindGitHubUploadControl(host);
+  applyUploadControlVisibility(host);
 
   host.addEventListener("github-upload-done", async () => {
     const body = panelEl.querySelector("#themeStudyMaterials") || panelEl.querySelector(".study-materials-body");
@@ -189,11 +220,14 @@ export function bindStudyImageDeletes(container, basePath) {
 
   container.querySelectorAll(".github-delete-btn[data-study-file]").forEach((btn) => {
     if (btn.dataset.deleteKind === "math-solution") return;
-    if (!isGitHubConnected()) {
-      btn.classList.add("hidden");
-      return;
-    }
-    btn.classList.remove("hidden");
+
+    isGitHubUploadAllowed().then((allowed) => {
+      if (!isGitHubConnected() || !allowed) {
+        btn.classList.add("hidden");
+        return;
+      }
+      btn.classList.remove("hidden");
+    });
     if (btn.dataset.boundDelete) return;
     btn.dataset.boundDelete = "1";
 
@@ -227,11 +261,13 @@ export function bindSolutionScanDeletes(container, questionId, part, onChange) {
   if (!container) return;
 
   container.querySelectorAll('.github-delete-btn[data-delete-kind="math-solution"]').forEach((btn) => {
-    if (!isGitHubConnected()) {
-      btn.classList.add("hidden");
-      return;
-    }
-    btn.classList.remove("hidden");
+    isGitHubUploadAllowed().then((allowed) => {
+      if (!isGitHubConnected() || !allowed) {
+        btn.classList.add("hidden");
+        return;
+      }
+      btn.classList.remove("hidden");
+    });
     if (btn.dataset.boundDelete) return;
     btn.dataset.boundDelete = "1";
 

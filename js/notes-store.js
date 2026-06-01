@@ -379,6 +379,19 @@ export function getReviseTodayItems(questions, limit = 5) {
     .slice(0, limit);
 }
 
+/** Progress counts for a theme/module from loaded question meta. */
+export function getThemeProgress(questions, themeId) {
+  const qs = questions.filter((q) => q.themeId === themeId || q.moduleId === themeId);
+  let attempted = 0;
+  let weak = 0;
+  for (const q of qs) {
+    const meta = getQuestionMeta(q.id);
+    if (meta.status !== "not-started") attempted += 1;
+    if (meta.status === "weak") weak += 1;
+  }
+  return { total: qs.length, attempted, weak };
+}
+
 function paperFromQuestionId(questionId) {
   if (questionId.startsWith("math1-")) return 5;
   if (questionId.startsWith("math2-")) return 6;

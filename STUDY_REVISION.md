@@ -78,6 +78,40 @@ Header → **Export notes**:
 - **Download JSON** — full backup for restore/scripts
 - **Download Markdown** — readable export of theme + question notes
 
+---
+
+## Full paper view
+
+**View → Full paper** shows every question from **one exam year** in order (Q.1, Q.2, …) on a single scroll — closer to sitting the paper than filtering one card at a time.
+
+Pick the year from the dropdown (e.g. **2023 GS II**). Status, stars, notes, and timers work the same as Questions view.
+
+---
+
+## Recent questions
+
+**Questions** and **Full paper** views show a **Recent** strip (last 10 opened questions, stored in this browser only).
+
+Tracked when you open notes, change status, or star a question. Click a chip to jump back.
+
+---
+
+## Theme / module progress
+
+On the **Themes** (or **Modules**) grid, each card shows:
+
+`X/Y attempted · Z weak`
+
+Counts use synced question status. Helps spot neglected modules (e.g. PDE, LP) at a glance.
+
+---
+
+## GitHub upload (owner only)
+
+Image upload/delete via **Connect GitHub** is restricted to the repo owner (`sauravanandb2w` by default). Other GitHub accounts see **GitHub ⚠** and cannot upload.
+
+Set `GITHUB_UPLOAD_ALLOWED_USER` in `js/config.js` if needed.
+
 Works with Supabase (cloud) or local-only storage.
 
 ---

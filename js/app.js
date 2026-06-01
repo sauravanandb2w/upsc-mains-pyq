@@ -51,9 +51,16 @@ import {
   getReviseTodayItems,
   isDueForRevision,
   isWeakAndStale,
+  getThemeProgress,
 } from "./notes-store.js";
 import { bindExportNotesButtons } from "./export-notes.js";
 import { bindAnswerTimers, requestTimerNotificationPermission } from "./answer-timer.js";
+import {
+  trackRecentQuestion,
+  mountRecentPanel,
+  bindRecentPanel,
+  getRecentQuestions,
+} from "./recent-questions.js";
 import { loadRepoSolutionScans, solutionScanGitCommand } from "./solution-scans.js";
 import {
   renderGitHubUploadButton,
@@ -64,7 +71,10 @@ import {
   bindAllGitHubUploadControls,
   bindSolutionScanDeletes,
 } from "./github-upload-ui.js";
-import { initGitHubUploadConfig } from "./github-auth.js";
+import { initGitHubUploadConfig, initGitHubUploadAccess } from "./github-auth.js";
+
+/** @type {(() => Promise<void>) | null} */
+let refreshGitHubHeader = null;
 
 /** @type {Record<number, { title: string; syllabus: string; themes?: string[]; questions: object[] }>} */
 let papers = {};
@@ -76,6 +86,7 @@ const state = {
   paper: 1,
   viewMode: "themes",
   selectedThemeId: null,
+  paperYear: null,
   year: "all",
   marks: "all",
   theme: "all",
@@ -145,6 +156,14 @@ const els = {
   exportMdBtn: document.getElementById("exportMdBtn"),
   viewTabThemes: document.querySelector('.view-tab[data-view="themes"]'),
   githubConnectBtn: document.getElementById("githubConnectBtn"),
+  recentPanelHost: document.getElementById("recentPanelHost"),
+  paperView: document.getElementById("paperView"),
+  paperYearSelect: document.getElementById("paperYearSelect"),
+  paperMetaPaper: document.getElementById("paperMetaPaper"),
+  paperStatsBar: document.getElementById("paperStatsBar"),
+  paperQuestionsList: document.getElementById("paperQuestionsList"),
+  paperEmptyState: document.getElementById("paperEmptyState"),
+  recentPanelHostPaper: document.getElementById("recentPanelHostPaper"),
 };
 
 function initTheme() {
@@ -277,8 +296,14 @@ async function onUserSession(session) {
 }
 
 async function refreshView() {
+  els.themeView.classList.toggle("hidden", state.viewMode !== "themes");
+  els.questionView.classList.toggle("hidden", state.viewMode !== "questions");
+  els.paperView?.classList.toggle("hidden", state.viewMode !== "paper");
+
   if (state.viewMode === "themes") {
     await renderThemeView();
+  } else if (state.viewMode === "paper") {
+    await renderFullPaperView();
   } else {
     await renderQuestionView();
   }
@@ -309,9 +334,6 @@ function moduleSectionLabel(theme) {
 }
 
 async function renderThemeView() {
-  els.themeView.classList.remove("hidden");
-  els.questionView.classList.add("hidden");
-
   const paper = papers[state.paper];
   if (!paper) return;
 
@@ -324,6 +346,7 @@ async function renderThemeView() {
   } else {
     els.themeListView.classList.remove("hidden");
     els.themeDetailView.classList.add("hidden");
+    await loadQuestionNotesForIds(paper.questions.map((q) => q.id));
     renderThemeGrid(paper);
   }
 }
@@ -369,11 +392,16 @@ function renderThemeGrid(paper) {
         .map((t) => {
           const count = countQuestionsForTheme(state.paper, t.id);
           const hasNotes = themeHasNotes(t.id, state.paper);
+          const progress = getThemeProgress(paper.questions, t.id);
+          const progressMeta =
+            progress.total > 0
+              ? ` · ${progress.attempted}/${progress.total} attempted${progress.weak ? ` · ${progress.weak} weak` : ""}`
+              : "";
           const sectionMeta = t.section ? ` · Sec ${t.section}` : "";
           return `
             <button type="button" class="theme-card" data-theme-id="${escapeAttr(t.id)}" role="listitem">
               <span class="theme-card-name">${escapeHtml(t.name)}</span>
-              <span class="theme-card-meta">${count} PYQ${count === 1 ? "" : "s"}${sectionMeta}${hasNotes ? " · has notes" : ""}</span>
+              <span class="theme-card-meta">${count} PYQ${count === 1 ? "" : "s"}${sectionMeta}${progressMeta}${hasNotes ? " · has notes" : ""}</span>
             </button>
           `;
         })
@@ -498,6 +526,76 @@ function getYearsForPaper(paperNum) {
   const paper = papers[paperNum];
   if (!paper) return [];
   return [...new Set(paper.questions.map((q) => q.year))].sort((a, b) => b - a);
+}
+
+function getDefaultPaperYear(paper) {
+  const years = getYearsForPaper(state.paper);
+  return years.length ? String(years[0]) : "2024";
+}
+
+function populatePaperYearSelect() {
+  if (!els.paperYearSelect) return;
+
+  const years = getYearsForPaper(state.paper);
+  els.paperYearSelect.innerHTML = "";
+  for (const y of years) {
+    const opt = document.createElement("option");
+    opt.value = String(y);
+    opt.textContent = String(y);
+    els.paperYearSelect.appendChild(opt);
+  }
+
+  if (!state.paperYear || !years.includes(Number(state.paperYear))) {
+    state.paperYear = getDefaultPaperYear(papers[state.paper]);
+  }
+  els.paperYearSelect.value = state.paperYear;
+}
+
+function recordQuestionOpened(q) {
+  if (!q?.id) return;
+  trackRecentQuestion({
+    qid: q.id,
+    paper: state.paper,
+    year: q.year,
+    number: q.number,
+    theme: q.theme || q.module,
+    label: isMathPaper(state.paper)
+      ? `${q.year} · Q.${q.number} · ${q.module || q.theme || "Math"}`
+      : `${q.year} · Q.${q.number} · ${q.theme || "GS"}`,
+  });
+  refreshRecentPanels();
+}
+
+function refreshRecentPanels() {
+  const recent = getRecentQuestions();
+  for (const host of [els.recentPanelHost, els.recentPanelHostPaper]) {
+    if (!host) continue;
+    if (!recent.length) {
+      host.innerHTML = "";
+      continue;
+    }
+    mountRecentPanel(host);
+    bindRecentPanel(host, openRecentQuestion);
+  }
+}
+
+async function openRecentQuestion(paperNum, qid) {
+  if (state.paper !== paperNum) {
+    await setActivePaper(paperNum);
+  }
+
+  const q = papers[paperNum]?.questions.find((x) => x.id === qid);
+  if (!q) return;
+
+  setViewMode("questions");
+  state.year = String(q.year);
+  if (els.yearFilter) els.yearFilter.value = state.year;
+  await renderQuestionView();
+
+  const card = document.querySelector(`.question-card[data-qid="${qid}"]`);
+  card?.scrollIntoView({ behavior: "smooth", block: "start" });
+  card?.classList.add("question-card--highlight");
+  setTimeout(() => card?.classList.remove("question-card--highlight"), 2000);
 }
 
 function populateYearFilter() {
@@ -696,6 +794,8 @@ function renderReviseTodayPanel(questions) {
 
   els.reviseTodayList.querySelectorAll(".revise-today-link").forEach((btn) => {
     btn.addEventListener("click", () => {
+      const q = papers[state.paper]?.questions.find((x) => x.id === btn.dataset.qid);
+      if (q) recordQuestionOpened(q);
       const card = document.querySelector(`.question-card[data-qid="${btn.dataset.qid}"]`);
       card?.scrollIntoView({ behavior: "smooth", block: "start" });
       card?.classList.add("question-card--highlight");
@@ -742,10 +842,11 @@ function renderQuestionStudyToolbar(q) {
     </div>`;
 }
 
-function bindQuestionStudyToolbar(card) {
+function bindQuestionStudyToolbar(card, q) {
   card.querySelectorAll(".question-status-select").forEach((sel) => {
     sel.addEventListener("change", () => {
       setQuestionStatus(sel.dataset.qid, sel.value);
+      if (q) recordQuestionOpened(q);
       const paper = papers[state.paper];
       if (paper) renderReviseTodayPanel(paper.questions);
     });
@@ -758,10 +859,18 @@ function bindQuestionStudyToolbar(card) {
       btn.textContent = next ? "★" : "☆";
       btn.title = next ? "Starred" : "Star for revision";
       btn.setAttribute("aria-label", next ? "Remove star" : "Star for revision");
+      if (q) recordQuestionOpened(q);
       const paper = papers[state.paper];
       if (paper) renderReviseTodayPanel(paper.questions);
     });
   });
+
+  const notesDetails = card.querySelector(".study-details");
+  if (notesDetails && q) {
+    notesDetails.addEventListener("toggle", () => {
+      if (notesDetails.open) recordQuestionOpened(q);
+    });
+  }
 
   bindAnswerTimers(card);
 }
@@ -775,7 +884,9 @@ function renderPaperMeta(paper) {
   `;
 }
 
-function renderStats(filtered, total) {
+function renderStats(filtered, total, barEl = els.statsBar) {
+  if (!barEl) return;
+
   const years = [...new Set(filtered.map((q) => q.year))].sort((a, b) => b - a);
   const yearSpan =
     years.length > 0
@@ -783,9 +894,11 @@ function renderStats(filtered, total) {
         ? years[0]
         : `${years[years.length - 1]}–${years[0]}`
       : "—";
-  const themes = new Set(filtered.map((q) => q.theme)).size;
+  const isMath = isMathPaper(state.paper);
+  const themeLabel = isMath ? "Modules" : "Themes";
+  const themes = new Set(filtered.map((q) => q.theme || q.module)).size;
 
-  els.statsBar.textContent = `Showing ${filtered.length} of ${total} · Years: ${yearSpan} · Themes in view: ${themes}`;
+  barEl.textContent = `Showing ${filtered.length} of ${total} · Years: ${yearSpan} · ${themeLabel} in view: ${themes}`;
 }
 
 function formatMarks(marks) {
@@ -1003,8 +1116,9 @@ function renderBestAnswerSection(q) {
   `;
 }
 
-function renderQuestions(questions) {
-  els.questionsList.innerHTML = "";
+function renderQuestions(questions, listEl = els.questionsList, emptyEl = els.emptyState) {
+  if (!listEl) return;
+  listEl.innerHTML = "";
 
   questions.forEach((q) => {
     const card = document.createElement("article");
@@ -1085,14 +1199,14 @@ function renderQuestions(questions) {
     }
 
     bindQuestionNoteEditors(card, q);
-    bindQuestionStudyToolbar(card);
+    bindQuestionStudyToolbar(card, q);
     if (isMath && q.scanImages?.length) {
       bindMathScanFallbacks(card, q);
     }
-    els.questionsList.appendChild(card);
+    listEl.appendChild(card);
   });
 
-  els.emptyState.classList.toggle("hidden", questions.length > 0);
+  emptyEl?.classList.toggle("hidden", questions.length > 0);
 }
 
 function updateDataNote(paper) {
@@ -1135,9 +1249,6 @@ function updateDataNote(paper) {
 }
 
 async function renderQuestionView() {
-  els.themeView.classList.add("hidden");
-  els.questionView.classList.remove("hidden");
-
   const paper = papers[state.paper];
   if (!paper) return;
 
@@ -1155,6 +1266,33 @@ async function renderQuestionView() {
   renderStats(filtered, paper.questions.length);
   updateDataNote(paper);
   renderQuestions(filtered);
+  refreshRecentPanels();
+}
+
+async function renderFullPaperView() {
+  const paper = papers[state.paper];
+  if (!paper || !els.paperQuestionsList) return;
+
+  populatePaperYearSelect();
+  const year = state.paperYear;
+
+  await loadQuestionNotesForIds(paper.questions.map((q) => q.id));
+
+  const yearQuestions = paper.questions
+    .filter((q) => String(q.year) === String(year))
+    .sort((a, b) =>
+      String(a.number).localeCompare(String(b.number), undefined, { numeric: true })
+    );
+
+  els.paperMetaPaper.innerHTML = `
+    <h2>${escapeHtml(paper.title)} — ${escapeHtml(year)}</h2>
+    <p>${escapeHtml(paper.syllabus)}</p>
+    <p class="meta-range">${yearQuestions.length} question${yearQuestions.length === 1 ? "" : "s"} · Q.1–Q.${yearQuestions.length || "—"} order · Status & notes on each card</p>
+  `;
+
+  renderStats(yearQuestions, paper.questions.length, els.paperStatsBar);
+  renderQuestions(yearQuestions, els.paperQuestionsList, els.paperEmptyState);
+  refreshRecentPanels();
 }
 
 function setViewMode(mode) {
@@ -1171,6 +1309,7 @@ async function setActivePaper(paperNum) {
   state.theme = "all";
   state.section = "all";
   state.selectedThemeId = null;
+  state.paperYear = null;
 
   updateSubjectNav();
   updateViewTabLabels();
@@ -1248,8 +1387,16 @@ function bindEvents() {
       if (tab.dataset.view === "themes") {
         state.selectedThemeId = null;
       }
+      if (tab.dataset.view === "paper" && !state.paperYear) {
+        state.paperYear = getDefaultPaperYear(papers[state.paper]);
+      }
       await refreshView();
     });
+  });
+
+  els.paperYearSelect?.addEventListener("change", async (e) => {
+    state.paperYear = e.target.value;
+    await renderFullPaperView();
   });
 
   els.themeBackBtn.addEventListener("click", async () => {
@@ -1315,7 +1462,9 @@ function bindEvents() {
     btn.addEventListener("click", () => setAuthTab(btn.dataset.authTab));
   });
 
-  bindGitHubHeaderButton(els.githubConnectBtn);
+  bindGitHubHeaderButton(els.githubConnectBtn).then((refresh) => {
+    refreshGitHubHeader = refresh;
+  });
 }
 
 function escapeHtml(str) {
@@ -1370,6 +1519,8 @@ bindEvents();
   try {
     await loadData();
     await initGitHubUploadConfig();
+    await initGitHubUploadAccess();
+    await refreshGitHubHeader?.();
     await initSupabase();
 
     if (isSupabaseConfigured()) {

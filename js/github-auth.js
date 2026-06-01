@@ -9,6 +9,10 @@ const TOKEN_KEY = "upsc-pyq-github-token";
 const RETURN_KEY = "upsc-pyq-github-oauth-return";
 const STATE_KEY = "upsc-pyq-github-oauth-state";
 const REDIRECT_URI_KEY = "upsc-pyq-github-oauth-redirect";
+const GITHUB_USER_KEY = "upsc-pyq-github-user";
+
+let cachedUsername = null;
+let uploadAllowedCache = null;
 
 let cfg = null;
 let configuredCache = null;
@@ -74,6 +78,9 @@ export function isGitHubConnected() {
 export function disconnectGitHub() {
   sessionStorage.removeItem(TOKEN_KEY);
   localStorage.removeItem(TOKEN_KEY);
+  localStorage.removeItem(GITHUB_USER_KEY);
+  cachedUsername = null;
+  uploadAllowedCache = null;
 }
 
 function storeToken(token) {
@@ -159,6 +166,7 @@ export async function completeGitHubLogin(code, state) {
   storeToken(data.access_token);
   sessionStorage.removeItem(STATE_KEY);
   sessionStorage.removeItem(REDIRECT_URI_KEY);
+  await fetchGitHubUsername(true);
   return data.access_token;
 }
 
@@ -170,4 +178,68 @@ export function consumeOAuthReturnPath() {
   if (base && path.startsWith(base)) return `${location.origin}${path}`;
   if (path.startsWith("/")) return `${location.origin}${path}`;
   return `${location.origin}${base}/${path}`.replace(/\/+/g, "/");
+}
+
+function githubApiHeaders(token) {
+  return {
+    Authorization: `Bearer ${token}`,
+    Accept: "application/vnd.github+json",
+    "X-GitHub-Api-Version": "2022-11-28",
+  };
+}
+
+export async function fetchGitHubUsername(force = false) {
+  if (!force && cachedUsername) return cachedUsername;
+
+  const stored = localStorage.getItem(GITHUB_USER_KEY);
+  if (!force && stored) {
+    cachedUsername = stored;
+    return stored;
+  }
+
+  const token = getGitHubToken();
+  if (!token) return null;
+
+  const res = await fetch("https://api.github.com/user", { headers: githubApiHeaders(token) });
+  if (!res.ok) return null;
+
+  const data = await res.json();
+  cachedUsername = data.login || null;
+  if (cachedUsername) localStorage.setItem(GITHUB_USER_KEY, cachedUsername);
+  uploadAllowedCache = null;
+  return cachedUsername;
+}
+
+export async function getAllowedUploadUser() {
+  const c = await loadCfg();
+  const allowed = (
+    c.GITHUB_UPLOAD_ALLOWED_USER ||
+    c.GITHUB_REPO_OWNER ||
+    inferRepoFromPagesUrl()?.owner ||
+    ""
+  )
+    .trim()
+    .toLowerCase();
+  return allowed;
+}
+
+export async function isGitHubUploadAllowed() {
+  if (!isGitHubConnected()) return false;
+  if (uploadAllowedCache !== null) return uploadAllowedCache;
+
+  const allowed = await getAllowedUploadUser();
+  if (!allowed) {
+    uploadAllowedCache = true;
+    return true;
+  }
+
+  const user = await fetchGitHubUsername();
+  uploadAllowedCache = Boolean(user && user.toLowerCase() === allowed);
+  return uploadAllowedCache;
+}
+
+export async function initGitHubUploadAccess() {
+  if (!isGitHubConnected()) return false;
+  await fetchGitHubUsername();
+  return isGitHubUploadAllowed();
 }
