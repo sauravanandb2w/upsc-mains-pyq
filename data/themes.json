@@ -425,6 +425,65 @@
         "parent": "Case Studies",
         "keywords": "you are district magistrate dm sp ias officer hospital procurement water farmer industry dilemma case landslide vinod sneha rohit raman srinivasan abc incorporated terrorist social media naxal tribal collector shortage course action options compatible measures"
       }
-    ]
+    ],
+    "insightsSections": [
+      {
+        "id": "ethics-and-human-interface",
+        "name": "Ethics and Human Interface",
+        "displayName": "Ethics and Human Interface",
+        "themeId": "ethics-human-interface",
+        "parent": "Ethics & Values"
+      },
+      {
+        "id": "attitude",
+        "name": "Attitude",
+        "displayName": "Attitude",
+        "themeId": "attitude",
+        "parent": "Ethics & Values"
+      },
+      {
+        "id": "aptitude-and-foundational-values-for-civ",
+        "name": "Aptitude and Foundational Values for Civil Service",
+        "displayName": "Aptitude and Foundational Values for Civil Service",
+        "themeId": "public-service-values",
+        "parent": "Public Service & Governance"
+      },
+      {
+        "id": "emotional-intelligence",
+        "name": "Emotional Intelligence",
+        "displayName": "Emotional Intelligence",
+        "themeId": "aptitude-ei",
+        "parent": "Ethics & Values"
+      },
+      {
+        "id": "contributions-of-moral-thinkers-and-phil",
+        "name": "Contributions of Moral Thinkers and Philosophers from India and World",
+        "displayName": "Contributions of Moral Thinkers and Philosophers from India and World",
+        "themeId": "thinkers-quotes",
+        "parent": "Ethics & Values"
+      },
+      {
+        "id": "public-civil-service-values-and-ethics-i",
+        "name": "Public/Civil Service Values and Ethics in Public Administration",
+        "displayName": "Public/Civil Service Values and Ethics in Public Administration",
+        "themeId": "public-service-values",
+        "parent": "Public Service & Governance"
+      },
+      {
+        "id": "probity-in-governance",
+        "name": "Probity in Governance",
+        "displayName": "Probity in Governance",
+        "themeId": "integrity-probity",
+        "parent": "Ethics & Values"
+      },
+      {
+        "id": "case-study-ethics-and-human-interface",
+        "name": "Case Study: Ethics and Human Interface",
+        "displayName": "Case Study: Ethics and Human Interface",
+        "themeId": "case-study",
+        "parent": "Ethics & Values"
+      }
+    ],
+    "source": "https://www.insightsonindia.com/upsc-mains-general-studies-4-pyq/"
   }
 }

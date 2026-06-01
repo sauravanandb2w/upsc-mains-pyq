@@ -30,6 +30,23 @@ python3 scripts/build-pyq-data.py
 
 Use `python3 scripts/build-pyq-data.py --no-fetch` to rebuild from local files only.
 
+### GS Paper IV (Ethics) — Insights on India index
+
+Builds **`data/gs-paper-4.json`** (237 PYQs, 2013–2025) from the subject-wise list at [Insights on India](https://www.insightsonindia.com/upsc-mains-general-studies-4-pyq/), with **`insightsSection`** on each question matching their categories (Ethics and Human Interface, Attitude, Case Study blocks, etc.).
+
+```bash
+# Uses cached export in data/sources/insights-gs4-pyq.md
+python3 scripts/build-gs4-insights.py
+
+# Or fetch live page (HTML stripped to text)
+python3 scripts/build-gs4-insights.py --fetch
+
+# Custom markdown export
+python3 scripts/build-gs4-insights.py --input path/to/export.md
+```
+
+Re-run after updating the source markdown. Verify wording against official UPSC papers where needed.
+
 ### Mathematics Optional PYQs (official UPSC PDFs)
 
 Fetches **Civil Services (Main) Mathematics Optional** Paper I & II from [upsc.gov.in](https://www.upsc.gov.in/examinations/previous-question-papers), OCRs scanned PDFs, classifies by module, writes `data/math-paper-1.json` and `data/math-paper-2.json`.
@@ -44,7 +61,7 @@ python3 scripts/fetch-math-pyq.py --year 2024   # single year
 
 Question text is **OCR-derived** — always verify against the official PDF (`sourcePdf` field on each question). Years **2013, 2016, 2017, 2020** are not currently linked on upsc.gov.in.
 
-**Coverage (approx.):** GS II & III 2013–2024; GS I from 2015; GS IV partial (ethics paper parsing is harder). Missing years are listed in the app. Add JSON under `data/sources/` and rebuild. Verify wording on [upsc.gov.in](https://upsc.gov.in/examinations/previous-question-papers).
+**Coverage (approx.):** GS II & III 2013–2024; GS I from 2015; **GS IV full subject-wise index (2013–2025) via Insights on India**. Missing years are listed in the app. Add JSON under `data/sources/` and rebuild. Verify wording on [upsc.gov.in](https://upsc.gov.in/examinations/previous-question-papers).
 
 ## Run locally
 
