@@ -196,6 +196,13 @@ const LOCAL_META_KEY = "upsc-pyq-question-meta-v1";
 /** @typedef {{ snapshot: string, lockedAt?: string|null }} FieldLockEntry */
 
 function parseLockedFields(raw) {
+  if (typeof raw === "string") {
+    try {
+      raw = JSON.parse(raw);
+    } catch {
+      return {};
+    }
+  }
   if (!raw || typeof raw !== "object") return {};
   /** @type {Record<string, FieldLockEntry>} */
   const out = {};
@@ -252,30 +259,51 @@ export function getLockedSnapshot(lockKey) {
   return locks[parsed.storageKey]?.snapshot ?? "";
 }
 
-function applyLockedSnapshotsToRow(row, entries) {
+function applyLockedSnapshotsToRow(row, locks, entries) {
+  if (!locks) return row;
   for (const { lockKey, column } of entries) {
-    if (isNoteFieldLocked(lockKey) && column in row) {
-      row[column] = getLockedSnapshot(lockKey);
+    const parsed = parseLockKey(lockKey);
+    if (!parsed) continue;
+    const snap = locks[parsed.storageKey]?.snapshot;
+    if (snap !== undefined && column in row) {
+      row[column] = String(snap);
     }
   }
   return row;
 }
 
+function resolveTextForLock(cached, fieldId, textareaValue) {
+  const fromTa = String(textareaValue ?? "");
+  if (fromTa.trim()) return fromTa;
+  const fromCache = String(cached?.[fieldId] ?? "");
+  if (fromCache.trim()) return fromCache;
+  return fromTa;
+}
+
+function resolveMathTextForLock(parts, partId, fieldId, textareaValue) {
+  const fromTa = String(textareaValue ?? "");
+  if (fromTa.trim()) return fromTa;
+  const fromCache = String(parts?.[partId]?.[fieldId] ?? "");
+  if (fromCache.trim()) return fromCache;
+  return fromTa;
+}
+
 export async function lockNoteField(lockKey, currentValue) {
   const parsed = parseLockKey(lockKey);
   if (!parsed) return;
-  const entry = {
-    snapshot: String(currentValue ?? ""),
-    lockedAt: new Date().toISOString(),
-  };
 
   if (parsed.kind === "theme") {
     const cached = themeCache.get(parsed.themeId) || {
       ...emptyThemeNotes(parsed.paper),
       __locks: {},
     };
+    const snapshot = resolveTextForLock(cached, parsed.fieldId, currentValue);
+    const entry = {
+      snapshot,
+      lockedAt: new Date().toISOString(),
+    };
     cached.__locks = { ...(cached.__locks || {}), [parsed.storageKey]: entry };
-    cached[parsed.fieldId] = entry.snapshot;
+    cached[parsed.fieldId] = snapshot;
     themeCache.set(parsed.themeId, cached);
     const local = loadLocal(LOCAL_THEME_KEY);
     const key = `p${parsed.paper}-${parsed.themeId}`;
@@ -292,19 +320,34 @@ export async function lockNoteField(lockKey, currentValue) {
 
   const paper = paperFromQuestionId(parsed.questionId);
   const prior = questionCache.get(parsed.questionId) || {};
+  let snapshot;
+  if (isMathPaper(paper) && parsed.partId) {
+    const parts = mergeMathParts(emptyMathParts(), prior.parts);
+    snapshot = resolveMathTextForLock(parts, parsed.partId, parsed.fieldId, currentValue);
+  } else {
+    snapshot = resolveTextForLock(
+      { ...emptyQuestionNotes(paper), ...stripQuestionCacheForNotes(prior) },
+      parsed.fieldId,
+      currentValue
+    );
+  }
+  const entry = {
+    snapshot,
+    lockedAt: new Date().toISOString(),
+  };
   const nextLocks = { ...(prior.__locks || {}), [parsed.storageKey]: entry };
   let payload;
   if (isMathPaper(paper)) {
     const parts = mergeMathParts(emptyMathParts(), prior.parts);
     if (parsed.partId) {
-      parts[parsed.partId][parsed.fieldId] = entry.snapshot;
+      parts[parsed.partId][parsed.fieldId] = snapshot;
     }
     payload = { parts, __locks: nextLocks };
   } else {
     payload = {
       ...emptyQuestionNotes(paper),
       ...stripQuestionCacheForNotes(prior),
-      [parsed.fieldId]: entry.snapshot,
+      [parsed.fieldId]: snapshot,
       __locks: nextLocks,
     };
   }
@@ -746,16 +789,32 @@ function applyMathLocksToParts(questionId, parts) {
   return out;
 }
 
+function localThemeNotes(themeId, paper) {
+  const raw = loadLocal(LOCAL_THEME_KEY)[`p${paper}-${themeId}`];
+  if (!raw || typeof raw !== "object") {
+    return { notes: emptyThemeNotes(paper), locks: {} };
+  }
+  const locks = parseLockedFields(raw.__locks);
+  const { __locks, ...fields } = raw;
+  const notes = hydrateThemeNotesDisplay({ ...emptyThemeNotes(paper), ...fields }, locks, paper);
+  return { notes, locks };
+}
+
 function mergeThemeNotesFromCloudPull(themeId, paper, cloudNotes) {
+  const { notes: fromLocalNotes, locks: fromLocalLocks } = localThemeNotes(themeId, paper);
   const cached = themeCache.get(themeId) || {};
-  const local = { ...emptyThemeNotes(paper), ...stripThemeCacheForLocal(cached) };
+  const { __locks: _cachedLocks, ...cachedNotes } = cached;
   const { __locks: cloudLocks = {}, ...cloudFields } = cloudNotes;
+  const mergedLocks = { ...fromLocalLocks, ...(cached.__locks || {}), ...cloudLocks };
   const merged = { ...cloudFields };
   const fields = getThemeNoteFields(paper);
   for (const f of fields) {
-    merged[f.id] = pickNoteText(local[f.id] ?? cloudFields[f.id], cloudLocks[f.id]);
+    merged[f.id] = pickNoteText(
+      fromLocalNotes[f.id] ?? cachedNotes[f.id] ?? cloudFields[f.id],
+      mergedLocks[f.id]
+    );
   }
-  merged.__locks = { ...cloudLocks };
+  merged.__locks = mergedLocks;
   hydrateThemeNotesDisplay(merged, merged.__locks, paper);
   return merged;
 }
@@ -803,7 +862,7 @@ function themeNotesToRow(themeId, paper, notes, userId) {
   for (const f of getThemeNoteFields(paper)) {
     row[f.db] = notes[f.id] || "";
   }
-  applyLockedSnapshotsToRow(row, themeLockEntries(paper, themeId));
+  applyLockedSnapshotsToRow(row, locks, themeLockEntries(paper, themeId));
   row.locked_fields = serializeLockedFields(locks);
   return row;
 }
@@ -836,14 +895,16 @@ function questionNotesToRow(questionId, notes, userId) {
   for (const f of allQuestionNoteFields(paper)) {
     row[f.db] = notes[f.id] || "";
   }
+  const qLocks = notes.__locks || getQuestionLocksMap(questionId);
   applyLockedSnapshotsToRow(
     row,
+    qLocks,
     allQuestionNoteFields(paper).map((f) => ({
       lockKey: questionFieldLockKey(questionId, f.id),
       column: f.db,
     }))
   );
-  row.locked_fields = serializeLockedFields(notes.__locks || getQuestionLocksMap(questionId));
+  row.locked_fields = serializeLockedFields(qLocks);
   return row;
 }
 
@@ -911,6 +972,14 @@ export function getSyncStatus() {
 }
 
 export async function loadThemeNotesForPaper(paper) {
+  const localStore = loadLocal(LOCAL_THEME_KEY);
+  for (const [key, notes] of Object.entries(localStore)) {
+    if (!key.startsWith(`p${paper}-`)) continue;
+    const themeId = key.slice(`p${paper}-`.length);
+    const { notes, locks } = localThemeNotes(themeId, paper);
+    themeCache.set(themeId, { ...notes, __locks: locks });
+  }
+
   if (isCloudSyncEnabled()) {
     const { data, error } = await supabase
       .from("theme_notes")
@@ -922,29 +991,30 @@ export async function loadThemeNotesForPaper(paper) {
 
     for (const row of data || []) {
       const cloud = rowToThemeNotes(row, paper);
-      themeCache.set(row.theme_id, mergeThemeNotesFromCloudPull(row.theme_id, paper, cloud));
+      const merged = mergeThemeNotesFromCloudPull(row.theme_id, paper, cloud);
+      themeCache.set(row.theme_id, merged);
+      localStore[`p${paper}-${row.theme_id}`] = stripThemeCacheForLocal(merged);
     }
+    saveLocal(LOCAL_THEME_KEY, localStore);
     return;
-  }
-
-  const local = loadLocal(LOCAL_THEME_KEY);
-  for (const [themeId, notes] of Object.entries(local)) {
-    if (themeId.startsWith(`p${paper}-`)) {
-      themeCache.set(themeId.slice(`p${paper}-`.length), {
-        ...emptyThemeNotes(paper),
-        ...notes,
-      });
-    }
   }
 }
 
 export function getThemeNotes(themeId, paper = null) {
   const cached = themeCache.get(themeId);
-  if (!cached) return emptyThemeNotes(paper);
-  const locks = cached.__locks || {};
-  const { __locks, ...notes } = cached;
-  const out = { ...emptyThemeNotes(paper), ...notes };
-  return hydrateThemeNotesDisplay(out, locks, paper);
+  if (cached) {
+    const locks = cached.__locks || {};
+    const { __locks, ...notes } = cached;
+    const out = { ...emptyThemeNotes(paper), ...notes };
+    return hydrateThemeNotesDisplay(out, locks, paper);
+  }
+  if (paper != null) {
+    const { notes, locks } = localThemeNotes(themeId, paper);
+    if (Object.values(notes).some((v) => String(v).trim()) || hasLockedFields(locks)) {
+      return notes;
+    }
+  }
+  return emptyThemeNotes(paper);
 }
 
 export function saveThemeNote(themeId, paper, fieldId, value) {
@@ -1137,7 +1207,10 @@ export async function refreshThemeNoteFromCloud(themeId, paper) {
   const merged = mergeThemeNotesFromCloudPull(themeId, paper, cloud);
   themeCache.set(themeId, merged);
   const local = loadLocal(LOCAL_THEME_KEY);
-  local[`p${paper}-${themeId}`] = stripThemeCacheForLocal(merged);
+  local[`p${paper}-${themeId}`] = stripThemeCacheForLocal({
+    ...merged,
+    __locks: merged.__locks || {},
+  });
   saveLocal(LOCAL_THEME_KEY, local);
   return true;
 }
@@ -1276,11 +1349,22 @@ export async function pullAllNotesFromCloud() {
   }
 
   const localThemes = loadLocal(LOCAL_THEME_KEY);
+  for (const [key] of Object.entries(localThemes)) {
+    const m = key.match(/^p(\d)-(.+)$/);
+    if (!m) continue;
+    const paper = Number(m[1]);
+    const themeId = m[2];
+    const { notes, locks } = localThemeNotes(themeId, paper);
+    themeCache.set(themeId, { ...notes, __locks: locks });
+  }
   for (const row of tRes.data || []) {
     const cloud = rowToThemeNotes(row, row.paper);
     const merged = mergeThemeNotesFromCloudPull(row.theme_id, row.paper, cloud);
     themeCache.set(row.theme_id, merged);
-    localThemes[`p${row.paper}-${row.theme_id}`] = stripThemeCacheForLocal(merged);
+    localThemes[`p${row.paper}-${row.theme_id}`] = stripThemeCacheForLocal({
+      ...merged,
+      __locks: merged.__locks || {},
+    });
   }
   saveLocal(LOCAL_THEME_KEY, localThemes);
 
