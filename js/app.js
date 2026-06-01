@@ -46,6 +46,7 @@ import {
   withSyncTimeout,
   refreshNotesFromCloud,
   pullQuestionNoteFromCloud,
+  refreshThemeNoteFromCloud,
   getLastSyncError,
   setLastSyncError,
   installNotesSyncLifecycle,
@@ -581,6 +582,14 @@ async function renderThemeDetail(themeId) {
   const theme = getThemeById(state.paper, themeId);
   const paper = papers[state.paper];
   if (!theme || !paper) return;
+
+  if (isCloudSyncEnabled()) {
+    try {
+      await refreshThemeNoteFromCloud(themeId, state.paper);
+    } catch (err) {
+      console.error("Theme notes pull failed:", themeId, err);
+    }
+  }
 
   const notes = getThemeNotes(themeId, state.paper);
   const noteFields = getThemeNoteFields(state.paper);
@@ -1444,14 +1453,21 @@ function renderQuestions(questions, listEl = els.questionsList, emptyEl = els.em
     }
 
     const noteDetails = card.querySelector(".study-details");
-    if (noteDetails && isMath) {
+    if (noteDetails) {
       noteDetails.addEventListener("toggle", async () => {
         if (!noteDetails.open || !isCloudSyncEnabled()) return;
         try {
           await pullQuestionNoteFromCloud(q.id);
-          refillMathTextareas(card, q.id);
+          if (isMath) {
+            refillMathTextareas(card, q.id);
+            card.querySelectorAll(".math-part-details").forEach((d) => updateMathPartFilledState(d));
+          } else {
+            const notes = getQuestionNotes(q.id);
+            card.querySelectorAll("textarea[data-qid]").forEach((ta) => {
+              ta.value = notes[ta.dataset.field] || "";
+            });
+          }
           refreshNoteFieldLockButtons(card);
-          card.querySelectorAll(".math-part-details").forEach((d) => updateMathPartFilledState(d));
         } catch (err) {
           console.error("Notes pull failed:", q.id, err);
         }
@@ -1805,7 +1821,14 @@ async function loadData() {
 
 initTheme();
 bindEvents();
-installNotesSyncLifecycle();
+installNotesSyncLifecycle(async () => {
+  updateSyncBadge();
+  if (state.viewMode === "themes" && state.selectedThemeId) {
+    await renderThemeDetail(state.selectedThemeId);
+  } else if (state.viewMode === "questions") {
+    await renderQuestionView();
+  }
+});
 
 (async () => {
   try {

@@ -996,6 +996,33 @@ function writeLocalQuestionNotes(questionId, notes, paper = null) {
   saveLocal(LOCAL_QUESTION_KEY, local);
 }
 
+/** Fetch one theme's notes (including locks) from Supabase. */
+export async function refreshThemeNoteFromCloud(themeId, paper) {
+  if (!isCloudSyncEnabled()) return false;
+
+  const { data, error } = await supabase
+    .from("theme_notes")
+    .select("*")
+    .eq("user_id", userId)
+    .eq("theme_id", themeId)
+    .eq("paper", paper)
+    .maybeSingle();
+
+  if (error) {
+    lastSyncError = error.message;
+    throw error;
+  }
+  if (!data) return false;
+
+  const cloud = rowToThemeNotes(data, paper);
+  const merged = mergeThemeNotesFromCloudPull(themeId, paper, cloud);
+  themeCache.set(themeId, merged);
+  const local = loadLocal(LOCAL_THEME_KEY);
+  local[`p${paper}-${themeId}`] = stripThemeCacheForLocal(merged);
+  saveLocal(LOCAL_THEME_KEY, local);
+  return true;
+}
+
 /** Fetch one PYQ's notes from Supabase into cache + localStorage. */
 export async function pullQuestionNoteFromCloud(questionId) {
   if (!isCloudSyncEnabled()) return false;
@@ -1250,7 +1277,10 @@ export async function refreshNotesFromCloud() {
   return pullAllNotesFromCloud();
 }
 
-export function installNotesSyncLifecycle() {
+/** @param {() => void | Promise<void>} [onCloudRefresh] Called after pulling cloud notes when tab becomes visible. */
+export function installNotesSyncLifecycle(onCloudRefresh) {
+  let visiblePullTimer = null;
+
   const flushOnHide = () => {
     if (!isCloudSyncEnabled()) return;
     flushPendingNotesNow().catch((err) => {
@@ -1261,7 +1291,20 @@ export function installNotesSyncLifecycle() {
 
   window.addEventListener("pagehide", flushOnHide);
   document.addEventListener("visibilitychange", () => {
-    if (document.visibilityState === "hidden") flushOnHide();
+    if (document.visibilityState === "hidden") {
+      flushOnHide();
+      return;
+    }
+    if (!isCloudSyncEnabled()) return;
+    clearTimeout(visiblePullTimer);
+    visiblePullTimer = setTimeout(() => {
+      refreshNotesFromCloud()
+        .then(() => onCloudRefresh?.())
+        .catch((err) => {
+          lastSyncError = err?.message || String(err);
+          console.error("Notes pull on tab focus failed:", err);
+        });
+    }, 1200);
   });
 }
 
