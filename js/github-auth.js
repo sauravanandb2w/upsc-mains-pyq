@@ -8,6 +8,7 @@ import { repoBase } from "./paths.js";
 const TOKEN_KEY = "upsc-pyq-github-token";
 const RETURN_KEY = "upsc-pyq-github-oauth-return";
 const STATE_KEY = "upsc-pyq-github-oauth-state";
+const REDIRECT_URI_KEY = "upsc-pyq-github-oauth-redirect";
 
 let cfg = null;
 let configuredCache = null;
@@ -81,6 +82,9 @@ function storeToken(token) {
 }
 
 export function getOAuthRedirectUri() {
+  const stored = sessionStorage.getItem(REDIRECT_URI_KEY);
+  if (stored) return stored;
+
   const base = repoBase();
   return `${location.origin}${base}/oauth/github-callback.html`.replace(/([^:]\/)\/+/g, "$1");
 }
@@ -97,6 +101,7 @@ export async function startGitHubLogin(returnPath) {
   sessionStorage.setItem(RETURN_KEY, returnPath || location.pathname + location.search);
 
   const redirectUri = getOAuthRedirectUri();
+  sessionStorage.setItem(REDIRECT_URI_KEY, redirectUri);
   const scope = (c.GITHUB_OAUTH_SCOPE || "public_repo").trim();
   const params = new URLSearchParams({
     client_id: clientId,
@@ -121,26 +126,39 @@ export async function completeGitHubLogin(code, state) {
     throw new Error("Supabase URL/key required for GitHub token exchange.");
   }
 
-  const res = await fetch(`${supabaseUrl}/functions/v1/github-oauth`, {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      apikey: anonKey,
-      Authorization: `Bearer ${anonKey}`,
-    },
-    body: JSON.stringify({
-      code,
-      redirect_uri: getOAuthRedirectUri(),
-    }),
-  });
+  let res;
+  try {
+    res = await fetch(`${supabaseUrl}/functions/v1/github-oauth`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        apikey: anonKey,
+        Authorization: `Bearer ${anonKey}`,
+      },
+      body: JSON.stringify({
+        code,
+        redirect_uri: sessionStorage.getItem(REDIRECT_URI_KEY) || getOAuthRedirectUri(),
+      }),
+    });
+  } catch (err) {
+    throw new Error(
+      "Could not reach Supabase token exchange (Failed to fetch). Deploy the github-oauth edge function — see GITHUB_UPLOAD_SETUP.md §2."
+    );
+  }
 
   const data = await res.json().catch(() => ({}));
+  if (res.status === 404) {
+    throw new Error(
+      "github-oauth function not deployed on Supabase yet. Run: supabase functions deploy github-oauth --no-verify-jwt"
+    );
+  }
   if (!res.ok || !data.access_token) {
-    throw new Error(data.error || data.error_description || "GitHub login failed");
+    throw new Error(data.error || data.error_description || data.message || "GitHub login failed");
   }
 
   storeToken(data.access_token);
   sessionStorage.removeItem(STATE_KEY);
+  sessionStorage.removeItem(REDIRECT_URI_KEY);
   return data.access_token;
 }
 

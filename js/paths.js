@@ -17,6 +17,15 @@ export function repoBase() {
     }
   }
 
+  // GitHub Pages project site (/owner.github.io/repo-name/...) — e.g. oauth callback page
+  if (location.hostname.endsWith(".github.io")) {
+    const parts = location.pathname.split("/").filter(Boolean);
+    if (parts.length >= 1 && parts[0] !== "oauth") {
+      repoBaseCache = `/${parts[0]}`;
+      return repoBaseCache;
+    }
+  }
+
   repoBaseCache = "";
   return repoBaseCache;
 }

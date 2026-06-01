@@ -40,8 +40,12 @@ supabase link --project-ref YOUR_PROJECT_REF
 supabase secrets set GITHUB_CLIENT_ID=your_github_oauth_client_id
 supabase secrets set GITHUB_CLIENT_SECRET=your_github_oauth_client_secret
 
-supabase functions deploy github-oauth --no-verify-jwt
+supabase functions deploy github-oauth --no-verify-jwt --use-api
 ```
+
+Use **`--use-api`** if deploy hangs on “Pulling edge-runtime” (Docker slow or unavailable). It bundles on Supabase’s servers instead.
+
+If you prefer local Docker bundling, omit `--use-api` (requires Docker running).
 
 Function path in repo: `supabase/functions/github-oauth/index.ts`
 
@@ -102,7 +106,7 @@ Each upload creates a commit on `main`. GitHub Actions deploys Pages automatical
 |-------|-----|
 | No **Connect GitHub** button | Set `GITHUB_OAUTH_CLIENT_ID` + Supabase keys in `config.js` |
 | OAuth callback error | Callback URL must match OAuth App exactly (including `/oauth/github-callback.html`) |
-| Token exchange failed | Deploy `github-oauth` function; set Supabase secrets |
+| Token exchange failed / **Failed to fetch** | Deploy `github-oauth` function (see §2). Until it exists, the callback cannot exchange the OAuth code. |
 | 403 on upload | Re-authorize; scope must include `public_repo` or `repo` |
 | Image not visible yet | Wait for GitHub Pages deploy (~1–2 min); hard-refresh |
 
