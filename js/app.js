@@ -75,6 +75,11 @@ import {
   writeNoteFieldValue,
   syncRichNoteLockState,
   noteValueHasContent,
+  initNoteEditorSize,
+  setNoteEditorSize,
+  getNoteEditorSize,
+  NOTE_EDITOR_SIZES,
+  applyNoteEditorHeightsIn,
 } from "./rich-notes.js";
 import { bindExportNotesButtons } from "./export-notes.js";
 import { bindAnswerTimers, requestTimerNotificationPermission } from "./answer-timer.js";
@@ -178,6 +183,7 @@ const els = {
   reviseTodayPanel: document.getElementById("reviseTodayPanel"),
   reviseTodayList: document.getElementById("reviseTodayList"),
   exportJsonBtn: document.getElementById("exportJsonBtn"),
+  noteSizeControl: document.getElementById("noteSizeControl"),
   exportMdBtn: document.getElementById("exportMdBtn"),
   viewTabThemes: document.querySelector('.view-tab[data-view="themes"]'),
   githubConnectBtn: document.getElementById("githubConnectBtn"),
@@ -266,6 +272,29 @@ function initRichNoteField(fieldEl, initialValue, onSave) {
 
 function refreshNoteFieldLockButtons(container) {
   container.querySelectorAll(".note-lock-btn").forEach((btn) => syncNoteFieldLockUi(btn));
+}
+
+function syncNoteSizeControlUi() {
+  const size = getNoteEditorSize();
+  els.noteSizeControl?.querySelectorAll(".note-size-btn").forEach((btn) => {
+    const active = btn.dataset.noteSize === size;
+    btn.setAttribute("aria-pressed", active ? "true" : "false");
+    btn.title = NOTE_EDITOR_SIZES[btn.dataset.noteSize]?.hint || "";
+  });
+}
+
+function bindNoteSizeControl() {
+  if (!els.noteSizeControl) return;
+  initNoteEditorSize();
+  syncNoteSizeControlUi();
+  els.noteSizeControl.querySelectorAll(".note-size-btn").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const size = btn.dataset.noteSize;
+      if (!size || size === getNoteEditorSize()) return;
+      setNoteEditorSize(size);
+      syncNoteSizeControlUi();
+    });
+  });
 }
 
 function bindNoteFieldLocks(container) {
@@ -643,7 +672,7 @@ async function renderThemeDetail(themeId) {
     ? '<p class="note-locks-help">Open lock icon = syncing · Closed lock icon = not syncing (same on all devices)</p>'
     : "";
   const formatHelp =
-    '<p class="note-locks-help">Use the toolbar for <strong>bold</strong>, <em>italic</em>, underline, and lists (Ctrl+B / Ctrl+I / Ctrl+U).</p>';
+    '<p class="note-locks-help">Use the toolbar for <strong>bold</strong>, <em>italic</em>, underline, and lists. Box height: <strong>S / M / L</strong> in the header.</p>';
 
   els.themeNotesEditor.innerHTML =
     lockHelp +
@@ -678,6 +707,7 @@ async function renderThemeDetail(themeId) {
   });
 
   bindNoteFieldLocks(els.themeNotesEditor);
+  applyNoteEditorHeightsIn(els.themeNotesEditor);
 
   els.themeRelatedQuestions.innerHTML = related.length
     ? related
@@ -1341,6 +1371,7 @@ function bindQuestionNoteEditors(card, q) {
   });
 
   bindNoteFieldLocks(card);
+  applyNoteEditorHeightsIn(card);
 }
 
 function refillMathNoteEditors(card, qid) {
@@ -1389,6 +1420,7 @@ function bindMathPartNoteEditors(card, q) {
   });
 
   bindNoteFieldLocks(card);
+  applyNoteEditorHeightsIn(card);
 }
 
 function renderBestAnswerSection(q) {
@@ -1784,6 +1816,7 @@ function bindEvents() {
   });
 
   bindExportNotesButtons(els.exportJsonBtn, els.exportMdBtn);
+  bindNoteSizeControl();
   requestTimerNotificationPermission();
 
   els.clearFilters.addEventListener("click", clearAllFilters);

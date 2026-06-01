@@ -137,8 +137,47 @@ const NOTE_EDITOR_HEIGHT_REM = {
   12: 56,
 };
 
-export function noteEditorHeightRem(rows = 4) {
-  return NOTE_EDITOR_HEIGHT_REM[rows] ?? 28;
+export const NOTE_EDITOR_SIZE_KEY = "upsc-pyq-note-editor-size";
+
+/** @type {Record<string, { label: string, scale: number, hint: string }>} */
+export const NOTE_EDITOR_SIZES = {
+  s: { label: "S", scale: 0.4, hint: "Compact note boxes" },
+  m: { label: "M", scale: 0.7, hint: "Medium note boxes (default)" },
+  l: { label: "L", scale: 1, hint: "Large note boxes" },
+};
+
+export function getNoteEditorSize() {
+  const stored = localStorage.getItem(NOTE_EDITOR_SIZE_KEY);
+  return stored && NOTE_EDITOR_SIZES[stored] ? stored : "m";
+}
+
+export function setNoteEditorSize(size) {
+  if (!NOTE_EDITOR_SIZES[size]) return getNoteEditorSize();
+  localStorage.setItem(NOTE_EDITOR_SIZE_KEY, size);
+  document.documentElement.dataset.noteEditorSize = size;
+  applyNoteEditorHeightsIn(document);
+  return size;
+}
+
+export function initNoteEditorSize() {
+  const size = getNoteEditorSize();
+  document.documentElement.dataset.noteEditorSize = size;
+  return size;
+}
+
+export function noteEditorHeightRem(rows = 4, size = getNoteEditorSize()) {
+  const base = NOTE_EDITOR_HEIGHT_REM[rows] ?? 28;
+  const scale = NOTE_EDITOR_SIZES[size]?.scale ?? NOTE_EDITOR_SIZES.m.scale;
+  return Math.round(base * scale * 10) / 10;
+}
+
+/** Re-apply heights after S/M/L change (no full re-render). */
+export function applyNoteEditorHeightsIn(root = document) {
+  root.querySelectorAll(".rich-note[data-rows]").forEach((el) => {
+    const rows = Number(el.dataset.rows) || 4;
+    const rem = noteEditorHeightRem(rows);
+    el.style.setProperty("--note-editor-height", `${rem}rem`);
+  });
 }
 
 /**

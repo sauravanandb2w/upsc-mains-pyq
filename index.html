@@ -14,7 +14,7 @@
       href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="css/styles.css?v=20250602" />
+    <link rel="stylesheet" href="css/styles.css?v=20250603" />
   </head>
   <body>
     <header class="site-header">
@@ -32,6 +32,18 @@
             Sync notes
           </button>
           <button type="button" class="btn-ghost btn-sm hidden" id="githubConnectBtn">Connect GitHub</button>
+          <div
+            class="note-size-control"
+            id="noteSizeControl"
+            role="group"
+            aria-label="Note box height"
+            title="Note box height"
+          >
+            <span class="note-size-label">Box</span>
+            <button type="button" class="note-size-btn" data-note-size="s" aria-pressed="false">S</button>
+            <button type="button" class="note-size-btn" data-note-size="m" aria-pressed="true">M</button>
+            <button type="button" class="note-size-btn" data-note-size="l" aria-pressed="false">L</button>
+          </div>
           <details class="export-menu">
             <summary class="btn-ghost btn-sm">Export notes</summary>
             <div class="export-menu-body">
@@ -264,6 +276,6 @@
       </form>
     </dialog>
 
-    <script type="module" src="js/app.js?v=20250602"></script>
+    <script type="module" src="js/app.js?v=20250603"></script>
   </body>
 </html>
