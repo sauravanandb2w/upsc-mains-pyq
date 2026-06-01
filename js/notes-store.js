@@ -231,7 +231,11 @@ function parseMathPartsFromRow(row) {
     try {
       const parsed = JSON.parse(row.quotes);
       if (parsed && typeof parsed === "object" && !Array.isArray(parsed)) {
-        parts = mergeMathParts(parts, parsed);
+        const blob =
+          parsed.parts && typeof parsed.parts === "object" && !Array.isArray(parsed.parts)
+            ? parsed.parts
+            : parsed;
+        parts = mergeMathParts(parts, blob);
       }
     } catch {
       /* legacy non-JSON quotes — ignore */
@@ -470,6 +474,8 @@ function questionNotesToRow(questionId, notes, userId) {
 let supabase = null;
 /** @type {string | null} */
 let userId = null;
+/** @type {string | null} */
+let storeUserId = null;
 
 /** @type {Map<string, Record<string, string>>} */
 const themeCache = new Map();
@@ -493,16 +499,24 @@ export function clearLastSyncError() {
 
 export function initNotesStore(client, uid) {
   supabase = client;
+  if (storeUserId !== uid) {
+    themeCache.clear();
+    questionCache.clear();
+    pendingTheme.clear();
+    pendingQuestion.clear();
+    storeUserId = uid;
+  }
   userId = uid;
-  themeCache.clear();
-  questionCache.clear();
 }
 
 export function clearNotesStore() {
   supabase = null;
   userId = null;
+  storeUserId = null;
   themeCache.clear();
   questionCache.clear();
+  pendingTheme.clear();
+  pendingQuestion.clear();
 }
 
 export function isCloudSyncEnabled() {
@@ -620,13 +634,20 @@ export function getQuestionNotes(questionId, fileNotes = {}) {
 
   if (isMathPaper(paper)) {
     const fromCache = questionCache.get(questionId);
+    const local = loadLocal(LOCAL_QUESTION_KEY)[questionId];
+    const localParsed = local ? parseLocalMathNotes(local) : null;
+
+    if (fromCache?.parts && mathPartsHasContent(fromCache.parts)) {
+      return { parts: mergeMathParts(emptyMathParts(), fromCache.parts) };
+    }
+    if (localParsed?.parts && mathPartsHasContent(localParsed.parts)) {
+      return localParsed;
+    }
     if (fromCache?.parts) {
       return { parts: mergeMathParts(emptyMathParts(), fromCache.parts) };
     }
-
-    const local = loadLocal(LOCAL_QUESTION_KEY)[questionId];
-    if (local) {
-      return parseLocalMathNotes(local);
+    if (localParsed?.parts) {
+      return localParsed;
     }
 
     return { parts: emptyMathParts() };
@@ -749,7 +770,15 @@ async function flushQuestionNotes() {
   pendingQuestion.clear();
 
   for (const [questionId, notes] of batch) {
-    const row = questionNotesToRow(questionId, { ...notes, __meta: notes.__meta || getQuestionMeta(questionId) }, userId);
+    const payload = { ...notes, __meta: notes.__meta || getQuestionMeta(questionId) };
+    const paper = paperFromQuestionId(questionId);
+    if (isMathPaper(paper)) {
+      if (!mathPartsHasContent(payload.parts || {})) continue;
+    } else if (!hasContent(payload)) {
+      continue;
+    }
+
+    const row = questionNotesToRow(questionId, payload, userId);
     const { error } = await supabase
       .from("question_notes")
       .upsert(row, { onConflict: "user_id,question_id" });
@@ -814,6 +843,13 @@ export async function syncNotesWithCloud() {
   return { pushed, pulled };
 }
 
+/** Pull latest cloud notes (e.g. after editing on another browser). */
+export async function refreshNotesFromCloud() {
+  if (!isCloudSyncEnabled()) return { themes: 0, questions: 0 };
+  clearLastSyncError();
+  return pullAllNotesFromCloud();
+}
+
 export function installNotesSyncLifecycle() {
   const flushOnHide = () => {
     if (!isCloudSyncEnabled()) return;
@@ -823,9 +859,23 @@ export function installNotesSyncLifecycle() {
     });
   };
 
+  const pullOnVisible = () => {
+    if (!isCloudSyncEnabled() || document.visibilityState !== "visible") return;
+    refreshNotesFromCloud()
+      .then(() => {
+        window.dispatchEvent(new CustomEvent("upsc-notes-cloud-updated"));
+      })
+      .catch((err) => {
+        lastSyncError = err?.message || String(err);
+        console.error("Notes pull on focus failed:", err);
+      });
+  };
+
   window.addEventListener("pagehide", flushOnHide);
+  window.addEventListener("pageshow", pullOnVisible);
   document.addEventListener("visibilitychange", () => {
     if (document.visibilityState === "hidden") flushOnHide();
+    else pullOnVisible();
   });
 }
 

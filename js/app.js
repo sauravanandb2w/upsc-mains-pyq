@@ -42,6 +42,7 @@ import {
   MATH_PART_TEXT_FIELDS,
   MATH_PART_NOTE_FIELDS,
   syncNotesWithCloud,
+  refreshNotesFromCloud,
   getLastSyncError,
   installNotesSyncLifecycle,
   themeNotesHaystack,
@@ -1615,6 +1616,11 @@ function bindEvents() {
     if (state.viewMode === "progress") {
       renderActivityDashboard(els.progressView);
     }
+  });
+
+  window.addEventListener("upsc-notes-cloud-updated", () => {
+    updateSyncBadge();
+    refreshView().catch((err) => console.error("Refresh after cloud pull failed:", err));
   });
 }
 
