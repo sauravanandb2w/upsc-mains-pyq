@@ -261,7 +261,7 @@ function applyLockedSnapshotsToRow(row, entries) {
   return row;
 }
 
-export function lockNoteField(lockKey, currentValue) {
+export async function lockNoteField(lockKey, currentValue) {
   const parsed = parseLockKey(lockKey);
   if (!parsed) return;
   const entry = {
@@ -282,7 +282,9 @@ export function lockNoteField(lockKey, currentValue) {
     saveLocal(LOCAL_THEME_KEY, local);
     if (isCloudSyncEnabled()) {
       pendingTheme.set(parsed.themeId, { paper: parsed.paper, notes: cached });
-      scheduleThemeFlush();
+      clearTimeout(themeTimer);
+      themeTimer = null;
+      await flushThemeNotes();
     }
     return;
   }
@@ -294,6 +296,11 @@ export function lockNoteField(lockKey, currentValue) {
     : { ...emptyQuestionNotes(paper), ...stripQuestionCacheForNotes(prior), __locks: { ...(prior.__locks || {}) } };
   payload.__locks[parsed.storageKey] = entry;
   persistQuestionNotes(parsed.questionId, payload);
+  if (isCloudSyncEnabled()) {
+    clearTimeout(questionTimer);
+    questionTimer = null;
+    await flushQuestionNotes();
+  }
 }
 
 async function pushThemeLockStateToCloud(themeId, paper, locks) {
@@ -344,7 +351,7 @@ async function pushQuestionLockStateToCloud(questionId, locks) {
   }
 }
 
-export function unlockNoteField(lockKey) {
+export async function unlockNoteField(lockKey) {
   const parsed = parseLockKey(lockKey);
   if (!parsed) return;
 
@@ -360,10 +367,7 @@ export function unlockNoteField(lockKey) {
     local[key] = stripThemeCacheForLocal(cached);
     saveLocal(LOCAL_THEME_KEY, local);
     if (isCloudSyncEnabled()) {
-      pushThemeLockStateToCloud(parsed.themeId, parsed.paper, nextLocks).catch((err) => {
-        lastSyncError = err?.message || String(err);
-        console.error("Unlock sync failed:", err);
-      });
+      await pushThemeLockStateToCloud(parsed.themeId, parsed.paper, nextLocks);
     }
     return;
   }
@@ -376,10 +380,7 @@ export function unlockNoteField(lockKey) {
   questionCache.set(parsed.questionId, cached);
   writeLocalQuestionNotes(parsed.questionId, cached, paperFromQuestionId(parsed.questionId));
   if (isCloudSyncEnabled()) {
-    pushQuestionLockStateToCloud(parsed.questionId, nextLocks).catch((err) => {
-      lastSyncError = err?.message || String(err);
-      console.error("Unlock sync failed:", err);
-    });
+    await pushQuestionLockStateToCloud(parsed.questionId, nextLocks);
   }
 }
 

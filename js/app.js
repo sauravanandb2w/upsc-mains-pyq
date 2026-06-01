@@ -197,18 +197,30 @@ function toggleTheme() {
   localStorage.setItem("upsc-pyq-theme", next);
 }
 
+const NOTE_LOCK_ICON_OPEN = `<svg class="note-lock-svg" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 9.9-1"/></svg>`;
+
+const NOTE_LOCK_ICON_CLOSED = `<svg class="note-lock-svg" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>`;
+
+function noteLockButtonHtml(locked) {
+  return locked ? NOTE_LOCK_ICON_CLOSED : NOTE_LOCK_ICON_OPEN;
+}
+
 function renderNoteLabelRow(label, lockKey) {
   const locked = isNoteFieldLocked(lockKey);
-  return `
-    <div class="note-label-row">
-      <span class="note-label">${escapeHtml(label)}</span>
-      <button
+  const lockControl = isCloudSyncEnabled()
+    ? `<button
         type="button"
         class="note-lock-btn${locked ? " note-lock-btn--locked" : ""}"
         data-lock-key="${escapeAttr(lockKey)}"
         aria-pressed="${locked ? "true" : "false"}"
-        title="${locked ? "Locked on all your devices — edits here do not sync" : "Lock on all your devices — edits will not sync"}"
-      >${locked ? "Unlock" : "Lock"}</button>
+        aria-label="${locked ? "Unlock — allow sync on all devices" : "Lock — stop sync on all devices"}"
+        title="${locked ? "Locked — edits do not sync" : "Click to lock — no sync on any device"}"
+      >${noteLockButtonHtml(locked)}</button>`
+    : "";
+  return `
+    <div class="note-label-row">
+      <span class="note-label">${escapeHtml(label)}</span>
+      ${lockControl}
     </div>
   `;
 }
@@ -219,12 +231,13 @@ function syncNoteFieldLockUi(btn) {
   const locked = isNoteFieldLocked(lockKey);
   btn.classList.toggle("note-lock-btn--locked", locked);
   btn.setAttribute("aria-pressed", locked ? "true" : "false");
-  btn.textContent = locked ? "Unlock" : "Lock";
-  btn.title = locked
-    ? "Locked on all your devices — edits here do not sync"
-    : "Lock on all your devices — edits will not sync";
+  btn.setAttribute(
+    "aria-label",
+    locked ? "Unlock — allow sync on all devices" : "Lock — stop sync on all devices"
+  );
+  btn.innerHTML = noteLockButtonHtml(locked);
+  btn.title = locked ? "Locked — edits do not sync" : "Click to lock — no sync on any device";
   field?.classList.toggle("note-field--locked", locked);
-  field?.querySelector(".note-lock-hint")?.remove();
 }
 
 function refreshNoteFieldLockButtons(container) {
@@ -233,16 +246,25 @@ function refreshNoteFieldLockButtons(container) {
 
 function bindNoteFieldLocks(container) {
   container.querySelectorAll(".note-lock-btn").forEach((btn) => {
-    btn.addEventListener("click", () => {
+    btn.addEventListener("click", async () => {
       const lockKey = btn.dataset.lockKey;
       const ta = btn.closest(".note-field")?.querySelector("textarea");
-      if (isNoteFieldLocked(lockKey)) {
-        unlockNoteField(lockKey);
-      } else {
-        lockNoteField(lockKey, ta?.value ?? "");
+      btn.disabled = true;
+      try {
+        if (isNoteFieldLocked(lockKey)) {
+          await unlockNoteField(lockKey);
+        } else {
+          await lockNoteField(lockKey, ta?.value ?? "");
+        }
+        syncNoteFieldLockUi(btn);
+        updateSyncBadge();
+      } catch (err) {
+        setLastSyncError(err?.message || String(err));
+        updateSyncBadge();
+        console.error("Lock toggle failed:", err);
+      } finally {
+        btn.disabled = false;
       }
-      syncNoteFieldLockUi(btn);
-      updateSyncBadge();
     });
     syncNoteFieldLockUi(btn);
   });
@@ -594,7 +616,7 @@ async function renderThemeDetail(themeId) {
   `;
 
   const lockHelp = isCloudSyncEnabled()
-    ? '<p class="note-locks-help">Lock is shared on all devices. While locked, typing does not sync to the cloud.</p>'
+    ? '<p class="note-locks-help">Open lock icon = syncing · Closed lock icon = not syncing (same on all devices)</p>'
     : "";
 
   els.themeNotesEditor.innerHTML =
