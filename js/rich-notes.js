@@ -125,6 +125,22 @@ export function renderRichNoteToolbar() {
   </div>`;
 }
 
+/** Visible editor height per `rows` hint (flex layout needs explicit height). */
+const NOTE_EDITOR_HEIGHT_REM = {
+  2: 22,
+  3: 26,
+  4: 30,
+  5: 34,
+  6: 38,
+  8: 44,
+  10: 52,
+  12: 56,
+};
+
+export function noteEditorHeightRem(rows = 4) {
+  return NOTE_EDITOR_HEIGHT_REM[rows] ?? 28;
+}
+
 /**
  * @param {Record<string, string>} dataAttrs - e.g. { "data-field": "brainstorm" }
  */
@@ -132,7 +148,8 @@ export function renderRichNoteEditorHtml(dataAttrs = {}, { placeholder = "", row
   const attrs = Object.entries(dataAttrs)
     .map(([k, v]) => `${k}="${String(v).replace(/"/g, "&quot;")}"`)
     .join(" ");
-  return `<div class="rich-note" data-rows="${rows}">
+  const heightRem = noteEditorHeightRem(rows);
+  return `<div class="rich-note" data-rows="${rows}" style="--note-editor-height: ${heightRem}rem">
     ${renderRichNoteToolbar()}
     <div
       class="rich-note-editor"
