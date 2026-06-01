@@ -152,7 +152,13 @@ export function emptyMathParts() {
 function mergeMathParts(base, patch) {
   const out = { ...base };
   for (const part of MATH_PARTS) {
-    out[part] = { ...base[part], ...(patch?.[part] || {}) };
+    out[part] = { ...base[part] };
+    const partPatch = patch?.[part];
+    if (!partPatch) continue;
+    for (const f of MATH_PART_TEXT_FIELDS) {
+      if (partPatch[f.id] === undefined) continue;
+      out[part][f.id] = coalesceNoteText(base[part]?.[f.id], partPatch[f.id]);
+    }
   }
   return out;
 }
@@ -440,6 +446,15 @@ function stripQuestionCacheForNotes(cached) {
 
 function hasLockedFields(locks) {
   return Boolean(locks && Object.keys(locks).length > 0);
+}
+
+/** First non-empty trimmed string among candidates (empty string does not block later values). */
+function coalesceNoteText(...candidates) {
+  for (const value of candidates) {
+    const s = String(value ?? "");
+    if (s.trim()) return s;
+  }
+  return String(candidates[candidates.length - 1] ?? "");
 }
 
 /** Prefer live text; if empty, use frozen snapshot from lock metadata. */
@@ -793,9 +808,10 @@ function mergeThemeNotesFromCloudPull(themeId, paper, cloudNotes) {
     if (mergedLocks[f.id]) {
       merged[f.id] = pickNoteText(cloudFields[f.id], mergedLocks[f.id]);
     } else {
-      merged[f.id] = pickNoteText(
-        fromLocalNotes[f.id] ?? cachedNotes[f.id] ?? cloudFields[f.id],
-        mergedLocks[f.id]
+      merged[f.id] = coalesceNoteText(
+        fromLocalNotes[f.id],
+        cachedNotes[f.id],
+        cloudFields[f.id]
       );
     }
   }
@@ -823,9 +839,9 @@ function mergeQuestionNotesFromCloudPull(questionId, cloudNotes) {
         if (cloudLocks[storageKey]) {
           parts[part][f.id] = pickNoteText(parts[part][f.id], cloudLocks[storageKey]);
         } else {
-          parts[part][f.id] = pickNoteText(
-            local.parts?.[part]?.[f.id] ?? parts[part][f.id],
-            cloudLocks[storageKey]
+          parts[part][f.id] = coalesceNoteText(
+            local.parts?.[part]?.[f.id],
+            parts[part][f.id]
           );
         }
       }
@@ -840,7 +856,7 @@ function mergeQuestionNotesFromCloudPull(questionId, cloudNotes) {
     if (cloudLocks[f.id]) {
       merged[f.id] = pickNoteText(cloudFields[f.id], cloudLocks[f.id]);
     } else {
-      merged[f.id] = pickNoteText(local[f.id] ?? cloudFields[f.id], cloudLocks[f.id]);
+      merged[f.id] = coalesceNoteText(local[f.id], cloudFields[f.id]);
     }
   }
   if (__meta) merged.__meta = __meta;
@@ -849,19 +865,22 @@ function mergeQuestionNotesFromCloudPull(questionId, cloudNotes) {
   return merged;
 }
 
-function themeNotesToRow(themeId, paper, notes, userId) {
+function themeNotesToRow(themeId, paper, notes, userId, cloudFields = null) {
   const row = { user_id: userId, theme_id: themeId, paper };
   const locks = notes.__locks || themeCache.get(themeId)?.__locks || {};
+  const cloud = cloudFields || {};
   for (const f of getThemeNoteFields(paper)) {
     const lock = locks[f.id];
     row[f.db] =
-      lock?.snapshot !== undefined ? String(lock.snapshot) : notes[f.id] || "";
+      lock?.snapshot !== undefined
+        ? String(lock.snapshot)
+        : coalesceNoteText(notes[f.id], cloud[f.id]);
   }
   row.locked_fields = serializeLockedFields(locks);
   return row;
 }
 
-function questionNotesToRow(questionId, notes, userId) {
+function questionNotesToRow(questionId, notes, userId, cloudFields = null) {
   const paper = paperFromQuestionId(questionId);
   const row = { user_id: userId, question_id: questionId };
   const meta = notes.__meta || getQuestionMeta(questionId);
@@ -888,10 +907,13 @@ function questionNotesToRow(questionId, notes, userId) {
   }
 
   const qLocks = notes.__locks || getQuestionLocksMap(questionId);
+  const cloud = cloudFields || {};
   for (const f of allQuestionNoteFields(paper)) {
     const lock = qLocks[f.id];
     row[f.db] =
-      lock?.snapshot !== undefined ? String(lock.snapshot) : notes[f.id] || "";
+      lock?.snapshot !== undefined
+        ? String(lock.snapshot)
+        : coalesceNoteText(notes[f.id], cloud[f.id]);
   }
   row.locked_fields = serializeLockedFields(qLocks);
   return row;
@@ -1252,22 +1274,78 @@ export async function flushPendingNotesNow() {
   await Promise.all([flushThemeNotes(), flushQuestionNotes()]);
 }
 
+async function fetchThemeCloudFields(themeIds, paper) {
+  if (!themeIds.length) return new Map();
+  const { data, error } = await supabase
+    .from("theme_notes")
+    .select("*")
+    .eq("user_id", userId)
+    .eq("paper", paper)
+    .in("theme_id", themeIds);
+  if (error) throw error;
+  const byId = new Map();
+  for (const row of data || []) {
+    const { __locks, ...fields } = rowToThemeNotes(row, paper);
+    byId.set(row.theme_id, fields);
+  }
+  return byId;
+}
+
+/** @returns {Map<string, { gs?: Record<string, string>, mathParts?: ReturnType<typeof emptyMathParts> }>} */
+async function fetchQuestionCloudSnapshots(questionIds) {
+  if (!questionIds.length) return new Map();
+  const { data, error } = await supabase
+    .from("question_notes")
+    .select("*")
+    .eq("user_id", userId)
+    .in("question_id", questionIds);
+  if (error) throw error;
+  const byId = new Map();
+  for (const row of data || []) {
+    const paper = paperFromQuestionId(row.question_id);
+    if (isMathPaper(paper)) {
+      byId.set(row.question_id, { mathParts: parseMathPartsFromRow(row) });
+    } else {
+      const parsed = rowToQuestionNotes(row, paper);
+      const { __locks, __meta, parts, ...fields } = parsed;
+      byId.set(row.question_id, { gs: fields });
+    }
+  }
+  return byId;
+}
+
 async function flushThemeNotes() {
   if (!isCloudSyncEnabled() || pendingTheme.size === 0) return;
 
   const batch = [...pendingTheme.entries()];
   pendingTheme.clear();
 
-  for (const [themeId, { paper, notes }] of batch) {
-    const row = themeNotesToRow(themeId, paper, notes, userId);
-    const { error } = await supabase
-      .from("theme_notes")
-      .upsert(row, { onConflict: "user_id,theme_id" });
+  const byPaper = new Map();
+  for (const [themeId, entry] of batch) {
+    if (!byPaper.has(entry.paper)) byPaper.set(entry.paper, []);
+    byPaper.get(entry.paper).push([themeId, entry.notes]);
+  }
 
-    if (error) {
-      lastSyncError = error.message;
-      console.error("Theme note save failed:", error.message);
+  try {
+    for (const [paper, items] of byPaper) {
+      const themeIds = items.map(([id]) => id);
+      const cloudByTheme = await fetchThemeCloudFields(themeIds, paper);
+      for (const [themeId, notes] of items) {
+        if (!hasContent(notes) && !hasLockedFields(notes.__locks)) continue;
+        const cloudFields = cloudByTheme.get(themeId) || {};
+        const row = themeNotesToRow(themeId, paper, notes, userId, cloudFields);
+        const { error } = await supabase
+          .from("theme_notes")
+          .upsert(row, { onConflict: "user_id,theme_id" });
+        if (error) {
+          lastSyncError = error.message;
+          console.error("Theme note save failed:", error.message);
+        }
+      }
     }
+  } catch (err) {
+    lastSyncError = err?.message || String(err);
+    console.error("Theme note flush failed:", err);
   }
 }
 
@@ -1277,6 +1355,15 @@ async function flushQuestionNotes() {
   const batch = [...pendingQuestion.entries()];
   pendingQuestion.clear();
 
+  const questionIds = batch.map(([id]) => id);
+  let cloudByQuestion = new Map();
+  try {
+    cloudByQuestion = await fetchQuestionCloudSnapshots(questionIds);
+  } catch (err) {
+    lastSyncError = err?.message || String(err);
+    console.error("Question note cloud prefetch failed:", err);
+  }
+
   for (const [questionId, notes] of batch) {
     const paper = paperFromQuestionId(questionId);
     let payload;
@@ -1284,8 +1371,9 @@ async function flushQuestionNotes() {
       const merged = mergeMathNotesFromSources(questionId);
       if (!mathPartsHasContent(merged.parts) && !hasLockedFields(merged.__locks)) continue;
       const prior = questionCache.get(questionId);
+      const cloudParts = cloudByQuestion.get(questionId)?.mathParts || emptyMathParts();
       payload = {
-        parts: merged.parts,
+        parts: mergeMathParts(cloudParts, merged.parts),
         __locks: merged.__locks || prior?.__locks || {},
         __meta: getQuestionMeta(questionId),
       };
@@ -1296,7 +1384,8 @@ async function flushQuestionNotes() {
       if (!hasContent(payload) && !hasLockedFields(payload.__locks)) continue;
     }
 
-    const row = questionNotesToRow(questionId, payload, userId);
+    const cloudFields = cloudByQuestion.get(questionId)?.gs;
+    const row = questionNotesToRow(questionId, payload, userId, cloudFields);
     const { error } = await supabase
       .from("question_notes")
       .upsert(row, { onConflict: "user_id,question_id" });
@@ -1426,12 +1515,13 @@ export function withSyncTimeout(promise, ms = 45000) {
   });
 }
 
-/** Flush pending edits and download from cloud (fast; use on sign-in). */
+/** Download cloud notes first, then flush local edits (avoids empty local wiping cloud on new browsers). */
 export async function pullNotesFromCloud() {
   if (!isCloudSyncEnabled()) return { themes: 0, questions: 0 };
   clearLastSyncError();
+  const pulled = await pullAllNotesFromCloud();
   await flushPendingNotesNow();
-  return pullAllNotesFromCloud();
+  return pulled;
 }
 
 /** Push all local notes up, then pull cloud (use Sync notes button). */
