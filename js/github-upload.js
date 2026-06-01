@@ -35,12 +35,29 @@ async function bufferToBase64(file) {
   return btoa(binary);
 }
 
+function encodeRepoPath(path) {
+  return path
+    .replace(/^\//, "")
+    .split("/")
+    .map(encodeURIComponent)
+    .join("/");
+}
+
+function decodeFileContent(data) {
+  if (data.encoding !== "base64") return data.content ?? null;
+  try {
+    return decodeURIComponent(escape(atob(data.content.replace(/\n/g, ""))));
+  } catch {
+    return null;
+  }
+}
+
 export async function getRepoFile(path) {
   const token = getGitHubToken();
   const { owner, name } = await getGitHubRepo();
   if (!token || !owner || !name) throw new Error("Connect GitHub first.");
 
-  const res = await fetch(`${API}/repos/${owner}/${name}/contents/${path}`, {
+  const res = await fetch(`${API}/repos/${owner}/${name}/contents/${encodeRepoPath(path)}`, {
     headers: apiHeaders(token),
   });
 
@@ -51,11 +68,28 @@ export async function getRepoFile(path) {
   }
 
   const data = await res.json();
-  const text =
-    data.encoding === "base64"
-      ? decodeURIComponent(escape(atob(data.content.replace(/\n/g, ""))))
-      : data.content;
+  const text = decodeFileContent(data);
   return { sha: data.sha, text, raw: data };
+}
+
+/** SHA only — safe for binary images (no UTF-8 decode). */
+async function getRepoFileSha(path) {
+  const token = getGitHubToken();
+  const { owner, name } = await getGitHubRepo();
+  if (!token || !owner || !name) throw new Error("Connect GitHub first.");
+
+  const res = await fetch(`${API}/repos/${owner}/${name}/contents/${encodeRepoPath(path)}`, {
+    headers: apiHeaders(token),
+  });
+
+  if (res.status === 404) return null;
+  if (!res.ok) {
+    const err = await res.json().catch(() => ({}));
+    throw new Error(err.message || `GitHub read failed (${res.status})`);
+  }
+
+  const data = await res.json();
+  return data.sha;
 }
 
 export async function putRepoFile(path, base64Content, message, sha = null) {
@@ -66,7 +100,7 @@ export async function putRepoFile(path, base64Content, message, sha = null) {
   const body = { message, content: base64Content, branch: "main" };
   if (sha) body.sha = sha;
 
-  const res = await fetch(`${API}/repos/${owner}/${name}/contents/${path}`, {
+  const res = await fetch(`${API}/repos/${owner}/${name}/contents/${encodeRepoPath(path)}`, {
     method: "PUT",
     headers: { ...apiHeaders(token), "Content-Type": "application/json" },
     body: JSON.stringify(body),
@@ -85,7 +119,7 @@ export async function deleteRepoFile(path, sha, message) {
   const { owner, name } = await getGitHubRepo();
   if (!token || !owner || !name) throw new Error("Connect GitHub first.");
 
-  const res = await fetch(`${API}/repos/${owner}/${name}/contents/${path}`, {
+  const res = await fetch(`${API}/repos/${owner}/${name}/contents/${encodeRepoPath(path)}`, {
     method: "DELETE",
     headers: { ...apiHeaders(token), "Content-Type": "application/json" },
     body: JSON.stringify({ message, sha, branch: "main" }),
@@ -223,13 +257,13 @@ export async function deleteQuestionStudyImage(questionId, fileName) {
   const folder = `study/questions/${questionId}`;
   const filePath = `${folder}/${cleanName}`;
 
-  const file = await getRepoFile(filePath);
-  if (!file) throw new Error("Image not found in repo.");
+  const fileSha = await getRepoFileSha(filePath);
+  if (!fileSha) throw new Error("Image not found in repo.");
 
   const manifest = await loadManifest(folder);
   manifest.data.images = removeImageEntry(manifest.data.images, cleanName);
 
-  await deleteRepoFile(filePath, file.sha, `Remove study image ${questionId}/${cleanName}`);
+  await deleteRepoFile(filePath, fileSha, `Remove study image ${questionId}/${cleanName}`);
   await saveManifest(manifest.path, manifest.sha, manifest.data, `Update manifest ${questionId}`);
   return { path: filePath, name: cleanName };
 }
@@ -240,14 +274,14 @@ export async function deleteMathSolutionScan(questionId, part, relFile) {
   const folder = `study/questions/${questionId}`;
   const filePath = clean.startsWith("solutions/") ? `${folder}/${clean}` : `${folder}/solutions/${clean}`;
 
-  const file = await getRepoFile(filePath);
-  if (!file) throw new Error("Solution scan not found in repo.");
+  const fileSha = await getRepoFileSha(filePath);
+  if (!fileSha) throw new Error("Solution scan not found in repo.");
 
   const manifest = await loadManifest(folder);
   manifest.data.solutions = manifest.data.solutions || {};
   manifest.data.solutions[part] = removeSolutionEntry(manifest.data.solutions[part], clean);
 
-  await deleteRepoFile(filePath, file.sha, `Remove ${questionId} part (${part}) solution scan`);
+  await deleteRepoFile(filePath, fileSha, `Remove ${questionId} part (${part}) solution scan`);
   await saveManifest(manifest.path, manifest.sha, manifest.data, `Update ${questionId} solutions manifest`);
   return { path: filePath, file: clean };
 }
@@ -257,13 +291,13 @@ export async function deleteThemeStudyImage(studyPath, fileName) {
   const cleanName = basename(fileName);
   const filePath = `${studyPath}/${cleanName}`;
 
-  const file = await getRepoFile(filePath);
-  if (!file) throw new Error("Image not found in repo.");
+  const fileSha = await getRepoFileSha(filePath);
+  if (!fileSha) throw new Error("Image not found in repo.");
 
   const manifest = await loadManifest(studyPath);
   manifest.data.images = removeImageEntry(manifest.data.images, cleanName);
 
-  await deleteRepoFile(filePath, file.sha, `Remove study image ${studyPath}/${cleanName}`);
+  await deleteRepoFile(filePath, fileSha, `Remove study image ${studyPath}/${cleanName}`);
   await saveManifest(manifest.path, manifest.sha, manifest.data, `Update manifest ${studyPath}`);
   return { path: filePath, name: cleanName };
 }
