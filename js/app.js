@@ -37,6 +37,9 @@ import {
   loadQuestionNotesForIds,
   getQuestionNotes,
   saveQuestionNote,
+  saveMathPartNote,
+  MATH_PARTS,
+  MATH_PART_NOTE_FIELDS,
   migrateLocalNotesToCloud,
   themeNotesHaystack,
   questionNotesHaystack,
@@ -650,6 +653,10 @@ function formatMarks(marks) {
 }
 
 function renderQuestionNotesEditor(q) {
+  if (isMathPaper(state.paper)) {
+    return renderMathPartNotesEditor(q);
+  }
+
   const fields = getQuestionNoteFields(state.paper);
   return fields.map(
     (f) => `
@@ -666,7 +673,51 @@ function renderQuestionNotesEditor(q) {
   ).join("");
 }
 
+function renderMathPartNotesEditor(q) {
+  const notes = getQuestionNotes(q.id, q.notes);
+
+  return `
+    <div class="math-part-notes">
+      ${MATH_PARTS.map((part) => {
+        const hasNotes = MATH_PART_NOTE_FIELDS.some(
+          (f) => String(notes.parts?.[part]?.[f.id] || "").trim()
+        );
+        return `
+          <details class="math-part-details"${hasNotes ? " open" : ""}>
+            <summary>
+              Part (${part})
+              <span class="math-part-marks">10 marks</span>
+              ${hasNotes ? '<span class="math-part-has-notes">has notes</span>' : ""}
+            </summary>
+            <div class="notes-editor math-part-editor">
+              ${MATH_PART_NOTE_FIELDS.map(
+                (f) => `
+                <label class="note-field">
+                  <span class="note-label">${f.label}</span>
+                  <textarea
+                    data-qid="${escapeAttr(q.id)}"
+                    data-part="${part}"
+                    data-field="${escapeAttr(f.id)}"
+                    rows="2"
+                    placeholder="${escapeAttr(f.placeholder)}"
+                  ></textarea>
+                </label>
+              `
+              ).join("")}
+            </div>
+          </details>
+        `;
+      }).join("")}
+    </div>
+  `;
+}
+
 function bindQuestionNoteEditors(card, q) {
+  if (isMathPaper(state.paper)) {
+    bindMathPartNoteEditors(card, q);
+    return;
+  }
+
   const notes = getQuestionNotes(q.id, q.notes);
   card.querySelectorAll("textarea[data-qid]").forEach((ta) => {
     ta.value = notes[ta.dataset.field] || "";
@@ -675,6 +726,42 @@ function bindQuestionNoteEditors(card, q) {
       debounce(() => {
         saveQuestionNote(ta.dataset.qid, ta.dataset.field, ta.value);
       }, 400)
+    );
+  });
+}
+
+function bindMathPartNoteEditors(card, q) {
+  const notes = getQuestionNotes(q.id, q.notes);
+
+  card.querySelectorAll("textarea[data-part]").forEach((ta) => {
+    const part = ta.dataset.part;
+    const field = ta.dataset.field;
+    ta.value = notes.parts?.[part]?.[field] || "";
+    ta.addEventListener(
+      "input",
+      debounce(() => {
+        saveMathPartNote(ta.dataset.qid, part, field, ta.value);
+        const details = ta.closest(".math-part-details");
+        if (details) {
+          details.classList.toggle(
+            "math-part-details--filled",
+            MATH_PART_NOTE_FIELDS.some((f) => {
+              const el = details.querySelector(`textarea[data-field="${f.id}"]`);
+              return el?.value.trim();
+            })
+          );
+        }
+      }, 400)
+    );
+  });
+
+  card.querySelectorAll(".math-part-details").forEach((details) => {
+    details.classList.toggle(
+      "math-part-details--filled",
+      MATH_PART_NOTE_FIELDS.some((f) => {
+        const el = details.querySelector(`textarea[data-field="${f.id}"]`);
+        return el?.value.trim();
+      })
     );
   });
 }
@@ -743,7 +830,11 @@ function renderQuestions(questions) {
       ${subHtml}
       ${themeLink}
       <details class="study-details">
-        <summary>Your notes for this question (text · synced)</summary>
+        <summary>${
+          isMath
+            ? "Your notes — parts (a) to (e) · synced"
+            : "Your notes for this question (text · synced)"
+        }</summary>
         <div class="notes-editor">${renderQuestionNotesEditor(q)}</div>
       </details>
       ${extraImagesDetails}

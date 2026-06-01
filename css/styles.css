@@ -992,6 +992,61 @@ body {
   color: var(--accent);
 }
 
+/* Mathematics — per-part (a)–(e) notes accordion */
+.math-part-notes {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.math-part-details {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: color-mix(in srgb, var(--text) 2%, var(--bg));
+}
+
+.math-part-details[open] {
+  background: var(--bg-elevated);
+}
+
+.math-part-details summary {
+  cursor: pointer;
+  padding: 0.55rem 0.75rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.math-part-details summary::-webkit-details-marker {
+  display: none;
+}
+
+.math-part-marks {
+  font-size: 0.72rem;
+  font-weight: 500;
+  color: var(--text-muted);
+}
+
+.math-part-has-notes {
+  margin-left: auto;
+  font-size: 0.68rem;
+  font-weight: 500;
+  color: var(--accent);
+}
+
+.math-part-details--filled summary,
+.math-part-details[open] summary {
+  color: var(--accent);
+}
+
+.math-part-editor {
+  padding: 0 0.75rem 0.75rem;
+  border-top: 1px dashed var(--border);
+}
+
 .study-materials-hint code {
   font-size: 0.72rem;
   padding: 0.1rem 0.35rem;

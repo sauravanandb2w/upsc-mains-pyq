@@ -17,6 +17,7 @@ create table if not exists public.theme_notes (
 );
 
 -- Per-question notes (optional, linked to PYQ id e.g. gs2-2024-q5)
+-- For math optional (math1-*, math2-*), `quotes` stores JSON: parts (a)–(e) note blobs.
 create table if not exists public.question_notes (
   id uuid primary key default gen_random_uuid(),
   user_id uuid references auth.users (id) on delete cascade not null,
