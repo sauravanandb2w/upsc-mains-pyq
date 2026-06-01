@@ -275,6 +275,7 @@ export async function lockNoteField(lockKey, currentValue) {
       __locks: {},
     };
     cached.__locks = { ...(cached.__locks || {}), [parsed.storageKey]: entry };
+    cached[parsed.fieldId] = entry.snapshot;
     themeCache.set(parsed.themeId, cached);
     const local = loadLocal(LOCAL_THEME_KEY);
     const key = `p${parsed.paper}-${parsed.themeId}`;
@@ -291,10 +292,22 @@ export async function lockNoteField(lockKey, currentValue) {
 
   const paper = paperFromQuestionId(parsed.questionId);
   const prior = questionCache.get(parsed.questionId) || {};
-  const payload = isMathPaper(paper)
-    ? { parts: prior.parts || emptyMathParts(), __locks: { ...(prior.__locks || {}) } }
-    : { ...emptyQuestionNotes(paper), ...stripQuestionCacheForNotes(prior), __locks: { ...(prior.__locks || {}) } };
-  payload.__locks[parsed.storageKey] = entry;
+  const nextLocks = { ...(prior.__locks || {}), [parsed.storageKey]: entry };
+  let payload;
+  if (isMathPaper(paper)) {
+    const parts = mergeMathParts(emptyMathParts(), prior.parts);
+    if (parsed.partId) {
+      parts[parsed.partId][parsed.fieldId] = entry.snapshot;
+    }
+    payload = { parts, __locks: nextLocks };
+  } else {
+    payload = {
+      ...emptyQuestionNotes(paper),
+      ...stripQuestionCacheForNotes(prior),
+      [parsed.fieldId]: entry.snapshot,
+      __locks: nextLocks,
+    };
+  }
   persistQuestionNotes(parsed.questionId, payload);
   if (isCloudSyncEnabled()) {
     clearTimeout(questionTimer);
@@ -397,6 +410,41 @@ function stripQuestionCacheForNotes(cached) {
 
 function hasLockedFields(locks) {
   return Boolean(locks && Object.keys(locks).length > 0);
+}
+
+/** Prefer live text; if empty, use frozen snapshot from lock metadata. */
+function pickNoteText(current, lockEntry) {
+  if (String(current ?? "").trim()) return String(current ?? "");
+  if (lockEntry?.snapshot !== undefined) return String(lockEntry.snapshot);
+  return String(current ?? "");
+}
+
+function hydrateThemeNotesDisplay(notes, locks, paper) {
+  if (!locks || !paper) return notes;
+  for (const f of getThemeNoteFields(paper)) {
+    notes[f.id] = pickNoteText(notes[f.id], locks[f.id]);
+  }
+  return notes;
+}
+
+function hydrateQuestionNotesDisplay(notes, locks, paper) {
+  if (!locks || !paper) return notes;
+  for (const f of allQuestionNoteFields(paper)) {
+    notes[f.id] = pickNoteText(notes[f.id], locks[f.id]);
+  }
+  return notes;
+}
+
+function hydrateMathPartsDisplay(parts, locks) {
+  const out = mergeMathParts(emptyMathParts(), parts);
+  if (!locks) return out;
+  for (const part of MATH_PARTS) {
+    for (const f of MATH_PART_TEXT_FIELDS) {
+      const key = `${part}:${f.id}`;
+      out[part][f.id] = pickNoteText(out[part][f.id], locks[key]);
+    }
+  }
+  return out;
 }
 
 export const REVISION_DUE_DAYS = 30;
@@ -647,10 +695,11 @@ function paperFromQuestionId(questionId) {
 function rowToThemeNotes(row, paper) {
   const out = emptyThemeNotes(paper);
   if (!row) return { ...out, __locks: {} };
+  const locks = parseLockedFields(row.locked_fields);
   for (const f of getThemeNoteFields(paper)) {
-    out[f.id] = row[f.db] || "";
+    out[f.id] = pickNoteText(row[f.db] || "", locks[f.id]);
   }
-  return { ...out, __locks: parseLockedFields(row.locked_fields) };
+  return { ...out, __locks: locks };
 }
 
 function rowToQuestionNotes(row, paper = null) {
@@ -666,8 +715,14 @@ function rowToQuestionNotes(row, paper = null) {
       }
     }
   }
-  out.__locks = parseLockedFields(row?.locked_fields);
+  const locks = parseLockedFields(row?.locked_fields);
+  out.__locks = locks;
   out.__meta = parseMetaFromRow(row);
+  if (isMathPaper(resolvedPaper)) {
+    out.parts = hydrateMathPartsDisplay(out.parts, locks);
+  } else if (row) {
+    hydrateQuestionNotesDisplay(out, locks, resolvedPaper);
+  }
   return out;
 }
 
@@ -698,11 +753,10 @@ function mergeThemeNotesFromCloudPull(themeId, paper, cloudNotes) {
   const merged = { ...cloudFields };
   const fields = getThemeNoteFields(paper);
   for (const f of fields) {
-    if (cloudLocks[f.id]) {
-      merged[f.id] = local[f.id] ?? cloudFields[f.id] ?? "";
-    }
+    merged[f.id] = pickNoteText(local[f.id] ?? cloudFields[f.id], cloudLocks[f.id]);
   }
   merged.__locks = { ...cloudLocks };
+  hydrateThemeNotesDisplay(merged, merged.__locks, paper);
   return merged;
 }
 
@@ -722,23 +776,24 @@ function mergeQuestionNotesFromCloudPull(questionId, cloudNotes) {
     for (const part of MATH_PARTS) {
       for (const f of MATH_PART_TEXT_FIELDS) {
         const storageKey = `${part}:${f.id}`;
-        if (cloudLocks[storageKey]) {
-          parts[part][f.id] = local.parts?.[part]?.[f.id] ?? parts[part][f.id] ?? "";
-        }
+        parts[part][f.id] = pickNoteText(
+          local.parts?.[part]?.[f.id] ?? parts[part][f.id],
+          cloudLocks[storageKey]
+        );
       }
     }
-    return { ...rest, parts, __locks: { ...cloudLocks } };
+    const hydratedParts = hydrateMathPartsDisplay(parts, cloudLocks);
+    return { ...rest, parts: hydratedParts, __locks: { ...cloudLocks } };
   }
 
   const { __locks: _l, __meta, ...cloudFields } = cloudNotes;
   const merged = { ...cloudFields };
   for (const f of allQuestionNoteFields(paper)) {
-    if (cloudLocks[f.id]) {
-      merged[f.id] = local[f.id] ?? cloudFields[f.id] ?? "";
-    }
+    merged[f.id] = pickNoteText(local[f.id] ?? cloudFields[f.id], cloudLocks[f.id]);
   }
   if (__meta) merged.__meta = __meta;
   merged.__locks = { ...cloudLocks };
+  hydrateQuestionNotesDisplay(merged, merged.__locks, paper);
   return merged;
 }
 
@@ -886,8 +941,10 @@ export async function loadThemeNotesForPaper(paper) {
 export function getThemeNotes(themeId, paper = null) {
   const cached = themeCache.get(themeId);
   if (!cached) return emptyThemeNotes(paper);
+  const locks = cached.__locks || {};
   const { __locks, ...notes } = cached;
-  return { ...emptyThemeNotes(paper), ...notes };
+  const out = { ...emptyThemeNotes(paper), ...notes };
+  return hydrateThemeNotesDisplay(out, locks, paper);
 }
 
 export function saveThemeNote(themeId, paper, fieldId, value) {
@@ -968,13 +1025,18 @@ export function getQuestionNotes(questionId, fileNotes = {}) {
   const paper = paperFromQuestionId(questionId);
 
   if (isMathPaper(paper)) {
-    return mergeMathNotesFromSources(questionId);
+    const merged = mergeMathNotesFromSources(questionId);
+    return {
+      parts: hydrateMathPartsDisplay(merged.parts, merged.__locks),
+    };
   }
 
   const fromCache = questionCache.get(questionId);
   if (fromCache) {
+    const locks = fromCache.__locks || {};
     const { __locks, __meta, ...notes } = fromCache;
-    return { ...emptyQuestionNotes(paper), ...notes };
+    const out = { ...emptyQuestionNotes(paper), ...notes };
+    return hydrateQuestionNotesDisplay(out, locks, paper);
   }
 
   const local = loadLocal(LOCAL_QUESTION_KEY)[questionId] || {};
@@ -1150,7 +1212,12 @@ async function flushQuestionNotes() {
     if (isMathPaper(paper)) {
       const merged = mergeMathNotesFromSources(questionId);
       if (!mathPartsHasContent(merged.parts) && !hasLockedFields(merged.__locks)) continue;
-      payload = { parts: merged.parts, __meta: getQuestionMeta(questionId) };
+      const prior = questionCache.get(questionId);
+      payload = {
+        parts: merged.parts,
+        __locks: merged.__locks || prior?.__locks || {},
+        __meta: getQuestionMeta(questionId),
+      };
       questionCache.set(questionId, payload);
       writeLocalQuestionNotes(questionId, payload, paper);
     } else {
