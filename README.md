@@ -120,6 +120,9 @@ Full setup: **[SUPABASE_SETUP.md](./SUPABASE_SETUP.md)** — create project, run
 - **Themes** tab — main brainstorm workspace per syllabus theme
 - **Questions** tab — PYQ browser with per-question notes
 - Same login on phone and laptop → same notes
+- **Per-field lock** (padlock on each note box) — freeze a field so it stops syncing; unlock to edit and sync again
+
+**How to use sync + locks:** [SUPABASE_SETUP.md](./SUPABASE_SETUP.md) (day-to-day use, unlock → edit → lock, troubleshooting)
 
 ## Host online (free)
 

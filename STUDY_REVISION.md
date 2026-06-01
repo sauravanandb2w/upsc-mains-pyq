@@ -19,6 +19,19 @@ Status syncs via **Sign in** (Supabase), same as text notes.
 
 ---
 
+## Field locks (per note box)
+
+Each note textarea has a **padlock** (Themes, Questions, Math parts):
+
+- **Open** — normal sync across devices while you type.
+- **Closed** — field frozen at lock time; further edits on that field do not upload until you unlock.
+
+**Unlock → edit → lock again:** unlock (open icon) → change text (syncs if unlocked) → lock (closed icon) to save a new frozen snapshot to the cloud.
+
+Full behaviour and multi-device tips: **[SUPABASE_SETUP.md](./SUPABASE_SETUP.md)** → *Field locks*.
+
+---
+
 ## Star (bookmark)
 
 Click **☆** on a question card → **★** starred.
@@ -118,20 +131,9 @@ Works with Supabase (cloud) or local-only storage.
 
 ## Database migration (existing Supabase projects)
 
-Run once in Supabase SQL Editor (see `supabase/schema.sql`):
+Run once in Supabase SQL Editor — copy all of **`supabase/migrate-existing-project.sql`** (adds `study_status`, `bookmarked`, `locked_fields`, etc.).
 
-```sql
-alter table public.question_notes
-  add column if not exists study_status text not null default 'not-started';
-alter table public.question_notes
-  add column if not exists bookmarked boolean not null default false;
-alter table public.question_notes
-  add column if not exists status_updated_at timestamptz;
-alter table public.question_notes
-  add column if not exists last_revised_at timestamptz;
-```
-
-Without these columns, status/bookmarks save locally only until migration is run.
+Without this migration, status/bookmarks/locks may save locally only until the SQL is applied. See **[SUPABASE_SETUP.md](./SUPABASE_SETUP.md)**.
 
 ---
 

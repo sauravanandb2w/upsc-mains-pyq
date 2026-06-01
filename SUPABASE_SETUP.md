@@ -83,6 +83,61 @@ Row Level Security ensures each user only reads/writes their own rows.
 
 On first sign-in, any notes previously saved in browser localStorage are merged into your cloud account.
 
+## Day-to-day use (phone + laptop)
+
+1. **Sign in** with the same account on every device (email or Google).
+2. **Type in a note field** — it saves to this browser and uploads to Supabase after a short pause (~½–1 s). You do not need to click **Sync notes** for normal edits.
+3. **Open the app on another device** — sign in, wait a moment, or switch away and back to the tab; cloud notes download automatically.
+4. **Sync notes** (header button) — optional “catch up”: flush pending edits, push local notes that have content, then pull everything from the cloud. Use if two devices feel out of date.
+
+**Themes** tab = main brainstorm (by syllabus theme). **Questions** tab = per-PYQ notes (and Math parts a–e). All use the same Supabase tables when signed in.
+
+---
+
+## Field locks (padlock on each note box)
+
+Each note field has a **padlock** on the right:
+
+| Icon | Meaning |
+|------|---------|
+| **Open padlock** | Unlocked — edits **sync** to other devices |
+| **Closed padlock** | Locked — text is **frozen** at lock time; further typing on that field does **not** upload |
+
+Lock state is stored in Supabase as `locked_fields` on the same row as the note. **The cloud is the source of truth** — all signed-in devices should show the same locked/unlocked icon after sync.
+
+### Typical workflows
+
+**Keep drafting on one device (sync everywhere)**  
+Leave the field **unlocked**. Type on laptop or phone; the other device picks it up on sign-in or tab focus.
+
+**Freeze a finished block (e.g. static notes done)**  
+Click the padlock → **closed**. That snapshot is saved locally and in the cloud. You can still edit on *this* screen, but changes will **not** sync until you unlock.
+
+**Unlock → edit → lock again**  
+1. Click **open padlock** (unlock) — lock state syncs; field accepts live edits again.  
+2. Change the text — with the field **unlocked**, edits auto-sync like any other field.  
+3. Click **closed padlock** (lock) — a **new snapshot** is taken from the current text and synced. Other devices see the updated frozen text and a locked icon.
+
+So: **unlock = resume syncing**; **lock = freeze current text and stop syncing** that field.
+
+### What does *not* sync while locked
+
+- New typing in that **same** field (until you unlock).
+- Other **unlocked** fields on the same theme/question still sync normally.
+
+### Multi-device checklist
+
+| You did this | Other device should… |
+|--------------|----------------------|
+| Locked a field | Show **closed** padlock after refresh / tab focus (~1 s) |
+| Unlocked a field | Show **open** padlock; live text from cloud for that field |
+| Typed in **unlocked** field | Show new text after pull |
+| Typed in **locked** field | Still show last **snapshot** (not your new typing) |
+
+If icons disagree, hard-refresh both browsers, sign in again, and unlock/lock once on the device you trust.
+
+---
+
 ## Troubleshooting
 
 | Issue | Fix |
@@ -92,6 +147,8 @@ On first sign-in, any notes previously saved in browser localStorage are merged 
 | Google login fails | Add redirect URL in Supabase + Google OAuth console |
 | **`Could not find the 'bookmarked' column`** or **`locked_fields`** | Run **`supabase/migrate-existing-project.sql`** in Supabase → SQL Editor (see below) |
 | Notes don't sync | Check browser console; verify schema SQL ran successfully |
+| Lock icon differs on two devices | Hard-refresh both; run migration SQL if `locked_fields` errors; wait for tab-focus pull or tap **Sync notes** |
+| Unlocked field went blank on new browser | Fixed in app v2025+ — pull runs before push on sign-in; hard-refresh after deploy |
 | CORS / fetch errors | Use `http.server`, not `file://` |
 
 ### Fix: `bookmarked`, `locked_fields`, or `study_status` column missing
