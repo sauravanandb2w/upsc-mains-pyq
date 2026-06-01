@@ -47,6 +47,19 @@ python3 scripts/build-gs4-insights.py --input path/to/export.md
 
 Re-run after updating the source markdown. Verify wording against official UPSC papers where needed.
 
+### GS Paper I — Insights on India index
+
+Merges **`data/gs-paper-1.json`** with the subject-wise list at [Insights on India](https://www.insightsonindia.com/upsc-mains-general-studies-1-pyq/). By default only **years with zero questions** in the current JSON are filled (avoids duplicate entries in years already loaded from UPSC-Star/ClearIAS).
+
+```bash
+# Uses cached export in data/sources/insights-gs1-pyq.md
+python3 scripts/build-gs1-insights.py
+
+python3 scripts/build-gs1-insights.py --fetch
+python3 scripts/build-gs1-insights.py --input path/to/export.md
+python3 scripts/build-gs1-insights.py --fill-all-years   # optional: top up years below 20
+```
+
 ### GS Paper III — Insights on India index
 
 Builds **`data/gs-paper-3.json`** (258 PYQs, 2013–2025) from the subject-wise list at [Insights on India](https://www.insightsonindia.com/upsc-mains-general-studies-3-pyq/), with **`insightsSection`** on each question (Indian Economy, Agriculture, S&T, Environment, Internal Security, etc.).
@@ -73,7 +86,7 @@ python3 scripts/fetch-math-pyq.py --year 2024   # single year
 
 Question text is shown as **official PDF scan cutouts** under `study/questions/math*`. Year **2013** is not on upsc.gov.in; **2016, 2017, 2020** use local PDFs in `data/sources/` (`MATH1_YYYY.pdf`, `MATH2_YYYY.pdf`, or `MATHS_I.pdf` / `MATHS_II.pdf`).
 
-**Coverage (approx.):** GS I from 2015; GS II 2013–2024; **GS III & IV full subject-wise index (2013–2025) via Insights on India**. Missing years are listed in the app. Add JSON under `data/sources/` and rebuild. Verify wording on [upsc.gov.in](https://upsc.gov.in/examinations/previous-question-papers).
+**Coverage (approx.):** **GS I–IV 2013–2025** (GS I–III via UPSC-Star/ClearIAS/local JSON + Insights merge; GS IV via Insights). **Math Optional 2014–2025** (official PDF scans; 2013 not loaded). Some GS I years have &gt;20 entries (legacy duplicates); GS III Insights index may show fewer than 20 per year in a few early years. The app data note lists gaps. Verify wording on [upsc.gov.in](https://upsc.gov.in/examinations/previous-question-papers).
 
 ## Run locally
 
