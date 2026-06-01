@@ -1146,6 +1146,56 @@ body {
   background: color-mix(in srgb, var(--text) 6%, var(--bg));
 }
 
+.github-upload-note {
+  margin: 0.5rem 0;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.github-upload-note--ok {
+  color: var(--accent);
+}
+
+.github-upload-control {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0.5rem 0 0.75rem;
+}
+
+.github-upload-label {
+  cursor: pointer;
+}
+
+.github-upload-status {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+
+.study-materials-upload,
+.theme-study-upload {
+  padding: 0 0 0.75rem;
+}
+
+.solution-scan-cli-fallback {
+  margin-top: 0.5rem;
+  font-size: 0.82rem;
+}
+
+.solution-scan-cli-fallback summary {
+  cursor: pointer;
+  color: var(--text-muted);
+}
+
+.oauth-callback {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 50vh;
+  text-align: center;
+}
+
 .study-loading {
   margin: 0;
   font-size: 0.85rem;

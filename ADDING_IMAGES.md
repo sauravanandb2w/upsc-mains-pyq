@@ -1,13 +1,26 @@
 # Adding images & notebook scans
 
-Diagrams, maps, flowcharts, and **photos of handwritten notes** live in the **`study/`** folder in this repo. They are **not** uploaded through the app UI.
+Diagrams, maps, flowcharts, and **photos of handwritten notes** live in the **`study/`** folder in this repo.
+
+## Upload from the app (recommended)
+
+1. Click **Connect GitHub** in the header and approve repo access (one-time per device).
+2. Upload from:
+   - **GS question** → open **Diagrams & images**
+   - **Theme / module** → **Study materials** panel
+   - **Math optional** → part notes → **Upload solution photo**
+3. After upload, GitHub Pages redeploys in **~1–2 minutes** — then images appear on phone and laptop.
+
+Setup (OAuth App + Supabase function): **`GITHUB_UPLOAD_SETUP.md`**
+
+## Or add files in git (CLI)
 
 | Content type | Where it is stored | How it syncs |
 |--------------|-------------------|--------------|
 | Text notes (brainstorm, tricks, etc.) | App text areas | Supabase (phone + laptop) |
 | Images & markdown sheets | `study/` folder | Git → GitHub Pages |
 
-**Workflow:** save image file → register in `manifest.json` → `git add` → `git commit` → `git push` → visible in the app in ~1 minute after deploy.
+**CLI workflow:** save image file → register in `manifest.json` → `git add` → `git commit` → `git push` → visible in the app in ~1 minute after deploy.
 
 ---
 

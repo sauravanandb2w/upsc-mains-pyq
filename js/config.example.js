@@ -1,3 +1,10 @@
-/** Copy this file to config.js and fill in your Supabase project values. */
-export const SUPABASE_URL = "https://onnvlbvmxhjqcrssypob.supabase.co";
-export const SUPABASE_ANON_KEY = "sb_publishable_3am3pl_aWiVlCln7jrelfA_K-GeET16";
+/** Copy to config.js — see SUPABASE_SETUP.md and GITHUB_UPLOAD_SETUP.md */
+export const SUPABASE_URL = "https://YOUR_PROJECT_ID.supabase.co";
+export const SUPABASE_ANON_KEY = "YOUR_ANON_PUBLIC_KEY";
+
+/** GitHub OAuth App Client ID (public). Secret stays in Supabase Edge Function. */
+export const GITHUB_OAUTH_CLIENT_ID = "";
+export const GITHUB_REPO_OWNER = "sauravanandb2w";
+export const GITHUB_REPO_NAME = "upsc-mains-pyq";
+/** public_repo for public repos; use repo if private */
+export const GITHUB_OAUTH_SCOPE = "public_repo";

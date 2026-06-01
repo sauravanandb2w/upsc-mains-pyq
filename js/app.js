@@ -46,6 +46,15 @@ import {
   questionNotesHaystack,
 } from "./notes-store.js";
 import { loadRepoSolutionScans, solutionScanGitCommand } from "./solution-scans.js";
+import {
+  renderGitHubUploadButton,
+  renderGitHubConnectHint,
+  bindGitHubHeaderButton,
+  bindStudyMaterialsUpload,
+  bindThemeStudyUpload,
+  bindAllGitHubUploadControls,
+} from "./github-upload-ui.js";
+import { initGitHubUploadConfig } from "./github-auth.js";
 
 /** @type {Record<number, { title: string; syllabus: string; themes?: string[]; questions: object[] }>} */
 let papers = {};
@@ -114,6 +123,7 @@ const els = {
   sectionFilterGroup: document.getElementById("sectionFilterGroup"),
   sectionFilter: document.getElementById("sectionFilter"),
   viewTabThemes: document.querySelector('.view-tab[data-view="themes"]'),
+  githubConnectBtn: document.getElementById("githubConnectBtn"),
 };
 
 function initTheme() {
@@ -425,12 +435,17 @@ async function renderThemeDetail(themeId) {
 
   const studyPath = studyPathForTheme(themeId, state.paper);
   const hasStudy = await renderStudyMaterials(studyPath, els.themeStudyMaterials);
-  els.themeStudyPanel.classList.toggle("hidden", !hasStudy);
+  if (!hasStudy) {
+    els.themeStudyMaterials.innerHTML =
+      '<p class="study-empty">No study images yet — connect GitHub and upload below, or add files in git.</p>';
+  }
+  els.themeStudyPanel.classList.remove("hidden");
+  bindThemeStudyUpload(els.themeStudyPanel, studyPath);
   const studyHint = els.themeStudyPanel.querySelector(".study-materials-hint");
   if (studyHint) {
     studyHint.innerHTML = isMath
-      ? `Scan notebook pages into <code>study/modules/${escapeHtml(themeId)}/</code> → list in <code>manifest.json</code> → git push. See <code>ADDING_IMAGES.md</code>`
-      : `Add images in <code>study/themes/${escapeHtml(themeId)}/</code> or per-PYQ in <code>study/questions/</code>. See <code>ADDING_IMAGES.md</code>`;
+      ? `Upload module scans with <strong>Connect GitHub</strong>, or add files under <code>study/modules/${escapeHtml(themeId)}/</code>. See <code>ADDING_IMAGES.md</code>`
+      : `Upload theme diagrams with <strong>Connect GitHub</strong>, or add files under <code>study/themes/${escapeHtml(themeId)}/</code>. See <code>ADDING_IMAGES.md</code>`;
   }
   const studySummary = els.themeStudyPanel.querySelector("summary");
   if (studySummary) {
@@ -680,6 +695,15 @@ function partHasAnyNotes(partNotes) {
   return MATH_PART_TEXT_FIELDS.some((f) => String(partNotes[f.id] || "").trim());
 }
 
+function renderQuestionStudyImagesDetails(q) {
+  return `
+    <details class="study-materials-details">
+      <summary>Diagrams &amp; images</summary>
+      <div class="study-materials-body" data-study-path="study/questions/${escapeAttr(q.id)}"></div>
+      <div class="study-materials-upload"></div>
+    </details>`;
+}
+
 function renderMathPartNotesEditor(q) {
   const notes = getQuestionNotes(q.id, q.notes);
 
@@ -722,13 +746,16 @@ function renderMathPartNotesEditor(q) {
                   aria-live="polite"
                 ></div>
                 <div class="solution-scan-git-help">
-                  <p class="solution-scan-hint">Add one or more pages from your computer:</p>
-                  <pre class="solution-scan-cmd"><code>${escapeHtml(solutionScanGitCommand(q.id, part))}</code></pre>
-                  <p class="solution-scan-hint">
-                    Run again for more pages (auto-names <code>part-${part}-02.jpg</code>, …). Then
-                    <code>git add</code> · <code>commit</code> · <code>push</code>.
-                    See <code>ADDING_IMAGES.md</code>.
-                  </p>
+                  ${renderGitHubConnectHint()}
+                  ${renderGitHubUploadButton("math-solution", { qid: q.id, part })}
+                  <details class="solution-scan-cli-fallback">
+                    <summary>Or use terminal script</summary>
+                    <p class="solution-scan-hint">From your computer:</p>
+                    <pre class="solution-scan-cmd"><code>${escapeHtml(solutionScanGitCommand(q.id, part))}</code></pre>
+                    <p class="solution-scan-hint">
+                      Run again for more pages (auto-names <code>part-${part}-02.jpg</code>, …). See <code>ADDING_IMAGES.md</code>.
+                    </p>
+                  </details>
                 </div>
               </div>
             </div>
@@ -744,7 +771,7 @@ async function mountPartSolutionScans(container, questionId, part) {
 
   if (!repoScans.length) {
     container.innerHTML =
-      '<p class="solution-scan-empty">No solution scan in git yet — use the command below, then push.</p>';
+      '<p class="solution-scan-empty">No solution scan yet — use Upload solution photo above.</p>';
     return;
   }
 
@@ -810,6 +837,17 @@ function bindMathPartNoteEditors(card, q) {
     });
   });
 
+  bindAllGitHubUploadControls(card);
+  card.querySelectorAll('.github-upload-control[data-upload-kind="math-solution"]').forEach((control) => {
+    control.addEventListener("github-upload-done", () => {
+      const gallery = control.closest(".solution-scan-section")?.querySelector(".solution-scan-gallery");
+      if (!gallery) return;
+      mountPartSolutionScans(gallery, gallery.dataset.qid, gallery.dataset.part).then(() => {
+        updateMathPartFilledState(gallery.closest(".math-part-details"));
+      });
+    });
+  });
+
   card.querySelectorAll(".math-part-details").forEach((details) => {
     updateMathPartFilledState(details);
   });
@@ -860,12 +898,9 @@ function renderQuestions(questions) {
       ? renderMathScanGallery(q)
       : `<p class="question-text">${escapeHtml(q.text)}</p>`;
     const extraImagesDetails = isMath && !(q.scanImages && q.scanImages.length)
-      ? `
-      <details class="study-materials-details">
-        <summary>Diagrams &amp; images</summary>
-        <div class="study-materials-body" data-study-path="study/questions/${escapeAttr(q.id)}"></div>
-      </details>`
+      ? renderQuestionStudyImagesDetails(q)
       : "";
+    const gsImagesDetails = !isMath ? renderQuestionStudyImagesDetails(q) : "";
 
     card.innerHTML = `
       <div class="question-header">
@@ -887,6 +922,7 @@ function renderQuestions(questions) {
         <div class="notes-editor">${renderQuestionNotesEditor(q)}</div>
       </details>
       ${extraImagesDetails}
+      ${gsImagesDetails}
       ${isPolityQuestion(q) ? constitutionPanelHtml() : ""}
       ${isMath ? "" : renderBestAnswerSection(q)}
     `;
@@ -894,6 +930,7 @@ function renderQuestions(questions) {
     const studyDetails = card.querySelector(".study-materials-details");
     if (studyDetails) {
       bindLazyStudyMaterials(studyDetails, `study/questions/${q.id}`);
+      bindStudyMaterialsUpload(studyDetails, `study/questions/${q.id}`);
     }
 
     const constitutionBody = card.querySelector(".constitution-panel-body");
@@ -1116,6 +1153,8 @@ function bindEvents() {
   document.querySelectorAll(".auth-tab").forEach((btn) => {
     btn.addEventListener("click", () => setAuthTab(btn.dataset.authTab));
   });
+
+  bindGitHubHeaderButton(els.githubConnectBtn);
 }
 
 function escapeHtml(str) {
@@ -1169,6 +1208,7 @@ bindEvents();
 (async () => {
   try {
     await loadData();
+    await initGitHubUploadConfig();
     await initSupabase();
 
     if (isSupabaseConfigured()) {

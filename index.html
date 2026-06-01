@@ -28,6 +28,7 @@
         </div>
         <div class="header-actions">
           <div class="sync-badge" id="syncBadge" aria-live="polite">Local only</div>
+          <button type="button" class="btn-ghost btn-sm hidden" id="githubConnectBtn">Connect GitHub</button>
           <div class="auth-area" id="authArea">
             <button type="button" class="btn-primary btn-sm" id="authOpenBtn">Sign in</button>
           </div>
@@ -97,7 +98,7 @@
           <div class="notes-editor theme-notes-editor" id="themeNotesEditor"></div>
           <details class="study-materials-panel" id="themeStudyPanel">
             <summary>Study materials — diagrams · tables · flowcharts (from repo)</summary>
-            <p class="study-materials-hint">Add scans in <code>study/themes/</code>, <code>study/questions/</code>, or <code>study/modules/</code> → git push. See <code>ADDING_IMAGES.md</code></p>
+            <p class="study-materials-hint">Upload images here after connecting GitHub, or add files in git. See <code>ADDING_IMAGES.md</code></p>
             <div class="study-materials-body" id="themeStudyMaterials"></div>
           </details>
           <details class="related-pyqs" open>
