@@ -224,22 +224,30 @@ function legacyFlatToPartA(row) {
   };
 }
 
+function parseMathJsonBlob(raw) {
+  if (raw == null || raw === "") return null;
+  let parsed = raw;
+  if (typeof raw === "string") {
+    try {
+      parsed = JSON.parse(raw.trim());
+    } catch {
+      return null;
+    }
+  }
+  if (!parsed || typeof parsed !== "object" || Array.isArray(parsed)) return null;
+  if (parsed.parts && typeof parsed.parts === "object" && !Array.isArray(parsed.parts)) {
+    return parsed.parts;
+  }
+  return parsed;
+}
+
 function parseMathPartsFromRow(row) {
   let parts = emptyMathParts();
 
-  if (row?.quotes?.trim()) {
-    try {
-      const parsed = JSON.parse(row.quotes);
-      if (parsed && typeof parsed === "object" && !Array.isArray(parsed)) {
-        const blob =
-          parsed.parts && typeof parsed.parts === "object" && !Array.isArray(parsed.parts)
-            ? parsed.parts
-            : parsed;
-        parts = mergeMathParts(parts, blob);
-      }
-    } catch {
-      /* legacy non-JSON quotes — ignore */
-    }
+  for (const field of [row?.quotes, row?.static_notes]) {
+    const blob = parseMathJsonBlob(field);
+    if (blob) parts = mergeMathParts(parts, blob);
+    if (mathPartsHasContent(parts)) break;
   }
 
   if (!mathPartHasContent(parts.a)) {
@@ -454,9 +462,10 @@ function questionNotesToRow(questionId, notes, userId) {
   row.last_revised_at = meta.lastRevisedAt || null;
 
   if (isMathPaper(paper)) {
+    const json = JSON.stringify(notes.parts || emptyMathParts());
     row.introduction = "";
-    row.static_notes = "";
-    row.quotes = JSON.stringify(notes.parts || emptyMathParts());
+    row.static_notes = json;
+    row.quotes = json;
     row.current_affairs = "";
     row.topper_points = "";
     row.value_material = "";
@@ -486,6 +495,8 @@ const pendingTheme = new Map();
 const pendingQuestion = new Map();
 let themeTimer = null;
 let questionTimer = null;
+/** @type {Map<string, ReturnType<typeof setTimeout>>} */
+const mathCloudFlushTimers = new Map();
 /** @type {string | null} */
 let lastSyncError = null;
 
@@ -718,6 +729,44 @@ function writeLocalQuestionNotes(questionId, notes, paper = null) {
   saveLocal(LOCAL_QUESTION_KEY, local);
 }
 
+async function flushSingleMathQuestion(questionId) {
+  if (!isCloudSyncEnabled()) return false;
+
+  const payload = questionCache.get(questionId);
+  if (!payload?.parts || !mathPartsHasContent(payload.parts)) return false;
+
+  const row = questionNotesToRow(
+    questionId,
+    { ...payload, __meta: payload.__meta || getQuestionMeta(questionId) },
+    userId
+  );
+  const { error } = await supabase
+    .from("question_notes")
+    .upsert(row, { onConflict: "user_id,question_id" });
+
+  if (error) {
+    lastSyncError = error.message;
+    console.error("Math note cloud save failed:", questionId, error.message);
+    return false;
+  }
+  return true;
+}
+
+function scheduleMathCloudFlush(questionId) {
+  const existing = mathCloudFlushTimers.get(questionId);
+  if (existing) clearTimeout(existing);
+  mathCloudFlushTimers.set(
+    questionId,
+    setTimeout(() => {
+      mathCloudFlushTimers.delete(questionId);
+      flushSingleMathQuestion(questionId).catch((err) => {
+        lastSyncError = err?.message || String(err);
+        console.error("Math note cloud flush error:", questionId, err);
+      });
+    }, 250)
+  );
+}
+
 function persistMathQuestionNotes(questionId, parts) {
   const paper = paperFromQuestionId(questionId);
   const payload = { parts, __meta: getQuestionMeta(questionId) };
@@ -725,8 +774,7 @@ function persistMathQuestionNotes(questionId, parts) {
   writeLocalQuestionNotes(questionId, payload, paper);
 
   if (isCloudSyncEnabled()) {
-    pendingQuestion.set(questionId, payload);
-    scheduleQuestionFlush();
+    scheduleMathCloudFlush(questionId);
   }
 }
 
@@ -741,7 +789,16 @@ function scheduleQuestionFlush() {
 }
 
 export async function flushPendingNotesNow() {
-  await Promise.all([flushThemeNotes(), flushQuestionNotes()]);
+  const mathIds = [...mathCloudFlushTimers.keys()];
+  for (const id of mathIds) {
+    clearTimeout(mathCloudFlushTimers.get(id));
+    mathCloudFlushTimers.delete(id);
+  }
+  await Promise.all([
+    flushThemeNotes(),
+    flushQuestionNotes(),
+    ...mathIds.map((id) => flushSingleMathQuestion(id)),
+  ]);
 }
 
 async function flushThemeNotes() {
@@ -859,6 +916,15 @@ export function installNotesSyncLifecycle() {
     });
   };
 
+  const flushMathImmediately = () => {
+    if (!isCloudSyncEnabled()) return;
+    for (const [qid, timer] of mathCloudFlushTimers.entries()) {
+      clearTimeout(timer);
+      mathCloudFlushTimers.delete(qid);
+      flushSingleMathQuestion(qid).catch(console.error);
+    }
+  };
+
   const pullOnVisible = () => {
     if (!isCloudSyncEnabled() || document.visibilityState !== "visible") return;
     refreshNotesFromCloud()
@@ -871,11 +937,18 @@ export function installNotesSyncLifecycle() {
       });
   };
 
-  window.addEventListener("pagehide", flushOnHide);
+  window.addEventListener("pagehide", () => {
+    flushMathImmediately();
+    flushOnHide();
+  });
   window.addEventListener("pageshow", pullOnVisible);
   document.addEventListener("visibilitychange", () => {
-    if (document.visibilityState === "hidden") flushOnHide();
-    else pullOnVisible();
+    if (document.visibilityState === "hidden") {
+      flushMathImmediately();
+      flushOnHide();
+    } else {
+      pullOnVisible();
+    }
   });
 }
 

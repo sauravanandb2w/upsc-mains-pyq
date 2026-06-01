@@ -108,6 +108,7 @@ let currentUser = null;
 
 const els = {
   syncBadge: document.getElementById("syncBadge"),
+  syncNotesBtn: document.getElementById("syncNotesBtn"),
   authArea: document.getElementById("authArea"),
   authOpenBtn: document.getElementById("authOpenBtn"),
   authDialog: document.getElementById("authDialog"),
@@ -188,6 +189,7 @@ function toggleTheme() {
 function updateSyncBadge() {
   const status = getSyncStatus();
   const syncErr = getLastSyncError();
+  els.syncNotesBtn?.classList.toggle("hidden", !(status === "cloud" && currentUser));
   if (status === "cloud" && currentUser) {
     if (syncErr) {
       els.syncBadge.textContent = "Sync issue";
@@ -1610,6 +1612,23 @@ function bindEvents() {
 
   bindGitHubHeaderButton(els.githubConnectBtn).then((refresh) => {
     refreshGitHubHeader = refresh;
+  });
+
+  els.syncNotesBtn?.addEventListener("click", async () => {
+    if (!currentUser) return;
+    els.syncNotesBtn.disabled = true;
+    els.syncNotesBtn.textContent = "Syncing…";
+    try {
+      await syncNotesWithCloud();
+      updateSyncBadge();
+      await refreshView();
+    } catch (err) {
+      console.error("Manual notes sync failed:", err);
+      updateSyncBadge();
+    } finally {
+      els.syncNotesBtn.disabled = false;
+      els.syncNotesBtn.textContent = "Sync notes";
+    }
   });
 
   window.addEventListener("upsc-activity-updated", () => {
