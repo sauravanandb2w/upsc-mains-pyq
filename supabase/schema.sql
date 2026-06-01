@@ -6,7 +6,7 @@ create table if not exists public.theme_notes (
   id uuid primary key default gen_random_uuid(),
   user_id uuid references auth.users (id) on delete cascade not null,
   theme_id text not null,
-  paper smallint not null check (paper between 1 and 4),
+  paper smallint not null check (paper between 1 and 6),
   brainstorm text not null default '',
   static_notes text not null default '',
   quotes text not null default '',
@@ -37,6 +37,10 @@ create index if not exists theme_notes_user_paper_idx
 
 create index if not exists question_notes_user_idx
   on public.question_notes (user_id);
+
+-- Existing project? Run once for math optional module notes (paper 5–6):
+-- alter table public.theme_notes drop constraint if exists theme_notes_paper_check;
+-- alter table public.theme_notes add constraint theme_notes_paper_check check (paper between 1 and 6);
 
 -- Existing project? Run once if the column is missing:
 -- alter table public.question_notes

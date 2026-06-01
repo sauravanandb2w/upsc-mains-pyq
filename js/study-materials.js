@@ -178,6 +178,44 @@ function normalizeSections(manifest) {
   return [];
 }
 
+function renderGalleryEmptyHint(section) {
+  const hint =
+    section.emptyHint ||
+    "Add JPG/PNG scans to this folder and list filenames in manifest.json → git push.";
+  return `<p class="study-empty study-gallery-empty">${escapeHtml(hint)}</p>`;
+}
+
+async function renderGallerySection(section, basePath) {
+  const folder = section.folder ? `${section.folder}/` : "";
+  const images = section.images || [];
+  const parts = [];
+
+  for (const item of images) {
+    const file =
+      typeof item === "string"
+        ? `${folder}${item}`
+        : `${folder}${item.file || item.name || ""}`;
+    if (!file.replace(/\/$/, "")) continue;
+
+    const html = await renderImageSection(
+      {
+        file,
+        caption: typeof item === "object" ? item.caption : section.caption,
+        alt: typeof item === "object" ? item.alt : section.alt,
+        title: typeof item === "object" ? item.title : section.title,
+      },
+      basePath
+    );
+    if (html) parts.push(html);
+  }
+
+  if (!parts.length) {
+    return renderGalleryEmptyHint(section);
+  }
+
+  return `<div class="study-images-grid study-gallery">${parts.join("")}</div>`;
+}
+
 /**
  * @param {string} basePath e.g. study/themes/constitution-polity
  * @param {HTMLElement} container
@@ -213,6 +251,11 @@ export async function renderStudyMaterials(basePath, container) {
       if (!html) continue;
       hasContent = true;
       imageParts.push(html);
+    } else if (section.type === "gallery") {
+      await flushImages();
+      const html = await renderGallerySection(section, basePath);
+      hasContent = true;
+      parts.push(wrapSection(section.title || "", html));
     }
   }
 
@@ -254,4 +297,12 @@ export async function hasStudyMaterials(basePath) {
   if (sections.length) return true;
   const readme = await tryFetchText(`${basePath}/README.md`);
   return Boolean(readme?.trim());
+}
+
+/** Resolve study folder for a GS theme or math module. */
+export function studyPathForTheme(themeId, paperNum) {
+  if (paperNum === 5 || paperNum === 6) {
+    return `study/modules/${themeId}`;
+  }
+  return `study/themes/${themeId}`;
 }

@@ -1,6 +1,7 @@
 import {
   renderStudyMaterials,
   bindLazyStudyMaterials,
+  studyPathForTheme,
 } from "./study-materials.js";
 import {
   constitutionPanelHtml,
@@ -23,6 +24,9 @@ import {
   THEME_NOTE_FIELDS,
   QUESTION_NOTE_FIELDS,
   BEST_ANSWER_FIELD,
+  getThemeNoteFields,
+  getQuestionNoteFields,
+  isMathPaper,
   initNotesStore,
   clearNotesStore,
   getSyncStatus,
@@ -43,12 +47,14 @@ let papers = {};
 let themeConfig = {};
 
 const state = {
+  subject: "gs",
   paper: 1,
   viewMode: "themes",
   selectedThemeId: null,
   year: "all",
   marks: "all",
   theme: "all",
+  section: "all",
   search: "",
   authTab: "signin",
 };
@@ -96,6 +102,12 @@ const els = {
   questionsList: document.getElementById("questionsList"),
   emptyState: document.getElementById("emptyState"),
   themeToggle: document.getElementById("themeToggle"),
+  subjectTabs: document.querySelectorAll(".subject-tab"),
+  paperNavGs: document.getElementById("paperNavGs"),
+  paperNavMath: document.getElementById("paperNavMath"),
+  sectionFilterGroup: document.getElementById("sectionFilterGroup"),
+  sectionFilter: document.getElementById("sectionFilter"),
+  viewTabThemes: document.querySelector('.view-tab[data-view="themes"]'),
 };
 
 function initTheme() {
@@ -246,12 +258,17 @@ function getThemeById(paperNum, themeId) {
 function countQuestionsForTheme(paperNum, themeId) {
   const paper = papers[paperNum];
   if (!paper) return 0;
-  return paper.questions.filter((q) => q.themeId === themeId).length;
+  return paper.questions.filter((q) => q.themeId === themeId || q.moduleId === themeId).length;
 }
 
-function themeHasNotes(themeId) {
-  const notes = getThemeNotes(themeId);
+function themeHasNotes(themeId, paper = state.paper) {
+  const notes = getThemeNotes(themeId, paper);
   return Object.values(notes).some((v) => String(v).trim());
+}
+
+function moduleSectionLabel(theme) {
+  if (theme.section) return `Section ${theme.section}`;
+  return theme.parent || "";
 }
 
 async function renderThemeView() {
@@ -276,23 +293,33 @@ async function renderThemeView() {
 
 function renderThemeGrid(paper) {
   const themes = getThemesForPaper(state.paper);
+  const isMath = isMathPaper(state.paper);
 
   els.themePaperMeta.innerHTML = `
-    <h2>${escapeHtml(paper.title)} — Themes</h2>
+    <h2>${escapeHtml(paper.title)} — ${isMath ? "Modules" : "Themes"}</h2>
     <p>${escapeHtml(paper.syllabus)}</p>
-    <p class="meta-range">Syllabus-aligned sub-themes · Notes sync when signed in</p>
+    <p class="meta-range">${isMath ? "Section A & B · Notebook scans in study/modules/ · Notes sync when signed in" : "Syllabus-aligned sub-themes · Notes sync when signed in"}</p>
   `;
 
   const groups = [];
-  const seenParents = new Set();
-  for (const t of themes) {
-    if (t.parent) {
-      if (!seenParents.has(t.parent)) {
-        seenParents.add(t.parent);
-        groups.push({ label: t.parent, themes: themes.filter((x) => x.parent === t.parent) });
+  if (isMath) {
+    for (const section of paper.sections || ["A", "B"]) {
+      groups.push({
+        label: `Section ${section}`,
+        themes: themes.filter((t) => t.section === section).sort((a, b) => (a.order || 0) - (b.order || 0)),
+      });
+    }
+  } else {
+    const seenParents = new Set();
+    for (const t of themes) {
+      if (t.parent) {
+        if (!seenParents.has(t.parent)) {
+          seenParents.add(t.parent);
+          groups.push({ label: t.parent, themes: themes.filter((x) => x.parent === t.parent) });
+        }
+      } else {
+        groups.push({ label: null, themes: [t] });
       }
-    } else {
-      groups.push({ label: null, themes: [t] });
     }
   }
 
@@ -304,11 +331,12 @@ function renderThemeGrid(paper) {
       const cards = group.themes
         .map((t) => {
           const count = countQuestionsForTheme(state.paper, t.id);
-          const hasNotes = themeHasNotes(t.id);
+          const hasNotes = themeHasNotes(t.id, state.paper);
+          const sectionMeta = t.section ? ` · Sec ${t.section}` : "";
           return `
             <button type="button" class="theme-card" data-theme-id="${escapeAttr(t.id)}" role="listitem">
               <span class="theme-card-name">${escapeHtml(t.name)}</span>
-              <span class="theme-card-meta">${count} PYQ${count === 1 ? "" : "s"}${hasNotes ? " · has notes" : ""}</span>
+              <span class="theme-card-meta">${count} PYQ${count === 1 ? "" : "s"}${sectionMeta}${hasNotes ? " · has notes" : ""}</span>
             </button>
           `;
         })
@@ -331,24 +359,26 @@ async function renderThemeDetail(themeId) {
   const paper = papers[state.paper];
   if (!theme || !paper) return;
 
-  const notes = getThemeNotes(themeId);
+  const notes = getThemeNotes(themeId, state.paper);
+  const noteFields = getThemeNoteFields(state.paper);
+  const isMath = isMathPaper(state.paper);
   const related = paper.questions
-    .filter((q) => q.themeId === themeId)
+    .filter((q) => q.themeId === themeId || q.moduleId === themeId)
     .sort((a, b) => b.year - a.year || String(a.number).localeCompare(String(b.number), undefined, { numeric: true }));
 
   els.themeDetailMeta.innerHTML = `
     <h2>${escapeHtml(theme.name)}</h2>
-    <p>${theme.parent ? `${escapeHtml(theme.parent)} · ` : ""}${escapeHtml(paper.title)} · ${related.length} related PYQ${related.length === 1 ? "" : "s"}</p>
+    <p>${moduleSectionLabel(theme) ? `${escapeHtml(moduleSectionLabel(theme))} · ` : ""}${escapeHtml(paper.title)} · ${related.length} related PYQ${related.length === 1 ? "" : "s"}</p>
   `;
 
-  els.themeNotesEditor.innerHTML = THEME_NOTE_FIELDS.map(
+  els.themeNotesEditor.innerHTML = noteFields.map(
     (f) => `
       <label class="note-field">
         <span class="note-label">${f.label}</span>
         <textarea
           data-theme-id="${escapeAttr(themeId)}"
           data-field="${escapeAttr(f.id)}"
-          rows="${f.id === "brainstorm" ? 8 : 4}"
+          rows="${f.id === "brainstorm" || f.id === "standardResults" ? 8 : 4}"
           placeholder="${escapeAttr(f.placeholder)}"
         >${escapeHtml(notes[f.id] || "")}</textarea>
       </label>
@@ -373,6 +403,7 @@ async function renderThemeDetail(themeId) {
             <div class="question-header">
               <span class="badge">${q.year}</span>
               <span class="badge marks">${formatMarks(q.marks)}</span>
+              ${q.section ? `<span class="badge section-badge">Sec ${escapeHtml(q.section)}</span>` : ""}
               <span class="question-num">Q.${q.number}</span>
             </div>
             <p class="question-text">${escapeHtml(q.text)}</p>
@@ -382,9 +413,21 @@ async function renderThemeDetail(themeId) {
         .join("")
     : '<p class="empty-inline">No PYQs tagged to this theme yet.</p>';
 
-  const studyPath = `study/themes/${themeId}`;
+  const studyPath = studyPathForTheme(themeId, state.paper);
   const hasStudy = await renderStudyMaterials(studyPath, els.themeStudyMaterials);
   els.themeStudyPanel.classList.toggle("hidden", !hasStudy);
+  const studyHint = els.themeStudyPanel.querySelector(".study-materials-hint");
+  if (studyHint) {
+    studyHint.innerHTML = isMath
+      ? `Scan notebook pages into <code>study/modules/${escapeHtml(themeId)}/</code> → list in <code>manifest.json</code> → git push. See <code>ADDING_IMAGES.md</code>`
+      : `Add images in <code>study/themes/${escapeHtml(themeId)}/</code> or per-PYQ in <code>study/questions/</code>. See <code>ADDING_IMAGES.md</code>`;
+  }
+  const studySummary = els.themeStudyPanel.querySelector("summary");
+  if (studySummary) {
+    studySummary.textContent = isMath
+      ? "Standard results · derivations · tricks · scans (from repo)"
+      : "Study materials — diagrams · tables · flowcharts (from repo)";
+  }
 
   let constitutionHost = document.getElementById("themeConstitutionHost");
   if (isPolityTheme(theme)) {
@@ -424,11 +467,45 @@ function populateYearFilter() {
   els.yearFilter.value = state.year;
 }
 
+function populateSectionFilter() {
+  if (!els.sectionFilterGroup || !els.sectionFilter) return;
+  const isMath = isMathPaper(state.paper);
+  els.sectionFilterGroup.classList.toggle("hidden", !isMath);
+  if (!isMath) {
+    state.section = "all";
+    return;
+  }
+
+  els.sectionFilter.innerHTML = `
+    <option value="all">All sections</option>
+    <option value="A">Section A</option>
+    <option value="B">Section B</option>
+  `;
+  els.sectionFilter.value = state.section;
+}
+
 function populateThemeFilter() {
   const themes = getThemesForPaper(state.paper);
+  const isMath = isMathPaper(state.paper);
   const prev = state.theme;
-  els.themeFilter.innerHTML = '<option value="all">All themes</option>';
+  els.themeFilter.innerHTML = `<option value="all">All ${isMath ? "modules" : "themes"}</option>`;
 
+  if (isMath) {
+    for (const section of papers[state.paper]?.sections || ["A", "B"]) {
+      const group = document.createElement("optgroup");
+      group.label = `Section ${section}`;
+      themes
+        .filter((t) => t.section === section)
+        .sort((a, b) => (a.order || 0) - (b.order || 0))
+        .forEach((t) => {
+          const opt = document.createElement("option");
+          opt.value = t.name;
+          opt.textContent = t.name;
+          group.appendChild(opt);
+        });
+      els.themeFilter.appendChild(group);
+    }
+  } else {
   const standalone = themes.filter((t) => !t.parent);
   const parentNames = [...new Set(themes.filter((t) => t.parent).map((t) => t.parent))];
 
@@ -452,6 +529,7 @@ function populateThemeFilter() {
       });
     els.themeFilter.appendChild(group);
   });
+  }
 
   const allNames = themes.map((t) => t.name);
   if (prev !== "all" && allNames.includes(prev)) {
@@ -483,7 +561,8 @@ function filterQuestions(questions) {
 
   return questions.filter((q) => {
     if (state.year !== "all" && String(q.year) !== state.year) return false;
-    if (state.theme !== "all" && q.theme !== state.theme) return false;
+    if (state.theme !== "all" && q.theme !== state.theme && q.module !== state.theme) return false;
+    if (state.section !== "all" && q.section !== state.section) return false;
 
     const qMarks = normalizeMarks(q.marks);
     if (state.marks !== "all") {
@@ -497,10 +576,11 @@ function filterQuestions(questions) {
 }
 
 function renderPaperMeta(paper) {
+  const isMath = isMathPaper(state.paper);
   els.paperMeta.innerHTML = `
     <h2>${paper.title}</h2>
     <p>${paper.syllabus}</p>
-    <p class="meta-range">Questions · Filter by year, theme, marks · Per-question notes below</p>
+    <p class="meta-range">${isMath ? "PYQs · Filter by year, section, module, marks" : "Questions · Filter by year, theme, marks · Per-question notes below"}</p>
   `;
 }
 
@@ -525,7 +605,8 @@ function formatMarks(marks) {
 }
 
 function renderQuestionNotesEditor(q) {
-  return QUESTION_NOTE_FIELDS.map(
+  const fields = getQuestionNoteFields(state.paper);
+  return fields.map(
     (f) => `
       <label class="note-field">
         <span class="note-label">${f.label}</span>
@@ -586,14 +667,19 @@ function renderQuestions(questions) {
         : "";
 
     const themeLink = q.themeId
-      ? `<button type="button" class="link-theme" data-theme-id="${escapeAttr(q.themeId)}">Open theme notes →</button>`
+      ? `<button type="button" class="link-theme" data-theme-id="${escapeAttr(q.themeId || q.moduleId)}">Open ${isMathPaper(state.paper) ? "module" : "theme"} notes →</button>`
+      : "";
+
+    const sectionBadge = q.section
+      ? `<span class="badge section-badge">Sec ${escapeHtml(q.section)}</span>`
       : "";
 
     card.innerHTML = `
       <div class="question-header">
         <span class="badge">${q.year}</span>
         <span class="badge marks">${formatMarks(q.marks)}</span>
-        <span class="badge theme-badge">${escapeHtml(q.theme || "—")}</span>
+        ${sectionBadge}
+        <span class="badge theme-badge">${escapeHtml(q.theme || q.module || "—")}</span>
         <span class="question-num">Q.${q.number}</span>
       </div>
       <p class="question-text">${escapeHtml(q.text)}</p>
@@ -608,7 +694,7 @@ function renderQuestions(questions) {
         <div class="study-materials-body" data-study-path="study/questions/${escapeAttr(q.id)}"></div>
       </details>
       ${isPolityQuestion(q) ? constitutionPanelHtml() : ""}
-      ${renderBestAnswerSection(q)}
+      ${isMathPaper(state.paper) ? "" : renderBestAnswerSection(q)}
     `;
 
     const studyDetails = card.querySelector(".study-materials-details");
@@ -648,6 +734,26 @@ function updateDataNote(paper) {
   for (let y = 2013; y <= 2025; y++) {
     if (!years.has(y)) missing.push(y);
   }
+
+  if (isMathPaper(paper.paper)) {
+    const byYear = {};
+    for (const q of paper.questions) {
+      byYear[q.year] = (byYear[q.year] || 0) + 1;
+    }
+    const thin = Object.entries(byYear)
+      .filter(([, n]) => n < 8)
+      .map(([y, n]) => `${y}(${n})`);
+    const missing = [];
+    for (let y = 2013; y <= 2025; y++) {
+      if (!byYear[y]) missing.push(y);
+    }
+    let msg = `${paper.questions.length} questions from official upsc.gov.in PDFs (OCR — verify text).`;
+    if (missing.length) msg += ` Not on UPSC site: ${missing.join(", ")}.`;
+    if (thin.length) msg += ` Partial years: ${thin.join(", ")}. Re-run: python3 scripts/fetch-math-pyq.py`;
+    els.dataNote.textContent = msg;
+    return;
+  }
+
   const target = 20;
   const thin = [];
   for (let y = 2013; y <= 2025; y++) {
@@ -692,17 +798,50 @@ function setViewMode(mode) {
 
 async function setActivePaper(paperNum) {
   state.paper = paperNum;
+  state.subject = isMathPaper(paperNum) ? "math" : "gs";
   state.year = "all";
   state.theme = "all";
+  state.section = "all";
   state.selectedThemeId = null;
 
-  els.paperTabs.forEach((tab) => {
+  updateSubjectNav();
+  updateViewTabLabels();
+
+  document.querySelectorAll(".paper-tab").forEach((tab) => {
     tab.classList.toggle("active", Number(tab.dataset.paper) === paperNum);
   });
 
   populateYearFilter();
   populateThemeFilter();
+  populateSectionFilter();
   await refreshView();
+}
+
+function updateSubjectNav() {
+  els.subjectTabs.forEach((tab) => {
+    tab.classList.toggle("active", tab.dataset.subject === state.subject);
+  });
+  els.paperNavGs?.classList.toggle("hidden", state.subject !== "gs");
+  els.paperNavMath?.classList.toggle("hidden", state.subject !== "math");
+}
+
+function updateViewTabLabels() {
+  if (els.viewTabThemes) {
+    els.viewTabThemes.textContent = isMathPaper(state.paper) ? "Modules" : "Themes";
+  }
+  const themeFilterLabel = document.querySelector('label[for="themeFilter"] span, label[for="themeFilter"]');
+  if (themeFilterLabel) {
+    themeFilterLabel.textContent = isMathPaper(state.paper) ? "Module" : "Theme";
+  }
+}
+
+async function setActiveSubject(subject) {
+  state.subject = subject;
+  if (subject === "math") {
+    await setActivePaper(5);
+  } else {
+    await setActivePaper(1);
+  }
 }
 
 function clearAllFilters() {
@@ -710,15 +849,21 @@ function clearAllFilters() {
   state.year = "all";
   state.marks = "all";
   state.theme = "all";
+  state.section = "all";
   els.searchInput.value = "";
   els.yearFilter.value = "all";
   els.marksFilter.value = "all";
   els.themeFilter.value = "all";
+  if (els.sectionFilter) els.sectionFilter.value = "all";
   renderQuestionView();
 }
 
 function bindEvents() {
-  els.paperTabs.forEach((tab) => {
+  els.subjectTabs.forEach((tab) => {
+    tab.addEventListener("click", () => setActiveSubject(tab.dataset.subject));
+  });
+
+  document.querySelectorAll(".paper-tab").forEach((tab) => {
     tab.addEventListener("click", () => setActivePaper(Number(tab.dataset.paper)));
   });
 
@@ -757,6 +902,11 @@ function bindEvents() {
 
   els.themeFilter.addEventListener("change", (e) => {
     state.theme = e.target.value;
+    renderQuestionView();
+  });
+
+  els.sectionFilter?.addEventListener("change", (e) => {
+    state.section = e.target.value;
     renderQuestionView();
   });
 
@@ -801,16 +951,21 @@ async function fetchJson(url) {
 }
 
 async function loadData() {
-  const ids = [1, 2, 3, 4];
-  const [themeData, ...paperResults] = await Promise.all([
+  const gsIds = [1, 2, 3, 4];
+  const [themeData, mathModules, ...paperResults] = await Promise.all([
     fetchJson("data/themes.json"),
-    ...ids.map((n) => fetchJson(`data/gs-paper-${n}.json`)),
+    fetchJson("data/math-modules.json"),
+    ...gsIds.map((n) => fetchJson(`data/gs-paper-${n}.json`)),
+    fetchJson("data/math-paper-1.json"),
+    fetchJson("data/math-paper-2.json"),
   ]);
 
-  themeConfig = themeData;
-  ids.forEach((n, i) => {
+  themeConfig = { ...themeData, ...mathModules };
+  gsIds.forEach((n, i) => {
     papers[n] = paperResults[i];
   });
+  papers[5] = paperResults[4];
+  papers[6] = paperResults[5];
 }
 
 initTheme();

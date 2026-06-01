@@ -1,0 +1,41 @@
+{
+  "discoveredAt": "2026-06-01",
+  "years": {
+    "2014": {
+      "1": "https://www.upsc.gov.in/sites/default/files/MATHEMATICS-I.pdf",
+      "2": "https://www.upsc.gov.in/sites/default/files/MATHEMATICS-II.pdf"
+    },
+    "2015": {
+      "1": "https://www.upsc.gov.in/sites/default/files/MATHEMATICS_I.pdf",
+      "2": "https://www.upsc.gov.in/sites/default/files/MATHEMATICS_II.pdf"
+    },
+    "2018": {
+      "1": "https://www.upsc.gov.in/sites/default/files/MATHEMATICS-PAPER-I.pdf",
+      "2": "https://www.upsc.gov.in/sites/default/files/MATHEMATICS-PAPER-II.pdf"
+    },
+    "2019": {
+      "1": "https://www.upsc.gov.in/sites/default/files/QP-CSM19-Mathematics-I.pdf",
+      "2": "https://www.upsc.gov.in/sites/default/files/QP-CSM19-Mathematics-II.pdf"
+    },
+    "2021": {
+      "1": "https://www.upsc.gov.in/sites/default/files/Mathematics Paper-I.pdf",
+      "2": "https://www.upsc.gov.in/sites/default/files/Mathematics Paper-II.pdf"
+    },
+    "2022": {
+      "1": "https://www.upsc.gov.in/sites/default/files/QP-CSM-22-MATHEMATICS-PAPER-I-280922.pdf",
+      "2": "https://www.upsc.gov.in/sites/default/files/QP-CSM-22-MATHEMATICS-PAPER-II-280922.pdf"
+    },
+    "2023": {
+      "1": "https://www.upsc.gov.in/sites/default/files/QP-CSM-23-MATHEMATICS-PAPER-I-29092023.pdf",
+      "2": "https://www.upsc.gov.in/sites/default/files/QP-CSM-23-MATHEMATICS-PAPER-II-29092023.pdf"
+    },
+    "2024": {
+      "1": "https://www.upsc.gov.in/sites/default/files/QP-CSM-24-MATHEMATICS-PAPER-I-031024.pdf",
+      "2": "https://www.upsc.gov.in/sites/default/files/QP-CSM-24-MATHEMATICS-PAPER-II-031024.pdf"
+    },
+    "2025": {
+      "1": "https://www.upsc.gov.in/sites/default/files/MATHEMATICS-PAPER I-QP-CSM-25-010925.pdf",
+      "2": "https://www.upsc.gov.in/sites/default/files/MATHEMATICS-PAPER-II-QP-CSM-25-010925.pdf"
+    }
+  }
+}

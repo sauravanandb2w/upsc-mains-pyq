@@ -23,7 +23,7 @@
           <span class="brand-mark" aria-hidden="true">भारत</span>
           <div>
             <h1>UPSC Mains PYQ</h1>
-            <p class="tagline">GS Paper I–IV · Theme-wise · Synced notes</p>
+            <p class="tagline">GS I–IV · Maths Optional · Synced notes</p>
           </div>
         </div>
         <div class="header-actions">
@@ -44,7 +44,12 @@
     </header>
 
     <main class="main">
-      <nav class="paper-nav" aria-label="GS papers">
+      <nav class="subject-nav" aria-label="Subject">
+        <button type="button" class="subject-tab active" data-subject="gs">General Studies</button>
+        <button type="button" class="subject-tab" data-subject="math">Mathematics Optional</button>
+      </nav>
+
+      <nav class="paper-nav" id="paperNavGs" aria-label="GS papers">
         <button type="button" class="paper-tab active" data-paper="1">
           <span class="tab-label">GS Paper I</span>
           <span class="tab-desc">Heritage · History · Geography</span>
@@ -60,6 +65,17 @@
         <button type="button" class="paper-tab" data-paper="4">
           <span class="tab-label">GS Paper IV</span>
           <span class="tab-desc">Ethics · Integrity · Aptitude</span>
+        </button>
+      </nav>
+
+      <nav class="paper-nav hidden" id="paperNavMath" aria-label="Math optional papers">
+        <button type="button" class="paper-tab" data-paper="5">
+          <span class="tab-label">Math Paper I</span>
+          <span class="tab-desc">Linear Algebra · Calculus · ODE · Vector</span>
+        </button>
+        <button type="button" class="paper-tab" data-paper="6">
+          <span class="tab-label">Math Paper II</span>
+          <span class="tab-desc">Algebra · Analysis · PDE · Mechanics</span>
         </button>
       </nav>
 
@@ -81,7 +97,7 @@
           <div class="notes-editor theme-notes-editor" id="themeNotesEditor"></div>
           <details class="study-materials-panel" id="themeStudyPanel">
             <summary>Study materials — diagrams · tables · flowcharts (from repo)</summary>
-            <p class="study-materials-hint">Edit files in <code>study/themes/</code> → push to GitHub. See STUDY_MATERIALS.md</p>
+            <p class="study-materials-hint">Add scans in <code>study/themes/</code>, <code>study/questions/</code>, or <code>study/modules/</code> → git push. See <code>ADDING_IMAGES.md</code></p>
             <div class="study-materials-body" id="themeStudyMaterials"></div>
           </details>
           <details class="related-pyqs" open>
@@ -114,6 +130,14 @@
               <label for="themeFilter">Theme</label>
               <select id="themeFilter">
                 <option value="all">All themes</option>
+              </select>
+            </div>
+            <div class="filter-group hidden" id="sectionFilterGroup">
+              <label for="sectionFilter">Section</label>
+              <select id="sectionFilter">
+                <option value="all">All sections</option>
+                <option value="A">Section A</option>
+                <option value="B">Section B</option>
               </select>
             </div>
             <div class="filter-group">

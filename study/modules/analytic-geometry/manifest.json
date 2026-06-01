@@ -1,0 +1,46 @@
+{
+  "moduleId": "analytic-geometry",
+  "moduleName": "Analytic Geometry",
+  "paper": 5,
+  "section": "A",
+  "sections": [
+    {
+      "type": "markdown",
+      "file": "README.md",
+      "title": "Overview"
+    },
+    {
+      "type": "gallery",
+      "title": "Standard results \u2014 memorize these",
+      "folder": "standard-results",
+      "images": [],
+      "emptyHint": "Scan your notebook pages \u2192 save as JPG/PNG in standard-results/ \u2192 add filenames to images[] in manifest.json \u2192 git push."
+    },
+    {
+      "type": "gallery",
+      "title": "Key derivations",
+      "folder": "derivations",
+      "images": [],
+      "emptyHint": "Add derivation scans to derivations/ and list them in manifest.json."
+    },
+    {
+      "type": "gallery",
+      "title": "Tricks & shortcuts",
+      "folder": "tricks",
+      "images": [],
+      "emptyHint": "Add trick pages to tricks/ and list them in manifest.json."
+    },
+    {
+      "type": "markdown",
+      "file": "important-questions/README.md",
+      "title": "Important / difficult questions"
+    },
+    {
+      "type": "gallery",
+      "title": "Important questions \u2014 notebook scans",
+      "folder": "important-questions",
+      "images": [],
+      "emptyHint": "Scan solved PYQs or tough problems \u2192 important-questions/ \u2192 manifest.json."
+    }
+  ]
+}

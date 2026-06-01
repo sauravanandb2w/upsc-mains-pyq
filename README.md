@@ -1,17 +1,18 @@
-# UPSC Mains PYQ — General Studies (Paper I to IV)
+# UPSC Mains PYQ — General Studies (Paper I to IV) & Mathematics Optional
 
-A lightweight, offline-friendly web app to browse **UPSC Civil Services (Main) Examination** previous year questions for **General Studies Papers 1–4**, organized year-wise with search and filters.
+A lightweight, offline-friendly web app to browse **UPSC Civil Services (Main) Examination** previous year questions for **General Studies Papers 1–4** and **Mathematics Optional**, organized year-wise with search and filters.
 
 ## Features
 
-- **Paper-wise navigation** — GS I (Heritage, History, Geography), GS II (Polity, Governance, IR), GS III (Economy, S&T, Environment, Security), GS IV (Ethics & case studies)
+- **Paper-wise navigation** — GS I–IV; Math Optional Paper I & II (13 modules, Section A/B)
 - **Year filter** — 2013–2025 (per paper; see coverage note in app)
 - **Marks filter** — 10, 15, 20 marks and case studies (Paper IV)
 - **Keyword search** — questions, topics, and study notes
-- **Theme-wise notes** — brainstorm by syllabus theme (primary mode); sync across devices when signed in
+- **Theme-wise notes (GS)** — brainstorm by syllabus theme; sync across devices when signed in
+- **Module-wise notes (Math)** — standard results, derivations, tricks, difficult questions + notebook scan galleries
 - **Question mode** — browse PYQs with filters; optional per-question notes
 - **Cloud sync** — Supabase (phone + laptop) or local-only fallback
-- **Study materials** — markdown, tables, mermaid flowcharts, images from `study/` folder (push to GitHub)
+- **Study materials** — markdown, tables, mermaid flowcharts, images from `study/` folder (push to GitHub). **How to add scans:** [ADDING_IMAGES.md](./ADDING_IMAGES.md)
 - **Your notes** — Brainstorm · Static · Quotes · CA · Value (themes); Intro · Topper points (questions) — synced via Supabase
 
 ## Build / update question bank
@@ -28,6 +29,20 @@ python3 scripts/build-pyq-data.py
 ```
 
 Use `python3 scripts/build-pyq-data.py --no-fetch` to rebuild from local files only.
+
+### Mathematics Optional PYQs (official UPSC PDFs)
+
+Fetches **Civil Services (Main) Mathematics Optional** Paper I & II from [upsc.gov.in](https://www.upsc.gov.in/examinations/previous-question-papers), OCRs scanned PDFs, classifies by module, writes `data/math-paper-1.json` and `data/math-paper-2.json`.
+
+**Requires:** `tesseract` + `poppler` (for `pdftoppm`) — macOS: `brew install tesseract poppler`
+
+```bash
+python3 scripts/fetch-math-pyq.py           # download + OCR + rebuild JSON
+python3 scripts/fetch-math-pyq.py --no-fetch  # reuse cached PDFs in data/sources/math-pdfs/
+python3 scripts/fetch-math-pyq.py --year 2024   # single year
+```
+
+Question text is **OCR-derived** — always verify against the official PDF (`sourcePdf` field on each question). Years **2013, 2016, 2017, 2020** are not currently linked on upsc.gov.in.
 
 **Coverage (approx.):** GS II & III 2013–2024; GS I from 2015; GS IV partial (ethics paper parsing is harder). Missing years are listed in the app. Add JSON under `data/sources/` and rebuild. Verify wording on [upsc.gov.in](https://upsc.gov.in/examinations/previous-question-papers).
 
@@ -88,10 +103,16 @@ upsc-mains-pyq/
 ├── supabase/schema.sql
 ├── SUPABASE_SETUP.md
 ├── data/
-│   ├── gs-paper-1.json
-│   ├── gs-paper-2.json
-│   ├── gs-paper-3.json
-│   └── gs-paper-4.json
+│   ├── gs-paper-1.json … gs-paper-4.json
+│   ├── math-paper-1.json
+│   ├── math-paper-2.json
+│   └── math-modules.json
+├── study/
+│   ├── themes/           ← GS theme sheets
+│   ├── questions/        ← GS per-PYQ diagrams
+│   └── modules/          ← Math optional (scans + manifest)
+├── ADDING_IMAGES.md      ← how to add scans (GS + Math)
+├── STUDY_MATERIALS.md
 └── README.md
 ```
 
@@ -119,7 +140,7 @@ For GS Paper IV case studies, use `"marks": "case"`.
 
 Always verify wording against official papers on [upsc.gov.in](https://upsc.gov.in).
 
-Rich diagrams/tables: see **[STUDY_MATERIALS.md](./STUDY_MATERIALS.md)**.
+Rich diagrams, tables, and notebook scans: **[ADDING_IMAGES.md](./ADDING_IMAGES.md)** (GS themes · GS questions · Math modules). Overview: [STUDY_MATERIALS.md](./STUDY_MATERIALS.md).
 
 ## Disclaimer
 

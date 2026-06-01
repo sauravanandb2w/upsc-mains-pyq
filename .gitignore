@@ -1,6 +1,8 @@
-.DS_Store
-*.zip
-.env
-.env.*
-js/config.js
 .venv/
+js/config.js
+.DS_Store
+
+# Downloaded UPSC PDF cache (regenerate with scripts/fetch-math-pyq.py)
+data/sources/math-pdfs/
+data/sources/_ocr-test.png
+data/sources/_p1-page-*.png

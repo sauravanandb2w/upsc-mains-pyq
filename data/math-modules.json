@@ -1,0 +1,113 @@
+{
+  "5": {
+    "label": "Math Paper I",
+    "subject": "math",
+    "title": "Mathematics Optional — Paper I",
+    "syllabus": "Linear Algebra · Calculus · Analytic Geometry · ODE · Dynamics & Statics · Vector Analysis",
+    "yearRange": [2013, 2025],
+    "sections": ["A", "B"],
+    "themes": [
+      {
+        "id": "linear-algebra",
+        "name": "Linear Algebra",
+        "section": "A",
+        "order": 1,
+        "keywords": "vector space linear transformation matrix eigenvalue eigenvector cayley hamilton rank nullity bilinear quadratic form"
+      },
+      {
+        "id": "calculus",
+        "name": "Calculus",
+        "section": "A",
+        "order": 2,
+        "keywords": "limit continuity differentiability taylor maxima minima riemann integral multiple integral beta gamma"
+      },
+      {
+        "id": "analytic-geometry",
+        "name": "Analytic Geometry",
+        "section": "A",
+        "order": 3,
+        "keywords": "straight line circle parabola ellipse hyperbola sphere cone cylinder conic section"
+      },
+      {
+        "id": "ode",
+        "name": "Ordinary Differential Equations",
+        "section": "B",
+        "order": 4,
+        "keywords": "first order second order linear non-linear exact integrating factor laplace series solution singular point"
+      },
+      {
+        "id": "dynamics-statics",
+        "name": "Dynamics & Statics",
+        "section": "B",
+        "order": 5,
+        "keywords": "work energy virtual work equilibrium friction catenary projectile central force moment inertia"
+      },
+      {
+        "id": "vector-analysis",
+        "name": "Vector Analysis",
+        "section": "B",
+        "order": 6,
+        "keywords": "gradient divergence curl line surface volume integral gauss green stokes"
+      }
+    ]
+  },
+  "6": {
+    "label": "Math Paper II",
+    "subject": "math",
+    "title": "Mathematics Optional — Paper II",
+    "syllabus": "Algebra · Real Analysis · Complex Analysis · Linear Programming · PDE · Numerical Analysis · Mechanics & Fluid Dynamics",
+    "yearRange": [2013, 2025],
+    "sections": ["A", "B"],
+    "themes": [
+      {
+        "id": "algebra",
+        "name": "Algebra",
+        "section": "A",
+        "order": 1,
+        "keywords": "group ring field homomorphism sylow theorem polynomial galois normal subgroup"
+      },
+      {
+        "id": "real-analysis",
+        "name": "Real Analysis",
+        "section": "A",
+        "order": 2,
+        "keywords": "sequence series uniform convergence riemann integral metric space compact connected continuity"
+      },
+      {
+        "id": "complex-analysis",
+        "name": "Complex Analysis",
+        "section": "A",
+        "order": 3,
+        "keywords": "analytic function cauchy residue contour conformal mapping laurent series singularity"
+      },
+      {
+        "id": "linear-programming",
+        "name": "Linear Programming",
+        "section": "B",
+        "order": 4,
+        "keywords": "simplex method duality transportation assignment basic feasible solution"
+      },
+      {
+        "id": "pde",
+        "name": "Partial Differential Equations",
+        "section": "B",
+        "order": 5,
+        "keywords": "wave heat laplace equation charpit method separation of variables"
+      },
+      {
+        "id": "numerical-analysis",
+        "name": "Numerical Analysis & Computer Programming",
+        "section": "B",
+        "order": 6,
+        "keywords": "newton raphson gauss elimination runge kutta interpolation numerical integration error"
+      },
+      {
+        "id": "mechanics-fluid",
+        "name": "Mechanics & Fluid Dynamics",
+        "section": "B",
+        "order": 7,
+        "keywords": "fluid velocity potential stream function euler bernoulli navier stokes vortex"
+      }
+    ]
+  }
+}

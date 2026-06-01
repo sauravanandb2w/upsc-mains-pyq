@@ -189,6 +189,41 @@ body {
   padding: 1.5rem 1.25rem 3rem;
 }
 
+.subject-nav {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.subject-tab {
+  padding: 0.55rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+  color: var(--text-muted);
+  font-family: inherit;
+  font-size: 0.88rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: border-color 0.15s, color 0.15s, background 0.15s;
+}
+
+.subject-tab:hover {
+  border-color: var(--accent);
+  color: var(--text);
+}
+
+.subject-tab.active {
+  background: var(--accent-soft);
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.paper-nav.hidden {
+  display: none;
+}
+
 .paper-nav {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -749,6 +784,11 @@ body {
   line-height: 1.25;
 }
 
+.badge.section-badge {
+  background: color-mix(in srgb, var(--accent) 18%, transparent);
+  color: var(--accent);
+}
+
 .question-topics.subthemes li {
   background: color-mix(in srgb, var(--accent) 8%, var(--bg));
   color: var(--text-muted);
@@ -1214,4 +1254,18 @@ body {
   padding: 0.1rem 0.35rem;
   border-radius: 4px;
   background: color-mix(in srgb, var(--text) 6%, var(--bg));
+}
+
+.study-gallery-empty {
+  line-height: 1.5;
+  padding: 0.75rem 1rem;
+  border: 1px dashed var(--border);
+  border-radius: var(--radius);
+  background: color-mix(in srgb, var(--text) 3%, var(--bg));
+}
+
+.study-gallery .study-figure img {
+  max-height: 520px;
+  object-fit: contain;
+  background: var(--bg-elevated);
 }
