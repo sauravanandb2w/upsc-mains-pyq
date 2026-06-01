@@ -313,6 +313,13 @@ python3 scripts/add-module-scan.py real-analysis tricks ~/Desktop/trick.png --ca
 
 Valid subfolders: `standard-results`, `derivations`, `tricks`, `important-questions`
 
+**Math PYQ solution scans** (parts a–e, per question id):
+
+```bash
+python3 scripts/add-solution-scan.py math1-2024-q1 a ~/Downloads/solution.jpg
+python3 scripts/add-solution-scan.py math1-2024-q1 a ~/Downloads/page2.jpg --caption "Page 2"
+```
+
 GS themes and GS questions: add files manually (steps above). Same `manifest.json` format.
 
 ---
@@ -340,31 +347,47 @@ PDF cache (gitignored): `data/sources/math-pdfs/`. After regenerating, commit `s
 
 If auto-cropping misses a question on an old scan, open **Official PDF on upsc.gov.in** from the question card, or replace images manually in that question’s folder.
 
-### Your handwritten solution scans (parts a–e)
+### Your handwritten solution scans (parts a–e) — **git only**
 
-In the app, each part has **Solution scan** (photo), not typed text. Two ways to add:
+Solution photos are **not** stored in Supabase (size limits). They live in the repo like other study images — **push once, view on phone & laptop**.
 
-1. **In the app:** **Add photo (this device)** — stored in your browser (IndexedDB). Good for quick notebook photos; does not sync the image to other devices.
-2. **Via git (syncs everywhere):** add JPG/PNG under:
+**Helper script** (copies file + updates `manifest.json`):
 
-```text
-study/questions/math1-2024-q1/solutions/part-a.jpg
-study/questions/math1-2024-q1/solutions/part-b.jpg
+```bash
+python3 scripts/add-solution-scan.py math1-2024-q1 a ~/Desktop/my-solution.jpg
+python3 scripts/add-solution-scan.py math1-2024-q1 a ~/Desktop/page-2.jpg   # part-a-02.jpg
+git add study/questions/math1-2024-q1/
+git commit -m "Add math1 2024 Q1 part (a) solution scans"
+git push
 ```
 
-Or list them in `manifest.json`:
+Folder layout:
+
+```text
+study/questions/math1-2024-q1/
+├── manifest.json
+├── scan-01.jpg              ← official PYQ cutout (auto-generated)
+└── solutions/
+    ├── part-a-01.jpg        ← your handwritten solution, part (a)
+    ├── part-a-02.jpg        ← second page, same part
+    └── part-b-01.jpg
+```
+
+`manifest.json` (script updates this for you):
 
 ```json
 {
   "images": ["scan-01.jpg"],
   "solutions": {
-    "a": ["solutions/part-a.jpg"],
-    "b": ["solutions/part-b.jpg"]
+    "a": ["solutions/part-a-01.jpg", "solutions/part-a-02.jpg"],
+    "b": ["solutions/part-b-01.jpg"]
   }
 }
 ```
 
-Text fields (approach, standard results, mistakes) still sync via Supabase when signed in.
+**Multiple photos per part:** run the script again for the same part — it auto-numbers `part-a-02.jpg`, `part-a-03.jpg`, …
+
+**Text notes** (approach, standard results, mistakes) still sync via Supabase when signed in.
 
 ---
 

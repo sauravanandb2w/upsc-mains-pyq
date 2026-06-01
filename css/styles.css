@@ -1118,6 +1118,27 @@ body {
   font-size: 0.68rem;
 }
 
+.solution-scan-git-help {
+  margin-top: 0.5rem;
+}
+
+.solution-scan-cmd {
+  margin: 0.35rem 0 0.5rem;
+  padding: 0.5rem 0.65rem;
+  font-size: 0.72rem;
+  line-height: 1.45;
+  overflow-x: auto;
+  border-radius: 6px;
+  background: color-mix(in srgb, var(--text) 5%, var(--bg));
+  border: 1px solid var(--border);
+}
+
+.solution-scan-cmd code {
+  font-size: inherit;
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+
 .study-materials-hint code {
   font-size: 0.72rem;
   padding: 0.1rem 0.35rem;

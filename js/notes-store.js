@@ -134,9 +134,7 @@ export const MATH_PART_NOTE_FIELDS = MATH_PART_TEXT_FIELDS;
 export const MATH_PARTS = ["a", "b", "c", "d", "e"];
 
 function emptyMathPart() {
-  const fields = Object.fromEntries(MATH_PART_TEXT_FIELDS.map((f) => [f.id, ""]));
-  fields.localScans = [];
-  return fields;
+  return Object.fromEntries(MATH_PART_TEXT_FIELDS.map((f) => [f.id, ""]));
 }
 
 export function emptyMathParts() {
@@ -146,19 +144,12 @@ export function emptyMathParts() {
 function mergeMathParts(base, patch) {
   const out = { ...base };
   for (const part of MATH_PARTS) {
-    const merged = { ...base[part], ...(patch?.[part] || {}) };
-    if (patch?.[part]?.localScans) {
-      merged.localScans = patch[part].localScans;
-    } else if (!Array.isArray(merged.localScans)) {
-      merged.localScans = base[part]?.localScans || [];
-    }
-    out[part] = merged;
+    out[part] = { ...base[part], ...(patch?.[part] || {}) };
   }
   return out;
 }
 
 function mathPartHasContent(partNotes) {
-  if (Array.isArray(partNotes?.localScans) && partNotes.localScans.length > 0) return true;
   return MATH_PART_TEXT_FIELDS.some((f) => String(partNotes?.[f.id] || "").trim());
 }
 
@@ -213,7 +204,6 @@ function legacyFlatToPartA(row) {
     approach: row.introduction || "",
     standardResultsUsed: row.static_notes || "",
     mistakes: row.topper_points || "",
-    localScans: [],
   };
 }
 
@@ -248,7 +238,6 @@ function parseLocalMathNotes(stored) {
   for (const f of MATH_PART_TEXT_FIELDS) {
     if (stored?.[f.id]?.trim()) legacy[f.id] = stored[f.id];
   }
-  if (stored?.localScans?.length) legacy.localScans = stored.localScans;
   if (mathPartHasContent(legacy)) {
     parts.a = legacy;
   }
@@ -503,15 +492,6 @@ export function saveMathPartNote(questionId, partId, fieldId, value) {
   persistMathQuestionNotes(questionId, parts);
 }
 
-export function saveMathPartLocalScans(questionId, partId, localScans) {
-  if (!MATH_PARTS.includes(partId)) return;
-
-  const current = getQuestionNotes(questionId);
-  const parts = mergeMathParts(emptyMathParts(), current.parts);
-  parts[partId].localScans = localScans;
-  persistMathQuestionNotes(questionId, parts);
-}
-
 function persistMathQuestionNotes(questionId, parts) {
   const payload = { parts };
   questionCache.set(questionId, payload);
@@ -620,13 +600,7 @@ export function themeNotesHaystack(themeId) {
 export function questionNotesHaystack(questionId, fileNotes) {
   const notes = getQuestionNotes(questionId, fileNotes);
   if (notes.parts) {
-    return MATH_PARTS.flatMap((p) => {
-      const part = notes.parts[p] || {};
-      return [
-        ...MATH_PART_TEXT_FIELDS.map((f) => part[f.id]),
-        ...(part.localScans || []).map((s) => s.name),
-      ];
-    })
+    return MATH_PARTS.flatMap((p) => MATH_PART_TEXT_FIELDS.map((f) => notes.parts[p]?.[f.id]))
       .join(" ")
       .toLowerCase();
   }
