@@ -59,7 +59,7 @@ python3 scripts/fetch-math-pyq.py --no-fetch  # reuse cached PDFs in data/source
 python3 scripts/fetch-math-pyq.py --year 2024   # single year
 ```
 
-Question text is **OCR-derived** — always verify against the official PDF (`sourcePdf` field on each question). Years **2013, 2016, 2017, 2020** are not currently linked on upsc.gov.in.
+Question text is shown as **official PDF scan cutouts** under `study/questions/math*`. Year **2013** is not on upsc.gov.in; **2016, 2017, 2020** use local PDFs in `data/sources/` (`MATH1_YYYY.pdf`, `MATH2_YYYY.pdf`, or `MATHS_I.pdf` / `MATHS_II.pdf`).
 
 **Coverage (approx.):** GS II & III 2013–2024; GS I from 2015; **GS IV full subject-wise index (2013–2025) via Insights on India**. Missing years are listed in the app. Add JSON under `data/sources/` and rebuild. Verify wording on [upsc.gov.in](https://upsc.gov.in/examinations/previous-question-papers).
 

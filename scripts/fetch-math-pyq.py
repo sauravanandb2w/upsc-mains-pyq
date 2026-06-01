@@ -36,6 +36,16 @@ STUDY_QUESTIONS = ROOT / "study" / "questions"
 OUT_P1 = ROOT / "data" / "math-paper-1.json"
 OUT_P2 = ROOT / "data" / "math-paper-2.json"
 
+# Manually supplied PDFs (not on upsc.gov.in) → copied into math-pdfs/<year>/
+MANUAL_SOURCE_PDFS: list[tuple[int, int, Path]] = [
+    (2016, 1, ROOT / "data" / "sources" / "MATH1_2016.pdf"),
+    (2016, 2, ROOT / "data" / "sources" / "MATH2_2016.pdf"),
+    (2017, 1, ROOT / "data" / "sources" / "MATH1_2017.pdf"),
+    (2017, 2, ROOT / "data" / "sources" / "MATH2_2017.pdf"),
+    (2020, 1, ROOT / "data" / "sources" / "MATHS_I.pdf"),
+    (2020, 2, ROOT / "data" / "sources" / "MATHS_II.pdf"),
+]
+
 BASE_URL = "https://www.upsc.gov.in"
 UA = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36"
 RENDER_DPI = 150
@@ -176,6 +186,50 @@ def discover_pdfs_by_year() -> dict[int, dict[int, str]]:
         pass
 
     return by_year
+
+
+def install_manual_source_pdfs() -> None:
+    """Copy user-provided PDFs into math-pdfs/<year>/paper-<n>-<filename>."""
+    for year, paper_num, src in MANUAL_SOURCE_PDFS:
+        if not src.is_file():
+            continue
+        dest = PDF_CACHE / str(year) / f"paper-{paper_num}-{src.name}"
+        dest.parent.mkdir(parents=True, exist_ok=True)
+        if not dest.is_file() or src.stat().st_mtime > dest.stat().st_mtime:
+            shutil.copy2(src, dest)
+
+
+def discover_cached_pdfs() -> dict[int, dict[int, Path]]:
+    """PDFs under data/sources/math-pdfs/<year>/paper-<1|2>-*.pdf."""
+    by_year: dict[int, dict[int, Path]] = {}
+    if not PDF_CACHE.is_dir():
+        return by_year
+    for year_dir in sorted(PDF_CACHE.iterdir()):
+        if not year_dir.is_dir() or not year_dir.name.isdigit():
+            continue
+        year = int(year_dir.name)
+        for pdf in sorted(year_dir.glob("paper-*.pdf")):
+            m = re.match(r"paper-([12])-", pdf.name, re.I)
+            if m:
+                by_year.setdefault(year, {})[int(m.group(1))] = pdf
+    return by_year
+
+
+def merge_pdf_sources(
+    remote: dict[int, dict[int, str]],
+    cached: dict[int, dict[int, Path]],
+) -> dict[int, dict[int, tuple[str, Path | None]]]:
+    """Per year/paper: (sourcePdf label, optional explicit cache path)."""
+    merged: dict[int, dict[int, tuple[str, Path | None]]] = {}
+    for year in sorted(set(remote) | set(cached)):
+        merged[year] = {}
+        for paper_num in (1, 2):
+            if paper_num in remote.get(year, {}):
+                merged[year][paper_num] = (remote[year][paper_num], None)
+            elif paper_num in cached.get(year, {}):
+                path = cached[year][paper_num]
+                merged[year][paper_num] = (f"file://{path.resolve()}", path)
+    return merged
 
 
 def default_section(qnum: int) -> str:
@@ -783,34 +837,67 @@ def main() -> int:
     modules_p1 = module_cfg["5"]["themes"]
     modules_p2 = module_cfg["6"]["themes"]
 
-    pdf_map = discover_pdfs_by_year()
-    if args.year:
-        pdf_map = {args.year: pdf_map.get(args.year, {})}
+    install_manual_source_pdfs()
+    remote_map: dict[int, dict[int, str]] = {}
+    if args.no_fetch and INDEX_FILE.is_file():
+        try:
+            saved = json.loads(INDEX_FILE.read_text(encoding="utf-8"))
+            for y, urls in saved.get("years", {}).items():
+                year = int(y)
+                for p, url in urls.items():
+                    remote_map.setdefault(year, {})[int(p)] = url
+        except Exception:
+            pass
+    elif not args.no_fetch:
+        remote_map = discover_pdfs_by_year()
 
-    index = {"discoveredAt": __import__("datetime").date.today().isoformat(), "years": {}}
+    cached_map = discover_cached_pdfs()
+    sources = merge_pdf_sources(remote_map, cached_map)
+    if args.year:
+        sources = {args.year: sources.get(args.year, {})}
+
+    index: dict = {"discoveredAt": __import__("datetime").date.today().isoformat(), "years": {}}
+    if INDEX_FILE.is_file():
+        try:
+            index["years"] = json.loads(INDEX_FILE.read_text(encoding="utf-8")).get("years", {})
+        except Exception:
+            pass
     all_q1: list[dict] = []
     all_q2: list[dict] = []
 
-    for year in sorted(pdf_map.keys()):
-        urls = pdf_map[year]
-        index["years"][str(year)] = urls
+    if args.year:
+        for path in (OUT_P1, OUT_P2):
+            if path.is_file():
+                existing = json.loads(path.read_text(encoding="utf-8")).get("questions", [])
+                for q in existing:
+                    if q["year"] != args.year:
+                        (all_q1 if q["id"].startswith("math1-") else all_q2).append(q)
+
+    for year in sorted(sources.keys()):
+        papers = sources[year]
+        index["years"][str(year)] = {
+            str(p): papers[p][0] for p in sorted(papers)
+        }
         print(f"\n=== {year} ===")
 
         for paper_num in (1, 2):
-            url = urls.get(paper_num)
-            if not url:
-                print(f"  Paper {paper_num}: not on upsc.gov.in")
+            if paper_num not in papers:
+                print(f"  Paper {paper_num}: no PDF")
                 continue
 
-            fname = unquote(url.split("/")[-1]).replace(" ", "_")
-            cache_path = PDF_CACHE / str(year) / f"paper-{paper_num}-{fname}"
+            source_pdf, explicit_cache = papers[paper_num]
+            if explicit_cache is not None:
+                cache_path = explicit_cache
+            else:
+                fname = unquote(source_pdf.split("/")[-1]).replace(" ", "_")
+                cache_path = PDF_CACHE / str(year) / f"paper-{paper_num}-{fname}"
 
             if not cache_path.is_file():
                 if args.no_fetch:
                     print(f"  Paper {paper_num}: missing cache {cache_path}")
                     continue
                 print(f"  Downloading Paper {paper_num}…")
-                if not download_pdf(url, cache_path):
+                if not download_pdf(source_pdf, cache_path):
                     print(f"  Paper {paper_num}: download failed")
                     continue
             else:
@@ -819,7 +906,7 @@ def main() -> int:
             print(f"  Cutting scans Paper {paper_num}…")
             try:
                 modules = modules_p1 if paper_num == 1 else modules_p2
-                entries = process_pdf(paper_num, year, cache_path, url, modules)
+                entries = process_pdf(paper_num, year, cache_path, source_pdf, modules)
                 print(f"  → {len(entries)} question scans")
                 if paper_num == 1:
                     all_q1.extend(entries)

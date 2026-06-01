@@ -9,6 +9,14 @@
       "1": "https://www.upsc.gov.in/sites/default/files/MATHEMATICS_I.pdf",
       "2": "https://www.upsc.gov.in/sites/default/files/MATHEMATICS_II.pdf"
     },
+    "2016": {
+      "1": "file://data/sources/math-pdfs/2016/paper-1-MATH1_2016.pdf",
+      "2": "file://data/sources/math-pdfs/2016/paper-2-MATH2_2016.pdf"
+    },
+    "2017": {
+      "1": "file://data/sources/math-pdfs/2017/paper-1-MATH1_2017.pdf",
+      "2": "file://data/sources/math-pdfs/2017/paper-2-MATH2_2017.pdf"
+    },
     "2018": {
       "1": "https://www.upsc.gov.in/sites/default/files/MATHEMATICS-PAPER-I.pdf",
       "2": "https://www.upsc.gov.in/sites/default/files/MATHEMATICS-PAPER-II.pdf"
@@ -16,6 +24,10 @@
     "2019": {
       "1": "https://www.upsc.gov.in/sites/default/files/QP-CSM19-Mathematics-I.pdf",
       "2": "https://www.upsc.gov.in/sites/default/files/QP-CSM19-Mathematics-II.pdf"
+    },
+    "2020": {
+      "1": "file://data/sources/math-pdfs/2020/paper-1-MATHS_I.pdf",
+      "2": "file://data/sources/math-pdfs/2020/paper-2-MATHS_II.pdf"
     },
     "2021": {
       "1": "https://www.upsc.gov.in/sites/default/files/Mathematics Paper-I.pdf",
