@@ -219,14 +219,15 @@ function noteLockButtonHtml(locked) {
 function renderNoteLabelRow(label, lockKey) {
   const locked = isNoteFieldLocked(lockKey);
   const lockControl = isCloudSyncEnabled()
-    ? `<button
-        type="button"
-        class="note-lock-btn${locked ? " note-lock-btn--locked" : ""}"
-        data-lock-key="${escapeAttr(lockKey)}"
-        aria-pressed="${locked ? "true" : "false"}"
-        aria-label="${locked ? "Unlock — allow sync on all devices" : "Lock — stop sync on all devices"}"
-        title="${locked ? "Locked — edits do not sync" : "Click to lock — no sync on any device"}"
-      >${noteLockButtonHtml(locked)}</button>`
+    ? `<span class="note-lock-wrap" title="Hover here to lock/unlock">
+        <button
+          type="button"
+          class="note-lock-btn${locked ? " note-lock-btn--locked" : ""}"
+          data-lock-key="${escapeAttr(lockKey)}"
+          aria-pressed="${locked ? "true" : "false"}"
+          aria-label="${locked ? "Unlock — allow sync on all devices" : "Lock — stop sync on all devices"}"
+        >${noteLockButtonHtml(locked)}</button>
+      </span>`
     : "";
   return `
     <div class="note-label-row">
@@ -650,9 +651,9 @@ async function renderThemeDetail(themeId) {
     noteFields
     .map((f) => {
       const lockKey = themeFieldLockKey(state.paper, themeId, f.id);
-      const rows = f.id === "brainstorm" || f.id === "standardResults" ? 8 : 4;
+      const rows = f.id === "brainstorm" || f.id === "standardResults" ? 12 : 6;
       return `
-      <label class="note-field${isNoteFieldLocked(lockKey) ? " note-field--locked" : ""}">
+      <div class="note-field${isNoteFieldLocked(lockKey) ? " note-field--locked" : ""}">
         ${renderNoteLabelRow(f.label, lockKey)}
         ${renderRichNoteEditorHtml(
           {
@@ -661,7 +662,7 @@ async function renderThemeDetail(themeId) {
           },
           { placeholder: f.placeholder, rows }
         )}
-      </label>
+      </div>
     `;
     })
     .join("");
@@ -1192,16 +1193,16 @@ function renderQuestionNotesEditor(q) {
     .map((f) => {
       const lockKey = questionFieldLockKey(q.id, f.id);
       return `
-      <label class="note-field${isNoteFieldLocked(lockKey) ? " note-field--locked" : ""}">
+      <div class="note-field${isNoteFieldLocked(lockKey) ? " note-field--locked" : ""}">
         ${renderNoteLabelRow(f.label, lockKey)}
         ${renderRichNoteEditorHtml(
           {
             "data-qid": q.id,
             "data-field": f.id,
           },
-          { placeholder: f.placeholder, rows: 3 }
+          { placeholder: f.placeholder, rows: 5 }
         )}
-      </label>
+      </div>
     `;
     })
     .join("");
@@ -1240,7 +1241,7 @@ function renderMathPartNotesEditor(q) {
               ${MATH_PART_TEXT_FIELDS.map((f) => {
                 const lockKey = questionFieldLockKey(q.id, f.id, part);
                 return `
-                <label class="note-field${isNoteFieldLocked(lockKey) ? " note-field--locked" : ""}">
+                <div class="note-field${isNoteFieldLocked(lockKey) ? " note-field--locked" : ""}">
                   ${renderNoteLabelRow(f.label, lockKey)}
                   ${renderRichNoteEditorHtml(
                     {
@@ -1248,9 +1249,9 @@ function renderMathPartNotesEditor(q) {
                       "data-part": part,
                       "data-field": f.id,
                     },
-                    { placeholder: f.placeholder, rows: 2 }
+                    { placeholder: f.placeholder, rows: 4 }
                   )}
-                </label>
+                </div>
               `;
               }).join("")}
               <div class="solution-scan-section">
@@ -1394,7 +1395,7 @@ function renderBestAnswerSection(q) {
   const lockKey = questionFieldLockKey(q.id, BEST_ANSWER_FIELD.id);
   return `
     <div class="best-answer-section">
-      <label class="note-field best-answer-field${isNoteFieldLocked(lockKey) ? " note-field--locked" : ""}">
+      <div class="note-field best-answer-field${isNoteFieldLocked(lockKey) ? " note-field--locked" : ""}">
         ${renderNoteLabelRow(BEST_ANSWER_FIELD.label, lockKey)}
         <span class="best-answer-hint">Synced like your other notes · paste model answers from the web</span>
         ${renderRichNoteEditorHtml(
@@ -1402,9 +1403,9 @@ function renderBestAnswerSection(q) {
             "data-qid": q.id,
             "data-field": BEST_ANSWER_FIELD.id,
           },
-          { placeholder: BEST_ANSWER_FIELD.placeholder, rows: 8 }
+          { placeholder: BEST_ANSWER_FIELD.placeholder, rows: 10 }
         )}
-      </label>
+      </div>
     </div>
   `;
 }

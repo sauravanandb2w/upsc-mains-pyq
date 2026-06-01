@@ -351,8 +351,9 @@ body {
   color: var(--text-muted);
 }
 
+.theme-notes-editor .rich-note[data-rows="12"] .rich-note-editor,
 .theme-notes-editor .rich-note[data-rows="8"] .rich-note-editor {
-  min-height: 10rem;
+  min-height: 14rem;
   font-size: 0.92rem;
 }
 
@@ -879,8 +880,16 @@ body {
   color: var(--accent);
 }
 
-.note-lock-btn {
+.note-lock-wrap {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   flex-shrink: 0;
+  width: 2rem;
+  height: 2rem;
+}
+
+.note-lock-btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -891,23 +900,63 @@ body {
   border: 1px solid var(--border);
   background: var(--surface);
   color: var(--text-muted);
-  cursor: pointer;
+  cursor: default;
+  opacity: 0.4;
+  transition:
+    opacity 0.15s ease,
+    border-color 0.15s ease,
+    color 0.15s ease;
 }
 
-.note-lock-btn:hover:not(:disabled) {
-  border-color: var(--accent);
-  color: var(--accent);
+/* Desktop: only clickable when pointer is over the lock icon itself */
+@media (hover: hover) and (pointer: fine) {
+  .note-lock-btn {
+    pointer-events: none;
+  }
+
+  .note-lock-wrap:hover .note-lock-btn,
+  .note-lock-btn:focus-visible {
+    pointer-events: auto;
+    cursor: pointer;
+    opacity: 1;
+    border-color: var(--accent);
+    color: var(--accent);
+  }
 }
 
-.note-lock-btn:disabled {
-  opacity: 0.5;
-  cursor: wait;
+/* Touch / coarse pointer: normal tap target on the icon only */
+@media (hover: none), (pointer: coarse) {
+  .note-lock-btn {
+    pointer-events: auto;
+    cursor: pointer;
+    opacity: 0.85;
+  }
+
+  .note-lock-btn:active:not(:disabled) {
+    opacity: 1;
+    border-color: var(--accent);
+    color: var(--accent);
+  }
 }
 
 .note-lock-btn--locked {
   border-color: color-mix(in srgb, var(--accent) 55%, var(--border));
   background: color-mix(in srgb, var(--accent) 14%, var(--surface));
   color: var(--accent);
+  opacity: 0.65;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .note-lock-wrap:hover .note-lock-btn--locked,
+  .note-lock-btn--locked:focus-visible {
+    opacity: 1;
+  }
+}
+
+.note-lock-btn:disabled {
+  opacity: 0.5;
+  cursor: wait;
+  pointer-events: none;
 }
 
 .note-lock-svg {
@@ -988,34 +1037,50 @@ body {
 
 .rich-note-editor {
   width: 100%;
-  padding: 0.55rem 0.65rem;
+  padding: 0.65rem 0.75rem;
   font-family: inherit;
-  font-size: 0.88rem;
-  line-height: 1.45;
+  font-size: 0.92rem;
+  line-height: 1.5;
   border: 1px solid var(--border);
   border-radius: 8px;
   background: var(--bg);
   color: var(--text);
-  min-height: 4rem;
+  min-height: 7rem;
   overflow-y: auto;
   white-space: pre-wrap;
   word-break: break-word;
 }
 
 .rich-note[data-rows="2"] .rich-note-editor {
-  min-height: 3.25rem;
+  min-height: 5.5rem;
 }
 
 .rich-note[data-rows="3"] .rich-note-editor {
-  min-height: 4rem;
+  min-height: 6.5rem;
 }
 
 .rich-note[data-rows="4"] .rich-note-editor {
-  min-height: 5rem;
+  min-height: 7.5rem;
+}
+
+.rich-note[data-rows="5"] .rich-note-editor {
+  min-height: 8.5rem;
+}
+
+.rich-note[data-rows="6"] .rich-note-editor {
+  min-height: 9.5rem;
 }
 
 .rich-note[data-rows="8"] .rich-note-editor {
-  min-height: 8rem;
+  min-height: 11rem;
+}
+
+.rich-note[data-rows="10"] .rich-note-editor {
+  min-height: 13rem;
+}
+
+.rich-note[data-rows="12"] .rich-note-editor {
+  min-height: 14rem;
 }
 
 .rich-note-editor:focus {
@@ -1415,8 +1480,8 @@ body {
 }
 
 .best-answer-field .rich-note-editor {
-  min-height: 10rem;
-  font-size: 0.88rem;
+  min-height: 14rem;
+  font-size: 0.92rem;
   line-height: 1.55;
 }
 
