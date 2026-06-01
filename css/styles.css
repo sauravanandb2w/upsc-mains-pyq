@@ -353,7 +353,7 @@ body {
 
 .theme-notes-editor .rich-note[data-rows="12"] .rich-note-editor,
 .theme-notes-editor .rich-note[data-rows="8"] .rich-note-editor {
-  min-height: 14rem;
+  min-height: 56rem;
   font-size: 0.92rem;
 }
 
@@ -1045,42 +1045,43 @@ body {
   border-radius: 8px;
   background: var(--bg);
   color: var(--text);
-  min-height: 7rem;
+  min-height: 28rem;
+  max-height: 85vh;
   overflow-y: auto;
   white-space: pre-wrap;
   word-break: break-word;
 }
 
 .rich-note[data-rows="2"] .rich-note-editor {
-  min-height: 5.5rem;
+  min-height: 22rem;
 }
 
 .rich-note[data-rows="3"] .rich-note-editor {
-  min-height: 6.5rem;
+  min-height: 26rem;
 }
 
 .rich-note[data-rows="4"] .rich-note-editor {
-  min-height: 7.5rem;
+  min-height: 30rem;
 }
 
 .rich-note[data-rows="5"] .rich-note-editor {
-  min-height: 8.5rem;
+  min-height: 34rem;
 }
 
 .rich-note[data-rows="6"] .rich-note-editor {
-  min-height: 9.5rem;
+  min-height: 38rem;
 }
 
 .rich-note[data-rows="8"] .rich-note-editor {
-  min-height: 11rem;
+  min-height: 44rem;
 }
 
 .rich-note[data-rows="10"] .rich-note-editor {
-  min-height: 13rem;
+  min-height: 52rem;
 }
 
 .rich-note[data-rows="12"] .rich-note-editor {
-  min-height: 14rem;
+  min-height: 56rem;
 }
 
 .rich-note-editor:focus {
@@ -1480,7 +1481,8 @@ body {
 }
 
 .best-answer-field .rich-note-editor {
-  min-height: 14rem;
+  min-height: 56rem;
+  max-height: 85vh;
   font-size: 0.92rem;
   line-height: 1.55;
 }
