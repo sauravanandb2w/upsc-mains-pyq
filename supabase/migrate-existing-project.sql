@@ -17,6 +17,13 @@ alter table public.question_notes
 alter table public.question_notes
   add column if not exists last_revised_at timestamptz;
 
+-- Per-field draft locks (synced across devices)
+alter table public.theme_notes
+  add column if not exists locked_fields jsonb not null default '{}'::jsonb;
+
+alter table public.question_notes
+  add column if not exists locked_fields jsonb not null default '{}'::jsonb;
+
 -- Math optional: allow papers 5–6 on theme_notes
 alter table public.theme_notes drop constraint if exists theme_notes_paper_check;
 alter table public.theme_notes

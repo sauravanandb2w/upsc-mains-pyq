@@ -12,6 +12,7 @@ create table if not exists public.theme_notes (
   quotes text not null default '',
   current_affairs text not null default '',
   value_material text not null default '',
+  locked_fields jsonb not null default '{}'::jsonb,
   updated_at timestamptz not null default now(),
   unique (user_id, theme_id)
 );
@@ -34,6 +35,7 @@ create table if not exists public.question_notes (
   bookmarked boolean not null default false,
   status_updated_at timestamptz,
   last_revised_at timestamptz,
+  locked_fields jsonb not null default '{}'::jsonb,
   updated_at timestamptz not null default now(),
   unique (user_id, question_id)
 );

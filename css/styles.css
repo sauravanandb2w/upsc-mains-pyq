@@ -864,12 +864,55 @@ body {
   gap: 0.3rem;
 }
 
+.note-label-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
 .note-label {
   font-size: 0.75rem;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.04em;
   color: var(--accent);
+}
+
+.note-lock-btn {
+  flex-shrink: 0;
+  font-size: 0.68rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  padding: 0.2rem 0.45rem;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text-muted);
+  cursor: pointer;
+}
+
+.note-lock-btn:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.note-lock-btn--locked {
+  border-color: color-mix(in srgb, var(--accent) 55%, var(--border));
+  background: color-mix(in srgb, var(--accent) 12%, var(--surface));
+  color: var(--accent);
+}
+
+.note-lock-hint {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+.note-field--locked textarea {
+  border-style: dashed;
+  border-color: color-mix(in srgb, var(--accent) 40%, var(--border));
 }
 
 .note-field textarea {

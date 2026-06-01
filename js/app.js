@@ -49,6 +49,12 @@ import {
   getLastSyncError,
   setLastSyncError,
   installNotesSyncLifecycle,
+  scheduleCloudFlushAfterUnlock,
+  isNoteFieldLocked,
+  lockNoteField,
+  unlockNoteField,
+  themeFieldLockKey,
+  questionFieldLockKey,
   isCloudSyncEnabled,
   themeNotesHaystack,
   questionNotesHaystack,
@@ -189,6 +195,67 @@ function toggleTheme() {
   const next = current === "dark" ? "light" : "dark";
   document.documentElement.setAttribute("data-theme", next);
   localStorage.setItem("upsc-pyq-theme", next);
+}
+
+function renderNoteLabelRow(label, lockKey) {
+  const locked = isNoteFieldLocked(lockKey);
+  return `
+    <div class="note-label-row">
+      <span class="note-label">${escapeHtml(label)}</span>
+      <button
+        type="button"
+        class="note-lock-btn${locked ? " note-lock-btn--locked" : ""}"
+        data-lock-key="${escapeAttr(lockKey)}"
+        aria-pressed="${locked ? "true" : "false"}"
+        title="${locked ? "Locked on all devices. Click Unlock to sync." : "Lock — draft on all devices until you unlock"}"
+      >${locked ? "Unlock" : "Lock"}</button>
+    </div>
+    ${locked ? '<span class="note-lock-hint">Locked on all devices — unlock here to sync</span>' : ""}
+  `;
+}
+
+function syncNoteFieldLockUi(btn) {
+  const field = btn.closest(".note-field");
+  const lockKey = btn.dataset.lockKey;
+  const locked = isNoteFieldLocked(lockKey);
+  btn.classList.toggle("note-lock-btn--locked", locked);
+  btn.setAttribute("aria-pressed", locked ? "true" : "false");
+  btn.textContent = locked ? "Unlock" : "Lock";
+  btn.title = locked
+    ? "Locked on all devices. Click Unlock to sync."
+    : "Lock — draft on all devices until you unlock";
+  field?.classList.toggle("note-field--locked", locked);
+  const existingHint = field?.querySelector(".note-lock-hint");
+  if (locked && !existingHint) {
+    const hint = document.createElement("span");
+    hint.className = "note-lock-hint";
+    hint.textContent = "Locked on all devices — unlock here to sync";
+    field?.querySelector(".note-label-row")?.insertAdjacentElement("afterend", hint);
+  } else if (!locked) {
+    existingHint?.remove();
+  }
+}
+
+function refreshNoteFieldLockButtons(container) {
+  container.querySelectorAll(".note-lock-btn").forEach((btn) => syncNoteFieldLockUi(btn));
+}
+
+function bindNoteFieldLocks(container, onUnlock) {
+  container.querySelectorAll(".note-lock-btn").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const lockKey = btn.dataset.lockKey;
+      const ta = btn.closest(".note-field")?.querySelector("textarea");
+      if (isNoteFieldLocked(lockKey)) {
+        unlockNoteField(lockKey);
+        onUnlock?.(lockKey);
+      } else {
+        lockNoteField(lockKey, ta?.value ?? "");
+      }
+      syncNoteFieldLockUi(btn);
+      updateSyncBadge();
+    });
+    syncNoteFieldLockUi(btn);
+  });
 }
 
 function updateSyncBadge() {
@@ -527,10 +594,12 @@ async function renderThemeDetail(themeId) {
     <p>${moduleSectionLabel(theme) ? `${escapeHtml(moduleSectionLabel(theme))} · ` : ""}${escapeHtml(paper.title)} · ${related.length} related PYQ${related.length === 1 ? "" : "s"}</p>
   `;
 
-  els.themeNotesEditor.innerHTML = noteFields.map(
-    (f) => `
-      <label class="note-field">
-        <span class="note-label">${f.label}</span>
+  els.themeNotesEditor.innerHTML = noteFields
+    .map((f) => {
+      const lockKey = themeFieldLockKey(state.paper, themeId, f.id);
+      return `
+      <label class="note-field${isNoteFieldLocked(lockKey) ? " note-field--locked" : ""}">
+        ${renderNoteLabelRow(f.label, lockKey)}
         <textarea
           data-theme-id="${escapeAttr(themeId)}"
           data-field="${escapeAttr(f.id)}"
@@ -538,14 +607,19 @@ async function renderThemeDetail(themeId) {
           placeholder="${escapeAttr(f.placeholder)}"
         >${escapeHtml(notes[f.id] || "")}</textarea>
       </label>
-    `
-  ).join("");
+    `;
+    })
+    .join("");
 
   els.themeNotesEditor.querySelectorAll("textarea").forEach((ta) => {
     ta.addEventListener("input", () => {
       saveThemeNote(ta.dataset.themeId, state.paper, ta.dataset.field, ta.value);
       updateSyncBadge();
     });
+  });
+
+  bindNoteFieldLocks(els.themeNotesEditor, () => {
+    scheduleCloudFlushAfterUnlock("theme", { themeId, paper: state.paper });
   });
 
   els.themeRelatedQuestions.innerHTML = related.length
@@ -1058,10 +1132,12 @@ function renderQuestionNotesEditor(q) {
   }
 
   const fields = getQuestionNoteFields(state.paper);
-  return fields.map(
-    (f) => `
-      <label class="note-field">
-        <span class="note-label">${f.label}</span>
+  return fields
+    .map((f) => {
+      const lockKey = questionFieldLockKey(q.id, f.id);
+      return `
+      <label class="note-field${isNoteFieldLocked(lockKey) ? " note-field--locked" : ""}">
+        ${renderNoteLabelRow(f.label, lockKey)}
         <textarea
           data-qid="${escapeAttr(q.id)}"
           data-field="${escapeAttr(f.id)}"
@@ -1069,8 +1145,9 @@ function renderQuestionNotesEditor(q) {
           placeholder="${escapeAttr(f.placeholder)}"
         ></textarea>
       </label>
-    `
-  ).join("");
+    `;
+    })
+    .join("");
 }
 
 function partHasAnyNotes(partNotes) {
@@ -1103,10 +1180,11 @@ function renderMathPartNotesEditor(q) {
               ${hasNotes ? '<span class="math-part-has-notes">has notes</span>' : ""}
             </summary>
             <div class="notes-editor math-part-editor">
-              ${MATH_PART_TEXT_FIELDS.map(
-                (f) => `
-                <label class="note-field">
-                  <span class="note-label">${f.label}</span>
+              ${MATH_PART_TEXT_FIELDS.map((f) => {
+                const lockKey = questionFieldLockKey(q.id, f.id, part);
+                return `
+                <label class="note-field${isNoteFieldLocked(lockKey) ? " note-field--locked" : ""}">
+                  ${renderNoteLabelRow(f.label, lockKey)}
                   <textarea
                     data-qid="${escapeAttr(q.id)}"
                     data-part="${part}"
@@ -1115,8 +1193,8 @@ function renderMathPartNotesEditor(q) {
                     placeholder="${escapeAttr(f.placeholder)}"
                   ></textarea>
                 </label>
-              `
-              ).join("")}
+              `;
+              }).join("")}
               <div class="solution-scan-section">
                 <span class="note-label">Solution scan</span>
                 <p class="solution-scan-desc">
@@ -1200,6 +1278,10 @@ function bindQuestionNoteEditors(card, q) {
       saveQuestionNote(ta.dataset.qid, ta.dataset.field, ta.value);
     });
   });
+
+  bindNoteFieldLocks(card, () => {
+    scheduleCloudFlushAfterUnlock("question", { questionId: q.id });
+  });
 }
 
 function refillMathTextareas(card, qid) {
@@ -1245,13 +1327,18 @@ function bindMathPartNoteEditors(card, q) {
   card.querySelectorAll(".math-part-details").forEach((details) => {
     updateMathPartFilledState(details);
   });
+
+  bindNoteFieldLocks(card, () => {
+    scheduleCloudFlushAfterUnlock("question", { questionId: q.id });
+  });
 }
 
 function renderBestAnswerSection(q) {
+  const lockKey = questionFieldLockKey(q.id, BEST_ANSWER_FIELD.id);
   return `
     <div class="best-answer-section">
-      <label class="note-field best-answer-field">
-        <span class="note-label">${BEST_ANSWER_FIELD.label}</span>
+      <label class="note-field best-answer-field${isNoteFieldLocked(lockKey) ? " note-field--locked" : ""}">
+        ${renderNoteLabelRow(BEST_ANSWER_FIELD.label, lockKey)}
         <span class="best-answer-hint">Synced like your other notes · paste model answers from the web</span>
         <textarea
           data-qid="${escapeAttr(q.id)}"
@@ -1363,6 +1450,7 @@ function renderQuestions(questions, listEl = els.questionsList, emptyEl = els.em
         try {
           await pullQuestionNoteFromCloud(q.id);
           refillMathTextareas(card, q.id);
+          refreshNoteFieldLockButtons(card);
           card.querySelectorAll(".math-part-details").forEach((d) => updateMathPartFilledState(d));
         } catch (err) {
           console.error("Notes pull failed:", q.id, err);
