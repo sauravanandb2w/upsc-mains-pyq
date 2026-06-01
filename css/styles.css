@@ -1993,3 +1993,13 @@ body {
   margin: 0.75rem 0 0;
   font-size: 0.78rem;
 }
+
+.math-cloud-hint {
+  margin: 0 0 0.75rem;
+  padding: 0.5rem 0.65rem;
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  background: var(--accent-soft);
+  border-radius: 8px;
+  border: 1px solid var(--border);
+}

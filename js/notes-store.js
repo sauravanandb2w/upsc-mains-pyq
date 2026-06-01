@@ -157,6 +157,17 @@ function mathPartsHasContent(parts) {
   return MATH_PARTS.some((p) => mathPartHasContent(parts[p]));
 }
 
+/** Merge in-memory and localStorage math notes (never prefer empty cache over local). */
+function mergeMathNotesFromSources(questionId) {
+  const fromCache = questionCache.get(questionId);
+  const local = loadLocal(LOCAL_QUESTION_KEY)[questionId];
+  const localParsed = local ? parseLocalMathNotes(local) : null;
+  let parts = emptyMathParts();
+  if (fromCache?.parts) parts = mergeMathParts(parts, fromCache.parts);
+  if (localParsed?.parts) parts = mergeMathParts(parts, localParsed.parts);
+  return { parts };
+}
+
 export function getThemeNoteFields(paper) {
   return paper === 5 || paper === 6 ? MATH_MODULE_NOTE_FIELDS : THEME_NOTE_FIELDS;
 }
@@ -644,24 +655,7 @@ export function getQuestionNotes(questionId, fileNotes = {}) {
   const paper = paperFromQuestionId(questionId);
 
   if (isMathPaper(paper)) {
-    const fromCache = questionCache.get(questionId);
-    const local = loadLocal(LOCAL_QUESTION_KEY)[questionId];
-    const localParsed = local ? parseLocalMathNotes(local) : null;
-
-    if (fromCache?.parts && mathPartsHasContent(fromCache.parts)) {
-      return { parts: mergeMathParts(emptyMathParts(), fromCache.parts) };
-    }
-    if (localParsed?.parts && mathPartsHasContent(localParsed.parts)) {
-      return localParsed;
-    }
-    if (fromCache?.parts) {
-      return { parts: mergeMathParts(emptyMathParts(), fromCache.parts) };
-    }
-    if (localParsed?.parts) {
-      return localParsed;
-    }
-
-    return { parts: emptyMathParts() };
+    return mergeMathNotesFromSources(questionId);
   }
 
   const fromCache = questionCache.get(questionId);
@@ -732,24 +726,53 @@ function writeLocalQuestionNotes(questionId, notes, paper = null) {
 async function flushSingleMathQuestion(questionId) {
   if (!isCloudSyncEnabled()) return false;
 
-  const payload = questionCache.get(questionId);
-  if (!payload?.parts || !mathPartsHasContent(payload.parts)) return false;
+  const paper = paperFromQuestionId(questionId);
+  const merged = mergeMathNotesFromSources(questionId);
+  if (!mathPartsHasContent(merged.parts)) return false;
 
-  const row = questionNotesToRow(
-    questionId,
-    { ...payload, __meta: payload.__meta || getQuestionMeta(questionId) },
-    userId
-  );
+  const payload = { parts: merged.parts, __meta: getQuestionMeta(questionId) };
+  questionCache.set(questionId, payload);
+  writeLocalQuestionNotes(questionId, payload, paper);
+
+  const row = questionNotesToRow(questionId, payload, userId);
   const { error } = await supabase
     .from("question_notes")
     .upsert(row, { onConflict: "user_id,question_id" });
 
   if (error) {
     lastSyncError = error.message;
-    console.error("Math note cloud save failed:", questionId, error.message);
+    console.error("Math note cloud save failed:", questionId, error.message, row);
+    window.dispatchEvent(
+      new CustomEvent("upsc-math-cloud-sync", { detail: { questionId, ok: false, error: error.message } })
+    );
     return false;
   }
+
+  window.dispatchEvent(
+    new CustomEvent("upsc-math-cloud-sync", { detail: { questionId, ok: true } })
+  );
   return true;
+}
+
+/** Fetch one PYQ's notes from Supabase into cache + localStorage. */
+export async function pullQuestionNoteFromCloud(questionId) {
+  if (!isCloudSyncEnabled()) return false;
+
+  const { data, error } = await supabase
+    .from("question_notes")
+    .select("*")
+    .eq("user_id", userId)
+    .eq("question_id", questionId)
+    .maybeSingle();
+
+  if (error) {
+    lastSyncError = error.message;
+    throw error;
+  }
+  if (!data) return false;
+
+  cacheQuestionRowFromCloud(data);
+  return mathPartsHasContent(mergeMathNotesFromSources(questionId).parts);
 }
 
 function scheduleMathCloudFlush(questionId) {
@@ -895,9 +918,10 @@ export async function syncNotesWithCloud() {
 
   clearLastSyncError();
   await flushPendingNotesNow();
+  const pulledFirst = await pullAllNotesFromCloud();
   const pushed = await migrateLocalNotesToCloud();
   const pulled = await pullAllNotesFromCloud();
-  return { pushed, pulled };
+  return { pushed, pulled: pulled, pulledFirst };
 }
 
 /** Pull latest cloud notes (e.g. after editing on another browser). */
