@@ -904,10 +904,11 @@ body {
   color: var(--accent);
 }
 
-.note-lock-hint {
-  font-size: 0.72rem;
+.note-locks-help {
+  font-size: 0.8rem;
   color: var(--text-muted);
-  font-style: italic;
+  margin: 0 0 0.75rem;
+  line-height: 1.4;
 }
 
 .note-field--locked textarea {

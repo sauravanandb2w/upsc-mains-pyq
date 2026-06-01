@@ -50,7 +50,6 @@ import {
   getLastSyncError,
   setLastSyncError,
   installNotesSyncLifecycle,
-  scheduleCloudFlushAfterUnlock,
   isNoteFieldLocked,
   lockNoteField,
   unlockNoteField,
@@ -208,10 +207,9 @@ function renderNoteLabelRow(label, lockKey) {
         class="note-lock-btn${locked ? " note-lock-btn--locked" : ""}"
         data-lock-key="${escapeAttr(lockKey)}"
         aria-pressed="${locked ? "true" : "false"}"
-        title="${locked ? "Locked on all devices. Click Unlock to sync." : "Lock — draft on all devices until you unlock"}"
+        title="${locked ? "Locked on all your devices — edits here do not sync" : "Lock on all your devices — edits will not sync"}"
       >${locked ? "Unlock" : "Lock"}</button>
     </div>
-    ${locked ? '<span class="note-lock-hint">Locked on all devices — unlock here to sync</span>' : ""}
   `;
 }
 
@@ -223,32 +221,23 @@ function syncNoteFieldLockUi(btn) {
   btn.setAttribute("aria-pressed", locked ? "true" : "false");
   btn.textContent = locked ? "Unlock" : "Lock";
   btn.title = locked
-    ? "Locked on all devices. Click Unlock to sync."
-    : "Lock — draft on all devices until you unlock";
+    ? "Locked on all your devices — edits here do not sync"
+    : "Lock on all your devices — edits will not sync";
   field?.classList.toggle("note-field--locked", locked);
-  const existingHint = field?.querySelector(".note-lock-hint");
-  if (locked && !existingHint) {
-    const hint = document.createElement("span");
-    hint.className = "note-lock-hint";
-    hint.textContent = "Locked on all devices — unlock here to sync";
-    field?.querySelector(".note-label-row")?.insertAdjacentElement("afterend", hint);
-  } else if (!locked) {
-    existingHint?.remove();
-  }
+  field?.querySelector(".note-lock-hint")?.remove();
 }
 
 function refreshNoteFieldLockButtons(container) {
   container.querySelectorAll(".note-lock-btn").forEach((btn) => syncNoteFieldLockUi(btn));
 }
 
-function bindNoteFieldLocks(container, onUnlock) {
+function bindNoteFieldLocks(container) {
   container.querySelectorAll(".note-lock-btn").forEach((btn) => {
     btn.addEventListener("click", () => {
       const lockKey = btn.dataset.lockKey;
       const ta = btn.closest(".note-field")?.querySelector("textarea");
       if (isNoteFieldLocked(lockKey)) {
         unlockNoteField(lockKey);
-        onUnlock?.(lockKey);
       } else {
         lockNoteField(lockKey, ta?.value ?? "");
       }
@@ -274,7 +263,8 @@ function updateSyncBadge() {
       els.syncBadge.textContent = "Cloud sync on";
       els.syncBadge.className = "sync-badge sync-badge--cloud";
       els.syncBadge.title = "Notes upload to Supabase when signed in";
-      els.themeSaveHint.textContent = "Notes save here and sync to your account (other browsers after sign-in).";
+      els.themeSaveHint.textContent =
+        "Notes auto-save. Lock = same on all devices; no sync while locked.";
     }
   } else if (isSupabaseConfigured()) {
     els.syncBadge.textContent = "Sign in to sync";
@@ -603,7 +593,13 @@ async function renderThemeDetail(themeId) {
     <p>${moduleSectionLabel(theme) ? `${escapeHtml(moduleSectionLabel(theme))} · ` : ""}${escapeHtml(paper.title)} · ${related.length} related PYQ${related.length === 1 ? "" : "s"}</p>
   `;
 
-  els.themeNotesEditor.innerHTML = noteFields
+  const lockHelp = isCloudSyncEnabled()
+    ? '<p class="note-locks-help">Lock is shared on all devices. While locked, typing does not sync to the cloud.</p>'
+    : "";
+
+  els.themeNotesEditor.innerHTML =
+    lockHelp +
+    noteFields
     .map((f) => {
       const lockKey = themeFieldLockKey(state.paper, themeId, f.id);
       return `
@@ -627,9 +623,7 @@ async function renderThemeDetail(themeId) {
     });
   });
 
-  bindNoteFieldLocks(els.themeNotesEditor, () => {
-    scheduleCloudFlushAfterUnlock("theme", { themeId, paper: state.paper });
-  });
+  bindNoteFieldLocks(els.themeNotesEditor);
 
   els.themeRelatedQuestions.innerHTML = related.length
     ? related
@@ -1288,9 +1282,7 @@ function bindQuestionNoteEditors(card, q) {
     });
   });
 
-  bindNoteFieldLocks(card, () => {
-    scheduleCloudFlushAfterUnlock("question", { questionId: q.id });
-  });
+  bindNoteFieldLocks(card);
 }
 
 function refillMathTextareas(card, qid) {
@@ -1337,9 +1329,7 @@ function bindMathPartNoteEditors(card, q) {
     updateMathPartFilledState(details);
   });
 
-  bindNoteFieldLocks(card, () => {
-    scheduleCloudFlushAfterUnlock("question", { questionId: q.id });
-  });
+  bindNoteFieldLocks(card);
 }
 
 function renderBestAnswerSection(q) {

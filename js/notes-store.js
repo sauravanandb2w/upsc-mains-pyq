@@ -296,6 +296,54 @@ export function lockNoteField(lockKey, currentValue) {
   persistQuestionNotes(parsed.questionId, payload);
 }
 
+async function pushThemeLockStateToCloud(themeId, paper, locks) {
+  if (!isCloudSyncEnabled()) return;
+  const payload = { locked_fields: serializeLockedFields(locks) };
+  const { data, error } = await supabase
+    .from("theme_notes")
+    .update(payload)
+    .eq("user_id", userId)
+    .eq("theme_id", themeId)
+    .eq("paper", paper)
+    .select("theme_id");
+
+  if (error) throw error;
+  if (!data?.length) {
+    const row = themeNotesToRow(
+      themeId,
+      paper,
+      { ...emptyThemeNotes(paper), __locks: locks },
+      userId
+    );
+    const { error: upsertError } = await supabase
+      .from("theme_notes")
+      .upsert(row, { onConflict: "user_id,theme_id" });
+    if (upsertError) throw upsertError;
+  }
+}
+
+async function pushQuestionLockStateToCloud(questionId, locks) {
+  if (!isCloudSyncEnabled()) return;
+  const paper = paperFromQuestionId(questionId);
+  const payload = { locked_fields: serializeLockedFields(locks) };
+  const { data, error } = await supabase
+    .from("question_notes")
+    .update(payload)
+    .eq("user_id", userId)
+    .eq("question_id", questionId)
+    .select("question_id");
+
+  if (error) throw error;
+  if (!data?.length) {
+    const cached = questionCache.get(questionId) || { __locks: locks };
+    const row = questionNotesToRow(questionId, { ...cached, __locks: locks }, userId);
+    const { error: upsertError } = await supabase
+      .from("question_notes")
+      .upsert(row, { onConflict: "user_id,question_id" });
+    if (upsertError) throw upsertError;
+  }
+}
+
 export function unlockNoteField(lockKey) {
   const parsed = parseLockKey(lockKey);
   if (!parsed) return;
@@ -312,8 +360,10 @@ export function unlockNoteField(lockKey) {
     local[key] = stripThemeCacheForLocal(cached);
     saveLocal(LOCAL_THEME_KEY, local);
     if (isCloudSyncEnabled()) {
-      pendingTheme.set(parsed.themeId, { paper: parsed.paper, notes: cached });
-      scheduleThemeFlush();
+      pushThemeLockStateToCloud(parsed.themeId, parsed.paper, nextLocks).catch((err) => {
+        lastSyncError = err?.message || String(err);
+        console.error("Unlock sync failed:", err);
+      });
     }
     return;
   }
@@ -324,7 +374,13 @@ export function unlockNoteField(lockKey) {
   delete nextLocks[parsed.storageKey];
   cached.__locks = nextLocks;
   questionCache.set(parsed.questionId, cached);
-  scheduleCloudFlushAfterUnlock("question", { questionId: parsed.questionId });
+  writeLocalQuestionNotes(parsed.questionId, cached, paperFromQuestionId(parsed.questionId));
+  if (isCloudSyncEnabled()) {
+    pushQuestionLockStateToCloud(parsed.questionId, nextLocks).catch((err) => {
+      lastSyncError = err?.message || String(err);
+      console.error("Unlock sync failed:", err);
+    });
+  }
 }
 
 function stripThemeCacheForLocal(cached) {
@@ -1060,37 +1116,6 @@ export async function flushPendingNotesNow() {
   questionTimer = null;
   themeTimer = null;
   await Promise.all([flushThemeNotes(), flushQuestionNotes()]);
-}
-
-/** After unlocking a field, upload the current draft for that theme or question. */
-export function scheduleCloudFlushAfterUnlock(kind, ids) {
-  if (!isCloudSyncEnabled()) return;
-  if (kind === "theme") {
-    const { themeId, paper } = ids;
-    pendingTheme.set(themeId, {
-      paper,
-      notes: themeCache.get(themeId) || { ...emptyThemeNotes(paper), __locks: {} },
-    });
-    scheduleThemeFlush();
-    return;
-  }
-  const { questionId } = ids;
-  const paper = paperFromQuestionId(questionId);
-  const cached = questionCache.get(questionId) || getQuestionNotes(questionId);
-  if (isMathPaper(paper)) {
-    pendingQuestion.set(questionId, {
-      parts: cached.parts || emptyMathParts(),
-      __locks: cached.__locks || {},
-      __meta: cached.__meta,
-    });
-  } else {
-    pendingQuestion.set(questionId, {
-      ...cached,
-      __locks: cached.__locks || {},
-      __meta: cached.__meta || getQuestionMeta(questionId),
-    });
-  }
-  scheduleQuestionFlush();
 }
 
 async function flushThemeNotes() {
