@@ -13,7 +13,7 @@ A lightweight, offline-friendly web app to browse **UPSC Civil Services (Main) E
 - **Question mode** — browse PYQs with filters; optional per-question notes
 - **Cloud sync** — Supabase (phone + laptop) or local-only fallback
 - **Study materials** — markdown, tables, mermaid flowcharts, images from `study/` folder (push to GitHub). **How to add scans:** [ADDING_IMAGES.md](./ADDING_IMAGES.md)
-- **Your notes** — Brainstorm · Static · Quotes · CA · Value (themes); Intro · Topper points (questions) — synced via Supabase
+- **Your notes** — Brainstorm · Static · Quotes · CA · Value (themes); Intro · Topper points (questions) — synced via Supabase, with **bold / italic / underline** and lists in the editor
 
 ## Build / update question bank
 

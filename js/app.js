@@ -67,6 +67,15 @@ import {
   isWeakAndStale,
   getThemeProgress,
 } from "./notes-store.js";
+import {
+  renderRichNoteEditorHtml,
+  bindRichNoteEditor,
+  setRichNoteContent,
+  readNoteFieldValue,
+  writeNoteFieldValue,
+  syncRichNoteLockState,
+  noteValueHasContent,
+} from "./rich-notes.js";
 import { bindExportNotesButtons } from "./export-notes.js";
 import { bindAnswerTimers, requestTimerNotificationPermission } from "./answer-timer.js";
 import {
@@ -240,6 +249,18 @@ function syncNoteFieldLockUi(btn) {
   btn.innerHTML = noteLockButtonHtml(locked);
   btn.title = locked ? "Locked — edits do not sync" : "Click to lock — no sync on any device";
   field?.classList.toggle("note-field--locked", locked);
+  syncRichNoteLockState(field, locked);
+}
+
+function initRichNoteField(fieldEl, initialValue, onSave) {
+  const editor = fieldEl?.querySelector(".rich-note-editor");
+  if (!editor) return;
+  setRichNoteContent(editor, initialValue);
+  const lockBtn = fieldEl.querySelector(".note-lock-btn");
+  if (lockBtn?.dataset.lockKey) {
+    syncRichNoteLockState(fieldEl, isNoteFieldLocked(lockBtn.dataset.lockKey));
+  }
+  bindRichNoteEditor(editor, { onInput: onSave });
 }
 
 function refreshNoteFieldLockButtons(container) {
@@ -250,13 +271,13 @@ function bindNoteFieldLocks(container) {
   container.querySelectorAll(".note-lock-btn").forEach((btn) => {
     btn.addEventListener("click", async () => {
       const lockKey = btn.dataset.lockKey;
-      const ta = btn.closest(".note-field")?.querySelector("textarea");
+      const field = btn.closest(".note-field");
       btn.disabled = true;
       try {
         if (isNoteFieldLocked(lockKey)) {
           await unlockNoteField(lockKey);
         } else {
-          await lockNoteField(lockKey, ta?.value ?? "");
+          await lockNoteField(lockKey, readNoteFieldValue(field) ?? "");
         }
         syncNoteFieldLockUi(btn);
         updateSyncBadge();
@@ -447,7 +468,7 @@ function usesInsightsSections(paperNum = state.paper) {
 
 function themeHasNotes(themeId, paper = state.paper) {
   const notes = getThemeNotes(themeId, paper);
-  return Object.values(notes).some((v) => String(v).trim());
+  return Object.values(notes).some((v) => noteValueHasContent(v));
 }
 
 function moduleSectionLabel(theme) {
@@ -620,29 +641,37 @@ async function renderThemeDetail(themeId) {
   const lockHelp = isCloudSyncEnabled()
     ? '<p class="note-locks-help">Open lock icon = syncing · Closed lock icon = not syncing (same on all devices)</p>'
     : "";
+  const formatHelp =
+    '<p class="note-locks-help">Use the toolbar for <strong>bold</strong>, <em>italic</em>, underline, and lists (Ctrl+B / Ctrl+I / Ctrl+U).</p>';
 
   els.themeNotesEditor.innerHTML =
     lockHelp +
+    formatHelp +
     noteFields
     .map((f) => {
       const lockKey = themeFieldLockKey(state.paper, themeId, f.id);
+      const rows = f.id === "brainstorm" || f.id === "standardResults" ? 8 : 4;
       return `
       <label class="note-field${isNoteFieldLocked(lockKey) ? " note-field--locked" : ""}">
         ${renderNoteLabelRow(f.label, lockKey)}
-        <textarea
-          data-theme-id="${escapeAttr(themeId)}"
-          data-field="${escapeAttr(f.id)}"
-          rows="${f.id === "brainstorm" || f.id === "standardResults" ? 8 : 4}"
-          placeholder="${escapeAttr(f.placeholder)}"
-        >${escapeHtml(notes[f.id] || "")}</textarea>
+        ${renderRichNoteEditorHtml(
+          {
+            "data-theme-id": themeId,
+            "data-field": f.id,
+          },
+          { placeholder: f.placeholder, rows }
+        )}
       </label>
     `;
     })
     .join("");
 
-  els.themeNotesEditor.querySelectorAll("textarea").forEach((ta) => {
-    ta.addEventListener("input", () => {
-      saveThemeNote(ta.dataset.themeId, state.paper, ta.dataset.field, ta.value);
+  els.themeNotesEditor.querySelectorAll(".note-field").forEach((field) => {
+    const editor = field.querySelector(".rich-note-editor");
+    if (!editor) return;
+    const { themeId: tid, field: fieldId } = editor.dataset;
+    initRichNoteField(field, notes[fieldId] || "", (val) => {
+      saveThemeNote(tid, state.paper, fieldId, val);
       updateSyncBadge();
     });
   });
@@ -1165,12 +1194,13 @@ function renderQuestionNotesEditor(q) {
       return `
       <label class="note-field${isNoteFieldLocked(lockKey) ? " note-field--locked" : ""}">
         ${renderNoteLabelRow(f.label, lockKey)}
-        <textarea
-          data-qid="${escapeAttr(q.id)}"
-          data-field="${escapeAttr(f.id)}"
-          rows="3"
-          placeholder="${escapeAttr(f.placeholder)}"
-        ></textarea>
+        ${renderRichNoteEditorHtml(
+          {
+            "data-qid": q.id,
+            "data-field": f.id,
+          },
+          { placeholder: f.placeholder, rows: 3 }
+        )}
       </label>
     `;
     })
@@ -1179,7 +1209,7 @@ function renderQuestionNotesEditor(q) {
 
 function partHasAnyNotes(partNotes) {
   if (!partNotes) return false;
-  return MATH_PART_TEXT_FIELDS.some((f) => String(partNotes[f.id] || "").trim());
+  return MATH_PART_TEXT_FIELDS.some((f) => noteValueHasContent(partNotes[f.id]));
 }
 
 function renderQuestionStudyImagesDetails(q) {
@@ -1212,13 +1242,14 @@ function renderMathPartNotesEditor(q) {
                 return `
                 <label class="note-field${isNoteFieldLocked(lockKey) ? " note-field--locked" : ""}">
                   ${renderNoteLabelRow(f.label, lockKey)}
-                  <textarea
-                    data-qid="${escapeAttr(q.id)}"
-                    data-part="${part}"
-                    data-field="${escapeAttr(f.id)}"
-                    rows="2"
-                    placeholder="${escapeAttr(f.placeholder)}"
-                  ></textarea>
+                  ${renderRichNoteEditorHtml(
+                    {
+                      "data-qid": q.id,
+                      "data-part": part,
+                      "data-field": f.id,
+                    },
+                    { placeholder: f.placeholder, rows: 2 }
+                  )}
                 </label>
               `;
               }).join("")}
@@ -1285,8 +1316,8 @@ async function mountPartSolutionScans(container, questionId, part) {
 function updateMathPartFilledState(details) {
   if (!details) return;
   const hasText = MATH_PART_TEXT_FIELDS.some((f) => {
-    const el = details.querySelector(`textarea[data-field="${f.id}"]`);
-    return el?.value.trim();
+    const editor = details.querySelector(`.rich-note-editor[data-field="${f.id}"]`);
+    return noteValueHasContent(readNoteFieldValue(editor?.closest(".note-field")));
   });
   const hasGallery = Boolean(details.querySelector(".solution-scan-figure"));
   details.classList.toggle("math-part-details--filled", hasText || hasGallery);
@@ -1299,37 +1330,40 @@ function bindQuestionNoteEditors(card, q) {
   }
 
   const notes = getQuestionNotes(q.id, q.notes);
-  card.querySelectorAll("textarea[data-qid]").forEach((ta) => {
-    ta.value = notes[ta.dataset.field] || "";
-    ta.addEventListener("input", () => {
-      saveQuestionNote(ta.dataset.qid, ta.dataset.field, ta.value);
+  card.querySelectorAll(".note-field .rich-note-editor[data-qid]").forEach((editor) => {
+    const field = editor.closest(".note-field");
+    const { qid, field: fieldId } = editor.dataset;
+    initRichNoteField(field, notes[fieldId] || "", (val) => {
+      saveQuestionNote(qid, fieldId, val);
+      updateSyncBadge();
     });
   });
 
   bindNoteFieldLocks(card);
 }
 
-function refillMathTextareas(card, qid) {
+function refillMathNoteEditors(card, qid) {
   const notes = getQuestionNotes(qid);
-  card.querySelectorAll("textarea[data-part]").forEach((ta) => {
-    ta.value = notes.parts?.[ta.dataset.part]?.[ta.dataset.field] || "";
+  card.querySelectorAll(".rich-note-editor[data-part]").forEach((editor) => {
+    const field = editor.closest(".note-field");
+    writeNoteFieldValue(
+      field,
+      notes.parts?.[editor.dataset.part]?.[editor.dataset.field] || ""
+    );
   });
 }
 
 function bindMathPartNoteEditors(card, q) {
   const notes = getQuestionNotes(q.id, q.notes);
 
-  card.querySelectorAll("textarea[data-part]").forEach((ta) => {
-    const part = ta.dataset.part;
-    const field = ta.dataset.field;
-    ta.value = notes.parts?.[part]?.[field] || "";
-    const save = () => {
-      saveMathPartNote(ta.dataset.qid, part, field, ta.value);
-      updateMathPartFilledState(ta.closest(".math-part-details"));
-    };
-    ta.addEventListener("input", save);
-    ta.addEventListener("change", save);
-    ta.addEventListener("blur", save);
+  card.querySelectorAll(".note-field .rich-note-editor[data-part]").forEach((editor) => {
+    const field = editor.closest(".note-field");
+    const { qid, part, field: fieldId } = editor.dataset;
+    initRichNoteField(field, notes.parts?.[part]?.[fieldId] || "", (val) => {
+      saveMathPartNote(qid, part, fieldId, val);
+      updateMathPartFilledState(field.closest(".math-part-details"));
+      updateSyncBadge();
+    });
   });
 
   card.querySelectorAll(".solution-scan-gallery").forEach((gallery) => {
@@ -1363,12 +1397,13 @@ function renderBestAnswerSection(q) {
       <label class="note-field best-answer-field${isNoteFieldLocked(lockKey) ? " note-field--locked" : ""}">
         ${renderNoteLabelRow(BEST_ANSWER_FIELD.label, lockKey)}
         <span class="best-answer-hint">Synced like your other notes · paste model answers from the web</span>
-        <textarea
-          data-qid="${escapeAttr(q.id)}"
-          data-field="${escapeAttr(BEST_ANSWER_FIELD.id)}"
-          rows="8"
-          placeholder="${escapeAttr(BEST_ANSWER_FIELD.placeholder)}"
-        ></textarea>
+        ${renderRichNoteEditorHtml(
+          {
+            "data-qid": q.id,
+            "data-field": BEST_ANSWER_FIELD.id,
+          },
+          { placeholder: BEST_ANSWER_FIELD.placeholder, rows: 8 }
+        )}
       </label>
     </div>
   `;
@@ -1473,12 +1508,15 @@ function renderQuestions(questions, listEl = els.questionsList, emptyEl = els.em
         try {
           await pullQuestionNoteFromCloud(q.id);
           if (isMath) {
-            refillMathTextareas(card, q.id);
+            refillMathNoteEditors(card, q.id);
             card.querySelectorAll(".math-part-details").forEach((d) => updateMathPartFilledState(d));
           } else {
             const notes = getQuestionNotes(q.id);
-            card.querySelectorAll("textarea[data-qid]").forEach((ta) => {
-              ta.value = notes[ta.dataset.field] || "";
+            card.querySelectorAll(".note-field .rich-note-editor[data-qid]:not([data-part])").forEach((editor) => {
+              writeNoteFieldValue(
+                editor.closest(".note-field"),
+                notes[editor.dataset.field] || ""
+              );
             });
           }
           refreshNoteFieldLockButtons(card);

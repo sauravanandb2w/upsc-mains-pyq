@@ -92,6 +92,10 @@ On first sign-in, any notes previously saved in browser localStorage are merged 
 
 **Themes** tab = main brainstorm (by syllabus theme). **Questions** tab = per-PYQ notes (and Math parts a–e). All use the same Supabase tables when signed in.
 
+### Text formatting
+
+Each note box has a small toolbar: **bold**, *italic*, underline, strikethrough, bullet/numbered lists, and clear formatting. Shortcuts: **Ctrl+B**, **Ctrl+I**, **Ctrl+U** (Cmd on Mac). Formatting is stored as safe HTML in the same note columns and syncs like plain text. Old plain-text notes still work unchanged.
+
 ---
 
 ## Field locks (padlock on each note box)

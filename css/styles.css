@@ -351,7 +351,7 @@ body {
   color: var(--text-muted);
 }
 
-.theme-notes-editor textarea[data-field="brainstorm"] {
+.theme-notes-editor .rich-note[data-rows="8"] .rich-note-editor {
   min-height: 10rem;
   font-size: 0.92rem;
 }
@@ -921,12 +921,72 @@ body {
   line-height: 1.4;
 }
 
-.note-field--locked textarea {
+.note-field--locked .rich-note-editor {
   border-style: dashed;
   border-color: color-mix(in srgb, var(--accent) 40%, var(--border));
 }
 
-.note-field textarea {
+.rich-note {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.rich-note-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.2rem;
+}
+
+.rich-note-toolbar-sep {
+  width: 1px;
+  height: 1.25rem;
+  margin: 0 0.15rem;
+  background: var(--border);
+}
+
+.rich-note-tool {
+  min-width: 1.75rem;
+  height: 1.75rem;
+  padding: 0 0.35rem;
+  font-family: inherit;
+  font-size: 0.8rem;
+  font-weight: 700;
+  line-height: 1;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--surface);
+  color: var(--text);
+  cursor: pointer;
+}
+
+.rich-note-tool:hover:not(:disabled) {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.rich-note-tool:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.rich-note-tool[data-cmd="italic"] {
+  font-style: italic;
+  font-weight: 600;
+}
+
+.rich-note-tool[data-cmd="underline"] {
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+.rich-note-tool[data-cmd="strikeThrough"] {
+  text-decoration: line-through;
+  font-weight: 600;
+}
+
+.rich-note-editor {
   width: 100%;
   padding: 0.55rem 0.65rem;
   font-family: inherit;
@@ -936,18 +996,57 @@ body {
   border-radius: 8px;
   background: var(--bg);
   color: var(--text);
-  resize: vertical;
+  min-height: 4rem;
+  overflow-y: auto;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.rich-note[data-rows="2"] .rich-note-editor {
+  min-height: 3.25rem;
+}
+
+.rich-note[data-rows="3"] .rich-note-editor {
   min-height: 4rem;
 }
 
-.note-field textarea:focus {
+.rich-note[data-rows="4"] .rich-note-editor {
+  min-height: 5rem;
+}
+
+.rich-note[data-rows="8"] .rich-note-editor {
+  min-height: 8rem;
+}
+
+.rich-note-editor:focus {
   outline: 2px solid color-mix(in srgb, var(--accent) 45%, transparent);
   border-color: var(--accent);
 }
 
-.note-field textarea::placeholder {
+.rich-note-editor:empty::before {
+  content: attr(data-placeholder);
   color: var(--text-muted);
   opacity: 0.75;
+  pointer-events: none;
+}
+
+.rich-note-editor--locked {
+  opacity: 0.92;
+  cursor: default;
+}
+
+.rich-note-editor ul,
+.rich-note-editor ol {
+  margin: 0.35rem 0 0.35rem 1.25rem;
+  padding: 0;
+}
+
+.rich-note-editor p {
+  margin: 0 0 0.35rem;
+}
+
+.rich-note-editor p:last-child {
+  margin-bottom: 0;
 }
 
 .empty-state {
@@ -1315,7 +1414,7 @@ body {
   color: var(--text-muted);
 }
 
-.best-answer-field textarea {
+.best-answer-field .rich-note-editor {
   min-height: 10rem;
   font-size: 0.88rem;
   line-height: 1.55;

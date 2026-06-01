@@ -3,6 +3,7 @@ import {
   questionFieldLockKey,
   themeFieldLockKey,
 } from "./field-locks.js";
+import { noteHtmlToPlainText, noteValueHasContent } from "./rich-notes.js";
 
 export { themeFieldLockKey, questionFieldLockKey } from "./field-locks.js";
 
@@ -164,7 +165,7 @@ function mergeMathParts(base, patch) {
 }
 
 function mathPartHasContent(partNotes) {
-  return MATH_PART_TEXT_FIELDS.some((f) => String(partNotes?.[f.id] || "").trim());
+  return MATH_PART_TEXT_FIELDS.some((f) => fieldValueHasContent(partNotes?.[f.id]));
 }
 
 function mathPartsHasContent(parts) {
@@ -1626,15 +1627,22 @@ export async function migrateLocalNotesToCloud() {
   return pushLocalNotesToCloud();
 }
 
+function fieldValueHasContent(value) {
+  return noteValueHasContent(value);
+}
+
 function hasContent(notes) {
   if (notes?.parts) return mathPartsHasContent(notes.parts);
   return Object.entries(notes).some(
-    ([k, v]) => k !== "__locks" && k !== "__meta" && String(v).trim()
+    ([k, v]) => k !== "__locks" && k !== "__meta" && fieldValueHasContent(v)
   );
 }
 
 export function themeNotesHaystack(themeId) {
-  return Object.values(getThemeNotes(themeId)).join(" ").toLowerCase();
+  return Object.values(getThemeNotes(themeId))
+    .map((v) => noteHtmlToPlainText(String(v ?? "")))
+    .join(" ")
+    .toLowerCase();
 }
 
 export function questionNotesHaystack(questionId, fileNotes) {
@@ -1643,13 +1651,20 @@ export function questionNotesHaystack(questionId, fileNotes) {
   const statusLabel = QUESTION_STATUSES.find((s) => s.id === meta.status)?.label || "";
   if (notes.parts) {
     return [
-      ...MATH_PARTS.flatMap((p) => MATH_PART_TEXT_FIELDS.map((f) => notes.parts[p]?.[f.id])),
+      ...MATH_PARTS.flatMap((p) =>
+        MATH_PART_TEXT_FIELDS.map((f) => noteHtmlToPlainText(notes.parts[p]?.[f.id] ?? ""))
+      ),
       statusLabel,
     ]
       .join(" ")
       .toLowerCase();
   }
-  return [...Object.values(notes), statusLabel].join(" ").toLowerCase();
+  return [
+    ...Object.values(notes).map((v) => noteHtmlToPlainText(String(v ?? ""))),
+    statusLabel,
+  ]
+    .join(" ")
+    .toLowerCase();
 }
 
 export async function fetchAllNotesForExport() {
@@ -1697,7 +1712,7 @@ export function formatThemeNotesForExport(row) {
   const paper = row.paper;
   const lines = [`### ${row.theme_id} (Paper ${paper})`, ""];
   for (const f of getThemeNoteFields(paper)) {
-    const val = row[f.db]?.trim();
+    const val = noteHtmlToPlainText(row[f.db] ?? "").trim();
     if (val) lines.push(`**${f.label}**`, "", val, "");
   }
   return lines;
@@ -1721,7 +1736,7 @@ export function formatQuestionNotesForExport(row) {
       if (!mathPartHasContent(partNotes)) continue;
       lines.push(`#### Part (${part})`, "");
       for (const f of MATH_PART_TEXT_FIELDS) {
-        const val = partNotes[f.id]?.trim();
+        const val = noteHtmlToPlainText(partNotes[f.id] ?? "").trim();
         if (val) lines.push(`**${f.label}**`, "", val, "");
       }
     }
@@ -1729,7 +1744,7 @@ export function formatQuestionNotesForExport(row) {
   }
 
   for (const f of allQuestionNoteFields(paper)) {
-    const val = row[f.db]?.trim();
+    const val = noteHtmlToPlainText(row[f.db] ?? "").trim();
     if (val) lines.push(`**${f.label}**`, "", val, "");
   }
   return lines;
