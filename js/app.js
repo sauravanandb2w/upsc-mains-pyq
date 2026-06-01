@@ -333,8 +333,8 @@ function countQuestionsForInsightsSection(paperNum, sectionName) {
   return paper.questions.filter((q) => q.insightsSection === sectionName).length;
 }
 
-function isGs4Paper(paperNum = state.paper) {
-  return paperNum === 4;
+function usesInsightsSections(paperNum = state.paper) {
+  return getInsightsSections(paperNum).length > 0;
 }
 
 function themeHasNotes(themeId, paper = state.paper) {
@@ -368,16 +368,16 @@ async function renderThemeView() {
 function renderThemeGrid(paper) {
   const themes = getThemesForPaper(state.paper);
   const isMath = isMathPaper(state.paper);
-  const isGs4 = isGs4Paper(state.paper);
-  const insightsSections = isGs4 ? getInsightsSections(state.paper) : [];
+  const isInsights = usesInsightsSections(state.paper);
+  const insightsSections = isInsights ? getInsightsSections(state.paper) : [];
 
   els.themePaperMeta.innerHTML = `
-    <h2>${escapeHtml(paper.title)} — ${isMath ? "Modules" : isGs4 ? "Sections" : "Themes"}</h2>
+    <h2>${escapeHtml(paper.title)} — ${isMath ? "Modules" : isInsights ? "Sections" : "Themes"}</h2>
     <p>${escapeHtml(paper.syllabus)}</p>
     <p class="meta-range">${
       isMath
         ? "Section A & B · Notebook scans in study/modules/ · Notes sync when signed in"
-        : isGs4
+        : isInsights
           ? "Subject-wise PYQs (Insights on India index) · Filter by section in Questions view"
           : "Syllabus-aligned sub-themes · Notes sync when signed in"
     }</p>
@@ -391,11 +391,26 @@ function renderThemeGrid(paper) {
         themes: themes.filter((t) => t.section === section).sort((a, b) => (a.order || 0) - (b.order || 0)),
       });
     }
-  } else if (isGs4 && insightsSections.length) {
-    const theory = insightsSections.filter((s) => !String(s.name).startsWith("Case Study:"));
-    const cases = insightsSections.filter((s) => String(s.name).startsWith("Case Study:"));
-    if (theory.length) groups.push({ label: "Theory", themes: theory, gs4Section: true });
-    if (cases.length) groups.push({ label: "Case studies", themes: cases, gs4Section: true });
+  } else if (isInsights && insightsSections.length) {
+    if (state.paper === 4) {
+      const theory = insightsSections.filter((s) => !String(s.name).startsWith("Case Study:"));
+      const cases = insightsSections.filter((s) => String(s.name).startsWith("Case Study:"));
+      if (theory.length) groups.push({ label: "Theory", themes: theory, insightsSection: true });
+      if (cases.length) groups.push({ label: "Case studies", themes: cases, insightsSection: true });
+    } else {
+      const seenParents = new Set();
+      for (const s of insightsSections) {
+        const parent = s.parent || "Other";
+        if (!seenParents.has(parent)) {
+          seenParents.add(parent);
+          groups.push({
+            label: parent,
+            themes: insightsSections.filter((x) => (x.parent || "Other") === parent),
+            insightsSection: true,
+          });
+        }
+      }
+    }
   } else {
     const seenParents = new Set();
     for (const t of themes) {
@@ -417,7 +432,7 @@ function renderThemeGrid(paper) {
         : "";
       const cards = group.themes
         .map((t) => {
-          const isSection = Boolean(group.gs4Section);
+          const isSection = Boolean(group.insightsSection);
           const count = isSection
             ? countQuestionsForInsightsSection(state.paper, t.name)
             : countQuestionsForTheme(state.paper, t.id);
@@ -682,27 +697,47 @@ function populateThemeFilter() {
   const themes = getThemesForPaper(state.paper);
   const isMath = isMathPaper(state.paper);
   const prev = state.theme;
-  const label = isMath ? "modules" : isGs4Paper(state.paper) ? "sections" : "themes";
+  const label = isMath ? "modules" : usesInsightsSections(state.paper) ? "sections" : "themes";
   els.themeFilter.innerHTML = `<option value="all">All ${label}</option>`;
 
-  if (isGs4Paper(state.paper)) {
+  if (usesInsightsSections(state.paper)) {
     const sections = getInsightsSections(state.paper);
-    const theory = sections.filter((s) => !String(s.name).startsWith("Case Study:"));
-    const cases = sections.filter((s) => String(s.name).startsWith("Case Study:"));
-    for (const group of [
-      { label: "Theory", items: theory },
-      { label: "Case studies", items: cases },
-    ]) {
-      if (!group.items.length) continue;
-      const optgroup = document.createElement("optgroup");
-      optgroup.label = group.label;
-      group.items.forEach((s) => {
-        const opt = document.createElement("option");
-        opt.value = s.name;
-        opt.textContent = s.displayName || s.name;
-        optgroup.appendChild(opt);
-      });
-      els.themeFilter.appendChild(optgroup);
+    if (state.paper === 4) {
+      const theory = sections.filter((s) => !String(s.name).startsWith("Case Study:"));
+      const cases = sections.filter((s) => String(s.name).startsWith("Case Study:"));
+      for (const group of [
+        { label: "Theory", items: theory },
+        { label: "Case studies", items: cases },
+      ]) {
+        if (!group.items.length) continue;
+        const optgroup = document.createElement("optgroup");
+        optgroup.label = group.label;
+        group.items.forEach((s) => {
+          const opt = document.createElement("option");
+          opt.value = s.name;
+          opt.textContent = s.displayName || s.name;
+          optgroup.appendChild(opt);
+        });
+        els.themeFilter.appendChild(optgroup);
+      }
+    } else {
+      const seenParents = new Set();
+      for (const s of sections) {
+        const parent = s.parent || "Other";
+        if (seenParents.has(parent)) continue;
+        seenParents.add(parent);
+        const optgroup = document.createElement("optgroup");
+        optgroup.label = parent;
+        sections
+          .filter((x) => (x.parent || "Other") === parent)
+          .forEach((s) => {
+            const opt = document.createElement("option");
+            opt.value = s.name;
+            opt.textContent = s.displayName || s.name;
+            optgroup.appendChild(opt);
+          });
+        els.themeFilter.appendChild(optgroup);
+      }
     }
     const names = sections.map((s) => s.name);
     if (prev !== "all" && names.includes(prev)) {
@@ -826,7 +861,7 @@ function filterQuestions(questions) {
   return questions.filter((q) => {
     if (state.year !== "all" && String(q.year) !== state.year) return false;
     if (state.theme !== "all") {
-      if (isGs4Paper(state.paper) && q.insightsSection) {
+      if (usesInsightsSections(state.paper) && q.insightsSection) {
         if (q.insightsSection !== state.theme) return false;
       } else if (q.theme !== state.theme && q.module !== state.theme) {
         return false;
@@ -1242,7 +1277,7 @@ function renderQuestions(questions, listEl = els.questionsList, emptyEl = els.em
         <span class="badge marks">${formatMarks(q.marks)}</span>
         ${sectionBadge}
         <span class="badge theme-badge">${escapeHtml(
-          isGs4Paper(state.paper) && q.insightsSection
+          usesInsightsSections(state.paper) && q.insightsSection
             ? q.insightsSection.replace(/^Case Study:\s*/, "")
             : q.theme || q.module || "—"
         )}</span>
@@ -1426,7 +1461,7 @@ function updateViewTabLabels() {
   if (els.viewTabThemes) {
     if (isMathPaper(state.paper)) {
       els.viewTabThemes.textContent = "Modules";
-    } else if (isGs4Paper(state.paper)) {
+    } else if (usesInsightsSections(state.paper)) {
       els.viewTabThemes.textContent = "Sections";
     } else {
       els.viewTabThemes.textContent = "Themes";
@@ -1436,7 +1471,7 @@ function updateViewTabLabels() {
   if (themeFilterLabel) {
     if (isMathPaper(state.paper)) {
       themeFilterLabel.textContent = "Module";
-    } else if (isGs4Paper(state.paper)) {
+    } else if (usesInsightsSections(state.paper)) {
       themeFilterLabel.textContent = "Section";
     } else {
       themeFilterLabel.textContent = "Theme";

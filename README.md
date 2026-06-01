@@ -47,6 +47,18 @@ python3 scripts/build-gs4-insights.py --input path/to/export.md
 
 Re-run after updating the source markdown. Verify wording against official UPSC papers where needed.
 
+### GS Paper III — Insights on India index
+
+Builds **`data/gs-paper-3.json`** (258 PYQs, 2013–2025) from the subject-wise list at [Insights on India](https://www.insightsonindia.com/upsc-mains-general-studies-3-pyq/), with **`insightsSection`** on each question (Indian Economy, Agriculture, S&T, Environment, Internal Security, etc.).
+
+```bash
+# Uses cached export in data/sources/insights-gs3-pyq.md
+python3 scripts/build-gs3-insights.py
+
+python3 scripts/build-gs3-insights.py --fetch
+python3 scripts/build-gs3-insights.py --input path/to/export.md
+```
+
 ### Mathematics Optional PYQs (official UPSC PDFs)
 
 Fetches **Civil Services (Main) Mathematics Optional** Paper I & II from [upsc.gov.in](https://www.upsc.gov.in/examinations/previous-question-papers), OCRs scanned PDFs, classifies by module, writes `data/math-paper-1.json` and `data/math-paper-2.json`.
@@ -61,7 +73,7 @@ python3 scripts/fetch-math-pyq.py --year 2024   # single year
 
 Question text is shown as **official PDF scan cutouts** under `study/questions/math*`. Year **2013** is not on upsc.gov.in; **2016, 2017, 2020** use local PDFs in `data/sources/` (`MATH1_YYYY.pdf`, `MATH2_YYYY.pdf`, or `MATHS_I.pdf` / `MATHS_II.pdf`).
 
-**Coverage (approx.):** GS II & III 2013–2024; GS I from 2015; **GS IV full subject-wise index (2013–2025) via Insights on India**. Missing years are listed in the app. Add JSON under `data/sources/` and rebuild. Verify wording on [upsc.gov.in](https://upsc.gov.in/examinations/previous-question-papers).
+**Coverage (approx.):** GS I from 2015; GS II 2013–2024; **GS III & IV full subject-wise index (2013–2025) via Insights on India**. Missing years are listed in the app. Add JSON under `data/sources/` and rebuild. Verify wording on [upsc.gov.in](https://upsc.gov.in/examinations/previous-question-papers).
 
 ## Run locally
 

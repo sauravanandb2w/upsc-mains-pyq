@@ -372,7 +372,101 @@
         "parent": "Internal Security",
         "keywords": "cyber narco-terrorism social media encrypting messaging attacks defensive measures internal security militants deny local support"
       }
-    ]
+    ],
+    "insightsSections": [
+      {
+        "id": "indian-economy",
+        "name": "Indian Economy",
+        "displayName": "Indian Economy",
+        "themeId": "fiscal-monetary-growth",
+        "parent": "Economy & Development"
+      },
+      {
+        "id": "inclusive-growth",
+        "name": "Inclusive Growth",
+        "displayName": "Inclusive Growth",
+        "themeId": "fiscal-monetary-growth",
+        "parent": "Economy & Development"
+      },
+      {
+        "id": "government-budgeting",
+        "name": "Government Budgeting",
+        "displayName": "Government Budgeting",
+        "themeId": "fiscal-monetary-growth",
+        "parent": "Economy & Development"
+      },
+      {
+        "id": "agriculture-and-food-security",
+        "name": "Agriculture and Food Security",
+        "displayName": "Agriculture and Food Security",
+        "themeId": "crops-farmers",
+        "parent": "Agriculture & Food Security"
+      },
+      {
+        "id": "food-processing-and-related-industri",
+        "name": "Food Processing and Related Industries in India",
+        "displayName": "Food Processing and Related Industries in India",
+        "themeId": "irrigation-agri-economy",
+        "parent": "Agriculture & Food Security"
+      },
+      {
+        "id": "land-reforms-in-india",
+        "name": "Land Reforms in India",
+        "displayName": "Land Reforms in India",
+        "themeId": "employment-labour",
+        "parent": "Economy & Development"
+      },
+      {
+        "id": "effects-of-liberalization-on-the-eco",
+        "name": "Effects of Liberalization on the Economy, Industrial Policy",
+        "displayName": "Effects of Liberalization on the Economy, Industrial Policy",
+        "themeId": "industry-infrastructure",
+        "parent": "Economy & Development"
+      },
+      {
+        "id": "infrastructure",
+        "name": "Infrastructure",
+        "displayName": "Infrastructure",
+        "themeId": "industry-infrastructure",
+        "parent": "Economy & Development"
+      },
+      {
+        "id": "investment-models",
+        "name": "Investment Models",
+        "displayName": "Investment Models",
+        "themeId": "industry-infrastructure",
+        "parent": "Economy & Development"
+      },
+      {
+        "id": "science-and-technology",
+        "name": "Science and Technology",
+        "displayName": "Science and Technology",
+        "themeId": "space-nuclear-defence",
+        "parent": "Science & Technology"
+      },
+      {
+        "id": "environment-climate-change-and-conse",
+        "name": "Environment, Climate Change, and Conservation",
+        "displayName": "Environment, Climate Change, and Conservation",
+        "themeId": "climate-energy",
+        "parent": "Environment & Biodiversity"
+      },
+      {
+        "id": "disaster-management",
+        "name": "Disaster Management",
+        "displayName": "Disaster Management",
+        "themeId": "disaster-management",
+        "parent": "Environment & Biodiversity"
+      },
+      {
+        "id": "internal-security",
+        "name": "Internal Security",
+        "displayName": "Internal Security",
+        "themeId": "terrorism-insurgency",
+        "parent": "Internal Security"
+      }
+    ],
+    "source": "https://www.insightsonindia.com/upsc-mains-general-studies-3-pyq/"
   },
   "4": {
     "label": "GS Paper IV",
