@@ -90,8 +90,19 @@ On first sign-in, any notes previously saved in browser localStorage are merged 
 | "Configure js/config.js" | Copy `config.example.js` → `config.js` and add keys |
 | Sign up works but can't sign in | Check email confirmation or disable confirm in Supabase |
 | Google login fails | Add redirect URL in Supabase + Google OAuth console |
+| **`Could not find the 'bookmarked' column`** | Your DB is missing newer columns — run **`supabase/migrate-existing-project.sql`** in Supabase → SQL Editor (see below) |
 | Notes don't sync | Check browser console; verify schema SQL ran successfully |
 | CORS / fetch errors | Use `http.server`, not `file://` |
+
+### Fix: `bookmarked` / `study_status` column missing
+
+If the app shows **Cloud save failed** and mentions `bookmarked` (or `study_status`) in the schema cache, the project was created from an **old** schema. The app still saves notes **locally**; only cloud sync fails until you migrate:
+
+1. Open [Supabase](https://supabase.com) → your project → **SQL Editor** → **New query**.
+2. Copy all of [`supabase/migrate-existing-project.sql`](supabase/migrate-existing-project.sql) and **Run**.
+3. Wait ~1 minute (schema cache refresh), then hard-refresh the PYQ app and try again.
+
+You do **not** need to change the app code or click **Sync notes** for every edit after this — only run the SQL once.
 
 ## Security notes
 
