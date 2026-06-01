@@ -44,7 +44,16 @@ import {
   migrateLocalNotesToCloud,
   themeNotesHaystack,
   questionNotesHaystack,
+  QUESTION_STATUSES,
+  getQuestionMeta,
+  setQuestionStatus,
+  toggleQuestionBookmark,
+  getReviseTodayItems,
+  isDueForRevision,
+  isWeakAndStale,
 } from "./notes-store.js";
+import { bindExportNotesButtons } from "./export-notes.js";
+import { bindAnswerTimers, requestTimerNotificationPermission } from "./answer-timer.js";
 import { loadRepoSolutionScans, solutionScanGitCommand } from "./solution-scans.js";
 import {
   renderGitHubUploadButton,
@@ -72,6 +81,10 @@ const state = {
   theme: "all",
   section: "all",
   search: "",
+  searchNotes: true,
+  statusFilter: "all",
+  bookmarkFilter: "all",
+  reviseFilter: "all",
   authTab: "signin",
 };
 
@@ -123,6 +136,13 @@ const els = {
   paperNavMath: document.getElementById("paperNavMath"),
   sectionFilterGroup: document.getElementById("sectionFilterGroup"),
   sectionFilter: document.getElementById("sectionFilter"),
+  statusFilter: document.getElementById("statusFilter"),
+  bookmarkFilter: document.getElementById("bookmarkFilter"),
+  reviseFilter: document.getElementById("reviseFilter"),
+  reviseTodayPanel: document.getElementById("reviseTodayPanel"),
+  reviseTodayList: document.getElementById("reviseTodayList"),
+  exportJsonBtn: document.getElementById("exportJsonBtn"),
+  exportMdBtn: document.getElementById("exportMdBtn"),
   viewTabThemes: document.querySelector('.view-tab[data-view="themes"]'),
   githubConnectBtn: document.getElementById("githubConnectBtn"),
 };
@@ -636,9 +656,114 @@ function filterQuestions(questions) {
       if (state.marks !== "case" && qMarks !== state.marks) return false;
     }
 
+    const meta = getQuestionMeta(q.id);
+    if (state.statusFilter !== "all" && meta.status !== state.statusFilter) return false;
+    if (state.bookmarkFilter === "bookmarked" && !meta.bookmarked) return false;
+    if (state.reviseFilter === "due" && !isDueForRevision(meta)) return false;
+    if (state.reviseFilter === "weak-stale" && !isWeakAndStale(meta)) return false;
+
     if (!term) return true;
     return questionHaystack(q).includes(term);
   });
+}
+
+function renderReviseTodayPanel(questions) {
+  if (!els.reviseTodayPanel || !els.reviseTodayList) return;
+
+  const items = getReviseTodayItems(questions, 5);
+  if (!items.length) {
+    els.reviseTodayPanel.classList.add("hidden");
+    return;
+  }
+
+  els.reviseTodayPanel.classList.remove("hidden");
+  els.reviseTodayList.innerHTML = items
+    .map((q) => {
+      const meta = getQuestionMeta(q.id);
+      const label = isMathPaper(state.paper)
+        ? `${q.year} · Q.${q.number} · ${q.module || q.theme}`
+        : `${q.year} · Q.${q.number} · ${q.theme}`;
+      const tag = meta.bookmarked ? "★" : meta.status === "weak" ? "weak" : "due";
+      return `
+        <li>
+          <button type="button" class="revise-today-link" data-qid="${escapeAttr(q.id)}">
+            <span class="revise-today-tag">${escapeHtml(tag)}</span>
+            ${escapeHtml(label)}
+          </button>
+        </li>`;
+    })
+    .join("");
+
+  els.reviseTodayList.querySelectorAll(".revise-today-link").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const card = document.querySelector(`.question-card[data-qid="${btn.dataset.qid}"]`);
+      card?.scrollIntoView({ behavior: "smooth", block: "start" });
+      card?.classList.add("question-card--highlight");
+      setTimeout(() => card?.classList.remove("question-card--highlight"), 2000);
+    });
+  });
+}
+
+function renderQuestionStudyToolbar(q) {
+  const meta = getQuestionMeta(q.id);
+  const statusOptions = QUESTION_STATUSES.map(
+    (s) =>
+      `<option value="${escapeAttr(s.id)}"${meta.status === s.id ? " selected" : ""}>${escapeHtml(s.label)}</option>`
+  ).join("");
+
+  const timerHtml = isMathPaper(state.paper)
+    ? ""
+    : `
+    <div class="answer-timer" data-qid="${escapeAttr(q.id)}">
+      <span class="answer-timer-label">Timer</span>
+      <button type="button" class="btn-ghost btn-sm" data-mins="7">7m</button>
+      <button type="button" class="btn-ghost btn-sm" data-mins="10">10m</button>
+      <button type="button" class="btn-ghost btn-sm" data-mins="15">15m</button>
+      <span class="answer-timer-display hidden" aria-live="polite"></span>
+      <button type="button" class="answer-timer-stop btn-ghost btn-sm hidden">Stop</button>
+    </div>`;
+
+  return `
+    <div class="question-study-toolbar">
+      <label class="question-status-wrap">
+        <span class="visually-hidden">Status</span>
+        <select class="question-status-select" data-qid="${escapeAttr(q.id)}" aria-label="Question status">
+          ${statusOptions}
+        </select>
+      </label>
+      <button
+        type="button"
+        class="question-bookmark-btn${meta.bookmarked ? " question-bookmark-btn--on" : ""}"
+        data-qid="${escapeAttr(q.id)}"
+        aria-label="${meta.bookmarked ? "Remove star" : "Star for revision"}"
+        title="${meta.bookmarked ? "Starred" : "Star for revision"}"
+      >${meta.bookmarked ? "★" : "☆"}</button>
+      ${timerHtml}
+    </div>`;
+}
+
+function bindQuestionStudyToolbar(card) {
+  card.querySelectorAll(".question-status-select").forEach((sel) => {
+    sel.addEventListener("change", () => {
+      setQuestionStatus(sel.dataset.qid, sel.value);
+      const paper = papers[state.paper];
+      if (paper) renderReviseTodayPanel(paper.questions);
+    });
+  });
+
+  card.querySelectorAll(".question-bookmark-btn").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const next = toggleQuestionBookmark(btn.dataset.qid);
+      btn.classList.toggle("question-bookmark-btn--on", next);
+      btn.textContent = next ? "★" : "☆";
+      btn.title = next ? "Starred" : "Star for revision";
+      btn.setAttribute("aria-label", next ? "Remove star" : "Star for revision");
+      const paper = papers[state.paper];
+      if (paper) renderReviseTodayPanel(paper.questions);
+    });
+  });
+
+  bindAnswerTimers(card);
 }
 
 function renderPaperMeta(paper) {
@@ -885,6 +1010,7 @@ function renderQuestions(questions) {
     const card = document.createElement("article");
     card.className = "question-card";
     card.setAttribute("role", "listitem");
+    card.dataset.qid = q.id;
 
     const subHtml =
       q.subthemes && q.subthemes.length
@@ -918,6 +1044,7 @@ function renderQuestions(questions) {
         <span class="badge theme-badge">${escapeHtml(q.theme || q.module || "—")}</span>
         <span class="question-num">Q.${q.number}</span>
       </div>
+      ${renderQuestionStudyToolbar(q)}
       ${bodyHtml}
       ${subHtml}
       ${themeLink}
@@ -958,6 +1085,7 @@ function renderQuestions(questions) {
     }
 
     bindQuestionNoteEditors(card, q);
+    bindQuestionStudyToolbar(card);
     if (isMath && q.scanImages?.length) {
       bindMathScanFallbacks(card, q);
     }
@@ -1013,6 +1141,8 @@ async function renderQuestionView() {
   const paper = papers[state.paper];
   if (!paper) return;
 
+  await loadQuestionNotesForIds(paper.questions.map((q) => q.id));
+
   const filtered = filterQuestions(paper.questions);
 
   filtered.sort((a, b) => {
@@ -1020,9 +1150,8 @@ async function renderQuestionView() {
     return String(a.number).localeCompare(String(b.number), undefined, { numeric: true });
   });
 
-  await loadQuestionNotesForIds(filtered.map((q) => q.id));
-
   renderPaperMeta(paper);
+  renderReviseTodayPanel(paper.questions);
   renderStats(filtered, paper.questions.length);
   updateDataNote(paper);
   renderQuestions(filtered);
@@ -1090,11 +1219,17 @@ function clearAllFilters() {
   state.marks = "all";
   state.theme = "all";
   state.section = "all";
+  state.statusFilter = "all";
+  state.bookmarkFilter = "all";
+  state.reviseFilter = "all";
   els.searchInput.value = "";
   els.yearFilter.value = "all";
   els.marksFilter.value = "all";
   els.themeFilter.value = "all";
   if (els.sectionFilter) els.sectionFilter.value = "all";
+  if (els.statusFilter) els.statusFilter.value = "all";
+  if (els.bookmarkFilter) els.bookmarkFilter.value = "all";
+  if (els.reviseFilter) els.reviseFilter.value = "all";
   renderQuestionView();
 }
 
@@ -1149,6 +1284,24 @@ function bindEvents() {
     state.section = e.target.value;
     renderQuestionView();
   });
+
+  els.statusFilter?.addEventListener("change", (e) => {
+    state.statusFilter = e.target.value;
+    renderQuestionView();
+  });
+
+  els.bookmarkFilter?.addEventListener("change", (e) => {
+    state.bookmarkFilter = e.target.value;
+    renderQuestionView();
+  });
+
+  els.reviseFilter?.addEventListener("change", (e) => {
+    state.reviseFilter = e.target.value;
+    renderQuestionView();
+  });
+
+  bindExportNotesButtons(els.exportJsonBtn, els.exportMdBtn);
+  requestTimerNotificationPermission();
 
   els.clearFilters.addEventListener("click", clearAllFilters);
   els.themeToggle.addEventListener("click", toggleTheme);

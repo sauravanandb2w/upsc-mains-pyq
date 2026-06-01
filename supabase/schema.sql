@@ -29,6 +29,10 @@ create table if not exists public.question_notes (
   topper_points text not null default '',
   value_material text not null default '',
   best_answer_online text not null default '',
+  study_status text not null default 'not-started',
+  bookmarked boolean not null default false,
+  status_updated_at timestamptz,
+  last_revised_at timestamptz,
   updated_at timestamptz not null default now(),
   unique (user_id, question_id)
 );
@@ -46,6 +50,16 @@ create index if not exists question_notes_user_idx
 -- Existing project? Run once if the column is missing:
 -- alter table public.question_notes
 --   add column if not exists best_answer_online text not null default '';
+
+-- Revision tracking & bookmarks (run once on existing projects):
+-- alter table public.question_notes
+--   add column if not exists study_status text not null default 'not-started';
+-- alter table public.question_notes
+--   add column if not exists bookmarked boolean not null default false;
+-- alter table public.question_notes
+--   add column if not exists status_updated_at timestamptz;
+-- alter table public.question_notes
+--   add column if not exists last_revised_at timestamptz;
 
 -- Auto-update updated_at
 create or replace function public.set_updated_at()

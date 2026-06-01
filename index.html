@@ -29,6 +29,13 @@
         <div class="header-actions">
           <div class="sync-badge" id="syncBadge" aria-live="polite">Local only</div>
           <button type="button" class="btn-ghost btn-sm hidden" id="githubConnectBtn">Connect GitHub</button>
+          <details class="export-menu">
+            <summary class="btn-ghost btn-sm">Export notes</summary>
+            <div class="export-menu-body">
+              <button type="button" class="btn-ghost btn-sm" id="exportJsonBtn">Download JSON</button>
+              <button type="button" class="btn-ghost btn-sm" id="exportMdBtn">Download Markdown</button>
+            </div>
+          </details>
           <div class="auth-area" id="authArea">
             <button type="button" class="btn-primary btn-sm" id="authOpenBtn">Sign in</button>
           </div>
@@ -116,7 +123,7 @@
             <input
               type="search"
               id="searchInput"
-              placeholder="Search by keyword, topic, or year…"
+              placeholder="Search question text or your notes…"
               autocomplete="off"
             />
           </div>
@@ -142,6 +149,31 @@
               </select>
             </div>
             <div class="filter-group">
+              <label for="statusFilter">Status</label>
+              <select id="statusFilter">
+                <option value="all">All statuses</option>
+                <option value="not-started">Not started</option>
+                <option value="attempted">Attempted</option>
+                <option value="revised">Revised</option>
+                <option value="weak">Weak</option>
+              </select>
+            </div>
+            <div class="filter-group">
+              <label for="bookmarkFilter">Star</label>
+              <select id="bookmarkFilter">
+                <option value="all">All</option>
+                <option value="bookmarked">Starred only</option>
+              </select>
+            </div>
+            <div class="filter-group">
+              <label for="reviseFilter">Revision</label>
+              <select id="reviseFilter">
+                <option value="all">All</option>
+                <option value="due">Due for revision</option>
+                <option value="weak-stale">Weak · not revised 30+ days</option>
+              </select>
+            </div>
+            <div class="filter-group">
               <label for="marksFilter">Marks</label>
               <select id="marksFilter">
                 <option value="all">All marks</option>
@@ -157,6 +189,10 @@
         </section>
 
         <div class="paper-meta" id="paperMeta"></div>
+        <section class="revise-today-panel hidden" id="reviseTodayPanel" aria-label="Revise today">
+          <h3 class="revise-today-title">Revise today</h3>
+          <ul class="revise-today-list" id="reviseTodayList"></ul>
+        </section>
         <div class="stats-bar" id="statsBar" aria-live="polite"></div>
         <div class="questions" id="questionsList" role="list"></div>
         <p class="empty-state hidden" id="emptyState">

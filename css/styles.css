@@ -1550,3 +1550,144 @@ body {
   object-fit: contain;
   background: var(--bg-elevated);
 }
+
+.question-study-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 0.75rem;
+  margin: 0.5rem 0 0.75rem;
+  padding: 0.5rem 0.65rem;
+  border: 1px dashed var(--border);
+  border-radius: var(--radius);
+  background: color-mix(in srgb, var(--text) 3%, var(--bg));
+}
+
+.question-status-select {
+  font: inherit;
+  font-size: 0.82rem;
+  padding: 0.25rem 0.4rem;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  background: var(--bg-elevated);
+  color: var(--text);
+}
+
+.question-bookmark-btn {
+  font-size: 1.15rem;
+  line-height: 1;
+  padding: 0.15rem 0.35rem;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  color: var(--text-muted);
+}
+
+.question-bookmark-btn--on {
+  color: var(--accent);
+}
+
+.answer-timer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.answer-timer-label {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  margin-right: 0.15rem;
+}
+
+.answer-timer-display {
+  font-variant-numeric: tabular-nums;
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--accent);
+  min-width: 3ch;
+}
+
+.revise-today-panel {
+  margin: 0.75rem 0 1rem;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: color-mix(in srgb, var(--accent) 6%, var(--bg));
+}
+
+.revise-today-title {
+  margin: 0 0 0.5rem;
+  font-size: 0.95rem;
+}
+
+.revise-today-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.revise-today-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
+  text-align: left;
+  padding: 0.35rem 0.5rem;
+  border: none;
+  border-radius: 6px;
+  background: transparent;
+  color: var(--text);
+  cursor: pointer;
+  font: inherit;
+  font-size: 0.88rem;
+}
+
+.revise-today-link:hover {
+  background: color-mix(in srgb, var(--accent) 10%, var(--bg));
+}
+
+.revise-today-tag {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: var(--accent);
+  min-width: 2.5rem;
+}
+
+.question-card--highlight {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.export-menu {
+  position: relative;
+}
+
+.export-menu summary {
+  list-style: none;
+  cursor: pointer;
+}
+
+.export-menu summary::-webkit-details-marker {
+  display: none;
+}
+
+.export-menu-body {
+  position: absolute;
+  right: 0;
+  top: calc(100% + 0.35rem);
+  z-index: 20;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  min-width: 10rem;
+  padding: 0.5rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--bg-elevated);
+  box-shadow: var(--shadow);
+}
