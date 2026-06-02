@@ -225,13 +225,13 @@ function noteLockButtonHtml(locked) {
 function renderNoteLabelRow(label, lockKey) {
   const locked = isNoteFieldLocked(lockKey);
   const lockControl = isCloudSyncEnabled()
-    ? `<span class="note-lock-wrap" title="Hover here to lock/unlock">
+    ? `<span class="note-lock-wrap" title="Lock = keep editing here; changes won't sync to other devices until you unlock">
         <button
           type="button"
           class="note-lock-btn${locked ? " note-lock-btn--locked" : ""}"
           data-lock-key="${escapeAttr(lockKey)}"
           aria-pressed="${locked ? "true" : "false"}"
-          aria-label="${locked ? "Unlock — allow sync on all devices" : "Lock — stop sync on all devices"}"
+          aria-label="${locked ? "Unlock — allow sync on all devices" : "Lock — local edits won't sync to other devices"}"
         >${noteLockButtonHtml(locked)}</button>
       </span>`
     : "";
@@ -251,10 +251,10 @@ function syncNoteFieldLockUi(btn) {
   btn.setAttribute("aria-pressed", locked ? "true" : "false");
   btn.setAttribute(
     "aria-label",
-    locked ? "Unlock — allow sync on all devices" : "Lock — stop sync on all devices"
+    locked ? "Unlock — allow sync on all devices" : "Lock — local edits won't sync to other devices"
   );
   btn.innerHTML = noteLockButtonHtml(locked);
-  btn.title = locked ? "Locked — edits do not sync" : "Click to lock — no sync on any device";
+  btn.title = locked ? "Locked — you can edit; changes stay on this device until unlock" : "Click to lock — edits won't sync to other devices";
   field?.classList.toggle("note-field--locked", locked);
   syncRichNoteLockState(field, locked);
 }
@@ -669,7 +669,7 @@ async function renderThemeDetail(themeId) {
   `;
 
   const lockHelp = isCloudSyncEnabled()
-    ? '<p class="note-locks-help">Open lock icon = syncing · Closed lock icon = not syncing (same on all devices)</p>'
+    ? '<p class="note-locks-help">Open lock = syncing across devices · Closed lock = you can still edit, but changes stay local until you unlock</p>'
     : "";
   const formatHelp =
     '<p class="note-locks-help">Use the toolbar for <strong>bold</strong>, <em>italic</em>, underline, and lists. Box height: <strong>S / M / L</strong> in the header.</p>';
