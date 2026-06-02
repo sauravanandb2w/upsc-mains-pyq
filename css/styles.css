@@ -1041,7 +1041,7 @@ body {
   font-weight: 600;
 }
 
-/* flex: none — otherwise min-height is ignored on contenteditable flex children */
+/* flex: none — fixed height + scroll; avoid min-height so contenteditable cannot grow */
 .rich-note-editor {
   flex: none;
   display: block;
@@ -1056,7 +1056,7 @@ body {
   background: var(--bg);
   color: var(--text);
   height: min(var(--note-editor-height, 28rem), 85vh);
-  min-height: min(var(--note-editor-height, 28rem), 85vh);
+  max-height: min(var(--note-editor-height, 28rem), 85vh);
   overflow-x: hidden;
   overflow-y: auto;
   white-space: pre-wrap;
