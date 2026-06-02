@@ -970,7 +970,14 @@ body {
 
 .note-field--locked .rich-note-editor {
   border-style: dashed;
-  border-color: color-mix(in srgb, var(--accent) 40%, var(--border));
+  border-color: color-mix(in srgb, var(--accent) 50%, var(--border));
+  background: color-mix(in srgb, var(--accent) 10%, var(--bg));
+  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--accent) 10%, transparent);
+  cursor: default;
+}
+
+[data-theme="dark"] .note-field--locked .rich-note-editor {
+  background: color-mix(in srgb, var(--accent) 16%, var(--bg-elevated));
 }
 
 .rich-note {
@@ -1069,7 +1076,6 @@ body {
 }
 
 .rich-note-editor--locked {
-  opacity: 0.92;
   cursor: default;
 }
 
