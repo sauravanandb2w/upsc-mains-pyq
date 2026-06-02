@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="Mains PYQ">
+  <circle cx="16" cy="16" r="16" fill="#1e3a5f"/>
+  <circle cx="16" cy="16" r="13" fill="none" stroke="#93c5fd" stroke-width="1.2" opacity="0.55"/>
+  <text x="16" y="14.5" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="8.5" font-weight="700" fill="#eff6ff">PYQ</text>
+  <text x="16" y="23" text-anchor="middle" font-family="system-ui, sans-serif" font-size="6" font-weight="600" fill="#bfdbfe" letter-spacing="0.5">GS</text>
+</svg>
