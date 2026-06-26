@@ -1,6 +1,9 @@
 .venv/
 js/config.js
 .DS_Store
+__pycache__/
+*.pyc
+supabase/.temp/
 
 # Downloaded UPSC PDF cache (regenerate with scripts/fetch-math-pyq.py)
 data/sources/math-pdfs/
