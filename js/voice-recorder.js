@@ -191,9 +191,43 @@ export function bindVoiceWidget(root, uploadFn, deleteFn, onDone) {
     setStatus("Uploading to GitHub…");
     try {
       await uploadFn(pendingBlob, pendingName, elapsed);
-      setStatus("Uploaded ✓ — visible after Pages deploys (~1–2 min).");
+
+      // Inject the new entry into the DOM immediately — don't wait for a re-render.
+      // Use a blob URL for instant playback; GitHub Pages URL works after next deploy.
+      const blobUrl  = URL.createObjectURL(pendingBlob);
+      const dur      = fmtSecs(elapsed);
+      const date     = new Date().toISOString().slice(0, 10);
+      const filename = pendingName;
+
+      const entry = document.createElement("div");
+      entry.className = "voice-entry";
+      entry.dataset.vfile = filename;
+      entry.innerHTML = `
+        <span class="voice-chip">🎙 ${dur} · ${date}</span>
+        <audio class="voice-player" src="${blobUrl}" controls preload="auto"></audio>
+        <button class="voice-del btn-ghost btn-sm" data-vdel="${filename}" title="Delete this recording from GitHub">🗑 Delete</button>`;
+
+      // Bind delete on the newly created entry
+      entry.querySelector("[data-vdel]")?.addEventListener("click", async (e) => {
+        const btn  = e.currentTarget;
+        const file = btn.dataset.vdel;
+        if (!file || !confirm(`Delete this voice recording from GitHub?\n\n${file}\n\nThis cannot be undone.`)) return;
+        btn.disabled = true;
+        try {
+          await deleteFn(file);
+          URL.revokeObjectURL(blobUrl);
+          entry.remove();
+          setStatus("Recording deleted from GitHub.");
+          onDone?.();
+        } catch (err) {
+          alert(err.message || String(err));
+          btn.disabled = false;
+        }
+      });
+
+      w.querySelector(".voice-list")?.appendChild(entry);
+      setStatus("Uploaded ✓");
       reset();
-      onDone?.();
     } catch (err) {
       setStatus(err.message || String(err));
       upBtn.disabled = false;
