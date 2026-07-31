@@ -2499,3 +2499,230 @@ details[open] {
   from { opacity: 0.7; transform: translateY(-3px); }
   to   { opacity: 1;   transform: translateY(0); }
 }
+
+/* ═══════════════════════════════════════════════════════════════════
+   ROBUSTNESS OVERHAUL v2 — cards, dark mode, spacing, focus, mobile
+   ═══════════════════════════════════════════════════════════════════ */
+
+:root {
+  --transition: 0.17s cubic-bezier(0.4,0,0.2,1);
+  --focus-ring: 0 0 0 3px rgba(154,52,18,0.22);
+  --danger: #dc2626;
+}
+[data-theme="dark"] {
+  --focus-ring: 0 0 0 3px rgba(251,146,60,0.28);
+}
+
+/* ── Focus states ───────────────────────────────────────────────── */
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+a:focus-visible {
+  outline: none;
+  box-shadow: var(--focus-ring);
+  border-radius: 6px;
+}
+
+/* ── Question card ──────────────────────────────────────────────── */
+.question-card {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 18px 20px;
+  box-shadow: 0 1px 4px rgb(28 25 23 / 5%), 0 4px 16px rgb(28 25 23 / 5%);
+  transition: transform var(--transition), box-shadow var(--transition);
+  cursor: default;
+}
+.question-card:hover {
+  box-shadow: 0 4px 12px rgb(28 25 23 / 9%), 0 14px 36px rgb(28 25 23 / 8%);
+  transform: translateY(-2px);
+}
+[data-theme="dark"] .question-card:hover {
+  box-shadow: 0 4px 20px rgb(0 0 0 / 35%);
+}
+
+.question-text {
+  font-size: 1.05rem;
+  line-height: 1.68;
+  margin: 0;
+}
+
+.question-header {
+  gap: 6px;
+  margin-bottom: 10px;
+}
+
+.question-num {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  background: color-mix(in srgb, var(--text) 7%, var(--bg-elevated));
+  padding: 2px 8px;
+  border-radius: 20px;
+}
+
+/* ── Badges ─────────────────────────────────────────────────────── */
+.badge {
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 2px 9px;
+  border-radius: 20px;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
+
+/* ── Study section ──────────────────────────────────────────────── */
+.study-details {
+  margin-top: 14px;
+  border-top: 1px solid var(--border);
+  padding-top: 10px;
+}
+
+.study-details summary {
+  cursor: pointer;
+  font-size: 0.84rem;
+  font-weight: 600;
+  color: var(--accent);
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 0;
+  user-select: none;
+  transition: opacity var(--transition);
+}
+.study-details summary:hover { opacity: 0.75; }
+.study-details summary::-webkit-details-marker { display: none; }
+.study-details summary::before {
+  content: "▶";
+  font-size: 8px;
+  transition: transform 0.18s;
+  display: inline-block;
+}
+.study-details[open] summary::before { transform: rotate(90deg); }
+
+/* ── Study materials panel ──────────────────────────────────────── */
+.study-materials-panel,
+.study-materials-details {
+  border-radius: 12px;
+  padding: 14px 16px;
+  border: 1px solid var(--border);
+  background: color-mix(in srgb, var(--accent) 3%, var(--bg-elevated));
+  margin-top: 12px;
+}
+
+.study-materials-panel summary,
+.study-materials-details summary {
+  cursor: pointer;
+  font-size: 0.84rem;
+  font-weight: 600;
+  color: var(--accent);
+  list-style: none;
+  user-select: none;
+}
+.study-materials-panel summary::-webkit-details-marker,
+.study-materials-details summary::-webkit-details-marker { display: none; }
+
+/* ── Note fields ────────────────────────────────────────────────── */
+.note-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--accent);
+}
+
+/* Rich note scroll */
+.rich-note-scroll {
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  transition: border-color var(--transition), box-shadow var(--transition);
+}
+.rich-note-scroll:focus-within {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(154,52,18,0.12);
+}
+[data-theme="dark"] .rich-note-scroll:focus-within {
+  box-shadow: 0 0 0 3px rgba(251,146,60,0.18);
+}
+
+/* ── Paper navigation tabs ──────────────────────────────────────── */
+.paper-tab {
+  border-radius: 10px;
+  font-size: 0.84rem;
+  font-weight: 600;
+  padding: 9px 16px;
+  transition: background var(--transition), color var(--transition), box-shadow var(--transition);
+  border: 1.5px solid transparent;
+}
+.paper-tab:hover:not(.active) {
+  background: color-mix(in srgb, var(--accent) 6%, var(--bg));
+  border-color: color-mix(in srgb, var(--accent) 20%, transparent);
+}
+.paper-tab.active {
+  background: var(--accent);
+  color: #fff;
+  box-shadow: 0 3px 10px rgba(154,52,18,0.28);
+}
+[data-theme="dark"] .paper-tab.active {
+  box-shadow: 0 3px 10px rgba(251,146,60,0.28);
+}
+
+/* ── Buttons ────────────────────────────────────────────────────── */
+.btn-primary {
+  border-radius: 8px;
+  padding: 8px 16px;
+  font-weight: 600;
+  font-size: 13.5px;
+  transition: background var(--transition), box-shadow var(--transition), transform var(--transition);
+  box-shadow: 0 2px 6px rgba(154,52,18,0.22);
+}
+.btn-primary:hover { box-shadow: 0 4px 12px rgba(154,52,18,0.3); transform: translateY(-1px); }
+.btn-primary:active { transform: none; }
+
+/* ── Voice widget — dark mode ───────────────────────────────────── */
+[data-theme="dark"] .voice-widget {
+  background: linear-gradient(135deg, #1c1614 0%, #261a14 100%);
+  border-color: rgba(251,146,60,0.2);
+}
+[data-theme="dark"] .voice-entry {
+  background: #1c1917;
+  border-color: rgba(251,146,60,0.15);
+}
+[data-theme="dark"] .voice-chip {
+  background: rgba(251,146,60,0.12);
+  color: #fb923c;
+}
+[data-theme="dark"] .voice-rec { background: #c2410c; }
+[data-theme="dark"] .voice-rec:hover { background: #9a3412; }
+[data-theme="dark"] .voice-del:hover { background: rgba(220,38,38,0.2); }
+[data-theme="dark"] .voice-stop { background: rgba(220,38,38,0.2); border-color: rgba(220,38,38,0.4); }
+[data-theme="dark"] .voice-upload { background: #15803d; }
+[data-theme="dark"] .voice-discard { border-color: rgba(255,255,255,0.12); color: #9ca3af; }
+[data-theme="dark"] .voice-status { color: #9ca3af; }
+
+/* ── Scrollbar ──────────────────────────────────────────────────── */
+* { scrollbar-width: thin; scrollbar-color: rgba(28,25,23,0.15) transparent; }
+[data-theme="dark"] * { scrollbar-color: rgba(255,255,255,0.1) transparent; }
+*::-webkit-scrollbar { width: 5px; height: 5px; }
+*::-webkit-scrollbar-thumb { background: rgba(28,25,23,0.15); border-radius: 99px; }
+[data-theme="dark"] *::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.1); }
+
+/* ── Page-in animation ──────────────────────────────────────────── */
+.question-card { animation: cardIn 0.22s ease; }
+@keyframes cardIn {
+  from { opacity: 0.7; transform: translateY(5px); }
+  to   { opacity: 1;   transform: translateY(0); }
+}
+
+/* ── Mobile ─────────────────────────────────────────────────────── */
+@media (max-width: 640px) {
+  .question-card { padding: 14px 15px; }
+  .question-text { font-size: 0.97rem; }
+  .paper-tab { padding: 7px 12px; font-size: 0.8rem; }
+  .voice-rec { padding: 8px 14px; font-size: 13px; }
+  .voice-controls { gap: 7px; }
+  .study-materials-panel,
+  .study-materials-details { padding: 11px 13px; }
+}
