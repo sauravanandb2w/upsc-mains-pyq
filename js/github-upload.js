@@ -326,6 +326,14 @@ async function blobToBase64(blob) {
   return btoa(bin);
 }
 
+function voiceLsKey(qid) { return `pyq_voices_${qid}`; }
+function readVoiceCache(qid) {
+  try { return JSON.parse(localStorage.getItem(voiceLsKey(qid)) || "[]"); } catch { return []; }
+}
+function writeVoiceCache(qid, voices) {
+  try { localStorage.setItem(voiceLsKey(qid), JSON.stringify(voices)); } catch {}
+}
+
 /** Upload a voice blob to study/questions/{id}/{filename} and update manifest.voices */
 export async function uploadQuestionVoice(questionId, blob, filename, durationSecs) {
   await assertUploadAllowed();
@@ -334,20 +342,20 @@ export async function uploadQuestionVoice(questionId, blob, filename, durationSe
 
   const manifest = await loadManifest(folder);
   manifest.data.voices = manifest.data.voices || [];
-  const already = manifest.data.voices.some(
-    (v) => (typeof v === "string" ? v : v?.file) === filename
-  );
-  if (!already) {
-    manifest.data.voices.push({
-      file:     filename,
-      duration: Math.round(durationSecs || 0),
-      date:     new Date().toISOString().slice(0, 10),
-    });
-  }
+  const entry = { file: filename, duration: Math.round(durationSecs || 0), date: new Date().toISOString().slice(0, 10) };
+  const already = manifest.data.voices.some((v) => (typeof v === "string" ? v : v?.file) === filename);
+  if (!already) manifest.data.voices.push(entry);
 
   const b64 = await blobToBase64(blob);
   await putRepoFile(filePath, b64, `Add voice note ${questionId}/${filename}`);
   await saveManifest(manifest.path, manifest.sha, manifest.data, `Update manifest ${questionId}`);
+
+  // Save to localStorage so voices appear instantly on next page load
+  const cached = readVoiceCache(questionId);
+  if (!cached.some((v) => (typeof v === "string" ? v : v?.file) === filename)) {
+    writeVoiceCache(questionId, [...cached, entry]);
+  }
+
   return { path: filePath, name: filename };
 }
 
@@ -367,14 +375,25 @@ export async function deleteQuestionVoice(questionId, filename) {
 
   await deleteRepoFile(filePath, fileSha, `Remove voice note ${questionId}/${filename}`);
   await saveManifest(manifest.path, manifest.sha, manifest.data, `Update manifest ${questionId}`);
+
+  // Remove from localStorage cache
+  writeVoiceCache(questionId, readVoiceCache(questionId).filter(
+    (v) => (typeof v === "string" ? v : v?.file) !== filename
+  ));
+
   return { name: filename };
 }
 
-/** Fetch existing voice entries for a question from its manifest.json */
+/** Fetch voice entries — localStorage first (instant), background sync from GitHub */
 export async function fetchQuestionVoices(questionId) {
-  try {
-    const file = await getRepoFile(`study/questions/${questionId}/manifest.json`);
-    if (!file?.text) return [];
-    return JSON.parse(file.text)?.voices || [];
-  } catch { return []; }
+  const cached = readVoiceCache(questionId);
+
+  // Background sync to keep cache fresh
+  getRepoFile(`study/questions/${questionId}/manifest.json`).then((file) => {
+    if (!file?.text) return;
+    const voices = JSON.parse(file.text)?.voices || [];
+    if (voices.length) writeVoiceCache(questionId, voices);
+  }).catch(() => {});
+
+  return cached;
 }
