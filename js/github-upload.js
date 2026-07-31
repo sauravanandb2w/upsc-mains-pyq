@@ -367,3 +367,12 @@ export async function deleteQuestionVoice(questionId, filename) {
   await saveManifest(manifest.path, manifest.sha, manifest.data, `Update manifest ${questionId}`);
   return { name: filename };
 }
+
+/** Fetch existing voice entries for a question from its manifest.json */
+export async function fetchQuestionVoices(questionId) {
+  try {
+    const file = await getRepoFile(`study/questions/${questionId}/manifest.json`);
+    if (!file?.text) return [];
+    return JSON.parse(file.text)?.voices || [];
+  } catch { return []; }
+}

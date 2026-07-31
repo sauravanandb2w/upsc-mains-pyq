@@ -102,7 +102,7 @@ import {
 } from "./github-upload-ui.js";
 import { initGitHubUploadConfig, initGitHubUploadAccess } from "./github-auth.js";
 import { renderVoiceWidget, bindVoiceWidget } from "./voice-recorder.js";
-import { uploadQuestionVoice, deleteQuestionVoice } from "./github-upload.js";
+import { uploadQuestionVoice, deleteQuestionVoice, fetchQuestionVoices } from "./github-upload.js";
 
 /** @type {(() => Promise<void>) | null} */
 let refreshGitHubHeader = null;
@@ -1553,7 +1553,8 @@ function renderQuestions(questions, listEl = els.questionsList, emptyEl = els.em
         voiceSection,
         (blob, name, secs) => uploadQuestionVoice(qid, blob, name, secs),
         (name)             => deleteQuestionVoice(qid, name),
-        ()                 => { /* voices visible after Pages deploy; no local refresh needed */ }
+        ()                 => { /* voices visible after Pages deploy; no local refresh needed */ },
+        ()                 => fetchQuestionVoices(qid)
       );
     }
 
