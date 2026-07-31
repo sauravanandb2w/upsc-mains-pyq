@@ -1553,7 +1553,6 @@ function renderQuestions(questions, listEl = els.questionsList, emptyEl = els.em
         voiceSection,
         (blob, name, secs) => uploadQuestionVoice(qid, blob, name, secs),
         (name)             => deleteQuestionVoice(qid, name),
-        ()                 => { /* voices visible after Pages deploy; no local refresh needed */ },
         ()                 => fetchQuestionVoices(qid)
       );
     }
