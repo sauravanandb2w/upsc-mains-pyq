@@ -313,3 +313,57 @@ export async function deleteThemeStudyImage(studyPath, fileName) {
   await saveManifest(manifest.path, manifest.sha, manifest.data, `Update manifest ${studyPath}`);
   return { path: filePath, name: cleanName };
 }
+
+// ─── Voice notes ──────────────────────────────────────────────────────────────
+
+async function blobToBase64(blob) {
+  const buf   = await blob.arrayBuffer();
+  const bytes = new Uint8Array(buf);
+  let bin     = "";
+  for (let i = 0; i < bytes.length; i++) bin += String.fromCharCode(bytes[i]);
+  return btoa(bin);
+}
+
+/** Upload a voice blob to study/questions/{id}/{filename} and update manifest.voices */
+export async function uploadQuestionVoice(questionId, blob, filename, durationSecs) {
+  await assertUploadAllowed();
+  const folder   = `study/questions/${questionId}`;
+  const filePath = `${folder}/${filename}`;
+
+  const manifest = await loadManifest(folder);
+  manifest.data.voices = manifest.data.voices || [];
+  const already = manifest.data.voices.some(
+    (v) => (typeof v === "string" ? v : v?.file) === filename
+  );
+  if (!already) {
+    manifest.data.voices.push({
+      file:     filename,
+      duration: Math.round(durationSecs || 0),
+      date:     new Date().toISOString().slice(0, 10),
+    });
+  }
+
+  const b64 = await blobToBase64(blob);
+  await putRepoFile(filePath, b64, `Add voice note ${questionId}/${filename}`);
+  await saveManifest(manifest.path, manifest.sha, manifest.data, `Update manifest ${questionId}`);
+  return { path: filePath, name: filename };
+}
+
+/** Delete a voice recording from study/questions/{id}/{filename} */
+export async function deleteQuestionVoice(questionId, filename) {
+  await assertUploadAllowed();
+  const folder   = `study/questions/${questionId}`;
+  const filePath = `${folder}/${filename}`;
+
+  const fileSha = await getRepoFileSha(filePath);
+  if (!fileSha) throw new Error("Voice file not found in repo.");
+
+  const manifest = await loadManifest(folder);
+  manifest.data.voices = (manifest.data.voices || []).filter(
+    (v) => (typeof v === "string" ? v : v?.file) !== filename
+  );
+
+  await deleteRepoFile(filePath, fileSha, `Remove voice note ${questionId}/${filename}`);
+  await saveManifest(manifest.path, manifest.sha, manifest.data, `Update manifest ${questionId}`);
+  return { name: filename };
+}

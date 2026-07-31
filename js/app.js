@@ -101,6 +101,8 @@ import {
   bindSolutionScanDeletes,
 } from "./github-upload-ui.js";
 import { initGitHubUploadConfig, initGitHubUploadAccess } from "./github-auth.js";
+import { renderVoiceWidget, bindVoiceWidget } from "./voice-recorder.js";
+import { uploadQuestionVoice, deleteQuestionVoice } from "./github-upload.js";
 
 /** @type {(() => Promise<void>) | null} */
 let refreshGitHubHeader = null;
@@ -1274,6 +1276,13 @@ function renderQuestionStudyImagesDetails(q) {
       <summary>Diagrams &amp; images</summary>
       <div class="study-materials-body" data-study-path="study/questions/${escapeAttr(q.id)}"></div>
       <div class="study-materials-upload"></div>
+    </details>
+    <details class="study-voice-details">
+      <summary>🎙 Voice notes</summary>
+      <p class="muted small" style="margin:6px 0 10px;">Record in-browser. Saved as .webm/.m4a to this question's folder. Delete to keep repo lean.</p>
+      <div class="voice-section" data-qid="${escapeAttr(q.id)}">
+        ${renderVoiceWidget(`study/questions/${escapeAttr(q.id)}`, q.voices)}
+      </div>
     </details>`;
 }
 
@@ -1535,6 +1544,17 @@ function renderQuestions(questions, listEl = els.questionsList, emptyEl = els.em
     if (studyDetails) {
       bindLazyStudyMaterials(studyDetails, `study/questions/${q.id}`);
       bindStudyMaterialsUpload(studyDetails, `study/questions/${q.id}`);
+    }
+
+    const voiceSection = card.querySelector(".voice-section[data-qid]");
+    if (voiceSection) {
+      const qid = voiceSection.dataset.qid;
+      bindVoiceWidget(
+        voiceSection,
+        (blob, name, secs) => uploadQuestionVoice(qid, blob, name, secs),
+        (name)             => deleteQuestionVoice(qid, name),
+        ()                 => { /* voices visible after Pages deploy; no local refresh needed */ }
+      );
     }
 
     const constitutionBody = card.querySelector(".constitution-panel-body");
