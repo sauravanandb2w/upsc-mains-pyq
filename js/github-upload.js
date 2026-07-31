@@ -65,6 +65,7 @@ export async function getRepoFile(path) {
 
   const res = await fetch(`${API}/repos/${owner}/${name}/contents/${encodeRepoPath(path)}`, {
     headers: apiHeaders(token),
+    cache: "no-store",
   });
 
   if (res.status === 404) return null;
@@ -86,6 +87,7 @@ async function getRepoFileSha(path) {
 
   const res = await fetch(`${API}/repos/${owner}/${name}/contents/${encodeRepoPath(path)}`, {
     headers: apiHeaders(token),
+    cache: "no-store",
   });
 
   if (res.status === 404) return null;
