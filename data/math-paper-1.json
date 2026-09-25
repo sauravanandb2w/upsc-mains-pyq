@@ -4,8 +4,8 @@
   "title": "Mathematics Optional — Paper I",
   "syllabus": "Linear Algebra · Calculus · Analytic Geometry · ODE · Dynamics & Statics · Vector Analysis",
   "yearRange": [
-    2013,
-    2025
+    2014,
+    2026
   ],
   "sections": [
     "A",
@@ -2463,6 +2463,231 @@
       "theme": "Ordinary Differential Equations",
       "subthemes": [],
       "sourcePdf": "https://www.upsc.gov.in/sites/default/files/MATHEMATICS-I.pdf",
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "math1-2026-q1",
+      "year": 2026,
+      "number": 1,
+      "section": "A",
+      "marks": 50,
+      "text": "UPSC 2026 · Mathematics Paper 1 · Question 1 · Section A · Linear Algebra (Mathocrat Replay scan)",
+      "scanImages": [
+        "scan-01.jpg",
+        "scan-02.jpg",
+        "scan-03.jpg",
+        "scan-04.jpg",
+        "scan-05.jpg"
+      ],
+      "moduleId": "linear-algebra",
+      "module": "Linear Algebra",
+      "themeId": "linear-algebra",
+      "theme": "Linear Algebra",
+      "subthemes": [],
+      "sourcePdf": "Mathocrat-Replay-CSE-2026-Math-Paper-1.pdf",
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "math1-2026-q2",
+      "year": 2026,
+      "number": 2,
+      "section": "A",
+      "marks": 50,
+      "text": "UPSC 2026 · Mathematics Paper 1 · Question 2 · Section A · Linear Algebra (Mathocrat Replay scan)",
+      "scanImages": [
+        "scan-01.jpg",
+        "scan-02.jpg",
+        "scan-03.jpg"
+      ],
+      "moduleId": "linear-algebra",
+      "module": "Linear Algebra",
+      "themeId": "linear-algebra",
+      "theme": "Linear Algebra",
+      "subthemes": [],
+      "sourcePdf": "Mathocrat-Replay-CSE-2026-Math-Paper-1.pdf",
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "math1-2026-q3",
+      "year": 2026,
+      "number": 3,
+      "section": "A",
+      "marks": 50,
+      "text": "UPSC 2026 · Mathematics Paper 1 · Question 3 · Section A · Linear Algebra (Mathocrat Replay scan)",
+      "scanImages": [
+        "scan-01.jpg",
+        "scan-02.jpg",
+        "scan-03.jpg",
+        "scan-04.jpg"
+      ],
+      "moduleId": "linear-algebra",
+      "module": "Linear Algebra",
+      "themeId": "linear-algebra",
+      "theme": "Linear Algebra",
+      "subthemes": [],
+      "sourcePdf": "Mathocrat-Replay-CSE-2026-Math-Paper-1.pdf",
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "math1-2026-q4",
+      "year": 2026,
+      "number": 4,
+      "section": "A",
+      "marks": 50,
+      "text": "UPSC 2026 · Mathematics Paper 1 · Question 4 · Section A · Analytic Geometry (Mathocrat Replay scan)",
+      "scanImages": [
+        "scan-01.jpg",
+        "scan-02.jpg",
+        "scan-03.jpg",
+        "scan-04.jpg"
+      ],
+      "moduleId": "analytic-geometry",
+      "module": "Analytic Geometry",
+      "themeId": "analytic-geometry",
+      "theme": "Analytic Geometry",
+      "subthemes": [],
+      "sourcePdf": "Mathocrat-Replay-CSE-2026-Math-Paper-1.pdf",
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "math1-2026-q5",
+      "year": 2026,
+      "number": 5,
+      "section": "B",
+      "marks": 50,
+      "text": "UPSC 2026 · Mathematics Paper 1 · Question 5 · Section B · ODE & Dynamics (Mathocrat Replay scan)",
+      "scanImages": [
+        "scan-01.jpg",
+        "scan-02.jpg",
+        "scan-03.jpg",
+        "scan-04.jpg",
+        "scan-05.jpg"
+      ],
+      "moduleId": "ordinary-differential-equations",
+      "module": "Ordinary Differential Equations",
+      "themeId": "ordinary-differential-equations",
+      "theme": "ODE & Dynamics",
+      "subthemes": [],
+      "sourcePdf": "Mathocrat-Replay-CSE-2026-Math-Paper-1.pdf",
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "math1-2026-q6",
+      "year": 2026,
+      "number": 6,
+      "section": "B",
+      "marks": 50,
+      "text": "UPSC 2026 · Mathematics Paper 1 · Question 6 · Section B · ODE & Dynamics (Mathocrat Replay scan)",
+      "scanImages": [
+        "scan-01.jpg",
+        "scan-02.jpg",
+        "scan-03.jpg",
+        "scan-04.jpg"
+      ],
+      "moduleId": "ordinary-differential-equations",
+      "module": "Ordinary Differential Equations",
+      "themeId": "ordinary-differential-equations",
+      "theme": "ODE & Dynamics",
+      "subthemes": [],
+      "sourcePdf": "Mathocrat-Replay-CSE-2026-Math-Paper-1.pdf",
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "math1-2026-q7",
+      "year": 2026,
+      "number": 7,
+      "section": "B",
+      "marks": 50,
+      "text": "UPSC 2026 · Mathematics Paper 1 · Question 7 · Section B · ODE & Dynamics (Mathocrat Replay scan)",
+      "scanImages": [
+        "scan-01.jpg",
+        "scan-02.jpg",
+        "scan-03.jpg",
+        "scan-04.jpg"
+      ],
+      "moduleId": "ordinary-differential-equations",
+      "module": "Ordinary Differential Equations",
+      "themeId": "ordinary-differential-equations",
+      "theme": "ODE & Dynamics",
+      "subthemes": [],
+      "sourcePdf": "Mathocrat-Replay-CSE-2026-Math-Paper-1.pdf",
+      "notes": {
+        "introduction": "",
+        "staticNotes": "",
+        "quotes": "",
+        "currentAffairs": "",
+        "topperPoints": "",
+        "valueMaterial": ""
+      }
+    },
+    {
+      "id": "math1-2026-q8",
+      "year": 2026,
+      "number": 8,
+      "section": "B",
+      "marks": 50,
+      "text": "UPSC 2026 · Mathematics Paper 1 · Question 8 · Section B · ODE & Dynamics (Mathocrat Replay scan)",
+      "scanImages": [
+        "scan-01.jpg",
+        "scan-02.jpg",
+        "scan-03.jpg",
+        "scan-04.jpg"
+      ],
+      "moduleId": "ordinary-differential-equations",
+      "module": "Ordinary Differential Equations",
+      "themeId": "ordinary-differential-equations",
+      "theme": "ODE & Dynamics",
+      "subthemes": [],
+      "sourcePdf": "Mathocrat-Replay-CSE-2026-Math-Paper-1.pdf",
       "notes": {
         "introduction": "",
         "staticNotes": "",
