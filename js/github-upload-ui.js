@@ -90,9 +90,13 @@ export async function bindGitHubHeaderButton(btn) {
       btn.title = allowed
         ? "Connected for image uploads — click to disconnect"
         : "Connected as wrong GitHub user — upload restricted to repo owner";
+      btn.style.color = allowed ? "#16a34a" : "#d97706";
+      btn.style.fontWeight = "600";
     } else {
       btn.textContent = "Connect GitHub";
       btn.title = "Sign in with GitHub to upload images to the repo";
+      btn.style.color = "";
+      btn.style.fontWeight = "";
     }
   }
 

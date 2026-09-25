@@ -859,7 +859,8 @@ async function openRecentQuestion(paperNum, qid) {
 function populateYearFilter() {
   const years = getYearsForPaper(state.paper);
   els.yearFilter.innerHTML = '<option value="all">All years</option>';
-  for (let y = 2025; y >= 2013; y--) {
+  const maxYear = years.length ? Math.max(...years) : new Date().getFullYear();
+  for (let y = maxYear; y >= 2013; y--) {
     const opt = document.createElement("option");
     opt.value = String(y);
     opt.textContent = years.includes(y) ? String(y) : `${y} (pending)`;
@@ -1612,8 +1613,9 @@ function renderQuestions(questions, listEl = els.questionsList, emptyEl = els.em
 
 function updateDataNote(paper) {
   const years = new Set(paper.questions.map((q) => q.year));
+  const maxDataYear = paper.yearRange ? paper.yearRange[1] : Math.max(...[...years], 2025);
   const missing = [];
-  for (let y = 2013; y <= 2025; y++) {
+  for (let y = 2013; y <= maxDataYear; y++) {
     if (!years.has(y)) missing.push(y);
   }
 
@@ -1626,7 +1628,7 @@ function updateDataNote(paper) {
       .filter(([, n]) => n < 8)
       .map(([y, n]) => `${y}(${n})`);
     const missing = [];
-    for (let y = 2013; y <= 2025; y++) {
+    for (let y = 2013; y <= maxDataYear; y++) {
       if (!byYear[y]) missing.push(y);
     }
     let msg = `${paper.questions.length} questions as official PDF scan cutouts (study/questions/math*).`;
@@ -1638,13 +1640,13 @@ function updateDataNote(paper) {
 
   const target = 20;
   const thin = [];
-  for (let y = 2013; y <= 2025; y++) {
+  for (let y = 2013; y <= maxDataYear; y++) {
     const n = paper.questions.filter((q) => q.year === y).length;
     if (years.has(y) && n < (paper.paper === 4 ? 8 : target)) thin.push(`${y}(${n})`);
   }
   let msg = missing.length
     ? `Missing years: ${missing.join(", ")}. Run python3 scripts/build-pyq-data.py to fetch more.`
-    : "All years 2013–2025 represented (verify counts against official papers).";
+    : `All years 2013–${maxDataYear} represented (verify counts against official papers).`;
   if (thin.length) msg += ` Thin coverage: ${thin.join(", ")}.`;
   els.dataNote.textContent = msg;
 }
