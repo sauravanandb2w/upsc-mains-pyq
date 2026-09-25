@@ -445,18 +445,18 @@ def build(fetch_clearias_years: bool = True) -> None:
     for paper in range(1, 5):
         meta = META[paper]
         themes_list = THEME_CONFIG[str(paper)]["themes"]
+        years = sorted({q["year"] for q in by_paper[paper]})
         out = {
             "paper": paper,
             "title": meta["title"],
             "syllabus": meta["syllabus"],
-            "yearRange": [2013, 2025],
+            "yearRange": [2013, max(years) if years else 2026],
             "themes": [t["name"] for t in themes_list],
             "questions": by_paper[paper],
         }
         path = OUT_DIR / f"gs-paper-{paper}.json"
         with open(path, "w", encoding="utf-8") as f:
             json.dump(out, f, ensure_ascii=False, indent=2)
-        years = sorted({q["year"] for q in out["questions"]})
         print(
             f"Wrote {path.name}: {len(out['questions'])} Qs, "
             f"years {years[0] if years else '—'}–{years[-1] if years else '—'}"
