@@ -2716,6 +2716,59 @@ a:focus-visible {
   to   { opacity: 1;   transform: translateY(0); }
 }
 
+/* ── Math Companion Banner ──────────────────────────────────────── */
+.math-companion-banner {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin: 0 0 4px;
+  padding: 13px 20px;
+  background: linear-gradient(135deg, #1e3a5f 0%, #0f2744 100%);
+  border: 1px solid rgba(99,179,237,0.25);
+  border-radius: 10px;
+  color: #e2f0ff;
+  text-decoration: none;
+  transition: filter 0.18s, transform 0.18s;
+  cursor: pointer;
+}
+.math-companion-banner:hover {
+  filter: brightness(1.12);
+  transform: translateY(-1px);
+  text-decoration: none;
+  color: #fff;
+}
+.math-companion-icon {
+  font-size: 1.9rem;
+  line-height: 1;
+  opacity: 0.9;
+  flex-shrink: 0;
+}
+.math-companion-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.math-companion-text strong {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #93c5fd;
+  letter-spacing: 0.01em;
+}
+.math-companion-text span {
+  font-size: 0.8rem;
+  opacity: 0.75;
+}
+.math-companion-arrow {
+  font-size: 1.2rem;
+  opacity: 0.6;
+  flex-shrink: 0;
+}
+[data-theme="dark"] .math-companion-banner {
+  background: linear-gradient(135deg, #1a3356 0%, #0d1f38 100%);
+  border-color: rgba(99,179,237,0.2);
+}
+
 /* ── Mobile ─────────────────────────────────────────────────────── */
 @media (max-width: 640px) {
   .question-card { padding: 14px 15px; }

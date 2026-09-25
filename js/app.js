@@ -1733,6 +1733,7 @@ function updateSubjectNav() {
   });
   els.paperNavGs?.classList.toggle("hidden", state.subject !== "gs");
   els.paperNavMath?.classList.toggle("hidden", state.subject !== "math");
+  document.getElementById("mathCompanionBanner")?.classList.toggle("hidden", state.subject !== "math");
 }
 
 function updateViewTabLabels() {
