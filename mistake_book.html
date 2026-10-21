@@ -38,9 +38,24 @@ a:hover{text-decoration:underline}
 }
 .subj-tabs button.active{background:var(--forest);color:#fff;border-color:var(--forest)}
 .toolbar{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-bottom:14px}
-.toolbar input{
-  flex:1;min-width:180px;font:inherit;padding:10px 12px;border-radius:10px;border:1px solid var(--line)
+.toolbar input,.toolbar select{
+  flex:1;min-width:140px;font:inherit;padding:10px 12px;border-radius:10px;border:1px solid var(--line);background:#fff
 }
+.toolbar select{flex:0 1 auto;min-width:160px;max-width:220px;cursor:pointer}
+.box .rich{line-height:1.6}
+.box .rich strong{font-weight:700;color:inherit}
+.box.wrong .rich strong{color:#9a3412}
+.box.right .rich strong{color:#1b5e45}
+.rich em{font-style:italic}
+.rich u{text-underline-offset:2px}
+.rich .c-red{color:#c62828;font-weight:600}
+.rich .c-coral{color:#b5442e;font-weight:600}
+.rich .c-forest{color:#1b5e45;font-weight:600}
+.rich .c-navy{color:#1a365d;font-weight:600}
+.rich .c-amber{color:#b45309;font-weight:600}
+.rich .c-teal{color:#0d7a6f;font-weight:600}
+.rich .c-gold{color:#9a3412;font-weight:700}
+.note .rich{font-size:inherit}
 .count{font-size:.78rem;color:var(--muted)}
 .empty{
   text-align:center;padding:32px 20px;border:1px dashed #c5d4cb;border-radius:14px;
@@ -90,6 +105,12 @@ footer{text-align:center;color:var(--muted);font-size:.78rem;padding:20px}
   <div class="subj-tabs" id="subj-tabs" aria-label="Subject"></div>
 
   <div class="toolbar">
+    <select id="filterExam" aria-label="Filter by exam">
+      <option value="">All exams</option>
+    </select>
+    <select id="filterYear" aria-label="Filter by year">
+      <option value="">All years</option>
+    </select>
     <input type="search" id="search" placeholder="Search wrong / correct / exam…" autocomplete="off">
     <span class="count" id="count"></span>
   </div>
@@ -97,15 +118,18 @@ footer{text-align:center;color:var(--muted);font-size:.78rem;padding:20px}
   <div id="list"></div>
 
   <div class="how">
-    <b>How entries get added:</b> Send me exam name, year, subject, what you got wrong, and the correct fact — I append to <code>mistake_book_data.js</code>. Template fields: <code>exam</code>, <code>year</code>, <code>qref</code> (optional), <code>wrong</code>, <code>correct</code>, <code>note</code>.
+    <b>One entry = one question.</b> Send exam, year, subject, wrong, correct — I append to <code>mistake_book_data.js</code>.<br>
+    <b>Formatting:</b> <code>**bold**</code> <code>*italic*</code> <code>__underline__</code> · colours: <code>[red]…[/red]</code> <code>[forest]</code> <code>[navy]</code> <code>[amber]</code> <code>[teal]</code> <code>[coral]</code> <code>[gold]</code>
   </div>
 </div>
 
 <footer>Parcham · Mistake Book · Private revision log</footer>
 
-<script src="mistake_book_data.js?v=2"></script>
+<script src="mistake_book_data.js?v=3"></script>
 <script>
 (function () {
+  var COLOR_TAGS = ["red", "coral", "forest", "navy", "amber", "teal", "gold"];
+
   var SUBJECTS = [
     { id: "polity", label: "Polity" },
     { id: "history", label: "History" },
@@ -120,17 +144,75 @@ footer{text-align:center;color:var(--muted);font-size:.78rem;padding:20px}
 
   var lane = "pyq";
   var subject = "polity";
+  var filterExam = "";
+  var filterYear = "";
   var searchEl = document.getElementById("search");
+  var filterExamEl = document.getElementById("filterExam");
+  var filterYearEl = document.getElementById("filterYear");
   var listEl = document.getElementById("list");
   var countEl = document.getElementById("count");
   var subjTabs = document.getElementById("subj-tabs");
 
   function esc(s) {
-    return String(s)
+    return String(s == null ? "" : s)
       .replace(/&/g, "&amp;")
       .replace(/</g, "&lt;")
       .replace(/>/g, "&gt;")
       .replace(/"/g, "&quot;");
+  }
+
+  function formatRich(raw) {
+    if (!raw) return "";
+    var s = esc(raw);
+    COLOR_TAGS.forEach(function (name) {
+      var re = new RegExp("\\[" + name + "\\]([\\s\\S]*?)\\[\\/" + name + "\\]", "gi");
+      s = s.replace(re, function (_, inner) {
+        return '<span class="c-' + name.toLowerCase() + '">' + inner + "</span>";
+      });
+    });
+    s = s.replace(/\*\*([^*]+)\*\*/g, "<strong>$1</strong>");
+    s = s.replace(/__([^_]+)__/g, "<u>$1</u>");
+    s = s.replace(/\*([^*]+)\*/g, "<em>$1</em>");
+    s = s.replace(/\n/g, "<br>");
+    return '<div class="rich">' + s + "</div>";
+  }
+
+  function baseItems() {
+    return (window.MISTAKE_BOOK[lane][subject] || []).slice();
+  }
+
+  function refreshFilters() {
+    var items = baseItems();
+    var exams = [];
+    var years = [];
+    items.forEach(function (it) {
+      if (it.exam && exams.indexOf(it.exam) === -1) exams.push(it.exam);
+      if (it.year && years.indexOf(it.year) === -1) years.push(it.year);
+    });
+    exams.sort();
+    years.sort(function (a, b) { return b - a; });
+
+    var prevE = filterExamEl.value;
+    var prevY = filterYearEl.value;
+    filterExamEl.innerHTML = '<option value="">All exams</option>' +
+      exams.map(function (e) {
+        return '<option value="' + esc(e) + '">' + esc(e) + "</option>";
+      }).join("");
+    filterYearEl.innerHTML = '<option value="">All years</option>' +
+      years.map(function (y) {
+        return '<option value="' + y + '">' + y + "</option>";
+      }).join("");
+
+    if (exams.indexOf(prevE) !== -1) filterExamEl.value = prevE;
+    else if (exams.indexOf(filterExam) !== -1) filterExamEl.value = filterExam;
+    else filterExamEl.value = "";
+
+    if (years.indexOf(+prevY) !== -1) filterYearEl.value = prevY;
+    else if (years.indexOf(+filterYear) !== -1) filterYearEl.value = String(filterYear);
+    else filterYearEl.value = "";
+
+    filterExam = filterExamEl.value;
+    filterYear = filterYearEl.value;
   }
 
   function renderSubjTabs() {
@@ -143,7 +225,10 @@ footer{text-align:center;color:var(--muted);font-size:.78rem;padding:20px}
     subjTabs.querySelectorAll("button").forEach(function (btn) {
       btn.addEventListener("click", function () {
         subject = btn.dataset.subj;
+        filterExam = "";
+        filterYear = "";
         renderSubjTabs();
+        refreshFilters();
         renderList();
       });
     });
@@ -151,7 +236,13 @@ footer{text-align:center;color:var(--muted);font-size:.78rem;padding:20px}
 
   function renderList() {
     var q = (searchEl.value || "").trim().toLowerCase();
-    var items = (window.MISTAKE_BOOK[lane][subject] || []).slice();
+    var items = baseItems();
+    if (filterExam) {
+      items = items.filter(function (it) { return it.exam === filterExam; });
+    }
+    if (filterYear) {
+      items = items.filter(function (it) { return String(it.year) === String(filterYear); });
+    }
     if (q) {
       items = items.filter(function (it) {
         var blob = [it.exam, it.year, it.qref, it.wrong, it.correct, it.note].join(" ").toLowerCase();
@@ -174,11 +265,11 @@ footer{text-align:center;color:var(--muted);font-size:.78rem;padding:20px}
       if (it.exam) meta += '<span class="tag-exam">' + esc(it.exam) + "</span>";
       if (it.year) meta += '<span class="tag-year">' + esc(it.year) + "</span>";
       if (it.qref) meta += '<span class="tag-q">' + esc(it.qref) + "</span>";
-      var note = it.note ? '<div class="note">💡 ' + esc(it.note) + "</div>" : "";
+      var note = it.note ? '<div class="note">💡 ' + formatRich(it.note) + "</div>" : "";
       return '<article class="mistake">' + meta +
         '<div class="row">' +
-        '<div class="box wrong"><label>Wrong / confusion</label>' + esc(it.wrong) + "</div>" +
-        '<div class="box right"><label>Correct fact</label>' + esc(it.correct) + "</div>" +
+        '<div class="box wrong"><label>Wrong / confusion</label>' + formatRich(it.wrong) + "</div>" +
+        '<div class="box right"><label>Correct fact</label>' + formatRich(it.correct) + "</div>" +
         "</div>" + note + "</article>";
     }).join("");
   }
@@ -188,11 +279,22 @@ footer{text-align:center;color:var(--muted);font-size:.78rem;padding:20px}
       lane = btn.dataset.lane;
       document.querySelectorAll(".lane button").forEach(function (b) { b.classList.remove("active"); });
       btn.classList.add("active");
+      filterExam = "";
+      filterYear = "";
       renderSubjTabs();
+      refreshFilters();
       renderList();
     });
   });
 
+  filterExamEl.addEventListener("change", function () {
+    filterExam = filterExamEl.value;
+    renderList();
+  });
+  filterYearEl.addEventListener("change", function () {
+    filterYear = filterYearEl.value;
+    renderList();
+  });
   searchEl.addEventListener("input", renderList);
 
   function applyHash() {
@@ -204,6 +306,7 @@ footer{text-align:center;color:var(--muted);font-size:.78rem;padding:20px}
     });
     if (!SUBJECTS.some(function (s) { return s.id === subject; })) subject = "polity";
     renderSubjTabs();
+    refreshFilters();
     renderList();
   }
 
