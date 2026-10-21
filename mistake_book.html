@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mistake Book | UPSC Prelims revision</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,800&family=Sora:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#14231c;--muted:#5a6b62;--paper:#f3f6f2;--card:#fff;--line:#d5e0d8;
+  --forest:#1b5e45;--teal:#0d7a6f;--coral:#b5442e;--wrong-bg:#fff5f5;--wrong-bd:#f5c6c6;
+  --right-bg:#f0faf4;--right-bd:#9fd4b0;--shadow:0 10px 28px rgba(20,35,28,.08);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:"Sora",sans-serif;background:var(--paper);color:var(--ink);line-height:1.55}
+a{color:var(--teal);font-weight:600;text-decoration:none}
+a:hover{text-decoration:underline}
+.top{display:flex;flex-wrap:wrap;gap:10px;align-items:center;padding:14px 16px 0}
+.back{font-size:.82rem}
+.hero{text-align:center;padding:28px 16px 20px;background:linear-gradient(135deg,#3d1510,#b5442e 45%,#1b5e45);color:#fff}
+.hero h1{font-family:"Fraunces",serif;font-size:clamp(1.5rem,4vw,2.2rem)}
+.hero p{opacity:.92;font-size:.9rem;max-width:560px;margin:8px auto 0}
+.shell{max-width:920px;margin:0 auto;padding:16px 14px 64px}
+.lane{
+  display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:18px 0 12px
+}
+.lane button{
+  font:inherit;font-weight:700;font-size:.88rem;padding:11px 18px;border-radius:12px;
+  border:2px solid var(--line);background:#fff;cursor:pointer;color:var(--muted)
+}
+.lane button.active{background:linear-gradient(135deg,var(--coral),#9a3412);color:#fff;border-color:transparent}
+.subj-tabs{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px}
+.subj-tabs button{
+  font:inherit;font-weight:600;font-size:.74rem;padding:7px 11px;border-radius:999px;
+  border:1px solid var(--line);background:#fff;cursor:pointer;color:var(--muted)
+}
+.subj-tabs button.active{background:var(--forest);color:#fff;border-color:var(--forest)}
+.toolbar{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-bottom:14px}
+.toolbar input{
+  flex:1;min-width:180px;font:inherit;padding:10px 12px;border-radius:10px;border:1px solid var(--line)
+}
+.count{font-size:.78rem;color:var(--muted)}
+.empty{
+  text-align:center;padding:32px 20px;border:1px dashed #c5d4cb;border-radius:14px;
+  background:rgba(255,255,255,.7);color:var(--muted);font-size:.88rem
+}
+.mistake{
+  background:var(--card);border:1px solid var(--line);border-radius:14px;
+  padding:14px 16px;margin-bottom:12px;box-shadow:var(--shadow)
+}
+.meta{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:10px;font-size:.72rem}
+.meta span{padding:3px 9px;border-radius:999px;font-weight:700}
+.tag-exam{background:#e8f0e6;color:var(--forest)}
+.tag-year{background:#fff4e0;color:#9a3412}
+.tag-q{background:#e3f2fd;color:#1565c0}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+@media(max-width:640px){.row{grid-template-columns:1fr}}
+.box{border-radius:10px;padding:10px 12px;font-size:.84rem}
+.box.wrong{background:var(--wrong-bg);border:1px solid var(--wrong-bd)}
+.box.right{background:var(--right-bg);border:1px solid var(--right-bd)}
+.box label{display:block;font-size:.68rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;margin-bottom:4px}
+.box.wrong label{color:var(--coral)}
+.box.right label{color:var(--forest)}
+.note{margin-top:8px;font-size:.8rem;color:var(--muted);padding:8px 10px;background:#fafcf9;border-radius:8px}
+.how{font-size:.82rem;color:var(--muted);background:#fff;border:1px solid var(--line);border-radius:12px;padding:12px 14px;margin-top:20px}
+.how code{font-size:.78rem;background:#f0f4f1;padding:2px 6px;border-radius:4px}
+footer{text-align:center;color:var(--muted);font-size:.78rem;padding:20px}
+</style>
+</head>
+<body>
+
+<div class="top">
+  <a class="back" href="index.html">← Mains PYQ</a>
+  <a class="back" href="https://sauravanandb2w.github.io/hub/" style="margin-left:10px">Study Hub</a>
+</div>
+
+<header class="hero">
+  <h1>Mistake Book</h1>
+  <p>Personal wrong → right facts for <b>UPSC Prelims</b> (not CA / not Mains notes). Split by <b>PYQ</b> vs <b>mock tests</b>, then GS subject. Lives in the <b>upsc-mains-pyq</b> repo alongside your PYQ stack.</p>
+</header>
+
+<div class="shell">
+  <div class="lane" role="tablist" aria-label="Source type">
+    <button type="button" class="active" data-lane="pyq">📋 PYQ mistake book</button>
+    <button type="button" data-lane="mock">📝 Mock test mistake book</button>
+  </div>
+
+  <div class="subj-tabs" id="subj-tabs" aria-label="Subject"></div>
+
+  <div class="toolbar">
+    <input type="search" id="search" placeholder="Search wrong / correct / exam…" autocomplete="off">
+    <span class="count" id="count"></span>
+  </div>
+
+  <div id="list"></div>
+
+  <div class="how">
+    <b>How entries get added:</b> Send me exam name, year, subject, what you got wrong, and the correct fact — I append to <code>mistake_book_data.js</code>. Template fields: <code>exam</code>, <code>year</code>, <code>qref</code> (optional), <code>wrong</code>, <code>correct</code>, <code>note</code>.
+  </div>
+</div>
+
+<footer>Parcham · Mistake Book · Private revision log</footer>
+
+<script src="mistake_book_data.js?v=1"></script>
+<script>
+(function () {
+  var SUBJECTS = [
+    { id: "polity", label: "Polity" },
+    { id: "history", label: "History" },
+    { id: "geography", label: "Geography" },
+    { id: "economy", label: "Economy" },
+    { id: "environment", label: "Environment" },
+    { id: "science", label: "Sci & tech" },
+    { id: "culture", label: "Art & culture" },
+    { id: "current", label: "Current affairs" },
+    { id: "misc", label: "Misc" }
+  ];
+
+  var lane = "pyq";
+  var subject = "polity";
+  var searchEl = document.getElementById("search");
+  var listEl = document.getElementById("list");
+  var countEl = document.getElementById("count");
+  var subjTabs = document.getElementById("subj-tabs");
+
+  function esc(s) {
+    return String(s)
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;");
+  }
+
+  function renderSubjTabs() {
+    subjTabs.innerHTML = SUBJECTS.map(function (s) {
+      var n = (window.MISTAKE_BOOK[lane][s.id] || []).length;
+      var active = s.id === subject ? " active" : "";
+      return '<button type="button" class="' + active + '" data-subj="' + s.id + '">' +
+        esc(s.label) + (n ? " (" + n + ")" : "") + "</button>";
+    }).join("");
+    subjTabs.querySelectorAll("button").forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        subject = btn.dataset.subj;
+        renderSubjTabs();
+        renderList();
+      });
+    });
+  }
+
+  function renderList() {
+    var q = (searchEl.value || "").trim().toLowerCase();
+    var items = (window.MISTAKE_BOOK[lane][subject] || []).slice();
+    if (q) {
+      items = items.filter(function (it) {
+        var blob = [it.exam, it.year, it.qref, it.wrong, it.correct, it.note].join(" ").toLowerCase();
+        return blob.indexOf(q) !== -1;
+      });
+    }
+    items.sort(function (a, b) { return (b.year || 0) - (a.year || 0); });
+
+    countEl.textContent = items.length + " entr" + (items.length === 1 ? "y" : "ies");
+
+    if (!items.length) {
+      listEl.innerHTML = '<div class="empty">No mistakes logged here yet. Paste your next wrong PYQ/mock in chat — subject <b>' +
+        esc(SUBJECTS.find(function (s) { return s.id === subject; }).label) + "</b>, lane <b>" +
+        (lane === "pyq" ? "PYQ" : "Mock") + "</b>.</div>";
+      return;
+    }
+
+    listEl.innerHTML = items.map(function (it) {
+      var meta = "";
+      if (it.exam) meta += '<span class="tag-exam">' + esc(it.exam) + "</span>";
+      if (it.year) meta += '<span class="tag-year">' + esc(it.year) + "</span>";
+      if (it.qref) meta += '<span class="tag-q">' + esc(it.qref) + "</span>";
+      var note = it.note ? '<div class="note">💡 ' + esc(it.note) + "</div>" : "";
+      return '<article class="mistake">' + meta +
+        '<div class="row">' +
+        '<div class="box wrong"><label>Wrong / confusion</label>' + esc(it.wrong) + "</div>" +
+        '<div class="box right"><label>Correct fact</label>' + esc(it.correct) + "</div>" +
+        "</div>" + note + "</article>";
+    }).join("");
+  }
+
+  document.querySelectorAll(".lane button").forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      lane = btn.dataset.lane;
+      document.querySelectorAll(".lane button").forEach(function (b) { b.classList.remove("active"); });
+      btn.classList.add("active");
+      renderSubjTabs();
+      renderList();
+    });
+  });
+
+  searchEl.addEventListener("input", renderList);
+
+  function applyHash() {
+    var h = (location.hash || "").replace(/^#/, "");
+    if (h.indexOf("mock-") === 0) { lane = "mock"; subject = h.slice(5) || "polity"; }
+    else if (h.indexOf("pyq-") === 0) { lane = "pyq"; subject = h.slice(4) || "polity"; }
+    document.querySelectorAll(".lane button").forEach(function (b) {
+      b.classList.toggle("active", b.dataset.lane === lane);
+    });
+    if (!SUBJECTS.some(function (s) { return s.id === subject; })) subject = "polity";
+    renderSubjTabs();
+    renderList();
+  }
+
+  applyHash();
+  window.addEventListener("hashchange", applyHash);
+})();
+</script>
+</body>
+</html>
